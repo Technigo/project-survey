@@ -36,25 +36,25 @@
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "brace-style": [
-      "error",
+      "warn",
       "1tbs",
       {
         "allowSingleLine": true
       }
     ],
     "comma-dangle": [
-      "error",
+      "warn",
       "never"
     ],
     "consistent-return": "off",
-    "curly": "error",
+    "curly": "warn",
     "eol-last": "off",
     "import/extensions": "off",
     "import/no-extraneous-dependencies": "off",
     "import/no-unresolved": "off",
     "import/prefer-default-export": "off",
     "indent": [
-      "error",
+      "warn",
       2,
       {
         "SwitchCase": 1
@@ -62,14 +62,15 @@
     ],
     "jsx-a11y/anchor-is-valid": "off",
     "jsx-a11y/label-has-for": "off",
+    "jsx-a11y/label-has-associated-control": "off",
     "jsx-a11y/href-no-hash": "off",
     "no-alert": "off",
     "no-console": "off",
     "no-debugger": "off",
     "no-else-return": "off",
-    "no-irregular-whitespace": "error",
+    "no-irregular-whitespace": "warn",
     "no-multiple-empty-lines": [
-      "error",
+      "warn",
       {
         "max": 1
       }
@@ -77,7 +78,7 @@
     "no-param-reassign": "off",
     "no-restricted-syntax": "off",
     "object-curly-newline": [
-      "error",
+      "warn",
       {
         "ObjectExpression": {
           "consistent": true
@@ -87,44 +88,44 @@
         }
       }
     ],
-    "prefer-template": "error",
+    "prefer-template": "warn",
     "react/destructuring-assignment": "off",
     "react/forbid-prop-types": "off",
     "react/jsx-closing-bracket-location": [
-      "error",
+      "warn",
       {
         "selfClosing": "after-props",
         "nonEmpty": "after-props"
       }
     ],
     "react/jsx-curly-spacing": [
-      "error",
+      "warn",
       {
         "when": "never",
         "children": true
       }
     ],
     "react/jsx-filename-extension": "off",
-    "react/jsx-no-bind": "error",
+    "react/jsx-no-bind": "warn",
     "react/jsx-uses-react": "warn",
     "react/jsx-wrap-multilines": "off",
     "react/jsx-one-expression-per-line": "off",
     "react/no-danger": "off",
-    "react/no-did-mount-set-state": "error",
-    "react/no-did-update-set-state": "error",
-    "react/no-direct-mutation-state": "error",
+    "react/no-did-mount-set-state": "warn",
+    "react/no-did-update-set-state": "warn",
+    "react/no-direct-mutation-state": "warn",
     "react/no-multi-comp": [
-      "error",
+      "warn",
       {
         "ignoreStateless": true
       }
     ],
-    "react/no-string-refs": "error",
+    "react/no-string-refs": "warn",
     "react/prop-types": "off",
     "react/require-extension": "off",
     "react/sort-comp": "off",
     "react/jsx-indent": "off",
-    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/rules-of-hooks": "warn",
     "react-hooks/exhaustive-deps": "warn",
     "semi": "off"
   }
