@@ -1,8 +1,7 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This React App is a simple example of how React can be used to create dynamic user interfaces that respond to user inputs.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
