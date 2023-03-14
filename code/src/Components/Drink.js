@@ -6,8 +6,9 @@ export const Drink = ({ drink, setDrink }) => {
   }
   return (
     <>
-      <h1 className="nametext">What is your favorite drink?</h1>
+      <h1 className="nametext">Favorite drink?</h1>
       <input
+        className="name-input"
         type="text"
         value={drink}
         onChange={handleDrinkChange} />

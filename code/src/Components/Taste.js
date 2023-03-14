@@ -7,7 +7,7 @@ export const Taste = ({ taste, setTaste }) => {
   return (
     // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <label className="taste-select-container">
-      <h1 className="nametext">What is most important in a wine?</h1>
+      <h1 className="nametext">Favorite taste?</h1>
       <select
         className="taste-select"
         id="tasteID"

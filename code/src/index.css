@@ -19,6 +19,7 @@ code {
 }
 
 .nametext {
+  display: flex;
   font-size: 5vw;
   font-family: 'Righteous', cursive;
   color: white;
@@ -34,8 +35,8 @@ code {
   background: rgb(131,58,180);
   background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,181,29,1) 78%, rgba(252,176,69,1) 100%);
   border-radius: 50%;
-  width: 80%;
-  height: 250px; 
+  width: 320px;
+  height: 320px; 
   margin: 10%;
 }
 
@@ -71,12 +72,20 @@ form {
 
 .name-input {
   background-color: transparent;
-  width: 95%;
+  width: 220px;
   padding:10px;
   border:0;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+  font-size: 30px;
+  font-family: 'Righteous', cursive;
+  color: white;
 }
 
 .submit-button {
   background-color: transparent;
+}
+
+.radio-buttons {
+  display: block;
+width: 320px;
 }
