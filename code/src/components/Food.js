@@ -11,13 +11,13 @@ export const Food = ({ food, setFood }) => {
         onChange={handleFood}
         value={food}>
         <option value=" ">Food:</option>
-        <option value={food}>Sushi</option>
-        <option value={food}>Pizza</option>
-        <option value={food}>Pasta</option>
-        <option value={food}>Hamburger</option>
-        <option value={food}>Salad</option>
-        <option value={food}>Tacos</option>
-        <option value={food}>Husmanskost</option>
+        <option value="sushi">Sushi</option>
+        <option value="pizza">Pizza</option>
+        <option value="pasta">Pasta</option>
+        <option value="hamburger">Hamburger</option>
+        <option value="salad">Salad</option>
+        <option value="tacos">Tacos</option>
+        <option value="husmanskost">Husmanskost</option>
       </select>
     </form>
   );

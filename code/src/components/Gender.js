@@ -10,9 +10,9 @@ export const Gender = ({ gender, setGender }) => {
         onChange={handleGender}
         value={gender}>
         <option value=" ">Gender:</option>
-        <option value={gender}>Woman</option>
-        <option value={gender}>Man</option>
-        <option value={gender}>Other</option>
+        <option value="woman">Woman</option>
+        <option value="man">Man</option>
+        <option value="other">Other</option>
       </select>
     </form>
   );
