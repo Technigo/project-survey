@@ -1,6 +1,6 @@
 import React from 'react';
 import { Question } from './Question'
-import { Survey } from './Survey'
+import { Answer } from './Answer'
 import OkButton from './Button'
 import { ArrowButtons } from './ArrowButtons'
 
@@ -12,7 +12,7 @@ export const Section = (props) => {
     <div className="section-container">
       <section className="section" key={props.counter} id={props.counter}>
         <Question question={questions[props.counter - 1]} />
-        <Survey
+        <Answer
           key={props.counter}
           questionNumber={questions.indexOf(questions[props.counter - 1]) + 1} />
         <OkButton counter={props.counter} setCounter={props.setCounter} name="OK" />

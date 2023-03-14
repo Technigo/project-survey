@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-closing-tag-location */
 import React from 'react';
 
-export const Survey = (props) => {
+export const Answer = (props) => {
   return (
     <>
       {props.questionNumber === 1
@@ -23,7 +23,6 @@ export const Survey = (props) => {
      && <div>This is the element - images - for question5</div>}
       {props.questionNumber === 6
      && <div>This is the element -  radio buttons - for question6</div>}
-
     </>
   )
 }
