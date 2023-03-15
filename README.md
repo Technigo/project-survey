@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks assignment was to create a survey in react. The app/site were supposed to have radio buttons and a dropdown.The survey could be about anything. I did mine about this made up winery, called - Wine, Two, Tree, were the costumer could get email-suggestions on what wine to buy based on the questions.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started this weeks assignment by trying out the example provided and from there I just started to created components and forms were they suited best for the questions.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://rad-marigold-533c40.netlify.app
