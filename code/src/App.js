@@ -6,11 +6,12 @@ import { Age } from 'components/Age';
 import { Food } from 'components/Food';
 import { Times } from 'components/Times';
 import { Summary } from 'components/Summary';
-import Welcome from 'components/Welcome';
+import { Welcome } from 'components/Welcome';
 import './index.css';
 
 export const App = () => {
   const [step, setStep] = useState(1);
+  const [welcome, setWelcome] = useState('true');
   const [name, setName] = useState('');
   const [gender, setGender] = useState('');
   const [age, setAge] = useState('');
@@ -23,11 +24,14 @@ export const App = () => {
   const handleStepDecrease = () => {
     setStep(step - 1);
   }
+  const startOver = () => {
+    setStep(step && 1);
+  }
 
   return (
-    <>
+    <div className="content-container">
       {step === 1 && (
-        <Welcome />
+        <Welcome welcome={welcome} setWelcome={setWelcome} />
       )}
       {step === 2 && (
         <Name name={name} setName={setName} />
@@ -49,19 +53,22 @@ export const App = () => {
       )}
       <div className="buttons">
         {step === 1 && (
-          <button type="button" onClick={handleStepIncrease}>Start</button>
+          <button type="button" id="start" onClick={handleStepIncrease}>Start</button>
         )}
-        {step >= 2 && (
-          <button type="button" onClick={handleStepDecrease}>Previous</button>
+        {step >= 2 && step <= 6 && (
+          <button type="button" id="previous" onClick={handleStepDecrease}>Previous</button>
         )}
-        {step >= 2 && (
-          <button type="button" onClick={handleStepIncrease}>Next</button>
+        {step >= 2 && step <= 5 && (
+          <button type="button" id="next" onClick={handleStepIncrease}>Next</button>
         )}
         {step === 6 && (
-          <button type="button" onClick={handleStepIncrease}>Submit</button>
+          <button type="button" id="submit" onClick={handleStepIncrease}>Submit</button>
+        )}
+        {step === 7 && (
+          <button type="button" id="start over" onClick={startOver}>Start over</button>
         )}
       </div>
-    </>
+    </div>
 
   );
 }

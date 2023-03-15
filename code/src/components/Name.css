@@ -13,7 +13,6 @@ input {
     outline: none;
     width: 100%;
     height: auto;
-    margin-top: 30%;
     display: block;
     grid-column: 2 / span 3;
     font-family: 'Roboto', sans-serif;

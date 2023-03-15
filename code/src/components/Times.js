@@ -9,14 +9,14 @@ export const Times = ({ times, setTimes, food }) => {
   return (
     <div className="radiobutton">
       <form>
-        <span>How often do you eat {food}? </span>
+        <span className="title">How often do you eat {food}? </span>
         <label>
           <input
             type="radio"
             value="every day"
             onChange={handleTime}
             checked={times === 'every day'} />
-          Every day
+          <span className="value">Every day</span>
         </label>
         <label>
           <input
@@ -24,7 +24,7 @@ export const Times = ({ times, setTimes, food }) => {
             value="every week"
             onChange={handleTime}
             checked={times === 'every week'} />
-          Every week
+          <span className="value">Every week</span>
         </label>
         <label>
           <input
@@ -32,7 +32,7 @@ export const Times = ({ times, setTimes, food }) => {
             value="every other week"
             onChange={handleTime}
             checked={times === 'every other week'} />
-          Every other week
+          <span className="value">Every other week</span>
         </label>
         <label>
           <input
@@ -40,7 +40,7 @@ export const Times = ({ times, setTimes, food }) => {
             value="once a month"
             onChange={handleTime}
             checked={times === 'once a month'} />
-          Every other week
+          <span className="value">Once a month</span>
         </label>
       </form>
     </div>

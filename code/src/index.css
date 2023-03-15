@@ -10,22 +10,39 @@ code {
     monospace;
 }
 
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.buttons {
+  margin: 0 auto;
+  margin-top: 10%;
+
+}
+
 button {
   font-family: 'Roboto', sans-serif;
   border-radius: 50px;
   border: none;
   font-size: 1em;
-  color: white;
+  color: rgb(65, 65, 65);
   letter-spacing: 1px;
   background-color: antiquewhite;
   text-transform: uppercase;
   padding: 1em;
   width: 150px;
   margin: 20px;
-  transition: 0.25s;
+  transition: 0.5s;
   }
 
   button:hover, button:focus {
     color: #fff;
-    box-shadow: inset 10em 0 0 0 #db6666;
+    box-shadow: inset 10em 0 0 0 rgba(253, 136, 136, 1);
+  } 
+
+   #previous:hover, #previous:focus {
+    color: #fff;
+    box-shadow: inset -10em 0 0 0 rgba(253, 136, 136, 1);
   }

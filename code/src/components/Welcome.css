@@ -1,0 +1,9 @@
+.welcome {
+    display: grid;
+    grid-template-columns: repeat (5, 1fr);
+}
+
+h1, span {
+    grid-column: 1 / span 5;
+    justify-self: center;
+}

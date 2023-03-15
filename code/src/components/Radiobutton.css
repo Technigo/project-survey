@@ -1,26 +1,30 @@
 .radiobutton {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
+    display: flex;
+    flex-direction: row;
 }
 
 .radiobutton form {
-    grid-column: 2 / span 2;
-    grid-row: auto;
-    align-self: start;
-    justify-self: center;
+
 }
 
-.radiobutton input {
-    justify-self: center;
-    align-self: center;
-    margin: 0;
-}
-
-.radiobutton span {
+.title {
     font-weight: 200;
     font-size: 60px;
     width: 100%;
-    margin: 0 auto;
-    grid-column: 1 / span 5;
+    margin: 50px;
+}
+
+.radiobutton input {
+    accent-color: rgb(253, 136, 136);
+    scale: 1.5;
+    margin: 10px;
+}
+
+.radiobutton input:hover {
+    accent-color: rgb(255, 193, 193);
+}
+
+.value {
+    font-size: 40px;
+    font-weight: 200;
 }

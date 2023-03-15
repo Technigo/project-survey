@@ -9,14 +9,14 @@ export const Age = ({ age, setAge }) => {
   return (
     <div className="radiobutton">
       <form>
-        <span>What is your age?</span>
+        <span className="title">What is your age?</span>
         <label>
           <input
             type="radio"
             value="10-19"
             onChange={handleAge}
             checked={age === '10-19'} />
-          10-19
+          <span className="value">10-19</span>
         </label>
         <label>
           <input
@@ -24,7 +24,7 @@ export const Age = ({ age, setAge }) => {
             value="20-29"
             onChange={handleAge}
             checked={age === '20-29'} />
-          20-29
+          <span className="value">20-29</span>
         </label>
         <label>
           <input
@@ -32,7 +32,7 @@ export const Age = ({ age, setAge }) => {
             value="30-39"
             onChange={handleAge}
             checked={age === '30-39'} />
-          30-39
+          <span className="value">30-39</span>
         </label>
         <label>
           <input
@@ -40,7 +40,7 @@ export const Age = ({ age, setAge }) => {
             value="40-49"
             onChange={handleAge}
             checked={age === '40-49'} />
-          40-49
+          <span className="value">40-49</span>
         </label>
         <label>
           <input
@@ -48,7 +48,7 @@ export const Age = ({ age, setAge }) => {
             value="50+"
             onChange={handleAge}
             checked={age === '50+'} />
-          50+
+          <span className="value">50+</span>
         </label>
       </form>
     </div>
