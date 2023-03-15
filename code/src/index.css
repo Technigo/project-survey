@@ -41,12 +41,12 @@ code {
    border: solid blue;
   }
 
-.super-power-selection {
+.superpower-selection {
 position: absolute;
 left: 10%;
 right: 10%;
 top: 40%;
- background-color: antiquewhite;
+ background-color: pink;
  display: flex;
  flex-direction: column;
 }
@@ -59,6 +59,13 @@ position: absolute;
  border: solid black;
  font-size: 16px;
 cursor: pointer;
+}
+
+.inputbox input:focus + label,
+.inputbox input:valid + .label{
+  position: absolute;
+  top: -18px;
+left: 0;
 }
 
 .results {

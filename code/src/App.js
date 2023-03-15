@@ -35,7 +35,7 @@ export const App = () => {
           <Button counter={counter} setCounter={setCounter} inputLabel="Next step" />
         </div>
       )}
-      {counter === 3 && (
+      {counter === 2 && (
         <div className="next-step">
           <Button counter={counter} setCounter={setCounter} inputLabel="Submit" />
           <p>{counter}</p>

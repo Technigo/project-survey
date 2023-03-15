@@ -5,9 +5,9 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <div>
+    <div className="inputbox">
       <label htmlFor="name">
-        <p className="question">Dare to dream? First type your name</p>
+        <p>Dare to dream? First type your name</p>
         <input type="text" id="name" value={name} onChange={handleNameChange} required />
       </label>
     </div>)
