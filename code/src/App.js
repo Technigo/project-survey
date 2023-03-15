@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 import { Name } from 'components/Name';
 import { Gender } from 'components/Gender';
 import { Age } from 'components/Age';
@@ -37,7 +38,9 @@ export const App = () => {
         </div>
       )}
       {step === 2 && (
-        <Name name={name} setName={setName} />
+        <div className="name-container">
+          <Name name={name} setName={setName} />
+        </div>
       )}
       {step === 3 && (
         <Gender gender={gender} setGender={setGender} />
