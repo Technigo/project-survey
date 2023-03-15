@@ -1,4 +1,5 @@
 import React from 'react';
+import { MdDone } from '@react-icons/all-files/md/MdDone';
 
 const Button = ({ counter, setCounter, name }) => {
   const handleCounterIncrement = () => {
@@ -8,6 +9,7 @@ const Button = ({ counter, setCounter, name }) => {
   return (
     <button className="btn" type="button" onClick={handleCounterIncrement}>
       {name}
+      <MdDone />
     </button>
   );
 }

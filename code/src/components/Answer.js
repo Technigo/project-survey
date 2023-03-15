@@ -36,7 +36,7 @@ export const Answer = (props) => {
      </div>}
 
       {props.questionNumber === 4
-     && <div className="answer-block">
+     && <div className="answer-block equipments-container">
        <Equipments
          equipment={props.equipment}
          setEquipment={props.setEquipment} />
@@ -50,15 +50,15 @@ export const Answer = (props) => {
            type="radio"
            id="yes"
            name="option"
-           value="yes"
-           checked={props.support === 'yes'}
+           value="Yes"
+           checked={props.support === 'Yes'}
            onChange={handleSupport} />
-         <label htmlFor="yes">Yes</label>
+         <label htmlFor="Yes">Yes</label>
        </div>
 
        <div className="support-container">
-         <input className="support-input" type="radio" id="no" name="option" value="no" checked={props.support === 'no'} onChange={handleSupport} />
-         <label htmlFor="no">No</label>
+         <input className="support-input" type="radio" id="no" name="option" value="No" checked={props.support === 'No'} onChange={handleSupport} />
+         <label htmlFor="No">No</label>
        </div>
      </div>}
 

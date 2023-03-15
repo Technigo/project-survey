@@ -1,29 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html,
+#root,
+.App,
+.header {
+  height: 100%;
+}
+
+#root {
+  height: 100vh;
+  background: linear-gradient(119.36deg, #F3F7FF 0%, #FEE2F6 100%);
+}
+
+.App,
+.survey-questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .slidecontainer {
   width: 100%;
-  /* Width of the outside container */
 }
 
-/* The slider itself */
 .slider {
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
   height: 25px;
-  background: #d3d3d3;
+  background: #e0c0e8;
   outline: none;
   opacity: 0.7;
   -webkit-transition: .2s;
@@ -41,18 +53,135 @@ code {
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: #1A2653;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: #1A2653;
   cursor: pointer;
 }
 
-.equipment-btn img {
-  width: 200px;
-  height: 200px;
+.slider-descriptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-descriptions>p {
+  font-size: 10px;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+  padding: 6px 14px;
+  min-height: 40px;
+  margin: 10px 0 5px;
+  background: #1A2653;
+  border-radius: 16px;
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  opacity: 40%;
+}
+
+.survey-questions {
+  width: 100%;
+  height: 100%;
+}
+
+.survey-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin: 0 40px;
+  height: 100%;
+}
+
+.answer-block {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.question {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.name-input {
+  min-height: 40px;
+  font-size: 20px;
+}
+
+.difficulties-select {
+  font-family: 'Poppins', sans-serif;
+  min-height: 40px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.difficulties-select>option {
+  font-family: 'Poppins', sans-serif;
+}
+
+.equipments-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.equipment-btn {
+  width: 80px;
+  height: 110px;
+  opacity: 70%;
+  background: #d9cbdd;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.equipment-btn.on {
+  background: #811c9d;
+}
+
+.equipment-btn:hover {
+  opacity: 40%;
+}
+
+.equipment-logo {
+  font-size: 40px;
+}
+
+.equipment-btn>p {
+  font-size: 10px;
+  padding: 5px 0;
+}
+
+.result {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  margin: 0 40px;
+}
+
+.equipments-result {
+  display: flex;
+  justify-content: space-between;
+}
+
+.equipments-result>ul {
+  margin: 0;
 }
