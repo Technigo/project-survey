@@ -1,16 +1,14 @@
 import React from 'react';
 import { NextButton } from './NextButton';
 
-export const Summary = (props) => {
+export const LandingPage = (props) => {
   return (
     <div>
-      <p>{props.answers.firstName}</p>
-      <p>{props.answers.typeOfHome}</p>
-      <p>{props.answers.rooms}</p>
-      <p>{props.answers.price}</p>
+      <h1>{props.landingTitle}</h1>
+      <p>{props.description}</p>
       <div>
         <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
       </div>
     </div>
   );
-}
+};

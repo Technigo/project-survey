@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { LandingPage } from 'Components/LandingPage';
 import { TextQuestion } from 'Components/TextQuestion';
 import { RadioQuestion } from 'Components/RadioQuestion';
 import { SelectQuestion } from 'Components/SelectQuestion';
@@ -6,12 +7,21 @@ import { RangeSliderQuestion } from 'Components/RangeSliderQuestion';
 import { Summary } from 'Components/Summary';
 
 export const Survey = () => {
-  const [questionStep, setQuestionStep] = useState(1);
-  const [answers, setAnswers] = useState();
+  const [questionStep, setQuestionStep] = useState(0);
+  const [answers, setAnswers] = useState('');
 
   const printQuestions = () => {
     return (
       <>
+        {questionStep === 0 && (
+          <LandingPage
+            landingTitle="Ready to find your dream home?"
+            description="Click continue to get started!"
+            onNext={() => {
+              setQuestionStep(questionStep + 1);
+            }}
+            buttonLabel="Continue" />
+        )}
         {questionStep === 1 && (
           <TextQuestion
             questionTitle="Please enter your name"
@@ -79,7 +89,7 @@ export const Survey = () => {
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
-            buttonLabel="Continue" />
+            buttonLabel="Search Homes" />
         )}
       </>
     );
