@@ -206,6 +206,27 @@ html,
   font-size: 14px;
 }
 
+.progress-parent {
+  width: 100%;
+  background-color: 'whitesmoke';
+  border-radius: 40;
+  margin: 50;
+}
+
+.progress-child {
+  height: 40px;
+  background-color: #1A2653;
+  border-radius: 40;
+  text-align: 'right';
+}
+
+.progresstext {
+  padding: 10;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+
 @media only screen and (min-device-width: 768px) {
 
   .equipment-btn {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Question } from './Question'
 import { Answer } from './Answer'
 import OkButton from './Button'
-// import { ArrowButtons } from './ArrowButtons'
+import Progressbar from './Progressbar'
 
 const questions = [
   'What is your name?', 'How do you feel about working from home?', 'What are you finding most difficult?', 'Do you have the following equipment at home?', 'Are you getting the support you need from your manager?']
@@ -27,6 +27,7 @@ export const Section = (props) => {
           setSupport={props.setSupport} />
         <OkButton counter={props.counter} setCounter={props.setCounter} name="OK" />
       </div>
+      <Progressbar progress={props.counter} />
     </section>
   );
 }
