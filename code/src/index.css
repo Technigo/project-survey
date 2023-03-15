@@ -26,9 +26,18 @@ code {
   align-items: center;
 }
 
-.agetext {
+.pricetext {
   display: flex;
-  font-size: 10px;
+  font-size: 20px;
+  font-family: 'Righteous', cursive;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+.pricegrouptext {
+  display: flex;
+  font-size: 13px;
   font-family: 'Righteous', cursive;
   color: white;
   justify-content: center;
@@ -74,6 +83,9 @@ code {
   width: 230px;
   height: 230px; 
   padding: 30px;
+  border: dotted 10px;
+  border-color: white;
+
 }
 
 form {
@@ -114,7 +126,10 @@ form {
   background-color: transparent;
   width: 160px;
   padding:10px;
-  border: dotted 10px;
+  border-bottom: dotted 10px;
+  border-right: none;
+  border-left: none;
+  border-top: none;
   border-color: white;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   font-size: 20px;
@@ -128,9 +143,28 @@ form {
 
 .radio-buttons {
   display: flex;
-  width: 320px;
+  flex-direction: row;
+}
+.radio-container {
+  display: flex;
+  width: 50px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.radio-form {
+display: flex;
+flex-direction: row;
 }
 
 .label {
   display: flex;
+}
+
+progress {
+  accent-color: white;
+}
+
+.steps-text {
+  color: white;
 }

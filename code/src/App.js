@@ -7,6 +7,7 @@ import { Age } from './Components/Age';
 import { Taste } from './Components/Taste';
 
 export const App = () => {
+  const stepsTotalCount = 5
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [food, setFood] = useState('');
@@ -45,8 +46,17 @@ export const App = () => {
       )}
       {step < 6 && (
         <>
-          <h1 className="currentquestiontext">Current question: {step}</h1>
-          <button className="submit-button" type="button" onClick={handleStepIncrease}><h1 className="nextquestiontext">Next question</h1></button>
+          <p className="steps-text">
+            <progress value={step} max={stepsTotalCount + 1}>
+              {step} of {stepsTotalCount}
+            </progress>
+            <span>
+              <b>{step}</b> / {stepsTotalCount}
+            </span>
+          </p>
+          <button className="submit-button" type="button" onClick={handleStepIncrease}>
+            {step < stepsTotalCount ? 'Next Question' : 'Submit'}
+          </button>
         </>
       )}
     </div>
