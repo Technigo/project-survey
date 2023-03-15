@@ -129,7 +129,7 @@ position: absolute;
 button{
   cursor: pointer;
   display: inline-block;
-  position: relative;
+  position: relative; 
   transition: 0.5s;
 }
 

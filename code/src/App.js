@@ -16,7 +16,7 @@ export const App = () => {
     <>
 
       {counter === 0 && (
-        <><Header /><Name name={name} setName={setName} /></>
+        <><Header /> <Name name={name} setName={setName} /></>
       )}
       {counter === 1 && (
         <Power power={power} setPowers={setPowers} inputLabel="Which superpower would you wish for?" />
