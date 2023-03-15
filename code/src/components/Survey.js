@@ -32,7 +32,7 @@ const Survey = () => {
           <button
             type="button"
             onClick={() => setCounter(2)}>
-            Next
+            Next 👉
           </button>
         </>
       )}
@@ -41,19 +41,22 @@ const Survey = () => {
           <form
             onSubmit={(event) => event.preventDefault()}
             className="answer">
-            <select
-              onChange={(event) => setLocation(event.target.value)}
-              value={location}>
-              <option value="">Select location</option>
-              <option value="stockholm">Stockholm</option>
-              <option value="barcelona">Barcelona</option>
-              <option value="oslo">Oslo</option>
-            </select>
+            <label htmlFor="Location">
+              Where do you live?
+              <select
+                onChange={(event) => setLocation(event.target.value)}
+                value={location}>
+                <option value="">Select location</option>
+                <option value="stockholm">Stockholm</option>
+                <option value="barcelona">Barcelona</option>
+                <option value="oslo">Oslo</option>
+              </select>
+            </label>
           </form>
           <button
             type="button"
             onClick={() => setCounter(3)}>
-            Next
+            Next 👉
           </button>
         </>
       )}
@@ -67,13 +70,14 @@ const Survey = () => {
               <input
                 type="checkbox"
                 onChange={(event) => setWantsNewsletter(event.target.checked)}
-                checked={wantsNewsletter} />
+                checked={wantsNewsletter}
+                value="Yes" />
             </label>
           </form>
           <button
             type="button"
             onClick={() => setCounter(4)}>
-            Next
+            Next 👉
           </button>
         </>
       )}
@@ -96,7 +100,7 @@ const Survey = () => {
           <button
             type="button"
             onClick={() => setCounter(5)}>
-            Next
+            Next 👉
           </button>
         </>
       )}
@@ -106,13 +110,25 @@ const Survey = () => {
             <Summary
               nameInput={name}
               locationInput={location}
-              newsInput={wantsNewsletter}
+              newsInput={wantsNewsletter.valueOf}
               ageInput={ageGroup} />
           </div>
           <button
             type="button"
-            onClick={() => location.reload()}>
+            onClick={() => setCounter(6)}>
             Submit
+          </button>
+        </>
+      )}
+      {counter === 6 && (
+        <>
+          <div className="answer">
+            <h2>Thank you!</h2>
+          </div>
+          <button
+            type="button"
+            onClick={() => setCounter(0)}>
+            Restart
           </button>
         </>
       )}

@@ -5,12 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(225deg, #88c2b4, #a2e7d6);
-  background-attachment: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-image: url(https://images.unsplash.com/photo-1514116799412-5876d319c242?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Nzg4ODY4MTE&ixlib=rb-4.0.3&q=80);
+  background-size: cover;
 }
 
 code {
@@ -18,16 +14,18 @@ code {
     monospace;
 }
 
-.surveyTitle {
-  text-align: center;
-  color: white;
-  text-transform: uppercase;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .surveyWrapper {
+  margin-top: 150px;
   border-radius: 61px;
-  background: linear-gradient(225deg, #88c2b4, #a2e7d6);
-  box-shadow: -20px 20px 60px #80b8aa, 20px -20px 60px #aef8e6;
+  background: rgb(7, 52, 39);
+  opacity: 0.8;
   height: 500px;
   width: 500px;
   padding: 15px;
@@ -37,12 +35,51 @@ code {
   justify-content: center;
 }
 
-.answer {
-  background: white;
+.startpage {
+  color: white;
   text-align: center;
-  width: 50%;
+}
+
+.answer {
+  color: white;
+  text-align: center;
+  width: 80%;
   padding: 15px;
-  border-radius: 20px;
-  box-shadow: 6px 6px 6px #80b8aa;
   margin: 10px 0;
+}
+
+label {
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+input, select {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
+button {
+  border-radius: 25px;
+  border: 2px solid white;
+  padding: 10px 15px;
+  background: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+ul {
+  text-align: start;
+  list-style: none;
+  font-size: 20px;
+}
+
+.submitAnswer {
+  margin: 40px 0 0;
 }
