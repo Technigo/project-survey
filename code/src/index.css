@@ -105,11 +105,11 @@ input[type=text], select {
   font-weight: bolder;
 }
 
-.emoji {
-  font-size: 30px;
-}
-
 input[type=radio] {
   margin-bottom: 15px;
   cursor: pointer;
+}
+
+.emoji {
+  font-size: 30px;
 }
