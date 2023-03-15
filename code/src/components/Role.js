@@ -5,16 +5,15 @@ export const Role = ({ role, setRole }) => {
     setRole(event.target.value)
   }
   return (
-    <form>
+    <div className="roleForm">
+      <p>What is your role?</p>
       <select
         onChange={handleRoleChange}
         value={role}>
-        <option value="">My role is:</option>
+        <option value="">Select:</option>
         <option value="teacher">Teacher</option>
         <option value="class mate">Class mate</option>
-        <option value="employer">Employer</option>
-        <option value="other">Other</option>
       </select>
-    </form>
+    </div>
   )
 }

@@ -3,6 +3,7 @@ body {
   font-family: "Montserrat", sans-serif;
   background-color: #fef4e8;
   color: #000c55;
+  font-size: 14px;
 }
 
 code {
@@ -10,30 +11,35 @@ code {
     monospace;
 }
 
-.technigoLogo {
-  max-width: 200px;
-  position: absolute;
-  top: 100px;
-  left: 60px;
+.main {
+  width: 320px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.divLogo {
+  width: 320px;
+}
+
+.myLogo {
+ width: 200px;
 }
 
 .topHeader {
   font-family: "Montserrat", sans-serif;
-  font-size: 10px;
+  font-size: 8px;
   text-align: center;
-  position: absolute;
-  top: 260px;
   margin: 0 20px 0 20px;
 }
 
-/* Make this scrollable */
-.startBtn {
-  position: absolute;
-  top: 440px;
-  left: 74px;
+button {
+  width: 180px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
-  background: #0025ff;
+  background: #000c55;
   color: #FFF;
   padding: 20px;
   border-style: none;
