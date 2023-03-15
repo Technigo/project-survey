@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Name } from 'components/Name';
-import { LongLived } from 'components/LongLived';
+import { Hear } from 'components/Hear';
 import { Overall } from 'components/Overall';
 
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
-  const [lived, setLived] = useState('');
+  const [hear, setHear] = useState('');
   const [overall, setOverall] = useState('');
 
   const handleStepIncrease = () => {
@@ -19,7 +19,7 @@ export const App = () => {
         <Name name={name} setName={setName} />
       )}
       {step === 2 && (
-        <LongLived lived={lived} setLived={setLived} />
+        <Hear hear={hear} setHear={setHear} />
       )}
       {step === 3 && (
         <Overall overall={overall} setOverall={setOverall} />

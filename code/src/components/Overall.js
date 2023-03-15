@@ -6,7 +6,7 @@ export const Overall = ({ overall, setOverall }) => {
   }
   return (
     <>
-      <p>What is your overall perception of Stockholm municipality?</p>
+      <p>What is your overall perception of us?</p>
       <input type="text" value={overall} onChange={handleOverallChange} />
     </>
   )
