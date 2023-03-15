@@ -21,7 +21,13 @@ export const App = () => {
 
   return (
     <div className="StartPage">
-      <h1>Answer these questions and we will tell you your favourite animal</h1>
+      {counter === 0 && (
+        <>
+          <h1>Answer these questions and we will tell you your favourite animal</h1>
+          <button type="button" onClick={handleNextStep} className="startBtn"> Start </button>
+        </>
+      )}
+
       {counter === 1 && (
         <Name name={name} setName={setName} />
       )}
@@ -34,13 +40,28 @@ export const App = () => {
       {counter === 4 && (
         <Thing thing={thing} setThings={setThing} />
       )}
-      {counter === 5 && (
+      {counter >= 5 && (
         <Results results={results} setResults={setResults} />
-      )}
-      <button type="button" onClick={handleNextStep} className="startBtn"> Next question </button>
-    </div>
 
+      )}
+      {counter < 5 && (
+        <>
+          <p>tjudiluu</p>
+          <button type="button" onClick={handleNextStep} className="nextQuestion"> Next question </button>
+        </>
+      )}
+
+    </div>
   );
 }
 // start button hur ska jag sätta button nr 2 vart?
-// förklara counter+1 och vad det gjorde
+// what should i put in result to show my results
+// where should I put my if statement
+
+/* {counter < 5 && (
+        <>
+          <p>tjudiluu</p>
+          <button type="button" onClick={handleNextStep}
+          className="nextQuestion"> Next question </button>
+        </>
+      )} */
