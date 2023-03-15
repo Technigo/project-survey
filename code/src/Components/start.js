@@ -1,7 +1,7 @@
 import React from 'react'
 import '../start.css'
 
-const Start = () => {
+const start = () => {
   return (
     <section>
       <h1>A survey on what people choose to drink when in a café</h1>
@@ -17,4 +17,4 @@ const Start = () => {
   );
 }
 
-export default Start
+export default start

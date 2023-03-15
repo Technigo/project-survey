@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
 
-const Subscription = ({ subscription, setSubscription }) => {
-  const handleSubscriptionChange = (event) => {
-    setSubscription(event.target.value)
+const subscriptionQuestion = ({ subscriptionQ, setSubscriptionQ }) => {
+  const handleSubscriptionQChange = (event) => {
+    setSubscriptionQ(event.target.value)
   }
 
   return (
@@ -13,8 +13,8 @@ const Subscription = ({ subscription, setSubscription }) => {
           <h2>Do you have an active subscription at any cafe?</h2>
         </label>
         <select
-          onChange={handleSubscriptionChange}
-          value={subscription}
+          onChange={handleSubscriptionQChange}
+          value={subscriptionQ}
           className="select-subscription"
           aria-live="polite">
 
@@ -28,4 +28,4 @@ const Subscription = ({ subscription, setSubscription }) => {
   );
 }
 
-export default Subscription
+export default subscriptionQuestion

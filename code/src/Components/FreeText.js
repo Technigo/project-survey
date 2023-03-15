@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FreeText = ({ headline, input, setInput, inputLabel, id, placeholder, htmlFor }) => {
+const freeText = ({ headline, input, setInput, inputLabel, id, placeholder, htmlFor }) => {
   const handleInputChange = (event) => {
     setInput(event.target.value)
   }
@@ -25,4 +25,4 @@ const FreeText = ({ headline, input, setInput, inputLabel, id, placeholder, html
   )
 }
 
-export default FreeText
+export default freeText

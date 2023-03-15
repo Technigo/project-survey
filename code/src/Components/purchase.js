@@ -1,10 +1,10 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
 
-const Purchases = ['1-2', '3-5', '6-10', '10+']
-console.log(Purchases)
+const purchases = ['1-2', '3-5', '6-10', '10+']
+console.log(purchases)
 
-const PurchaseQuestion = ({ purchase, setPurchase }) => {
+const purchaseQuestion = ({ purchase, setPurchase }) => {
   const handleNumberPurchases = (event) => {
     setPurchase(event.target.value)
   }
@@ -13,7 +13,7 @@ const PurchaseQuestion = ({ purchase, setPurchase }) => {
     <>
       <h2>How often per week do you purchase something to drink in a cafe?</h2>
       <form className="radio-buttons" id="radio-buttons">
-        {Purchases.map(group => (
+        {purchases.map(group => (
           <label key={group}>
             <input
               type="radio"
@@ -29,4 +29,4 @@ const PurchaseQuestion = ({ purchase, setPurchase }) => {
   )
 }
 
-export default PurchaseQuestion
+export default purchaseQuestion

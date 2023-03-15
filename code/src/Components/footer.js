@@ -1,7 +1,7 @@
 import React from 'react'
 import Drink from './coffee-shop.png'
 
-const Footer = () => {
+const footer = () => {
   return (
     <footer>
       <img src={Drink} alt="Cup with warm beverage" />
@@ -9,4 +9,4 @@ const Footer = () => {
   );
 }
 
-export default Footer
+export default footer
