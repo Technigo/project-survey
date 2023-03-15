@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Name = ({ name, setName }) => {
-  const handleNameChange = (event) => {
-    setName(event.target.value);
+export const Favorite = ({ favorite, setFavorite }) => {
+  const handleFavoriteChange = (event) => {
+    setFavorite(event.target.value);
   }
   return (
     <form onSubmit={(event) => event.preventDefault()}>
@@ -10,8 +10,9 @@ export const Name = ({ name, setName }) => {
       <input
         className="name-input"
         type="text"
-        value={name}
-        onChange={handleNameChange} />
+        value={favorite}
+        onChange={handleFavoriteChange}
+        required />
     </form>
   );
 };

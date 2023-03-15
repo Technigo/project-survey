@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
-import { Name } from './Components/Name';
+import { Favorite } from './Components/Favorite';
+import { Grape } from './Components/Grape';
 import { Food } from './Components/Food';
-import { Drink } from './Components/Drink';
 import { Result } from './Components/Result';
-import { Age } from './Components/Age';
+import { Price } from './Components/Price';
 import { Taste } from './Components/Taste';
 
 export const App = () => {
   const stepsTotalCount = 5
   const [step, setStep] = useState(1);
-  const [name, setName] = useState('');
+  const [favorite, setFavorite] = useState('');
+  const [grape, setGrape] = useState('');
+  const [priceGroup, setPriceGroup] = useState('0-18');
   const [food, setFood] = useState('');
-  const [ageGroup, setAgeGroup] = useState('0-18');
-  const [drink, setDrink] = useState('');
   const [taste, setTaste] = useState('');
 
   const handleStepIncrease = () => {
@@ -21,28 +21,28 @@ export const App = () => {
 
   return (
     <div className="question-container">
-      {/* 1 NAME - TEXT INPUT */}
+      {/* FAVORITE WINE - TEXT INPUT */}
       {step === 1 && (
-        <Name name={name} setName={setName} />
+        <Favorite favorite={favorite} setFavorite={setFavorite} />
       )}
-      {/* 1 FOOD - TEXT INPUT */}
+      {/* BEST GRAPE - TEXT INPUT */}
       {step === 2 && (
-        <Food food={food} setFood={setFood} />
+        <Grape grape={grape} setGrape={setGrape} />
       )}
-      {/* AGE - RADIO BUTTONS */}
+      {/* PRICE - RADIO BUTTONS */}
       {step === 3 && (
-        <Age ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
+        <Price priceGroup={priceGroup} setPriceGroup={setPriceGroup} />
       )}
-      {/* DRINK - TEXT INPUT */}
+      {/* TYPE OF FOOD - TEXT INPUT */}
       {step === 4 && (
-        <Drink drink={drink} setDrink={setDrink} />
+        <Food food={food} setFood={setFood} />
       )}
       {step === 5 && (
         <Taste taste={taste} setTaste={setTaste} />
       )}
       {/* RESULTS - THE VALUES ARE DISPLAYED */}
       {step >= 6 && (
-        <Result name={name} food={food} group={ageGroup} drink={drink} taste={taste} />
+        <Result favorite={favorite} grape={grape} group={priceGroup} food={food} taste={taste} />
       )}
       {step < 6 && (
         <>

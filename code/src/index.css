@@ -102,7 +102,7 @@ form {
   align-items: center;
 }
 
-.submit-button {
+.submit-button2 {
   background-color: transparent;
   border: dotted 10px;
   border-radius: 50%;
@@ -163,8 +163,53 @@ flex-direction: row;
 
 progress {
   accent-color: white;
+  height: 17px;
 }
 
 .steps-text {
   color: white;
+}
+
+.submit-button {
+  background: white;
+  border-radius: 999px;
+  box-shadow: White 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #746dbaff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: 'Righteous', cursive;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.copy-send-button {
+  background: white;
+  border-radius: 999px;
+  box-shadow: White 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #746dbaff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: 'Righteous', cursive;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 6px 8px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
 }

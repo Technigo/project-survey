@@ -1,17 +1,18 @@
 import React from 'react';
 
 export const Food = ({ food, setFood }) => {
-  const handleFoodChange = (event) => {
+  const handleDrinkChange = (event) => {
     setFood(event.target.value);
   }
   return (
     <>
-      <h1 className="nametext">Favorite grape?</h1>
+      <h1 className="nametext">Typ of food?</h1>
       <input
         className="name-input"
         type="text"
         value={food}
-        onChange={handleFoodChange} />
+        onChange={handleDrinkChange}
+        required />
     </>
   );
 }
