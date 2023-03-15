@@ -5,12 +5,11 @@ import myOtherImage from './github.png';
 export const Summary = (props) => {
   return (
     <div className="summary">
-      <h2>Thank you {props.name}, this was helpful!</h2>
-      <h3>Your overall impression: {props.ageGroup}</h3>
-      <h3>The best thing about our site: {props.bestThing}</h3>
-      <h3>The looks of our site is: {props.impression}</h3>
-      <h3>Would you recommend it to a friend? {props.answer}</h3>
-      <h3><i>Have a nice day!</i></h3>
+      <h2>Thank you {props.Name}, this was helpful!</h2>
+      <h3>Your overall impression: {props.Points}</h3>
+      <h3>The best thing about our site: {props.BestThing}</h3>
+      <h3>The looks of our site is: {props.Impression}</h3>
+      <h3>Would you recommend it to a friend? {props.Answer}</h3>
       <div className="aboutme">
         <p>Made by Emilia G. Anundi @Technigo</p>
       </div>

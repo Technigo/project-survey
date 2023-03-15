@@ -37,14 +37,14 @@ export const App = () => {
       )}
       {step >= 6 && (
         <Summary
-          name={name}
+          name={Name}
           points={Points}
-          location={bestThing}
+          bestThing={BestThing}
           impression={Impression}
           answer={Answer} />
       )}
 
-      {step < 4 && (
+      {step < 6 && (
         <>
           <p>Current step: {step}</p>
           <button type="button" onClick={handleStepIncrease}>Next step</button>

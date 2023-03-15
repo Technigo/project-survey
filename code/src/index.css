@@ -115,10 +115,6 @@ button:hover {
   font-family: 'Cantarell', sans-serif;
 }
 
-.summary i {
-  font-size: 30px;
-}
-
 .contactme{
   display:flex;
   justify-content: center;
@@ -129,7 +125,6 @@ button:hover {
 
 .contact-logo{
   width: 30px;
-  opacity: .75;
   padding: 10px;
 }
 
@@ -159,11 +154,11 @@ button:hover {
   border-radius: 15px;
   color: #ffffff;
   opacity: .7;
-  background-color:#aad7ee;
+  background-color:#ffffff;
   padding: 10px;
 }
 
 .contactE p{
-  color: #ffffff;
+  color: #000000;
 }
 

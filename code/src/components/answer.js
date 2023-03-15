@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Answer = ({ setAnswer }) => {
+export const Answer = ({ answer, setAnswer }) => {
   const handleAnswer = (event) => {
     setAnswer(event.target.value);
   }
@@ -8,20 +8,20 @@ export const Answer = ({ setAnswer }) => {
 
     <div className="bestthingbox">
       <h3><span>Would you recommend this site to a friend?</span></h3>
-      <label>
+      <label htmlFor="radio">
         <input
           type="radio"
           value="Yes"
           onChange={handleAnswer}
-          checked={Answer === 'Yes'} />
+          checked={answer === 'Yes'} />
                 Yes!
       </label>
-      <label>
+      <label htmlFor="radio">
         <input
           type="radio"
           value="No"
           onChange={handleAnswer}
-          checked={Answer === 'No'} />
+          checked={answer === 'No'} />
                 No!
       </label>
     </div>
