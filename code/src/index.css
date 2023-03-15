@@ -14,18 +14,22 @@ code {
 }
 
 .header {
-  position: absolute;
-  left: 10%;
-  right: 10%;
-  top: 10%;
+  background-color: pink;
+  color: white;
+  max-width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid rgb(206, 40, 40);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
 }
 
-.title {
- font-family:'Times New Roman', Times, serif;
+/* .title {
+ font-family:Verdana, Geneva, Tahoma, sans-serif;
  padding: 20px;
  width: fit-content;
  border: solid purple;
-}
+} */
 
 .question {
   position: absolute;
@@ -42,6 +46,19 @@ code {
   }
 
 .superpower-selection {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  font-size: 30px;
+  color: white;
+  max-width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid rgb(206, 40, 40);
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+/* .superpower-selection {
 position: absolute;
 left: 10%;
 right: 10%;
@@ -49,7 +66,7 @@ top: 40%;
  background-color: pink;
  display: flex;
  flex-direction: column;
-}
+} */
 
 .hero-selection {
 position: absolute;
@@ -62,16 +79,17 @@ cursor: pointer;
 }
 
 .inputbox {
-  background-color: transparent;
-  text-align: center;
-  font-size: 32px;
-  padding: 16px;
-  width: 220px;
-  transition: all 0.5s;
-  margin: 36px;
-  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-  border: solid green;
-
+position: absolute;
+ top: 40%;
+ left: 20%;
+ right: 10%;
+ width: fit-content;
+ border: solid red;
+ display: flex;
+ flex-direction: column;
+ padding: 15px;
+ margin: 15px;
+ font-size: 20px
 }
 
 .results {
@@ -120,3 +138,6 @@ button:hover{
   padding-left:8px;
 }
 
+.emoji {
+  font-size: 30px;
+}

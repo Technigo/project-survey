@@ -6,8 +6,8 @@ export const Power = ({ power, setPowers }) => {
   }
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <p className="question">Which superpower would you dream of having?</p>
       <div className="superpower-selection">
+        <p className="question">Which superpower would you dream of having?</p>
 
         <label htmlFor="first">
           <input
@@ -18,7 +18,7 @@ export const Power = ({ power, setPowers }) => {
             value="Fire"
             checked={power === 'Fire'}
             onChange={handlePowerChange} />
-            Hot as fire
+          <span role="img" className="emoji" aria-label="img">🔥</span>Hot as fire
         </label>
 
         <label htmlFor="second">
@@ -30,7 +30,7 @@ export const Power = ({ power, setPowers }) => {
             value="Water"
             checked={power === 'Water'}
             onChange={handlePowerChange} />
-            Move like water
+          <span role="img" className="emoji" aria-label="img">💦</span>Move like water
         </label>
 
         <label htmlFor="third">
@@ -42,7 +42,7 @@ export const Power = ({ power, setPowers }) => {
             value="Time"
             checked={power === 'Time'}
             onChange={handlePowerChange} />
-            Timetravel
+          <span role="img" className="emoji" aria-label="img">⌛</span>Timetravel
         </label>
 
         <label htmlFor="forth">
@@ -54,7 +54,7 @@ export const Power = ({ power, setPowers }) => {
             value="Transparency"
             checked={power === 'Transparency'}
             onChange={handlePowerChange} />
-            Transparency
+          <span role="img" className="emoji" aria-label="img">🔍</span>Transparency
         </label>
       </div>
     </form>
