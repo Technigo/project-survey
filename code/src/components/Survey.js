@@ -2,47 +2,49 @@ import React, { useState } from 'react';
 import Startpage from './Startpage';
 import Summary from './Summary';
 
-const ageGroups = ['1', '2', '3'];
+const ageGroups = ['1', '2', '3']; /* Input for radio-buttons */
 
 const Survey = () => {
-  const [name, setName] = useState('');
-  const [location, setLocation] = useState('');
+  const [name, setName] = useState(''); /* Handles name input */
+  const [location, setLocation] = useState(''); /* Handles location input */
   const [wantsNewsletter, setWantsNewsletter] = useState(false);
-  const [ageGroup, setAgeGroup] = useState('');
-  const [counter, setCounter] = useState(0);
+  const [ageGroup, setAgeGroup] = useState(''); /* Handles age input */
+  const [counter, setCounter] = useState(0); /* Handles survey moving forward */
+
+  const handleNextClick = () => { /* Handles buttons */
+    setCounter(counter + 1);
+  }
+
+  const handleForm = (event) => { /* Handles form */
+    event.preventDefault()
+  }
 
   return (
     <section className="surveyWrapper">
       {counter === 0 && (
-        <Startpage startCount={() => setCounter(1)} />
+        <Startpage startCount={() => setCounter(1)} /> /* Shows startpage of Survey */
       )}
       {counter === 1 && (
         <>
           <form
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={() => handleForm()}
             className="answer">
-            <label htmlFor="Name">
-            What is your name?
+            <label htmlFor="Name"> What is your name?
               <input
                 type="text"
                 onChange={(event) => setName(event.target.value)}
                 value={name} />
             </label>
           </form>
-          <button
-            type="button"
-            onClick={() => setCounter(2)}>
-            Next 👉
-          </button>
+          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
         </>
       )}
       {counter === 2 && (
         <>
           <form
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={() => handleForm()}
             className="answer">
-            <label htmlFor="Location">
-              Where do you live?
+            <label htmlFor="Location"> Where do you live?
               <select
                 onChange={(event) => setLocation(event.target.value)}
                 value={location}>
@@ -53,20 +55,15 @@ const Survey = () => {
               </select>
             </label>
           </form>
-          <button
-            type="button"
-            onClick={() => setCounter(3)}>
-            Next 👉
-          </button>
+          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
         </>
       )}
       {counter === 3 && (
         <>
           <form
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={() => handleForm()}
             className="answer">
-            <label htmlFor="Newsletter?">
-              Newsletter?
+            <label htmlFor="Newsletter?"> Newsletter?
               <input
                 type="checkbox"
                 onChange={(event) => setWantsNewsletter(event.target.checked)}
@@ -74,18 +71,15 @@ const Survey = () => {
                 value="Yes" />
             </label>
           </form>
-          <button
-            type="button"
-            onClick={() => setCounter(4)}>
-            Next 👉
-          </button>
+          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
         </>
       )}
       {counter === 4 && (
         <>
           <form
-            onSubmit={(event) => event.preventDefault()}
+            onSubmit={() => handleForm()}
             className="answer">
+              Age?
             {ageGroups.map((group) => (
               <label htmlFor="Age group:" key={group}>
                 <input
@@ -97,27 +91,19 @@ const Survey = () => {
               </label>
             ))}
           </form>
-          <button
-            type="button"
-            onClick={() => setCounter(5)}>
-            Next 👉
-          </button>
+          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
         </>
       )}
       {counter === 5 && (
         <>
           <div className="answer">
-            <Summary
+            <Summary /* Shows summary of Survey */
               nameInput={name}
               locationInput={location}
               newsInput={wantsNewsletter.valueOf}
               ageInput={ageGroup} />
           </div>
-          <button
-            type="button"
-            onClick={() => setCounter(6)}>
-            Submit
-          </button>
+          <button type="submit" onClick={() => handleNextClick()}> Submit</button>
         </>
       )}
       {counter === 6 && (
@@ -125,11 +111,7 @@ const Survey = () => {
           <div className="answer">
             <h2>Thank you!</h2>
           </div>
-          <button
-            type="button"
-            onClick={() => setCounter(0)}>
-            Restart
-          </button>
+          <button type="button" onClick={() => setCounter(0)}> Restart</button>
         </>
       )}
     </section>
