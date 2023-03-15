@@ -46,7 +46,7 @@ export const App = () => {
       )}
       {counter < 5 && (
         <>
-          <p>tjudiluu</p>
+          <p>tjudiluu behöver fixa denna så den inte finns hela tiden</p>
           <button type="button" onClick={handleNextStep} className="nextQuestion"> Next question </button>
         </>
       )}
@@ -57,11 +57,4 @@ export const App = () => {
 // start button hur ska jag sätta button nr 2 vart?
 // what should i put in result to show my results
 // where should I put my if statement
-
-/* {counter < 5 && (
-        <>
-          <p>tjudiluu</p>
-          <button type="button" onClick={handleNextStep}
-          className="nextQuestion"> Next question </button>
-        </>
-      )} */
+// how do I make next question just show from name...

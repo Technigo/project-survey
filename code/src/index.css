@@ -23,9 +23,20 @@ body{
 .StartPage{
   display: grid;
   grid-template-columns: 1fr;
+  justify-items: center;
   border: 2px solid green;
   margin: 20px;
 
+}
+
+.startBtn{
+  width: 100px;
+  margin: 20px;
+}
+
+.nextQuestion{
+  width: 100px;
+  margin: 20px;
 }
 
 
@@ -38,30 +49,35 @@ body{
 }
 
 /*favourite color*/
+.color h2{
+color: blue;
+}
+
 .favouriteColor{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  border: black solid 2px;
+  justify-items: center;
   margin: 20px;
-  background-color: antiquewhite;
-
 
 }
+
 .pink{
-  grid-column: 1/3;
-  background-color: pink;
-  border: rgb(237, 77, 104) solid 2px;
+ 
+  background-color: #FF007F;
   width: 100px;
   height: 100px;
   margin: 10px;
+  grid-column: 1/2;
+ 
   }
 .green{
-  background-color: green;
+  background-color: #00755E;
   border: rgb(200, 253, 200) solid 2px;
   width: 100px;
   height: 100px;
   padding-left: 5px;
    margin: 10px;
+   grid-column: 2/3;
 
 }
 .black{
