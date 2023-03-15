@@ -46,8 +46,8 @@ const Form = () => {
   ];
 
   const elephantOptions = [
-    { label: 'ride an Alpaca', value: 'ride an Alpaca' },
-    { label: 'ride an Elephant', value: 'ride an Elephant' },
+    { label: 'riding an Alpaca', value: 'riding an Alpaca' },
+    { label: 'riding an Elephant', value: 'riding an Elephant' },
   ];
 
   const superPowersOptions = [

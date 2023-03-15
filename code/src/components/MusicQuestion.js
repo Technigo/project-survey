@@ -13,7 +13,7 @@ const MusicQuestion = ({ artistName, callbackOnChange, step, setStep }) => {
 
   return (
     <div className="artist-container">
-      <label htmlFor="musical-artist">Choose your favorite artist:</label>
+      <label className="musical-artist" htmlFor="musical-artist">Choose your favorite artist:</label>
       <select
         id="musical-artist"
         name="artistName"

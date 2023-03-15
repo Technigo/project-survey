@@ -23,7 +23,8 @@ const HorseQuestion = ({ horseOptions, callbackOnChange, step, setStep }) => {
               value={option.value}
               onChange={handleHorseOptionsChange}
               name="horseOptions"
-              required />
+              required
+              className="radio-button" />
             {option.label}
           </label>
         ))}

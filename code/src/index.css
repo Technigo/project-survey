@@ -1,10 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 code {
@@ -17,6 +15,23 @@ code {
   background-size: cover; 
   background-position: center center; 
   min-height: 100vh;
+  font-family: 'Rampart One', cursive;
+  padding:20px;
+}
+.btn{
+ font-size: 30px;
+ background-color: rgb(48, 183, 24);
+ color:antiquewhite;
+ font-weight: 900;
+}
+
+.btn:hover {
+cursor: pointer;
+box-shadow: 0 0 5px rgba(0,0,0,0.9);
+}
+
+.radio-button {
+  border: none;
 }
 
 .first-page-header{
@@ -32,13 +47,20 @@ code {
   background-size: cover; 
   background-position: center center; 
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.horse-container {
-  background-image:url(assets/horseduck.jpg);
-  background-size: cover; 
-  background-position: center center; 
-  min-height: 100vh;
+.name-input{
+  font-size: 30px;
+  margin-left: 40px;
+  margin-top: 100px;;
+}
+
+#name{
+  font-size: 30px;
 }
 
 .artist-container {
@@ -46,13 +68,44 @@ code {
   background-size: cover; 
   background-position: center center; 
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  color:lightgreen;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+  font-size: 40px;
+}
+.musical-artist{
+  margin-bottom: 20px;
 }
 
+#musical-artist {
+  font-size: 30px;
+}
+
+.horse-container {
+  background-image:url(assets/horseduck.jpg);
+  background-size: cover; 
+  background-position: right center; 
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .elephant-container {
   background-image:url(assets/alpaca.jpg);
   background-size: cover; 
   background-position: center center; 
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  color:rgb(230, 50, 227);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .superpower-container {
@@ -60,6 +113,11 @@ code {
   background-size: cover; 
   background-position: center center; 
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .summary-container{
@@ -67,4 +125,7 @@ code {
   background-size: cover; 
   background-position: center center; 
   min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  padding:15px;
+ 
 }

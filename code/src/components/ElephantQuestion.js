@@ -22,7 +22,8 @@ const ElephantQuestion = ({ elephantOptions, callbackOnChange, step, setStep }) 
               type="radio"
               value={option.value}
               onChange={handleElephantOptionsChange}
-              name="selectedElephantOptions" />
+              name="selectedElephantOptions"
+              className="radio-button" />
             {option.label}
           </label>
         ))}
