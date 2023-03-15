@@ -15,7 +15,7 @@ export const App = () => {
   const [food, setFood] = useState('');
   const [taste, setTaste] = useState('');
 
-  const handleStepIncrease = () => {
+  function handleStepIncrease() {
     setStep(step + 1);
   }
 

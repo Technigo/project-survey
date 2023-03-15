@@ -9,7 +9,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 22% 5% 0% 3%;
-  background-image: url("./Components/wine-1.png");  
+  background-image: url("./Components/wine-1.png");
 }
 
 code {
@@ -37,7 +37,7 @@ code {
 
 .pricegrouptext {
   display: flex;
-  font-size: 13px;
+  font-size: 15px;
   font-family: Futura;
   color: white;
   justify-content: center;
@@ -73,7 +73,6 @@ code {
   margin: 1px;
 }
 
-
 .question-container {
   display: flex;
   flex-direction: column;
@@ -84,7 +83,7 @@ code {
   border-color: white;
   width: 227px;
   height: 227px; 
-  padding: 28px;
+  padding: 37px;
   border-color: white;
 
 }
@@ -109,6 +108,7 @@ form {
   background-color: transparent;
   color: white;
   font-family: Futura;
+  font-weight: bold;
   justify-content: center;
   align-items: center;
   width: 120px;
@@ -135,9 +135,10 @@ form {
 }
 .radio-container {
   display: flex;
-  width: 50px;
+  width: 60px;
   flex-direction: column;
   justify-content: center;
+  margin: 5px 5px 0px 5px;
 }
 
 .radio-form {
@@ -157,7 +158,6 @@ progress {
 .count-numbers {
   font-family: Futura;
   font-size: 11px;
-
 }
 
 .steps-text {

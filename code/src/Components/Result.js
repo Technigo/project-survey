@@ -12,6 +12,7 @@ export const Result = ({ favorite, grape, food, group, taste }) => {
       <button className="copy-send-button" type="submit" onClick={() => { navigator.clipboard.writeText('this'.state.textToCopy) }}>
         <a href="mailto:hello@winetwothree.com">COPY & SEND!</a>
       </button>
+      playSound();
     </>
   );
 };
