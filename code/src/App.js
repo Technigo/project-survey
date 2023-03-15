@@ -1,5 +1,5 @@
 import Question from 'components/Question';
-import FormRadioButton from 'components/FormRadioButton';
+import { answersQ1, answersQ2, answersQ3, answersQ4 } from 'library/answers';
 import FormTextField from 'components/FormTextField';
 import FormSelect from 'components/FormSelect';
 import React, { useState } from 'react';
@@ -7,9 +7,14 @@ import './index.css';
 
 export const App = () => {
   const [questionNo, setQuestionNo] = useState(0);
-  const [favoriteAnimal, setFavoriteAnimal] = useState('');
   const [name, setName] = useState('');
-
+  const [question1Answer, setQuestion1Answer] = useState('');
+  const [question2Answer, setQuestion2Answer] = useState('');
+  const [question3Answer, setQuestion3Answer] = useState('');
+  const [question4Answer, setQuestion4Answer] = useState('');
+  const nextQuestion = () => {
+    setQuestionNo(questionNo + 1);
+  };
   // }
 
   // first question - Radio Buttons //
@@ -17,31 +22,67 @@ export const App = () => {
   // third question - Freetext field //
 
   return (
-    <>
-      <form>
-        <label>Enter your name:
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)} />
-        </label>
-        {questionNo === 0 && (<Question
-          question={{ header: 'Header 1', text: 'question one' }}
-          form={<FormRadioButton
-            questionNo={questionNo}
-            setQuestionNo={setQuestionNo}
-            favoriteAnimal={favoriteAnimal} />} />)}
-        {questionNo === 1 && (<Question
-          question={{ header: 'Header 2', text: 'question two' }}
-          questionNo={questionNo}
-          setQuestionNo={setQuestionNo} />)}
-        {questionNo === 2 && (<Question question={{ header: 'Header 3', text: 'question three' }} questionNo={questionNo} setQuestionNo={setQuestionNo} />)}
-        {questionNo >= 3 && (<h1>Slut</h1>)}
-      </form>
+    <form>
+      {questionNo === 0 && (
+        <div>
 
-      {/* <button type="button" onClick={() => /* handleNextClick}>Next question</button> */}
-    </>
+          <label>Enter your name:
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)} />
+          </label>
+          <button
+            type="button"
+            disabled={name === ''}
+            onClick={nextQuestion}>
+            Next
+          </button>
+        </div>
+      )}
+      {questionNo === 1 && (<Question
+        question={{ header: 'Question 1', text: 'Which tech entrepreneur named his son X Æ A-12?' }}
+        questionNo={questionNo}
+        setQuestionNo={setQuestionNo}
+        answers={answersQ1} />)}
+
+      {questionNo === 2 && (<Question
+        question={{ header: 'Question 2', text: 'Johhny Depp is famously afraid of what?' }}
+        questionNo={questionNo}
+        setQuestionNo={setQuestionNo}
+        answers={answersQ2} />)}
+
+      {questionNo === 3 && (<Question
+        question={{ header: 'Question 3', text: 'Which pop star is the godmother of both of Elton John´s sons?' }}
+        questionNo={questionNo}
+        setQuestionNo={setQuestionNo}
+        answers={answersQ3} />)}
+
+      {questionNo === 4 && (<Question
+        question={{ header: 'Question 4', text: 'What did you hate sharing as a kid?' }}
+        questionNo={questionNo}
+        setQuestionNo={setQuestionNo}
+        answers={answersQ4} />)}
+
+      {questionNo >= 5 && (<h1>The end</h1>)}
+
+      {false && (
+        <>
+          {/* <FormSelect /> */}
+          <FormTextField />
+        </>
+      )}
+
+    </form>
   );
+  
+const [question1Answer, question2Answer, question3Answer, question4Answer] = "some answer";
+return (
+      <div>
+        <p>The answer to these questions make you a PIRAT</p>
+      </div>
+);
+
 }
 
 export default App;

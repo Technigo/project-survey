@@ -1,17 +1,20 @@
 import React from 'react';
 
-const FormSelect = () => {
+const handleChange = (event) => {
+  console.log(event.target.value);
+}
+
+const FormSelect = ({ answers }) => {
   return (
-    <select name="pets" id="pet-select">
-      <option value="">--Please choose an option--</option>
-      <option value="dog">Dog</option>
-      <option value="cat">Cat</option>
-      <option value="hamster">Hamster</option>
-      <option value="parrot">Parrot</option>
-      <option value="spider">Spider</option>
-      <option value="goldfish">Goldfish</option>
-    </select>
-  )
+    <div onChange={handleChange}>
+      {answers.map((answer) => (
+        <select className="form-control" key={answer}>
+          {answer}
+          <option type="select" name="mySelect" value={answer} />
+        </select>
+      ))}
+    </div>
+  );
 }
 
 export default FormSelect;
