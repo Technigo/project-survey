@@ -19,7 +19,6 @@ export const App = () => {
   return (
     <>
       <h1>The Popcorn picker 🍿!</h1>
-      <p>"You had me at popcorn..."</p>
     
     {step === 1 && (
       <Name name={name} setName={setName} />
@@ -34,22 +33,23 @@ export const App = () => {
     )}
 
     {step === 4 && (
+    <>
       <Topping topping={topping} setTopping={setTopping} />
+      <button type="submit"onClick={handleStepIncrease}>Submit</button>
+    </>
     )}
 
     {step >= 5 && (
       <Result name={name} size={size} flavor={flavor} topping={topping} />
     )}
 
-    {step < 5 && (
-      <>
-        <button type="button" onClick={handleStepIncrease}>OK</button>
-      </>
+    {step < 4 && (
+       <button type="button" onClick={handleStepIncrease}>OK</button>
     )}
   </>
   );
 }
 
-//Submit button
+//Add required feature to the fields
 //Event.preventDefault
 //Add if/else if topping is chosen. 

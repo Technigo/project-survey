@@ -6,7 +6,7 @@ export const Flavor = ({ flavor, setFlavor }) => {
     }
 
     return (
-        <form>
+        <form onSubmit={event => event.preventDefault()}>
             <select
                 onChange={handleFlavorChange}
                 value={flavor}

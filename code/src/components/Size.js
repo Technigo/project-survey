@@ -6,7 +6,7 @@ export const Size = ({ size, setSize }) => {
     }
 
     return (
-        <form>
+        <form onSubmit={event => event.preventDefault()}>
             <p>What size would you like?</p>      
         <label>
             <input

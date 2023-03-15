@@ -6,14 +6,14 @@ export const Topping = ({ topping, setTopping }) => {
     }
 
     return (
-        <form>
+        <form onSubmit={event => event.preventDefault()}>
             <label>
             Add pieces of chocolate to your popcorn?
             <input 
                 type="radio"
                 value="yes"
-                label="Yaassss"
                 onChange={handleToppingChange}
+                checked={topping === "yes"}
             />
             Yes
             </label>
@@ -21,8 +21,8 @@ export const Topping = ({ topping, setTopping }) => {
             <input
                 type="radio"
                 value="no"
-                label="nope"
                 onChange={handleToppingChange}
+                checked={topping === "no"}
             />
             No
         </label>
