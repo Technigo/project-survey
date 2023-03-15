@@ -1,16 +1,62 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable no-shadow */
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
+import { Name } from 'components/Name';
+import { Points } from 'components/points'
+import { bestThing } from 'components/bestThing';
+import { Impression } from 'components/impression'
+import { Answer } from 'components/answer'
 import { Summary } from './components/Summary';
 
 export const App = () => {
-  const [location, setLocation] = useState('')
+  const [step, setStep] = useState(1);
+  const [bestThing, setBestThing] = useState('')
   const [name, setName] = useState()
-  const [ageGroup, setAgeGroup] = useState();
-  const [submitted, setSubmitted] = useState(false)
-  const [impression, setImpression] = useState('')
-  const [answer, setAnswer] = useState();
+  const [Points, setPoints] = useState();
+  const [Impression, setImpression] = useState('')
+  const [Answer, setAnswer] = useState();
+
+  const handleStepIncrease = () => {
+    setStep(step + 1);
+  }
 
   return (
+    <>
+      {step === 1 && (
+        <Name name={name} setName={setName} />
+      )}
+      {step === 2 && (
+        <Points points={Points} setPoints={setPoints} />
+      )}
+      {step === 3 && (
+        <bestThing bestThing={bestThing} setDrink={setBestThing} />
+      )}
+      {step === 4 && (
+        <Impression impression={Impression} setImpression={setImpression} />
+      )}
+      {step === 5 && (
+        <Answer answer={Answer} setImpression={setAnswer} />
+      )}
+      {step >= 6 && (
+        <Summary
+          name={name}
+          points={Points}
+          location={bestThing}
+          impression={Impression}
+          answer={Answer} />
+      )}
+
+      {step < 4 && (
+        <>
+          <p>Current step: {step}</p>
+          <button type="button" onClick={handleStepIncrease}>Next step</button>
+        </>
+      )}
+    </>
+  );
+}
+
+/* return (
     <div>
       {!submitted && (
         <div className="myForm">
@@ -29,7 +75,9 @@ export const App = () => {
               </h2>
               <form className="namebox">
                 <h3><span>Your name: {name} ✍️ </span></h3>
-                <input className="namefield" type="text" onChange={(event) => setName(event.target.value)} value={name} required />
+                <input className="namefield" type="text" onChange={(event) => 
+                  setName(event.target.value)}
+                value={name} required />
               </form>
             </div>
 
@@ -39,39 +87,40 @@ export const App = () => {
                 <input
                   type="radio"
                   value="One"
-                  onChange={(event) => setAgeGroup(event.target.value)}
-                  checked={ageGroup === 'One'} />
+                  onChange={(event) => setPoints(event.target.value)}
+                  checked={points === 'One'} />
                 Terrible!
               </label>
               <label>
                 <input
                   type="radio"
                   value="Two"
-                  onChange={(event) => setAgeGroup(event.target.value)}
-                  checked={ageGroup === 'Two'} />
+                  onChange={(event) => setPoints(event.target.value)}
+                  checked={points === 'Two'} />
                 Its alright...
               </label>
               <label>
                 <input
                   type="radio"
                   value="Three"
-                  onChange={(event) => setAgeGroup(event.target.value)}
-                  checked={ageGroup === 'Three'} />
+                  onChange={(event) => setPoints(event.target.value)}
+                  checked={points === 'Three'} />
                 Quite nice!
               </label>
               <label>
                 <input
                   type="radio"
                   value="Four"
-                  onChange={(event) => setAgeGroup(event.target.value)}
-                  checked={ageGroup === 'Four'} />
+                  onChange={(event) => setPoints(event.target.value)}
+                  checked={points === 'Four'} />
                 Awesome!
               </label>
             </div>
 
             <div className="selectbox">
               <h3> <span> Ok, what is the best thing about the site? </span></h3>
-              <select className="dropdown" onChange={(event) => setLocation(event.target.value)} value={location}>
+              <select className="dropdown" onChange={(event) => setBestThing(event.target.value)} 
+              value={bestThing}>
                 <option value="None">Choose option</option>
                 <option value="The design">The design</option>
                 <option value="The accessibility">The accessibility</option>
@@ -82,7 +131,8 @@ export const App = () => {
 
             <div className="selectbox">
               <h3> <span> Thank you! What do you think about the looks of our site? </span></h3>
-              <select className="dropdown" onChange={(event) => setImpression(event.target.value)} value={impression}>
+              <select className="dropdown" onChange={(event) => setImpression(event.target.value)} 
+              value={impression}>
                 <option value="None">Choose option</option>
                 <option value="Bad">Bad!</option>
                 <option value="Ordinary">Ordinary...</option>
@@ -111,8 +161,6 @@ export const App = () => {
               </label>
             </div>
 
-            <h2><span className="finger" role="img" aria-label="Finger pointing down">👇</span></h2>
-
             <button onClick={() => setSubmitted(true)} type="submit">SUBMIT</button>
           </form>
         </div>
@@ -121,7 +169,7 @@ export const App = () => {
       <div className="summary">
         {submitted && <Summary
           name={name}
-          location={location}
+          location={bestThing}
           ageGroup={ageGroup}
           impression={impression}
           answer={answer} />}
@@ -129,4 +177,4 @@ export const App = () => {
 
     </div>
   )
-}
+} */
