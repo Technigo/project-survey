@@ -61,11 +61,17 @@ position: absolute;
 cursor: pointer;
 }
 
-.inputbox input:focus + label,
-.inputbox input:valid + .label{
-  position: absolute;
-  top: -18px;
-left: 0;
+.inputbox {
+  background-color: transparent;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  border: solid green;
+
 }
 
 .results {
