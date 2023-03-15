@@ -7,7 +7,7 @@ const Button = ({ counter, setCounter }) => {
   }
   return (
     <div className="btn-container">
-      <button type="button" onClick={handleIncreaseCounterClick}>Submit</button>
+      <button type="button" onClick={handleIncreaseCounterClick}>KLICK</button>
     </div>
   );
 }

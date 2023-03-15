@@ -13,19 +13,18 @@ code {
     monospace;
 }
 
-
-.title {
- font-family:'Times New Roman', Times, serif;
- padding: 20px;
- width: fit-content;
- border: solid pink;
-}
-
 .header {
   position: absolute;
   left: 10%;
   right: 10%;
   top: 10%;
+}
+
+.title {
+ font-family:'Times New Roman', Times, serif;
+ padding: 20px;
+ width: fit-content;
+ border: solid purple;
 }
 
 .question {
@@ -43,7 +42,68 @@ code {
   }
 
 .super-power-selection {
-  display: flex;
-  flex-direction: column;
-  border: solid red;
+position: absolute;
+left: 10%;
+right: 10%;
+top: 40%;
+ background-color: antiquewhite;
+ display: flex;
+ flex-direction: column;
 }
+
+.hero-selection {
+position: absolute;
+ top: 40%;
+ left: 10%;
+ width: fit-content;
+ border: solid black;
+ font-size: 16px;
+cursor: pointer;
+}
+
+.results {
+  position: absolute;
+ top: 40%;
+ left: 10%;
+ right: 10%;
+ width: fit-content;
+ border: solid red;
+ display: flex;
+ flex-direction: column;
+ padding: 15px;
+ margin: 15px;
+}
+
+.next-step {
+  position: absolute;
+  top: 60%;
+  left: 20%;
+  }
+
+
+.btn-container {
+  border-radius: 4px;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-size: 32px;
+  padding: 16px;
+  width: 220px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 36px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+}
+
+button{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+button:hover{
+  padding-right: 24px;
+  padding-left:8px;
+}
+

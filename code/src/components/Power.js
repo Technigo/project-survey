@@ -18,7 +18,7 @@ export const Power = ({ power, setPowers }) => {
             value="Fire"
             checked={power === 'Fire'}
             onChange={handlePowerChange} />
-            Burn like fire
+            Hot as fire
         </label>
 
         <label htmlFor="second">
@@ -39,10 +39,22 @@ export const Power = ({ power, setPowers }) => {
             type="radio"
             id="power3"
             aria-label="Third checkbox"
-            value="Water"
+            value="Time"
             checked={power === 'Time'}
             onChange={handlePowerChange} />
             Timetravel
+        </label>
+
+        <label htmlFor="forth">
+          <input
+            className="checkbox-power"
+            type="radio"
+            id="power4"
+            aria-label="forth checkbox"
+            value="Transparency"
+            checked={power === 'Transparency'}
+            onChange={handlePowerChange} />
+            Transparency
         </label>
       </div>
     </form>

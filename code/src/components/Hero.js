@@ -13,6 +13,7 @@ export const Hero = ({ hero, setHero }) => {
         <option value="Flying Hero" aria-label="A Hero that can fly" checked={hero === 'Flying hero'} onChange={handleHeroChange}>Hero that Flys </option>
         <option value="Fire Hero" aria-label="A Hero that creates fire" checked={hero === 'Fire hero'} onChange={handleHeroChange}>Hero with Fire </option>
         <option value="Timetravel Hero" aria-label="A Hero that travels in time" checked={hero === 'Timetravel hero'} onChange={handleHeroChange}>Hero that timetravels </option>
+        <option value="Timetravel Hero" aria-label="A Hero that travels in time" checked={hero === 'Transparent hero'} onChange={handleHeroChange}>Hero that blends in </option>
       </select>
     </>
   );

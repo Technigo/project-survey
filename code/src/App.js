@@ -14,9 +14,9 @@ export const App = () => {
 
   return (
     <>
-      <Header />
+
       {counter === 0 && (
-        <Name name={name} setName={setName} inputLabel="First, whats your name?" />
+        <><Header /><Name name={name} setName={setName} /></>
       )}
       {counter === 1 && (
         <Power power={power} setPowers={setPowers} inputLabel="Which superpower would you wish for?" />
@@ -27,7 +27,7 @@ export const App = () => {
       )}
       {counter >= 3 && (
 
-        <Result power={power} hero={hero} />
+        <Result power={power} hero={hero} name={name} />
       )}
       {counter < 2 && (
 
