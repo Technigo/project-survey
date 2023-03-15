@@ -1,14 +1,15 @@
 import React from 'react';
 
-export const Thing = ({ thing, setThing }) => {
-  /* const handleThingChange = (event) => {
+export const Thing = ({ thing, setThing, counterFromApp, setCounter }) => {
+  const handleThingChange = (event) => {
     setThing(event.target.value);
-    console.log('value is:', event.target.value);
-  } */
+    setCounter(counterFromApp + 1);
+    console.log('thing picked: ', event.target.value);
+  }
 
   return (
     <div className="radioButton">
-      <h2>What´s your thing?</h2>
+      <h2>What do you prefer?</h2>
 
       <form className="radioBtn">
         <label className="option1" htmlFor="ocean">
@@ -16,7 +17,7 @@ export const Thing = ({ thing, setThing }) => {
             type="radio"
             value="ocean"
             className="ocean"
-            onChange={(event) => { setThing(event.target.value); }}
+            onChange={handleThingChange}
             checked={thing === 'ocean'} />
          Ocean
         </label>
@@ -26,7 +27,7 @@ export const Thing = ({ thing, setThing }) => {
             id="mountain"
             value="Mountain"
             className="mountain"
-            onChange={(event) => { setThing(event.target.value); }}
+            onChange={handleThingChange}
             checked={thing === 'Mountain'} />
          Mountain
         </label>
@@ -36,7 +37,7 @@ export const Thing = ({ thing, setThing }) => {
             id="sand"
             value="Sand"
             className="sand"
-            onChange={(event) => { setThing(event.target.value); }}
+            onChange={handleThingChange}
             checked={thing === 'Sand'} />
          Sand
         </label>
@@ -47,7 +48,7 @@ export const Thing = ({ thing, setThing }) => {
             id="city"
             value="City"
             className="city"
-            onChange={(event) => { setThing(event.target.value); }}
+            onChange={handleThingChange}
             checked={thing === 'City'} />
        City
         </label>
@@ -55,3 +56,8 @@ export const Thing = ({ thing, setThing }) => {
     </div>
   );
 };
+
+/* const handleThingChange = (event) => {
+    setThing(event.target.value);
+    console.log('value is:', event.target.value);
+  } */

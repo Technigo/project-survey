@@ -1,9 +1,12 @@
 import React from 'react'
 
-export const Prefer = ({ prefer, setPrefer }) => {
+export const Prefer = ({ prefer, setPrefer, counterFromApp, setCounter }) => {
   const handlePreferChange = (event) => {
     setPrefer(event.target.value);
+    setCounter(counterFromApp + 1);
+    console.log('prefer: ', event.target.value);
   }
+
   return (
     <div>
 

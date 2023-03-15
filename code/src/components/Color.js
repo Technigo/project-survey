@@ -1,32 +1,40 @@
 import React from 'react'
 
-export const Color = ({ color, setColor }) => {
+export const Color = ({ color, setColor, counterFromApp, setCounter }) => {
   const handleColorChange = (event) => {
     setColor(event.target.value);
+    setCounter(counterFromApp + 1);
+    console.log('Color picked: ', event.target.value);
   }
+  console.log(color)
   return (
     <div className="color">
       <h2>What´s your favourite color ?</h2>
 
       <section className="favouriteColor">
-        <button className="pink" type="button" onClick={handleColorChange} value={color}> Pink </button>
+        <button
+          className="pink"
+          type="button"
+          onClick={handleColorChange}
+          value="pink"> Pink
+        </button>
         <button
           className="green"
           type="button"
           onClick={handleColorChange}
-          value={color}> Green
+          value="green"> Green
         </button>
         <button
           className="black"
           type="button"
           onClick={handleColorChange}
-          value={color}> Black
+          value="black"> Black
         </button>
         <button
           className="brown"
           type="button"
           onClick={handleColorChange}
-          value={color}> Brown
+          value="brown"> Brown
         </button>
       </section>
     </div>
@@ -34,10 +42,3 @@ export const Color = ({ color, setColor }) => {
 }
 
 // what should I have as a value to get the if statements right?
-/* <button className="pink" type="button" onClick={handleColorChange} value={color}> Pink </button>
-          <button className="green" type="button"
-          onClick={handleColorChange} value={color}> Green </button>
-          <button className="black" type="button"
-          onClick={handleColorChange} value={color}> Black </button>
-          <button className="brown" type="button"
-          onClick={handleColorChange} value={color}> Brown </button> */

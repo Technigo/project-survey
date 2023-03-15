@@ -28,7 +28,10 @@ body{
   margin: 20px;
 
 }
-
+.StartPage h1{
+  padding-left: 30px;
+  padding-right: 10px;
+}
 .startBtn{
   width: 100px;
   margin: 20px;
