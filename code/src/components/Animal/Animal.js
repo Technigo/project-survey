@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const Animal = ({ animal, setAnimal }) => {
+export const Animal = ({ animal, setAnimal, handleStepIncrease }) => {
   const handleAnimalChange = (event) => {
     setAnimal(event.target.value);
   }
   return (
-    <div>
+    <div className="anima-container">
       <p>What animal do you prefer?</p>
       <form>
         <label htmlFor="duck">
@@ -26,6 +26,9 @@ export const Animal = ({ animal, setAnimal }) => {
             checked={animal === 'frog'} />
         </label>
       </form>
+      <div>
+        <button className="step-btn" type="button" onClick={handleStepIncrease}>Next</button>
+      </div>
     </div>
   )
 }
