@@ -1,5 +1,7 @@
 import React from 'react';
 import './animal.css';
+import duck from '../../images/duck-saju-dey.png'
+import frog from '../../images/frog-Fadhil-Kya.png'
 
 export const Animal = ({ animal, setAnimal, handleStepIncrease }) => {
   const handleAnimalChange = (event) => {
@@ -9,6 +11,11 @@ export const Animal = ({ animal, setAnimal, handleStepIncrease }) => {
     <div className="animal-container">
       <p>What animal do you prefer?</p>
       <div className="form-container">
+        <div className="image-container-animal">
+          <img src={duck} alt="duck" />
+          <img src={frog} alt="frog" />
+        </div>
+
         <form>
           <label htmlFor="duck">
         Duck

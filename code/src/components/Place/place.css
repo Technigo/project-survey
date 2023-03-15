@@ -3,5 +3,18 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 20px;
+    gap: 50px;
+}
+
+.image-container-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.image-container-place img {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
 }

@@ -3,5 +3,23 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 20px;
+    gap: 30px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 80px;
+}
+
+.image-container-animal img{
+    height: 90px;
+    width: 90px;
+}
+
+.image-container-animal{
+    display: flex;
+    flex-direction: row;
+    gap: 40px; 
 }

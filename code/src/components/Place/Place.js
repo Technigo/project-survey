@@ -1,5 +1,8 @@
 import React from 'react';
 import './place.css';
+import mountain1 from '../../images/mountains1.png'
+import forest from '../../images/forest.png'
+import stars from '../../images/stars.png'
 
 export const Place = ({ place, setPlace, handleStepIncrease }) => {
   const handlePlaceChange = (event) => {
@@ -8,14 +11,19 @@ export const Place = ({ place, setPlace, handleStepIncrease }) => {
   return (
     <div className="place-container">
       <p>Which place do you prefer?</p>
+      <div className="image-container-place">
+        <img src={forest} alt="forest" />
+        <img src={mountain1} alt="mountain" />
+        <img src={stars} alt="starry night in forest" />
+      </div>
       <form>
         <select
           onChange={handlePlaceChange}
           value={place}>
-          <option value="">Select location:</option>
-          <option value="stockholm">Stockholm</option>
-          <option value="barcelona">Barcelona</option>
-          <option value="oslo">Oslo</option>
+          <option value="">Select location</option>
+          <option value="forest">A green forest</option>
+          <option value="mountain">A stunning mountain valley</option>
+          <option value="stars">A mystical magical forest</option>
         </select>
       </form>
       <div>
