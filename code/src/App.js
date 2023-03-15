@@ -13,12 +13,12 @@ export const App = () => {
 
   const askName = (<Name name={name} setName={setName} />)
   const askPower = (
-    <div className="container-main">
-      <Power power={power} setPowers={setPowers} inputLabel="Which superpower would you wish for?" />
-    </div>)
+
+    <Power power={power} setPowers={setPowers} inputLabel="Choose power" />
+  )
 
   const askHero = (
-    <Hero hero={hero} setHero={setHero} inputLabel="TEXTquestion 2" />
+    <Hero hero={hero} setHero={setHero} inputLabel="Which hero" />
   )
   const showResult = (
     <Result power={power} hero={hero} name={name} />
@@ -32,7 +32,7 @@ export const App = () => {
       {counter >= 3 && showResult}
       {counter < 3 && (
         <div className="next-step">
-          <Button counter={counter} setCounter={setCounter} inputLabel="Next step" />
+          <Button counter={counter} setCounter={setCounter} inputLabel="Start" />
         </div>
       )}
     </div>

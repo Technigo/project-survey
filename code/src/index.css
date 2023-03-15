@@ -58,16 +58,14 @@ position: absolute;
 }
 
 .results {
+color: black;
  position: absolute;
- top: 40%;
- left: 10%;
- right: 10%;
+ margin-top: 20px;
  width: fit-content;
  border: solid red;
  display: flex;
  flex-direction: column;
  padding: 15px;
- margin: 15px;
 }
 
 
