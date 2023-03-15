@@ -13,16 +13,17 @@ export const FourthQuestion = ({ clothingNoun, setClothingNoun }) => {
     setClothingNoun(event.target.value);
   }
   return (
-    <form>
-        {clothing.map (group => (
-      <p className="instructionText"> Write an adjective</p>
-      <label key={group} htmlFor="piece-of-clothing">
-        <input
-          type="radio"
-          value={group}
-          onChange={handleFourthAnswer}
-          checked={clothingNoun === group} />
-      </label>
+    <form onSubmit={(event) => event.preventDefault()}>
+      {clothing.map((group) => (
+        <label key={group} htmlFor="piece-of-clothing">
+          <input
+            type="radio"
+            value={group}
+            onChange={handleFourthAnswer}
+            checked={clothingNoun === group} />
+          {group}
+        </label>
+      ))}
     </form>
   )
 }
