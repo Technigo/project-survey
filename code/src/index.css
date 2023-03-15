@@ -133,7 +133,7 @@ html,
 
 .equipments-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -148,6 +148,7 @@ html,
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
+  margin: 0 10px;
 }
 
 .equipment-btn.on {
@@ -167,21 +168,48 @@ html,
   padding: 5px 0;
 }
 
-.result {
-  height: 100%;
+.support-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.results {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 20px;
   align-items: flex-start;
-  margin: 0 40px;
+  background: #F1E2F5;
+  border: 12px solid #FFFFFF;
+  box-shadow: 0px 56px 84px rgba(122, 58, 173, 0.15);
+  border-radius: 12px;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 2rem;
+  padding: 2rem;
 }
 
-.equipments-result {
-  display: flex;
-  justify-content: space-between;
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
 }
 
-.equipments-result>ul {
+.result>ul {
   margin: 0;
+  padding: 0;
+}
+
+@media only screen and (min-device-width: 768px) {
+
+  .equipment-btn {
+    width: 120px;
+    height: 150px;
+  }
+
+  .equipment-logo {
+    font-size: 70px;
+  }
 }

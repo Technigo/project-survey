@@ -43,8 +43,8 @@ export const Answer = (props) => {
      </div>}
 
       {props.questionNumber === 5
-     && <div className="answer-block">
-       <div className="support-container">
+     && <div className="answer-block support-container">
+       <div>
          <input
            className="support-input"
            type="radio"
@@ -56,7 +56,7 @@ export const Answer = (props) => {
          <label htmlFor="Yes">Yes</label>
        </div>
 
-       <div className="support-container">
+       <div>
          <input className="support-input" type="radio" id="no" name="option" value="No" checked={props.support === 'No'} onChange={handleSupport} />
          <label htmlFor="No">No</label>
        </div>
