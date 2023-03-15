@@ -8,5 +8,6 @@ export const FavouritePlace = ({ favouriteplace, setFavouritePlace }) => {
 return (
     <>
     <p>Wich place in the world do you wanna be at right now?</p>
+    <input type="text" value={favouritePlace} onChange={handleFavouritePlaceChange} />
     </>
 )

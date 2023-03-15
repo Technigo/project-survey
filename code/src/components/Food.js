@@ -15,6 +15,17 @@ export const Food = ({ food, setFood }) => {
 return (
     <>
     <p>What do you wanna eat on your party?</p>
-    <input type="radio" value={food} onChange={handleFoodChange} />
+    <div classname="foodBtn">
+        {FoodOption.map((group) => (
+            <label key={group}>
+              <input type="radio" 
+              value={food} 
+              onChange={handleFoodChange}
+              checked={food === group} />
+              {group}
+            </label>
+        ))}
+    </div>
+    
     </>
 )
