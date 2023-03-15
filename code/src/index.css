@@ -1,3 +1,11 @@
+html { 
+  background: url('./images/image-dream.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -18,20 +26,19 @@ code {
 }
 
 .container-main {
-  background-color: pink;
-  color: white;
+  background-color: rgba(231,223,208,255);
+  opacity: 0.7;
+  color: #315c6e;
   max-width: 500px;
   height: 500px;
   margin: 50px auto;
   padding: 20px;
-  border: 1px solid rgb(206, 40, 40);
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
 }
 
 .superpower-selection {
   display: flex;
   flex-direction: column;
-  background-color:antiquewhite;
 }
 
 .question {
@@ -39,8 +46,7 @@ code {
    display: flex;
    text-align: left;
    padding: 20px;
-   margin: 10px;
-   border: solid blue;
+   margin: 20px;
   }
 
 .inputbox {
@@ -71,7 +77,7 @@ color: black;
 
 .btn-container {
   border-radius: 4px;
-  background-color: blueviolet;
+  background-color: rgba(231,223,208,255);
   border: none;
   text-align: center;
   font-size: 32px;
@@ -84,6 +90,7 @@ color: black;
 }
 
 button{
+  text-decoration: dotted;
   cursor: pointer;
   display: inline-block;
   position: relative;
