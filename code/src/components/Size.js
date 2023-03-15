@@ -10,27 +10,27 @@ export const Size = ({ size, setSize }) => {
             <p>What size would you like?</p>      
         <label>
             <input
-                type="radio"
+                type="checkbox"
                 value="Small"
-                onChange={event => setSize(event.target.value)}
+                onChange={handleSizeChange}
                 checked={size === "Small"}
             />
             Small
         </label>
         <label>
             <input
-                type="radio"
+                type="checkbox"
                 value="Medium"
-                onChange={event => setSize(event.target.value)}
+                onChange={handleSizeChange}
                 checked={size === "Medium"}
             />
             Medium
         </label>
         <label>
             <input
-                type="radio"
+                type="checkbox"
                 value="Large"
-                onChange={event => setSize(event.target.value)}
+                onChange={handleSizeChange}
                 checked={size === "Large"}
             />
             Large
