@@ -55,7 +55,7 @@ color: black;
  position: absolute;
  margin-top: 20px;
  width: fit-content;
- border: solid red;
+ border: solid #455862;
  display: flex;
  flex-direction: column;
  padding: 15px;
@@ -77,13 +77,14 @@ color: black;
 }
 
 button{
-  text-decoration: dotted;
+  font-weight: bolder;
+  color: #455862;
   cursor: pointer;
   display: inline-block;
   position: relative;
   background-color: white;
   border: none;
-  transition: 0.5s;
+  transition: 0.1s;
 }
 
 button:hover{
@@ -91,10 +92,22 @@ button:hover{
   padding-left:8px;
 }
 
+input[type=text], select {
+  width: 50%;
+  padding: 12px;
+  margin: 10px 0 15px;
+  background-color: #d1cdce;
+  display: inline-block;
+  border: 1px solid lightgoldenrodyellow;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
 .emoji {
   font-size: 30px;
 }
 
-h2 {
-  font-weight: bold;
+input[type=radio] {
+  margin-bottom: 15px;
+  cursor: pointer;
 }
