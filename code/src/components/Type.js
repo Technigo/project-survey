@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Type = ({ type, setType, step }) => {
-  console.log('{ type, setType, step };', { type, setType, step })
+  // console.log('{ type, setType, step };', { type, setType, step })
   return (
     <div className="container type">
       <h2>Question {step}</h2>

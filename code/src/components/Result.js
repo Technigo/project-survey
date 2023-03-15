@@ -22,8 +22,10 @@ const Summary = ({ name, type, genre, data }) => {
     console.log('series suggestion:', suggestion);
   }
   */
+
+  /* Gives a random number to put inside the return, change to the filtered array later */
   const i = Math.floor(Math.random() * data.series.length);
-  console.log(i);
+  console.log('data.series.length:', data.series.length, 'i:', i);
 
   return (
     <div className="container result">
@@ -33,6 +35,12 @@ const Summary = ({ name, type, genre, data }) => {
         <p>{data.series[i].plot}</p>
         <span>IMDB Score: {data.series[i].score} / 10</span>
         <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
+
+        {/* Adds class "hidden" to the div if comment is empty */}
+        <div className={`comments ${data.series[i].comment === '' ? 'hidden' : ''}`}>
+          <h3>Comment from Matilda:</h3>
+          <p>&quot;{data.series[i].comment}&quot;</p>
+        </div>
       </div>
     </div>
   );

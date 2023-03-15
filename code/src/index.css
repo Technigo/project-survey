@@ -108,3 +108,22 @@ padding: 0 25px;
   max-width: 100px;
   margin-left: calc(50% - 50px);
 }
+
+.comments {
+  background-color: rgb(34, 34, 78);
+  color: white;
+  margin: 5px;
+  padding: 10px;
+}
+
+.comments h3 {
+  margin: 0;
+}
+
+.comments p {
+  margin: 10px 0;
+}
+
+.hidden {
+  display: none;
+}
