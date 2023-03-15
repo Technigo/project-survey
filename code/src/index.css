@@ -1,13 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Sail&display=swap');
+
 body {
+  min-height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(10,18,121);
+background: linear-gradient(5deg, rgba(10,18,121,1) 0%, rgba(103,27,187,1) 100%);
+}
+
+h1 {
+  font-family: 'Sail', cursive;
+  font-size: 60px;
+  color: white;
+}
+
+header {
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+p {
+  font-family: 'Assistant', sans-serif;
+}
+
+.main {
+  width: 200px;
+  margin: auto;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 20px;
+}
+
+input[type=text] {
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+
+select {
+  padding: 0.5rem;
+  background-color: lightblue;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.shape-input {
+  font-family: 'Assistant', sans-serif;
+  display: flex;
+  flex-direction: row;
+}
+
+.aquarium-container {
+  flex-direction: row;
 }

@@ -1,4 +1,5 @@
 import React from 'react'
+import '../index.css';
 
 export const Name = ({ name, setName }) => {
   const handleName = (event) => {
@@ -6,7 +7,7 @@ export const Name = ({ name, setName }) => {
   }
   return (
     <>
-      <p>First of all, what is your name?</p>
+      <p>Hi, what is your name?</p>
       <form onSubmit={(event) => event.preventDefault()}>
         <input type="text" value={name} onChange={handleName} />
       </form>
