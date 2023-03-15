@@ -6,7 +6,7 @@ export const Drink = ({ drink, setDrink }) => {
   }
   return (
     <>
-      <h1 className="nametext">Favorite drink?</h1>
+      <h1 className="nametext">Typ of food?</h1>
       <input
         className="name-input"
         type="text"

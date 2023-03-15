@@ -11,6 +11,7 @@ body {
   background: rgb(34,193,195);
   background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,71,45,1) 100%);
   padding: 20% 10% 0% 10%;
+  background-image: url("./Components/winery-1.png");  
 }
 
 code {
@@ -20,12 +21,49 @@ code {
 
 .nametext {
   display: flex;
-  font-size: 5vw;
+  font-size: 25px;
   font-family: 'Righteous', cursive;
-  color: white;
+  color: #746dbbff;
   justify-content: center;
   align-items: center;
 }
+
+.agetext {
+  display: flex;
+  font-size: 10px;
+  font-family: 'Righteous', cursive;
+  color: #746dbbff;
+  justify-content: center;
+  align-items: center;
+}
+
+.nextquestiontext {
+  display: flex;
+  font-size: 17px;
+  font-family: 'Righteous', cursive;
+  color: #746dbbff;
+  justify-content: center;
+  align-items: center;
+}
+
+.currentquestiontext {
+  display: flex;
+  font-size: 17px;
+  font-family: 'Righteous', cursive;
+  color: #746dbbff;
+  justify-content: center;
+  align-items: center;
+}
+
+.resulttext {
+  display: flex;
+  font-size: 17px;
+  font-family: 'Righteous', cursive;
+  color: #746dbbff;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .question-container {
   display: flex;
@@ -37,7 +75,6 @@ code {
   border-radius: 50%;
   width: 320px;
   height: 320px; 
-  margin: 10%;
 }
 
 form {
@@ -56,9 +93,10 @@ form {
 
 .submit-button {
   background-color: transparent;
-  border: none;
-  color: white;
-  padding: 15px 32px;
+  border: dotted;
+  border-radius: 50%;
+  color: #746dbbff;
+  padding: 10px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -67,18 +105,22 @@ form {
 
 .taste-select {
   font-size: 30px;
-  font-family: 'Righteous', cursive;
+  border: none;
+  background-color: transparent;
+  color: #746dbbff;
+
+
 }
 
 .name-input {
   background-color: transparent;
   width: 220px;
   padding:10px;
-  border:0;
+  border: dotted;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   font-size: 30px;
   font-family: 'Righteous', cursive;
-  color: white;
+  color: #746dbbff;
 }
 
 .submit-button {
@@ -86,6 +128,10 @@ form {
 }
 
 .radio-buttons {
-  display: block;
-width: 320px;
+  display: flex;
+  width: 320px;
+}
+
+.label {
+  display: flex;
 }

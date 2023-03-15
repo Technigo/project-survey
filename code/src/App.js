@@ -17,6 +17,7 @@ export const App = () => {
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
+
   return (
     <div className="question-container">
       {/* 1 NAME - TEXT INPUT */}
@@ -44,8 +45,8 @@ export const App = () => {
       )}
       {step < 6 && (
         <>
-          <h1 className="nametext">Current question: {step}</h1>
-          <button className="submit-button" type="button" onClick={handleStepIncrease}><h1 className="nametext">Next question</h1></button>
+          <h1 className="currentquestiontext">Current question: {step}</h1>
+          <button className="submit-button" type="button" onClick={handleStepIncrease}><h1 className="nextquestiontext">Next question</h1></button>
         </>
       )}
     </div>

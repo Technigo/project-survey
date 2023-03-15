@@ -6,7 +6,7 @@ export const Name = ({ name, setName }) => {
   }
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <h1 className="nametext">Your name?</h1>
+      <h1 className="nametext">Favorite wine?</h1>
       <input
         className="name-input"
         type="text"
