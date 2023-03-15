@@ -5,11 +5,9 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value)
   }
   return (
-    <>
-      <p>
-        Finally, what is your name?
-      </p>
+    <form className="name-form" onSubmit={(event) => event.preventDefault()} required>
+      Finally, what is your name?
       <input type="text" required value={name} onChange={handleName} />
-    </>
+    </form>
   )
 }

@@ -5,11 +5,9 @@ export const Color = ({ color, setColor }) => {
     setColor(event.target.value)
   }
   return (
-    <>
-      <p>
-        What is your favorite color?
-      </p>
+    <form className="color-form" onSubmit={(event) => event.preventDefault()} required>
+      What is your favorite color?
       <input type="text" required value={color} onChange={handleColor} />
-    </>
+    </form>
   )
 }

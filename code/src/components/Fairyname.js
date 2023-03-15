@@ -5,9 +5,9 @@ export const Fairyname = ({ fairyName, setFairyName }) => {
     setFairyName(event.target.value)
   }
   return (
-    <>
-      <p>Come up with a fairytale name</p>
+    <form className="fairy-name-from" onSubmit={(event) => event.preventDefault()} required>
+      Come up with a fairytale name
       <input type="text" required value={fairyName} onChange={handleFairyName} />
-    </>
+    </form>
   )
 }

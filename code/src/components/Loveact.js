@@ -6,7 +6,7 @@ export const Loveact = ({ loveAct, setLoveAct }) => {
   }
 
   return (
-    <form>
+    <form className="love-act-form" onSubmit={(event) => event.preventDefault()} required>
       Select..
       <select
         className="love-act-drop-down"
