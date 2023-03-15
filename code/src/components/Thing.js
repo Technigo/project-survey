@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Thing = ({ thing, setThing, counterFromApp, setCounter }) => {
+export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
   const handleThingChange = (event) => {
     setThing(event.target.value);
     setCounter(counterFromApp + 1);
@@ -18,7 +18,7 @@ export const Thing = ({ thing, setThing, counterFromApp, setCounter }) => {
             value="ocean"
             className="ocean"
             onChange={handleThingChange}
-            checked={thing === 'ocean'} />
+            checked={things === 'ocean'} />
          Ocean
         </label>
         <label htmlFor="mountain">
@@ -28,7 +28,7 @@ export const Thing = ({ thing, setThing, counterFromApp, setCounter }) => {
             value="Mountain"
             className="mountain"
             onChange={handleThingChange}
-            checked={thing === 'Mountain'} />
+            checked={things === 'Mountain'} />
          Mountain
         </label>
         <label htmlFor="sand">
@@ -38,7 +38,7 @@ export const Thing = ({ thing, setThing, counterFromApp, setCounter }) => {
             value="Sand"
             className="sand"
             onChange={handleThingChange}
-            checked={thing === 'Sand'} />
+            checked={things === 'Sand'} />
          Sand
         </label>
 
@@ -49,7 +49,7 @@ export const Thing = ({ thing, setThing, counterFromApp, setCounter }) => {
             value="City"
             className="city"
             onChange={handleThingChange}
-            checked={thing === 'City'} />
+            checked={things === 'City'} />
        City
         </label>
       </form>

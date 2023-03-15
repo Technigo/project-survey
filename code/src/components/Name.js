@@ -1,21 +1,18 @@
 import React from 'react';
 
-export const Name = ({ setName }) => {
+export const Name = ({ name, setName, counter }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
+
     console.log('Name:', event.target.value);
-  }
-  const handleKeyPress = (event) => {
-    if (event.key === 'Enter') {
-      setName(event.target.value);
-      console.log('Name:', event.target.value);
-    }
   }
 
   return (
-    <div className="inputName">
-      <p>What is your name?</p>
-      <input type="text" onChange={handleNameChange} onKeyPress={handleKeyPress} />
-    </div>
+    <form>
+      <div className="inputName">
+        <p>What is your name?</p>
+        <input type="text" onChange={handleNameChange} value={name} counter={counter} />
+      </div>
+    </form>
   );
 }
