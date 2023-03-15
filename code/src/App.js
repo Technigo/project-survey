@@ -3,7 +3,10 @@ import React from 'react';
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      The Popcorn picker 🍿!
+      <p>"You had me at popcorn..."</p>
     </div>
   );
 }
+
+//Submit button
