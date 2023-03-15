@@ -14,6 +14,7 @@ export const FourthQuestion = ({ clothingNoun, setClothingNoun }) => {
   }
   return (
     <form onSubmit={(event) => event.preventDefault()}>
+      <p className="instructionText"> Write an adjective</p>
       {clothing.map((group) => (
         <label key={group} htmlFor="piece-of-clothing">
           <input

@@ -6,7 +6,7 @@ export const SecondQuestion = ({ foodNoun, setFoodNoun }) => {
   }
   return (
     <>
-      <p> Write a noun that is food-related.</p>
+      <p className="instructionText"> Write a food-related noun in plural.</p>
       <input type="text" value={foodNoun} onChange={handleSecondAnswer} />
     </>
   )
