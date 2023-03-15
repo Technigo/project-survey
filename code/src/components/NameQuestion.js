@@ -5,11 +5,11 @@ import { NextQuestionButton } from "./NextQuestionButton";
 
 export const NameQuestion = ({name,onNameChange}) => {
    return(
-        <div>
+        <div className="nameQuestionBox">
             <p>
                 What is your name?
             </p>
-            <section>
+            <section className="nameBox">
                 <input
                 id="name-input"
                 name="name-input"
@@ -19,7 +19,7 @@ export const NameQuestion = ({name,onNameChange}) => {
                 required
                 />
             </section>
-            <NextQuestionButton button="NextQuestion" />
+            <NextQuestionButton button="Next" />
 
         </div>
     )

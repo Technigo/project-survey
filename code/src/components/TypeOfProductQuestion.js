@@ -6,11 +6,11 @@ import { NextQuestionButton } from "./NextQuestionButton";
 export const TypeOfproductQuestion = ({ product, onProductChange }) => {
 
   return (
-    <>
-      <div>
-        <p>
-          Which product do you purchase from us?
-        </p>
+    <div className="productTypeBox">
+      <p>
+        Which product do you purchase from us?
+      </p>
+      <div className="selectBox">
         <select
           onChange={onProductChange}
           value={product}
@@ -21,7 +21,7 @@ export const TypeOfproductQuestion = ({ product, onProductChange }) => {
           <option value="Sunglasses">Sunglasses</option>
         </select>
       </div>
-      <NextQuestionButton button="NextQuestion" />
-    </>
+      <NextQuestionButton button="Next" />
+    </div>
   );
 };

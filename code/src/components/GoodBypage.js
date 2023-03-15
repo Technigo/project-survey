@@ -4,7 +4,7 @@ import { NextQuestionButton } from "./NextQuestionButton"
 
 export const GoodBypage = () => {
     return (
-        <div>
+        <div className="goodbyPageBox">
             <h1>
                 THANK YOU FOR YOUR TIME!
             </h1>

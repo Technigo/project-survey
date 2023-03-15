@@ -5,9 +5,9 @@ import { NextQuestionButton } from "./NextQuestionButton";
 
 export const WelcomePage = () => {
     return (
-        <section className="main">
+        <section className="welcomeBox">
             <h1>
-                Welcome! Thanks for shopping with us! Your opinoin matters, let's chat!
+                Welcome! Thanks for shopping with us! Your opinion matters, let's chat!
             </h1>
             
             <NextQuestionButton button="Start" />

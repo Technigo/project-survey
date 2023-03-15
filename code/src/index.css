@@ -18,10 +18,62 @@ code {
   flex-direction:column;
 }
 .imgBox img{
-  width: auto;
-  height: 550px;
-
+  width: 100%;
+  height: auto;
 } 
+.welcomeBox,
+.nameQuestionBox,
+.ageGroupBox,
+.productTypeBox,
+.summaryBox,
+.goodbyPageBox{
+  text-align: center;
+  padding: 10px;
+}
+.nameBox,
+.ageBox,
+.selectBox,
+.ageBox{
+  margin-bottom: 20px;
+}
+#name-input{
+  font-size: 14px;
+  color: #4A403A;
+  background-color: whitesmoke;
+  border-color: #709078;
+}
+select{
+  color: red;
+}
+h1{
+  color: #4A403A;
+  font-size: 28px;
+  font-family: 'OxyFira Sansgen';
+  
+}
+h2{
+  color: #4A403A;
+  font-size: 24px;
+  font-family:"Droid Sans" ;
+}
+p{
+  color: #4A403A;
+  font-size: 24px;
+
+}
+.nextQuestionButton{
+  width: 100px;
+  height: 30px;
+  border-radius: 6px;
+  color: #4A403A;
+  font-size: 20px;
+  background-color: #E2C2B9;
+  border-color: #E2C2B9;
+}
+.nextQuestionButton:hover{
+  background-color: #709078;
+  cursor: pointer;
+}
 
 
 /***************tablet design******************************/
