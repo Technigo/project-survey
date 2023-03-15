@@ -4,14 +4,15 @@ import { Name } from 'components/Name';
 import { Food } from 'components/Food';
 import { Drink } from 'components/Drink';
 import { Result } from 'components/Result';
+import { RadioButton } from 'components/Radiobutton';
 
 /* mothership (parent) COMPONENT ? */
 export const App = () => {
   /* Is this VARIBLES ? */
   const [step, setStep] = useState(1);
-  const [name, setName] = useState(2);
-  const [food, setFood] = useState(3);
-  const [drink, setDrink] = useState(4);
+  const [name, setName] = useState();
+  const [food, setFood] = useState();
+  const [drink, setDrink] = useState();
   /*  FUNCTION */
   const handleStepIncrease = () => {
     /* Is this also a varible? */
@@ -21,7 +22,7 @@ export const App = () => {
   return (
     <>
       {step === 1 && (
-        <Name name={name} setName={setName} />
+        <Name name={name} setName={setName} /> /* alla the name.js codestuff is in NAME */
       )}
       {step === 2 && (
         <Food food={food} setFood={setFood} />

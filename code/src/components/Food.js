@@ -1,8 +1,8 @@
 import React from 'react'
 
-/* a food component? food is the PROPS? */
+/* a food component - food is the PROPS! */
 export const Food = ({ food, setFood }) => {
-/* a function? */
+/* a function inside a component */
 /* Anna, don´t forget to put a ( after return and a ) to close */
   const handleFoodChange = (event) => {
     /* is this a varible? */
@@ -16,7 +16,7 @@ export const Food = ({ food, setFood }) => {
   );
 }
 
-/* what is object destructuring? */
+/* what is object destructuring? (food and setFood) */
 /* when do I use the { } ? */
 /* why is the { } in the food component? */
 /* is the type=TEXT the event? */
