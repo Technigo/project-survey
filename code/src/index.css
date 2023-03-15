@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background-image: url("/Users/Theres/Desktop/technigo-projects/project-survey/images/background.jpg");
+  font-family: 'Quintessential', cursive;
+}
