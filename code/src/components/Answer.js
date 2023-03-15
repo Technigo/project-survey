@@ -10,7 +10,7 @@ export const Answer = (props) => {
   return (
     <>
       {props.questionNumber === 1
-     && <div className="answer-block"> <input className="name-input" type="text" value={props.name} onChange={(event) => props.setName(event.target.value)} /> </div>}
+     && <div className="answer-block"> <input className="name-input" type="text" value={props.name} required onChange={(event) => props.setName(event.target.value)} /> </div>}
 
       {props.questionNumber === 2
      && <div className="slidecontainer answer-block">

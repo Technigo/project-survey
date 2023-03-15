@@ -26,7 +26,6 @@ export const Section = (props) => {
           support={props.support}
           setSupport={props.setSupport} />
         <OkButton counter={props.counter} setCounter={props.setCounter} name="OK" />
-        {/* <ArrowButtons /> */}
       </div>
     </section>
   );
