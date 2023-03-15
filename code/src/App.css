@@ -1,0 +1,35 @@
+.page-container {
+    background: lightcoral;
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding: 40px;
+    border-radius: 20px;
+  }
+
+button {
+    display: inline-block;
+    font-family: 'Vollkorn', serif;
+    font-size: 20px;
+    padding: 4px 15px 3px 15px;
+    margin-right: 10px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    background: lightgrey;
+    cursor: pointer;
+    text-align: center;
+    transition: background 150ms ease-in-out, 
+                transform 150ms ease;
+}
+
+button:hover,
+button:focus {
+    background: lightskyblue;
+}
+
+button:active {
+    transform: scale(0.99);
+}
