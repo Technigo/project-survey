@@ -1,10 +1,19 @@
 import React from 'react';
-import ArrowIcon from './assets/arrow.svg'
+import ArrowRight from './assets/arrowright.svg'
 
-const Button = ({ counter, setCounter }) => {
+const NextButton = ({ counter, setCounter }) => {
   const handleIncreaseCounterClick = () => {
     setCounter(counter + 1);
   }
-  return <button type="button" className="nextBtn" onClick={handleIncreaseCounterClick}><img className="nextBtnImg" src={ArrowIcon} alt="forward pointing arrow" /></button>
+  return (
+    <div>
+      <button
+        type="button"
+        className="Btn"
+        onClick={handleIncreaseCounterClick}>
+        <img className="BtnImg" src={ArrowRight} alt="forward pointing arrow" />
+      </button>
+    </div>
+  )
 }
-export default Button;
+export default NextButton;
