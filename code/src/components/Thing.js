@@ -1,9 +1,11 @@
 import React from 'react';
 
 export const Thing = ({ thing, setThing }) => {
-  const handleThingChange = (event) => {
+  /* const handleThingChange = (event) => {
     setThing(event.target.value);
-  }
+    console.log('value is:', event.target.value);
+  } */
+
   return (
     <div className="radioButton">
       <h2>What´s your thing?</h2>
@@ -12,11 +14,10 @@ export const Thing = ({ thing, setThing }) => {
         <label className="option1" htmlFor="ocean">
           <input
             type="radio"
-            id="ocean"
-            value="Ocean"
+            value="ocean"
             className="ocean"
-            onChange={handleThingChange}
-            checked={thing === 'Ocean'} />
+            onChange={(event) => { setThing(event.target.value); }}
+            checked={thing === 'ocean'} />
          Ocean
         </label>
         <label htmlFor="mountain">
@@ -25,7 +26,7 @@ export const Thing = ({ thing, setThing }) => {
             id="mountain"
             value="Mountain"
             className="mountain"
-            onChange={handleThingChange}
+            onChange={(event) => { setThing(event.target.value); }}
             checked={thing === 'Mountain'} />
          Mountain
         </label>
@@ -35,7 +36,7 @@ export const Thing = ({ thing, setThing }) => {
             id="sand"
             value="Sand"
             className="sand"
-            onChange={handleThingChange}
+            onChange={(event) => { setThing(event.target.value); }}
             checked={thing === 'Sand'} />
          Sand
         </label>
@@ -46,7 +47,7 @@ export const Thing = ({ thing, setThing }) => {
             id="city"
             value="City"
             className="city"
-            onChange={handleThingChange}
+            onChange={(event) => { setThing(event.target.value); }}
             checked={thing === 'City'} />
        City
         </label>
