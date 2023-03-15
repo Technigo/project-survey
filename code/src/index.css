@@ -11,3 +11,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+/* This a double body element - remove later*/
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid blue;
+  padding: 100px;
+  margin: 20px;
+}
+
+input {
+  border: 2px solid red;
+}

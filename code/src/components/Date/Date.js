@@ -1,6 +1,18 @@
 import React from 'react';
 import './Date.css';
 
-export const Date = () => {
-  return <p>Hello I am from the Date file</p>
-}
+export const Date = ({ date, setDate }) => {
+  const handleDateChange = (event) => {
+    setDate(event.target.value);
+  }
+  return (
+    <>
+      <p>What is your arrival date?</p>
+      <input
+        type="text"
+        onChange={handleDateChange}
+        value={date}
+        required />
+    </>
+  )
+};
