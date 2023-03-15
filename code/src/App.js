@@ -4,6 +4,7 @@ import { SecondQuestion } from 'Components/SecondQuestion';
 import { ThirdQuestion } from 'Components/ThirdQuestion';
 import { FourthQuestion } from 'Components/FourthQuestion';
 import { FifthQuestion } from 'Components/FifthQuestion';
+import { SixthQuestion } from 'Components/SixthQuestion';
 import { Result } from 'Components/Result';
 
 export const App = () => {
@@ -13,6 +14,7 @@ export const App = () => {
   const [ingVerb, setIngVerb] = useState('');
   const [clothingNoun, setClothingNoun] = useState('');
   const [celebrity, setCelebrity] = useState('');
+  const [jobSector, setJobSector] = useState('');
 
   const handleProgress = () => {
     setStep(step + 1);
@@ -35,14 +37,18 @@ export const App = () => {
         <FifthQuestion celebrity={celebrity} setCelebrity={setCelebrity} />
       )}
       {step === 6 && (
+        <SixthQuestion jobSector={jobSector} setJobSector={setJobSector} />
+      )}
+      {step === 7 && (
         <Result
           adjective={adjective}
           foodNoun={foodNoun}
           ingVerb={ingVerb}
           clothingNoun={clothingNoun}
-          celebrity={celebrity} />
+          celebrity={celebrity}
+          jobSector={jobSector} />
       )}
-      {step < 6 && (
+      {step < 7 && (
         <>
           <p className="counterText"> Questions answered: {step}/9 </p>
           <button className="button" type="button" onClick={handleProgress}>Next question</button>
