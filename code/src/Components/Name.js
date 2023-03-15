@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+/* eslint-disable react/no-unescaped-entities */
+import React from 'react';
 import '../index.css';
 
-export const Name = () => {
-  const [name, setName] = useState('')
+export const Name = ({ name, setName }) => {
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  }
 
   return (
     <form>
-      <p className="questionTitle">Name:</p>
-      <input
+      <p>Let's begin! What is your name?</p>
+      <span className="questionTitle">Name: </span><input
         type="text"
-        onChange={(event) => setName(event.target.value)}
-        value={name} />
+        value={name}
+        onChange={handleNameChange} />
     </form>
   );
 };

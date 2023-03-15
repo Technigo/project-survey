@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React from 'react';
 import '../index.css';
 
-export const Checkbox = () => {
-  const [check, setCheck] = useState(false)
-
+export const Checkbox = ({ check, setCheck }) => {
+  const handleCheckbox = (event) => {
+    setCheck(event.target.checked);
+  }
   return (
     <form>
       <label>
@@ -12,7 +13,7 @@ export const Checkbox = () => {
         <input
           type="checkbox"
           checked={check}
-          onChange={(event) => setCheck(event.target.checked)} />
+          onChange={handleCheckbox} />
       </label>
     </form>
   );

@@ -5,9 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: aqua;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.survey-wrapper {
+  background-color: aquamarine;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+border: 1px solid black;
+}
+
+.next-question-btn {
+  width: 70px;
 }
