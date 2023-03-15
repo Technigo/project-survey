@@ -28,7 +28,7 @@ const Form = () => {
   };
 
   const handleInputChange = (name, value) => {
-    const newFormData = { ...formData, [name]: value };
+    const newFormData = Object.assign({}, formData, {[name]: value});
     setFormData(newFormData);
     if (name === 'selectedHorseOption') {
       setHorseOption(value);
