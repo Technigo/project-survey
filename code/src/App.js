@@ -7,6 +7,7 @@ import Starter from './components/Starter';
 import Name from './components/Name';
 import Type from './components/Type';
 import Genre from './components/Genre';
+import Score from './components/Score';
 import Summary from './components/Summary';
 import Result from './components/Result';
 // import Finished from './components/Finished';
@@ -16,6 +17,7 @@ export const App = () => {
   const [name, setName] = useState('');
   const [type, setType] = useState('');
   const [genre, setGenre] = useState('');
+  const [score, setScore] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -26,6 +28,7 @@ export const App = () => {
     setName('');
     setType('');
     setGenre('');
+    setScore('');
   };
 
   return (
@@ -34,7 +37,8 @@ export const App = () => {
       {step === 1 && <Name name={name} setName={setName} step={step} />}
       {step === 2 && <Type type={type} setType={setType} step={step} />}
       {step === 3 && <Genre genre={genre} setGenre={setGenre} step={step} />}
-      {step < 4 && step !== 0 && (
+      {step === 4 && <Score score={score} setScore={setScore} step={step} />}
+      {step < 5 && step !== 0 && (
         <div className="step-counter">
           <p>Current step: {step}</p>
           <button type="button" onClick={handleStepIncrease}>
@@ -45,13 +49,13 @@ export const App = () => {
           </button>
         </div>
       )}
-      {step === 4 && (
+      {step === 5 && (
         <>
-          <Summary name={name} type={type} genre={genre} />
+          <Summary name={name} type={type} genre={genre} score={score} />
           <button type="button" onClick={handleStepIncrease}>Yes!</button>
         </>
       )}
-      {step === 5 && (
+      {step === 6 && (
         <>
           <Result name={name} type={type} genre={genre} data={data} />
           <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
