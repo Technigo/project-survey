@@ -100,7 +100,7 @@ html,
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: start;
+  align-items: flex-start;
   margin: 0 40px;
   height: 100%;
 }
