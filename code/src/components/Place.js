@@ -7,7 +7,7 @@ export const Place = ({ place, setPlace }) => {
   return (
     <>
     <div className="question">
-      <p>Wich place in the world do you wanna be at right now?</p>
+      <p>Write a favourite place or somewhere you want to be right now.</p>
       </div>
       <input type="text" value={place} onChange={handlePlaceChange} />
     </>

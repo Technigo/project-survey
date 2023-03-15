@@ -1,10 +1,10 @@
 import React from 'react';
 
 const FoodOption = [
-  'The biggest cake you ever seen?',
-  'Buffé with all your favourite food?',
-  'Fruits and berries in piles?',
-  'Ice cream that never melt and never ends?',
+  'The biggest 🎂 you ever seen?',
+  'Buffé with all your favourite food?🍲',
+  '🍐🍊🥝🍇🍉 in piles?',
+  '🍦 that never melts?',
 ];
 
 export const Food = ({ food, setFood }) => {
