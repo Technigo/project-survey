@@ -223,3 +223,17 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+@media (min-width: 668px) {
+
+body {
+  padding: 22% 5% 0% 31%;
+}
+}
+
+@media (min-width: 1024px) {
+
+body {
+  padding: 22% 5% 0% 36%;
+}
+}
