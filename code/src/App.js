@@ -1,6 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 export const App = () => {
+  const [step, setStep] = useState(1);
+  const [name, setName] = useState('');
+  const [size, setSize] = useState('');
+
+  const handleStepIncrease = () => {
+    setStep(step + 1)
+  }
+
   return (
     <div>
       The Popcorn picker 🍿!
@@ -10,3 +18,4 @@ export const App = () => {
 }
 
 //Submit button
+//Event.preventDefault
