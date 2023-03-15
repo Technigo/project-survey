@@ -7,13 +7,13 @@ export const Name = ({ name, setName }) => {
 
 return (
     <form onSubmit={event => event.preventDefault()}>
-        <h2>You had me at popcorn...</h2>
+        <h2>"You had me at popcorn..."</h2>
         <p>What is your name?</p>
         <input 
         type="text" 
         value={name}
         onChange={handleNameChange}
-         /> 
+        /> 
     </form>
 );
 };

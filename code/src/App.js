@@ -18,7 +18,7 @@ export const App = () => {
 
   return (
     <>
-      <h1>The Popcorn picker 🍿!</h1>
+      <h1>The Popcorn picker 🍿</h1>
     
     {step === 1 && (
       <Name name={name} setName={setName} />
@@ -50,6 +50,5 @@ export const App = () => {
   );
 }
 
-//Add required feature to the fields
-//Event.preventDefault
-//Add if/else if topping is chosen. 
+//Add aria-labels
+//Add if/else if topping is chosen, will change the text under the result.
