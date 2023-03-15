@@ -151,8 +151,8 @@ html,
   margin: 0 10px;
 }
 
-.equipment-btn.on {
-  background: #811c9d;
+.on {
+  background: #87718d;
 }
 
 .equipment-btn:hover {

@@ -13,6 +13,7 @@ export const App = () => {
   const [equipment, setEquipment] = useState([])
   const [support, setSupport] = useState('')
   const steps = [1, 2, 3, 4, 5]
+
   return (
     <div className="App">
       {counter === 0
@@ -31,6 +32,7 @@ export const App = () => {
   setEquipment={setEquipment}
   support={support}
   setSupport={setSupport} />}
+
       {counter === 6
 && <SubmitButton counter={counter} setCounter={setCounter} name="Submit" />}
       {counter > 6
