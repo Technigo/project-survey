@@ -6,7 +6,7 @@ export const Grape = ({ grape, setGrape }) => {
   }
   return (
     <>
-      <h1 className="nametext">Favorite grape?</h1>
+      <h2 className="nametext">YUMMYEST GRAPE?</h2>
       <input
         className="name-input"
         type="text"

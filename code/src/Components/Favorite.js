@@ -6,7 +6,7 @@ export const Favorite = ({ favorite, setFavorite }) => {
   }
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <h1 className="nametext">Favorite wine?</h1>
+      <h1 className="nametext">FAVORITE PRODUCER?</h1>
       <input
         className="name-input"
         type="text"

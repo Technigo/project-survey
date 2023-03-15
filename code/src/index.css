@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 22% 5% 0% 5%;
+  padding: 22% 5% 0% 3%;
   background-image: url("./Components/wine-1.png");  
 }
 
@@ -19,8 +19,8 @@ code {
 
 .nametext {
   display: flex;
-  font-size: 20px;
-  font-family: 'Righteous', cursive;
+  font-size: 18px;
+  font-family: Futura;
   color: white;
   justify-content: center;
   align-items: center;
@@ -29,7 +29,7 @@ code {
 .pricetext {
   display: flex;
   font-size: 20px;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
   color: white;
   justify-content: center;
   align-items: center;
@@ -38,7 +38,7 @@ code {
 .pricegrouptext {
   display: flex;
   font-size: 13px;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
   color: white;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@ code {
 .nextquestiontext {
   display: flex;
   font-size: 17px;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
   color: white;
   justify-content: center;
   align-items: center;
@@ -56,7 +56,7 @@ code {
 .currentquestiontext {
   display: flex;
   font-size: 17px;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
   color: white;
   justify-content: center;
   align-items: center;
@@ -64,11 +64,13 @@ code {
 
 .resulttext {
   display: flex;
-  font-size: 15px;
-  font-family: 'Righteous', cursive;
+  font-size: 12px;
+  margin: 5px;
+  font-family: Futura;
   color: white;
   justify-content: center;
   align-items: center;
+  margin: 1px;
 }
 
 
@@ -80,8 +82,8 @@ code {
   background-color: #746dbaff;
   border-radius: 50%;
   border-color: white;
-  width: 230px;
-  height: 230px; 
+  width: 275px;
+  height: 275px; 
   padding: 30px;
   border: dotted 10px;
   border-color: white;
@@ -115,17 +117,20 @@ form {
 }
 
 .taste-select {
-  font-size: 30px;
+  font-size: 20px;
   border: none;
   background-color: transparent;
   color: white;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
 }
 
 .name-input {
   background-color: transparent;
   width: 160px;
-  padding:10px;
+  padding: 10px;
   border-bottom: dotted 10px;
   border-right: none;
   border-left: none;
@@ -133,7 +138,7 @@ form {
   border-color: white;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   font-size: 20px;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
   color: white
 }
 
@@ -177,13 +182,13 @@ progress {
   box-sizing: border-box;
   color: #746dbaff;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   line-height: 24px;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
   opacity: 1;
   outline: 0 solid transparent;
-  padding: 8px 18px;
+  padding: 5px 13px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -202,7 +207,7 @@ progress {
   font-size: 13px;
   font-weight: 700;
   line-height: 20px;
-  font-family: 'Righteous', cursive;
+  font-family: Futura;
   opacity: 1;
   outline: 0 solid transparent;
   padding: 6px 8px;
@@ -212,4 +217,14 @@ progress {
   width: fit-content;
   word-break: break-word;
   border: 0;
+}
+
+.resulttopic {
+  margin: 4px 0px 0px 2px;
+  display: flex;
+  font-size: 20px;
+  font-family: Futura;
+  color: white;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const priceGroups = [ /* Age group array */
+const priceGroups = [ /* Price group array */
   '5-15€',
   '15-25€',
   '25€ +'
@@ -8,9 +8,9 @@ const priceGroups = [ /* Age group array */
 
 export const Price = ({ priceGroup, setPriceGroup }) => {
   return (
-    <><h1 className="pricetext">Price group?</h1>
+    <><h2 className="pricetext">PRICE GROUP?</h2>
       <form className="radio-form">
-        {priceGroups.map((group) => (/* itterates trough the ageGroups array */
+        {priceGroups.map((group) => (/* itterates trough the priceGroups array */
         // eslint-disable-next-line jsx-a11y/label-has-associated-control
           <label
             className="radio-container"

@@ -55,7 +55,7 @@ export const App = () => {
             </span>
           </p>
           <button className="submit-button" type="button" onClick={handleStepIncrease}>
-            {step < stepsTotalCount ? 'Next Question' : 'Submit'}
+            {step < stepsTotalCount ? 'NEXT QUESTION' : 'SUBMIT'}
           </button>
         </>
       )}
