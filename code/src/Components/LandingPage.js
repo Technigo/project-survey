@@ -5,7 +5,7 @@ export const LandingPage = (props) => {
   return (
     <div>
       <h1>{props.landingTitle}</h1>
-      <p>{props.description}</p>
+      <h2>{props.description}</h2>
       <div>
         <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
       </div>

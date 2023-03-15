@@ -1,0 +1,327 @@
+{
+    "totalCount": 3045,
+    "count": 5,
+    "listings": [
+        {
+            "id": 64,
+            "rooms": 3,
+            "constructionYear": 2006,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.3344743,
+                    "longitude": 18.0174571,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Ulriksborgsgatan 9"
+                },
+                "namedAreas": [
+                    "Kungsholmen"
+                ]
+            },
+            "hasFireplace": 0,
+            "rent": 3677,
+            "livingArea": 71,
+            "listPrice": 5350000,
+            "booliId": 4910847,
+            "floor": 5,
+            "objectType": "Apartment",
+            "hasBalcony": 1,
+            "published": "2023-03-13 15:52:06",
+            "url": "https://www.booli.se/annons/4910847",
+            "image":"https://cf.bcdn.se/images/cache/34498432_960x640.webp"
+        },
+        {
+            "id": 1670,
+            "rooms": 3,
+            "constructionYear": 1896,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.34466649,
+                    "longitude": 18.07241763
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Lill-Jans Plan 3A"
+                },
+                "namedAreas": [
+                    "Östermalm"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 4094,
+            "livingArea": 63,
+            "listPrice": 7500000,
+            "booliId": 4922998,
+            "floor": 1,
+            "objectType": "Apartment",
+            "hasBalcony": 1,
+            "published": "2023-03-13 15:37:57",
+            "url": "https://www.booli.se/annons/4922998",
+            "image":"https://cf.bcdn.se/images/cache/34502602_960x640.webp"
+
+        },
+        {
+            "id": 407,
+            "rooms": 3,
+            "constructionYear": 1964,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.2832509,
+                    "longitude": 17.9127317,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Gransätragränd 2"
+                },
+                "namedAreas": [
+                    "Sätra"
+                ]
+            },
+            "hasFireplace": 0,
+            "rent": 5445,
+            "livingArea": 89.5,
+            "listPrice": 2475000,
+            "booliId": 4922990,
+            "floor": 2,
+            "objectType": "Apartment",
+            "hasBalcony": 1,
+            "published": "2023-03-13 15:32:24",
+            "url": "https://www.booli.se/annons/4922990",
+            "image":"https://cf.bcdn.se/images/cache/34502494_960x640.webp"
+
+        },
+        {
+            "id": 314156398,
+            "rooms": 3,
+            "hasPatio": 1,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.348392,
+                    "longitude": 18.046946
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Idungatan 8A"
+                },
+                "namedAreas": [
+                    "Vasastan"
+                ]
+            },
+            "hasFireplace": 0,
+            "rent": 2926,
+            "livingArea": 73,
+            "booliId": 4922961,
+            "objectType": "Apartment",
+            "hasBalcony": 0,
+            "published": "2023-03-13 15:06:17",
+            "url": "https://www.booli.se/annons/4922961",
+            "image":"https://cf.bcdn.se/images/cache/31618853_960x640.webp"
+
+        },
+        {
+            "id": 599722413,
+            "rooms": 2,
+            "constructionYear": 1907,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.3422754,
+                    "longitude": 18.0272703,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Tomtebogatan 51"
+                },
+                "namedAreas": [
+                    "Vasastan"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 3218,
+            "livingArea": 62,
+            "listPrice": 6500000,
+            "booliId": 4922946,
+            "floor": 3,
+            "objectType": "Apartment",
+            "published": "2023-03-13 14:45:28",
+            "url": "https://www.booli.se/annons/4922946",
+            "image":"https://cf.bcdn.se/images/cache/34502034_960x640.webp"
+
+        },
+        {
+            "id": 599722444,
+            "rooms": 2,
+            "constructionYear": 1938,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.3422754,
+                    "longitude": 18.0272703,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Idaborgs­vägen 19"
+                },
+                "namedAreas": [
+                    "Liljeholmskajen"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 3218,
+            "livingArea": 78,
+            "listPrice": 6495000,
+            "booliId": 4922946,
+            "floor": 3,
+            "objectType": "Villa",
+            "hasBalcony": 1,
+            "published": "2023-03-13 14:45:28",
+            "url": "https://www.booli.se/bostad/2550793",
+            "image":"https://cf.bcdn.se/images/cache/33202976_960x640.webp"
+
+        },
+        {
+            "id": 599722444,
+            "rooms": 1,
+            "constructionYear": 1938,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.3422754,
+                    "longitude": 18.0272703,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Pipers­gatan 5A"
+                },
+                "namedAreas": [
+                    "Kungsholmen"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 3218,
+            "livingArea": 32,
+            "listPrice": 3560000,
+            "booliId": 4922976,
+            "floor": 3,
+            "objectType": "Apartment",
+            "hasBalcony": 1,
+            "published": "2023-03-13 14:45:28",
+            "url": "https://www.booli.se/bostad/3957821",
+            "image":"https://cf.bcdn.se/images/cache/30613723_960x640.webp"
+
+        },
+        {
+            "id": 599822447,
+            "rooms": 3,
+            "constructionYear": 1979,
+            "hasPatio": 1,
+            "hasSolarPanels": 1,
+            "location": {
+                "position": {
+                    "latitude": 59.3422754,
+                    "longitude": 18.0272703,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Själlands­gatan 68"
+                },
+                "namedAreas": [
+                    "Kista"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 3218,
+            "livingArea": 87,
+            "listPrice": 3560000,
+            "booliId": 4922976,
+            "floor": 3,
+            "objectType": "Townhouse",
+            "hasBalcony": 1,
+            "published": "2023-03-10 15:45:28",
+            "url": "https://www.booli.se/annons/4536700",
+            "image":"https://cf.bcdn.se/images/cache/28986720_960x640.webp"
+
+        },
+        {
+            "id": 599742447,
+            "rooms": 3,
+            "constructionYear": 1985,
+            "hasPatio": 1,
+            "hasSolarPanels": 1,
+            "location": {
+                "position": {
+                    "latitude": 59.3422754,
+                    "longitude": 18.0272703,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Carl Malmstens väg 48"
+                },
+                "namedAreas": [
+                    "Bergshamra Södra"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 3218,
+            "livingArea": 89,
+            "listPrice": 3560000,
+            "booliId": 4922976,
+            "floor": 3,
+            "objectType": "Townhouse",
+            "hasBalcony": 1,
+            "published": "2023-03-10 15:45:28",
+            "url": "https://www.booli.se/bostad/4212680",
+            "image": "https://cf.bcdn.se/images/cache/34427851_960x640.webp"
+        }
+    ],
+    "offset": 0,
+    "searchParams": {
+        "upcomingSale": 0,
+        "areaId": 1
+    }
+}

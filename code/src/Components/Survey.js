@@ -8,12 +8,14 @@ import { RadioQuestion } from 'Components/RadioQuestion';
 import { SelectQuestion } from 'Components/SelectQuestion';
 import { RangeSliderQuestion } from 'Components/RangeSliderQuestion';
 import { Summary } from 'Components/Summary';
+import { Results } from 'Components/Results';
 
 export const Survey = () => {
   const [questionStep, setQuestionStep] = useState(0);
   const [answers, setAnswers] = useState('');
 
   const printQuestions = () => {
+    console.log(questionStep)
     return (
       <>
         {questionStep === 0 && (
@@ -74,7 +76,7 @@ export const Survey = () => {
         {questionStep === 4 && (
           <RangeSliderQuestion
             label="SEK"
-            questionId="firstName"
+            questionId="price"
             onValueUpdate={(value) => {
               setAnswers({
                 ...answers,
@@ -95,6 +97,14 @@ export const Survey = () => {
             }}
             buttonLabel="Show me homes"
             restartButtonLabel="Restart" />
+        )}
+        {questionStep === 6 && (
+          <Results
+            resultsTitle="Here are your results:"
+            onNext={() => {
+              setQuestionStep(1);
+            }}
+            restartButtonLabel="Search again" />
         )}
       </>
     );
