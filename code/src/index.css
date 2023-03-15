@@ -30,8 +30,12 @@ cursor: pointer;
 box-shadow: 0 0 5px rgba(0,0,0,0.9);
 }
 
-.radio-button {
-  border: none;
+input[type="radio"] {
+  height: 20px;
+  width: 20px;
+}
+.horse-label input[type="radio"]:checked + span {
+  background-image: url("assets/check.png");
 }
 
 .first-page-header{
