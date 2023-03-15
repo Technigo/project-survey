@@ -8,10 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(34,193,195);
-  background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(253,71,45,1) 100%);
-  padding: 20% 10% 0% 10%;
-  background-image: url("./Components/winery-1.png");  
+  padding: 22% 5% 0% 5%;
+  background-image: url("./Components/wine-1.png");  
 }
 
 code {
@@ -21,9 +19,9 @@ code {
 
 .nametext {
   display: flex;
-  font-size: 25px;
+  font-size: 20px;
   font-family: 'Righteous', cursive;
-  color: #746dbbff;
+  color: white;
   justify-content: center;
   align-items: center;
 }
@@ -32,7 +30,7 @@ code {
   display: flex;
   font-size: 10px;
   font-family: 'Righteous', cursive;
-  color: #746dbbff;
+  color: white;
   justify-content: center;
   align-items: center;
 }
@@ -41,7 +39,7 @@ code {
   display: flex;
   font-size: 17px;
   font-family: 'Righteous', cursive;
-  color: #746dbbff;
+  color: white;
   justify-content: center;
   align-items: center;
 }
@@ -50,16 +48,16 @@ code {
   display: flex;
   font-size: 17px;
   font-family: 'Righteous', cursive;
-  color: #746dbbff;
+  color: white;
   justify-content: center;
   align-items: center;
 }
 
 .resulttext {
   display: flex;
-  font-size: 17px;
+  font-size: 15px;
   font-family: 'Righteous', cursive;
-  color: #746dbbff;
+  color: white;
   justify-content: center;
   align-items: center;
 }
@@ -70,11 +68,12 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgb(131,58,180);
-  background: radial-gradient(circle, rgba(131,58,180,1) 0%, rgba(253,181,29,1) 78%, rgba(252,176,69,1) 100%);
+  background-color: #746dbaff;
   border-radius: 50%;
-  width: 320px;
-  height: 320px; 
+  border-color: white;
+  width: 230px;
+  height: 230px; 
+  padding: 30px;
 }
 
 form {
@@ -93,9 +92,9 @@ form {
 
 .submit-button {
   background-color: transparent;
-  border: dotted;
+  border: dotted 10px;
   border-radius: 50%;
-  color: #746dbbff;
+  color: white;
   padding: 10px 10px;
   text-align: center;
   text-decoration: none;
@@ -107,20 +106,20 @@ form {
   font-size: 30px;
   border: none;
   background-color: transparent;
-  color: #746dbbff;
-
-
+  color: white;
+  font-family: 'Righteous', cursive;
 }
 
 .name-input {
   background-color: transparent;
-  width: 220px;
+  width: 160px;
   padding:10px;
-  border: dotted;
+  border: dotted 10px;
+  border-color: white;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
-  font-size: 30px;
+  font-size: 20px;
   font-family: 'Righteous', cursive;
-  color: #746dbbff;
+  color: white
 }
 
 .submit-button {
