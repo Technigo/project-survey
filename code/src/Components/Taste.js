@@ -13,10 +13,10 @@ export const Taste = ({ taste, setTaste }) => {
         id="tasteID"
         value={taste}
         onChange={handleTasteChange}>
-        <option>WOODY</option>
-        <option>CARAMEL</option>
-        <option>GRASSY</option>
-        <option>FLORAL</option>
+        <option>Woddy</option>
+        <option>Caramel</option>
+        <option>Grassy</option>
+        <option>Floral</option>
       </select>
     </label>
   );

@@ -50,7 +50,7 @@ export const App = () => {
             <progress value={step} max={stepsTotalCount + 1}>
               {step} of {stepsTotalCount}
             </progress>
-            <span>
+            <span className="count-numbers">
               <b>{step}</b> / {stepsTotalCount}
             </span>
           </p>

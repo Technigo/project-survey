@@ -64,7 +64,7 @@ code {
 
 .resulttext {
   display: flex;
-  font-size: 12px;
+  font-size: 13px;
   margin: 5px;
   font-family: Futura;
   color: white;
@@ -82,10 +82,9 @@ code {
   background-color: #746dbaff;
   border-radius: 50%;
   border-color: white;
-  width: 275px;
-  height: 275px; 
-  padding: 30px;
-  border: dotted 10px;
+  width: 227px;
+  height: 227px; 
+  padding: 28px;
   border-color: white;
 
 }
@@ -102,18 +101,6 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.submit-button2 {
-  background-color: transparent;
-  border: dotted 10px;
-  border-radius: 50%;
-  color: white;
-  padding: 10px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
 }
 
 .taste-select {
@@ -142,10 +129,6 @@ form {
   color: white
 }
 
-.submit-button {
-  background-color: transparent;
-}
-
 .radio-buttons {
   display: flex;
   flex-direction: row;
@@ -171,8 +154,15 @@ progress {
   height: 17px;
 }
 
+.count-numbers {
+  font-family: Futura;
+  font-size: 11px;
+
+}
+
 .steps-text {
   color: white;
+  font-family: Futura;
 }
 
 .submit-button {
@@ -182,13 +172,13 @@ progress {
   box-sizing: border-box;
   color: #746dbaff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 700;
   line-height: 24px;
   font-family: Futura;
   opacity: 1;
   outline: 0 solid transparent;
-  padding: 5px 13px;
+  padding: 3px 10px;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -217,10 +207,15 @@ progress {
   width: fit-content;
   word-break: break-word;
   border: 0;
+  margin-top: 20px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .resulttopic {
-  margin: 4px 0px 0px 2px;
+  margin: 4px 0px 10px 2px;
   display: flex;
   font-size: 20px;
   font-family: Futura;
