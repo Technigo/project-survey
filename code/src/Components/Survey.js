@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { ProgressBar } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import { LandingPage } from 'Components/LandingPage';
 import { TextQuestion } from 'Components/TextQuestion';
 import { RadioQuestion } from 'Components/RadioQuestion';
@@ -16,11 +19,11 @@ export const Survey = () => {
         {questionStep === 0 && (
           <LandingPage
             landingTitle="Ready to find your dream home?"
-            description="Click continue to get started!"
+            description="Click to get started!"
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
-            buttonLabel="Continue" />
+            buttonLabel="Start" />
         )}
         {questionStep === 1 && (
           <TextQuestion
@@ -86,13 +89,28 @@ export const Survey = () => {
         {questionStep === 5 && (
           <Summary
             answers={answers}
+            summaryTitle="Here are your requirements:"
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
-            buttonLabel="Search Homes" />
+            buttonLabel="Show me homes"
+            restartButtonLabel="Restart" />
         )}
       </>
     );
   }
-  return printQuestions();
+  const progressBar = () => {
+    const percentage = (questionStep / 5) * 100
+    return (
+      <div className="progres-bar-container">
+        <ProgressBar now={percentage} label={`${percentage}% completed`} />
+      </div>
+    );
+  }
+  return (
+    <div>
+      {printQuestions()}
+      {progressBar()}
+    </div>
+  )
 };
