@@ -36,7 +36,6 @@ export const Workplace = ({ workplace, setWorkplace }) => {
       <br />
       <input
         id="workplace"
-        type="radio"
         value={workplace}
         onChange={handleWorkplaceChange} />
     </label>

@@ -36,6 +36,7 @@ export const App = () => {
 
   return (
     <div className="survey">
+      <h1>Welcome to this survey about your job!</h1>
       <div className="result-container">
         {step === 1 && (
           <Name name={name} setName={setName} />
@@ -49,14 +50,17 @@ export const App = () => {
         {step === 4 && (
           <Feedback feedback={feedback} setFeedback={setFeedback} />
         )}
-        <p>
-    Current step: {step}
-        </p>
-        <button type="button" onClick={handleStepIncrease}>Next step</button>
-
+        {step < 4 && (
+          <>
+            <p>
+            Current step: {step}
+            </p>
+            <button type="button" className="next-button" onClick={handleStepIncrease}>Next question</button>
+          </>
+        )}
       </div>
       <form onSubmit={handleSubmit}>
-        <button type="submit">Submit</button>
+        <button type="submit" className="submit-button">Submit</button>
       </form>
     </div>
 

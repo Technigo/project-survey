@@ -11,3 +11,69 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(83, 175, 124);
+  margin: 100px;
+  padding: 150px;
+}
+
+.survey-result {
+  color: rgb(14, 14, 14);
+  background-color: blanchedalmond;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  color: rgb(16, 16, 16);
+}
+
+.label {
+  color: coral;
+  display: flex;
+  justify-content: center;
+  
+}
+
+.form {
+  color: lightpink;
+}
+
+.submit-button {
+  color:aliceblue;
+  background-color: rgb(167, 138, 194);
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+  height: 80px;
+  border-radius: 15px;
+  margin-top: 20px;
+
+}
+
+.next-button {
+  
+  color:rgb(18, 22, 25);
+  background-color: rgb(147, 185, 170);
+  font-size: 16px;
+  cursor: pointer;
+  width: 150px;
+  height: 80px;
+  border-radius: 15px;
+  
+}
+
+.input-field {
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  color: #333;
+}
