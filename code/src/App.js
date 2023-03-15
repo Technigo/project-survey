@@ -1,9 +1,10 @@
 import React from 'react';
+import { Survey } from './components/Survey';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Survey />
     </div>
   );
 }
