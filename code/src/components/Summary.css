@@ -9,14 +9,16 @@
 .name, .gender, .age, .food, .times {
     background-color: rgba(253, 136, 136, 0.5);
     padding: 0 5px;
-    font-weight: 400;
+
 }
 
 .slider-title {
     font-size: 30px;
     font-weight: 200;
+    padding-bottom: 20px;
 }
-  .slider-parent{
+
+.slider-parent{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -25,10 +27,21 @@
     margin: 50px;
   }
 
-  .slider-value {
+  .buble {
+    font-weight: 400;
+  }
+
+.slider-value {
     display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
   }
 
-  .slider-parent [value] {
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
 
-  }
+

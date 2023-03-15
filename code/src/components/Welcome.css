@@ -6,4 +6,18 @@
 h1, span {
     grid-column: 1 / span 5;
     justify-self: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 200;
+    font-size: 4em;
+
+}
+
+span {
+    font-size: 1.5em;
+    font-weight: 400;
+    
 }

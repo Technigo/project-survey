@@ -32,8 +32,10 @@ export const Summary = ({ name, gender, age, food, times }) => {
         <div className="buble">
           {value}
         </div>
-        <span className="slider-value">Not at all</span>
-        <span className="slider-value">The best survey I've had!</span>
+        <div className="slider">
+          <span className="slider-value">Not at all</span>
+          <span className="slider-value">The best survey I've had!</span>
+        </div>
       </div>
     </>
   )

@@ -11,7 +11,7 @@ import './index.css';
 
 export const App = () => {
   const [step, setStep] = useState(1);
-  const [welcome, setWelcome] = useState('true');
+  const [welcome, setWelcome] = useState('false');
   const [name, setName] = useState('');
   const [gender, setGender] = useState('');
   const [age, setAge] = useState('');
@@ -20,6 +20,7 @@ export const App = () => {
 
   const handleStepIncrease = () => {
     setStep(step + 1);
+    setWelcome(true);
   }
   const handleStepDecrease = () => {
     setStep(step - 1);
@@ -31,7 +32,9 @@ export const App = () => {
   return (
     <div className="content-container">
       {step === 1 && (
-        <Welcome welcome={welcome} setWelcome={setWelcome} />
+        <div className="welcome-container">
+          <Welcome welcome={welcome} setWelcome={setWelcome} />
+        </div>
       )}
       {step === 2 && (
         <Name name={name} setName={setName} />
