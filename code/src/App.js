@@ -22,43 +22,45 @@ export const App = () => {
     <section className="story-container">
       <img src="images/book.png" className="book-img" alt="a book" />
       <container className="side-in-book">
-        {step === 1 && (
-          <>
-            <h1>Let us write your fairytale</h1>
-            <Fairyname fairyName={fairyName} setFairyName={setFairyName} />
-          </>
-        )}
-        {step === 2 && (
-          <Color color={color} setColor={setColor} />
-        )}
-        {step === 3 && (
-          <Adjective horn={horn} setHorn={setHorn} />
-        )}
-        {step === 4 && (
-          <Loveact loveAct={loveAct} setLoveAct={setLoveAct} />
-        )}
-        {step === 5 && (
-          <>
-            <Name name={name} setName={setName} />
+        <div className="form-div">
+          {step === 1 && (
+            <>
+              <h1>Let us write your fairytale</h1>
+              <Fairyname fairyName={fairyName} setFairyName={setFairyName} />
+            </>
+          )}
+          {step === 2 && (
+            <Color color={color} setColor={setColor} />
+          )}
+          {step === 3 && (
+            <Adjective horn={horn} setHorn={setHorn} />
+          )}
+          {step === 4 && (
+            <Loveact loveAct={loveAct} setLoveAct={setLoveAct} />
+          )}
+          {step === 5 && (
+            <>
+              <Name name={name} setName={setName} />
+              <button
+                className="next-question-btn"
+                type="submit"
+                onClick={handleNextQuestion}>
+                Create your fairytale
+              </button>
+            </>
+          )}
+          {step >= 6 && (
+            <Story fairyName={fairyName} color={color} horn={horn} loveAct={loveAct} name={name} />
+          )}
+          {step < 5 && (
             <button
               className="next-question-btn"
               type="submit"
               onClick={handleNextQuestion}>
-              Create your fairytale
+              Next question
             </button>
-          </>
-        )}
-        {step >= 6 && (
-          <Story fairyName={fairyName} color={color} horn={horn} loveAct={loveAct} name={name} />
-        )}
-        {step < 5 && (
-          <button
-            className="next-question-btn"
-            type="submit"
-            onClick={handleNextQuestion}>
-            Next question
-          </button>
-        )}
+          )}
+        </div>
       </container>
     </section>
   )

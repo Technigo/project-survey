@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,60 +17,132 @@ body {
 html {
   background-image: url("/Users/Theres/Desktop/technigo-projects/project-survey/code/public/images/background 2.jpg");
   background-size: cover;
-}
-
-h1 {
-  max-width: fit-content;
+  background-repeat: no-repeat;
 }
 
 .story-container {
-  max-width: 100%;
+  /* border: solid 2px red; */
+  max-width: 80%;
+  height: auto;
+  position: relative;
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .side-in-book {
-  max-width: fit-content;
+  /* border: 2px aqua solid; */
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  position: absolute;
-  left: 43%;
-  top: 20%;
 }
 
 form {
   display: flex;
   flex-direction: column;
-  width: fit-content;
   padding: 20px;
   gap: 20px;
 }
 
 .book-img {
-  width: 70%;
+  width: 100%;
   height: auto;
-  display: flex;
-  /* align-self: flex-end;
-  justify-self: flex-start; */
-  object-fit: cover;
-  margin: 20px;
 }
 
-.next-question-btn {
+form {
+  font-size: 20px;
+}
+
+input,
+.love-act-drop-down {
+  border: none;
+  border-radius: 8px;
+  background-color: #f0ece2;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Quintessential', cursive;
+}
+
+.love-act-drop-down {
+  padding: 5px;
+}
+
+input:focus,
+.love-act-drop-down:focus {
+  outline-color: black;
+}
+
+button {
   font-family: 'Quintessential', cursive;
   border-radius: 20px;
-  border: none;
-  background-color: antiquewhite;
+  border: #c7b198;
+  background-color: #dfd3c3;
   padding: 5px 10px;
+  box-shadow: 1px 3px #c7b198;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #f0ece2;
+  cursor: pointer;
+}
+
+.radio-btn {
+  accent-color: black;
+}
+
+.radio-btn:hover {
+  cursor: pointer;
 }
 
 .story-page {
-  font-size: 14px;
-  width: 300px;
-  height: 600px;
-  position: absolute;
-  left: 43%;
-  top: 10%;
+  border: solid 2px aqua;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 85%;
+  padding-right: 20px;
+}
+
+.story-page p {
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.fairy-name-span {
+  color: purple;
+}
+
+.fairy-name-span2 {
+  color: green;
+}
+
+.name-span {
+  color: blue;
+}
+
+.name-span2 {
+  color: deeppink;
+}
+
+.love-span {
+  color: red;
+}
+
+.color-span {
+  color: indianred;
+}
+
+.horn-span {
+  color: darkorange;
 }

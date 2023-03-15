@@ -13,7 +13,7 @@ export const Adjective = ({ horn, setHorn }) => {
   }
   return (
     <form className="horn-form" onSubmit={(event) => event.preventDefault()} required>
-      Choose a states that tingles the magic in you:
+      Choose a magical state:
       {hornAdjectives.map((hornAdjective) => (
         <label key={hornAdjective} htmlFor="myradio">
           <input
