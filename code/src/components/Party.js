@@ -11,5 +11,5 @@ export const Party = ({ name, favouriteplace, food, drink }) => {
         </p>
         
         </>
-    )
+    );
 }
