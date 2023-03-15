@@ -6,7 +6,7 @@ const Button = ({ counter, setCounter, name }) => {
     return setCounter(counter + 1)
   }
   return (
-    <button className="ok-btn" type="button" onClick={handleCounterIncrement}>
+    <button className="btn" type="button" onClick={handleCounterIncrement}>
       {name}
     </button>
   );

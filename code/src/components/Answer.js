@@ -1,28 +1,20 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-closing-tag-location */
 import React from 'react';
-import keyboardMouse from './images/keyboardMouse.jpg'
-import officeChair from './images/officeChair.jpg'
-import workspace from './images/workspace.jpg'
+import Equipments from './Equipments';
 
-const equipmentArray = []
 export const Answer = (props) => {
-  const handleEquipments = (equipment) => {
-    equipmentArray.push(equipment)
-    console.log(equipmentArray)
-    props.setEquipment(equipmentArray)
-  }
   const handleSupport = (event) => {
     props.setSupport(event.target.value)
   }
   return (
     <>
       {props.questionNumber === 1
-     && <div> <input type="text" value={props.name} onChange={(event) => props.setName(event.target.value)} /> </div>}
+     && <div className="answer-block"> <input className="name-input" type="text" value={props.name} onChange={(event) => props.setName(event.target.value)} /> </div>}
 
       {props.questionNumber === 2
-     && <div className="slidecontainer">
-       <input type="range" min="1" max="10" value={props.mood} className="slider" id="myRange" onChange={(event) => props.setMood(event.target.value)} />
+     && <div className="slidecontainer answer-block">
+       <input type="range" min="1" max="10" value={props.mood} className="slider mood-input" id="myRange" onChange={(event) => props.setMood(event.target.value)} />
        <div className="slider-descriptions">
          <p>terrible</p>
          <p>quite okay</p>
@@ -31,8 +23,8 @@ export const Answer = (props) => {
      </div>}
 
       {props.questionNumber === 3
-     && <div>
-       <select name="Difficulties" id="difficulties" onChange={(event) => props.setDifficulties(event.target.options[event.target.selectedIndex].value)}>
+     && <div className="answer-block">
+       <select className="difficulties-select" name="Difficulties" id="difficulties" onChange={(event) => props.setDifficulties(event.target.options[event.target.selectedIndex].value)}>
          <option value="">Select your answer</option>
          <option value="Balancing work and other responsibilities at home">Balancing work and other responsibilities at home</option>
          <option value="Switching off at the end of the day">Switching off at the end of the day</option>
@@ -44,25 +36,17 @@ export const Answer = (props) => {
      </div>}
 
       {props.questionNumber === 4
-     && <div>
-       <button type="button" className="equipment" id="keyboard_mouse" onClick={() => handleEquipments('Keyboard or mouse')}>
-         <img src={keyboardMouse} alt="Keyboard and mouse by Lum3n" />
-         <p>Keyboard or mouse</p>
-       </button>
-       <button type="button" className="equipment" id="office_chair" onClick={() => handleEquipments('Office chair')}>
-         <img src={officeChair} alt="Ergonomic chair by cottonbro" />
-         <p>Ergonomic desk chair</p>
-       </button>
-       <button type="button" className="equipment" id="workspace" onClick={() => handleEquipments('Workspace')}>
-         <img src={workspace} alt="Workspace by Andrea Davis" />
-         <p>A space that is only used for work</p>
-       </button>
+     && <div className="answer-block">
+       <Equipments
+         equipment={props.equipment}
+         setEquipment={props.setEquipment} />
      </div>}
 
       {props.questionNumber === 5
-     && <div>
-       <div>
+     && <div className="answer-block">
+       <div className="support-container">
          <input
+           className="support-input"
            type="radio"
            id="yes"
            name="option"
@@ -72,8 +56,8 @@ export const Answer = (props) => {
          <label htmlFor="yes">Yes</label>
        </div>
 
-       <div>
-         <input type="radio" id="no" name="option" value="no" checked={props.support === 'no'} onChange={handleSupport} />
+       <div className="support-container">
+         <input className="support-input" type="radio" id="no" name="option" value="no" checked={props.support === 'no'} onChange={handleSupport} />
          <label htmlFor="no">No</label>
        </div>
      </div>}

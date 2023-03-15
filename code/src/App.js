@@ -14,7 +14,7 @@ export const App = () => {
   const [support, setSupport] = useState('')
   const steps = [1, 2, 3, 4, 5]
   return (
-    <div>
+    <div className="App">
       {counter === 0
 && <Header counter={counter} setCounter={setCounter} />}
       {counter === steps.find((step) => step === counter)
@@ -32,7 +32,7 @@ export const App = () => {
   support={support}
   setSupport={setSupport} />}
       {counter === 6
-&& <SubmitButton className="test" counter={counter} setCounter={setCounter} name="Submit" />}
+&& <SubmitButton counter={counter} setCounter={setCounter} name="Submit" />}
       {counter > 6
 && <Result
   name={name}
