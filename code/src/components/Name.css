@@ -1,0 +1,22 @@
+.name-text {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+}
+
+
+input {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+    width: 100%;
+    height: auto;
+    margin-top: 30%;
+    display: block;
+    grid-column: 2 / span 3;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 60px;
+}

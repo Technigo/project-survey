@@ -7,6 +7,7 @@ import { Food } from 'components/Food';
 import { Times } from 'components/Times';
 import { Summary } from 'components/Summary';
 import Welcome from 'components/Welcome';
+import './index.css';
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -18,6 +19,9 @@ export const App = () => {
 
   const handleStepIncrease = () => {
     setStep(step + 1);
+  }
+  const handleStepDecrease = () => {
+    setStep(step - 1);
   }
 
   return (
@@ -43,15 +47,20 @@ export const App = () => {
       {step >= 7 && (
         <Summary name={name} gender={gender} age={age} food={food} times={times} />
       )}
-      {step === 1 && (
-        <button type="button" onClick={handleStepIncrease}>Start</button>
-      )}
-      {step >= 2 && (
-        <button type="button" onClick={handleStepIncrease}>Next</button>
-      )}
-      {step === 6 && (
-        <button type="button" onClick={handleStepIncrease}>Submit</button>
-      )}
+      <div className="buttons">
+        {step === 1 && (
+          <button type="button" onClick={handleStepIncrease}>Start</button>
+        )}
+        {step >= 2 && (
+          <button type="button" onClick={handleStepDecrease}>Previous</button>
+        )}
+        {step >= 2 && (
+          <button type="button" onClick={handleStepIncrease}>Next</button>
+        )}
+        {step === 6 && (
+          <button type="button" onClick={handleStepIncrease}>Submit</button>
+        )}
+      </div>
     </>
 
   );

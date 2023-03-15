@@ -1,14 +1,14 @@
 import React from 'react';
+import './Name.css';
 
 export const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
   return (
-    <>
-      <p>What is your name?</p>
-      <input type="text" value={name} onChange={handleNameChange} />
-    </>
+    <div className="name-text">
+      <input type="text" id="name" value={name} placeholder="What is your name?" onChange={handleNameChange} />
+    </div>
   );
 }
 
