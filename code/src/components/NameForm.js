@@ -7,7 +7,7 @@ export const Name = ({ name, setName }) => {
   return (
     <div className="introduction">
       <h2>Hi, my name is Emilia. Who are you?</h2>
-      <input type="text" value={name} onChange={handleNameChange} required />
+      <input type="text" value={name} onChange={handleNameChange} />
     </div>
   );
 }

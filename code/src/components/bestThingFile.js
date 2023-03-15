@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const bestThing = ({ setBestThing }) => {
+export const BestThing = ({ bestThing, setBestThing }) => {
   const handleBestThing = (event) => {
     setBestThing(event.target.value);
   }

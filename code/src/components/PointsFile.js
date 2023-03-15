@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-export const Points = ({ setPoints }) => {
+export const Points = ({ points, setPoints }) => {
   const handlePoints = (event) => {
     setPoints(event.target.value);
   }
@@ -12,7 +13,7 @@ export const Points = ({ setPoints }) => {
           type="radio"
           value="One"
           onChange={handlePoints}
-          checked={Points === 'One'} />
+          checked={points === 'One'} />
                 Terrible!
       </label>
       <label>
@@ -20,7 +21,7 @@ export const Points = ({ setPoints }) => {
           type="radio"
           value="Two"
           onChange={(event) => setPoints(event.target.value)}
-          checked={Points === 'Two'} />
+          checked={points === 'Two'} />
                 Its alright...
       </label>
       <label>
@@ -28,7 +29,7 @@ export const Points = ({ setPoints }) => {
           type="radio"
           value="Three"
           onChange={(event) => setPoints(event.target.value)}
-          checked={Points === 'Three'} />
+          checked={points === 'Three'} />
                 Quite nice!
       </label>
       <label>
@@ -36,7 +37,7 @@ export const Points = ({ setPoints }) => {
           type="radio"
           value="Four"
           onChange={(event) => setPoints(event.target.value)}
-          checked={Points === 'Four'} />
+          checked={points === 'Four'} />
                 Awesome!
       </label>
     </div>
