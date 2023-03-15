@@ -5,9 +5,58 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #D8D9CF;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#root{
+  display: flex;
+  flex-direction:column;
+}
+.imgBox img{
+  width: auto;
+  height: 550px;
+
+} 
+
+
+/***************tablet design******************************/
+@media (min-width:600px) {}
+
+
+
+
+/****************desktop design****************************/
+@media (min-width:992px) {
+  #root{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  
+  }
+  .logoImage{
+    display: flex;
+    width:50%;
+   
+   }
+   .imgBox img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  
+   }
+   .surveyWrap{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+   }
+
+
 }
