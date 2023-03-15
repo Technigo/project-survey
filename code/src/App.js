@@ -25,7 +25,7 @@ export const App = () => {
   }
 
   return (
-    <div>
+    <div className="questions-container">
       {step === 1 && (
         <Name
           name={name}
@@ -64,7 +64,6 @@ export const App = () => {
           horror={horror}
           food={food} />
       )}
-
     </div>
   );
 }

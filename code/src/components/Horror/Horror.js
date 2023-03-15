@@ -1,4 +1,5 @@
 import React from 'react';
+import './horror.css';
 
 export const Horror = ({ horror, setHorror, handleStepIncrease }) => {
   const handleHorrorChange = (event) => {

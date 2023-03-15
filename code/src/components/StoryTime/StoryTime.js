@@ -1,5 +1,6 @@
 /* eslint-disable react/button-has-type */
 import React from 'react';
+import './storytime.css';
 
 export const StoryTime = ({ name, place, animal, horror, food }) => {
   const Choises = () => {
@@ -27,7 +28,7 @@ export const StoryTime = ({ name, place, animal, horror, food }) => {
       <p>{horror}</p>
       <p>{food}</p>
 
-      <div>
+      <div className="play-again-btn">
         <button onClick={() => window.location.reload(false)}>
           Play Again to rewrite your story!
         </button>

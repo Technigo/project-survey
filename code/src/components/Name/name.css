@@ -1,0 +1,24 @@
+.name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.name-container h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.name-container h2 {
+    font-size: 20px;
+}
+
+.name-container p {
+    font-size: 18px;
+}
+
+.image-container-name img{
+    width: 50px;
+}

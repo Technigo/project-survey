@@ -1,4 +1,5 @@
 import React from 'react';
+import './place.css';
 
 export const Place = ({ place, setPlace, handleStepIncrease }) => {
   const handlePlaceChange = (event) => {

@@ -1,4 +1,5 @@
 import React from 'react';
+import './food.css';
 
 export const Food = ({ food, setFood, handleStepIncrease }) => {
   const handleFoodChange = (event) => {
