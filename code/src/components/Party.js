@@ -9,6 +9,7 @@ export const Party = ({ name, place, food, drink }) => {
             No one knows that you're having a party RIGHT NOW, for YOU! 
             Need more paryfeeling? Push partybutton!
         </p>
+        <button type="button" onClick="change">PARTYBUTTON</button>
         
         </>
     );

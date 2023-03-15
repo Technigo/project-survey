@@ -5,21 +5,23 @@ export const Drink = ({ drink, setDrink }) => {
     setDrink(event.target.value);
   }
   return (
-    <div classname="question-container">
+    <>
+    <div className="question">
       <p>And what do you wanna drink on this special day?</p>
-      <div classname="select-container">
+      </div>
+      <div className="select-container">
         <select
-          classname="select"
+          className="select"
           id="drink"
           value={drink} 
           onChange={handleDrinkChange} >
           <option value="">Select drink</option>
-          <option value="Coffee">Coffee for sure!</option>
-          <option value="Drinks">Umbrella drinks in rainbow colors!</option>
-          <option value="Soda">Sparkling soda in a large glas!</option>
-          <option value="Smoothie">Smoothie with a straw</option>
+          <option value="coffee">Coffee for sure!</option>
+          <option value="rainbow colored drinks">Umbrella drinks in rainbow colors!</option>
+          <option value="sparkling soda">Sparkling soda in a large glas!</option>
+          <option value="smoothie">Smoothie with a straw</option>
         </select>
       </div>
-    </div>
+    </>
   )
 }

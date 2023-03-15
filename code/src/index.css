@@ -11,3 +11,57 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background-color: #E87EA1;
+}
+
+.survey-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  margin-top: 100px;
+  background-color:  rgba(255, 255, 255, 0.158);
+}
+
+.header {
+  color: #fffef3
+
+}
+
+.question {
+  font-size: 20px;
+  color: white;
+}
+
+.step {
+  margin-top: 20px;
+  color: rgb(205, 67, 150);
+}
+
+button {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  border-color: rgb(222, 143, 143);
+  border-style: double;
+  font-size: 15px;
+  color: white;
+  background-color: #ff5858;
+}
+
+input {
+  border-radius: 5px;
+  border-style: none;
+  margin-bottom: 20px;
+}
+
+.foodBtn {
+  display: flex;
+  flex-direction: column;
+}

@@ -6,9 +6,16 @@ export const Name = ({ name, setName }) => {
   }
   return (
     <>
-      <h1>Crappy day? Lets have a party!</h1>
+    <div className="header">
+      <h1>Crappy day?</h1>
+      <h1>Lets throw a party!</h1>
+      </div>
+      <div className="question">
       <p>What's your name?</p>
+      </div>
+      <div className="answer-input">
       <input type="text" value={name} onChange={handleNameChange} />
+      </div>
     </>
   )
 }

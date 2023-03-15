@@ -13,8 +13,10 @@ export const Food = ({ food, setFood }) => {
   }
   return (
     <>
+    <div className="question">
       <p>What do you wanna eat on your party?</p>
-      <div classname="foodBtn">
+      </div>
+      <div className="foodBtn">
         {FoodOption.map((group) => (
           <label key={group}>
             <input type="radio" 

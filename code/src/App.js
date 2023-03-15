@@ -17,7 +17,7 @@ export const App = () => {
     setStep(step + 1);
   }
   return (
-    <>
+    <div className="survey-container">
       {step === 1 && (
         <Name name={name} setName={setName} />
       )}
@@ -31,14 +31,20 @@ export const App = () => {
         <Drink drink={drink} setDrink={setDrink} />
       )}
       {step >= 5 && (
-        <Party name={name} place={place} food={food} drink={drink} />
-      )}
+        <Party name={name} place={place} food={food} drink={drink} />      
+        )}
       {step < 5 && (
         <>
-          <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>Next</button>
+        <div className="step-btn">
+          <button type="button" onClick={handleStepIncrease}>NEXT</button>
+        </div>
+        <div className="step">
+          <p>STEP {step}/5</p>
+          </div>
+          
         </>
       )}
-    </>
+    
+    </div>
   );
 };
