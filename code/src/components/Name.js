@@ -5,11 +5,10 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    // <div className="inputbox">
     <div>
-      <h2>Time to make a wish</h2>
+      <h2>If you could make a wish..</h2>
       <label htmlFor="name">
-        <p>Dare to dream? First type your name</p>
+        <p>But first, tell me your name?</p>
         <input type="text" id="name" value={name} onChange={handleNameChange} required />
       </label>
     </div>)

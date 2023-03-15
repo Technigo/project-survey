@@ -3,8 +3,8 @@ import React from 'react';
 export const Result = ({ power, hero }) => {
   return (
     <div className="results">
-      <h3>Your dream has come true!</h3>
-      <p>You are a <b>{hero}</b> and you will <b>{power}</b>.
+      <h3>What a dream!</h3>
+      <p>Psst, let your soul <b>{hero}</b>, you have <b>{power}</b> powers.
       </p>
     </div>
   )

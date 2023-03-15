@@ -26,6 +26,7 @@ code {
 }
 
 .container-main {
+  font-weight: bolder;
   background-color: rgba(231,223,208,255);
   opacity: 0.7;
   color: #315c6e;
@@ -48,20 +49,6 @@ code {
    padding: 20px;
    margin: 20px;
   }
-
-.inputbox {
-position: absolute;
- top: 40%;
- left: 20%;
- right: 10%;
- width: fit-content;
- border: solid red;
- display: flex;
- flex-direction: column;
- padding: 15px;
- margin: 15px;
- font-size: 20px
-}
 
 .results {
 color: black;
@@ -106,4 +93,8 @@ button:hover{
 
 .emoji {
   font-size: 30px;
+}
+
+h2 {
+  font-weight: bold;
 }

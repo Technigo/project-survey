@@ -31,9 +31,8 @@ export const App = () => {
       {counter === 2 && askHero}
       {counter >= 3 && showResult}
       {counter < 3 && (
-        <div className="next-step">
-          <Button counter={counter} setCounter={setCounter} inputLabel="Start" />
-        </div>
+
+        <Button counter={counter} setCounter={setCounter} inputLabel="Start" />
       )}
     </div>
   )

@@ -7,13 +7,13 @@ export const Hero = ({ hero, setHero }) => {
 
   return (
     <>
-      <p className="question">If you had to choose, which SuperHero would you be?</p>
+      <p className="question">Let us dream even further and have more powers. What would you choose?  </p>
       <select className="hero-selection" onChange={handleHeroChange} value={hero}>
-        <option disabled value="">Select your HERO here </option>
-        <option value="Flying Hero" aria-label="A Hero that can fly" checked={hero === 'Flying hero'} onChange={handleHeroChange}>Hero that Flys </option>
-        <option value="Fire Hero" aria-label="A Hero that creates fire" checked={hero === 'Fire hero'} onChange={handleHeroChange}>Hero with Fire </option>
-        <option value="Timetravel Hero" aria-label="A Hero that travels in time" checked={hero === 'Timetravel hero'} onChange={handleHeroChange}>Hero that timetravels </option>
-        <option value="Timetravel Hero" aria-label="A Hero that travels in time" checked={hero === 'Transparent hero'} onChange={handleHeroChange}>Hero that blends in </option>
+        <option disabled value="">Select your power here: </option>
+        <option value="fly" aria-label="A Hero that flys" checked={hero === 'Flying hero'} onChange={handleHeroChange}>Hero that Flys </option>
+        <option value="create fire" aria-label="A Hero that creates fire" checked={hero === 'Fire hero'} onChange={handleHeroChange}>Hero with Fire </option>
+        <option value="travel in time" aria-label="A Hero that travels in time" checked={hero === 'Timetravel hero'} onChange={handleHeroChange}>Hero that timetravels </option>
+        <option value="be transparent" aria-label="A Hero that you can dissapear" checked={hero === 'Transparent hero'} onChange={handleHeroChange}>Hero that blends in </option>
       </select>
     </>
   );
