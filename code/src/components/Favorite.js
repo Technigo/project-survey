@@ -30,7 +30,6 @@ const Favorite = ({ favorite, setFavorite, handleSubmitSurvey }) => {
           <option value="Puss in Boots">Puss in Boots</option>
           <option value="Snowball">Snowball</option>
           <option value="Tom">Tom</option>
-          <option value="Tony the Tiger">Tony the Tiger</option>
         </select>
       </form>
     </div>

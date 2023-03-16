@@ -4,7 +4,7 @@
   --border-color: #94b1aa;
   --primary-bg-color: #e6f3f0;
   --secondary-bg-color: #94b1aa;
-  --tertiary-bg-color: #fcfffe;
+  --tertiary-bg-color: #5B8B7F;
   --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -37,22 +37,22 @@ label {
 }
 
 button {
-    border-color: #bc13fe;
+    border-color: var(--border-color);
     color: #000;
-    box-shadow: inset 0 0 40px 40px #bc13fe, 0 0 0 0 #bc13fe;
+    box-shadow: var(--box-shadow);
     transition: all .15s ease-in-out;
     width: 50%;
     margin: 20px auto;
     align-items: center;
     cursor: pointer;
     border-radius: 20px;
-    font-family: "Raleway",sans-serif;
     font-weight: 700;
     height: 50px;
+    display: inline-block;
 }
 
 button:hover {
-    box-shadow: inset 0 0 10px 0 #bc13fe, 0 0 10px 4px #bc13fe;
+    box-shadow: inset 0 0 10px 0 var(--secondary-bg-color), 0 0 10px 4px var(--secondary-bg-color);
 }
 
 form {
@@ -79,19 +79,18 @@ select {
 .neon-text {
     width: 30%;
     margin: 30px auto;
-    text-transform: uppercase;
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 
-    0 0 21px #fff, 0 0 42px #f09, 
-    0 0 82px #f09, 0 0 92px #f09, 
-    0 0 102px #f09, 0 0 151px #f09;
+    0 0 21px #fff, 0 0 42px var(--secondary-bg-color), 
+    0 0 82px var(--secondary-bg-color), 0 0 92px var(--secondary-bg-color), 
+    0 0 102px var(--secondary-bg-color), 0 0 151px var(--secondary-bg-color);
     border: 0.2rem solid #fff;
     background: var(--primary-bg-color);
     border-radius: 20px;
     padding: 0.4em;
     box-shadow: 0 0 0.2rem #fff, 
-    0 0 0.2rem #fff, 0 0 2rem #bc13fe, 
-    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, 
-    inset 0 0 1.3rem #bc13fe;
+    0 0 0.2rem #fff, 0 0 2rem var(--tertiary-bg-color), 
+    0 0 0.8rem var(--tertiary-bg-color), 0 0 2.8rem var(--tertiary-bg-color), 
+    inset 0 0 1.3rem var(--tertiary-bg-color);
 }
 
 .form-container {
@@ -103,8 +102,8 @@ select {
     margin: 30px auto;
     border-radius: 20px;
     box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 
-    0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe, 
-    0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+    0 0 2rem var(--tertiary-bg-color), 0 0 0.8rem var(--tertiary-bg-color), 
+    0 0 2.8rem var(--tertiary-bg-color), inset 0 0 1.3rem var(--tertiary-bg-color);
     width: 50%;
 }
 
@@ -114,3 +113,7 @@ select {
     justify-content: center;
     align-items: center;
 }
+
+/* .radio-btns:hover {
+   cursor: pointer;
+} */
