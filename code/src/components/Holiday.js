@@ -29,7 +29,11 @@ const waterList = [
   'the lake'
 ]
 
-export const Water = ({ water, setWater }) => {
+export const Water = ({ water, setWater, setLand }) => {
+  const handleWaterChoice = (event) => {
+    setWater(event.target.value);
+    setLand('');
+  }
   return (
     <>
     Preferably,
@@ -39,7 +43,7 @@ export const Water = ({ water, setWater }) => {
             id="water-question"
             type="radio"
             value={waterSpots}
-            onChange={(event) => setWater(event.target.value)}
+            onChange={handleWaterChoice}
             checked={water === waterSpots} />
           {waterSpots}
         </label>
@@ -53,7 +57,11 @@ const landList = [
   'the woods'
 ]
 
-export const Land = ({ land, setLand }) => {
+export const Land = ({ land, setLand, setWater }) => {
+  const handleLandChoice = (event) => {
+    setLand(event.target.value);
+    setWater('');
+  }
   return (
     <>
     Preferably,
@@ -63,7 +71,7 @@ export const Land = ({ land, setLand }) => {
             id="land-question"
             type="radio"
             value={landSpots}
-            onChange={(event) => setLand(event.target.value)}
+            onChange={handleLandChoice}
             checked={land === landSpots} />
           {landSpots}
         </label>

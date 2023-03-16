@@ -1,30 +1,29 @@
 import React from 'react';
 
 export const Sauce = ({ sauce, setSauce }) => {
-  <datalist id="marks">
-    <option value="hot sauce" label="Hot Sauce" />
-    <option value="neither" label="Neither" />
-    <option value="mayo" label="Mayo" />
-  </datalist>
   return (
     <>
-      {/* I could not live without: */}
+      <p>I could not live without:</p>
       <label htmlFor="sauce-slider">
         <input
           type="range"
-          min="1"
+          min="0"
           max="3"
           list="marks"
           id="sauce-slider"
-          defaultValue={2}
+          className="slider"
+          defaultValue={0}
           checked={sauce}
           onChange={(event) => setSauce(event.target.value)} />
       </label>
       <datalist id="marks">
+        <option value="0" label="Select a Sauce" />
         <option value="1" label="Hot Sauce" />
-        <option value="2" label="Ew!" />
-        <option value="3" label="Mayo" />
+        <option value="2" label="Mayo" />
+        <option value="3" label="Neither" />
       </datalist>
     </>
   )
 }
+
+// <a href="https://www.flaticon.com/free-icons/sauces" title="sauces icons">Sauces icons created by iconixar - Flaticon</a>
