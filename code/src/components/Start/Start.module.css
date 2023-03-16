@@ -1,0 +1,75 @@
+.startSection {
+  color: #162a45;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  margin: 20px 20px 10px 20px;
+}
+
+.name p {
+  padding-left: 5px;
+  padding-right: 10px;
+}
+
+.name input {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 10px 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  color: #162a45;
+}
+
+.age {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 40px 20px;
+  font-size: 18px;
+}
+
+.age p {
+  padding-left: 20px;
+  font-size: 22px;
+}
+
+.age form {
+  margin: 10px;
+}
+
+.age lable {
+  margin-left: 20px;
+}
+
+.age input {
+  margin: 3px;
+}
+
+button {
+  background-color: #162a45;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+  .name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .age {
+    display: flex;
+    flex-direction: column;
+  }
+}
