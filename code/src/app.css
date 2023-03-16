@@ -188,6 +188,7 @@ option {
 
  .neon-text {
     width: 20%;
+    margin-top: 200px;
 }
 
 button {
@@ -201,7 +202,7 @@ select {
 }
 
 .input-field {
-    width: 60%;
+    width: 40%;
     margin: auto;
 }
 
