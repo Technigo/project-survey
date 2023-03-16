@@ -77,7 +77,8 @@ export const App = () => {
         <div className="step-btn">
           <button
             type="button"
-            onClick={handleStepIncrease}>
+            onClick={handleStepIncrease}
+            disabled={name === '' && food === ''}>
             {step === 1 && 'Create story'}
             {step > 1 && step < 6 && 'Next question'}
           </button>

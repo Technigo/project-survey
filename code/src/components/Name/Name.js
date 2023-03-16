@@ -15,7 +15,7 @@ export const Name = ({ name, setName }) => {
       </div>
       <p>What is your name, traveller?</p>
       <form>
-        <input type="text" value={name} onChange={handleNameChange} required />
+        <input type="text" value={name} onChange={handleNameChange} />
       </form>
     </div>
   )

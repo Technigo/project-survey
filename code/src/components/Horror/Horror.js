@@ -1,5 +1,8 @@
 import React from 'react';
 import './horror.css';
+import pineapple from '../../images/pinapple.png'
+import snake from '../../images/snake.png'
+import plane from '../../images/plane.png'
 
 export const Horror = ({ horror, setHorror }) => {
   const handleHorrorChange = (event) => {
@@ -8,6 +11,13 @@ export const Horror = ({ horror, setHorror }) => {
   return (
     <div className="horror-container">
       <p>What is the worst thing you can image?</p>
+
+      <div className="image-container-horror">
+        <img src={snake} alt="snake" />
+        <img src={pineapple} alt="pineapple" />
+        <img src={plane} alt="airplane" />
+      </div>
+
       <form>
         <select
           onChange={handleHorrorChange}

@@ -5,3 +5,12 @@
     text-align: center;
     gap: 20px;
 }
+
+.image-container-horror {
+    display: flex;
+    flex-direction: row;
+}
+
+.image-container-horror img{
+    width: 100px;
+}
