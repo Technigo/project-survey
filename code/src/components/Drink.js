@@ -1,18 +1,25 @@
-import React from 'react';
+import React from 'react'
 
 export const Drink = ({ drink, setDrink }) => {
+  const handleDrinkChange = (event) => {
+    setDrink(event.target.value);
+  }
 
- const handleDrinkChange = (event) => {
+  return (
 
- setDrink(event.target.value);
-}
 
-  return ( 
-    <div className="drink-box">
+    <div className="Drink">
 
-      <p> What is your favourite drink?</p>
+<form>
 
-      <input type="text" value={drink} onChange={handleDrinkChange} />
+<select onChange = {event => setDrink(event.target.value)}>
+
+          <option value=" "> Select beverage </option>
+          <option value="champange">Champange</option>
+          <option value="mead">Mead</option>
+          <option value="ale">Ale</option>
+</select>
+</form>
     </div>
-  );
-} 
+)
+}

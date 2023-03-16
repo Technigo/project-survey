@@ -5,45 +5,39 @@ import './index.css'
 import { Name } from 'components/Name';
 import { Food } from 'components/Food';
 import { Drink } from 'components/Drink';
-import { Wheapon } from 'components/Wheapon';
 import { Century } from 'components/Century';
 import { Result } from 'components/Result';
 
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('')
-  const [food, setFood] = useState('')
+  const [food, setFood] = useState(false)
   const [drink, setDrink] = useState('')
-  const [wheapon, setWheapon] = useState('')
-  const [century, setCentury] = useState('1953-1577')
+  const [century, setCentury] = useState('1533-1577')
   const handleStepIncrease = () => { 
     setStep(step + 1);
   }
   return (
 
-  // <input onChange={event => event.preventDefault()}>
+  //  <input onChange={event => event.preventDefault()} />
 
     <div>
       {step === 1 && (
         <Name name={name} setName={setName} />
       )}
-      {step === 2 && (
+      {step === 4 && (
         <Food food={food} setFood={setFood} />
       )}
       {step === 3 && (
         <Drink drink={drink} setDrink={setDrink} />
       )}
-      {step === 4 && (
-        <Wheapon wheapon={wheapon} setWheapon={setWheapon} />
-      )}
-
-{step === 5 && (
+      {step === 2 && (
         <Century century={century} setCentury={setCentury} />
       )}
-      {step >= 6 && (
-        <Result name={name} food={food} drink={drink} />
+      {step >= 5 && (
+        <Result name={name} food={food} drink={drink} century={century} />
       )}
-      {step < 6 && (
+      {step < 5 && (
         <div>
           <p> Current step: {step}</p>
 

@@ -12,11 +12,15 @@ export const Name = ({ name, setName }) => {
 
 
     <div className="name-box">
-      <p> What is your name?</p>
 
-      <input type="text" value={name} onChange={handleNameChange} />
+      <form onSubmit={(event) => event.preventDefault()}>
 
+        <h2> How royal are you?</h2>
+        <p> What is your name?</p>
 
+        <input type="text" value={name} onChange={handleNameChange} />
+
+      </form>
 
     </div>
   );
