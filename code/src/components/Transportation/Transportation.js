@@ -8,12 +8,43 @@ export const Transportation = ({ transportation, setTransportation }) => {
   };
   return (
     <>
-      <p>What is your transportation choice?</p>
-      <input
-        type="radio"
-        onChange={handleTransportationChange}
-        value={transportation}
-        required />
+      <p>Which transportation option will you choose to reach the lodge?</p>
+      <label htmlFor="taxi">
+        <input
+          type="radio"
+          id="taxi"
+          name="transportation"
+          value="taxi"
+          checked={transportation === 'taxi'}
+          onChange={handleTransportationChange}
+          required />
+        Taxi
+      </label>
+
+      <label htmlFor="shuttle">
+        <input
+          type="radio"
+          id="shuttle"
+          name="transportation"
+          checked={transportation === 'shuttle'}
+          value="shuttle"
+          onChange={handleTransportationChange}
+          required />
+        Hotel shuttle
+      </label>
+
+      <label htmlFor="car">
+        <input
+          type="radio"
+          id="car"
+          name="transportation"
+          checked={transportation === 'car'}
+          value="car"
+          onChange={handleTransportationChange}
+          required />
+        Car
+      </label>
     </>
   );
 };
+
