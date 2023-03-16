@@ -35,7 +35,7 @@ code {
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
 	transform: scale(1);
-	animation: pulse 2s infinite;
+	animation: pulse 4s infinite;
 }
 
 @keyframes pulse {
@@ -113,7 +113,6 @@ code {
   flex-wrap: wrap; 
   max-width: 150px; 
   align-items: center;
-  border: 2px solid red; 
 }
 
 .story-container {
@@ -124,4 +123,11 @@ code {
   padding: 20px;
   background: white; 
 
+}
+
+.story-text {
+  display: flex; 
+  flex-direction: column;
+  font-family:'Roboto', sans-serif;
+  font-weight: 400; 
 }
