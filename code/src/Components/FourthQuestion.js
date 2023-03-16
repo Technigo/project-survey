@@ -5,7 +5,14 @@ const clothing = [
   'hat',
   'sunglasses',
   'mankini',
-  'kimono'
+  'kimono',
+  'mittens',
+  'flip flops',
+  'wedding dress',
+  'smoking',
+  'wetsuit',
+  'PJs'
+
 ];
 
 export const FourthQuestion = ({ clothingNoun, setClothingNoun }) => {
@@ -14,7 +21,7 @@ export const FourthQuestion = ({ clothingNoun, setClothingNoun }) => {
   }
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <p className="instructionText"> Write an adjective</p>
+      <p className="instructionText"> Pick a piece of clothing or accessory!</p>
       {clothing.map((group) => (
         <label key={group} htmlFor="piece-of-clothing">
           <input

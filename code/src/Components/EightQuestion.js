@@ -8,7 +8,7 @@ export const EightQuestion = ({ bodyPart, setBodyPart }) => {
     <form>
       <p className="instructionText"> Pick a body part: </p>
       <select onChange={handleEightAnswer} value={bodyPart}>
-        <option value="">Pick a body part </option>
+        <option value="" disabled>Pick a body part </option>
         <option value="brain">Brain</option>
         <option value="lungs">Lungs</option>
         <option value="tongue">Tongue</option>
