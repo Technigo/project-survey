@@ -30,31 +30,49 @@ export const App = () => {
   return (
     <>
       {step === 1 && (
-        <FirstQuestion adjective={adjective} setAdjective={setAdjective} />
+        <FirstQuestion
+          adjective={adjective}
+          setAdjective={setAdjective} />
       )}
       {step === 2 && (
-        <SecondQuestion foodNoun={foodNoun} setFoodNoun={setFoodNoun} />
+        <SecondQuestion
+          foodNoun={foodNoun}
+          setFoodNoun={setFoodNoun} />
       )}
       {step === 3 && (
-        <ThirdQuestion ingVerb={ingVerb} setIngVerb={setIngVerb} />
+        <ThirdQuestion
+          ingVerb={ingVerb}
+          setIngVerb={setIngVerb} />
       )}
       {step === 4 && (
-        <FourthQuestion clothingNoun={clothingNoun} setClothingNoun={setClothingNoun} />
+        <FourthQuestion
+          clothingNoun={clothingNoun}
+          setClothingNoun={setClothingNoun} />
       )}
       {step === 5 && (
-        <FifthQuestion celebrity={celebrity} setCelebrity={setCelebrity} />
+        <FifthQuestion
+          celebrity={celebrity}
+          setCelebrity={setCelebrity} />
       )}
       {step === 6 && (
-        <SixthQuestion jobSector={jobSector} setJobSector={setJobSector} />
+        <SixthQuestion
+          jobSector={jobSector}
+          setJobSector={setJobSector} />
       )}
       {step === 7 && (
-        <SeventhQuestion happyAdjective={happyAdjective} setHappyAdjective={setHappyAdjective} />
+        <SeventhQuestion
+          happyAdjective={happyAdjective}
+          setHappyAdjective={setHappyAdjective} />
       )}
       {step === 8 && (
-        <EightQuestion bodyPart={bodyPart} setBodyPart={setBodyPart} />
+        <EightQuestion
+          bodyPart={bodyPart}
+          setBodyPart={setBodyPart} />
       )}
       {step === 9 && (
-        <NinthQuestion infinitiveVerb={infinitiveVerb} setInfinitiveVerb={setInfinitiveVerb} />
+        <NinthQuestion
+          infinitiveVerb={infinitiveVerb}
+          setInfinitiveVerb={setInfinitiveVerb} />
       )}
       {step === 10 && (
         <TenthQuestion
