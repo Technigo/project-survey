@@ -33,9 +33,6 @@ const Summary = ({ name, type, genre, data }) => {
         <h2>Result <span className="emoji">🍿</span></h2>
         <hr />
       </div>
-      <div className="postercontainer">
-        <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
-      </div>
       <div className="seriestext">
         <h3>{data.series[i].name}</h3>
         <p>{data.series[i].plot}</p>
@@ -45,6 +42,9 @@ const Summary = ({ name, type, genre, data }) => {
           <h4>Comment from Matilda:</h4>
           <p>&quot;{data.series[i].comment}&quot;</p>
         </div>
+      </div>
+      <div className="postercontainer">
+        <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
       </div>
     </div>
   );
