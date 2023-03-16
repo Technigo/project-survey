@@ -8,7 +8,7 @@ import Result from './components/Result';
 import './app.css'
 
 export const App = () => {
-  const [question, setQuestion] = useState(1);
+  const [question, setQuestion] = useState(0); // Start with question 0
   const [name, setName] = useState('');
   const [love, setLove] = useState('');
   const [favorite, setFavorite] = useState('');
@@ -18,7 +18,7 @@ export const App = () => {
   }
 
   const handleRestartSurvey = () => {
-    setQuestion(1);
+    setQuestion(0); // Go back to question 0
     setName('');
     setLove('');
     setFavorite('');
@@ -31,36 +31,48 @@ export const App = () => {
   return (
     <div>
       <Header />
-      <div>
-        {question < 4 && (
-          <div><h2>Question number: {question}/3</h2></div>
-        )}
+      {question === 0 && (
+        <div>
+          <h2>Question number: 0/3</h2>
+          <button type="button" onClick={handleQuestionIncrease}>Start Survey</button>
+        </div>
+      )}
+      {question > 0 && question < 4 && (
+        <div><h2>Question number: {question}/3</h2></div>
+      )}
+      {question === 1 && (
         <div className="form-container">
           <form>
-            {question === 1 && (
-              <Name name={name} setName={setName} />
-            )}
-            {question === 2 && (
-              <Love love={love} setLove={setLove} />
-            )}
-            {question === 3 && (
-              <Favorite favorite={favorite} setFavorite={setFavorite} handleSubmitSurvey={handleSubmitSurvey} />
-            )}
-            {question === 4 && (
-              <Result name={name} love={love} favorite={favorite} handleRestartSurvey={handleRestartSurvey} />
-            )}
-            {question > 1 && question < 4 && (
-              <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
-            )}
-            {question === 3 && (
-              <button type="button" onClick={handleSubmitSurvey}>Submit</button>
-            )}
-            {question < 3 && (
-              <button type="button" onClick={handleQuestionIncrease}>Next question</button>
-            )}
+            <Name name={name} setName={setName} />
+            <button type="button" onClick={handleQuestionIncrease}>Next question</button>
           </form>
         </div>
-      </div>
+      )}
+      {question === 2 && (
+        <div className="form-container">
+          <form>
+            <Love love={love} setLove={setLove} />
+            <button type="button" onClick={handleQuestionIncrease}>Next question</button>
+            <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
+          </form>
+        </div>
+      )}
+      {question === 3 && (
+        <div className="form-container">
+          <form>
+            <Favorite favorite={favorite} setFavorite={setFavorite} handleSubmitSurvey={handleSubmitSurvey} />
+            <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
+            <button type="button" onClick={handleSubmitSurvey}>Submit</button>
+          </form>
+        </div>
+      )}
+      {question === 4 && (
+        <div className="form-container">
+          <form>
+            <Result name={name} love={love} favorite={favorite} handleRestartSurvey={handleRestartSurvey} />
+          </form>
+        </div>
+      )}
     </div>
   );
 }
