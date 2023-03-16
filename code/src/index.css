@@ -1,18 +1,22 @@
 body {
   margin: 0;
-  max-height: 100vh;
-  max-width: 100vh;
+  padding: 0;
+  height: 100vh;
+  min-width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(https://images.unsplash.com/photo-1514116799412-5876d319c242?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Nzg4ODY4MTE&ixlib=rb-4.0.3&q=80);
-  background-size: 100vh;
-  background-color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 code {
@@ -39,15 +43,15 @@ h1 {
 
 /* APP COMPONENT - CONTAINER */
 .surveyWrapper {
-  margin: 20% 5px;
+  margin: 0;
+  padding: 15px;
   border-radius: 60px;
-  background: rgb(4, 32, 24);
-  opacity: 0.8;
   height: 70vh;
   max-height: 70vh;
   width: 40vh;
   max-width: 40vh;
-  padding: 15px;
+  background: rgb(4, 32, 24);
+  opacity: 0.8;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,7 +63,7 @@ h1 {
   color: white;
   text-align: center;
   width: 100%;
-  padding: 15px;
+  padding: 10px;
   margin: 10px 0;
 }
 
@@ -124,6 +128,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
 h2 {
@@ -136,7 +142,8 @@ li {
   text-align: start;
   list-style: none;
   font-size: 13px;
-  margin-bottom: 8px;
+  margin: 0 0 8px 0;
+  padding: 0;
 }
 
 .submitAnswer {
@@ -190,7 +197,6 @@ li {
 /* RESPONSIVE DESIGN FOR TABLET */
 @media (min-width: 667px) and (max-width: 1024px) {
   .surveyWrapper {
-    margin-top: 30%;
     height: 50vh;
     max-height: 50vh;
     width: 60vh;
