@@ -26,6 +26,7 @@
     "react-hooks"
   ],
   "rules": {
+    "linebreak-style": 0,
     "react/function-component-definition": [
       2,
       {
@@ -128,4 +129,5 @@
     "react-hooks/exhaustive-deps": "warn",
     "semi": "off"
   }
+
 }
