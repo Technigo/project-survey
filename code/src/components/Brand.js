@@ -1,4 +1,5 @@
 import React from 'react';
+import './brand.css'
 
 const allBrands = [
   'Nike',
@@ -17,14 +18,16 @@ export const Brand = ({ brand, setBrand }) => {
     <div>
       <h1>Which is your favorite sneaker brand?</h1>
       <p>Please, pick one of below</p>
-      <form>
-        Brand:
+      <p>Brand:</p>
+      <form className="form-radio-btn">
         {allBrands.map((singleBrand) => (
-          <label key={singleBrand} htmlFor="radio-btn">
+          <label className="radio-btn-control" key={singleBrand} htmlFor="BrandsRadioButtons">
             {' '}
             {singleBrand}
             <input
+              name="radio"
               className="radio-btn"
+              id="BrandsRadioButtons"
               type="radio"
               value={singleBrand}
               onChange={handleBrandChange}

@@ -15,12 +15,15 @@ export const Spend = ({ spend, setSpend }) => {
     <>
       <h1>How much are you willing to spend on a pair of sneakers you like?</h1>
       <form>
-      Amount:
+        <p>Amount:</p>
         {amount.map((eachAmount) => (
-          <label key={eachAmount} htmlFor="amount">
+          <label className="radio-btn-control" key={eachAmount} htmlFor="AmountRadioButtons">
             {' '}
             {eachAmount}
             <input
+              name="radio"
+              className="radio-btn"
+              id="AmountRadioButtons"
               type="radio"
               value={eachAmount}
               onChange={handleSpendChange}

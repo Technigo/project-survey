@@ -12,7 +12,7 @@ export const Frequently = ({ frequently, setFrequently }) => {
         <select
           onChange={handleFrequentlychange}
           value={frequently}>
-          <option value="">How often do you buy sneakers:</option>
+          <option value="" disabled>You buy sneakers:</option>
           <option value="Once per year">Once per year</option>
           <option value="6 times per year">6 times per year</option>
           <option value="Once every month">Once every month</option>
