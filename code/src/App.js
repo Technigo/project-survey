@@ -5,6 +5,10 @@ import { ThirdQuestion } from 'Components/ThirdQuestion';
 import { FourthQuestion } from 'Components/FourthQuestion';
 import { FifthQuestion } from 'Components/FifthQuestion';
 import { SixthQuestion } from 'Components/SixthQuestion';
+import { SeventhQuestion } from 'Components/SeventhQuestion';
+import { EightQuestion } from 'Components/EightQuestion';
+import { NinthQuestion } from 'Components/NinthQuestion';
+import { TenthQuestion } from 'Components/TenthQuestion';
 import { Result } from 'Components/Result';
 
 export const App = () => {
@@ -15,6 +19,10 @@ export const App = () => {
   const [clothingNoun, setClothingNoun] = useState('');
   const [celebrity, setCelebrity] = useState('');
   const [jobSector, setJobSector] = useState('');
+  const [happyAdjective, setHappyAdjective] = useState('');
+  const [bodyPart, setBodyPart] = useState('');
+  const [infinitiveVerb, setInfinitiveVerb] = useState('');
+  const [descriptiveAdjective, setDescriptiveAdjective] = useState('');
 
   const handleProgress = () => {
     setStep(step + 1);
@@ -40,17 +48,35 @@ export const App = () => {
         <SixthQuestion jobSector={jobSector} setJobSector={setJobSector} />
       )}
       {step === 7 && (
+        <SeventhQuestion happyAdjective={happyAdjective} setHappyAdjective={setHappyAdjective} />
+      )}
+      {step === 8 && (
+        <EightQuestion bodyPart={bodyPart} setBodyPart={setBodyPart} />
+      )}
+      {step === 9 && (
+        <NinthQuestion infinitiveVerb={infinitiveVerb} setInfinitiveVerb={setInfinitiveVerb} />
+      )}
+      {step === 10 && (
+        <TenthQuestion
+          descriptiveAdjective={descriptiveAdjective}
+          setDescriptiveAdjective={setDescriptiveAdjective} />
+      )}
+      {step === 11 && (
         <Result
           adjective={adjective}
           foodNoun={foodNoun}
           ingVerb={ingVerb}
           clothingNoun={clothingNoun}
           celebrity={celebrity}
-          jobSector={jobSector} />
+          jobSector={jobSector}
+          happyAdjective={happyAdjective}
+          bodyPart={bodyPart}
+          infinitiveVerb={infinitiveVerb}
+          descriptiveAdjective={descriptiveAdjective} />
       )}
-      {step < 7 && (
+      {step < 11 && (
         <>
-          <p className="counterText"> Questions answered: {step}/9 </p>
+          <p className="counterText"> Questions answered: {step}/10 </p>
           <button className="button" type="button" onClick={handleProgress}>Next question</button>
         </>
       )}
