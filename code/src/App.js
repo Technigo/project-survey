@@ -36,7 +36,7 @@ export const App = () => {
         )}
 
         {step === 2 && (
-          <Interest area={area} setFood={setArea} />
+          <Interest area={area} setArea={setArea} />
         )}
         {step === 3 && (
           <ExperienceSlider />
@@ -56,8 +56,8 @@ export const App = () => {
           <Result />
         )}
 
-        {step < 6 && (
-          <button type="button" onClick={handleStepIncrease}>Next step</button>
+        {step > -1 && step < 7 && (
+          <button className="next" type="button" onClick={handleStepIncrease}> NEXT &rarr;</button>
         )}
 
       </section>

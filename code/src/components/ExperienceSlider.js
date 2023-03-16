@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './ExperienceSlider.css';
 
 export const ExperienceSlider = () => {
   const [experience, setExperience] = useState(1);

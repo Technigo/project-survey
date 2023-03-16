@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import './AnimatedPhrase.css'; // Import CSS file
 
-const phrase = 'Find your perfect {word} mentor';
-const words = ['front-end', 'back-end', 'Artificial intelligence', 'UX/UI'];
+const words = ['Front-end', 'Back-end', 'AI', 'UX/UI'];
 
 const AnimatedPhrase = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -9,14 +9,21 @@ const AnimatedPhrase = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentWordIndex((currentWordIndex + 1) % words.length);
-    }, 2000);
+    }, 2500);
     return () => clearInterval(intervalId);
   }, [currentWordIndex]);
 
-  const wordToChange = '{word}';
-  const phraseWithWord = phrase.replace(wordToChange, words[currentWordIndex]);
+  const phraseWithWord = words[currentWordIndex];
 
-  return <h1>{phraseWithWord}</h1>;
+  return (
+    <h1 className="compleate-phrase">
+      <span className="find-your">Find your</span>
+      <span className="perfect">perfect</span>
+      <span className="word-wrapper"><span className="word">{phraseWithWord}</span></span>
+      <span className="mentor">mentor</span>
+    </h1>
+  );
 };
 
 export default AnimatedPhrase;
+

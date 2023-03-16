@@ -1,0 +1,50 @@
+
+.animated-phrase-container {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-phrase {
+    position: absolute;
+    top: 0;
+    animation-name: slide-up;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+  
+  @keyframes slide-up {
+    0% {
+      top: 100%;
+    }
+    100% {
+      top: 0;
+    }
+  }
+
+  .compleate-phrase{
+      display: flex;
+      flex-direction: column;
+      text-transform: uppercase;
+      font-family: 'Panchang';
+      font-weight: bold;
+      font-size: 40px;
+      
+  }
+
+  .find-your {
+    color: black;
+  }
+  
+  .perfect {
+    color: black;
+  }
+  
+  .word {
+    color: white;
+  }
+  
+  .mentor {
+    color: black;
+  }
+  
+ 
