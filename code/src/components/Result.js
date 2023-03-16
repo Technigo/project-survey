@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable max-len */
 import React from 'react';
 
@@ -15,22 +16,9 @@ export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick }) =
       )}
       {!showAddMore && (
         <>
-          <p>Your name is {name}</p>
-          <p>Your favourite food is {food}</p>
-          <p>Your favourite drink is {drink}</p>
+          <p>Your pony name is {name}-{food}-{drink}!</p>
         </>
       )}
     </>
   );
 }
-
-/* export const Result = ({ name, food, drink }) => {
-  return (
-    <>
-      <p>Your name is {name}</p>
-      <p>Your favourite food is {food}</p>
-      <p>Your favourite drink is {drink}</p>
-    </>
-  );
-} */
-
