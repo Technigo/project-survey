@@ -37,8 +37,7 @@ header img {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Assistant', sans-serif;
 }
 
 p {
@@ -72,14 +71,13 @@ input[type=text]:focus {
 }
 
 select {
+  font-family: 'Assistant', sans-serif;
   padding: 0.5rem;
-  background-color: lightblue;
   width: 150px;
   border-radius: 5px;
 }
 
 select option {
-  font-family: 'Assistant', sans-serif;
   color: white;
   background-color: #D11149;
 }
@@ -87,10 +85,6 @@ select option {
 .shape-input {
   font-family: 'Assistant', sans-serif;
   display: flex;
-  flex-direction: row;
-}
-
-.aquarium-container {
   flex-direction: row;
 }
 
@@ -116,4 +110,10 @@ button:hover {
   margin-top: 1em;
   width: 150px;
   border-radius: 10px;
+}
+
+.radio-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }

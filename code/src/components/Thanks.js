@@ -10,6 +10,7 @@ export const Thanks = ({ name, colors, ammount, shape }) => {
       <div>
         <img className="shrimp-img" src={colors.imgSrc} alt={colors.name} />
       </div>
+      <button type="button" onClick={() => window.location.reload()}>Start over</button>
     </>
   )
 }

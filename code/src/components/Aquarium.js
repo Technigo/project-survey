@@ -11,7 +11,7 @@ export const Aquarium = ({ shape, setShape }) => {
   return (
     <div className="aquarium-container">
       <p>What shape does your aquarium have?</p>
-      <form>
+      <form className="radio-form">
         {shapes.map((singleShape) => (
           <label
             htmlFor="shape"
