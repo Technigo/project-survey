@@ -1,5 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from 'react';
+import AnimatedPage from './AnimatedPage';
 import './Summary.css';
 
 export const Summary = ({ name, gender, age, food, times }) => {
@@ -12,9 +13,11 @@ export const Summary = ({ name, gender, age, food, times }) => {
   })
   return (
     <>
-      <span className="summary">
-        <span className="name">{name}</span> is a <span className="gender">{gender}</span> between <span className="age">{age}</span> that eats <span className="food">{food}</span> <span className="times">{times}</span>
-      </span>
+      <AnimatedPage>
+        <span className="summary">
+          <span className="name">{name}</span> is a <span className="gender">{gender}</span> between <span className="age">{age}</span> that eats <span className="food">{food}</span> <span className="times">{times}</span>
+        </span>
+      </AnimatedPage>
       {/* <div className="slidecontainer">
         <input type="range" min="1" max="100" value="50" className="slider" id="myRange" />
       </div> */}

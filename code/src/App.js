@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 /* eslint-disable no-sequences */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
@@ -9,6 +10,7 @@ import { Food } from 'components/Food';
 import { Times } from 'components/Times';
 import { Summary } from 'components/Summary';
 import { Welcome } from 'components/Welcome';
+import AnimatedPage from 'components/AnimatedPage';
 import './index.css';
 
 export const App = () => {
@@ -32,56 +34,58 @@ export const App = () => {
   }
 
   const handleKeyDown = (event) => {
-    if (event.keyCode === 13) {
-      handleStepIncrease()
+    if (event.key === 'Enter') {
+      console.log('enter')
     }
   }
 
   return (
-    <div className="content-container">
-      <div className="welcome-container">
-        {step === 1 && (
-          <Welcome welcome={welcome} setWelcome={setWelcome} />
-        )}
-      </div>
-      {step === 2 && (
-        <div className="name-container">
-          <Name name={name} setName={setName} />
+    <AnimatedPage> {/* Makes the first page fade in from the bottom */}
+      <div className="content-container">
+        <div className="welcome-container">
+          {step === 1 && (
+            <Welcome welcome={welcome} setWelcome={setWelcome} />
+          )}
         </div>
-      )}
-      {step === 3 && (
-        <Gender gender={gender} setGender={setGender} />
-      )}
-      {step === 4 && (
-        <Age age={age} setAge={setAge} />
-      )}
-      {step === 5 && (
-        <Food food={food} setFood={setFood} />
-      )}
-      {step === 6 && (
-        <Times times={times} setTimes={setTimes} food={food} />
-      )}
-      {step >= 7 && (
-        <Summary name={name} gender={gender} age={age} food={food} times={times} />
-      )}
-      <div className="buttons">
-        {step === 1 && (
-          <button type="button" id="start" onClick={handleStepIncrease}>Start</button>
+        {step === 2 && (
+          <div className="name-container">
+            <Name name={name} setName={setName} />
+          </div>
         )}
-        {step >= 2 && step <= 6 && (
-          <button type="button" id="previous" onClick={handleStepDecrease}>Previous</button>
+        {step === 3 && (
+          <Gender gender={gender} setGender={setGender} />
         )}
-        {step >= 2 && step <= 5 && (
-          <button type="button" id="next" onClick={handleStepIncrease}>Next</button>
+        {step === 4 && (
+          <Age age={age} setAge={setAge} />
+        )}
+        {step === 5 && (
+          <Food food={food} setFood={setFood} />
         )}
         {step === 6 && (
-          <button type="submit" id="submit" onClick={handleStepIncrease}>Submit</button>
+          <Times times={times} setTimes={setTimes} food={food} />
         )}
-        {step === 7 && (
-          <button type="button" id="start over" onClick={startOver}>Start over</button>
+        {step >= 7 && (
+          <Summary name={name} gender={gender} age={age} food={food} times={times} />
         )}
+        <div className="buttons">
+          {step === 1 && (
+            <button type="button" id="start" onClick={handleStepIncrease} onKeyDown={(e) => handleKeyDown(e)}>Start</button>
+          )}
+          {step >= 2 && step <= 6 && (
+            <button type="button" id="previous" onClick={handleStepDecrease}>Previous</button>
+          )}
+          {step >= 2 && step <= 5 && (
+            <button type="button" id="next" onClick={handleStepIncrease} onKeyDown={(e) => handleKeyDown(e)}>Next</button>
+          )}
+          {step === 6 && (
+            <button type="submit" id="submit" onClick={handleStepIncrease}>Submit</button>
+          )}
+          {step === 7 && (
+            <button type="button" id="start over" onClick={startOver}>Start over</button>
+          )}
+        </div>
       </div>
-    </div>
+    </AnimatedPage>
 
   );
 }

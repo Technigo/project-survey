@@ -13,7 +13,7 @@ export const Food = ({ food, setFood }) => {
         <select
           onChange={handleFood}
           value={food}>
-          <option value=" " disabled>Food:</option>
+          <option value=" ">Food:</option>
           <option value="sushi">Sushi</option>
           <option value="pizza">Pizza</option>
           <option value="pasta">Pasta</option>
