@@ -4,6 +4,7 @@
 
 :root {
   --padding-mobile: 30px;
+  --backgroundcol: rgb(17, 17, 36);
   --primarycolor: rgb(29, 11, 46);
   --secondarycolor: rgb(23, 41, 73);
   --tertiarycolor: rgb(46, 11, 26);
@@ -149,17 +150,16 @@ hr {
 
 /* Starter page specific formatting */
 
-.start {
-  background-color: rgb(17, 17, 36);
+.start-container {
+  background-color: var(--backgroundcol);
   margin: 0; 
   padding: var(--padding-mobile);
   margin-top: 0;
 }
 
-.start img {
+.start-img {
   width: 100%;
 }
-
 
 .emoji {
   font-size: 40px;
@@ -169,7 +169,6 @@ hr {
   text-align: center;
   margin-top: 0;
 }
-
 
 .startbtn {
   width: 80px;
@@ -261,10 +260,9 @@ padding: 0 25px;
   }
   
   .container {
-    max-width: 900px;
+    max-width: 950px;
     margin: auto;
     padding: 20px;
-    border: 1px solid rgb(206, 40, 40);
   }
   
   
@@ -277,6 +275,58 @@ padding: 0 25px;
   .start {
     margin: 0; 
   }
+
+  /* Starter page specific formatting */
+
+.start-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
+.start-heading {
+  grid-column: 1 / 3;
+  grid-row: 1 / 2;
+}
+
+.start-img {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-top: 8px;
+}
+
+.start-text {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  margin: 0;
+}
+
+.start-text p {
+  margin-top: 0;
+}
+
+
+.emoji {
+  font-size: 40px;
+}
+
+.emojibox {
+  text-align: center;
+  margin-top: 0;
+}
+
+
+.startbtn {
+  grid-column: 1 / 3;
+  grid-row: 3 / 4;
+  margin-top: 30px;
+  margin-bottom: 0;
+  width: 100px;
+  height: 100px;
+}
   
   .start img {
     max-width: 500px;
@@ -290,7 +340,8 @@ padding: 0 25px;
   .container .result {
     display: grid;
     grid-template-columns: 0.8fr 1.2fr;
-    gap: 20px;
+    gap: 25px;
+    row-gap: 10px;
   }
 
   .postercontainer {
@@ -328,13 +379,15 @@ padding: 0 25px;
 }
 
 
+/*
 @media (min-width: 1024px) {
 .start img {
   max-width: 600px;
-  max-height: 300px;
+  max-height: 200px;
   height: auto;
   width: 100%;
   object-fit:contain;
   margin-left: calc(50% - 300px)
 }
 }
+*/
