@@ -70,7 +70,7 @@ progress {
 
 .name-input {
   background-color: transparent;
-  font-size: 20px;
+  font-size: 19.7px;
   width: 160px;
   border-width: 10px;
   border-color: #746dbaff;
@@ -118,7 +118,7 @@ body {
 }
 
 .question-container {
-  padding: 36px;
+  padding: 38px;
 }
 }
 
