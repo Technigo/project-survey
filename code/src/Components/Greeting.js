@@ -3,7 +3,8 @@ import React from 'react';
 export const Greeting = () => {
   return (
     <div>
-      <h1 className="nametext"> HELLO WINELOVERS!</h1>
+      <h1 className="nametext"> HELLO WINELOVER!</h1>
+      <p className="greetingtext"> Let us give you a suggestion</p>
     </div>
   );
 };

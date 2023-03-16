@@ -227,6 +227,17 @@ a {
   align-items: center;
 }
 
+.greetingtext {
+    display: flex;
+    font-size: 13px;
+    margin: 5px;
+    font-family: Futura;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
 @media (min-width: 668px) {
 
 body {
