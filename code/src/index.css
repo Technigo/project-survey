@@ -103,32 +103,34 @@ form {
 }
 
 .taste-select {
-  font-size: 20px;
-  border: none;
   background-color: transparent;
-  border: dotted 10px;
+  font-size: 20px;
+  width: 200px;
+  border-width: 10px;
   border-color: white;
+  border-radius: 7px;
   padding: 10px;
   color: white;
   font-family: Futura;
   font-weight: bold;
   justify-content: center;
   align-items: center;
-  width: 195px;
+  
 }
 
 .name-input {
   background-color: transparent;
-  width: 160px;
-  padding: 10px;
-  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   font-size: 20px;
-  font-family: Futura;
-  color: white;
-  font-weight: bold;
+  width: 160px;
   border-width: 10px;
   border-color: white;
   border-radius: 7px;
+  padding: 10px;
+  color: white;
+  font-family: Futura;
+  font-weight: bold;
+  border-style: solid;
+  box-shadow: none;
 }
 
 .radio-buttons {
