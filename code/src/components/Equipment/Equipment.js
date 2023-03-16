@@ -16,8 +16,8 @@ export const Equipment = ({ equipment, setEquipment }) => {
         onChange={handleEquipChange}
         value={equipment}
         required>
-        <option value="pick-sport" disabled>
-          Pick a sport
+        <option value="" disabled selected>
+          Choose a sport
         </option>
         <option value="skiing">Skiing</option>
         <option value="snowboarding">Snowboarding</option>
