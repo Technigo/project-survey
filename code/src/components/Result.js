@@ -4,7 +4,7 @@ import React from 'react';
 
 /* the result component returns three paragraphs that display the name, favourite food and favourite drink from the props */
 
-export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick }) => {
+export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick, fruitSelect }) => {
   return (
     <>
       {showAddMore && (
@@ -16,7 +16,7 @@ export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick }) =
       )}
       {!showAddMore && (
         <>
-          <p>Your pony name is {name}-{food}-{drink}!</p>
+          <p>Your pony name is {name}-{food}-{drink}-{fruitSelect}!</p>
         </>
       )}
     </>

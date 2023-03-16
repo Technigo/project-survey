@@ -7,6 +7,7 @@ import { Drink } from 'components/Drink';
 import { Result } from 'components/Result';
 /* import { AddMoreButton } from 'components/AddMoreButton'; */
 import { ExtraItem } from 'components/ExtraItem';
+import { FruitSelect } from 'components/FruitSelect';
 import Header from './components/Header'
 
 export const App = () => {
@@ -15,6 +16,7 @@ export const App = () => {
   const [food, setFood] = useState('');
   const [drink, setDrink] = useState('');
   const [extraItem, setExtraItem] = useState('');
+  const [fruitSelect, setFruitSelect] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -27,18 +29,21 @@ export const App = () => {
         <Name name={name} setName={setName} />
       )}
       {step === 2 && (
-        <Food food={food} setFood={setFood} />
+      <FruitSelect fruitSelect={fruitSelect} setFruitSelect={setFruitSelect} />
       )}
       {step === 3 && (
-        <Drink drink={drink} setDrink={setDrink} />
+        <Food food={food} setFood={setFood} />
       )}
       {step === 4 && (
+        <Drink drink={drink} setDrink={setDrink} />
+      )}
+      {step === 5 && (
         <ExtraItem extraItem={extraItem} setExtraItem={setExtraItem} />
        )}
-      {step >= 4 && (
+      {step >= 6 && (
         <Result name={name} food={food} drink={drink} />
       )}
-    {step < 4 && (
+    {step < 7 && (
         <>
           <p>Current step: {step}</p>
           <button type="button" onClick={handleStepIncrease}>Trick me {step}</button>
