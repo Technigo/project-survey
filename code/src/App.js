@@ -34,40 +34,44 @@ export const App = () => {
   };
 
   return (
-    <div className="container main">
-      {step === 0 && <Starter onButtonClick={() => handleStepIncrease(0)} />}
-      {step === 1 && <Name name={name} setName={setName} step={step} />}
-      {step === 2 && <Type type={type} setType={setType} step={step} />}
-      {step === 3 && <Genre genre={genre} setGenre={setGenre} step={step} />}
-      {step === 4 && <Score score={score} setScore={setScore} step={step} />}
-      {step === 5 && <Apocalypse apocalypse={apocalypse} setApocalypse={setApocalypse} step={step} />}
-      {step < 6 && step !== 0 && (
-        <div className="step-counter">
-          <div className="step-counter-btns">
-            <button type="button" onClick={handleStepIncrease}>
-              Next step
-            </button>
-            <button type="button" onClick={handleStepReset}>
-              Reset All
-            </button>
+    <>
+      <div className="container main">
+        {step === 0 && <Starter onButtonClick={() => handleStepIncrease(0)} />}
+        {step === 1 && <Name name={name} setName={setName} step={step} />}
+        {step === 2 && <Type type={type} setType={setType} step={step} />}
+        {step === 3 && <Genre genre={genre} setGenre={setGenre} step={step} />}
+        {step === 4 && <Score score={score} setScore={setScore} step={step} />}
+        {step === 5 && <Apocalypse apocalypse={apocalypse} setApocalypse={setApocalypse} step={step} />}
+        {step < 6 && step !== 0 && (
+          <div className="step-counter">
+            <div className="step-counter-btns">
+              <button type="button" onClick={handleStepIncrease}>
+                Next step
+              </button>
+              <button type="button" onClick={handleStepReset}>
+                Reset All
+              </button>
+            </div>
+            <p>(Current step: {step})</p>
           </div>
-          <p>(Current step: {step})</p>
-        </div>
-      )}
-      {step === 6 && (
-        <>
-          <Summary name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} />
-          <button type="button" onClick={handleStepIncrease}>Yes!</button>
-        </>
-      )}
-      {step === 7 && (
-        <>
-          <Result name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} data={data} />
-          <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
-        </>
-      )}
-    </div>
+        )}
+        {step === 6 && (
+          <>
+            <Summary name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} />
+            <button type="button" onClick={handleStepIncrease}>Yes!</button>
+          </>
+        )}
+        {step === 7 && (
+          <>
+            <Result name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} data={data} />
+            <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
+          </>
+        )}
+      </div>
+      <footer>
+        <hr />
+        <p>This site is created by <a href="https://www.linkedin.com/in/matilda-frid-7923bb88/" target="_blank" rel="noreferrer">Matilda Frid.</a></p>
+      </footer>
+    </>
   );
 }
-
-// Footer link: https://www.linkedin.com/in/matilda-frid-7923bb88/

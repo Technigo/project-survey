@@ -32,7 +32,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: var(--backgroundcol);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -244,6 +244,33 @@ padding: 0 25px;
   margin: 10px 0;
 }
 
+/* Footer */
+
+footer p {
+  color: white;
+  text-align: center;
+  margin: 0 auto 30px auto;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+  font-weight: bolder;
+}
+
+footer hr {
+  border: 1px solid white;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  margin-left: calc(50% - 50px);
+  width: 100px;
+  opacity: 0.3;
+}
+
 
 
 
@@ -374,6 +401,29 @@ padding: 0 25px;
     margin: 25px 0;
     padding: 15px;
   }
+
+
+  /* Footer */
+
+footer p {
+  font-size: 22px;
+  color: rgb(0, 0, 0);
+  margin: 20px auto 30px auto;
+}
+
+footer a {
+  color: rgb(0, 0, 0);
+}
+
+footer a:hover {
+  color: rgb(0, 0, 0);
+  font-weight: bolder;
+}
+
+footer hr {
+  display: none;
+}
+
   
 
 }
