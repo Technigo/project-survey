@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Genre = ({ genre, setGenre, step }) => {
+  console.log('NOW RUNNING GENRE.js')
   // console.log('{ genre, setGenre, step };', { genre, setGenre, step })
   return (
     <div className="container genre">

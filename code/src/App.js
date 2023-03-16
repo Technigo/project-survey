@@ -17,8 +17,8 @@ export const App = () => {
   const [name, setName] = useState('');
   const [type, setType] = useState('');
   const [genre, setGenre] = useState('');
-  const [score, setScore] = useState('8');
-  const [apocalypse, setApocalypse] = useState('false');
+  const [score, setScore] = useState(8);
+  const [apocalypse, setApocalypse] = useState(false);
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -56,13 +56,13 @@ export const App = () => {
       )}
       {step === 6 && (
         <>
-          <Summary name={name} type={type} genre={genre} score={score} />
+          <Summary name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} />
           <button type="button" onClick={handleStepIncrease}>Yes!</button>
         </>
       )}
       {step === 7 && (
         <>
-          <Result name={name} type={type} genre={genre} score={score} data={data} />
+          <Result name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} data={data} />
           <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
         </>
       )}

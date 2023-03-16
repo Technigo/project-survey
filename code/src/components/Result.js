@@ -1,27 +1,30 @@
+/* eslint-disable max-len */
 import React from 'react';
 
-const Summary = ({ name, type, genre, data }) => {
+const Summary = ({ name, type, genre, score, apocalypse, data }) => {
+  console.log('---- NOW RUNNING RESULT.js')
   console.log('data:', data)
   console.log('name:', name)
   console.log('type:', type)
   console.log('genre:', genre)
+  console.log('score:', score)
+  console.log('apocalypse:', apocalypse)
 
-  /*
-  const filterSeriesArray = () => {
-    const filteredSeriesArray = 'ddsds';
-    console.log('data:', data)
-    console.log('filteredSeriesArray:', filteredSeriesArray)
-  }
-  */
+  // Filtering step 1, on type:
+  const filteredTypeArray = data.series.filter((item) => item.tvtype === type);
+  console.log('filteredTypeArray:', filteredTypeArray);
 
-  // const randomizer = () => {}
+  // Filtering step 2, on genre:
+  const filteredGenreArray = filteredTypeArray.filter((item) => item.genres.includes(genre));
+  console.log('filteredGenreArray:', filteredGenreArray);
 
-  /*
-  const setRandomSuggestion = () => {
-    const suggestion = filteredSeriesArray[Math.floor(Math.random() * filteredSeriesArray.length)]
-    console.log('series suggestion:', suggestion);
-  }
-  */
+  // Filtering step 3, on score:
+  const filteredScoreArray = filteredGenreArray.filter((item) => item.score > score);
+  console.log('filteredScoreArray:', filteredScoreArray);
+
+  // Filtering step 4, on apocalypse:
+  const filteredApocalypseArray = filteredScoreArray.filter((item) => item.apocalypse === apocalypse);
+  console.log('filteredApocalypseArray:', filteredApocalypseArray);
 
   /* Gives a random number to put inside the return, change to the filtered array later */
   const i = Math.floor(Math.random() * data.series.length);
@@ -55,3 +58,10 @@ export default Summary;
 // Find posters:
 // https://www.omdbapi.com/?t=black-mirror&apikey=e170d343
 // https://www.omdbapi.com/?t=chernobyl&apikey=e170d343
+
+/*
+  const setRandomSuggestion = () => {
+    const suggestion = filteredSeriesArray[Math.floor(Math.random() * filteredSeriesArray.length)]
+    console.log('series suggestion:', suggestion);
+  }
+  */

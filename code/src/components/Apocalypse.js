@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
+  console.log('NOW RUNNING Apocalypse.js')
   return (
     <div className="container apocalypse">
       <div className="headings">
