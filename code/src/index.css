@@ -5,12 +5,6 @@ body {
   color: #000c55;
   font-size: 14px;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .main {
   width: 320px;
   height: auto;
@@ -19,22 +13,18 @@ code {
   justify-content: center;
   align-content: center;
 }
-
 .divLogo {
   width: 320px;
 }
-
 .myLogo {
  width: 200px;
 }
-
 .topHeader {
   font-family: "Montserrat", sans-serif;
   font-size: 8px;
   text-align: center;
   margin: 0 20px 0 20px;
 }
-
 button {
   width: 180px;
   font-family: "Montserrat", sans-serif;
@@ -45,4 +35,104 @@ button {
   border-style: none;
   border-radius: 5px;
   box-shadow: 5px 10px rgba(0, 12, 85, 0.8);
+}
+.roleForm {
+  width: 180px;
+  font-family: "Montserrat", sans-serif;
+  outline: none;
+  border: 1px soldid #000c55;
+  border-radius: 5px;
+  padding: 5px;
+  color: #000c55;
+  margin-bottom: 12px;
+}
+.rateForm {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+.rateForm input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.customRadio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #FFF;
+  border-radius: 50%;
+  border: 1px solid #000c55;  
+}
+.rateForm input:checked ~ .customRadio {
+  background-color: #fff;
+}
+.customRadio:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.rateForm input:checked ~ .customRadio:after {
+  display: block;
+}
+.rateForm .customRadio:after {
+  top: 4px;
+	left: 4px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #000c55;
+}
+.recoForm {
+  width: 180px;
+  text-align: center;
+}
+.recoSlider {
+  width: 180px;
+  height: 5px;
+  appearance: none;
+  background: #FFF;
+  outline: none;
+  border: 0.25px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.recoSlider:hover {
+  opacity: 1;
+}
+.recoSlider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000c55;
+  cursor: pointer;
+}
+.recoSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #000c55;
+  cursor: pointer;
+}
+.finalForm {
+  margin-bottom: 12px;
+}
+.finalBox {
+  box-sizing: border-box;
+  width: 180px;
+  height: auto;
+  outline: none;
+  resize: none;
+  padding: 5px 5px;
+  border: 0.25px solid #ccc;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  color: #000c55;
+}
+.finalBox:focus {
+  border: 0.25px solid #000c55;
 }

@@ -10,12 +10,13 @@ export const Rate = ({ rate, setRate }) => {
     <form>
       <p>How would you rate my progress so far?</p>
       {ratingGroup.map((rating) => (
-        <label key={rating}>
+        <label key={rating} className="rateForm">
           <input
             type="radio"
             value={rating}
             onChange={handleRateChange}
             checked={rate === rating} />
+          <span className="customRadio" />
           {rating}
         </label>
       ))}
