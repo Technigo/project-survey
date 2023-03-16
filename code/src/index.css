@@ -7,18 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(https://images.unsplash.com/photo-1514116799412-5876d319c242?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2Nzg4ODY4MTE&ixlib=rb-4.0.3&q=80);
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .surveyWrapper {
@@ -48,7 +45,7 @@ main {
   margin: 10px 0;
 }
 
-label {
+label, .label {
   font-size: 24px;
   text-transform: uppercase;
 }
@@ -67,6 +64,10 @@ input[type=text], select {
 
 input[type=text]:focus, select:focus {
   background-color: white;
+}
+
+input[type=radio] {
+  margin: 5px;
 }
 
 button {
