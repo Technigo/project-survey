@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Summary = ({ nameInput, locationInput, newsInput, ageInput }) => {
+const Summary = ({ nameInput, ageInput, locationInput, greenInput, feedbackInput }) => {
   return (
     <div className="summary">
-      <h2>Here is a summary of your answers:</h2>
+      <h2>Summary of your answers:</h2>
       <ul>
-        <li>Name: {nameInput}</li>
-        <li>Location: {locationInput}</li>
-        <li>Newsletter: {newsInput}</li>
-        <li>Age: {ageInput}</li>
+        <li><b>Name:</b><br />{nameInput}</li>
+        <li><b>Age:</b><br />{ageInput}</li>
+        <li><b>Location:</b><br />{locationInput}</li>
+        <li><b>Grade for green area:</b><br />{greenInput}</li>
+        <li><b>Like to have more of:</b><br />{feedbackInput}</li>
       </ul>
       <p className="submitAnswer">Click the button below to submit your answers.</p>
     </div>

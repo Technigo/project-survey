@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 code {
@@ -19,12 +19,12 @@ code {
 }
 
 .surveyWrapper {
-  margin-top: 150px;
-  border-radius: 61px;
+  margin: 20% 5px;
+  border-radius: 60px;
   background: rgb(4, 32, 24);
   opacity: 0.8;
-  height: 500px;
-  width: 500px;
+  height: 70vh;
+  width: 40vh;
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -37,16 +37,36 @@ code {
   text-align: center;
 }
 
+h1 {
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+p {
+  font-size: 16px;
+}
+
+.intro {
+  width: 90%;
+  margin: 15px auto;
+}
+
 .answer {
   color: white;
   text-align: center;
-  width: 80%;
+  width: 100%;
   padding: 15px;
   margin: 10px 0;
 }
 
 label, .label {
-  font-size: 24px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
@@ -55,6 +75,7 @@ input[type=text], select {
   margin: 10px auto 0 auto;
   border-radius: 15px;
   padding: 10px;
+  width: 60%;
   border: none;
   outline: none;
   background-color: rgb(206, 225, 221);
@@ -70,15 +91,28 @@ input[type=radio] {
   margin: 5px;
 }
 
+.ageGroup {
+  display: block;
+  text-align: start;
+  margin-left: 35%;
+}
+
+input[type=range] {
+  display: block;
+  margin: 20px auto 5px auto;
+  width: 50%;
+}
+
 button {
   border-radius: 25px;
   border: 2px solid white;
-  padding: 10px 15px;
+  padding: 8px 15px;
   background: transparent;
   color: white;
   text-transform: uppercase;
   font-weight: 600;
-  margin: 20px 5px;
+  font-size: 13px;
+  margin: 20px 5px 20px;
 }
 
 button:hover {
@@ -86,12 +120,84 @@ button:hover {
   color: black;
 }
 
-ul {
-  text-align: start;
+li {
+  text-align: center;
   list-style: none;
   font-size: 20px;
+  margin-bottom: 8px;
 }
 
 .submitAnswer {
-  margin: 40px 0 0;
+  margin: 0;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* RESPONSIVE DESIGN FOR TABLET */
+@media (min-width: 667px) and (max-width: 1024px) {
+  .surveyWrapper {
+    margin-top: 30%;
+    height: 50vh;
+    width: 60vh;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  
+  .intro {
+    width: 80%;
+  }
+
+  label, .label {
+    font-size: 24px;
+  }
+
+  input[type=text], select {
+    width: 35%;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .ageGroup {
+    margin-left: 43%;
+  }
+}
+
+/* RESPONSIVE DESIGN FOR DESKTOP */
+@media (min-width: 1024px) {
+  .surveyWrapper {
+    height: 60vh;
+    width: 70vh;
+  }
+
+  p {
+    font-size: 20px;
+  }
+  
+  .intro {
+    width: 80%;
+  }
+
+  label, .label {
+    font-size: 24px;
+  }
+
+  input[type=text], select {
+    width: 35%;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .ageGroup {
+    margin-left: 43%;
+  }
 }

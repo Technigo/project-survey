@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Startpage from './components/Startpage';
 import Summary from './components/Summary';
 
-const ageGroups = ['1', '2', '3']; /* Input for radio-buttons */
+const ageGroups = ['18-25', '25-40', '40-65', '65+']; /* Input for radio-buttons */
 
 const Buttons = ({ handleNextClick, handleBackClick }) => {
   return (
@@ -15,9 +15,10 @@ const Buttons = ({ handleNextClick, handleBackClick }) => {
 
 export const App = () => {
   const [name, setName] = useState(''); /* Handles name input */
-  const [location, setLocation] = useState(''); /* Handles location input */
-  const [wantsNewsletter, setWantsNewsletter] = useState(false);
   const [ageGroup, setAgeGroup] = useState(''); /* Handles age input */
+  const [location, setLocation] = useState(''); /* Handles location input */
+  const [greenArea, setGreenArea] = useState(''); /* Handles grade/range input */
+  const [feedback, setFeedback] = useState('');
   const [counter, setCounter] = useState(0); /* Handles survey moving forward */
 
   const HandleNextClick = () => { setCounter(counter + 1); } /* Handles next button */
@@ -33,7 +34,6 @@ export const App = () => {
         {counter === 1 && (
           <label htmlFor="Name"> What is your name?
             <input
-              required
               type="text"
               placeholder="Type your name here"
               onChange={(event) => setName(event.target.value)}
@@ -41,35 +41,11 @@ export const App = () => {
           </label>
         )}
         {counter === 2 && (
-          <label htmlFor="Location"> Where do you live?
-            <select
-              required
-              onChange={(event) => setLocation(event.target.value)}
-              value={location}>
-              <option value="">Select location 👇</option>
-              <option value="stockholm">Stockholm</option>
-              <option value="barcelona">Barcelona</option>
-              <option value="oslo">Oslo</option>
-            </select>
-          </label>
-        )}
-        {counter === 3 && (
-          <label htmlFor="Newsletter?"> Newsletter?
-            <input
-              required
-              type="checkbox"
-              onChange={(event) => setWantsNewsletter(event.target.checked)}
-              checked={wantsNewsletter}
-              value="Yes" />
-          </label>
-        )}
-        {counter === 4 && (
           <>
-            <p className="label">Age Group:</p>
+            <p className="label">How old are you?</p>
             {ageGroups.map((group) => (
-              <label htmlFor="Age group" key={group}>
+              <label htmlFor="Age group" className="ageGroup" key={group}>
                 <input
-                  required
                   type="radio"
                   onChange={(event) => setAgeGroup(event.target.value)}
                   value={group}
@@ -79,28 +55,62 @@ export const App = () => {
             ))}
           </>
         )}
-        {counter >= 1 && counter < 5 && (
+        {counter === 3 && (
+          <label htmlFor="Location"> Where do you live?
+            <select
+              onChange={(event) => setLocation(event.target.value)}
+              value={location}>
+              <option value="">Select location 👇</option>
+              <option value="city">Inner city of Stockholm</option>
+              <option value="south">South of city center</option>
+              <option value="east">East of city center</option>
+              <option value="west">West of city center</option>
+              <option value="north">North of city center</option>
+            </select>
+          </label>
+        )}
+        {counter === 4 && (
+          <label htmlFor="scale?"> On a scale from 0-10, how green is your area?
+            <input
+              type="range"
+              min="0"
+              max="10"
+              onChange={(event) => setGreenArea(event.target.value)} />
+          </label>
+        )}
+        {counter === 5 && (
+          <label htmlFor="feedback"> What type of green areas would you like to have more of?
+            <input
+              type="text"
+              size="100"
+              placeholder="Type here.."
+              onChange={(event) => setFeedback(event.target.value)}
+              value={feedback} />
+          </label>
+        )}
+        {counter >= 1 && counter < 6 && (
           <Buttons handleNextClick={HandleNextClick} handleBackClick={HandleBackClick} />
         )}
       </form>
-      {counter === 5 && (
+      {counter === 6 && (
         <>
           <div className="answer">
             <Summary /* Shows summary of Survey */
               nameInput={name}
+              ageInput={ageGroup}
               locationInput={location}
-              newsInput={wantsNewsletter.valueOf}
-              ageInput={ageGroup} />
+              greenInput={greenArea}
+              feedbackInput={feedback} />
           </div>
           <button type="submit" onClick={() => HandleNextClick()}> Submit</button>
         </>
       )}
-      {counter === 6 && (
+      {counter === 7 && (
         <>
           <div className="answer">
             <h2>Thank you!</h2>
           </div>
-          <button type="button" onClick={() => setCounter(0)}> Restart</button>
+          <button type="button" onClick={() => window.location.reload()}> Restart</button>
         </>
       )}
     </main>
