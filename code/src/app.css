@@ -11,24 +11,27 @@
 h1, h2, h3 {
   font-family: var(--headings-font-family);
   color: #fff;
-  text-shadow: 0 0 3px #0000;
+    text-align: center;
 }
 
 h1 {
   font-weight: 90;
-  text-align: center;
+}
+
+h1, h3 {
+text-shadow: 0 0 3px #0000;
 }
 
 h2, h3 {
       font-weight: 100;
 }
+
 h2 {
   font-size: 18px;
-  text-align: center;
 }
 
-h3 {
-    text-align: center;
+h2 {
+    color:#000;
 }
 
 p, button, input, select {
@@ -62,6 +65,7 @@ button {
     border-radius: 20px;
     font-weight: 700;
     height: 50px;
+    /* opacity: 1; */
 }
 
 button:hover {
@@ -119,7 +123,7 @@ option {
     0 0 0.2rem #fff, 0 0 2rem var(--tertiary-bg-color), 
     0 0 0.8rem var(--tertiary-bg-color), 0 0 2.8rem var(--tertiary-bg-color), 
     inset 0 0 1.3rem var(--tertiary-bg-color);
-    background-color: var(--primary-bg-color);
+    background-color: rgba(40, 39, 39, 0.7); 
     text-align: center;
 }
 
@@ -134,20 +138,16 @@ option {
     0 0 2rem var(--tertiary-bg-color), 0 0 0.8rem var(--tertiary-bg-color), 
     0 0 2.8rem var(--tertiary-bg-color), inset 0 0 1.3rem var(--tertiary-bg-color);
     width: 90%;
-    background-color: var(--primary-bg-color);
-    opacity: 0.8;
+    background-color: rgba(40, 39, 39, 0.7); 
 }
 
 .radio-btns {
     display:flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
+    margin: 3px auto;
     color:#fff;
-}
-
-.radio-btns:hover {
-   cursor: pointer;
 }
 
 .radio-btns label {
@@ -217,5 +217,9 @@ select {
     width: 40%;
     margin: auto;
 }
+
+input[type="radio"]:hover, label:hover {
+cursor: pointer;
+} 
 
 }
