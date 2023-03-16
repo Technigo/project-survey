@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Header } from './Components/Header';
 import { Name } from './Components/Name';
-import { Select } from './Components/Select';
+import { Reason } from './Components/Reason';
 import { Checkbox } from './Components/Checkbox';
 import { Location } from './Components/Location';
+import { Genre } from './Components/Genre'
 // import { Summary } from './Components/Summary';
 import { Feel } from './Components/Feel';
 import { Alte } from './Components/Results/Alte';
 import { Amapiano } from './Components/Results/Amapiano'
 import { Classic } from './Components/Results/Classic'
+import { RB } from './Components/Results/RB'
 
 export const App = () => {
   const [step, setStep] = useState(1)
@@ -17,8 +19,9 @@ export const App = () => {
   const [adjectivesArray, setAdjectivesArray] = useState([])
   const [location, setLocation] = useState('');
   const [feel, setFeel] = useState('');
+  const [genre, setGenre] = useState('');
 
-  console.log(Classic, Amapiano);
+  console.log(Classic, Alte, Amapiano);
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -46,36 +49,42 @@ export const App = () => {
             handleStepIncrease={handleStepIncrease} />
         )}
         {step === 2 && (
-          <Select
+          <Reason
             name={name}
             reason={reason}
             setReason={setReason}
             handleStepIncrease={handleStepIncrease} />
         )}
         {step === 3 && (
+          <Genre
+            genre={genre}
+            setGenre={setGenre}
+            handleStepIncrease={handleStepIncrease} />
+        )}
+        {step === 4 && (
           <Location
             location={location}
             setLocation={setLocation}
             handleStepIncrease={handleStepIncrease} />
         )}
-        {step === 4 && (
+        {step === 5 && (
           <Feel
             feel={feel}
             setFeel={setFeel}
             handleStepIncrease={handleStepIncrease} />
         )}
-        {step === 5 && (
+        {step === 6 && (
           <Checkbox
             adjectivesArray={adjectivesArray}
             onAdjectivesArrayChange={onAdjectivesArrayChange}
             handleStepIncrease={handleStepIncrease} />
         )}
-        {step === 6 && (
-          <Alte name={name} reason={reason} location={location} feel={feel} />
+        {step === 7 && (
+          <RB name={name} reason={reason} location={location} feel={feel} genre={genre} />
         )}
-        {step <= 5 && (
+        {step <= 6 && (
           <div className="footer">
-            <p>Step {step}/5</p>
+            <p>Step {step}/6</p>
           </div>
         )}
       </div>

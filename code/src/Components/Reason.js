@@ -2,7 +2,7 @@
 import React from 'react';
 import '../index.css';
 
-export const Select = ({ step, name, reason, setReason, handleStepIncrease }) => {
+export const Reason = ({ step, name, reason, setReason, handleStepIncrease }) => {
   const handleReasonSelect = (event) => {
     setReason(event.target.value)
   }
@@ -10,7 +10,7 @@ export const Select = ({ step, name, reason, setReason, handleStepIncrease }) =>
   return (
     <div>
       <form>
-        <p>Hi there, {name}! What kind of musical tempo do you prefer?
+        <p>Hi there, {name}! What kind of musical tempo do you enjoy?
        For what reason do you like to listen to music?
         </p>
         <select

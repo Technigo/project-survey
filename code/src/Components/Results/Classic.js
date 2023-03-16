@@ -3,14 +3,15 @@ import React from 'react';
 import '../../index.css';
 import './Results.css';
 
-export const Classic = ({ name, reason, location, feel }) => {
+export const Classic = ({ name, reason, location, feel, genre }) => {
   return (
     <div className="result-wrapper">
       <div className="result-text-div">
         <h1 className="text-title">You got... classic afrobeats!</h1>
         <p>Great job, {name}! The results are in.</p>
         <p>You often find yourself listening to music to {reason}, and
-      your favourite place to listen to music is {location}.
+      your favourite place to listen to music is {location}. Out of the genres
+      I listed, you enjoy {genre} the most.
       Most music you listen to could be described as {feel}.
         </p>
         <p>
