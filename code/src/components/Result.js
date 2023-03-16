@@ -30,7 +30,7 @@ const Summary = ({ name, type, genre, data }) => {
   return (
     <div className="container result">
       <div className="headings">
-        <h2>Result</h2>
+        <h2>Result <span className="emoji">🍿</span></h2>
         <hr />
       </div>
       <div className="postercontainer">

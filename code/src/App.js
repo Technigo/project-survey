@@ -8,6 +8,7 @@ import Name from './components/Name';
 import Type from './components/Type';
 import Genre from './components/Genre';
 import Score from './components/Score';
+import Apocalypse from './components/Apocalypse';
 import Summary from './components/Summary';
 import Result from './components/Result';
 
@@ -17,6 +18,7 @@ export const App = () => {
   const [type, setType] = useState('');
   const [genre, setGenre] = useState('');
   const [score, setScore] = useState('8');
+  const [apocalypse, setApocalypse] = useState('false');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -28,6 +30,7 @@ export const App = () => {
     setType('');
     setGenre('');
     setScore('8');
+    setApocalypse('false');
   };
 
   return (
@@ -37,24 +40,27 @@ export const App = () => {
       {step === 2 && <Type type={type} setType={setType} step={step} />}
       {step === 3 && <Genre genre={genre} setGenre={setGenre} step={step} />}
       {step === 4 && <Score score={score} setScore={setScore} step={step} />}
-      {step < 5 && step !== 0 && (
+      {step === 5 && <Apocalypse apocalypse={apocalypse} setApocalypse={setApocalypse} step={step} />}
+      {step < 6 && step !== 0 && (
         <div className="step-counter">
-          <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>
-            Next step
-          </button>
-          <button type="button" onClick={handleStepReset}>
-            Reset All
-          </button>
+          <div className="step-counter-btns">
+            <button type="button" onClick={handleStepIncrease}>
+              Next step
+            </button>
+            <button type="button" onClick={handleStepReset}>
+              Reset All
+            </button>
+          </div>
+          <p>(Current step: {step})</p>
         </div>
       )}
-      {step === 5 && (
+      {step === 6 && (
         <>
           <Summary name={name} type={type} genre={genre} score={score} />
           <button type="button" onClick={handleStepIncrease}>Yes!</button>
         </>
       )}
-      {step === 6 && (
+      {step === 7 && (
         <>
           <Result name={name} type={type} genre={genre} score={score} data={data} />
           <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
