@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #D8D9CF;
+  overflow: hidden;
 }
 
 code {
@@ -13,55 +14,79 @@ code {
     monospace;
 }
 
-#root{
+#root {
   display: flex;
-  flex-direction:column;
+  flex-direction: column; 
 }
-.imgBox img{
+
+.logoImage {
+  display: flex;
+}
+
+.logoImage img {
   width: 100%;
-  height: auto;
-} 
+  object-fit: cover;
+}
+
 .welcomeBox,
 .nameQuestionBox,
 .ageGroupBox,
 .productTypeBox,
 .summaryBox,
-.goodbyPageBox{
+.goodbyPageBox {
   text-align: center;
   padding: 10px;
 }
+
 .nameBox,
 .ageBox,
 .selectBox,
-.ageBox{
+.ageBox {
   margin-bottom: 20px;
 }
-#name-input{
-  font-size: 14px;
+
+#name-input {
+  font-size: 18px;
   color: #4A403A;
   background-color: whitesmoke;
-  border-color: #709078;
+  border:2px solid #709078; 
+  border-radius: 5px;
 }
-select{
-  color: red;
+
+select {
+  color: #4A403A;
+  font-size: 24px;
+  background-color: whitesmoke;
+  border:2px solid #709078; 
+  border-radius: 5px;
 }
-h1{
+
+.ageGroupBox label {
   color: #4A403A;
   font-size: 28px;
+}
+
+h1 {
+  color: #4A403A;
+  font-size: 36px;
   font-family: 'OxyFira Sansgen';
-  
-}
-h2{
-  color: #4A403A;
-  font-size: 24px;
-  font-family:"Droid Sans" ;
-}
-p{
-  color: #4A403A;
-  font-size: 24px;
 
 }
-.nextQuestionButton{
+
+h2 {
+  color: #4A403A;
+  font-size: 36px;
+  font-family: "Droid Sans";
+}
+
+p {
+  color: #4A403A;
+  font-size: 36px;
+  font-family: 800;
+
+}
+
+.nextQuestionButton {
   width: 100px;
   height: 30px;
   border-radius: 6px;
@@ -69,46 +94,70 @@ p{
   font-size: 20px;
   background-color: #E2C2B9;
   border-color: #E2C2B9;
+  margin-bottom: 10px;
 }
-.nextQuestionButton:hover{
+
+.nextQuestionButton:hover {
   background-color: #709078;
   cursor: pointer;
 }
 
 
 /***************tablet design******************************/
-@media (min-width:600px) {}
+@media (min-width:600px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+  }
+}
 
 
 
 
-/****************desktop design****************************/
+/****************desktop design normal*********************/
 @media (min-width:992px) {
-  #root{
+  #root {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-  
+    
+
   }
-  .logoImage{
+  .welcomeBox,
+  .nameQuestionBox,
+  .ageGroupBox,
+  .productTypeBox,
+  .summaryBox,
+  .goodbyPageBox {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logoImage {
     display: flex;
-    width:50%;
-   
-   }
-   .imgBox img{
+    width: 40%;
+    overflow: hidden;
+  }
+
+  .logoImage img {
     width: 100%;
     height: auto;
     object-fit: cover;
-  
-   }
-   .surveyWrap{
+  }
+
+  .surveyWrap {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 60%;
     align-items: center;
     justify-content: center;
 
-   }
+  }
 
 
 }
+
+/****************desktop design large****************************/
+@media (min-width:1024px) {}

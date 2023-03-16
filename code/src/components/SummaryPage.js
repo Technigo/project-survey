@@ -10,7 +10,6 @@ export const SummaryPage = ({ name, ageGroup, product }) => {
                     Thank you {name}!
                     You are in age group: {ageGroup},
                     you purchase {product} from us.
-                    We appreciate your time!
                 </h2>
             </div>
             <NextQuestionButton button="Submit" />
