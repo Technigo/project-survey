@@ -20,6 +20,10 @@ export const App = () => {
     setStep(step + 1);
   }
 
+  const handleStepDecrease = () => {
+    setStep(step - 1);
+  }
+
   return (
     <div className="outer-wrapper">
       <section className="survey-wrapper">
@@ -49,17 +53,21 @@ export const App = () => {
         )}
 
         {step === 6 && (
-          <><Summary name={name} area={area} calls={calls} /><button type="button" onClick={handleStepIncrease}>submit</button></>
+          <Summary name={name} area={area} calls={calls} />
         )}
 
         {step === 7 && (
           <Result />
         )}
+        <div buttonswrapper>
+          {step > 0 && step < 7 && (
+            <button className="next" type="button" onClick={handleStepDecrease}> BACK </button>
+          )}
 
-        {step > -1 && step < 7 && (
-          <button className="next" type="button" onClick={handleStepIncrease}> NEXT &rarr;</button>
-        )}
-
+          {step > -1 && step < 7 && (
+            <button className="next" type="button" onClick={handleStepIncrease}> NEXT </button>
+          )}
+        </div>
       </section>
     </div>
   );

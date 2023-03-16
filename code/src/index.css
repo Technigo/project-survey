@@ -11,29 +11,41 @@ body {
   margin: 0;
   font-family:'Satoshi',
     sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color:rgb(74, 72, 72);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
   align-items: center;
+  line-height: 50px;
+  margin-bottom: 30px;
   min-height: 100vh;
   background: rgb(63,94,251);
 background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(235,252,70,1) 77%);
 }
 
-.next{
+button{
   background-color: rgb(0, 0, 0);
   border-top-left-radius: 10px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
   border-bottom-right-radius: 10px;
   color: rgb(255, 255, 255);
-  padding :20px;
+  padding :15px;
   margin-top: 100px;
   border-style: none;
   font-weight:bold;
-  width: 150px;
   font-family: 'Panchang';
+}
+
+.buttonswrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 20px;
+
 }
 
 button {
@@ -64,12 +76,6 @@ button:active:before {
 }
 
 
-code {
-  font-family: 'Satoshi'
-  font-size 16px;
-}
-
-
 .outer-wrapper {
   background-size: 22px 22px;
   margin: 0 auto;
@@ -90,6 +96,17 @@ code {
   padding: 5rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
+  ;
+}
+
+input, select {
+  background-color:rgba(255, 255, 255, 0.495);
+  border-radius: 10px;
+  border-style: none;
+  height: 28px;
+  cursor: pointer;
+  font-family: 'Satoshi';
+
   ;
 }
 
