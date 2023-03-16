@@ -77,8 +77,8 @@ body {
 }
 
 .step-btn button:hover {
-  color: #ffffff;
-  background: #f8a659;
+    background: #cb3978;
+    box-shadow: 1px 1px 2px rgb(255, 173, 209), 0 0 25px rgb(255, 255, 255), 0 0 5px rgb(255, 62, 226);
 }
 
 .answer-input input {
@@ -112,7 +112,10 @@ body {
   border-radius: 10px;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  background-color: #c86181;
+  background-color: #fc5a88;
+}
 
-
+.party-btn button:hover {
+    background: #cb3978;
+    box-shadow: 1px 1px 2px rgb(255, 173, 209), 0 0 25px rgb(246, 237, 243), 0 0 5px rgb(255, 62, 226);
 }
