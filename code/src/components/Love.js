@@ -9,7 +9,7 @@ const Love = ({ love, setLove }) => {
   return (
     <div>
       <form>
-        <label htmlFor="love">Do you love cats?</label>
+        <label htmlFor="love"><h3>Do you love cats?</h3></label>
         <div>
           <label htmlFor="yes">
             <input
@@ -19,7 +19,7 @@ const Love = ({ love, setLove }) => {
               onChange={handleLoveChange}
               checked={love === 'Yes!'}
               aria-label="yes" />
-            <p>Yes, of course I love cats!</p>
+            Yes, of course I love cats!
           </label>
           <label htmlFor="no">
             <input
@@ -29,7 +29,7 @@ const Love = ({ love, setLove }) => {
               onChange={handleLoveChange}
               checked={love === 'No, because my heart ❤️ is a stone 🪨.'}
               aria-label="no" />
-            <p>No, I don&apos;t love cats because my heart is made of stone.</p>
+            No, I don&apos;t love cats because my heart is made of stone.
           </label>
           <label htmlFor="not yet">
             <input
@@ -39,7 +39,7 @@ const Love = ({ love, setLove }) => {
               onChange={handleLoveChange}
               checked={love === 'Not yet.'}
               aria-label="not yet" />
-            <p>I haven&apos;t decided yet.</p>
+            I haven&apos;t decided yet.
           </label>
         </div>
       </form>

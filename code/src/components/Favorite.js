@@ -20,7 +20,7 @@ const Favorite = ({ favorite, setFavorite, handleSubmitSurvey }) => {
   return (
     <div>
       <form onSubmit={handleFormSubmit}>
-        <label htmlFor="favorite">Who is your favorite cartoon cat?</label>
+        <label htmlFor="favorite"><h3>Who is your favorite cartoon cat?</h3></label>
         <select id="favorite" value={favorite} onChange={handleFavoriteChange}>
           <option disabled selected value="">Select your favorite</option>
           <option value="Chesire Cat">Chesire Cat</option>
