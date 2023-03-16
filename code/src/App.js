@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
+import { Header } from './Components/Header';
 import { Name } from './Components/Name';
 import { Select } from './Components/Select';
 import { Checkbox } from './Components/Checkbox';
 import { Location } from './Components/Location';
 // import { Summary } from './Components/Summary';
 import { Feel } from './Components/Feel';
-import { Alte } from './Components/Results/Alte'
+import { Alte } from './Components/Results/Alte';
+import { Amapiano } from './Components/Results/Amapiano'
+import { Classic } from './Components/Results/Classic'
 
 export const App = () => {
   const [step, setStep] = useState(1)
@@ -14,6 +17,8 @@ export const App = () => {
   const [adjectivesArray, setAdjectivesArray] = useState([])
   const [location, setLocation] = useState('');
   const [feel, setFeel] = useState('');
+
+  console.log(Classic, Amapiano);
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -32,6 +37,7 @@ export const App = () => {
 
   return (
     <section className="main-wrapper">
+      <Header />
       <div className="survey-wrapper">
         {step === 1 && (
           <Name
@@ -69,7 +75,7 @@ export const App = () => {
         )}
         {step <= 5 && (
           <div className="footer">
-            <p>{step}/5</p>
+            <p>Step {step}/5</p>
           </div>
         )}
       </div>

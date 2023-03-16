@@ -1,0 +1,42 @@
+.result-wrapper {
+    display: flex;
+  }
+
+.result-text-div {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  }
+
+
+iframe {
+    border: 0;
+    height: 450px;
+  }
+  
+  .playlist-wrapper {
+    width: fit-content;
+    display: flex;
+    width: 40%;
+    justify-content: center;
+    padding-top: 20px;
+  }
+
+  a.text-link {
+    color: white;
+    background-color:rgb(255, 107, 77);
+    padding: 0px 5px 0px 5px;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a.text-link:hover {
+    opacity: 60%;
+  }
+
+  .text-title {
+    color:rgb(1, 40, 0);
+    font-size: 23px;
+    line-height: 25px;
+    font-family: Ubuntu Mono;
+  }

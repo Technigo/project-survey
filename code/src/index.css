@@ -1,53 +1,64 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Ubuntu Mono;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:lightgreen;
+  background-color:rgb(224, 242, 224);
+  color:rgb(1, 40, 0);
+  font-size: 16px;
+  line-height: 20px;
+  accent-color: darkgreen;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.survey-header {
+  margin: auto;
+  text-align: center;
 }
-
 
 .survey-wrapper {
 background-color: white;
 border-radius: 20px;
 width: 60%;
-height: 600px;
-padding: 20px 20px 20px 20px;
+height: 500px;
+padding: 20px 20px 20px 30px;
 margin: auto;
-margin-top: 50px;
 justify-content: center;
 }
 
-.next-question-btn {
-  width: 100px;
+/* CSS */
+button {
+  background-color: #fbeee0;
+  border: 1px solid rgb(0, 46, 0);
+  border-radius: 30px;
+  box-shadow: rgb(0, 46, 0) 4px 4px 0 0;
+  color: rgb(0, 46, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Ubuntu Mono;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 18px;
+  margin: 20px 0px 10px 0px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-iframe {
-  border: 0;
-  height: 450px;
+button:hover {
+  background-color: #fff;
 }
 
-.playlist-wrapper {
-  width: fit-content;
-  display: flex;
-  width: 40%;
-  justify-content: center;
+button:active {
+  box-shadow: rgb(0, 46, 0) 2px 2px 0 0;
+  transform: translate(2px, 2px);
 }
 
-.result-wrapper {
-  display: flex;
-}
-
-.result-text-div {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
+input[type=text] {
+  margin:10px 0;
+  width: 200px;
+  height: 20px;
 }
 
