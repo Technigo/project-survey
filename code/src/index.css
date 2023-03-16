@@ -22,7 +22,7 @@ html {
 }
 
 .story-container {
-  border: 2px blue solid;
+  /* border: 2px blue solid; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,9 +30,8 @@ html {
 }
 
 .side-in-book {
-  border: 2px aqua solid;
+  /* border: 2px aqua solid; */
   max-width: 610px;
-  /* height: 100%; */
   position: absolute;
   display: flex;
   align-items: center;
@@ -59,6 +58,7 @@ form {
   max-width: 90%;
   max-height: auto;
   display: flex;
+  margin-top: 20px;
 }
 
 input,
@@ -104,7 +104,7 @@ button:hover {
 }
 
 .story-page {
-  border: solid 2px red;
+  /* border: solid 2px red; */
   font-size: 16px;
   display: flex;
   flex-direction: column;

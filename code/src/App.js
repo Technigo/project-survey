@@ -13,7 +13,6 @@ export const App = () => {
   const [horn, setHorn] = useState('')
   const [loveAct, setLoveAct] = useState('')
   const [name, setName] = useState('')
-  // const [story, setStory] = useState('')
 
   const handleNextQuestion = () => {
     setStep(step + 1)
