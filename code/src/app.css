@@ -55,7 +55,7 @@ button {
     box-shadow: var(--box-shadow);
     transition: all .15s ease-in-out;
     width: 50%;
-    margin: 3px;
+    margin: 3px auto;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -71,6 +71,12 @@ button:hover {
 .btn-container {
     display: flex;
     justify-content: center;
+}
+
+.btn-container > button {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
 }
 
 form {

@@ -53,8 +53,8 @@ export const App = () => {
           <form>
             <Love love={love} setLove={setLove} />
             <div className="btn-container">
-              <button type="button" onClick={handleQuestionIncrease}>Next question</button>
               <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
+              <button type="button" onClick={handleQuestionIncrease}>Next question</button>
             </div>
           </form>
         </div>
@@ -63,8 +63,10 @@ export const App = () => {
         <div className="form-container">
           <form>
             <Favorite favorite={favorite} setFavorite={setFavorite} handleSubmitSurvey={handleSubmitSurvey} />
-            <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
-            <button type="button" onClick={handleSubmitSurvey}>Submit</button>
+            <div className="btn-container">
+              <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
+              <button type="button" onClick={handleSubmitSurvey}>Submit</button>
+            </div>
           </form>
         </div>
       )}
