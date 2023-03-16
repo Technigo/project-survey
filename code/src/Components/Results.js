@@ -30,9 +30,9 @@ export const Results = (props) => {
             );
           })
       }
-      <NextButton
-        onNext={props.onNext}
-        buttonLabel={props.restartButtonLabel} />
+      <div className="buttons-container">
+        <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
+      </div>
     </div>
   );
 };

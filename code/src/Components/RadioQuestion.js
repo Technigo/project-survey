@@ -1,5 +1,6 @@
 import React from 'react';
 import { NextButton } from './NextButton';
+import { PreviousButton } from './PreviousButton';
 
 export const RadioQuestion = (props) => {
   return (
@@ -8,8 +9,10 @@ export const RadioQuestion = (props) => {
       <p>{props.questionTitle}</p>
       {props.labels.map((label) => {
         return (
-          <div>
-            <label htmlFor={props.questionId}>{label}</label>
+          <div className="radioQuestion-child">
+            <label htmlFor={props.questionId}>{label}
+              <img className="radio-icon" src={`../assets/${label}.png`} alt={`${label} type of property`} />
+            </label>
             <input
               type="radio"
               id={props.questionId}
@@ -19,7 +22,12 @@ export const RadioQuestion = (props) => {
           </div>
         );
       })}
-      <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
+      <div className="buttons-container">
+        <PreviousButton
+          onPrevious={props.onPrevious}
+          previousButtonLabel={props.previousButtonLabel} />
+        <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
+      </div>
     </div>
   );
 }

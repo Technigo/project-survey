@@ -1,5 +1,6 @@
 import React from 'react';
 import { NextButton } from './NextButton';
+import { PreviousButton } from './PreviousButton';
 
 export const SelectQuestion = (props) => {
   return (
@@ -19,7 +20,12 @@ export const SelectQuestion = (props) => {
           })}
         </select>
       </div>
-      <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
+      <div className="buttons-container">
+        <PreviousButton
+          onPrevious={props.onPrevious}
+          previousButtonLabel={props.previousButtonLabel} />
+        <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
+      </div>
     </>
   )
 }

@@ -8,7 +8,7 @@ export const LandingPage = (props) => {
       <div className="landing-child">
         <h1>{props.landingTitle}</h1>
         <h2>{props.description}</h2>
-        <div>
+        <div className="buttons-container">
           <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
         </div>
       </div>

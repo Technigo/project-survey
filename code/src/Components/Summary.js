@@ -1,5 +1,6 @@
 import React from 'react';
 import { NextButton } from './NextButton';
+import { PreviousButton } from './PreviousButton';
 
 export const Summary = (props) => {
   const printParking = () => {
@@ -15,9 +16,11 @@ export const Summary = (props) => {
       <p>{printParking()}</p>
       <p>{props.answers.rooms}</p>
       <p>{props.answers.price}</p>
-      <div>
+      <div className="buttons-container">
+        <PreviousButton
+          onPrevious={props.onPrevious}
+          previousButtonLabel={props.previousButtonLabel} />
         <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
-        <NextButton onNext={props.onNext} buttonLabel={props.restartButtonLabel} />
       </div>
     </div>
   );

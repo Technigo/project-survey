@@ -40,10 +40,14 @@ export const Survey = () => {
                 firstName: value
               });
             }}
+            onPrevious={() => {
+              setQuestionStep(questionStep - 1);
+            }}
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
-            buttonLabel="Continue" />
+            previousButtonLabel="Back"
+            buttonLabel="Continue"/>
         )}
         {questionStep === 2 && (
           <RadioQuestion
@@ -62,6 +66,7 @@ export const Survey = () => {
               (answers.typeOfHome === 'Apartment'
                 ? setQuestionStep(questionStep + 1) : setQuestionStep(questionStep + 2))
             }}
+            previousButtonLabel="Back"
             buttonLabel="Continue" />
         )}
         {questionStep === 3 && (
@@ -78,6 +83,7 @@ export const Survey = () => {
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
+            previousButtonLabel="Back"
             buttonLabel="Continue" />
         )}
         {questionStep === 4 && (
@@ -94,6 +100,7 @@ export const Survey = () => {
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
+            previousButtonLabel="Back"
             buttonLabel="Continue" />
         )}
         {questionStep === 5 && (
@@ -110,6 +117,7 @@ export const Survey = () => {
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
+            previousButtonLabel="Back"
             buttonLabel="Continue" />
         )}
         {questionStep === 6 && (
@@ -119,8 +127,8 @@ export const Survey = () => {
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
-            buttonLabel="Show me homes"
-            restartButtonLabel="Restart" />
+            previousButtonLabel="Back"
+            buttonLabel="Show me homes" />
         )}
         {questionStep === 7 && (
           <Results
@@ -129,7 +137,7 @@ export const Survey = () => {
             onNext={() => {
               setQuestionStep(1);
             }}
-            restartButtonLabel="Search again" />
+            buttonLabel="Search again" />
         )}
       </>
     );

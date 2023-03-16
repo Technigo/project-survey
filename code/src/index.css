@@ -58,6 +58,20 @@ form{
 
 }
 
+.radio-icon{
+  width: 65px;
+}
+
+.radioQuestion-child{
+  display:flex;
+  flex-direction: row;
+}
+
+.radioQuestion-child label{
+  display:flex;
+  flex-direction: column-reverse;
+}
+
 .results-container{
   
 }
