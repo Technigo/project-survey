@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-closing-tag-location */
+/* eslint-disable react/jsx-no-undef */
 /* eslint-disable no-shadow */
 /* eslint-disable no-sequences */
 /* eslint-disable no-unused-vars */
@@ -10,6 +12,7 @@ import { Food } from 'components/Food';
 import { Times } from 'components/Times';
 import { Summary } from 'components/Summary';
 import { Welcome } from 'components/Welcome';
+import Footer from 'components/Footer';
 import AnimatedPage from 'components/AnimatedPage';
 import './index.css';
 
@@ -40,7 +43,7 @@ export const App = () => {
   }
 
   return (
-    <AnimatedPage> {/* Makes the first page fade in from the bottom */}
+    <><AnimatedPage> {/* Makes the first page fade in from the bottom */}
       <div className="content-container">
         <div className="welcome-container">
           {step === 1 && (
@@ -86,6 +89,8 @@ export const App = () => {
         </div>
       </div>
     </AnimatedPage>
+    <Footer />
+    </>
 
   );
 }

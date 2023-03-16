@@ -1,0 +1,12 @@
+.footer-text {
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0px;
+    background-color: white;
+    height: 50px;
+    position: fixed;
+}
