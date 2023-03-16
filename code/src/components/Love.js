@@ -10,7 +10,7 @@ const Love = ({ love, setLove }) => {
     <div>
       <form>
         <label htmlFor="love"><h3>Do you love cats?</h3></label>
-        <div>
+        <div className="radio-btns">
           <label htmlFor="yes">
             <input
               id="yes"

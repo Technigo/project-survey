@@ -20,7 +20,11 @@ h1 {
 
 h2 {
   font-size: 18px;
-text-align: center;
+  text-align: center;
+}
+
+h3 {
+    text-align: center;
 }
 
 p, button, input, select {
@@ -47,6 +51,10 @@ button {
     height: 50px;
 }
 
+button:hover {
+    box-shadow: inset 0 0 10px 0 #bc13fe, 0 0 10px 4px #bc13fe;
+}
+
 form {
     padding: 10px;
     display: grid;
@@ -57,13 +65,19 @@ input {
     border-radius: 20px;
 }
 
+select {
+    margin: 0 auto;
+    width: 60%;
+    height: 40px;
+}
+
 .input-field {
     height: 35px;
     padding-left: 10px;
 }
 
 .neon-text {
-  width: 30%;
+    width: 30%;
     margin: 30px auto;
     text-transform: uppercase;
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 
@@ -71,6 +85,7 @@ input {
     0 0 82px #f09, 0 0 92px #f09, 
     0 0 102px #f09, 0 0 151px #f09;
     border: 0.2rem solid #fff;
+    background: var(--primary-bg-color);
     border-radius: 20px;
     padding: 0.4em;
     box-shadow: 0 0 0.2rem #fff, 
@@ -91,4 +106,11 @@ input {
     0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe, 
     0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
     width: 50%;
+}
+
+.radio-btns {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
