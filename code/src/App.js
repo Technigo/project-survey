@@ -34,7 +34,7 @@ export const App = () => {
       {question === 0 && (
         <div>
           <h2>Question number: 0/3</h2>
-          <button type="button" onClick={handleQuestionIncrease}>Start Survey</button>
+          <button type="button" onClick={handleQuestionIncrease}>Start survey</button>
         </div>
       )}
       {question > 0 && question < 4 && (
@@ -52,8 +52,10 @@ export const App = () => {
         <div className="form-container">
           <form>
             <Love love={love} setLove={setLove} />
-            <button type="button" onClick={handleQuestionIncrease}>Next question</button>
-            <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
+            <div className="btn-container">
+              <button type="button" onClick={handleQuestionIncrease}>Next question</button>
+              <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
+            </div>
           </form>
         </div>
       )}
