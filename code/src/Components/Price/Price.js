@@ -1,4 +1,9 @@
+/// ////////// IMPORTS //////////////// ///
+
 import React from 'react';
+import './Price.css';
+
+/// //////// PRICEGROUP VARIABLE //////// ///
 
 const priceGroups = [ /* Price group array */
   '5-15€',
@@ -6,9 +11,11 @@ const priceGroups = [ /* Price group array */
   '25€ +'
 ];
 
+/// ////////// FUNCTION //////////////// ///
+
 export const Price = ({ priceGroup, setPriceGroup }) => {
   return (
-    <><h2 className="pricetext">PRICE GROUP?</h2>
+    <><h2 className="nametext">PRICE GROUP?</h2>
       <form className="radio-form">
         {priceGroups.map((group) => (/* itterates trough the priceGroups array */
         // eslint-disable-next-line jsx-a11y/label-has-associated-control

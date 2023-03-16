@@ -1,4 +1,9 @@
+/// ////////// IMPORTS //////////////// ///
+
 import React from 'react';
+import './Food.css';
+
+/// ////////// FUNCTION //////////////// ///
 
 export const Food = ({ food, setFood }) => {
   const handleDrinkChange = (event) => {
@@ -7,9 +12,9 @@ export const Food = ({ food, setFood }) => {
 
   return (
     <form>
-      <h2 className="nametext">WHATS ON THE PLATE?</h2>
+      <h2 className="nametext">WHATS COOKING?</h2>
       <input
-        id="whats-on-the-plate"
+        id="whats-cooking"
         className="name-input"
         type="text"
         value={food}

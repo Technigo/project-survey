@@ -1,4 +1,9 @@
+/// ////////// IMPORTS //////////////// ///
+
 import React from 'react';
+import './Favorite.css';
+
+/// ////////// FUNCTION //////////////// ///
 
 export const Favorite = ({ favorite, setFavorite }) => {
   const handleFavoriteChange = (event) => {

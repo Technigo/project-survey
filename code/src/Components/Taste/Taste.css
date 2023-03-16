@@ -1,0 +1,27 @@
+/* ///////////////////////// DROPDOWN //////////////////////////////*/
+
+/*----- ADJUST PLACEMENT ---- */
+
+.taste-select-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /*----- COLORS AND FONTS ETC ---- */
+
+  .taste-select {
+    background-color: transparent;
+    font-size: 20px;
+    width: 200px;
+    border-width: 10px;
+    border-color: #746dbaff;
+    border-radius: 7px;
+    padding: 10px;
+    color: #746dbaff;
+    font-family: Futura;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+  }

@@ -1,13 +1,13 @@
 /// ////////// IMPORTS //////////////// ///
 
 import React, { useState } from 'react';
-import { Favorite } from './Components/Favorite';
-import { Grape } from './Components/Grape';
-import { Food } from './Components/Food';
-import { Result } from './Components/Result';
-import { Price } from './Components/Price';
-import { Taste } from './Components/Taste';
-import { Greeting } from './Components/Greeting';
+import { Favorite } from './Components/Favorite/Favorite';
+import { Grape } from './Components/Grape/Grape';
+import { Food } from './Components/Food/Food';
+import { Result } from './Components/Result/Result';
+import { Price } from './Components/Price/Price';
+import { Taste } from './Components/Taste/Taste';
+import { Greeting } from './Components/Greeting/Greeting';
 
 /// ////////// MAIN APP //////////////// ///
 

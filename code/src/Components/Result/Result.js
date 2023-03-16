@@ -1,4 +1,9 @@
+/// ////////// IMPORTS //////////////// ///
+
 import React from 'react';
+import './Result.css';
+
+/// ////////// FUNCTION //////////////// ///
 
 export const Result = ({ favorite, grape, food, group, taste }) => {
   return (

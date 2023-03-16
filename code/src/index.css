@@ -1,3 +1,5 @@
+/* /////////////////////////////// BACKGROUND & FONT //////////////////////////////*/
+
 
 body {
   margin: 0;
@@ -6,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 22% 5% 0% 3%;
+  padding: 22% 5% 0% 1%;
   background-image: url("./Components/pictures/wine-1.png");
 }
 
@@ -15,148 +17,29 @@ code {
     monospace;
 }
 
-.nametext {
-  display: flex;
-  font-size: 17px;
-  font-family: Futura;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 10px;
-}
+/* ///////////////////////// APP.JS - SURVEY MAIN BUBBLE //////////////////////////////*/
 
-.pricetext {
-  display: flex;
-  font-size: 20px;
-  font-family: Futura;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.pricegrouptext {
-  display: flex;
-  font-size: 15px;
-  font-family: Futura;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.nextquestiontext {
-  display: flex;
-  font-size: 17px;
-  font-family: Futura;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.currentquestiontext {
-  display: flex;
-  font-size: 17px;
-  font-family: Futura;
-  color: white;
-  justify-content: center;
-  align-items: center;
-}
-
-.resulttext {
-  display: flex;
-  font-size: 13px;
-  margin: 5px;
-  font-family: Futura;
-  color: white;
-  justify-content: center;
-  align-items: center;
-  margin: 1px;
-}
+/*----- SURVEY MAIN BUBBLE ---- */
 
 .question-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /*background-color: #746dbaff;*/
   background: rgb(255,255,255);
-  background: radial-gradient(circle, rgba(255,255,255,1) -150%, rgba(116,109,186,1) 75%); 
   border-radius: 50%;
-  border-color: white;
-  width: 227px;
-  height: 227px; 
-  padding: 37px;
-  border-color: white;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.taste-select-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.taste-select {
-  background-color: transparent;
-  font-size: 20px;
-  width: 200px;
-  border-width: 10px;
-  border-color: white;
-  border-radius: 7px;
-  padding: 10px;
-  color: white;
-  font-family: Futura;
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-  
-}
-
-.name-input {
-  background-color: transparent;
-  font-size: 20px;
-  width: 160px;
-  border-width: 10px;
-  border-color: white;
-  border-radius: 7px;
-  padding: 10px;
-  color: white;
-  font-family: Futura;
-  font-weight: bold;
+  width: 235px;
   border-style: solid;
-  box-shadow: none;
+  border-width: 17px;
+  border-color: #746dbaff;
+  height: 235px; 
+  padding: 22px;
 }
 
-.radio-buttons {
-  display: flex;
-  flex-direction: row;
-}
-
-.radio-container {
-  display: flex;
-  width: 60px;
-  flex-direction: column;
-  justify-content: center;
-  margin: 5px 5px 0px 5px;
-}
-
-.radio-form {
-display: flex;
-flex-direction: row;
-}
-
-.label {
-  display: flex;
-}
+/*----- COUNTER ---- */
 
 progress {
-  accent-color: white;
+  accent-color: #746dbaff;
   height: 17px;
 }
 
@@ -167,85 +50,47 @@ progress {
 }
 
 .steps-text {
-  color: white;
-  font-family: Futura;
-}
-
-.submit-button {
-  background: white;
-  border-radius: 999px;
-  box-shadow: White 0 10px 20px -10px;
-  box-sizing: border-box;
   color: #746dbaff;
-  cursor: pointer;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 24px;
   font-family: Futura;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 3px 10px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
 }
 
-.copy-send-button {
-  background: white;
-  border-radius: 999px;
-  box-shadow: White 0 10px 20px -10px;
-  box-sizing: border-box;
-  color: #746dbaff;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 20px;
-  font-family: Futura;
-  opacity: 1;
-  outline: 0 solid transparent;
-  padding: 6px 8px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  width: fit-content;
-  word-break: break-word;
-  border: 0;
-  margin-top: 20px;
-}
+/*----- TITLES TO ALL QUESTIONS ---- */
 
-a {
-  text-decoration: none;
-}
-
-.resulttopic {
-  margin: 4px 0px 10px 2px;
+.nametext {
   display: flex;
-  font-size: 20px;
+  font-size: 21.9px;
   font-family: Futura;
-  color: white;
+  color: #746dbaff;
   justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-.greetingtext {
-    display: flex;
-    font-size: 13px;
-    margin: 5px;
-    font-family: Futura;
-    color: white;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 25px;
-}
-.survey-again-button {
-  background: white;
-  border-radius: 999px;
-  box-shadow: White 0 10px 20px -10px;
-  box-sizing: border-box;
+/*----- TEXT INPUT ---- */
+
+.name-input {
+  background-color: transparent;
+  font-size: 20px;
+  width: 160px;
+  border-width: 10px;
+  border-color: #746dbaff;
+  border-radius: 7px;
+  padding: 10px;
   color: #746dbaff;
+  font-family: Futura;
+  font-weight: bold;
+  border-style: solid;
+  box-shadow: none;
+}
+
+/*----- START SURVEY / NEXT QUESTION / SUBMIT BUTTON ---- */
+
+.submit-button {
+  background: #746dbaff;
+  border-radius: 999px;
+  box-shadow: #746dbaff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: white;
   cursor: pointer;
   font-size: 12px;
   font-weight: 700;
@@ -260,26 +105,43 @@ a {
   width: fit-content;
   word-break: break-word;
   border: 0;
-  margin-top: 5px;
 }
+
+/* ///////////////////////// MEDIA QUERIES //////////////////////////////*/
+
+/*----- IPHONE 13 (375px) ---- */
 
 @media (min-width: 374px) {
 
 body {
-  padding: 22% 5% 0% 10%;
+  padding: 22% 5% 0% 5%;
+}
+
+.question-container {
+  padding: 36px;
 }
 }
+
+/*----- TABLET ---- */
 
 @media (min-width: 668px) {
 
 body {
-  padding: 22% 5% 0% 31%;
+  padding: 22% 5% 0% 28%;
+}
+.question-container {
+  padding: 45px;
 }
 }
 
-@media (min-width: 1024px) {
+/*----- LAPTOP // LARGESCREEN ---- */
+
+@media (min-width: 1023px) {
 
 body {
   padding: 22% 5% 0% 36%;
+}
+.question-container {
+  padding: 45px;
 }
 }

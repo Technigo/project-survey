@@ -1,4 +1,9 @@
+/// ////////// IMPORTS //////////////// ///
+
 import React from 'react';
+import './Greeting.css';
+
+/// ////////// FUNCTION //////////////// ///
 
 export const Greeting = () => {
   return (

@@ -1,4 +1,9 @@
+/// ////////// IMPORTS //////////////// ///
+
 import React from 'react';
+import './Grape.css';
+
+/// ////////// FUNCTION //////////////// ///
 
 export const Grape = ({ grape, setGrape }) => {
   const handleGrapeChange = (event) => {

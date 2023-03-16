@@ -1,4 +1,9 @@
+/// ////////// IMPORTS //////////////// ///
+
 import React from 'react';
+import './Taste.css';
+
+/// ////////// FUNCTION //////////////// ///
 
 export const Taste = ({ taste, setTaste }) => {
   const handleTasteChange = (event) => {
@@ -8,7 +13,7 @@ export const Taste = ({ taste, setTaste }) => {
     // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <label className="taste-select-container">
       <h3 className="nametext">PREFERRED SCENT?</h3>
-      <select
+      <select // DROPDOWN
         aria-label="Pic your preferred scent"
         className="taste-select"
         id="tasteID"
