@@ -17,7 +17,7 @@ export const App = () => {
   const [name, setName] = useState('');
   const [type, setType] = useState('');
   const [genre, setGenre] = useState('');
-  const [score, setScore] = useState('');
+  const [score, setScore] = useState('8');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -28,7 +28,7 @@ export const App = () => {
     setName('');
     setType('');
     setGenre('');
-    setScore('');
+    setScore('8');
   };
 
   return (

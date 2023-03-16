@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Score = () => {
-  const [score, setScore] = useState('8');
+const Score = ({ score, setScore }) => {
   // console.log('score:', score); This gives a loooong line of code when using the slider, beware.
-  // useState('8'); set as default
+
   return (
     <form className="container score">
       <h2>Do you want to set a minimum IMDB score?</h2>
@@ -20,7 +19,6 @@ const Score = () => {
           max="10"
           step="0.1"
           value={score}
-          checked={score}
           onChange={(event) => setScore(event.target.value)} />
       </label>
     </form>
