@@ -5,7 +5,7 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <label htmlFor="name">
+    <label htmlFor="name" className="name-label">
       <h2>Please enter your name:</h2>
       <input
         id="name"

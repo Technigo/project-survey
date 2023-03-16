@@ -5,7 +5,7 @@ export const Time = ({ time, setTime }) => {
     setTime(event.target.value);
   }
   return (
-    <label htmlFor="time">
+    <label htmlFor="time" className="time-label">
       <p>How long have you worked here?</p>
       <select value={time} onChange={(e) => setTime(e.target.value)} required>
         <option value="0-1">0-1 years</option>

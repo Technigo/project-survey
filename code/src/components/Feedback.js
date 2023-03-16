@@ -5,14 +5,14 @@ export const Feedback = ({ feedback, setFeedback }) => {
     setFeedback(event.target.value);
   }
   return (
-    <label htmlFor="feedback">
+    <label htmlFor="feedback" className="feedback-label">
       <p>Please give some feedback to your closest supervisor:</p>
       <input
         id="feedback"
         type="text"
         value={feedback}
         onChange={handleFeedbackChange}
-        className="input-field" />
+        className="input-field-feedback" />
     </label>
   );
 }

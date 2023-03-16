@@ -5,13 +5,13 @@ export const Workplace = ({ workplace, setWorkplace }) => {
     setWorkplace(event.target.value);
   }
   return (
-    <label htmlFor="workplace">
+    <label htmlFor="workplace" className="workplace-label">
       <p>Where do you work?</p>
       <br />
       <input
         type="radio"
         name="workplace"
-        value="office"
+        value="Office"
         onChange={(e) => setWorkplace(e.target.value)}
         required />
         Office
@@ -20,7 +20,7 @@ export const Workplace = ({ workplace, setWorkplace }) => {
       <input
         type="radio"
         name="workplace"
-        value="warehouse"
+        value="Warehouse"
         onChange={(e) => setWorkplace(e.target.value)}
         required />
         Warehouse worker
@@ -29,7 +29,7 @@ export const Workplace = ({ workplace, setWorkplace }) => {
       <input
         type="radio"
         name="workplace"
-        value="shop"
+        value="Shop"
         onChange={(e) => setWorkplace(e.target.value)}
         required />
         Shop

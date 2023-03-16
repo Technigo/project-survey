@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+ 
 }
 
 code {
@@ -16,14 +18,21 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgb(83, 175, 124);
-  margin: 100px;
-  padding: 150px;
+  align-items: center;
+  min-height: 100vh;
+  padding: 50px;
+  background-image: url('../public/images/blommagul.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+ 
 }
 
 .survey-result {
   color: rgb(14, 14, 14);
   background-color: blanchedalmond;
+  padding: 20px;
 }
 
 .result-container {
@@ -34,10 +43,16 @@ code {
   color: rgb(16, 16, 16);
 }
 
-.label {
-  color: coral;
+.feedback-label, .name-label, .workplace-label, .time-label {
+  background-color: rgb(228, 208, 133);
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
   
 }
 
@@ -60,7 +75,7 @@ code {
 .next-button {
   
   color:rgb(18, 22, 25);
-  background-color: rgb(147, 185, 170);
+  background-color: rgb(211, 207, 80);
   font-size: 16px;
   cursor: pointer;
   width: 150px;
@@ -74,7 +89,23 @@ code {
   background-color: #f0f0f0;
   border: none;
   border-radius: 5px;
-  padding: 10px;
+  padding: 8px;
   font-size: 1rem;
   color: #333;
+}
+
+.input-field-feedback {
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 1rem;
+  color: #333;
+}
+
+h2 {
+  color: rgb(14, 13, 13);
+}
+
+p {
+  color: rgb(14, 14, 14);
+  font-size: 30px;
 }
