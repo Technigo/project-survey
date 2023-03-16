@@ -121,13 +121,14 @@ form {
   background-color: transparent;
   width: 160px;
   padding: 10px;
-  border: dotted 10px;
-  border-color: white;
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
   font-size: 20px;
   font-family: Futura;
   color: white;
   font-weight: bold;
+  border-width: 10px;
+  border-color: white;
+  border-radius: 7px;
 }
 
 .radio-buttons {
@@ -258,6 +259,13 @@ a {
   word-break: break-word;
   border: 0;
   margin-top: 5px;
+}
+
+@media (min-width: 374px) {
+
+body {
+  padding: 22% 5% 0% 10%;
+}
 }
 
 @media (min-width: 668px) {
