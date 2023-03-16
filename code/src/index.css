@@ -29,8 +29,9 @@ code {
   align-content: center;
   flex-wrap: wrap;
   align-items: center;
-  background-image: url(./components/assets/trunk-1615374.jpg);
+  background-image: url(./components/assets/wood-2045380_1920.jpg);
   color: white;
+  backdrop-filter: grayscale(0.3);
 }
 
 .leftboxChild {
@@ -40,6 +41,8 @@ code {
   flex-wrap: wrap;
   align-items: center;
   margin-top: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .button-container {
@@ -65,7 +68,7 @@ code {
   height: 40vh;
   display: flex;
   justify-content: center;
-  overflow: hidden;
+
 }
 
 .logo-box {
@@ -77,13 +80,89 @@ code {
 }
 
 .background {
-  
+  object-fit: cover;
+  width: 100vw;
 }
+
+.summarizebox {
+display: flex;
+flex-direction: column;
+align-content: center;
+flex-wrap: wrap;
+align-items: center;
+padding-left: 5%;
+padding-right: 5%;
+height: 60vh;
+justify-content: center;
+backdrop-filter: grayscale(0.3);
+}
+
+.summarizebox p {
+  line-height: 12px;
+  margin: 4px;
+}
+
+.summarizebox h4 {
+  line-height: 20px;
+  margin: 0;
+}
+
+.summarizebox h1 {
+  line-height: 28px;
+  margin: 10px;
+}
+
 
 @media (min-width: 600px) {
 
-  .leftbox {
-    width: 50%;
+  .leftboxChild {
+    margin-top: 12%;
   }
+
+}
+
+@media (min-width: 980px) {
+
+  .parent-container {
+    flex-direction: row-reverse;
+  }
+
+  .rightbox {
+    width: 50vw;
+    height: 100vh;
+  }
+
+  .leftbox, .summarizebox {
+    height: 100vh;
+  }
+
+  .logo-box {
+    margin-top: 10%;
+  }
+
+  .leftbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50vw;
+  }
+
+  .leftboxChild {
+    margin: 0;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .summarizebox p {
+    margin: 20px;
+    font-size: 18px;
+  }
+
+  .summarizebox h1 {
+    line-height: 28px;
+}
 
 }

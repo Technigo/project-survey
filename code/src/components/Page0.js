@@ -7,7 +7,9 @@ const question0 = ({ counter, setCounter }) => {
       <div className="leftboxChild">
         <h2>Hello dear customer!</h2>
         <p>To proceed with the reclamation survey please click below</p>
-        <NextButton counter={counter} setCounter={setCounter} />
+        <div className="button-container">
+          <NextButton counter={counter} setCounter={setCounter} />
+        </div>
       </div>
     </div>
   )

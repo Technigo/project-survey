@@ -16,4 +16,4 @@ Image sunny-gc1abeb561_1920.jpg by Quang Nguyen vinh from Pixabay https://pixaba
 
 GIF by 鹈鹂 夏 from Pixabay https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=animation&amp;utm_content=4290
 
-Image by Gustavo Belemmi from Pixabay https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1615374
+Image by Дарья Яковлева https://pixabay.com/users/daria-yakovleva-3938704/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2045380 from Pixabay

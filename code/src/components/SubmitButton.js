@@ -1,18 +1,20 @@
 import React from 'react';
 import SubmitIcon from './assets/submit.svg'
 
-const RestartButton = ({ counter, setCounter }) => {
+const SubmitButton = ({ counter, setCounter }) => {
   const Submit = () => {
     setCounter(counter + 1);
   }
   return (
-    <button
-      type="button"
-      className="Btn"
-      onClick={Submit}>
-      <img className="BtnImg" src={SubmitIcon} alt="a submit icon" />
-    </button>
+    <div>
+      <button
+        type="button"
+        className="Btn"
+        onClick={Submit}>
+        <img className="BtnImg" src={SubmitIcon} alt="a submit icon" />
+      </button>
+    </div>
   )
 }
 
-export default RestartButton;
+export default SubmitButton;

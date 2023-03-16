@@ -1,10 +1,11 @@
 import React from 'react';
+import SubmitButton from './SubmitButton';
+import PreviousButton from './PreviousButton';
 
-export const SubmitScreen = ({ name, foxtype, date, payment, yesNews, satisfaction }) => {
+const Page7 = ({ name, foxtype, date, payment, yesNews, satisfaction, counter, setCounter }) => {
   return (
     <div className="leftbox">
       <div className="summarizebox">
-        <h1>Thank valued customer, you will hear from us shortly!</h1>
         <p>Your name is:</p>
         <h4>{name}</h4>
         <p>Your purchase:</p>
@@ -17,7 +18,14 @@ export const SubmitScreen = ({ name, foxtype, date, payment, yesNews, satisfacti
         <h4>{yesNews ? 'Yes' : 'No'}</h4>
         <p>Satisfaction score:</p>
         <h4>{satisfaction}</h4>
+        <p>Are you satisfied with your answers?</p>
+        <div className="button-container">
+          <SubmitButton counter={counter} setCounter={setCounter} />
+          <PreviousButton counter={counter} setCounter={setCounter} />
+        </div>
       </div>
     </div>
   )
 }
+
+export default Page7;
