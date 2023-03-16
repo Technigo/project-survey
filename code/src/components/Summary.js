@@ -13,3 +13,4 @@ export const Summary = ({ name, oftenTravels, favoriteThing, place, dreamDestina
     </section>
   );
 }
+

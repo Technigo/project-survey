@@ -39,7 +39,6 @@ form {
   background-color: rgba(225,225,225, 0.7);
   font-size: 20px;
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -81,10 +80,4 @@ input[type=text], select {
 
 input[type=radio] {
   margin-bottom: 15px;
-}
-
-.question-number {
-  text-align: center;
-  color: blue;
-  margin-bottom: 50px;
 }

@@ -8,7 +8,7 @@ import { FifthQuestion } from 'components/FifthQuestion';
 import { Summary } from 'components/Summary';
 
 export const App = () => {
-  const [step, setStep] = useState(0);
+  const [counter, setCounter] = useState(0);
   const [name, setName] = useState('');
   const [oftenTravels, setOftenTravels] = useState('');
   const [thing, setThing] = useState('');
@@ -17,40 +17,38 @@ export const App = () => {
 
   const handleStepIncrease = (event) => {
     event.preventDefault();
-    setStep(step + 1)
+    setCounter(counter + 1)
   }
 
   return (
     <div className="outer-wrapper">
       <div className="inner-wrapper">
         <form onSubmit={handleStepIncrease}>
-          {step === 0 && (
+          {counter === 0 && (
             <Header />
           )}
-          {step === 1 && (
-            <FirstQuestion name={name} setName={setName} step={step} />
+          {counter === 1 && (
+            <FirstQuestion name={name} setName={setName} />
           )}
-          {step === 2 && (
+          {counter === 2 && (
             <SecondQuestion
               name={name}
               oftenTravels={oftenTravels}
-              setOftenTravels={setOftenTravels}
-              step={step} />
+              setOftenTravels={setOftenTravels} />
           )}
-          {step === 3 && (
-            <ThirdQuestion thing={thing} setThing={setThing} step={step} />
+          {counter === 3 && (
+            <ThirdQuestion thing={thing} setThing={setThing} />
           )}
-          {step === 4 && (
-            <FourthQuestion place={place} setPlace={setPlace} step={step} />
+          {counter === 4 && (
+            <FourthQuestion place={place} setPlace={setPlace} />
           )}
-          {step === 5 && (
+          {counter === 5 && (
             <FifthQuestion
               dreamDestination={dreamDestination}
-              setDreamDestination={setDreamDestination}
-              step={step} />
+              setDreamDestination={setDreamDestination} />
           )}
         </form>
-        {step === 6 && (
+        {counter === 6 && (
           <Summary
             name={name}
             oftenTravels={oftenTravels}

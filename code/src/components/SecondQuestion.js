@@ -1,15 +1,12 @@
 import React from 'react';
 import { Button } from 'components/button';
 
-export const SecondQuestion = ({ name, numberOfTravels, setOftenTravels, step }) => {
+export const SecondQuestion = ({ name, numberOfTravels, setOftenTravels }) => {
   const handleNumberOfTravels = (event) => {
     setOftenTravels(event.target.value)
   }
   return (
     <>
-      <div className="question-number">
-        {step <= 5 && <p>Question number: {step}/5</p>}
-      </div>
       <label htmlFor="oftenTravels">
         Alright {name}, how often do you travel in a year?
         <select

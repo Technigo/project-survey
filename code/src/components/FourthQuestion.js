@@ -6,15 +6,12 @@ const travelPlaces = [
   'summer', 'fall', 'spring'
 ]
 
-export const FourthQuestion = ({ place, setPlace, step }) => {
+export const FourthQuestion = ({ place, setPlace }) => {
   const handleTravelPlaces = (event) => {
     setPlace(event.target.value)
   }
   return (
     <>
-      <div className="question-number">
-        {step <= 5 && <p>Question number: {step}/5</p>}
-      </div>
       <div className="radioBtn">
         <p>When do you prefer to travel?</p>
         {travelPlaces.map((group) => (

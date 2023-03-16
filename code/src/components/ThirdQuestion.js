@@ -1,15 +1,12 @@
 import React from 'react';
 import { Button } from 'components/button';
 
-export const ThirdQuestion = ({ thing, setThing, step }) => {
+export const ThirdQuestion = ({ thing, setThing }) => {
   const handleFavoriteThing = (event) => {
     setThing(event.target.value)
   }
   return (
     <>
-      <div className="question-number">
-        {step <= 5 && <p>Question number: {step}/5</p>}
-      </div>
       <label htmlFor="favoriteThing">
         What is your favorite thing about traveling?
         <select
