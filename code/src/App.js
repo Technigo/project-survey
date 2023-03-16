@@ -6,37 +6,43 @@ import { Activity } from 'components/Activity';
 import { Result } from 'components/Result';
 
 export const App = () => {
-  const [step, setStep] = useState(0);
+  const [question, setQuestion] = useState(0);
   const [department, setDepartment] = useState('');
   const [climate, setClimate] = useState('');
   const [activity, setActivity] = useState('');
 
   const handleStepIncrease = () => {
-    setStep(step + 1);
+    setQuestion(question + 1);
   }
 
   return (
     <>
-      {step === 0 && (
-        <LandingPage step={step} setStep={setStep} />
+      {question === 0 && (
+        <>
+          <LandingPage question={question} setQuestion={setQuestion} />
+          <button type="button" className="button-start" onClick={handleStepIncrease}>Start</button>
+        </>
       )}
-      {step === 1 && (
+      {question === 1 && (
         <Department department={department} setDepartment={setDepartment} />
       )}
-      {step === 2 && (
+      {question === 2 && (
         <Climate climate={climate} setClimate={setClimate} />
       )}
-      {step === 3 && (
-        <Activity activity={activity} setActivity={setActivity} />
+      {question === 3 && (
+        <>
+          <Activity activity={activity} setActivity={setActivity} />
+          <button type="button" className="button-submit" onClick={handleStepIncrease}>Submit</button>
+        </>
       )}
-      {step >= 4 && (
+      {question >= 4 && (
         <Result department={department} climate={climate} activity={activity} />
       )}
 
-      {step < 4 && (
+      {question >= 1 && question < 3 && (
         <>
-          <button type="button" onClick={handleStepIncrease}>Next step</button>
-          <p>Question {step}/4</p>
+          <button type="button" className="button-next" onClick={handleStepIncrease}>Next question</button>
+          <p>Question {question}/3</p>
         </>
       )}
     </>
