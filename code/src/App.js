@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import Startpage from './components/Startpage';
 import Summary from './components/Summary';
 
-const ageGroups = ['18-25', '25-40', '40-65', '65+']; /* Input for radio-buttons */
-
 const Buttons = ({ handleNextClick, handleBackClick }) => {
   return (
     <div className="btn">
@@ -13,22 +11,24 @@ const Buttons = ({ handleNextClick, handleBackClick }) => {
   )
 };
 
+const ageGroups = ['18-25', '25-40', '40-65', '65+']; /* Input for radio-buttons */
+
 export const App = () => {
   const [name, setName] = useState(''); /* Handles name input */
   const [ageGroup, setAgeGroup] = useState(''); /* Handles age input */
   const [location, setLocation] = useState(''); /* Handles location input */
   const [greenArea, setGreenArea] = useState(''); /* Handles grade/range input */
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState(''); /* Handles feedback input */
   const [counter, setCounter] = useState(0); /* Handles survey moving forward */
 
   const HandleNextClick = () => { setCounter(counter + 1); } /* Handles next button */
-
   const HandleBackClick = () => { setCounter(counter - 1); } /* Handles back button */
 
   return (
     <main className="surveyWrapper">
       {counter === 0 && (
-        <Startpage startCount={() => setCounter(1)} /> /* Shows startpage of Survey */
+        /* Shows startpage of Survey */
+        <Startpage startCount={() => setCounter(1)} />
       )}
       <form onSubmit={(event) => event.preventDefault()} className="answer">
         {counter === 1 && (
@@ -93,9 +93,10 @@ export const App = () => {
         )}
       </form>
       {counter === 6 && (
+        /* Shows summary of Survey */
         <>
           <div className="answer">
-            <Summary /* Shows summary of Survey */
+            <Summary
               nameInput={name}
               ageInput={ageGroup}
               locationInput={location}
@@ -106,6 +107,7 @@ export const App = () => {
         </>
       )}
       {counter === 7 && (
+        /* Shows last page of Survey */
         <>
           <div className="answer">
             <h2>Thank you!</h2>

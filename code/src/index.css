@@ -18,6 +18,24 @@ code {
     monospace;
 }
 
+/* STARTPAGE COMPONENT */
+.startpage {
+  color: white;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  text-transform: uppercase;
+}
+
+.intro {
+  width: 90%;
+  margin: 15px auto;
+  font-size: 16px;
+}
+
+/* APP COMPONENT - CONTAINER */
 .surveyWrapper {
   margin: 20% 5px;
   border-radius: 60px;
@@ -32,31 +50,7 @@ code {
   justify-content: center;
 }
 
-.startpage {
-  color: white;
-  text-align: center;
-}
-
-h1 {
-  margin: 0 0 30px 0;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-size: 24px;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-p {
-  font-size: 16px;
-}
-
-.intro {
-  width: 90%;
-  margin: 15px auto;
-}
-
+/* APP COMPONENT - FORM */
 .answer {
   color: white;
   text-align: center;
@@ -103,6 +97,7 @@ input[type=range] {
   width: 50%;
 }
 
+/* BUTTONS */
 button {
   border-radius: 25px;
   border: 2px solid white;
@@ -120,21 +115,60 @@ button:hover {
   color: black;
 }
 
+/* SUMMARY COMPONENT */
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0;
+}
+
 li {
   text-align: center;
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 8px;
 }
 
 .submitAnswer {
   margin: 0;
+  font-size: 16px;
 }
 
-.summary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* RESPONSIVE DESIGN FOR TABLET AND DESKTOP */
+@media (min-width: 667px) {
+  p {
+    font-size: 20px;
+  }
+  
+  .intro {
+    width: 80%;
+  }
+
+  label, .label {
+    font-size: 24px;
+  }
+
+  .answer {
+    width: 70%;
+  }
+
+  input[type=text], select {
+    width: 35%;
+  }
+
+  button {
+    font-size: 16px;
+  }
+
+  .ageGroup {
+    margin-left: 43%;
+  }
 }
 
 /* RESPONSIVE DESIGN FOR TABLET */
@@ -144,30 +178,6 @@ li {
     height: 50vh;
     width: 60vh;
   }
-
-  p {
-    font-size: 20px;
-  }
-  
-  .intro {
-    width: 80%;
-  }
-
-  label, .label {
-    font-size: 24px;
-  }
-
-  input[type=text], select {
-    width: 35%;
-  }
-
-  button {
-    font-size: 16px;
-  }
-
-  .ageGroup {
-    margin-left: 43%;
-  }
 }
 
 /* RESPONSIVE DESIGN FOR DESKTOP */
@@ -175,29 +185,5 @@ li {
   .surveyWrapper {
     height: 60vh;
     width: 70vh;
-  }
-
-  p {
-    font-size: 20px;
-  }
-  
-  .intro {
-    width: 80%;
-  }
-
-  label, .label {
-    font-size: 24px;
-  }
-
-  input[type=text], select {
-    width: 35%;
-  }
-
-  button {
-    font-size: 16px;
-  }
-
-  .ageGroup {
-    margin-left: 43%;
   }
 }

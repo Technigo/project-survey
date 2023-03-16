@@ -6,7 +6,7 @@ const Startpage = ({ startCount }) => {
       <h1>Keep it green</h1>
       <p className="intro">
         This survey is brought to you by Company X
-        and by answering you are helping us keep Stockholm green.
+        and by answering this you are helping us keep Stockholm green.
       </p>
       <p className="intro">Click the button below to start.</p>
       <button
