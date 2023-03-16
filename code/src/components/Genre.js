@@ -12,15 +12,15 @@ const Genre = ({ genre, setGenre, step }) => {
           onChange={(event) => setGenre(event.target.value)}
           value={genre}>
           <option value="" disabled>Select type:</option>
-          <option value="thriller">Thriller</option>
-          <option value="drama">Drama</option>
-          <option value="comedy">Comedy</option>
-          <option value="mystery">Mystery</option>
-          <option value="crime">Crime</option>
-          <option value="adventure">Adventure</option>
-          <option value="sci-fi">Sci-fi</option>
-          <option value="horror">Horror</option>
-          <option value="romance">Romance</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Drama">Drama</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Mystery">Mystery</option>
+          <option value="Crime">Crime</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Sci-fi">Sci-fi</option>
+          <option value="Horror">Horror</option>
+          <option value="Romance">Romance</option>
         </select>
       </form>
     </div>

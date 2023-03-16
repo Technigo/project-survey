@@ -10,7 +10,6 @@ import Genre from './components/Genre';
 import Score from './components/Score';
 import Summary from './components/Summary';
 import Result from './components/Result';
-// import Finished from './components/Finished';
 
 export const App = () => {
   const [step, setStep] = useState(0);

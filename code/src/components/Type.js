@@ -1,5 +1,72 @@
 import React from 'react';
 
+const tvtypes = ['Series', 'Mini-series', 'Documentary', 'Anthology series', 'Surprise me!'];
+
+const Type = ({ type, setType, step }) => {
+  return (
+    <div className="container type">
+      <h2>Question {step}</h2>
+      <p>What type of series are you in the mood for?</p>
+      <form className="form type">
+        <p>Current state: {type}</p>
+        {tvtypes.map((item) => (
+          <label key={item} htmlFor="radiotype">
+            <div
+              className="radiobtn"
+              role="button"
+              onClick={(event) => setType(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                  setType(item);
+                }
+              }}
+              tabIndex={0}>
+              <input
+                type="radio"
+                id="radiotype"
+                className="radiotypebtn"
+                value={item}
+                checked={type === item} />
+              <span>{item}</span>
+            </div>
+          </label>
+        ))}
+      </form>
+    </div>
+  );
+};
+
+export default Type;
+
+/*
+const Type = ({ type, setType, step }) => {
+
+  return (
+    <div className="container type">
+      <h2>Question {step}</h2>
+      <p>What type of series are you in the mood for?</p>
+      <p>Current state: {type}</p>
+      <form>
+        Type:
+        {tvtypes.map((group) => (
+          <label key={group}>
+            <input
+              type="radio"
+              value={group}
+              onChange={(event) => setAgeGroup(event.target.value)}
+              checked={ageGroup === group}
+            />
+            {group}
+          </label>
+        ))}
+      </form>
+    </div>
+  );
+};
+
+ */
+
+/*
 const Type = ({ type, setType, step }) => {
   // console.log('{ type, setType, step };', { type, setType, step })
   return (
@@ -23,3 +90,4 @@ const Type = ({ type, setType, step }) => {
 };
 
 export default Type;
+ */
