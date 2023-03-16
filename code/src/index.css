@@ -52,3 +52,23 @@ button {
     color: #fff;
     box-shadow: inset -10em 0 0 0 rgba(253, 136, 136, 1);
   }
+
+  @media only screen and (min-width: 768px) {
+  
+    button {
+      width: 200px;
+      font-size: 1em;
+      margin-bottom: 20%;
+    }
+
+    button:hover, button:focus {
+      color: #fff;
+      box-shadow: inset 16em 0 0 0 rgba(253, 136, 136, 1);
+    } 
+  
+     #previous:hover, #previous:focus {
+      color: #fff;
+      box-shadow: inset -16em 0 0 0 rgba(253, 136, 136, 1);
+    }
+  
+  }

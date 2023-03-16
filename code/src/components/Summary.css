@@ -16,7 +16,7 @@
 .slider-title {
     font-size: 30px;
     font-weight: 200;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     text-align: center;
 }
 
@@ -26,7 +26,7 @@
     width: 100%;
     position:relative;
     accent-color: #000000;
-    margin: 20px;
+    margin-top: 20%;
   }
 
   .buble {
@@ -50,4 +50,16 @@
     padding: 0 5px;
 }
 
+
+@media only screen and (min-width: 768px) {
+
+  .summary {
+    width: 60%;
+  }
+    
+  .slider-parent {
+    width: 50%;
+    margin-top: 10%;
+  }
+}
 
