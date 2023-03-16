@@ -3,12 +3,15 @@ import data from '../data';
 import { NextButton } from './NextButton';
 
 export const Results = (props) => {
+  console.log(data)
+  console.log(data.listings.filter((listing) => listing.rooms === props.answers.rooms))
   return (
-    <form>
-      <div className="results-container">
-        <h1>{props.resultsTitle}</h1>
-        {
-          data.listings.map((listing) => {
+    <div className="results-container">
+      <h1>{props.resultsTitle}</h1>
+      {
+        data.listings.filter((listing) => listing.rooms === parseInt(props.answers.rooms, 10))
+          .map((listing) => {
+            console.log(listing)
             return (
               <div
                 className="result-card"
@@ -17,7 +20,7 @@ export const Results = (props) => {
                 role="link"
                 tabIndex={0}>
                 <img
-                  className="listing-image"
+                  className="result-image"
                   src={listing.image}
                   alt="property listed in Stockholm" />
                 <p className="listing-info">{listing.listPrice} kr </p>
@@ -26,11 +29,10 @@ export const Results = (props) => {
               </div>
             );
           })
-        }
-        <NextButton
-          onNext={props.onNext}
-          buttonLabel={props.restartButtonLabel} />
-      </div>
-    </form>
+      }
+      <NextButton
+        onNext={props.onNext}
+        buttonLabel={props.restartButtonLabel} />
+    </div>
   );
 };

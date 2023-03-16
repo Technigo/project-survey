@@ -3,16 +3,21 @@ import { NextButton } from './NextButton';
 
 export const TextQuestion = (props) => {
   return (
-    <form className="textQuestion-form">
+    <div className="textQuestion-container">
       <p>{props.questionTitle}</p>
       <div>
-        <label htmlFor={props.questionId}>{props.label}</label>
+        <label
+          ariaLabel={props.label}
+          htmlFor={props.questionId}>{props.label}
+        </label>
         <input
+          required
+          title={props.label}
           type="text"
           id={props.questionId}
           onChange={(event) => props.onValueUpdate(event.target.value)} />
         <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
       </div>
-    </form>
+    </div>
   );
 }

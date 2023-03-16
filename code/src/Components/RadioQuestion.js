@@ -3,10 +3,10 @@ import { NextButton } from './NextButton';
 
 export const RadioQuestion = (props) => {
   return (
-    <form className="radio-form">
+    <div className="radioQuestion-container">
       <p>{props.questionGreeting}</p>
       <p>{props.questionTitle}</p>
-      {props.label.map((label) => {
+      {props.labels.map((label) => {
         return (
           <div>
             <label htmlFor={props.questionId}>{label}</label>
@@ -14,12 +14,13 @@ export const RadioQuestion = (props) => {
               type="radio"
               id={props.questionId}
               name={props.questionId}
+              value={label}
               onChange={(event) => props.onValueUpdate(event.target.value)} />
           </div>
         );
       })}
       <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
-    </form>
+    </div>
   );
 }
 

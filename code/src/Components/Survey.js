@@ -49,7 +49,8 @@ export const Survey = () => {
           <RadioQuestion
             questionGreeting={`Hello ${answers.firstName},`}
             questionTitle="What type of property are you looking for?"
-            label={['Villa', 'Apartment', 'Townhouse']}
+            labels={['Villa', 'Apartment', 'Townhouse']}
+            radioImage={[""]}
             questionId="typeOfHome"
             onValueUpdate={(value) => {
               setAnswers({
@@ -58,7 +59,7 @@ export const Survey = () => {
               });
             }}
             onNext={() => {
-              (answers.typOfHome === 'Apartment'
+              (answers.typeOfHome === 'Apartment'
                 ? setQuestionStep(questionStep + 1) : setQuestionStep(questionStep + 2))
             }}
             buttonLabel="Continue" />
@@ -124,6 +125,7 @@ export const Survey = () => {
         {questionStep === 7 && (
           <Results
             resultsTitle="Here are your results:"
+            answers={answers}
             onNext={() => {
               setQuestionStep(1);
             }}
@@ -133,7 +135,7 @@ export const Survey = () => {
     );
   }
   const progressBar = () => {
-    const percentage = (questionStep / 5) * 100
+    const percentage = Math.floor((questionStep / 6) * 100)
     return (
       <div className="progres-bar-container">
         <ProgressBar now={percentage} label={`${percentage}% completed`} />
@@ -143,7 +145,7 @@ export const Survey = () => {
   return (
     <div>
       {printQuestions()}
-      {progressBar()}
+      {questionStep > 0 && questionStep < 7 ? progressBar() : ''}
     </div>
   )
 };

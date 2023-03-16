@@ -3,7 +3,7 @@ import { NextButton } from './NextButton';
 
 export const RangeSliderQuestion = (props) => {
   return (
-    <form className="select-form">
+    <div className="rangeQuestion-container">
       <p>{props.questionTitle}</p>
       <div>
         <label htmlFor={props.questionId}>{props.label}</label>
@@ -16,6 +16,6 @@ export const RangeSliderQuestion = (props) => {
           onChange={(event) => props.onValueUpdate(event.target.value)} />
       </div>
       <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
-    </form>
+    </div>
   )
 }
