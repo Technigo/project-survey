@@ -24,6 +24,7 @@ export const App = () => {
 
   return (
     <>
+      <div>Question number: {question}/3</div>
       {question === 1 && (
         <Name name={name} setName={setName} />
       )}
@@ -37,11 +38,12 @@ export const App = () => {
         <Result name={name} love={love} favorite={favorite} handleRestartSurvey={handleRestartSurvey} />
       )}
 
+      {question > 1 && (
+        <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
+      )}
+
       {question < 4 && (
-        <>
-          <p>Current question: {question}</p>
-          <button type="button" onClick={handleQuestionIncrease}>Next question</button>
-        </>
+        <button type="button" onClick={handleQuestionIncrease}>Next question</button>
       )}
     </>
   );
@@ -49,3 +51,4 @@ export const App = () => {
 
 // There should be a submit button. When pressed your app
 // should hide the input form and show a summary of the user's submissions.
+

@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-const LoveCats = ({ love, setLove }) => {
+const Love = ({ love, setLove }) => {
   const handleLoveChange = (event) => {
     setLove(event.target.value)
   }
@@ -44,4 +44,4 @@ const LoveCats = ({ love, setLove }) => {
     </div>
   );
 }
-export default LoveCats;
+export default Love;
