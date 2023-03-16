@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
+    margin-top: 5%;
 }
 
 .dropdown form {
@@ -18,11 +19,8 @@
     outline: none;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    font-size: 60px;
-    width: 500px;
+    font-size: 1.5em;
+    width: 100%;
     padding: 0.5em 1em;
-}
-
-select {
     background-color: antiquewhite;
 }

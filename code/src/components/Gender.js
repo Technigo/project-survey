@@ -1,5 +1,6 @@
 import React from 'react';
 import './Dropdown.css';
+import './Food.css';
 
 export const Gender = ({ gender, setGender }) => {
   const handleGender = (event) => {
@@ -7,14 +8,15 @@ export const Gender = ({ gender, setGender }) => {
   }
   return (
     <div className="dropdown">
+      <span className="gender-title">Gender</span>
       <form>
         <select
           onChange={handleGender}
           value={gender}>
-          <option value=" ">Gender:</option>
-          <option value="woman">Woman</option>
-          <option value="man">Man</option>
-          <option value="other">Other</option>
+          <option value=" " disabled id="option">Gender:</option>
+          <option value="woman" id="option">Woman</option>
+          <option value="man" id="option">Man</option>
+          <option value="other" id="option">Other</option>
         </select>
       </form>
     </div>

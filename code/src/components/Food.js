@@ -1,5 +1,6 @@
 import React from 'react';
 import './Dropdown.css';
+import './Food.css';
 
 export const Food = ({ food, setFood }) => {
   const handleFood = (event) => {
@@ -7,12 +8,12 @@ export const Food = ({ food, setFood }) => {
   }
   return (
     <div className="dropdown">
+      <span className="food-title">What is your favourite food?</span>
       <form>
-        What is your favourite food?
         <select
           onChange={handleFood}
           value={food}>
-          <option value=" ">Food:</option>
+          <option value=" " disabled>Food:</option>
           <option value="sushi">Sushi</option>
           <option value="pizza">Pizza</option>
           <option value="pasta">Pasta</option>

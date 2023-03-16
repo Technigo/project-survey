@@ -1,3 +1,4 @@
+/* eslint-disable no-sequences */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
@@ -30,13 +31,19 @@ export const App = () => {
     setStep(step && 1);
   }
 
+  const handleKeyDown = (event) => {
+    if (event.keyCode === 13) {
+      handleStepIncrease()
+    }
+  }
+
   return (
     <div className="content-container">
-      {step === 1 && (
-        <div className="welcome-container">
+      <div className="welcome-container">
+        {step === 1 && (
           <Welcome welcome={welcome} setWelcome={setWelcome} />
-        </div>
-      )}
+        )}
+      </div>
       {step === 2 && (
         <div className="name-container">
           <Name name={name} setName={setName} />
@@ -68,7 +75,7 @@ export const App = () => {
           <button type="button" id="next" onClick={handleStepIncrease}>Next</button>
         )}
         {step === 6 && (
-          <button type="button" id="submit" onClick={handleStepIncrease}>Submit</button>
+          <button type="submit" id="submit" onClick={handleStepIncrease}>Submit</button>
         )}
         {step === 7 && (
           <button type="button" id="start over" onClick={startOver}>Start over</button>

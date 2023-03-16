@@ -13,6 +13,7 @@ export const Times = ({ times, setTimes, food }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="every day"
             onChange={handleTime}
             checked={times === 'every day'} />
@@ -21,6 +22,7 @@ export const Times = ({ times, setTimes, food }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="every week"
             onChange={handleTime}
             checked={times === 'every week'} />
@@ -29,6 +31,7 @@ export const Times = ({ times, setTimes, food }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="every other week"
             onChange={handleTime}
             checked={times === 'every other week'} />
@@ -37,6 +40,7 @@ export const Times = ({ times, setTimes, food }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="once a month"
             onChange={handleTime}
             checked={times === 'once a month'} />

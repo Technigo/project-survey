@@ -13,6 +13,7 @@ export const Age = ({ age, setAge }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="10-19"
             onChange={handleAge}
             checked={age === '10-19'} />
@@ -21,6 +22,7 @@ export const Age = ({ age, setAge }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="20-29"
             onChange={handleAge}
             checked={age === '20-29'} />
@@ -29,6 +31,7 @@ export const Age = ({ age, setAge }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="30-39"
             onChange={handleAge}
             checked={age === '30-39'} />
@@ -37,6 +40,7 @@ export const Age = ({ age, setAge }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="40-49"
             onChange={handleAge}
             checked={age === '40-49'} />
@@ -45,6 +49,7 @@ export const Age = ({ age, setAge }) => {
         <label>
           <input
             type="radio"
+            id="radiobutton"
             value="50+"
             onChange={handleAge}
             checked={age === '50+'} />

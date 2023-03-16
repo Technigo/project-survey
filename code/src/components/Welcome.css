@@ -2,8 +2,7 @@
     display: grid;
     grid-template-columns: repeat (5, 1fr);
 }
-
-h1, span {
+    .welcome h1, .welcome span {
     grid-column: 1 / span 5;
     justify-self: center;
     text-align: center;

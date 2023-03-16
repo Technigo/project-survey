@@ -2,10 +2,11 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: auto;
+    margin-top: 5%;
 }
 
 
-input {
+#name {
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;
@@ -14,8 +15,8 @@ input {
     width: 100%;
     height: auto;
     display: block;
-    grid-column: 2 / span 3;
+    grid-column: 1 / span 5;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    font-size: 60px;
+    font-size: 2em;
 }
