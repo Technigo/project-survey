@@ -7,7 +7,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 22% 5% 0% 3%;
-  background-image: url("./Components/wine-1.png");
+  background-image: url("./Components/pictures/wine-1.png");
 }
 
 code {

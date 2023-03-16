@@ -8,11 +8,13 @@ export const Grape = ({ grape, setGrape }) => {
     <>
       <h2 className="nametext">YUMMYEST GRAPE?</h2>
       <input
+        id="yummyest-grape"
         className="name-input"
         type="text"
         value={grape}
         onChange={handleGrapeChange}
-        required />
+        required
+        aria-label="Enter your yummyest grape" />
     </>
   );
 }

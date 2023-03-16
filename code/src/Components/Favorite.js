@@ -8,11 +8,13 @@ export const Favorite = ({ favorite, setFavorite }) => {
     <form onSubmit={(event) => event.preventDefault()}>
       <h1 className="nametext">FAVORITE WINE?</h1>
       <input
+        id="favorite-wine"
         className="name-input"
         type="text"
         value={favorite}
         onChange={handleFavoriteChange}
-        required />
+        required
+        aria-label="Enter your favorite wine" />
     </form>
   );
 };

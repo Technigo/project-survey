@@ -4,12 +4,12 @@ export const Result = ({ favorite, grape, food, group, taste }) => {
   return (
     <>
       <h3 className="resulttopic">SUMMERY:</h3>
-      <h3 className="resulttext">Favorite wine is {favorite}</h3>
-      <h3 className="resulttext">Yummyest grape is {grape}</h3>
-      <h3 className="resulttext">I want to spend {group}</h3>
-      <h3 className="resulttext">{food} is on my plate</h3>
-      <h3 className="resulttext">My preferred scent is {taste}</h3>
-      <button className="copy-send-button" type="submit" onClick={() => navigator.clipboard.writeText(favorite, grape, group, food, taste)}>
+      <p className="resulttext" aria-label="Favorite wine">Favorite wine is {favorite}</p>
+      <p className="resulttext" aria-label="Yummiest Grape">Yummyest grape is {grape}</p>
+      <p className="resulttext" aria-label="Amount want to spend">I want to spend {group}</p>
+      <p className="resulttext" aria-label="Whats on your plate">{food} is on my plate</p>
+      <p className="resulttext" aria-label="My preferred scent is">My preferred scent is {taste}</p>
+      <button className="copy-send-button" title="Copy wine preferences to clipboard and send via email" type="submit" onClick={() => navigator.clipboard.writeText(favorite, grape, group, food, taste)}>
         <a href="mailto:hello@winetwothree.com">COPY & SEND!</a>
       </button>
     </>

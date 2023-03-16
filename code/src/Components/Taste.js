@@ -9,6 +9,7 @@ export const Taste = ({ taste, setTaste }) => {
     <label className="taste-select-container">
       <h3 className="nametext">PREFERRED SCENT?</h3>
       <select
+        aria-label="Pic your preferred scent"
         className="taste-select"
         id="tasteID"
         value={taste}

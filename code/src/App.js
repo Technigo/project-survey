@@ -7,18 +7,20 @@ import { Food } from './Components/Food';
 import { Result } from './Components/Result';
 import { Price } from './Components/Price';
 import { Taste } from './Components/Taste';
+import { Greeting } from './Components/Greeting';
 
 /// ////////// MAIN APP //////////////// ///
 
 export const App = () => {
   // --- Here we set the startvalues to the useState //
   const stepsTotalCount = 5
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [favorite, setFavorite] = useState('');
   const [grape, setGrape] = useState('');
   const [priceGroup, setPriceGroup] = useState('0-18');
   const [food, setFood] = useState('');
   const [taste, setTaste] = useState('');
+  const [greeting] = useState('');
 
   // --- This is the function that increases nr off steps/questions //
   function handleStepIncrease() {
@@ -28,6 +30,10 @@ export const App = () => {
   // --- Here is the start of the questions //
   return (
     <div className="question-container">
+      {/* GREETING */}
+      {step < 1 && (
+        <Greeting greeting={greeting} />
+      )}
       {/* FAVORITE WINE - TEXT INPUT */}
       {step === 1 && (
         <Favorite favorite={favorite} setFavorite={setFavorite} />
@@ -52,7 +58,7 @@ export const App = () => {
       {step >= 6 && (
         <Result favorite={favorite} grape={grape} group={priceGroup} food={food} taste={taste} />
       )}
-      {step < 6 && (
+      {step > 0 && step < 6 && (
         <>
           {/* This is where the steps are counted and displayed */}
           <p className="steps-text">
@@ -63,12 +69,22 @@ export const App = () => {
               <b>{step}</b> / {stepsTotalCount}
             </span>
           </p>
+        </>
+      )}
+      {step < 6 && (
+        <>
           {/* The button says "next question" until the total amount of steps is more than 5 */}
-          <button className="submit-button" type="button" onClick={handleStepIncrease}>
-            {step < stepsTotalCount ? 'NEXT QUESTION' : 'SUBMIT'}
+          <button
+            className="submit-button"
+            type="button"
+            onClick={handleStepIncrease}>
+            {step === 0 && 'START SURVEY'}
+            {step > 0 && step < stepsTotalCount && 'NEXT QUESTION'}
+            {step >= stepsTotalCount && 'SUBMIT'}
           </button>
         </>
       )}
     </div>
   );
 }
+

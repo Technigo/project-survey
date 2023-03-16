@@ -9,11 +9,13 @@ export const Food = ({ food, setFood }) => {
     <form>
       <h2 className="nametext">WHATS ON THE PLATE?</h2>
       <input
+        id="whats-on-the-plate"
         className="name-input"
         type="text"
         value={food}
         onChange={handleDrinkChange}
-        required />
+        required
+        aria-label="Enter what your going to eat" />
     </form>
   );
 }
