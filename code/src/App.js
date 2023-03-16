@@ -70,9 +70,6 @@ export const App = () => {
           setRate={setRate}
           step={step} />
       )}
-      {step < 7 && (
-        <button type="button" onClick={handleStepIncrease}>Next question</button>
-      )}
       {step === 7 && (
         <ThankYou
           name={name}
@@ -82,6 +79,9 @@ export const App = () => {
           purchase={purchase}
           rate={rate}
           handleReset={handleReset} />
+      )}
+      {step < 7 && (
+        <button type="button" onClick={handleStepIncrease}>Next question</button>
       )}
     </>
   );
