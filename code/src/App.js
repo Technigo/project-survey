@@ -6,54 +6,57 @@ import { Activity } from 'components/Activity';
 import { Result } from 'components/Result';
 
 export const App = () => {
-  const [question, setQuestion] = useState(0);
+  const [step, setStep] = useState(0);
   const [department, setDepartment] = useState('');
   const [climate, setClimate] = useState('');
   const [activity, setActivity] = useState('');
 
-  const handleQuestionIncrease = () => {
-    setQuestion(question + 1);
+  const handleStepIncrease = () => {
+    setStep(step + 1);
   }
 
-  const handleQuestionDecrease = () => {
-    setQuestion(question - 1);
+  const handleStepDecrease = () => {
+    setStep(step - 1);
   }
 
   return (
     <>
-      {question === 0 && (
+      {step === 0 && (
         <LandingPage
-          handleQuestionIncrease={handleQuestionIncrease} />
+          handleStepIncrease={handleStepIncrease} />
       )}
-      {question === 1 && (
+      {step === 1 && (
         <Department
           department={department}
           setDepartment={setDepartment}
-          handlePreviousQuestion={handleQuestionDecrease} />
+          handleStepDecrease={handleStepDecrease} />
       )}
-      {question === 2 && (
+      {step === 2 && (
         <Climate
           climate={climate}
           setClimate={setClimate} />
       )}
-      {question === 3 && (
+      {step === 3 && (
         <Activity
           activity={activity}
           setActivity={setActivity}
-          handleQuestionIncrease={handleQuestionIncrease} />
+          handleStepIncrease={handleStepIncrease} />
       )}
-      {question >= 4 && (
+      {step >= 4 && (
         <Result
           department={department}
           climate={climate}
           activity={activity} />
       )}
-      {question >= 1 && question < 3 && (
+      {step >= 1 && step < 3 && (
         <>
-          <button type="button" className="buttonNext" onClick={handleQuestionIncrease}>Next question</button>
-          <button type="button" className="buttonPrevious" onClick={handleQuestionDecrease}>Previous question</button>
-
-          <p>Question {question}/3</p>
+          <div className="buttonContainer">
+            <button type="button" className="buttonBack" onClick={handleStepDecrease}>Back</button>
+            <button type="button" className="buttonNext" onClick={handleStepIncrease}>Next</button>
+          </div>
+          <div className="step">
+            <p>Step {step}/3</p>
+          </div>
         </>
       )}
     </>

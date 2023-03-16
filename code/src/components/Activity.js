@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Activity = ({ activity, setActivity, handleQuestionIncrease }) => {
+export const Activity = ({ activity, setActivity, handleStepIncrease }) => {
   return (
     <div className="questionWrapper">
       <h3>Which activity sounds the most fun?</h3>
@@ -13,7 +13,7 @@ export const Activity = ({ activity, setActivity, handleQuestionIncrease }) => {
         <option value="a painting class">a painting class</option>
         <option value="a wine tasting tour">a wine tasting tour</option>
       </select>
-      <button type="button" className="buttonSubmit" onClick={handleQuestionIncrease}>Submit</button>
+      <button type="button" className="buttonSubmit" onClick={handleStepIncrease}>Submit</button>
 
     </div>
   );

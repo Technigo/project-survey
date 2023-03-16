@@ -29,9 +29,13 @@ body {
 
 background-image: url(/public/assets/background-image.jpg);
 background-size: cover;
+background-repeat: no repeat;
 display: absolute;
 font-family: 'Sono', sans-serif;
+height: 500px;
+width: 100%;
 }
+/* FIX THE IMAGE IN RESPONSIVE */
 
 .landingPageText {
   display: flex;
@@ -90,12 +94,20 @@ h3 {
   transition: 0.3s;
 }
 
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  margin-top: 30px;
+  gap: 60px;
+}
+
 .buttonNext {
   display: flex;
   justify-content: center;
   color: green;
   height: 40px;
-  width: 150px;
+  width: 80px;
   /* margin: 40px; */
   border-radius: 10px;
   border: none;
@@ -111,12 +123,12 @@ h3 {
   transition: 0.3s;
 }
 
-.buttonPrevious {
+.buttonBack {
   display: flex;
   justify-content: center;
   color: green;
   height: 40px;
-  width: 180px;
+  width: 80px;
   /* margin: 40px; */
   border-radius: 10px;
   border: none;
@@ -127,7 +139,7 @@ h3 {
   font-size: 18px;
 }
 
-.buttonPrevious:hover {
+.buttonBack:hover {
   background-color: #66D9CF;
   transition: 0.3s;
 }
@@ -181,4 +193,11 @@ h6 {
   font-size: 15px;
   line-height: 100px;
   color: white;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
 }
