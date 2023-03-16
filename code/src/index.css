@@ -38,21 +38,27 @@ code {
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
 }
 
+.container-start {
+  color: #0a3367;
+  font-size: 20px;
+  margin-bottom: 150px;
+}
+
 .superpower-selection {
   display: flex;
   flex-direction: column;
 }
 
 .question {
-   font-size: 27px;
-   display: flex;
-   text-align: left;
-   padding: 20px;
-   margin: 20px;
-  }
+  font-size: 27px;
+  display: flex;
+  text-align: left;
+  padding: 20px;
+  margin: 20px;
+}
 
 .results {
-color: black;
+ color: black;
  position: absolute;
  margin-top: 20px;
  width: fit-content;
@@ -61,7 +67,6 @@ color: black;
  flex-direction: column;
  padding: 15px;
 }
-
 
 .btn-container {
   border-radius: 4px;
@@ -125,6 +130,10 @@ input[type=radio] {
 
   .superpower-selection {
     display: flex;
+  }
+  .results {
+    display: flex;
+    flex-direction: column;
   }
 }
 

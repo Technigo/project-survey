@@ -5,7 +5,8 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <div>
+    // <div>
+    <div className="container-start">
       <h2>If you could make a wish..</h2>
       <label htmlFor="name">
         <p>But first, tell me your name?</p>
