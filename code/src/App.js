@@ -26,7 +26,8 @@ export const App = () => {
   if (submitted) {
     return (
       <div className="survey-result">
-        <h2>Summary</h2>
+        <h2>Thank you for filling in this form!</h2>
+        <h3>Summary:</h3>
         <p>Name: {name}</p>
         <p>Workplace: {workplace}</p>
         <p>Time at workplace: {time}</p>
