@@ -52,7 +52,7 @@ code {
 
 .Btn {
   width: fit-content;
-  max-width: 70px;
+  width: 70px;
   height: auto;
   margin: 10px;
   background-color: rgb(243, 176, 88);
@@ -90,11 +90,8 @@ flex-direction: column;
 align-content: center;
 flex-wrap: wrap;
 align-items: center;
-padding-left: 5%;
-padding-right: 5%;
 height: 60vh;
 justify-content: center;
-backdrop-filter: grayscale(0.3);
 }
 
 .summarizebox p {
@@ -108,8 +105,10 @@ backdrop-filter: grayscale(0.3);
 }
 
 .summarizebox h1 {
+  font-size: 28px;
   line-height: 28px;
   margin: 10px;
+  max-width: 450px;
 }
 
 
@@ -158,11 +157,14 @@ backdrop-filter: grayscale(0.3);
 
   .summarizebox p {
     margin: 20px;
-    font-size: 18px;
+    font-size: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 
   .summarizebox h1 {
-    line-height: 28px;
-}
+    line-height: 38px;
+    font-size: 38px;
+  }
 
 }

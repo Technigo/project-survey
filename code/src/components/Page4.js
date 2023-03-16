@@ -10,29 +10,26 @@ const Page4 = ({ counter, setCounter, payment, setPayment }) => {
     'monetary reimbursement'
   ]
   return (
-    <div className="leftbox">
-      <div className="leftboxChild">
-        <p>In what manner would you like to be reimbursed?</p>
-        <form>
+    <div className="leftboxChild">
+      <p>In what manner would you like to be reimbursed?</p>
+      <form>
               Choice of reimbursement:
-          {checkboxType.map((choice) => (
-            <label key={choice}>
-              <input
-                type="radio"
-                value={choice}
-                onChange={(event) => setPayment(event.target.value)}
-                checked={payment === choice} />
-              {choice}
-            </label>
-          ))}
-        </form>
-        <div className="button-container">
-          <NextButton counter={counter} setCounter={setCounter} />
-          <PreviousButton counter={counter} setCounter={setCounter} />
-        </div>
+        {checkboxType.map((choice) => (
+          <label key={choice}>
+            <input
+              type="radio"
+              value={choice}
+              onChange={(event) => setPayment(event.target.value)}
+              checked={payment === choice} />
+            {choice}
+          </label>
+        ))}
+      </form>
+      <div className="button-container">
+        <NextButton counter={counter} setCounter={setCounter} />
+        <PreviousButton counter={counter} setCounter={setCounter} />
       </div>
     </div>
-
   )
 }
 
