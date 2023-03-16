@@ -3,7 +3,8 @@ import React from 'react';
 export const Summary = ({ self, holiday, destination, sauce, region, flavor, season }) => {
   return (
     <>
-      <h2>Summary Page</h2>
+      <h2>Your Summary</h2>
+      <p>Does this all look right?</p>
       <p>I consider myself to be {self}.</p>
       <p>You will always find me {holiday}. Preferably {destination}</p>
       {sauce === '0' && (

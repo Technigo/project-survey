@@ -8,7 +8,7 @@ const holidayList = [
 export const Holiday = ({ holiday, setHoliday }) => {
   return (
     <>
-    If I had my druthers, you would always find me:
+      <p>If I had my <a href="https://www.merriam-webster.com/dictionary/druthers" target="_blank" rel="noopener noreferrer">druthers</a> you would always find me: </p>
       {holidayList.map((locations) => (
         <label htmlFor="holiday-question" key={locations}>
           <input
