@@ -88,33 +88,29 @@ export const App = () => {
               value={feedback} />
           </label>
         )}
-        {counter >= 1 && counter < 6 && (
-          <Buttons handleNextClick={HandleNextClick} handleBackClick={HandleBackClick} />
-        )}
       </form>
-      {counter === 6 && (
+      {counter >= 1 && counter < 6 && (
+        <Buttons handleNextClick={HandleNextClick} handleBackClick={HandleBackClick} />
+      )}
+      <div className="answer">
+        {counter === 6 && (
         /* Shows summary of Survey */
-        <>
-          <div className="answer">
-            <Summary
-              nameInput={name}
-              ageInput={ageGroup}
-              locationInput={location}
-              greenInput={greenArea}
-              feedbackInput={feedback} />
-          </div>
-          <button type="submit" onClick={() => HandleNextClick()}> Submit</button>
-        </>
-      )}
-      {counter === 7 && (
+          <Summary
+            nameInput={name}
+            ageInput={ageGroup}
+            locationInput={location}
+            greenInput={greenArea}
+            feedbackInput={feedback}
+            submitBtn={() => HandleNextClick()} />
+        )}
+        {counter === 7 && (
         /* Shows last page of Survey */
-        <>
-          <div className="answer">
+          <>
             <h2>Thank you!</h2>
-          </div>
-          <button type="button" onClick={() => window.location.reload()}> Restart</button>
-        </>
-      )}
+            <button type="button" onClick={() => window.location.reload()}> Restart</button>
+          </>
+        )}
+      </div>
     </main>
   )
 };

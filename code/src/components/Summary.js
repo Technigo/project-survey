@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Summary = ({ nameInput, ageInput, locationInput, greenInput, feedbackInput }) => {
+const Summary = ({ nameInput, ageInput, locationInput, greenInput, feedbackInput, submitBtn }) => {
   return (
     <div className="summary">
       <h2>Summary of your answers:</h2>
@@ -12,6 +12,7 @@ const Summary = ({ nameInput, ageInput, locationInput, greenInput, feedbackInput
         <li><b>Like to have more of:</b><br />{feedbackInput}</li>
       </ul>
       <p className="submitAnswer">Click the button below to submit your answers.</p>
+      <button type="submit" onClick={submitBtn}> Submit</button>
     </div>
   )
 };

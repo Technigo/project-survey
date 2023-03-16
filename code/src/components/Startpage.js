@@ -9,11 +9,7 @@ const Startpage = ({ startCount }) => {
         and by answering this you are helping us keep Stockholm green.
       </p>
       <p className="intro">Click the button below to start.</p>
-      <button
-        type="button"
-        onClick={startCount}>
-        Start 👉
-      </button>
+      <button type="button" onClick={startCount}>Start 👉</button>
     </div>
   )
 };

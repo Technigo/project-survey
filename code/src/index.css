@@ -1,11 +1,8 @@
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  max-height: 100%;
+  height: 100vh;
   overflow: hidden;
-  min-width: 100%;
-  max-width: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -16,8 +13,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3) 1fr;
   align-items: center;
   justify-content: center;
 }
@@ -46,8 +43,9 @@ h1 {
 
 /* APP COMPONENT - CONTAINER */
 .surveyWrapper {
+  grid-column: 1 / span 3;
   margin: 0;
-  padding: 15px;
+  padding: 0;
   border-radius: 60px;
   height: 70vh;
   max-height: 70vh;
