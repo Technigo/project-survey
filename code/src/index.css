@@ -4,39 +4,40 @@
   padding: 0;
 }
 
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Quintessential', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html {
-  background-image: url("/Users/Theres/Desktop/technigo-projects/project-survey/code/public/images/background 2.jpg");
+  height: 100%;
+  background-image: url("/Users/Theres/Desktop/technigo-projects/project-survey/code/public/images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .story-container {
-  /* border: solid 2px red; */
-  max-width: 80%;
-  height: auto;
-  position: relative;
+  border: 2px blue solid;
   display: flex;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
 }
 
 .side-in-book {
-  /* border: 2px aqua solid; */
-  width: 50%;
-  height: 100%;
+  border: 2px aqua solid;
+  max-width: 610px;
+  /* height: 100%; */
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-self: center;
 }
 
 .form-div {
@@ -47,6 +48,7 @@ html {
 }
 
 form {
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   padding: 20px;
@@ -54,12 +56,9 @@ form {
 }
 
 .book-img {
-  width: 100%;
-  height: auto;
-}
-
-form {
-  font-size: 20px;
+  max-width: 90%;
+  max-height: auto;
+  display: flex;
 }
 
 input,
@@ -105,18 +104,22 @@ button:hover {
 }
 
 .story-page {
-  border: solid 2px aqua;
-  font-size: 18px;
+  border: solid 2px red;
+  font-size: 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 85%;
-  padding-right: 20px;
+  justify-self: center;
+  align-self: center;
+  max-width: 70%;
+  height: 600px;
+  gap: 16px;
+  overflow-y: scroll;
 }
 
-.story-page p {
-  height: 100%;
-  overflow-y: scroll;
+
+.big-letter-span {
+  font-size: 40px;
 }
 
 .fairy-name-span {
@@ -145,4 +148,26 @@ button:hover {
 
 .horn-span {
   color: darkorange;
+}
+
+
+@media (max-width: 570px) {
+
+  .story-container {
+    margin-top: 30px;
+  }
+
+  .story-page {
+    height: 380px;
+    font-size: 12px;
+    max-width: 60%;
+  }
+
+  .form-div {
+    gap: 14px;
+  }
+
+  .reload-btn {
+    font-size: 14px;
+  }
 }

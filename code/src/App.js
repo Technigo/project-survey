@@ -20,7 +20,7 @@ export const App = () => {
   }
   return (
     <section className="story-container">
-      <img src="images/book.png" className="book-img" alt="a book" />
+      <img src="images/parchment.png" className="book-img" alt="a book" />
       <container className="side-in-book">
         <div className="form-div">
           {step === 1 && (
