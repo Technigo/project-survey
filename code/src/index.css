@@ -209,6 +209,7 @@ hr {
 .questioncontainer {
   border: 1px solid yellow;
   padding: 10px;
+  min-height: 300px;
 }
 
 
