@@ -1,27 +1,22 @@
 import React from 'react';
-import './Name.css'
+import './Name.css';
 
 export const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
-    setName(event.target.value);
-  }
+    console.log(event.target.value);
+    const upCaseUserName = event.target.value.charAt(0).toUpperCase() + event.target.value.slice(1);
+    setName(upCaseUserName);
+  };
   return (
-    <>
-      <p>
-        We are thrilled to have you as our guest at the Mountain Lodge!
-      </p>
-      <p>
-        To ensure that your stay is everything you hope it to be and more, we
-        kindly ask that you take a moment to complete this questionnaire before
-        your arrival.
-      </p>
-      <p>Enter name:</p>
+    <label htmlFor="name-input">
+      Enter name:
       <input
         type="text"
+        id="name-input"
         onChange={handleNameChange}
         value={name}
         placeholder="Enter name here"
         required />
-    </>
-  )
+    </label>
+  );
 };

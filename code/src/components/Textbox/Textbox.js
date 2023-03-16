@@ -1,19 +1,24 @@
 import React from 'react';
 import './Textbox.css';
+import { ButtonSubmit } from '../Buttons/ButtonSubmit/ButtonSubmit';
 
-export const Textbox = ({ textbox, setTextbox }) => {
+export const Textbox = ({ textbox, setTextbox, handleSubmit }) => {
   const handleTextboxChange = (event) => {
+    console.log(event.target.value);
     setTextbox(event.target.value);
-  }
+  };
+
   return (
-    <>
-      <p>Would you like to add anything else?</p>
+    <label htmlFor="textbox">
+        Would you like to add anything else?
       <input
         type="text"
+        id="textbox"
+        name="textbox"
         onChange={handleTextboxChange}
         value={textbox}
-        placeholder="Add message here"
-        required />
-    </>
-  )
+        placeholder="Enter text here..." />
+      <ButtonSubmit onSubmit={handleSubmit} />
+    </label>
+  );
 };
