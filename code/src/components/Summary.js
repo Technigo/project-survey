@@ -9,9 +9,12 @@ const Summary = ({ name, type, genre, score, apocalypse }) => {
   console.log('apocalypse:', apocalypse)
 
   return (
-    <div className="container summary">
+    <div className="summary-container">
+      <div className="headings">
+        <h2>Summary <span className="emoji">📺</span></h2>
+        <hr />
+      </div>
       <div className="summary-box">
-        <h2>Summary</h2>
         <p>Name: {name}</p>
         <p>Type: {type}</p>
         <p>Genre: {genre}</p>

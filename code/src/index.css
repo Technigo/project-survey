@@ -81,12 +81,24 @@ h4 {
 
 
 button {
-  background-color: rgb(73, 28, 116);
+  background-color: var(--buttoncolor);
+  font-size: 18px;
   color: white;
+  font-weight: bold;
   padding: 8px 15px;
   margin: 10px;
   border: none;
   cursor: pointer;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+  box-shadow: 10px 10px 109px 14px rgba(172,179,247,0.3);
+  -webkit-box-shadow: 10px 10px 109px 14px rgba(172,179,247,0.3);
+  -moz-box-shadow: 10px 10px 109px 14px rgba(172,179,247,0.3);
 }
 
 hr {
@@ -108,43 +120,43 @@ hr {
   margin: 0;
 }
 
-.main {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.name-container,
+.type-container,
+.genre-container,
+.score-container,
+.apocalypse-container,
+.summary-container {
+  background-color: var(--backgroundcol);
+  color: white;
+  margin: 0;
+  padding: 10px;
 }
 
-.container .name {
+.question-container {
+  background-color: var(--backgroundcol);
+  color: white;
   margin: 0;
-}
-
-.container .type {
-  margin: 0;
-}
-
-.container .genre {
-  margin: 0;
-}
-
-.container .summary {
-  margin: 0;
+  padding: 10px;
+  min-height: 220px;
 }
 
 .container .result {
   margin: 0;
 }
 
-.step-counter {
+.next-step {
   border: 1px solid hotpink;
+  background-color: var(--backgroundcol);
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
-.step-counter-btns {
-  margin: 0;
+.next-step button {
+  margin: 0 20px;
 }
 
 
@@ -171,8 +183,8 @@ hr {
 }
 
 .startbtn {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background-color: var(--buttoncolor);
   color: white;
   padding: 25px;
@@ -183,6 +195,7 @@ hr {
   border-radius: 50%;
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
 }
 
 .startbtn:hover {
@@ -205,11 +218,11 @@ hr {
   margin-right: 10px;
 }
 
-.questioncontainer {
-  border: 1px solid yellow;
-  padding: 10px;
-  min-height: 300px;
+.yes-btn {
+  border: 1px solid hotpink;
+  padding: 5px 0;
 }
+
 
 
 /* Result page specific formatting */
@@ -309,6 +322,16 @@ footer hr {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
+}
+
+.next-step {
+  border: 1px solid hotpink;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .start-heading {

@@ -6,35 +6,40 @@ const Type = ({ type, setType, step }) => {
   console.log('NOW RUNNING TYPE.js')
   console.log('type', type)
   return (
-    <div className="container type">
-      <h2>Question {step}</h2>
-      <h4>What type of series are you in the mood for?</h4>
-      <form className="form type">
-        <p>Current state: {type}</p>
-        {tvtypes.map((item) => (
-          <label key={item} htmlFor="radiotype">
-            <div
-              className="radiobtn"
-              role="button"
-              onClick={(event) => setType(event.target.value)}
-              onKeyDown={(event) => {
-                if (event.key === 'Enter' || event.key === ' ') {
-                  setType(item);
-                }
-              }}
-              tabIndex={0}>
-              <input
-                type="radio"
-                id="radiotype"
-                className="radiotypebtn"
-                onChange={(event) => setType(event.target.value)}
-                value={item}
-                checked={type === item} />
-              <span>{item}</span>
-            </div>
-          </label>
-        ))}
-      </form>
+    <div className="type-container">
+      <div className="headings">
+        <h2>Question {step}</h2>
+        <hr />
+      </div>
+      <div className="question-container">
+        <h4>What type of series are you in the mood for?</h4>
+        <form className="form type">
+          <p>Current state: {type}</p>
+          {tvtypes.map((item) => (
+            <label key={item} htmlFor="radiotype">
+              <div
+                className="radiobtn"
+                role="button"
+                onClick={(event) => setType(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === 'Enter' || event.key === ' ') {
+                    setType(item);
+                  }
+                }}
+                tabIndex={0}>
+                <input
+                  type="radio"
+                  id="radiotype"
+                  className="radiotypebtn"
+                  onChange={(event) => setType(event.target.value)}
+                  value={item}
+                  checked={type === item} />
+                <span>{item}</span>
+              </div>
+            </label>
+          ))}
+        </form>
+      </div>
     </div>
   );
 };

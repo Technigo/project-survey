@@ -43,22 +43,19 @@ export const App = () => {
         {step === 4 && <Score score={score} setScore={setScore} step={step} />}
         {step === 5 && <Apocalypse apocalypse={apocalypse} setApocalypse={setApocalypse} step={step} />}
         {step < 6 && step !== 0 && (
-          <div className="step-counter">
-            <div className="step-counter-btns">
-              <button type="button" onClick={handleStepIncrease}>
+          <div className="next-step">
+            <button type="button" onClick={handleStepIncrease}>
                 Next step
-              </button>
-              <button type="button" onClick={handleStepReset}>
+            </button>
+            <button type="button" onClick={handleStepReset}>
                 Reset All
-              </button>
-            </div>
-            <p>(Current step: {step})</p>
+            </button>
           </div>
         )}
         {step === 6 && (
           <>
             <Summary name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} />
-            <button type="button" onClick={handleStepIncrease}>Yes!</button>
+            <button type="button" onClick={handleStepIncrease} className="yes-btn">Yes!</button>
           </>
         )}
         {step === 7 && (
