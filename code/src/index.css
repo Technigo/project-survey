@@ -87,7 +87,10 @@ input[type="radio"] {
 #musical-artist {
   font-size: 30px;
 }
-
+#select option,
+#select optgroup{
+  background-color: aqua;
+}
 .horse-container {
   background-image:url(assets/horseduck.jpg);
   background-size: cover; 
