@@ -70,7 +70,7 @@ export const App = () => {
           </label>
         )}
         {counter === 4 && (
-          <label htmlFor="scale?"> On a scale from 0-10, how green is your area?
+          <label htmlFor="scale"> On a scale from 0-10, how green is your area?
             <input
               type="range"
               min="0"
@@ -92,7 +92,7 @@ export const App = () => {
       {counter >= 1 && counter < 6 && (
         <Buttons handleNextClick={HandleNextClick} handleBackClick={HandleBackClick} />
       )}
-      <div className="answer">
+      <div className="summaryEnd">
         {counter === 6 && (
         /* Shows summary of Survey */
           <Summary

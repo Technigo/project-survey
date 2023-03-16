@@ -3,6 +3,7 @@ body {
   padding: 0;
   height: 100vh;
   overflow: hidden;
+  overflow-x: hidden;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -14,8 +15,7 @@ body {
   background-size: cover;
   position: relative;
   display: grid;
-  grid-template-columns: repeat(3) 1fr;
-  align-items: center;
+  grid-template-columns: 1fr;
   justify-content: center;
 }
 
@@ -43,14 +43,11 @@ h1 {
 
 /* APP COMPONENT - CONTAINER */
 .surveyWrapper {
-  grid-column: 1 / span 3;
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
+  margin: 30% auto;
+  padding: 30px 0 0 0;
   border-radius: 60px;
-  height: 70vh;
-  max-height: 70vh;
-  width: 40vh;
-  max-width: 40vh;
+  max-width: 95%;
   background: rgb(4, 32, 24);
   opacity: 0.8;
   display: flex;
@@ -63,7 +60,7 @@ h1 {
 .answer {
   color: white;
   text-align: center;
-  width: 100%;
+  width: 90%;
   padding: 10px;
   margin: 10px 0;
 }
@@ -116,7 +113,7 @@ button {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 13px;
-  margin: 20px 5px 20px;
+  margin: 20px 5px 0 5px;
 }
 
 button:hover {
@@ -152,8 +149,20 @@ li {
   font-size: 13px;
 }
 
+.summaryEnd {
+  color: white;
+  text-align: center;
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
 /* RESPONSIVE DESIGN FOR TABLET AND DESKTOP */
 @media (min-width: 667px) {
+  body {
+    align-items: center;
+  }
+
   p {
     font-size: 20px;
   }
@@ -179,7 +188,7 @@ li {
   }
 
   .ageGroup {
-    margin-left: 43%;
+    margin-left: 40%;
   }
 
   h2 {
@@ -198,6 +207,7 @@ li {
 /* RESPONSIVE DESIGN FOR TABLET */
 @media (min-width: 667px) and (max-width: 1024px) {
   .surveyWrapper {
+    margin: 0 auto;
     height: 50vh;
     max-height: 50vh;
     width: 60vh;
@@ -208,6 +218,7 @@ li {
 /* RESPONSIVE DESIGN FOR DESKTOP */
 @media (min-width: 1024px) {
   .surveyWrapper {
+    margin: 0 auto;
     height: 60vh;
     max-height: 60vh;
     width: 70vh;
