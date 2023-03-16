@@ -22,9 +22,15 @@ export const App = () => {
     setFavorite('');
   }
 
+  const handleSubmitSurvey = () => {
+    setQuestion(4);
+  }
+
   return (
     <>
-      <div>Question number: {question}/3</div>
+      {question < 4 && (
+        <div>Question number: {question}/3</div>
+      )}
       {question === 1 && (
         <Name name={name} setName={setName} />
       )}
@@ -32,17 +38,21 @@ export const App = () => {
         <Love love={love} setLove={setLove} />
       )}
       {question === 3 && (
-        <Favorite favorite={favorite} setFavorite={setFavorite} />
+        <Favorite favorite={favorite} setFavorite={setFavorite} handleSubmitSurvey={handleSubmitSurvey} />
       )}
-      {question >= 4 && (
+      {question === 4 && (
         <Result name={name} love={love} favorite={favorite} handleRestartSurvey={handleRestartSurvey} />
       )}
 
-      {question > 1 && (
+      {question > 1 && question < 4 && (
         <button type="button" onClick={() => setQuestion(question - 1)}>Prev. question</button>
       )}
 
-      {question < 4 && (
+      {question === 3 && (
+        <button type="button" onClick={handleSubmitSurvey}>Submit</button>
+      )}
+
+      {question < 3 && (
         <button type="button" onClick={handleQuestionIncrease}>Next question</button>
       )}
     </>
