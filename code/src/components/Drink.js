@@ -7,7 +7,8 @@ export const Drink = ({ drink, setDrink }) => {
   return (
     <>
     <div className="question">
-      <p>And what do you wanna drink on this special day?</p>
+      <p>Sounds delicious!</p>
+      <p>And something to drink?</p>
       </div>
       <div className="select-container">
         <select
@@ -16,10 +17,10 @@ export const Drink = ({ drink, setDrink }) => {
           value={drink} 
           onChange={handleDrinkChange} >
           <option value="">Select drink</option>
-          <option value="coffee">Coffee for sure!</option>
-          <option value="rainbow colored drinks">Umbrella drinks in rainbow colors!</option>
-          <option value="sparkling soda">Sparkling soda in a large glas!</option>
-          <option value="smoothie">Smoothie with a straw</option>
+          <option value="a great cop of coffee">Coffee!☕️</option>
+          <option value="one rainbow colored drink">Tropical drinks!🍹</option>
+          <option value="sparkling icecold soda in a large glass">Sparkling soda!🥤</option>
+          <option value="a fruity and fluffy smoothie">Smoothie!🍓</option>
         </select>
       </div>
     </>

@@ -1,18 +1,33 @@
 import React from 'react';
+import JSConfetti from 'js-confetti';
+
+const jsConfetti = new JSConfetti();
 
 export const Party = ({ name, place, food, drink }) => {
   return (
     <>
-    <div className="question">
-        <h1>{name}!</h1>
-       <p>Imagine you are in your favourite place {place}, eating {food} and drinking {drink}. Your favouritemusic is on so do a little dance now! Yes, common!</p>
+        <div className="header">
+        <h1><span>{name}</span></h1>
+        </div>
+        <div className="question">
+       <p>🌪! Now imagine you are in your favourite place {place}</p>
+       <p>eating {food} and drinking {drink}.</p>
+       <p>Your favourite music is on and we're having a party just for YOU!</p>
        <p>
-       It's been a crappy day but you know what? Tomorrow, you get a new change.
+       I know, it's been a crappy day but tomorrow - You get a new change!
        Lets celebrate that by pushing the magic partybutton! 
         </p>
         </div>
-        <button type="button" onClick="change">MAGIC PARTYBUTTON</button>
-        
-        </>
+        <div className="party-btn">
+        <button type="submit" className="partyBtn" onClick={() => 
+        {(jsConfetti.addConfetti({ 
+            confettiRadius: 8, 
+            confettiNumber: 500, 
+            confettiColors:[
+              '#ff0a54', '#efe378', '#ff7096', '#ff85a1', '#fbb1bd', '#78cfef',
+              ],
+            }))}}>MAGIC PARTYBUTTON</button>
+        </div>
+    </>
     );
-}
+};

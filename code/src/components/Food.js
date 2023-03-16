@@ -1,10 +1,10 @@
 import React from 'react';
 
-const FoodOption = [
-  'The biggest 🎂 you ever seen?',
-  'Buffé with all your favourite food?🍲',
-  '🍐🍊🥝🍇🍉 in piles?',
-  '🍦 that never melts?',
+const foodOption = [
+  'the biggest 🎂 you ever seen',
+  'buffé with all your favourite food🍲',
+  '🍐🍊🥝🍇🍉 in piles',
+  '🍦 that never melts',
 ];
 
 export const Food = ({ food, setFood }) => {
@@ -14,13 +14,15 @@ export const Food = ({ food, setFood }) => {
   return (
     <>
     <div className="question">
-      <p>What do you wanna eat on your party?</p>
+      <p>On this amazing party you prefer to eat...</p>
       </div>
       <div className="foodBtn">
-        {FoodOption.map((group) => (
-          <label key={group}>
-            <input type="radio" 
-              value={food} 
+        {foodOption.map((group) => (
+          <label key={group} htmlFor="group">
+            <input
+              type="radio"
+              className="radioBtn"
+              value={group}
               onChange={handleFoodChange}
               checked={food === group} />
             {group}

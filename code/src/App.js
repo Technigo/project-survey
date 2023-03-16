@@ -36,10 +36,10 @@ export const App = () => {
       {step < 5 && (
         <>
         <div className="step-btn">
-          <button type="button" onClick={handleStepIncrease}>NEXT</button>
+          <button type="button" onClick={handleStepIncrease}>Next</button>
         </div>
         <div className="step">
-          <p>STEP {step}/5</p>
+          <p>STEP {step}/5 TIL' PARTY START!</p>
           </div>
           
         </>
