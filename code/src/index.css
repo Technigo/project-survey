@@ -278,12 +278,12 @@ padding: 0 25px;
   }
   
   .start img {
-    max-width: 600px;
-    max-height: 300px;
+    max-width: 500px;
+    max-height: 190px;
     height: auto;
     width: 100%;
-    object-fit: cover;
-    margin-left: calc(50% - 300px)
+    object-fit:contain;
+    margin-left: calc(50% - 250px)
   }
 
   .container .result {
@@ -321,4 +321,16 @@ padding: 0 25px;
   }
   
 
+}
+
+
+@media (min-width: 1024px) {
+.start img {
+  max-width: 600px;
+  max-height: 300px;
+  height: auto;
+  width: 100%;
+  object-fit:contain;
+  margin-left: calc(50% - 300px)
+}
 }
