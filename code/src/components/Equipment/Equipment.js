@@ -1,7 +1,7 @@
 import React from 'react';
 import './Equipment.css';
 
-export const Equipment = ({ equipment, setEquipment }) => {
+export const Equipment = ({ setEquipment }) => {
   const handleEquipChange = (event) => {
     console.log(event.target.value);
     setEquipment(event.target.value);
@@ -14,9 +14,9 @@ export const Equipment = ({ equipment, setEquipment }) => {
         name="equipment"
         id="equipment"
         onChange={handleEquipChange}
-        value={equipment}
+        defaultValue="choose-sport"
         required>
-        <option value="" disabled selected>
+        <option value="choose-sport" disabled>
           Choose a sport
         </option>
         <option value="skiing">Skiing</option>
