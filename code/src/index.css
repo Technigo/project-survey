@@ -115,7 +115,7 @@ hr {
 /* Container formatting */
 
 .container {
-  background-color: black;
+  background-color: var(--backgroundcol);
   color: white;
   margin: 0;
 }
@@ -125,7 +125,8 @@ hr {
 .genre-container,
 .score-container,
 .apocalypse-container,
-.summary-container {
+.summary-container,
+.sorry {
   background-color: var(--backgroundcol);
   color: white;
   margin: 0;
@@ -159,6 +160,9 @@ hr {
   margin: 0 20px;
 }
 
+.headings {
+  margin: 25px 0 0 0;
+}
 
 /* Starter page specific formatting */
 
@@ -218,12 +222,40 @@ hr {
   margin-right: 10px;
 }
 
+
 .yes-btn {
-  border: 1px solid hotpink;
-  padding: 5px 0;
+  width: 90px;
+  height: 90px;
+  background-color: var(--buttoncolor);
+  color: white;
+  padding: 25px;
+  border: none;
+  margin-left: calc(50% - 40px);
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+}
+
+.yes-btn:hover {
+  background-color: var(--button-hover-color);
+  -webkit-box-shadow: 11px 9px 97px 9px rgba(188,193,245,0.3);
+  -moz-box-shadow: 11px 9px 97px 9px rgba(188,193,245,0.3);
+  box-shadow: 11px 9px 97px 9px rgba(188,193,245,0.3);
 }
 
 
+.summary-box {
+  padding: 20px 50px 50px 50px;
+  font-size: 22px;
+}
+
+.summary-box .next {
+font-size: 26px;
+margin-top: 50px;
+}
 
 /* Result page specific formatting */
 
@@ -255,6 +287,10 @@ padding: 0 25px;
 
 .comments p {
   margin: 10px 0;
+}
+
+.sorry {
+  margin: 20px;
 }
 
 /* Footer */

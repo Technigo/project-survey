@@ -20,8 +20,8 @@ const Summary = ({ name, type, genre, score, apocalypse }) => {
         <p>Genre: {genre}</p>
         <p>Minimum IMDB score: {score}</p>
         <p>Apocalypse related? {apocalypse ? 'Yes' : 'No'}</p>
+        <p className="next">Are you ready to see what is next?</p>
       </div>
-      <p>Are you ready to see what is next?</p>
     </div>
   );
 }

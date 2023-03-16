@@ -11,7 +11,7 @@ const Summary = ({ name, type, genre, score, apocalypse, data }) => {
   console.log('apocalypse:', apocalypse)
 
   // Filtering step 1, on type:
-  const filteredTypeArray = data.series.filter((item) => item.tvtype === type);
+  const filteredTypeArray = type === 'Surprise me!' ? data.series : data.series.filter((item) => item.tvtype === type);
   console.log('filteredTypeArray:', filteredTypeArray);
 
   // Filtering step 2, on genre:
@@ -27,8 +27,8 @@ const Summary = ({ name, type, genre, score, apocalypse, data }) => {
   console.log('filteredApocalypseArray:', filteredApocalypseArray);
 
   /* Gives a random number to put inside the return, change to the filtered array later */
-  const i = Math.floor(Math.random() * data.series.length);
-  console.log('data.series.length:', data.series.length, 'i:', i);
+  const i = Math.floor(Math.random() * filteredApocalypseArray.length);
+  console.log('filteredApocalypseArray.length:', filteredApocalypseArray.length, 'i:', i);
 
   return (
     <div className="container result">
@@ -36,19 +36,27 @@ const Summary = ({ name, type, genre, score, apocalypse, data }) => {
         <h2>Result <span className="emoji">🍿</span></h2>
         <hr />
       </div>
-      <div className="seriestext">
-        <h3>{data.series[i].name}</h3>
-        <p>{data.series[i].plot}</p>
-        <span>IMDB Score: {data.series[i].score} / 10</span>
-        {/* Adds class "hidden" to the div if comment is empty */}
-        <div className={`comments ${data.series[i].comment === '' ? 'hidden' : ''}`}>
-          <h4>Comment from Matilda:</h4>
-          <p>&quot;{data.series[i].comment}&quot;</p>
+      {filteredApocalypseArray.length !== 0 ? (
+        <>
+          <div className="seriestext">
+            <h3>{filteredApocalypseArray[i].name}</h3>
+            <p>{filteredApocalypseArray[i].plot}</p>
+            <span>IMDB Score: {filteredApocalypseArray[i].score} / 10</span>
+            {/* Adds class "hidden" to the div if comment is empty */}
+            <div className={`comments ${filteredApocalypseArray[i].comment === '' ? 'hidden' : ''}`}>
+              <h4>Comment from Matilda:</h4>
+              <p>&quot;{filteredApocalypseArray[i].comment}&quot;</p>
+            </div>
+          </div>
+          <div className="postercontainer">
+            <a href={filteredApocalypseArray[i].url} target="_blank" rel="noreferrer"><img src={filteredApocalypseArray[i].poster} alt="poster with link" className="posterimg" /></a>
+          </div>
+        </>
+      ) : (
+        <div className="sorry">
+          <p>Sorry, it looks like you were too precise in your wishes. We could not find a suggestion to accomodate your request. Please give it another go and search for something else.</p>
         </div>
-      </div>
-      <div className="postercontainer">
-        <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
-      </div>
+      )}
     </div>
   );
 }
