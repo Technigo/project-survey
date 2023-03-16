@@ -2,7 +2,7 @@
   --headings-font-family: "Rye", cursive;
   --paragraph-font-family: "Newsreader", serif;
   --border-color: #94b1aa;
-  --primary-bg-color: #e6f3f0;
+  --primary-bg-color: #282727;
   --secondary-bg-color: #94b1aa;
   --tertiary-bg-color: #5B8B7F;
   --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -11,6 +11,8 @@
 h1, h2, h3 {
   font-family: var(--headings-font-family);
   font-weight: 100;
+  color: #fff;
+  text-shadow: 0 0 3px #0000;
 }
 
 h1 {
@@ -84,18 +86,17 @@ select {
     0 0 82px var(--secondary-bg-color), 0 0 92px var(--secondary-bg-color), 
     0 0 102px var(--secondary-bg-color), 0 0 151px var(--secondary-bg-color);
     border: 0.2rem solid #fff;
-    background: var(--primary-bg-color);
     border-radius: 20px;
     padding: 0.4em;
     box-shadow: 0 0 0.2rem #fff, 
     0 0 0.2rem #fff, 0 0 2rem var(--tertiary-bg-color), 
     0 0 0.8rem var(--tertiary-bg-color), 0 0 2.8rem var(--tertiary-bg-color), 
     inset 0 0 1.3rem var(--tertiary-bg-color);
+    background-color: var(--primary-bg-color);
 }
 
 .form-container {
     padding: 10px;
-    background: var(--primary-bg-color);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -105,6 +106,7 @@ select {
     0 0 2rem var(--tertiary-bg-color), 0 0 0.8rem var(--tertiary-bg-color), 
     0 0 2.8rem var(--tertiary-bg-color), inset 0 0 1.3rem var(--tertiary-bg-color);
     width: 50%;
+     background-color: var(--primary-bg-color);
 }
 
 .radio-btns {
