@@ -37,7 +37,8 @@ export const Workplace = ({ workplace, setWorkplace }) => {
       <input
         id="workplace"
         value={workplace}
-        onChange={handleWorkplaceChange} />
+        onChange={handleWorkplaceChange}
+        className="input-field" />
     </label>
   )
 }

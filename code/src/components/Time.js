@@ -16,7 +16,8 @@ export const Time = ({ time, setTime }) => {
       <input
         id="time"
         value={time}
-        onChange={handleTimeChange} />
+        onChange={handleTimeChange}
+        className="input-field" />
     </label>
   );
 }

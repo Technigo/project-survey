@@ -4,6 +4,8 @@ import { Workplace } from 'components/Workplace';
 import { Time } from 'components/Time';
 import { Feedback } from 'components/Feedback';
 
+import './index.css';
+
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
@@ -51,12 +53,9 @@ export const App = () => {
           <Feedback feedback={feedback} setFeedback={setFeedback} />
         )}
         {step < 4 && (
-          <>
-            <p>
-            Current step: {step}
-            </p>
+          <div className="survey-button">
             <button type="button" className="next-button" onClick={handleStepIncrease}>Next question</button>
-          </>
+          </div>
         )}
       </div>
       <form onSubmit={handleSubmit}>

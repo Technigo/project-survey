@@ -11,7 +11,8 @@ export const Feedback = ({ feedback, setFeedback }) => {
         id="feedback"
         type="text"
         value={feedback}
-        onChange={handleFeedbackChange} />
+        onChange={handleFeedbackChange}
+        className="input-field" />
     </label>
   );
 }
