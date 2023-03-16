@@ -569,9 +569,12 @@ footer hr {
 .genre-container,
 .score-container,
 .apocalypse-container,
-.summary-container,
 .sorry {
   max-height: 370px;
+}
+
+.summary-container {
+  max-height: 600px;
 }
 
 .name-container .question-container {
