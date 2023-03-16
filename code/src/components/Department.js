@@ -5,10 +5,10 @@ export const Department = ({ department, setDepartment }) => {
     setDepartment(event.target.value);
   }
   return (
-    <>
-      <p>Which department do you work in?</p>
+    <div className="questionWrapper">
+      <h3>Which department do you work in?</h3>
       <input type="text" value={department} onChange={handleDepartmentChange} />
-    </>
+    </div>
   );
 };
 

@@ -7,8 +7,8 @@ export const Climate = ({ climate, setClimate }) => {
   //   setClimate(event.target.value);
   // }
   return (
-    <div className="radioBtn">
-      <p>What kind of climate is most appealing to you?</p>
+    <div className="questionWrapper">
+      <h3>What kind of climate is most appealing to you?</h3>
       <div className="range">
         {climateTypes.map((climates) => (
           <label key={climates.id} htmlFor="radio">

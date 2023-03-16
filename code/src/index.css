@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +12,173 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+root {
+  font-family: 'Sono', sans-serif;
+}
+
+
+body {
+
+background-image: url(/public/assets/background-image.jpg);
+background-size: cover;
+display: absolute;
+font-family: 'Sono', sans-serif;
+}
+
+.landingPageText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #FF9900;
+  margin-top: 40px;
+  background-color: white;
+  padding-top: 20px;
+
+}
+
+h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+
+.questionWrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin-top: 30px;
+border: white, 2px;
+color: white, bold;
+}
+
+h3 {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* BUTTONS  */
+
+.buttonStart {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 60px;
+  margin: 40px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #67b4c5; 
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonStart:hover {
+  background-color: #66D9CF;
+  transition: 0.3s;
+}
+
+.buttonNext {
+  display: flex;
+  justify-content: center;
+  color: green;
+  height: 40px;
+  width: 150px;
+  /* margin: 40px; */
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #67b4c5;  
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonNext:hover {
+  background-color: #66D9CF;
+  transition: 0.3s;
+}
+
+.buttonPrevious {
+  display: flex;
+  justify-content: center;
+  color: green;
+  height: 40px;
+  width: 180px;
+  /* margin: 40px; */
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #67b4c5;  
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonPrevious:hover {
+  background-color: #66D9CF;
+  transition: 0.3s;
+}
+
+
+.buttonSubmit {
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  width: 70px;
+  margin: 40px;
+  border-radius: 10px;
+  border: none;
+  color: #66D9CF;
+  background-color: #FFF; 
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonSubmit:hover {
+  background-color: #F0E365;
+  color: #67b4c5;
+  transition: 0.3s;
+}
+/* select {
+
+} */
+
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 35px;
+  margin-top: 20px;
+  color: grey;
+
+}
+
+h6 {
+  font-size: 15px;
+  line-height: 100px;
+  color: white;
 }
