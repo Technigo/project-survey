@@ -14,7 +14,7 @@ export const Ammount = ({ ammount, setAmmount }) => {
           <input
             type="range"
             min="0"
-            max="10"
+            max="20"
             onChange={handleAmmount}
             value={ammount} />
         </label>

@@ -3,7 +3,10 @@ import '../index.css';
 
 const Header = () => {
   return (
-    <h1>Pet shrimp order</h1>
+    <header>
+      <h1>Shrimp order</h1>
+      <img src="\assets\shrimp.svg" alt="shrimp" />
+    </header>
   )
 }
 

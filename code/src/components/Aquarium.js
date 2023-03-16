@@ -18,7 +18,6 @@ export const Aquarium = ({ shape, setShape }) => {
             key={singleShape}>
             <input
               type="radio"
-              className="shape-input"
               value={singleShape}
               onChange={handleShape}
               checked={shape === singleShape} />

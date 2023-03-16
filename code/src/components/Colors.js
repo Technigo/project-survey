@@ -2,8 +2,18 @@ import React from 'react'
 import '../index.css';
 
 export const Colors = ({ colors, setColors }) => {
+
+const shrimpColor = [
+    { label: 'crystal red', value: 'red', name: 'crystal red', imgSrc: '/assets/red.jpg' },
+    { label: 'blue', value: 'blue', name: 'blue', imgSrc: '/assets/blue.jpg' },
+    { label: 'zebra', value: 'zebra', name: 'zebra', imgSrc: '/assets/zebra.jpg' },
+    { label: 'orange', value: 'orange', name: 'orange', imgSrc: 'assets/orange.jpg' },
+    { label: 'random mix', value: 'random', name: 'random shrimp', imgSrc: '/assets/random.jpg' }
+  ];
+
   const handleColors = (event) => {
-    setColors(event.target.value)
+    const selectedColor = shrimpColor.find(color => color.value === event.target.value);
+    setColors(selectedColor)
   }
   return (
     <div className="color-container">
@@ -13,11 +23,7 @@ export const Colors = ({ colors, setColors }) => {
           onChange={handleColors}
           value={colors}>
           <option value="" disabled>Select option</option>
-          <option value="red" img="red">Crystal red</option>
-          <option value="blue">Blue</option>
-          <option value="zebra">Zebra</option>
-          <option value="orange">Orange</option>
-          <option value="random">Random mix</option>
+          {shrimpColor.map((color) => <option value={color.value}>{color.label}</option>)}
         </select>
       </form>
     </div>

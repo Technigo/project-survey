@@ -1,7 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Sail&display=swap');
 
+html {
+  height: 100%;
+}
+
 body {
   min-height: 100%;
+  height: 100%;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -19,7 +24,16 @@ h1 {
 }
 
 header {
-  text-align: center;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+header img {
+  width: 100px;
+  align-self: flex-end;
 }
 
 code {
@@ -34,7 +48,7 @@ p {
 .main {
   width: 200px;
   margin: auto;
-  background-color: aliceblue;
+  background: rgba(240, 248, 255, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,11 +65,23 @@ input[type=text]:focus {
   background-color: lightblue;
 }
 
+.color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 select {
   padding: 0.5rem;
   background-color: lightblue;
   width: 150px;
   border-radius: 5px;
+}
+
+select option {
+  font-family: 'Assistant', sans-serif;
+  color: white;
+  background-color: #D11149;
 }
 
 .shape-input {
@@ -66,4 +92,28 @@ select {
 
 .aquarium-container {
   flex-direction: row;
+}
+
+button {
+  width: 90px;
+  padding: 5px;
+  background-color: aliceblue;
+  border: solid 1px aliceblue;
+  border-radius: 5px;
+  align-self: center;
+  margin-top: 1em;
+  border: none;
+  font-family: 'Assistant', sans-serif;
+}
+
+button:hover {
+  background-color: #D11149;
+  color: white;
+  border: solid 1px aliceblue;
+}
+
+.shrimp-img {
+  margin-top: 1em;
+  width: 150px;
+  border-radius: 10px;
 }

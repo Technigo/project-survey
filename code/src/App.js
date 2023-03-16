@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import './index.css';
 import Header from 'components/Header'
+import Footer from 'components/Footer'
 import { Name } from 'components/Name'
 import { Colors } from 'components/Colors'
 import { Aquarium } from 'components/Aquarium'
 import { Ammount } from 'components/Ammount'
 import { Thanks } from 'components/Thanks'
-
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -20,9 +20,7 @@ export const App = () => {
   }
   return (
     <>
-      <header>
-        <Header title="pet shrimp order"/>
-      </header>
+      <Header title="pet shrimp order" />
       <div className="main">
         {step === 1 && (
           <Name name={name} setName={setName} />
@@ -41,11 +39,11 @@ export const App = () => {
         )}
         {step < 5 && (
           <div>
-            <p>Current step {step}</p>
             <button type="button" onClick={handleStepIncrease}>Next</button>
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 }
