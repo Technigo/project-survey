@@ -1,5 +1,6 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
+import Header from './components/Header';
 import Name from './components/Name';
 import Love from './components/Love';
 import Favorite from './components/Favorite';
@@ -28,6 +29,7 @@ export const App = () => {
 
   return (
     <>
+      <Header />
       {question < 4 && (
         <div>Question number: {question}/3</div>
       )}

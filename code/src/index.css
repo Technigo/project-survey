@@ -21,6 +21,10 @@ h1, h2, h3, label {
   font-family: var(--headings-font-family);
 }
 
+h1 {
+  font-weight: 500;
+}
+
 p, button, input, select {
   font-family: var(--paragraph-font-family);
 }
