@@ -1,4 +1,4 @@
-import Question from 'components/Question';
+import Question from 'components/Questions/Question';
 import { answersQ1, answersQ2, answersQ3, answersQ4 } from 'library/answers';
 import FormTextField from 'components/FormTextField';
 import FormSelect from 'components/FormSelect';
@@ -75,14 +75,6 @@ export const App = () => {
 
     </form>
   );
-  
-const [question1Answer, question2Answer, question3Answer, question4Answer] = "some answer";
-return (
-      <div>
-        <p>The answer to these questions make you a PIRAT</p>
-      </div>
-);
-
 }
 
 export default App;

@@ -1,10 +1,11 @@
 /* eslint-disable max-len */
 import React from 'react';
+import styles from './FormRadioButtons.module.css';
 
 const handleChange = (event) => {
   console.log(event.target.value);
   // get data from radio buttons
-  // save with setFavIceCream
+  // save with setAndTheNameYouWantToCallIt
   // ...
 }
 const FormRadioButton = ({ answers }) => {
@@ -13,7 +14,14 @@ const FormRadioButton = ({ answers }) => {
       {answers.map((answer) => (
         <label className="form-control" key={answer}>
           {answer}
-          <input type="radio" name="myRadio" value={answer} />
+          <input
+            id={answer}
+            name={answer}
+            type="radio"
+            value={answer}
+            onChange={(event) => props.onChange(event.target.value)}
+            checked={props.value === answer} />
+          {answer}
         </label>
       ))}
     </div>

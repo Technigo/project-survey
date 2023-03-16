@@ -1,0 +1,7 @@
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #7e49df;
+}

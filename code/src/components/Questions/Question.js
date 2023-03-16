@@ -1,6 +1,7 @@
-import React from 'react';
-
-import FormRadioButton from './FormRadioButton';
+import React, { useState } from 'react';
+import { answersQ1, answersQ2, answersQ3, answersQ4 } from 'library/answers';
+import FormRadioButton from '../FormRadioButtons/FormRadioButton';
+import styles from './Questions.module.css';
 
 const Question = ({ question, questionNo, setQuestionNo, answers }) => {
   const nextQuestion = () => {

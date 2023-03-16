@@ -1,0 +1,8 @@
+.formRadioButtons {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .label {
+    padding: 6rem;
+  }
