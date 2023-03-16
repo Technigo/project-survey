@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import Start from './Components/start'
-import Purchase from './Components/purchase'
-import Subscription from './Components/subscription'
+import Start from './Components/Start'
+import Purchase from './Components/Purchase'
+import Subscription from './Components/Subscription'
 import FreeText from './Components/FreeText'
 import Conclusion from './Components/Conclusion'
-import Footer from './Components/footer'
+import Footer from './Components/Footer'
 
 export const App = () => {
   const [step, setStep] = useState(1)
