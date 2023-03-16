@@ -1,35 +1,39 @@
 .page-container {
-    background: lightcoral;
-    width: 500px;
-    height: 500px;
-    margin: 0 auto;
+    /*background: lightcoral;*/
+    /*height: 500px;*/
+    align-self: center;
+    margin: 30px;
     margin-top: 70px;
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.45);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
   }
 
-button {
-    display: inline-block;
-    font-family: 'Vollkorn', serif;
-    font-size: 20px;
-    padding: 4px 15px 3px 15px;
-    margin-right: 10px;
-    font-weight: 500;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    background: lightgrey;
-    cursor: pointer;
-    text-align: center;
-    transition: background 150ms ease-in-out, 
-                transform 150ms ease;
-}
+  @media (min-width: 668px) and (max-width: 1024px) {
 
-button:hover,
-button:focus {
-    background: lightskyblue;
-}
+    .page-container {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 70px;
+        padding: 40px;
+    }
+    
+  }
+      
+  
+  @media (min-width: 1025px) {
 
-button:active {
-    transform: scale(0.99);
-}
+    .page-container {
+        width: 500px;
+        margin: 0 auto;
+        margin-top: 70px;
+        padding: 40px;
+    }
+  
+  }  

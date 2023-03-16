@@ -1,65 +1,59 @@
 import React, { useState } from 'react'
 import { Greeting } from 'components/Greeting';
 import { Name } from 'components/Name';
-import { RadioButtons } from 'components/RadioButtons';
-import { DropDown } from 'components/DropDown';
-import { Summary } from 'components/Summary';
+import { NextButton } from 'components/NextButton';
+import { PreviousButton } from 'components/PreviousButton';
+import { SubmitButton } from 'components/SubmitButton';
+import { AgeQuestion } from 'components/AgeQuestion';
+import { FamousPerson } from 'components/FamousPerson';
+import { CreatedDream } from 'components/CreatedDream';
 import './App.css';
 
 export const App = () => {
   const [page, setPage] = useState(1)
   const [name, setName] = useState('')
-  const [answer, setAnswer] = useState('')
-  const [ageGroup, setAgeGroup] = useState('')
-
-  const handlePageIncrease = () => {
-    setPage(page + 1)
-  }
-
-  const handlePageDecrease = () => {
-    setPage(page - 1)
-  }
+  const [famousPerson, setFamousPerson] = useState('')
+  const [yourAge, setYourAge] = useState('')
 
   return (
     <div className="page-container">
       {page === 1 && (
         <>
           <Greeting />
-          <button type="button" onClick={handlePageIncrease}>Next</button>
+          <NextButton counter={page} setCounter={setPage} />
         </>
       )}
       {page === 2 && (
         <>
           <Name name={name} setName={setName} />
-          <button type="button" onClick={handlePageDecrease}>Previous</button>
-          <button type="button" onClick={handlePageIncrease}>Next</button>
+          <PreviousButton counter={page} setCounter={setPage} />
+          <NextButton counter={page} setCounter={setPage} />
         </>
       )}
       {page === 3 && (
         <>
-          <RadioButtons ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
-          <button type="button" onClick={handlePageDecrease}>Previous</button>
-          <button type="button" onClick={handlePageIncrease}>Next</button>
+          <FamousPerson famousPerson={famousPerson} setFamousPerson={setFamousPerson} />
+          <PreviousButton counter={page} setCounter={setPage} />
+          <NextButton counter={page} setCounter={setPage} />
         </>
       )}
       {page === 4 && (
         <>
-          <DropDown answer={answer} setAnswer={setAnswer} />
-          <button type="button" onClick={handlePageDecrease}>Previous</button>
-          <button type="button" onClick={handlePageIncrease}>Next</button>
+          <AgeQuestion yourAge={yourAge} setYourAge={setYourAge} />
+          <PreviousButton counter={page} setCounter={setPage} />
+          <NextButton counter={page} setCounter={setPage} />
         </>
       )}
       {page === 5 && (
         <>
           <h2>Last question</h2>
-          <button type="button" onClick={handlePageDecrease}>Previous</button>
-          <button type="submit" onClick={handlePageIncrease}>Submit</button>
+          <PreviousButton counter={page} setCounter={setPage} />
+          <SubmitButton counter={page} setCounter={setPage} />
         </>
       )}
       {page === 6 && (
-        <Summary name={name} ageGroup={ageGroup} />
+        <CreatedDream name={name} />
       )}
-      <p>Current page: {page}</p>
     </div>
   )
 }

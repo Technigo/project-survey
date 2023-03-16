@@ -1,0 +1,56 @@
+
+button {
+    display: inline-block;
+    font-family: 'Yuji Syuku', serif;
+    font-size: 15px;
+    padding: 0px 15px 2px 15px;
+    font-weight: 500;
+    border: solid 1px #5489B3;
+    color: #5489B3;
+    margin-right: 10px;
+    /*border: dotted 3px #5489B3;*/
+    border-radius: 7px;
+    text-decoration: none;
+    background-color: #F9DCD4;
+    /*background: #BBA6AD;*/
+    opacity: 70%;
+    cursor: pointer;
+    text-align: center;
+    transition: background 150ms ease-in-out, 
+                transform 150ms ease;
+}
+
+button:hover,
+button:focus {
+    background: #D5B6C8;
+    opacity: 60%;
+}
+
+button:active {
+    transform: scale(0.99);
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+    button {
+        display: inline-block;
+        font-size: 20px;
+        padding: 0px 15px 2px 15px;
+        margin-right: 10px;
+        font-weight: 500;
+    }
+    
+  }
+      
+  
+  @media (min-width: 1025px) {
+
+    button {
+        display: inline-block;
+        font-size: 20px;
+        padding: 0px 15px 2px 15px;
+        margin-right: 10px;
+        font-weight: 500;
+    }
+  
+  }  
