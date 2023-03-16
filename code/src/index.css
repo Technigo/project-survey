@@ -1,13 +1,3 @@
-:root {
-  --headings-font-family: "Rye", cursive;
-  --paragraph-font-family: "Newsreader", serif;
-  --border-color: #94b1aa;
-  --primary-bg-color: #e6f3f0;
-  --secondary-bg-color: #94b1aa;
-  --tertiary-bg-color: #fcfffe;
-  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,20 +5,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-h1, h2, h3, label {
-  font-family: var(--headings-font-family);
-}
-
-h1 {
-  font-weight: 500;
-}
-
-p, button, input, select {
-  font-family: var(--paragraph-font-family);
-}
-
-button {
-  margin: 2px;
 }

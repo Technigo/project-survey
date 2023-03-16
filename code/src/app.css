@@ -1,0 +1,67 @@
+:root {
+  --headings-font-family: "Rye", cursive;
+  --paragraph-font-family: "Newsreader", serif;
+  --border-color: #94b1aa;
+  --primary-bg-color: #e6f3f0;
+  --secondary-bg-color: #94b1aa;
+  --tertiary-bg-color: #fcfffe;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h1, h2, h3, label {
+  font-family: var(--headings-font-family);
+}
+
+h1 {
+  font-weight: 500;
+  text-align: center;
+}
+
+h2 {
+  font-size: 18px;
+font-weight: 100;
+text-align: center;
+}
+
+p, button, input, select {
+  font-family: var(--paragraph-font-family);
+  font-size: 18px;
+}
+
+button {
+  margin: 2px;
+}
+
+form {
+    padding: 10px;
+    display: grid;
+}
+
+.neon-text {
+  width: 30%;
+    margin: 30px auto;
+    text-transform: uppercase;
+    text-shadow: 0 0 7px #fff, 0 0 10px #fff, 
+    0 0 21px #fff, 0 0 42px #f09, 
+    0 0 82px #f09, 0 0 92px #f09, 
+    0 0 102px #f09, 0 0 151px #f09;
+    border: 0.2rem solid #fff;
+    border-radius: 20px;
+    padding: 0.4em;
+    box-shadow: 0 0 0.2rem #fff, 
+    0 0 0.2rem #fff, 0 0 2rem #bc13fe, 
+    0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, 
+    inset 0 0 1.3rem #bc13fe;
+}
+
+.form-container {
+    padding: 10px;
+    background: var(--primary-bg-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    border-radius: 20px;
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe, 0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
+    width: 50%;
+}
