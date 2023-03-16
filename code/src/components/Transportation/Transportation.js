@@ -8,7 +8,7 @@ export const Transportation = ({ transportation, setTransportation }) => {
   };
   return (
     <>
-      <p>Which transportation option will you choose to reach the lodge?</p>
+      <p>What transportation method are you using to reach the lodge?</p>
       <label htmlFor="taxi">
         <input
           type="radio"

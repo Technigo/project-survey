@@ -1,8 +1,7 @@
 import React from 'react';
 import './Textbox.css';
-import { ButtonSubmit } from '../Buttons/ButtonSubmit/ButtonSubmit';
 
-export const Textbox = ({ textbox, setTextbox, handleSubmit }) => {
+export const Textbox = ({ textbox, setTextbox }) => {
   const handleTextboxChange = (event) => {
     console.log(event.target.value);
     setTextbox(event.target.value);
@@ -10,15 +9,15 @@ export const Textbox = ({ textbox, setTextbox, handleSubmit }) => {
 
   return (
     <label htmlFor="textbox">
-        Would you like to add anything else?
+      Add info:
       <input
         type="text"
         id="textbox"
-        name="textbox"
+        name="textbox-free"
         onChange={handleTextboxChange}
         value={textbox}
-        placeholder="Enter text here..." />
-      <ButtonSubmit onSubmit={handleSubmit} />
+        placeholder="Enter text here..."
+        required />
     </label>
   );
 };

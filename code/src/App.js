@@ -5,7 +5,7 @@ import { Name } from './components/Name/Name';
 import { Date } from './components/Date/Date';
 import { Transportation } from './components/Transportation/Transportation';
 import { Equipment } from './components/Equipment/Equipment';
-import { Textbox } from './components/Textbox/Textbox';
+import { AddInfo } from './components/AddInfo/AddInfo';
 import { Summary } from './components/Summary/Summary';
 import { ButtonNext } from './components/Buttons/ButtonNext/ButtonNext';
 
@@ -16,6 +16,7 @@ export const App = () => {
   const [date, setDate] = useState('');
   const [transportation, setTransportation] = useState('');
   const [equipment, setEquipment] = useState('');
+  const [addInfo, setAddInfo] = useState('');
   const [textbox, setTextbox] = useState('');
   const formRef = useRef(null);
 
@@ -56,16 +57,23 @@ export const App = () => {
         {step === 4 && (
           <Equipment equipment={equipment} setEquipment={setEquipment} />
         )}
-        {step === 5 && <Textbox textbox={textbox} setTextbox={setTextbox} />}
+        {step === 5 && (
+          <AddInfo
+            addInfo={addInfo}
+            setAddInfo={setAddInfo}
+            textbox={textbox}
+            setTextbox={setTextbox}
+            handleSubmit={handleSubmit} />
+        )}
         {step === 6 && (
           <Summary
             name={name}
             date={date}
             transportation={transportation}
             equipment={equipment}
+            addInfo={addInfo}
             textbox={textbox}
-            handleStepIncrease={() => setStep(6)}
-            handleSubmit={handleSubmit} />
+            handleStepIncrease={() => setStep(6)} />
         )}
         {step > 0 && step < 5 && (
           <>
