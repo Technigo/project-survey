@@ -113,3 +113,33 @@ input[type=radio] {
 .emoji {
   font-size: 30px;
 }
+
+/*---Mobile Media Queries---*/
+@media  (min-width: 360px) {
+  .html {
+    background-size: 100vh;
+  }
+  .container-main {
+    width: 75%;
+  }
+
+  .superpower-selection {
+    display: flex;
+  }
+}
+
+/*---Desktop---*/
+@media (min-width: 1025px) {
+  .html {
+    background-size: 100vh;
+  }
+
+  .container-main {
+    width: 500px;
+    height: 500px;
+  }
+
+  .superpower-selection {
+    display: flex;
+  }
+}
