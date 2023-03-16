@@ -5,7 +5,7 @@ const Genre = ({ genre, setGenre, step }) => {
   return (
     <div className="container genre">
       <h2>Question {step}</h2>
-      <p>Any genre preferences?</p>
+      <h4>Any genre preferences?</h4>
       <form className="form type">
         <p>Current state: {genre}</p>
         <select

@@ -6,7 +6,7 @@ const Type = ({ type, setType, step }) => {
   return (
     <div className="container type">
       <h2>Question {step}</h2>
-      <p>What type of series are you in the mood for?</p>
+      <h4>What type of series are you in the mood for?</h4>
       <form className="form type">
         <p>Current state: {type}</p>
         {tvtypes.map((item) => (

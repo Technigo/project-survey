@@ -29,7 +29,10 @@ const Summary = ({ name, type, genre, data }) => {
 
   return (
     <div className="container result">
-      <h2>Result</h2>
+      <div className="headings">
+        <h2>Result</h2>
+        <hr />
+      </div>
       <div className="postercontainer">
         <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
       </div>

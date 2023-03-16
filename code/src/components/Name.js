@@ -8,7 +8,7 @@ const Name = ({ name, setName, step }) => {
   return (
     <div className="container name">
       <h2>Question {step}</h2>
-      <p>What is your name?</p>
+      <h4>What is your name?</h4>
       <p>Current state: {name}</p>
       <input type="text" value={name} onChange={handleNameChange} />
     </div>
