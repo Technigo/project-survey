@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
-import { SubmitScreen } from 'components/SubmitScreen';
+import SubmitScreen from 'components/SubmitScreen';
 import RightBox from 'components/RightBox';
 import Page0 from 'components/Page0'
 import Page1 from 'components/Page1';
@@ -10,6 +10,7 @@ import Page4 from 'components/Page4';
 import Page5 from 'components/Page5';
 import Page6 from 'components/Page6';
 import Page7 from 'components/Page7';
+import CountProgress from 'components/CountProgress';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
@@ -88,6 +89,7 @@ export const App = () => {
             yesNews={yesNews}
             satisfaction={satisfaction} />
         )}
+       {/*  <CountProgress counter={counter} /> */}
       </div>
       <RightBox />
     </div>

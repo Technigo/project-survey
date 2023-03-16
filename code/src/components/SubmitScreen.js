@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const SubmitScreen = ({ name, foxtype, date, payment, yesNews, satisfaction }) => {
+const SubmitScreen = ({ name, foxtype, date, payment, yesNews, satisfaction }) => {
   return (
     <div className="summarizebox">
       <h1>Thank you valued customer, you will hear from us shortly!</h1>
@@ -19,3 +19,5 @@ export const SubmitScreen = ({ name, foxtype, date, payment, yesNews, satisfacti
     </div>
   )
 }
+
+export default SubmitScreen;
