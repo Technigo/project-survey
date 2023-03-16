@@ -33,13 +33,22 @@
     font-weight: 400;
   }
 
-.slider-value {
+.slider-1, .slider-2 {
     display: block;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-size: 1em;
-    text-align: left;
     width: 40%;
+  }
+
+  .slider-1 {
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .slider-2 {
+    text-align: right;
+    margin-right: 5px;
   }
 
 .slider {
@@ -61,5 +70,6 @@
     width: 50%;
     margin-top: 10%;
   }
+
 }
 
