@@ -3,6 +3,9 @@
 import React, { useState } from 'react';
 import StartPage from 'components/StartPage';
 import NamePage from 'components/NamePage';
+import RadioQuestion from 'components/RadioQuestion';
+import SelectQuestion from 'components/SelectQuestion';
+import Summary from 'components/Summary';
 
 export const App = () => {
   /* Changes to next question in form */
@@ -11,9 +14,13 @@ export const App = () => {
   const goToNextPage = () => {
     setNextPage(nextPage + 1)
   }
+  const resetForm = () => {
+    setNextPage(0)
+  }
 
   const [nameInput, setNameInput] = useState('')
-
+  const [radioBtn, setRadioBtn] = useState('Never')
+  const [selectBtn, setSelectBtn] = useState('Select option')
   return (
     <div className="main">
       <form className="content">
@@ -22,14 +29,11 @@ export const App = () => {
         {nextPage === 1
           && <NamePage nextPlease={goToNextPage} nameInput={nameInput} setNameInput={setNameInput} />}
         {nextPage === 2
-          && 123}
-        {/* Radio istället för 123 */}
+          && <RadioQuestion nextPlease={goToNextPage} radioBtn={radioBtn} setRadioBtn={setRadioBtn} />}
         {nextPage === 3
-          && 456}
-        {/* Select istället för 456 */}
+          && <SelectQuestion nextPlease={goToNextPage} selectBtn={selectBtn} setSelectBtn={setSelectBtn} />}
         {nextPage === 4
-          && 789}
-        {/* Kvitto istället för 789 */}
+          && <Summary nameInput={nameInput} radioBtn={radioBtn} selectBtn={selectBtn} resetForm={resetForm} />}
       </form>
 
     </div>
