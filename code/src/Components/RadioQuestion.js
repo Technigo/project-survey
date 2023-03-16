@@ -3,7 +3,9 @@ import { NextButton } from './NextButton';
 
 export const RadioQuestion = (props) => {
   return (
-    <div>
+    <form className="radio-form">
+      <p>{props.questionGreeting}</p>
+      <p>{props.questionTitle}</p>
       {props.label.map((label) => {
         return (
           <div>
@@ -17,7 +19,7 @@ export const RadioQuestion = (props) => {
         );
       })}
       <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
-    </div>
+    </form>
   );
 }
 

@@ -4,7 +4,8 @@ import { NextButton } from './NextButton';
 export const SelectQuestion = (props) => {
   return (
     <>
-      <div>
+      <form className="select-form">
+        <p>{props.questionTitle}</p>
         <select
           type="radio"
           id={props.questionId}
@@ -17,7 +18,7 @@ export const SelectQuestion = (props) => {
             )
           })}
         </select>
-      </div>
+      </form>
       <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
     </>
   )

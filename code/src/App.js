@@ -3,8 +3,8 @@ import { Survey } from 'Components/Survey';
 
 export const App = () => {
   return (
-    <form>
+    <div>
       <Survey />
-    </form>
+    </div>
   );
 }

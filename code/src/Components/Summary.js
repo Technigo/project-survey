@@ -3,7 +3,7 @@ import { NextButton } from './NextButton';
 
 export const Summary = (props) => {
   return (
-    <div>
+    <form className="summary-form">
       <p>Awesome, {props.answers.firstName}!</p>
       <p>{props.summaryTitle}</p>
       <p>{props.answers.typeOfHome}</p>
@@ -13,6 +13,6 @@ export const Summary = (props) => {
         <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
         <NextButton onNext={props.onNext} buttonLabel={props.restartButtonLabel} />
       </div>
-    </div>
+    </form>
   );
 }

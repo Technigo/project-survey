@@ -1,16 +1,16 @@
 import React from 'react';
 import { NextButton } from './NextButton';
 
-export const TextQuestion = (props) => {
+export const CheckboxQuestion = (props) => {
   return (
-    <form className="textQuestion-form">
+    <form className="checkbox-form">
       <p>{props.questionTitle}</p>
       <div>
-        <label htmlFor={props.questionId}>{props.label}</label>
         <input
-          type="text"
+          type="checkbox"
           id={props.questionId}
-          onChange={(event) => props.onValueUpdate(event.target.value)} />
+          checked={props.answers.park}
+          onChange={(event) => props.onValueUpdate(event.target.checked)} />
         <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
       </div>
     </form>
