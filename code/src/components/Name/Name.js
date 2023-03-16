@@ -2,7 +2,7 @@ import React from 'react';
 import './name.css';
 import Warrior from '../../images/Warrior_Idle_1.png'
 
-export const Name = ({ name, setName, handleStepIncrease }) => {
+export const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
@@ -14,10 +14,9 @@ export const Name = ({ name, setName, handleStepIncrease }) => {
         <img src={Warrior} alt="warrior" />
       </div>
       <p>What is your name, traveller?</p>
-      <input type="text" value={name} onChange={handleNameChange} />
-      <div>
-        <button className="step-btn" type="button" onClick={handleStepIncrease}>Next</button>
-      </div>
+      <form>
+        <input type="text" value={name} onChange={handleNameChange} required />
+      </form>
     </div>
   )
 }

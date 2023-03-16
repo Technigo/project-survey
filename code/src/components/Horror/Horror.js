@@ -1,7 +1,7 @@
 import React from 'react';
 import './horror.css';
 
-export const Horror = ({ horror, setHorror, handleStepIncrease }) => {
+export const Horror = ({ horror, setHorror }) => {
   const handleHorrorChange = (event) => {
     setHorror(event.target.value);
   }
@@ -18,9 +18,6 @@ export const Horror = ({ horror, setHorror, handleStepIncrease }) => {
           <option value="airplane">Falling out of an airplane.</option>
         </select>
       </form>
-      <div>
-        <button className="step-btn" type="button" onClick={handleStepIncrease}>Next</button>
-      </div>
     </div>
   )
 }

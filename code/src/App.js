@@ -10,6 +10,7 @@ import { Food } from './components/Food/Food';
 import { StoryTime } from './components/StoryTime/StoryTime';
 
 export const App = () => {
+  const stepsTotalCount = 5;
   // useStates here
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
@@ -29,32 +30,27 @@ export const App = () => {
       {step === 1 && (
         <Name
           name={name}
-          setName={setName}
-          handleStepIncrease={handleStepIncrease} />
+          setName={setName} />
       )}
       {step === 2 && (
         <Place
           place={place}
-          setPlace={setPlace}
-          handleStepIncrease={handleStepIncrease} />
+          setPlace={setPlace} />
       )}
       {step === 3 && (
         <Animal
           animal={animal}
-          setAnimal={setAnimal}
-          handleStepIncrease={handleStepIncrease} />
+          setAnimal={setAnimal} />
       )}
       {step === 4 && (
         <Horror
           horror={horror}
-          setHorror={setHorror}
-          handleStepIncrease={handleStepIncrease} />
+          setHorror={setHorror} />
       )}
       {step === 5 && (
         <Food
           food={food}
-          setFood={setFood}
-          handleStepIncrease={handleStepIncrease} />
+          setFood={setFood} />
       )}
       {step === 6 && (
         <StoryTime
@@ -64,6 +60,30 @@ export const App = () => {
           horror={horror}
           food={food} />
       )}
+
+      {step > 1 && step < 6 && (
+        <p className="progress-meter">
+          <progress value={step} max={stepsTotalCount + 1}>
+            {step} of {stepsTotalCount}
+          </progress>
+          <span>
+            <br />
+            <b>{step}</b> / {stepsTotalCount}
+          </span>
+        </p>
+      )}
+
+      {step < 6 && (
+        <div className="step-btn">
+          <button
+            type="button"
+            onClick={handleStepIncrease}>
+            {step === 1 && 'Create story'}
+            {step > 1 && step < 6 && 'Next question'}
+          </button>
+        </div>
+      )}
+
     </div>
   );
 }

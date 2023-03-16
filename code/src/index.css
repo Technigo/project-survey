@@ -14,6 +14,24 @@ code {
 .questions-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 50px; 
-
+  max-width: 300px;
+  margin: auto;
+  gap: 20px;
 }
+
+.step-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.progress-meter {
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+  gap: 2px;
+}
+
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import './food.css';
 
-export const Food = ({ food, setFood, handleStepIncrease }) => {
+export const Food = ({ food, setFood }) => {
   const handleFoodChange = (event) => {
     setFood(event.target.value);
   }
@@ -9,9 +9,6 @@ export const Food = ({ food, setFood, handleStepIncrease }) => {
     <div className="food-container">
       <p>What is your favourite food?</p>
       <input type="text" value={food} onChange={handleFoodChange} />
-      <div>
-        <button className="step-btn" type="button" onClick={handleStepIncrease}>Next</button>
-      </div>
     </div>
   )
 }

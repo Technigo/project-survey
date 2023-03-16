@@ -4,7 +4,7 @@ import mountain1 from '../../images/mountains1.png'
 import forest from '../../images/forest.png'
 import stars from '../../images/stars.png'
 
-export const Place = ({ place, setPlace, handleStepIncrease }) => {
+export const Place = ({ place, setPlace }) => {
   const handlePlaceChange = (event) => {
     setPlace(event.target.value);
   }
@@ -20,15 +20,12 @@ export const Place = ({ place, setPlace, handleStepIncrease }) => {
         <select
           onChange={handlePlaceChange}
           value={place}>
-          <option value="">Select location</option>
+          <option value="" disabled>Select location</option>
           <option value="forest">A green forest</option>
           <option value="mountain">A stunning mountain valley</option>
           <option value="stars">A mystical magical forest</option>
         </select>
       </form>
-      <div>
-        <button className="step-btn" type="button" onClick={handleStepIncrease}>Next</button>
-      </div>
     </div>
   )
 }
