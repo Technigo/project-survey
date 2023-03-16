@@ -57,7 +57,7 @@ export const App = () => {
       )}
       {step === 6 && (
         <>
-          <Result name={name} type={type} genre={genre} data={data} />
+          <Result name={name} type={type} genre={genre} score={score} data={data} />
           <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
         </>
       )}
