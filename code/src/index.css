@@ -167,4 +167,9 @@ justify-content: center;
     font-size: 38px;
   }
 
+  .checkboxsatisfaction {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }

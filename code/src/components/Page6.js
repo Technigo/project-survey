@@ -13,9 +13,11 @@ const Page6 = ({ counter, setCounter, satisfaction, setSatisfaction }) => {
   ]
   return (
     <div className="leftboxChild">
-      <form>
-      How likely are you to recommend Fox-in-a-box™,
-      1 being the lowest probability and 5 being the highest?
+      <form className="checkboxsatisfaction">
+        <p>
+          How likely are you to recommend Fox-in-a-box™,
+        1 being the lowest probability and 5 being the highest?
+        </p>
         {checkboxScore.map((choice) => (
           <label key={choice}>
             <input
