@@ -10,16 +10,18 @@
 
 h1, h2, h3 {
   font-family: var(--headings-font-family);
-  font-weight: 100;
   color: #fff;
   text-shadow: 0 0 3px #0000;
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 90;
   text-align: center;
 }
 
+h2, h3 {
+      font-weight: 100;
+}
 h2 {
   font-size: 18px;
   text-align: center;
@@ -31,7 +33,15 @@ h3 {
 
 p, button, input, select {
   font-family: var(--paragraph-font-family);
-  font-size: 18px;
+}
+
+p, button, input {
+font-size: 20px;
+}
+
+select {
+font-size: 22px;
+font-weight: 700;
 }
 
 label {
@@ -39,6 +49,7 @@ label {
 }
 
 button {
+    display: flex;
     border-color: var(--border-color);
     color: #000;
     box-shadow: var(--box-shadow);
@@ -46,11 +57,11 @@ button {
     width: 50%;
     margin: 20px auto;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     border-radius: 20px;
     font-weight: 700;
     height: 50px;
-    display: inline-block;
 }
 
 button:hover {
@@ -69,8 +80,12 @@ input {
 
 select {
     margin: 0 auto;
-    width: 60%;
+    width: 100%;
     height: 40px;
+}
+
+option {
+    font-size: 18px;
 }
 
 .input-field {
@@ -79,7 +94,8 @@ select {
 }
 
 .neon-text {
-    width: 30%;
+    width: 70%;
+    margin-top: 100px;
     margin: 30px auto;
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 
     0 0 21px #fff, 0 0 42px var(--secondary-bg-color), 
@@ -93,6 +109,7 @@ select {
     0 0 0.8rem var(--tertiary-bg-color), 0 0 2.8rem var(--tertiary-bg-color), 
     inset 0 0 1.3rem var(--tertiary-bg-color);
     background-color: var(--primary-bg-color);
+    text-align: center;
 }
 
 .form-container {
@@ -105,8 +122,9 @@ select {
     box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 
     0 0 2rem var(--tertiary-bg-color), 0 0 0.8rem var(--tertiary-bg-color), 
     0 0 2.8rem var(--tertiary-bg-color), inset 0 0 1.3rem var(--tertiary-bg-color);
-    width: 50%;
-     background-color: var(--primary-bg-color);
+    width: 90%;
+    background-color: var(--primary-bg-color);
+    opacity: 0.8;
 }
 
 .radio-btns {
@@ -114,8 +132,77 @@ select {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:#fff;
 }
 
-/* .radio-btns:hover {
+.radio-btns:hover {
    cursor: pointer;
-} */
+}
+
+.radio-btns label {
+    text-align: left;
+}
+
+.survey-summary p {
+      color: #fff;
+      font-size: 22px;
+}
+
+/* ---- TABLET ----- */
+
+@media only screen and (min-width: 744px) {
+   .form-container {
+    width: 80%;
+}
+
+ .neon-text {
+    width: 40%;
+}
+
+button {
+    width: 25%;
+}
+
+select {
+    margin: 0 auto;
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+} 
+
+option {
+    font-size: 18px;
+}
+
+.input-field {
+    width: 80%;
+    margin: auto;
+}
+}
+
+/* ---- DESKTOP ----- */
+@media only screen and (min-width: 1280px) {
+.form-container {
+    width: 50%;
+}
+
+ .neon-text {
+    width: 20%;
+}
+
+button {
+    width: 25%;
+}
+
+select {
+    margin: 0 auto;
+    width: 40%;
+    height: 40px;
+}
+
+.input-field {
+    width: 60%;
+    margin: auto;
+}
+
+}
