@@ -30,9 +30,10 @@ h2 {
   font-size: 18px;
 }
 
-h2 {
-    color:#000;
-}
+/* h2 {
+    color:rgb(226, 216, 216);
+    text-shadow: 0 0 3px #000;
+} */
 
 p, button, input, select {
   font-family: var(--paragraph-font-family);

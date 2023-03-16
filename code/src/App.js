@@ -30,15 +30,11 @@ export const App = () => {
 
   return (
     <div>
-      <Header />
+      <Header questionNumber={question} />
       {question === 0 && (
         <div>
-          <h2>Question number: 0/3</h2>
           <button type="button" onClick={handleQuestionIncrease}>Start survey</button>
         </div>
-      )}
-      {question > 0 && question < 4 && (
-        <div><h2>Question number: {question}/3</h2></div>
       )}
       {question === 1 && (
         <div className="form-container">

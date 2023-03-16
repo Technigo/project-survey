@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({ questionNumber }) => {
   return (
-    <div className="header">
-      <h1 className="neon-text">Cat Survey</h1>
+    <div className="neon-text">
+      <h1>Cat Survey</h1>
+      {questionNumber <= 3 && <h2>Question number: {questionNumber}/3</h2>}
     </div>
   );
 }
