@@ -9,7 +9,7 @@ export const Equipment = ({ setEquipment }) => {
 
   return (
     <>
-      <p>What sport are you interested in renting equipment for?</p>
+      <h2>What sport are you interested in renting equipment for?</h2>
       <select
         name="equipment"
         id="equipment"

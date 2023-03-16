@@ -8,42 +8,44 @@ export const Transportation = ({ transportation, setTransportation }) => {
   };
   return (
     <>
-      <p>What transportation method are you using to reach the lodge?</p>
-      <label htmlFor="taxi">
-        <input
-          type="radio"
-          id="taxi"
-          name="transportation"
-          value="taxi"
-          checked={transportation === 'taxi'}
-          onChange={handleTransportationChange}
-          required />
+      <h2>What transportation method are you using to reach the lodge?</h2>
+      <div className="radio-wrapper">
+        <label htmlFor="taxi">
+          <input
+            type="radio"
+            id="taxi"
+            name="transportation"
+            value="taxi"
+            checked={transportation === 'taxi'}
+            onChange={handleTransportationChange}
+            required />
         Taxi
-      </label>
+        </label>
 
-      <label htmlFor="shuttle">
-        <input
-          type="radio"
-          id="shuttle"
-          name="transportation"
-          checked={transportation === 'shuttle'}
-          value="shuttle"
-          onChange={handleTransportationChange}
-          required />
+        <label htmlFor="shuttle">
+          <input
+            type="radio"
+            id="shuttle"
+            name="transportation"
+            checked={transportation === 'shuttle'}
+            value="shuttle"
+            onChange={handleTransportationChange}
+            required />
         Hotel shuttle
-      </label>
+        </label>
 
-      <label htmlFor="car">
-        <input
-          type="radio"
-          id="car"
-          name="transportation"
-          checked={transportation === 'car'}
-          value="car"
-          onChange={handleTransportationChange}
-          required />
+        <label htmlFor="car">
+          <input
+            type="radio"
+            id="car"
+            name="transportation"
+            checked={transportation === 'car'}
+            value="car"
+            onChange={handleTransportationChange}
+            required />
         Car
-      </label>
+        </label>
+      </div>
     </>
   );
 };

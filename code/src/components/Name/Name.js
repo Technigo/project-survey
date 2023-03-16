@@ -8,15 +8,17 @@ export const Name = ({ name, setName }) => {
     setName(upCaseUserName);
   };
   return (
-    <label htmlFor="name-input">
+    <section className="name-wrapper">
+      <label htmlFor="name-input">
       Enter name:
-      <input
-        type="text"
-        id="name-input"
-        onChange={handleNameChange}
-        value={name}
-        placeholder="Enter name here"
-        required />
-    </label>
+        <input
+          type="text"
+          id="name-input"
+          onChange={handleNameChange}
+          value={name}
+          placeholder="Enter name here"
+          required />
+      </label>
+    </section>
   );
 };

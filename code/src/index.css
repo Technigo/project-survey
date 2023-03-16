@@ -19,20 +19,61 @@ code {
 }
 /* This a double body element - remove later*/
 body {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr repeat(2, 150px) 1fr;
   justify-content: center;
   align-content: center;
+  text-align: center;
+  background-image: url('../public/assets/pexels-roman-pohorecki-15382.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh
 }
+
+#root {
+  display: grid;
+  grid-area: 2 / 2 / 3 / 4;
+}
+
 
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 2px solid blue;
-  padding: 100px;
-  margin: 20px;
+  justify-content: center;
+  border-radius: 10%;
+  padding: 20px;
+  background-color: rgb(245, 242, 242);
+  opacity: 0.9;
 }
 
 input {
-  border: 2px solid red;
+  border: none;
+}
+
+button {
+  margin: 20px;
+  font-weight: bold;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+  body {
+    grid-template-columns: 1fr repeat(6, 100px) 1fr;
+  }
+  
+  #root {
+    grid-area: 2 / 2 / 3 / 8;
+  }
+}
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+  body {
+    grid-template-columns: 1fr repeat(10, 100px) 1fr;
+  }
+  
+  #root {
+    grid-area: 2 / 4 / 3 / 10;
+  }
 }

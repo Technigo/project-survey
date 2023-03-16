@@ -12,9 +12,9 @@ export const Summary = ({
   console.log(name, date, transportation, equipment, addInfo, textbox);
   return (
     <>
-      <p>
+      <h2>
         Thank you for your time <span>{name}</span>!
-      </p>
+      </h2>
       <p>
         We have noted that you are going to the lodge by{' '}
         <span>{transportation}</span>, that you are interested in renting{' '}
@@ -34,7 +34,7 @@ export const Summary = ({
         Thank you once again for choosing us as your destination, and we look
         forward to welcoming you on <span>{date}</span>!
       </p>
-      <p>Best regards,</p>
+      <p className="regards-text">Best regards,</p>
       <p>The Mountain Lodge team</p>
     </>
   );

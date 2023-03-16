@@ -1,0 +1,4 @@
+.name-wrapper {
+    display: flex;
+    flex-direction: column;
+}

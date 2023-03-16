@@ -1,0 +1,23 @@
+.question-wrappers {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+}
+
+.step-counter {
+    font-size: 12px;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+    .question-wrappers {
+        height: 450px;
+    }
+}
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+    .question-wrappers {
+        height: 500px;
+    }
+}

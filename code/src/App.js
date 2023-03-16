@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react';
+import './App.css';
 import { Header } from './components/Header/Header';
 import { Intro } from './components/Intro/Intro';
 import { Name } from './components/Name/Name';
@@ -38,9 +39,9 @@ export const App = () => {
   };
 
   return (
-    <>
+    <main className="main-wrapper">
       <Header />
-      <form ref={formRef} onSubmit={handleSubmit}>
+      <form className="question-wrappers" ref={formRef} onSubmit={handleSubmit}>
         {step === 0 && (
           <Intro
             intro={intro}
@@ -77,11 +78,11 @@ export const App = () => {
         )}
         {step > 0 && step < 5 && (
           <>
-            <p>Current step: {step}/5</p>
             <ButtonNext onClick={handleStepIncrease} />
+            <p className="step-counter">Current step: {step}/5</p>
           </>
         )}
       </form>
-    </>
+    </main>
   );
 };

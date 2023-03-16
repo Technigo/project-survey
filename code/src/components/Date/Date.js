@@ -8,7 +8,7 @@ export const Date = ({ date, setDate }) => {
   };
   return (
     <>
-      <p>What is your arrival date?</p>
+      <h2>What is your arrival date?</h2>
       <input
         type="date"
         onChange={handleDateChange}

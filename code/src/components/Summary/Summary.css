@@ -1,5 +1,7 @@
 span {
     font-weight: bold;
-    color: blue;
   }
-  
+
+  .regards-text {
+    margin-bottom: 0;
+  }
