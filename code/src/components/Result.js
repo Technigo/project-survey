@@ -30,15 +30,16 @@ const Summary = ({ name, type, genre, data }) => {
   return (
     <div className="container result">
       <h2>Result</h2>
-      <div className="series">
+      <div className="postercontainer">
+        <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
+      </div>
+      <div className="seriestext">
         <h3>{data.series[i].name}</h3>
         <p>{data.series[i].plot}</p>
         <span>IMDB Score: {data.series[i].score} / 10</span>
-        <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
-
         {/* Adds class "hidden" to the div if comment is empty */}
         <div className={`comments ${data.series[i].comment === '' ? 'hidden' : ''}`}>
-          <h3>Comment from Matilda:</h3>
+          <h4>Comment from Matilda:</h4>
           <p>&quot;{data.series[i].comment}&quot;</p>
         </div>
       </div>

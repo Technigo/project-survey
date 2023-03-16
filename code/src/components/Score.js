@@ -1,14 +1,15 @@
 import React from 'react';
 
-const Score = ({ score, setScore }) => {
+const Score = ({ score, setScore, step }) => {
   // console.log('score:', score); This gives a loooong line of code when using the slider, beware.
 
   return (
     <form className="container score">
-      <h2>Do you want to set a minimum IMDB score?</h2>
+      <h2>Question {step}</h2>
+      <h3>Do you want to set a minimum IMDB score?</h3>
       <p>(If it&apos;s below 6, you should not watch it, period.)</p>
-      <p>The state is currently: {score} /10</p>
       <hr />
+      <p>The state is currently: {score} /10</p>
       <label htmlFor="imdbscore">
         IMDB score:
         <input
