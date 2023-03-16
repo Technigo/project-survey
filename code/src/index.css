@@ -25,3 +25,6 @@ p, button, input, select {
   font-family: var(--paragraph-font-family);
 }
 
+button {
+  margin: 2px;
+}
