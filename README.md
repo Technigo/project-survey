@@ -1,6 +1,6 @@
 # Survey form with React
 
-This survey-project is done to practice using useState in React.
+This sproject has been done to practice using useState in React.
 
 ## The problem
 
@@ -8,7 +8,7 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://projectsurveyleot.netlify.app
 
 ## Image credits:
 
