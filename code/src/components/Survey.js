@@ -4,6 +4,15 @@ import Summary from './Summary';
 
 const ageGroups = ['1', '2', '3']; /* Input for radio-buttons */
 
+const Buttons = ({ handleNextClick, handleBackClick }) => {
+  return (
+    <div className="btn">
+      <button type="button" onClick={handleBackClick}>👈 Back</button>
+      <button type="submit" onClick={handleNextClick}> Next 👉</button>
+    </div>
+  )
+}
+
 const Survey = () => {
   const [name, setName] = useState(''); /* Handles name input */
   const [location, setLocation] = useState(''); /* Handles location input */
@@ -11,78 +20,57 @@ const Survey = () => {
   const [ageGroup, setAgeGroup] = useState(''); /* Handles age input */
   const [counter, setCounter] = useState(0); /* Handles survey moving forward */
 
-  const handleNextClick = () => { /* Handles buttons */
-    setCounter(counter + 1);
-  }
+  const HandleNextClick = () => { setCounter(counter + 1); } /* Handles next button */
 
-  const handleForm = (event) => { /* Handles form */
-    event.preventDefault()
-  }
+  const HandleBackClick = () => { setCounter(counter - 1); } /* Handles back button */
+
+  const handleForm = (event) => { event.preventDefault(); } /* Handles form */
 
   return (
     <section className="surveyWrapper">
       {counter === 0 && (
         <Startpage startCount={() => setCounter(1)} /> /* Shows startpage of Survey */
       )}
-      {counter === 1 && (
-        <>
-          <form
-            onSubmit={() => handleForm()}
-            className="answer">
-            <label htmlFor="Name"> What is your name?
-              <input
-                type="text"
-                onChange={(event) => setName(event.target.value)}
-                value={name} />
-            </label>
-          </form>
-          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
-        </>
-      )}
-      {counter === 2 && (
-        <>
-          <form
-            onSubmit={() => handleForm()}
-            className="answer">
-            <label htmlFor="Location"> Where do you live?
-              <select
-                onChange={(event) => setLocation(event.target.value)}
-                value={location}>
-                <option value="">Select location</option>
-                <option value="stockholm">Stockholm</option>
-                <option value="barcelona">Barcelona</option>
-                <option value="oslo">Oslo</option>
-              </select>
-            </label>
-          </form>
-          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
-        </>
-      )}
-      {counter === 3 && (
-        <>
-          <form
-            onSubmit={() => handleForm()}
-            className="answer">
-            <label htmlFor="Newsletter?"> Newsletter?
-              <input
-                type="checkbox"
-                onChange={(event) => setWantsNewsletter(event.target.checked)}
-                checked={wantsNewsletter}
-                value="Yes" />
-            </label>
-          </form>
-          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
-        </>
-      )}
-      {counter === 4 && (
-        <>
-          <form
-            onSubmit={() => handleForm()}
-            className="answer">
-              Age?
+      <form onSubmit={() => handleForm()} className="answer">
+        {counter === 1 && (
+          <label htmlFor="Name"> What is your name?
+            <input
+              required
+              type="text"
+              placeholder="Type your name here"
+              onChange={(event) => setName(event.target.value)}
+              value={name} />
+          </label>
+        )}
+        {counter === 2 && (
+          <label htmlFor="Location"> Where do you live?
+            <select
+              required
+              onChange={(event) => setLocation(event.target.value)}
+              value={location}>
+              <option value="">Select location 👇</option>
+              <option value="stockholm">Stockholm</option>
+              <option value="barcelona">Barcelona</option>
+              <option value="oslo">Oslo</option>
+            </select>
+          </label>
+        )}
+        {counter === 3 && (
+          <label htmlFor="Newsletter?"> Newsletter?
+            <input
+              required
+              type="checkbox"
+              onChange={(event) => setWantsNewsletter(event.target.checked)}
+              checked={wantsNewsletter}
+              value="Yes" />
+          </label>
+        )}
+        {counter === 4 && (
+          <>
             {ageGroups.map((group) => (
               <label htmlFor="Age group:" key={group}>
                 <input
+                  required
                   type="radio"
                   onChange={(event) => setAgeGroup(event.target.value)}
                   value={group}
@@ -90,10 +78,12 @@ const Survey = () => {
                 {group}
               </label>
             ))}
-          </form>
-          <button type="button" onClick={() => handleNextClick()}> Next 👉</button>
-        </>
-      )}
+          </>
+        )}
+        {counter >= 1 && counter < 5 && (
+          <Buttons handleNextClick={HandleNextClick} handleBackClick={HandleBackClick} />
+        )}
+      </form>
       {counter === 5 && (
         <>
           <div className="answer">
@@ -103,7 +93,7 @@ const Survey = () => {
               newsInput={wantsNewsletter.valueOf}
               ageInput={ageGroup} />
           </div>
-          <button type="submit" onClick={() => handleNextClick()}> Submit</button>
+          <button type="submit" onClick={() => HandleNextClick()}> Submit</button>
         </>
       )}
       {counter === 6 && (
