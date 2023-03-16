@@ -5,7 +5,6 @@ import { Prefer } from './components/Prefer';
 import { Results } from './components/Results';
 import { Color } from './components/Color';
 import { Thing } from './components/Thing';
-// import { handleQuizResult } from './components/quiz'
 import './index.css';
 
 export const App = () => {
@@ -17,50 +16,10 @@ export const App = () => {
   const [results] = useState('')
   const [started, setStarted] = useState(false);
 
-  const calculateResult = ({ prefer, thing, colors }) => {
-    let result;
-    if (prefer === 'surf' && thing === 'ocean' && colors === 'black') {
-      result = 'shark';
-    } else if ((prefer === 'surf' && thing === 'sand' && colors === 'black')
-      || (prefer === 'surf' && thing === 'mountain' && colors === 'black')) {
-      result = 'dog+surf';
-    } else if (prefer === 'surf' && thing === 'city' && colors === 'black') {
-      result = 'seagull';
-    } else if (colors === 'green' && prefer === 'surf' && thing === 'ocean') {
-      result = 'turtle';
-    } else if (colors === 'green' && prefer === 'surf' && thing === 'sand') {
-      result = 'turtle';
-    } else if (colors === 'green' && prefer === 'surf' && thing === 'mountain') {
-      result = 'parrot';
-    } else if (colors === 'green' && prefer === 'surf' && thing === 'city') {
-      result = 'turtle on a walk';
-    } else if (colors === 'pink' && prefer === 'surf' && thing === 'ocean') {
-      result = 'jellyFish';
-    } else if (colors === 'pink' && prefer === 'surf' && thing === 'sand') {
-      result = 'Pink sand crabs';
-    } else if (colors === 'pink' && prefer === 'surf' && thing === 'mountain') {
-      result = 'jelly fish';
-    } else if (colors === 'brown' && prefer === 'surf' && thing === 'city') {
-      result = 'jelly fish';
-    } else if (colors === 'brown' && prefer === 'surf' && thing === 'ocean') {
-      result = 'dog +picture of dog that surfs';
-    } else if (colors === 'brown' && prefer === 'surf' && thing === 'sand') {
-      result = 'Dog';
-    } else {
-      result = 'unknown';
-    }
-
-    return result;
-  }
-
   const handleNextStep = () => {
     console.log('counter before', counter);
     setCounter(counter + 1);
     console.log('after', counter)
-    if (counter === 4) {
-      const result = calculateResult({ prefer: prefers, thing: things, colors: color });
-      setResults(result);
-    }
   }
   const handleStartQuiz = () => {
     setStarted(true);
@@ -68,14 +27,14 @@ export const App = () => {
   };
 
   return (
-    <div className="StartPage">
+    <main className="StartPage">
       {!started && (
-        <>
+        <header>
           <h1>Answer these questions and we will tell you your favourite animal</h1>
-          <button type="button" onClick={handleStartQuiz} className="startBtn">
-            Start
+          <button type="button" onClick={handleStartQuiz} className="startBtn" aria-label="press button to start the quiz">
+            Start quiz
           </button>
-        </>
+        </header>
       )}
 
       {counter === 1 && (
@@ -85,7 +44,7 @@ export const App = () => {
         </div>)}
 
       {counter === 2 && (
-        <Prefer prefer={prefers} setPrefer={setPrefers} counterFromApp={counter} setCounter={setCounter} />
+        <Prefer prefers={prefers} setPrefers={setPrefers} counterFromApp={counter} setCounter={setCounter} />
       )}
       {counter === 3 && (
         <Color color={color} setColor={setColor} counterFromApp={counter} setCounter={setCounter} />
@@ -94,7 +53,7 @@ export const App = () => {
         <Thing thing={things} setThing={setThing} counterFromApp={counter} setCounter={setCounter} />
       )}
       {counter >= 5 && (
-        <Results name={name} color={color} prefer={prefers} thing={things} result={results} />)}
+        <Results name={name} color={color} prefers={prefers} thing={things} result={results} />)}
 
       {(counter === 1 && !name)
        || (counter === 2 && !prefers)
@@ -103,12 +62,12 @@ export const App = () => {
           <p>Please answer the current question before proceeding.</p>
         ) : (
           started && counter < 5 && (
-            <button type="button" onClick={handleNextStep} className="nextQuestion">
+            <button type="button" onClick={handleNextStep} className="nextQuestion" aria-label="press next question button after inserting your name">
               Next question
             </button>
           )
         )}
-    </div>
+    </main>
   );
 }
 // start button hur ska jag sätta button nr 2 vart?
