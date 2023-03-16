@@ -1,0 +1,20 @@
+.secondo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.image-container-secondo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.image-container-secondo img {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}

@@ -1,5 +1,20 @@
 .starter-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.image-container-starter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.image-container-starter img {
+    border-radius: 20%;
+    height: 200px;
+    width: 200px;
 }

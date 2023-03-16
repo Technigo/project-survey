@@ -1,0 +1,20 @@
+.pasta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.image-container-pasta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+
+}
+.image-container-pasta img {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
