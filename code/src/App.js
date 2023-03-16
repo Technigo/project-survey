@@ -92,25 +92,16 @@ export const App = () => {
       {counter >= 1 && counter < 6 && (
         <Buttons handleNextClick={HandleNextClick} handleBackClick={HandleBackClick} />
       )}
-      <div className="summaryEnd">
-        {counter === 6 && (
+      {counter === 6 && (
         /* Shows summary of Survey */
-          <Summary
-            nameInput={name}
-            ageInput={ageGroup}
-            locationInput={location}
-            greenInput={greenArea}
-            feedbackInput={feedback}
-            submitBtn={() => HandleNextClick()} />
-        )}
-        {counter === 7 && (
-        /* Shows last page of Survey */
-          <>
-            <h2>Thank you!</h2>
-            <button type="button" onClick={() => window.location.reload()}> Restart</button>
-          </>
-        )}
-      </div>
+        <Summary
+          nameInput={name}
+          ageInput={ageGroup}
+          locationInput={location}
+          greenInput={greenArea}
+          feedbackInput={feedback}
+          submitBtn={() => [alert('Thank you!')][window.location.reload()]} />
+      )}
     </main>
   )
 };
