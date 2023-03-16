@@ -33,7 +33,7 @@ export const App = () => {
         {nextPage === 3
           && <SelectQuestion nextPlease={goToNextPage} selectBtn={selectBtn} setSelectBtn={setSelectBtn} />}
         {nextPage === 4
-          && <Summary nameInput={nameInput} radioBtn={radioBtn} selectBtn={selectBtn} resetForm={resetForm} />}
+          && <Summary summaryList={[nameInput, radioBtn, selectBtn]} resetForm={resetForm} />}
       </form>
 
     </div>
