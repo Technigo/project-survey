@@ -6,16 +6,15 @@ const Score = ({ score, setScore, step }) => {
   return (
     <form className="score-container">
       <div className="headings">
-        <h2>Question {step}</h2>
+        <h2>Question {step} / 5</h2>
         <hr />
       </div>
       <div className="question-container">
         <h3>Do you want to set a minimum IMDB score?</h3>
         <p>(If it&apos;s below 6, you should not watch it, period.)</p>
         <hr />
-        <p>The state is currently: {score} /10</p>
+        <p>Min IMDB score: {score} /10</p>
         <label htmlFor="imdbscore">
-          IMDB score:
           <input
             type="range"
             id="imdbscore"

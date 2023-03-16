@@ -6,13 +6,13 @@ const Genre = ({ genre, setGenre, step }) => {
   return (
     <div className="genre-container">
       <div className="headings">
-        <h2>Question {step}</h2>
+        <h2>Question {step} / 5</h2>
         <hr />
       </div>
       <div className="question-container">
         <h4>Any genre preferences?</h4>
         <form className="form type">
-          <p>Current state: {genre}</p>
+          {/* <p>Current state: {genre}</p> */}
           <select
             onChange={(event) => setGenre(event.target.value)}
             value={genre}>

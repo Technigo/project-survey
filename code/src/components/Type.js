@@ -8,13 +8,13 @@ const Type = ({ type, setType, step }) => {
   return (
     <div className="type-container">
       <div className="headings">
-        <h2>Question {step}</h2>
+        <h2>Question {step} / 5</h2>
         <hr />
       </div>
       <div className="question-container">
         <h4>What type of series are you in the mood for?</h4>
         <form className="form type">
-          <p>Current state: {type}</p>
+          {/* <p>Current state: {type}</p> */}
           {tvtypes.map((item) => (
             <label key={item} htmlFor="radiotype">
               <div
