@@ -21,68 +21,85 @@ export const App = () => {
     setStep(step - 1)
   }
 
-  const handleStepReset = () => {
+  const handleStepRestart = () => {
     setStep(1)
   }
 
   return (
-    <div className="outer-part">
-      <div className="inner-part">
-        {step === 1 && (
-          <div>
-            <Start />
-            <button className="start-btn" type="button" onClick={handleStepIncrease}>Start here</button>
-          </div>
-          )
-        }
+    <>
+      <div className="outer-part">
+        <div className="inner-part">
+          {step === 1 && (
+            <div>
+              <Start />
+              <button className="start-btn" type="button" onClick={handleStepIncrease}>Start here</button>
+            </div>
+          )}
 
-        {step === 2 && (
-          <Subscription subscriptionQ={subscriptionQ} setSubscriptionQ={setSubscriptionQ} />
-          )
-        }
+          {step === 2 && (
+            <Subscription subscriptionQ={subscriptionQ} setSubscriptionQ={setSubscriptionQ} />
+          )}
 
-        {step === 3 && (
-          <Purchase purchase={purchase} setPurchase={setPurchase} />
-          )
-        }
+          {step === 3 && (
+            <Purchase purchase={purchase} setPurchase={setPurchase} />
+          )}
 
-        {step === 4 && (
-          <div>
-            <FreeText
-            headline="Favorite purchases"
-            input={often}
-            setInput={setOften}
-            inputLabel="Which drink do you purchase most often when at a cafe?"
-            id="favorite-purchase"
-            placeholder="My favorite purchase is..."
-            htmlFor="favorite-purchase" />
-          </div>
-          )
-        }
+          {step === 4 && (
+            <div>
+              <FreeText
+                headline="Favorite purchases"
+                input={often}
+                setInput={setOften}
+                inputLabel="Which drink do you purchase most often when at a cafe?"
+                id="favorite-purchase"
+                placeholder="My favorite purchase is..."
+                htmlFor="favorite-purchase" />
+            </div>
+          )}
 
-        {step === 5 && (
-          <div>
-            <FreeText
-            headline="Something missing?"
-            input={missing}
-            setInput={setMissing}
-            inputLabel="Is there a drink you feel is missing at most cafes?"
-            id="missing-drink"
-            placeholder="I would love if all cafes offered..."
-            htmlFor="missing-drink" />
-          </div>
-          )
-        }
+          {step === 5 && (
+            <div>
+              <FreeText
+                headline="Something missing?"
+                input={missing}
+                setInput={setMissing}
+                inputLabel="Is there a drink you feel is missing at most cafes?"
+                id="missing-drink"
+                placeholder="I would love if all cafes offered..."
+                htmlFor="missing-drink" />
+            </div>
+          )}
 
-        {step === 6 && (
-          <div>
-            <Conclusion subscriptionQ={subscriptionQ} purchase={purchase} often={often} missing={missing} />
-          </div>
-          )
-        }
+          {step === 6 && (
+            <div>
+              <Conclusion
+                subscriptionQ={subscriptionQ}
+                purchase={purchase}
+                often={often}
+                missing={missing} />
+            </div>
+          )}
 
-         Find me in src/app.js!
+          {step < 5 && step > 1 && (
+            <div>
+              <button className="next-btn" type="button" onClick={handleStepIncrease}>Next question</button>
+            </div>
+          )}
+
+          {step > 1 && step < 7 && (
+            <div>
+              <button className="prev-btn" type="button" onClick={handleStepDecrease}>Previous question</button>
+            </div>
+          )}
+
+          {step <= 7 && (
+            <div>
+              <button className="restart-btn" type="button" onClick={handleStepRestart}>Restart</button>
+            </div>
+          )}
+        </div>
       </div>
-    
+      <Footer />
+    </>
   );
 }
