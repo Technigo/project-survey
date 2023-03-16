@@ -96,9 +96,9 @@ button {
 
 button:hover {
   background-color: var(--button-hover-color);
-  box-shadow: 10px 10px 109px 14px rgba(172,179,247,0.3);
-  -webkit-box-shadow: 10px 10px 109px 14px rgba(172,179,247,0.3);
-  -moz-box-shadow: 10px 10px 109px 14px rgba(172,179,247,0.3);
+  box-shadow: 10px 10px 109px 15px rgba(172,179,247,0.3);
+  -webkit-box-shadow: 10px 10px 109px 15px rgba(172,179,247,0.3);
+  -moz-box-shadow: 10px 10px 109px 15px rgba(172,179,247,0.3);
 }
 
 hr {
@@ -143,6 +143,7 @@ hr {
 
 .container .result {
   margin: 0;
+  padding: 0 30px 20px 30px;
 }
 
 .next-step {
@@ -204,9 +205,9 @@ hr {
 
 .startbtn:hover {
   background-color: var(--button-hover-color);
-  -webkit-box-shadow: 11px 9px 97px 9px rgba(188,193,245,1);
-  -moz-box-shadow: 11px 9px 97px 9px rgba(188,193,245,1);
-  box-shadow: 11px 9px 97px 9px rgba(188,193,245,1);
+  -webkit-box-shadow: 11px 9px 97px 9px rgba(188,193,245,0.8);
+  -moz-box-shadow: 11px 9px 97px 9px rgba(188,193,245,0.8);
+  box-shadow: 11px 9px 97px 9px rgba(188,193,245,0.8);
 }
 
 
@@ -259,15 +260,11 @@ margin-top: 50px;
 
 /* Result page specific formatting */
 
-.series {
-border: 1px solid yellow;
-padding: 0 25px;
-}
-
 .posterimg {
   display: inline-block;
-  width: 75%;
-  margin: 10px auto 10px auto;
+  max-width: 400px;
+  width: 100%;
+  margin: 20px auto 5px auto;
 }
 .start-over-btn {
   max-width: 100px;
@@ -277,8 +274,9 @@ padding: 0 25px;
 .comments {
   background-color: rgb(34, 34, 78);
   color: white;
-  margin: 5px;
-  padding: 10px;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 0 30px;
 }
 
 .comments h3 {
@@ -287,6 +285,7 @@ padding: 0 25px;
 
 .comments p {
   margin: 10px 0;
+  font-style: italic;
 }
 
 .sorry {
@@ -438,6 +437,18 @@ footer hr {
   .seriestext {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
+  }
+
+  .sorry {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+    max-width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+
+  .start-over-btn {
+    margin-bottom: 25px;
   }
 
   .headings {
