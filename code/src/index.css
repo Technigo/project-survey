@@ -218,7 +218,7 @@ hr {
   display: flex;
   flex-direction: column;
   max-width: 75%;
-  margin: 80px auto 0 auto;
+  margin: 60px auto 0 auto;
 }
 
 .name-container .question-container h4 {
@@ -268,6 +268,55 @@ hr {
   color: var(--backgroundcol);
 }
 
+.score-container .question-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: 40px auto 0 auto;
+  align-items: center;
+}
+
+
+.score-container .question-container h3 {
+  text-align: center;
+  font-size: 28px;
+}
+
+.score-container .question-container span {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 30px;
+}
+
+.score-container .question-container input {
+  cursor: pointer;
+}
+
+
+.apocalypse-container .question-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: 50px auto 0 auto;
+  align-items: center;
+  gap: 30px;
+}
+
+.apocalypse-container .question-container label {
+  font-size: 22px;
+}
+
+.apocalypsecheckbox {
+  margin: 20px;
+}
+
+.form-checkbox {
+  margin: 20px;
+  padding: 0 0 0 20px;
+  border: 1px solid rgb(88, 90, 121);
+  border-radius: 20px;
+}
 
 
 .yes-btn {
@@ -295,13 +344,17 @@ hr {
 
 
 .summary-box {
-  padding: 20px 50px 50px 50px;
+  margin: 20px 40px 40px 40px;
   font-size: 22px;
+  border: 10px dotted rgb(34, 15, 78);
+  border-radius: 30px;
+  padding: 0 20px;
 }
 
-.summary-box .next {
-font-size: 26px;
-margin-top: 50px;
+.question-container .next {
+font-size: 24px;
+margin-top: 20px;
+text-align: center;
 }
 
 /* Result page specific formatting */

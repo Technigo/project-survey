@@ -10,17 +10,18 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
       </div>
       <div className="question-container">
         <h4>Would you like the show to be about an apocalypse?</h4>
-        <form className="form checkbox">
-          <p>Current state: {apocalypse ? 'Yes' : 'No'}</p>
+        <form className="form-checkbox">
           <label htmlFor="apocalypsecheck">
                 Yes please
             <input
               type="checkbox"
+              className="apocalypsecheckbox"
               id="apocalypsecheck"
               checked={apocalypse}
               onChange={(event) => setApocalypse(event.target.checked)} />
           </label>
         </form>
+        {/* <span>(Current state: {apocalypse ? 'Yes' : 'No'})</span> */}
       </div>
     </div>
   );

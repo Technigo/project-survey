@@ -14,12 +14,14 @@ const Summary = ({ name, type, genre, score, apocalypse }) => {
         <h2>Summary <span className="emoji">📺</span></h2>
         <hr />
       </div>
-      <div className="summary-box">
-        <p>Name: {name}</p>
-        <p>Type: {type}</p>
-        <p>Genre: {genre}</p>
-        <p>Minimum IMDB score: {score}</p>
-        <p>Apocalypse related? {apocalypse ? 'Yes' : 'No'}</p>
+      <div className="question-container">
+        <div className="summary-box">
+          <p>Name: {name}</p>
+          <p>Type: {type}</p>
+          <p>Genre: {genre}</p>
+          <p>Min IMDB score: {score}</p>
+          <p>Apocalypse related? {apocalypse ? 'Yes' : 'Not really'}</p>
+        </div>
         <p className="next">Are you ready to see what is next?</p>
       </div>
     </div>
