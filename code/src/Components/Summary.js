@@ -14,8 +14,8 @@ export const Summary = (props) => {
       <p>{props.summaryTitle}</p>
       <p>{props.answers.typeOfHome}</p>
       <p>{printParking()}</p>
-      <p>{props.answers.rooms}</p>
-      <p>{props.answers.price}</p>
+      <p>{props.answers.rooms} rooms</p>
+      <p>Maximum budget: {props.answers.price} kr</p>
       <div className="buttons-container">
         <PreviousButton
           onPrevious={props.onPrevious}

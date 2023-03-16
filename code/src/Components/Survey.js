@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { ProgressBar } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import { LandingPage } from 'Components/LandingPage';
 import { TextQuestion } from 'Components/TextQuestion';
 import { RadioQuestion } from 'Components/RadioQuestion';
@@ -54,13 +53,15 @@ export const Survey = () => {
             questionGreeting={`Hello ${answers.firstName},`}
             questionTitle="What type of property are you looking for?"
             labels={['Villa', 'Apartment', 'Townhouse']}
-            radioImage={[""]}
             questionId="typeOfHome"
             onValueUpdate={(value) => {
               setAnswers({
                 ...answers,
                 typeOfHome: value
               });
+            }}
+            onPrevious={() => {
+              setQuestionStep(questionStep - 1);
             }}
             onNext={() => {
               (answers.typeOfHome === 'Apartment'
@@ -80,6 +81,9 @@ export const Survey = () => {
                 parking: value
               });
             }}
+            onPrevious={() => {
+              setQuestionStep(questionStep - 1);
+            }}
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
@@ -97,6 +101,10 @@ export const Survey = () => {
                 rooms: value
               });
             }}
+            onPrevious={() => {
+              (answers.typeOfHome === 'Apartment'
+              ? setQuestionStep(questionStep - 1) : setQuestionStep(questionStep - 2))
+            }}
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}
@@ -113,6 +121,9 @@ export const Survey = () => {
                 ...answers,
                 price: value
               });
+            }}
+            onPrevious={() => {
+              setQuestionStep(questionStep - 1);
             }}
             onNext={() => {
               setQuestionStep(questionStep + 1);
