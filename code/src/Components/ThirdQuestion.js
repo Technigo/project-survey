@@ -7,7 +7,7 @@ export const ThirdQuestion = ({ ingVerb, setIngVerb }) => {
   return (
     <form>
       <p className="instructionText"> Pick a verb! </p>
-      <select onChange={handleThirdAnswer} value={ingVerb}>
+      <select className="drop-down" onChange={handleThirdAnswer} value={ingVerb}>
         <option value="" disabled>Choose verb </option>
         <option value="coding">Coding</option>
         <option value="dancing">Dancing</option>

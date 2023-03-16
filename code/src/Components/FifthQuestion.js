@@ -6,8 +6,8 @@ export const FifthQuestion = ({ celebrity, setCelebrity }) => {
   }
   return (
     <form>
-      <p className="instructionText"> Pick a celebrity </p>
-      <select onChange={handleFifthAnswer} value={celebrity}>
+      <p className="instructionText"> Pick a celebrity! </p>
+      <select className="drop-down" onChange={handleFifthAnswer} value={celebrity}>
         <option value="" disabled>Pick a celebrity </option>
         <option value="Michael Jackson">Michael Jackson</option>
         <option value="Mahatma Gandhi">Mahatma Gandhi</option>

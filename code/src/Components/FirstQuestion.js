@@ -7,7 +7,8 @@ export const FirstQuestion = ({ adjective, setAdjective }) => {
   return (
     <>
       <p className="instructionText"> Write an adjective</p>
-      <input type="text" value={adjective} onChange={handleFirstAnswer} />
+      <p className="descriptiveText"> Example: red, big, happy</p>
+      <input className="input-field" type="text" value={adjective} onChange={handleFirstAnswer} />
     </>
   )
 }

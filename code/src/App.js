@@ -27,8 +27,9 @@ export const App = () => {
   const handleProgress = () => {
     setStep(step + 1);
   }
+
   return (
-    <>
+    <div className="survey-container">
       {step === 1 && (
         <FirstQuestion
           adjective={adjective}
@@ -98,6 +99,6 @@ export const App = () => {
           <button className="button" type="button" onClick={handleProgress}>Next question</button>
         </>
       )}
-    </>
+    </div>
   )
 }

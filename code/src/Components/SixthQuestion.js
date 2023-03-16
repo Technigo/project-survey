@@ -6,8 +6,9 @@ export const SixthQuestion = ({ jobSector, setJobSector }) => {
   }
   return (
     <>
-      <p className="instructionText"> Write the name of the first hobby or job you can think of. </p>
-      <input type="text" value={jobSector} onChange={handleSixthAnswer} />
+      <p className="instructionText"> Write the name of the first hobby or interest you can think of. </p>
+      <p className="descriptiveText"> Example: knitting, football, programming</p>
+      <input className="input-field" type="text" value={jobSector} onChange={handleSixthAnswer} />
     </>
   )
 }

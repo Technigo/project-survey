@@ -20,10 +20,10 @@ export const FourthQuestion = ({ clothingNoun, setClothingNoun }) => {
     setClothingNoun(event.target.value);
   }
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <form className="radio-btn-container" onSubmit={(event) => event.preventDefault()}>
       <p className="instructionText"> Pick a piece of clothing or accessory!</p>
       {clothing.map((group) => (
-        <label key={group} htmlFor="piece-of-clothing">
+        <label className="radio-button" key={group} htmlFor="piece-of-clothing">
           <input
             type="radio"
             value={group}

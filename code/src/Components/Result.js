@@ -13,7 +13,7 @@ export const Result = ({
   descriptiveAdjective
 }) => {
   return (
-    <>
+    <div className="story-container">
       <h1>This is what I learnt about you: </h1>
       <p>
         What you like most about your workplace
@@ -25,12 +25,12 @@ export const Result = ({
       </p>
       <p> In your spare time you enjoy {ingVerb} with your {clothingNoun} on,
         preferably in the company of {celebrity}.
+      </p>
       <p> But let&#39;s be real here.</p>
       <p>You will probably end up {ingVerb} alone, since {celebrity} probably has more
         important stuff to do than {ingVerb} with you.
       </p>
       <p>That would be really cool though.</p>
-      </p>
       <p> If you were to change your career,
         you would probably end up in the {jobSector} industry.
       </p>
@@ -45,6 +45,6 @@ export const Result = ({
        your ability to always {infinitiveVerb}.
       </p>
       <p> Your previous boss would probably describe you as {descriptiveAdjective}.</p>
-    </>
+    </div>
   )
 }

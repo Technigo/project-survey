@@ -8,7 +8,7 @@ export const TenthQuestion = ({ descriptiveAdjective, setDescriptiveAdjective })
     <>
       <p className="instructionText"> Write a descriptive adjective</p>
       <p className="descriptiveText"> e.g. cheeky, generous, blue </p>
-      <input type="text" value={descriptiveAdjective} onChange={handleTenthAnswer} />
+      <input className="input-field" type="text" value={descriptiveAdjective} onChange={handleTenthAnswer} />
     </>
   )
 }

@@ -7,7 +7,8 @@ export const SeventhQuestion = ({ happyAdjective, setHappyAdjective }) => {
   return (
     <>
       <p className="instructionText"> Write an adjective that sounds complex: </p>
-      <input type="text" value={happyAdjective} onChange={handleSeventhAnswer} />
+      <p className="descriptiveText"> Example: meticulous, flamboyant, eccentric</p>
+      <input className="input-field" type="text" value={happyAdjective} onChange={handleSeventhAnswer} />
     </>
   )
 }
