@@ -29,8 +29,8 @@ export const App = () => {
     setName('');
     setType('');
     setGenre('');
-    setScore('8');
-    setApocalypse('false');
+    setScore(8);
+    setApocalypse(false);
   };
 
   return (

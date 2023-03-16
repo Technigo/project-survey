@@ -15,7 +15,7 @@ const Summary = ({ name, type, genre, score, apocalypse, data }) => {
   console.log('filteredTypeArray:', filteredTypeArray);
 
   // Filtering step 2, on genre:
-  const filteredGenreArray = filteredTypeArray.filter((item) => item.genres.includes(genre));
+  const filteredGenreArray = genre === 'Surprise' ? filteredTypeArray : filteredTypeArray.filter((item) => item.genres.includes(genre));
   console.log('filteredGenreArray:', filteredGenreArray);
 
   // Filtering step 3, on score:

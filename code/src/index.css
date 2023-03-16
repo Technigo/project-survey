@@ -43,7 +43,7 @@ code {
 
 p {
   font-family: 'EB Garamond', serif;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 h1 {
@@ -150,15 +150,17 @@ hr {
   background-color: var(--backgroundcol);
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
 }
 
+/*
 .next-step button {
-  margin: 0 20px 20px 20px;
+  margin: 0 10px 20px 10px;
 }
+*/
 
 .headings {
   margin: 25px 0 0 0;
@@ -215,7 +217,7 @@ hr {
 .name-container .question-container {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 75%;
   margin: 80px auto 0 auto;
 }
 
@@ -232,7 +234,7 @@ hr {
 .type-container .question-container {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 70%;
   margin: 10px auto 0 auto;
 }
 .type-container .question-container h4 {
@@ -247,6 +249,25 @@ hr {
 .radiotypebtn {
   margin-right: 20px;
 }
+
+.genre-container .question-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  margin: 80px auto 0 auto;
+  align-items: center;
+}
+
+.genre-container .question-container select {
+  padding: 5px;
+  margin: 25px 0 0 0;
+  min-width: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: rgb(255, 239, 239);
+  color: var(--backgroundcol);
+}
+
 
 
 .yes-btn {
@@ -498,6 +519,14 @@ footer hr {
 .summary-container,
 .sorry {
   max-height: 370px;
+}
+
+.name-container .question-container {
+  max-width: 50%;
+}
+
+.type-container .question-container {
+  max-width: 50%;
 }
 
   /* Footer */

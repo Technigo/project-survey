@@ -26,6 +26,7 @@ const Genre = ({ genre, setGenre, step }) => {
             <option value="Sci-fi">Sci-fi</option>
             <option value="Horror">Horror</option>
             <option value="Romance">Romance</option>
+            <option value="Surprise">Surprise me!</option>
           </select>
         </form>
       </div>
