@@ -69,7 +69,7 @@ body {
   padding: 5px 12px 5px 12px;
   margin: 10px;
   border-radius: 8px;;
-  border-color: #ffffff; 
+  border-style: none;
   font-size: 20px;
   font-family: 'Roboto' sans-serif;
   color: rgb(255, 255, 255);
@@ -77,8 +77,8 @@ body {
 }
 
 .step-btn button:hover {
-  color: #f784b6;
-  background: #f784b6;
+  color: #ffffff;
+  background: #f8a659;
 }
 
 .answer-input input {
@@ -99,13 +99,16 @@ body {
 
 .select {
   font-size: 18px;
+  background-color: #f3c7d6;
+  padding: 5px;
+  border-radius: 10px;
+  border-color: none;
 }
 
 .party-btn button {
   padding: 8px;
   font-family: 'Roboto' sans-serif;
-  border-color: #ffffff; 
-  border-style: double;
+  border-style: none;
   border-radius: 10px;
   font-size: 18px;
   color: rgb(255, 255, 255);

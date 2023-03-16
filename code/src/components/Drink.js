@@ -16,7 +16,7 @@ export const Drink = ({ drink, setDrink }) => {
           id="drink"
           value={drink} 
           onChange={handleDrinkChange} >
-          <option value="">Select drink</option>
+          <option value="">Menu</option>
           <option value="a great cop of coffee">Coffee!☕️</option>
           <option value="one rainbow colored drink">Tropical drinks!🍹</option>
           <option value="sparkling icecold soda in a large glass">Sparkling soda!🥤</option>
