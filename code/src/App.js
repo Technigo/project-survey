@@ -29,7 +29,7 @@ export const App = () => {
 
   // --- Here is the start of the questions //
   return (
-    <div className="question-container">
+    <main className="question-container">
       {/* GREETING */}
       {step < 1 && (
         <Greeting greeting={greeting} />
@@ -75,6 +75,7 @@ export const App = () => {
         <>
           {/* The button says "next question" until the total amount of steps is more than 5 */}
           <button
+            title="Next page button"
             className="submit-button"
             type="button"
             onClick={handleStepIncrease}>
@@ -84,7 +85,7 @@ export const App = () => {
           </button>
         </>
       )}
-    </div>
+    </main>
   );
 }
 

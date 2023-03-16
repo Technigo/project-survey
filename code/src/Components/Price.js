@@ -16,7 +16,7 @@ export const Price = ({ priceGroup, setPriceGroup }) => {
             className="radio-container"
             key={group}>
             <input
-              aria-label="Enter your price group"
+              aria-label="Price Range"
               id="enter-pricegroup"
               className="radio-buttons"
               type="radio"

@@ -237,6 +237,28 @@ a {
     align-items: center;
     margin-bottom: 25px;
 }
+.survey-again-button {
+  background: white;
+  border-radius: 999px;
+  box-shadow: White 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: #746dbaff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: Futura;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 3px 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+  margin-top: 5px;
+}
 
 @media (min-width: 668px) {
 

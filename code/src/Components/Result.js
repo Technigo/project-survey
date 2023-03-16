@@ -10,7 +10,10 @@ export const Result = ({ favorite, grape, food, group, taste }) => {
       <p className="resulttext" aria-label="Whats on your plate">{food} is on my plate</p>
       <p className="resulttext" aria-label="My preferred scent is">My preferred scent is {taste}</p>
       <button className="copy-send-button" title="Copy wine preferences to clipboard and send via email" type="submit" onClick={() => navigator.clipboard.writeText(favorite, grape, group, food, taste)}>
-        <a href="mailto:hello@winetwothree.com">COPY & SEND!</a>
+        <a href="mailto:hello@winetwothree.com">COPY & SEND</a>
+      </button>
+      <button className="survey-again-button" title="Do the survey again button" type="submit" onClick={() => window.location.reload(false)}>
+        BACK TO START
       </button>
     </>
   );

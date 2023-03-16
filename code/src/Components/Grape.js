@@ -14,7 +14,7 @@ export const Grape = ({ grape, setGrape }) => {
         value={grape}
         onChange={handleGrapeChange}
         required
-        aria-label="Enter your yummyest grape" />
+        aria-label="Yummyest grape" />
     </>
   );
 }
