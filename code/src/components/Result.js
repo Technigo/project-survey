@@ -7,7 +7,7 @@ const Result = ({ name, love, favorite, handleRestartSurvey }) => {
       <h3>Survey Summary</h3>
       <p>Name: {name}</p>
       <p>Do you love cats? {love}</p>
-      <p>Your favorite cartoon cat is {favorite}</p>
+      <p>Your favorite cartoon cat is {favorite}.</p>
       <button type="button" onClick={handleRestartSurvey}>Restart</button>
     </div>
   );
