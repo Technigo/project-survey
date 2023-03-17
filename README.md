@@ -7,6 +7,3 @@ This weeks assignment was to create a survey in react. The app/site were suppose
 I started this weeks assignment by trying out the example provided and from there I just started to created components and forms were they suited best for the questions.
 
 ## View it live
-
-https://rad-marigold-533c40.netlify.app
-
