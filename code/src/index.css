@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:url("/Users/FreedahSoul/Desktop/Technigo/project-survey/project-survey/code/src/images/background-pic.png"); 
+  background-image:url("./images/background-pic.png"); 
   background-size: cover; 
   color: black; 
   height: 100%; 
