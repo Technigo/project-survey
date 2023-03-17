@@ -7,18 +7,20 @@ export const SelectQuestion = (props) => {
     <>
       <div className="selectQuestion-container">
         <p>{props.questionTitle}</p>
-        <select
-          type="radio"
-          id={props.questionId}
-          name={props.questionId}
-          onChange={(event) => props.onValueUpdate(event.target.value)}>
-          <option value="">--Select--</option>
-          {props.option.map((option) => {
-            return (
-              <option value={option}>{option}</option>
-            )
-          })}
-        </select>
+        <div className="select-dropdown">
+          <select
+            id={props.questionId}
+            name={props.questionId}
+            onChange={(event) => props.onValueUpdate(event.target.value)}>
+            <option value="" disabled>Select {props.questionId} </option>
+            {props.option.map((option) => {
+              return (
+                <option className="select-option" value={option}>{option}</option>
+              )
+            })}
+          </select>
+        </div>
+
       </div>
       <div className="buttons-container">
         <PreviousButton

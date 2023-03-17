@@ -4,19 +4,21 @@ import { PreviousButton } from './PreviousButton';
 
 export const TextQuestion = (props) => {
   return (
-    <div className="textQuestion-container">
+    <div className="question-container">
       <p>{props.questionTitle}</p>
       <div>
-        <label
-          aria-label={props.label}
-          htmlFor={props.questionId}>{props.label}
-        </label>
-        <input
-          required
-          title={props.label}
-          type="text"
-          id={props.questionId}
-          onChange={(event) => props.onValueUpdate(event.target.value)} />
+        <div className="label-input-div">
+          <label
+            aria-label={props.label}
+            htmlFor={props.questionId}>{props.label}
+          </label>
+          <input
+            required
+            title={props.label}
+            type="text"
+            id={props.questionId}
+            onChange={(event) => props.onValueUpdate(event.target.value)} />
+        </div>
         <div className="buttons-container">
           <PreviousButton
             onPrevious={props.onPrevious}

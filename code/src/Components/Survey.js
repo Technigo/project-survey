@@ -116,6 +116,7 @@ export const Survey = () => {
             questionTitle="What's the most you would spend on your new home?"
             label="SEK"
             questionId="price"
+            answers={answers}
             onValueUpdate={(value) => {
               setAnswers({
                 ...answers,
@@ -135,6 +136,9 @@ export const Survey = () => {
           <Summary
             summaryTitle="Your requirements are:"
             answers={answers}
+            onPrevious={() => {
+              setQuestionStep(questionStep - 1);
+            }}
             onNext={() => {
               setQuestionStep(questionStep + 1);
             }}

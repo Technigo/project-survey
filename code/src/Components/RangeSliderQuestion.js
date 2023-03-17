@@ -7,14 +7,15 @@ export const RangeSliderQuestion = (props) => {
     <div className="rangeQuestion-container">
       <p>{props.questionTitle}</p>
       <div>
-        <label htmlFor={props.questionId}>{props.label}</label>
+        {/* <label htmlFor={props.questionId}></label> */}
         <input
           type="range"
           id={props.questionId}
           name={props.questionId}
-          min="100"
-          max="1100"
+          min="3500000"
+          max="7500000"
           onChange={(event) => props.onValueUpdate(event.target.value)} />
+        <label htmlFor={props.questionId}>{props.answers.price} {props.label}</label>
       </div>
       <div className="buttons-container">
         <PreviousButton

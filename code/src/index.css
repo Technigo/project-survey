@@ -1,23 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: 'Red Hat Display', sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family:  'Red Hat Display', sans-serif,
+  source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 form{
+  font-family: 'Red Hat Display', sans-serif;
   padding:10%;
   height:100%;
   display:flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+form p{
+font-size:23px;
+}
+
+.question-container{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.label-input-div{
+  display:flex;
+  align-items: center;
+  gap:20px;
 }
 
 .landing-container {
@@ -30,6 +52,7 @@ form{
 .landing-child{
   position:absolute;
   top:10%;
+  width:500px;
 
   border:solid green;
 
@@ -38,40 +61,98 @@ form{
   width:100%;
   height:inherit;
   position:relative;
-
   border:solid blue;
-
 }
 
 .banner-image{
-  height:200px;
+  height:10%;
   width:100%;
 }
 
-.progres-bar-container, .progress{
+.progress{
   display: flex;;
   align-self: center;
   width:100%;
-  position:absolute;
-  top:50%;
-  z-index: 99;
-
+  top:70%;
+  margin-top: 50px;
 }
 
+/* RadioQuestion */
 .radio-icon{
   width: 65px;
 }
 
+.radioQuestion-children{
+  display: flex;
+  flex-direction:row;
+  justify-content: space-around;
+  gap: 4%;
+}
+
 .radioQuestion-child{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+  width: 40%;
+  padding:5%;
+  border-radius: 10px;
+
 }
 
 .radioQuestion-child label{
   display:flex;
   flex-direction: column-reverse;
+  align-items: center;
 }
 
+.select-dropdown{
+  font-family: 'Red Hat Display', sans-serif;
+  position: relative;
+}
+
+.select-dropdown select {
+  width: 100%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 10px;
+  padding: 0.25em 0.5em;
+  font-size: 20px;
+  cursor: pointer;
+  line-height: 1.1;
+  background: linear-gradient(to bottom, #ffffff 0%, #e5e5e5 100%);
+  text-align: center;
+}
+
+.select-option {
+  color:red;
+  background-color: green;
+
+}
+
+/* Buttons */
+.buttons-container{
+  display: flex;
+  flex-direction:row;
+  justify-content:center;
+  margin-top: 3em; 
+  gap:30px;
+ }
+
+ .previous-button, .next-button{
+  padding: 5px 20px;
+  background-color: rgb(204, 198, 198);
+  border:none;
+  border-radius: 10px;
+  font-size:20px;
+ }
+
+ .previous-button{
+  padding: 5px 30px;
+ }
+
+ /* Results page */
 .results-container{
   
 }
