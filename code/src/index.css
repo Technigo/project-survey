@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #D8D9CF;
-  overflow: hidden;
 }
 
 code {
@@ -14,7 +13,7 @@ code {
     monospace;
 }
 
-#root {
+.mainContainer{
   display: flex;
   flex-direction: column; 
 }
@@ -24,7 +23,8 @@ code {
 }
 
 .logoImage img {
-  width: 100%;
+  width: 100vw;
+  height: 50vh;
   object-fit: cover;
 }
 
@@ -105,12 +105,18 @@ p {
 
 /***************tablet design******************************/
 @media (min-width:600px) {
-  #root {
+  .mainContainer{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
    
   }
+  .logoImage img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  
 }
 
 
@@ -118,11 +124,11 @@ p {
 
 /****************desktop design normal*********************/
 @media (min-width:992px) {
-  #root {
+  .mainContainer{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    
+    height: 750px;
 
   }
   .welcomeBox,
@@ -138,12 +144,12 @@ p {
   .logoImage {
     display: flex;
     width: 40%;
-    overflow: hidden;
+    float: left;
   }
 
   .logoImage img {
     width: 100%;
-    height: auto;
+    height: 100vh;
     object-fit: cover;
   }
 
@@ -158,6 +164,3 @@ p {
 
 
 }
-
-/****************desktop design large****************************/
-@media (min-width:1024px) {}

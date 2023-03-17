@@ -5,17 +5,13 @@ import { SurveyWraper } from 'components/SurveyWraper';
 
 export const App = () => {
   return (
-    <>
+    <div className='mainContainer'>
       <section className="logoImage">
-        
-         <img src="./logoImg.webp" alt=""/>
-        
+        <img src="./logoImg.webp" alt=""/>
       </section>
       <section className='surveyWrap'>
-        <div className='surveryWrap'>
-          <SurveyWraper />
-        </div>
+        <SurveyWraper />
       </section>
-  </>
+    </div>
   );
 }
