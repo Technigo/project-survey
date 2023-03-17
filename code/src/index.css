@@ -1,46 +1,36 @@
-h1 {
+h1, h2 {
   color: white;
   font-size: 45px;
   text-align: center;
   margin-top: 80px;
   padding: 20px;
-  font-family: 'Cantarell', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
-  text-shadow: 2px 2px 8px salmon;
+  text-shadow: 1px 1px 6px rgba(250, 128, 114, 0.792);
 }
 
 h3::first-letter {
   font-size: 1.5rem;
   font-weight: bold;
-  color: salmon;
+  color: rgb(250, 128, 114);
 }
 
 h3 span {
-  background-color:  #aad7ee;
   border-radius: 15px;
   padding: 5px;
   color: white;
-  text-shadow: 2px 2px 8px grey;
+  text-shadow: 2px 2px 8px rgb(97, 97, 97);
 }
 
 select {
-  background-color: #aad7ee;
   font-size: 15px;
   color: white;
-}
-
-.header {
-  background-color: #aad7ee;
-  background-size: cover;
-  height: 200px;
-  padding: 20px;
-  max-width: 100%
 }
 
 .introduction, .namebox, .selectbox, .bestthingbox {
   color: #94BBCF;
   text-align: center;
-  font-family: 'Cantarell', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   padding: 20px;
   margin-top: 10%;
 }
@@ -49,14 +39,27 @@ input, .dropdown {
   border-radius: 15px;
   padding: 10px;
   font-weight: bolder;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  margin-right: 10px;
+  margin-left: 20px;
+  background-color: #aad7ee;
 }
 
 .form {
   text-align: center;
 }
 
+label{
+  color:rgb(255, 255, 255)
+}
+
+p {
+  color:rgba(0, 0, 0, 0.297)
+}
+
 .myForm {
-  font-family: 'Cantarell', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: white;
   text-align: center;
   margin-bottom: 20px;
@@ -66,21 +69,18 @@ body {
   background-color: #aad7ee;
   margin: 0;
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
 }
 
 button {
-  font-family: 'Cantarell', sans-serif;
-  background-color: #aad7ee;
-  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ffffffde;
+  color: salmon;
   font-size: 20px;
   font-weight: bold;
   border-radius: 15px;
-  margin-bottom: 40px;
+  margin: 40px;
   cursor: pointer;
   padding: 10px;
   border-style: none;
@@ -91,7 +91,7 @@ button {
 
 button:hover {
   transform: scale(1.1);
-  background-color: #b1d4e6;
+  background-color: #ffffff91;
 }
 
 .summary {
@@ -103,7 +103,7 @@ button:hover {
   font-size: 20px;
   color: white;
   text-align: center;
-  font-family: 'Cantarell', sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Contact information showing in the summary */
@@ -122,7 +122,6 @@ button:hover {
 
 .contact-logo:hover{
   transform: scale(1.2);
-  opacity: 1;
 }
 
 .aboutme {
@@ -132,25 +131,40 @@ button:hover {
   gap: 5px;
   padding: 5px;
   font-size: 15px;
-  color:black;
+  color:rgba(66, 65, 65, 0.444);
   text-align: center;
   
 }
 
 .aboutme p {
-  color: #ffffff;
+  color: #ffffffa7;
 }
 
 .contactE{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 18px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
   color: #ffffff;
   opacity: .7;
-  background-color:#ffffff;
+  background-color: #ffffffa3;
   padding: 10px;
 }
 
-.contactE p{
-  color: #000000;
+/* Transition effect */
+.body {
+  overflow: hidden; /* Add this line to prevent component overflow */
 }
 
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.step-1 { animation: fadeIn 1s; }
+
+.step-2 { animation: fadeIn 1s; }
+
+.step-3 { animation: fadeIn 1s; }
+
+.step-4 { animation: fadeIn 1s; }
+
+.step-5 { animation: fadeIn 1s; }

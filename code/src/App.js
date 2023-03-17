@@ -18,22 +18,36 @@ export const App = () => {
     setStep(step + 1);
   }
 
+  const handleStepDecrease = () => {
+    setStep(step - 1);
+  }
+
   return (
     <>
       {step === 1 && (
-        <Name name={name} setName={setName} />
+        <div className={`step-${step}`}>
+          <Name name={name} setName={setName} />
+        </div>
       )}
       {step === 2 && (
-        <Points points={points} setPoints={setPoints} />
+        <div className={`step-${step}`}>
+          <Points points={points} setPoints={setPoints} />
+        </div>
       )}
       {step === 3 && (
-        <BestThing bestThing={bestThing} setBestThing={setBestThing} />
+        <div className={`step-${step}`}>
+          <BestThing bestThing={bestThing} setBestThing={setBestThing} />
+        </div>
       )}
       {step === 4 && (
-        <Impression impression={impression} setImpression={setImpression} />
+        <div className={`step-${step}`}>
+          <Impression impression={impression} setImpression={setImpression} />
+        </div>
       )}
       {step === 5 && (
-        <Answer answer={answer} setAnswer={setAnswer} />
+        <div className={`step-${step}`}>
+          <Answer answer={answer} setAnswer={setAnswer} />
+        </div>
       )}
       {step >= 6 && (
         <Summary
@@ -44,12 +58,18 @@ export const App = () => {
           answer={answer} />
       )}
 
-      {step < 6 && (
-        <>
-          <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>Next step</button>
-        </>
-      )}
+      <div className="buttons">
+        {step > 1 && step <= 5 && (
+          <button type="button" onClick={handleStepDecrease}>
+            Previous
+          </button>
+        )}
+        {step < 6 && (
+          <button type="button" onClick={handleStepIncrease}>
+            Next
+          </button>
+        )}
+      </div>
     </>
-  );
+  )
 }

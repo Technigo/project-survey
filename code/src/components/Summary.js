@@ -15,7 +15,6 @@ export const Summary = ({ name, points, bestThing, impression, answer }) => {
       </div>
       <div className="contactme">
         <div className="contactE">
-          <p>Contact Emilia</p>
           <a href="https://www.linkedin.com/in/emiliaga/"><img src={myImage} className="contact-logo" alt="small linkedin logo" /></a>
           <a href="https://github.com/EmiliaGA"><img src={myOtherImage} className="contact-logo" alt="small github logo" /></a>
         </div>

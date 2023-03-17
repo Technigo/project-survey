@@ -6,7 +6,8 @@ export const Name = ({ name, setName }) => {
   }
   return (
     <div className="introduction">
-      <h2>Hi, my name is Emilia. Who are you?</h2>
+      <h1>Website feedback form</h1>
+      <h3>Hi, my name is Emilia. Who are you?</h3>
       <input type="text" value={name} onChange={handleNameChange} />
     </div>
   );
