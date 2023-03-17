@@ -11,7 +11,7 @@ const Score = ({ score, setScore, step }) => {
       </div>
       <div className="question-container">
         <h3>Do you want to set a minimum IMDB score?</h3>
-        <span>(If it&apos;s below 6, you should not watch it, period.)</span>
+        <span>(If it&apos;s below 6, you should probably not watch it anyway)</span>
         <p>Min IMDB score: {score} /10</p>
         <label htmlFor="imdbscore">
           <input

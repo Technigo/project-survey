@@ -16,7 +16,7 @@ export const App = () => {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [type, setType] = useState('Surprise me!');
-  const [genre, setGenre] = useState('Surprise');
+  const [genre, setGenre] = useState('Surprise me!');
   const [score, setScore] = useState(8);
   const [apocalypse, setApocalypse] = useState(false);
 
@@ -28,7 +28,7 @@ export const App = () => {
     setStep(0);
     setName('');
     setType('Surprise me!');
-    setGenre('Surprise');
+    setGenre('Surprise me!');
     setScore(8);
     setApocalypse(false);
   };
@@ -47,7 +47,7 @@ export const App = () => {
     return () => {
       document.removeEventListener('keydown', handleEnterKey);
     };
-  }, [handleStepIncrease, step]);
+  });
 
   return (
     <>
