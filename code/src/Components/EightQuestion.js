@@ -7,7 +7,7 @@ export const EightQuestion = ({ bodyPart, setBodyPart }) => {
   return (
     <form>
       <p className="instructionText"> Pick a body part! </p>
-      <select className="drop-down" onChange={handleEightAnswer} value={bodyPart}>
+      <select aria-label="dropdown menu" className="drop-down" onChange={handleEightAnswer} value={bodyPart}>
         <option value="" disabled>Pick a body part </option>
         <option value="brain">Brain</option>
         <option value="lungs">Lungs</option>

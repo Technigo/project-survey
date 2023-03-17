@@ -8,7 +8,7 @@ export const FirstQuestion = ({ adjective, setAdjective }) => {
     <>
       <p className="instructionText"> Write an adjective</p>
       <p className="descriptiveText"> Example: red, big, happy</p>
-      <input className="input-field" type="text" value={adjective} onChange={handleFirstAnswer} />
+      <input aria-label="input field" className="input-field" type="text" value={adjective} onChange={handleFirstAnswer} />
     </>
   )
 }

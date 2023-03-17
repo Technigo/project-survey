@@ -8,7 +8,7 @@ export const SixthQuestion = ({ jobSector, setJobSector }) => {
     <>
       <p className="instructionText"> Write the name of the first hobby or interest you can think of. </p>
       <p className="descriptiveText"> Example: knitting, football, programming</p>
-      <input className="input-field" type="text" value={jobSector} onChange={handleSixthAnswer} />
+      <input aria-label="input field" className="input-field" type="text" value={jobSector} onChange={handleSixthAnswer} />
     </>
   )
 }
