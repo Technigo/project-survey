@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Purchase = ({ purchase, setPurchase, step }) => {
+export const Purchase = ({ purchase, setPurchase, step, handleStepIncrease }) => {
   const handlePurchaseChange = (event) => {
     setPurchase(event.target.value);
   }
@@ -10,6 +10,14 @@ export const Purchase = ({ purchase, setPurchase, step }) => {
     'No',
     'Do not know'
   ];
+
+  const handleNextButtonClick = () => {
+    if (!purchase) {
+      alert('Please select an option.');
+    } else {
+      handleStepIncrease();
+    }
+  }
 
   return (
     <div className="purchase-container">
@@ -27,6 +35,7 @@ export const Purchase = ({ purchase, setPurchase, step }) => {
           <label htmlFor={option}>{option}</label>
         </div>
       ))}
+      <button type="button" onClick={handleNextButtonClick} required>Next</button>
     </div>
   );
 };

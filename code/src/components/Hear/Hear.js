@@ -3,7 +3,7 @@ import React from 'react';
 export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
   const handleNextClick = (event) => {
     if (!hear) {
-      alert('Please select an option before moving to the next question.');
+      alert('Please select an option.');
       return;
     }
 

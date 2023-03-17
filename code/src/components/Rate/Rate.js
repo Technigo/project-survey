@@ -1,9 +1,18 @@
 import React from 'react';
 
-export const Rate = ({ rate, setRate, step }) => {
+export const Rate = ({ rate, setRate, step, handleStepIncrease }) => {
   const handleRateChange = (event) => {
     setRate(event.target.value);
   }
+
+  const handleNextButtonClick = () => {
+    if (!rate) {
+      alert('Please select a rating.');
+    } else {
+      handleStepIncrease();
+    }
+  }
+
   return (
     <div className="rate-container">
       <h2>Question {step}</h2>
@@ -16,6 +25,7 @@ export const Rate = ({ rate, setRate, step }) => {
         max="10"
         value={rate}
         onChange={handleRateChange} />
+      <button type="button" onClick={handleNextButtonClick} required>Next</button>
     </div>
   );
 };
