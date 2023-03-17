@@ -2,6 +2,39 @@
 /* eslint-disable react/jsx-closing-bracket-location */
 import React, { useState } from 'react';
 
+const ProgressBar = ({ progress }) => {
+  const container = {
+    height: 20,
+    width: '100%',
+    backgroundColor: '#fff',
+    borderRadius: 50,
+    margin: 50
+  };
+  const bar = {
+    height: '100%',
+    width: `${progress}%`,
+    backgroundColor: '#90CAF9',
+    borderRadius: 'inherit'
+  };
+  const label = {
+    padding: '1rem',
+    color: '#000000'
+  };
+  return (
+    <div style={container}>
+      <div
+        style={bar}
+        role="progressbar"
+        aria-valuenow={progress}
+        aria-valuemin={0}
+        aria-valuemax={100}
+      >
+        <span style={label}>{`${progress}%`}</span>
+      </div>
+    </div>
+  );
+};
+
 export const Form = () => {
   const [inputName, setInputName] = useState('');
   const [inputRole, setInputRole] = useState('');
@@ -27,6 +60,7 @@ export const Form = () => {
         {formStage < 5 ? formStage : 5}
         <span>→</span>
       </p>
+      <ProgressBar progress={60} />
       <h1>Mentorship Sign Up</h1>
       <form onSubmit={handleSubmit} required>
         {formStage === 0 && (
@@ -126,7 +160,7 @@ export const Form = () => {
         {formStage === 6 && <h2>Thanks!</h2>}
         {formStage < 5 && <button type="submit">Next »</button>}
         {formStage === 5 && <button type="submit">Submit</button>}
-        <button type="submit">Restart Form</button>
+        {formStage >= 1 && <button type="submit">Restart Form</button>}
       </form>
     </section>
   );
