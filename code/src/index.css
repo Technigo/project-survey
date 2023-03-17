@@ -24,35 +24,57 @@ root {
   font-family: 'Sono', sans-serif;
 }
 
+body {
+  overflow-y: hidden;
+  font-family: 'Sono', sans-serif;
+
+}
+
 
 body {
 
 background-image: url(../public/assets/background-image.jpg);
 background-size: cover;
-background-repeat: no repeat;
-position: absolute;
-font-family: 'Sono', sans-serif;
-height: 500px;
-width: 100%;
-}
-/* FIX THE IMAGE IN RESPONSIVE */
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+background-color: rgba(0, 0, 0, 0.3);
 
+/* width: 100%; */
+} 
+
+html {
+  background-image: url(../public/assets/background-image.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+}
 /* LANDING PAGE */
 
 .landingPageText {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #FF9900;
+  text-align: center;
   margin-top: 40px;
-  background-color: white;
-  padding-top: 20px;
+  /* background-color: white; */
+  width: 100%;
+  height: auto;
+  /* padding-top: 20px; */
 
 }
 
 h1 {
   padding-top: 10px;
   padding-bottom: 10px;
+  color: #2B3467;
+
+}
+
+h2 {
+  color: #FF9900;
 
 }
 
@@ -69,7 +91,7 @@ color: white, bold;
 }
 
 h3 {
-  color: white;
+  color: #2B3467;
   font-size: 25px;
   font-weight: bold;
   margin-bottom: 20px;
@@ -78,19 +100,26 @@ h3 {
 
 .step {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 50px;
+  position: fixed;
+  top: 45%;
+  right: 10%;
 }
 
 /* DEPARTMENT */
 
-/* ACTIVITY */
+.department {
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer; 
+  font-family: 'Sono', sans-serif; 
+  margin-top: 20px;
+  text-align: center;
+}
 
-/* Remove default dropdown arrow */
-/* .selectOptions::-ms-expand {
-  display: none; 
-}    */
+/* ACTIVITY */
 
 .selectOptions {
   -webkit-appearance: none;
@@ -103,6 +132,7 @@ h3 {
   background-color: #fff;
   cursor: pointer; 
   font-family: 'Sono', sans-serif;
+  margin-top: 20px;
 
 }
 
@@ -135,27 +165,30 @@ input[type="radio"] {
   flex-direction: column;
   justify-items: center;
   align-items: center;
-  margin-top: 80px;
+  text-align: center;
+  margin-top: -20px;
 }
 
 h4 {
-  font-size: 25px;
+  font-size: 15px;
+  line-height: 30px;
+  margin-top: 20px;
 }
 
 h5 {
-  font-size: 20px;
-  line-height: 35px;
-  margin-top: 20px;
-  color: grey;
-
-}
-
-h6 {
   font-size: 15px;
-  line-height: 100px;
-  color: white;
+  color: #2B3467;
+  line-height: 30px;
+  margin-top: 250px;
 }
 
+
+.resultsBox {
+  color: #2B3467;
+  /* border: 4px #FFF;
+  border-style: solid; */
+  /* padding: 5px; */
+}
 
 /* GENERAL BUTTONS  */
 
@@ -183,8 +216,10 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;  
-  margin-top: 30px;
+  position: fixed;
   gap: 60px;
+  /* top: 35%; */
+  bottom: 20%;
 }
 
 .buttonNext {
@@ -234,10 +269,9 @@ h6 {
   justify-content: center;
   height: 40px;
   width: 70px;
-  margin: 40px;
   border-radius: 10px;
   border: none;
-  color: #66D9CF;
+  color: #2B3467;
   background-color: #FFF; 
   line-height: 6vh; 
   font-weight: bold;
@@ -246,9 +280,19 @@ h6 {
 
 .buttonSubmit:hover {
   background-color: #F0E365;
-  color: #67b4c5;
   transition: 0.3s;
 }
-/* select {
 
-} */
+/* MEDIA QUERIES  */
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+}
+
+@media (min-width: 1025px) {
+
+  h5 {
+    /* margin-bottom: 0; */
+  /* position: fixed; */
+}
+}

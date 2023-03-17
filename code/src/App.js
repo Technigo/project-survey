@@ -29,18 +29,22 @@ export const App = () => {
         <Department
           department={department}
           setDepartment={setDepartment}
+          handleStepIncrease={handleStepIncrease}
           handleStepDecrease={handleStepDecrease} />
       )}
       {step === 2 && (
         <Climate
           climate={climate}
-          setClimate={setClimate} />
+          setClimate={setClimate}
+          handleStepIncrease={handleStepIncrease}
+          handleStepDecrease={handleStepDecrease} />
       )}
       {step === 3 && (
         <Activity
           activity={activity}
           setActivity={setActivity}
-          handleStepIncrease={handleStepIncrease} />
+          handleStepIncrease={handleStepIncrease}
+          handleStepDecrease={handleStepDecrease} />
       )}
       {step >= 4 && (
         <Result
@@ -49,15 +53,9 @@ export const App = () => {
           activity={activity} />
       )}
       {step >= 1 && step <= 3 && (
-        <>
-          <div className="buttonContainer">
-            <button type="button" className="buttonBack" onClick={handleStepDecrease}>Back</button>
-            <button type="button" className="buttonNext" onClick={handleStepIncrease}>Next</button>
-          </div>
-          <div className="step">
-            <p>Step {step}/3</p>
-          </div>
-        </>
+        <div className="step">
+          <p>Step {step}/3</p>
+        </div>
       )}
     </>
   );

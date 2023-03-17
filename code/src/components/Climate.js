@@ -2,7 +2,7 @@ import React from 'react';
 
 const climateTypes = ['cold and snowy ☃️', 'warm and breezy 🌤️', 'hot and tropical 🏝️'];
 
-export const Climate = ({ climate, setClimate }) => {
+export const Climate = ({ climate, setClimate, handleStepIncrease, handleStepDecrease }) => {
   // const handleClimateChange = (event) => {
   //   setClimate(event.target.value);
   // }
@@ -21,6 +21,10 @@ export const Climate = ({ climate, setClimate }) => {
             {climates}
           </label>
         ))}
+      </div>
+      <div className="buttonContainer">
+        <button type="button" className="buttonBack" onClick={handleStepDecrease}>Back</button>
+        <button type="button" className="buttonNext" onClick={handleStepIncrease}>Next</button>
       </div>
     </div>
   );
