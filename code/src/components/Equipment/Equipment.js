@@ -21,11 +21,12 @@ export const Equipment = ({ setEquipment }) => {
   };
 
   return (
-    <fieldset>
+    <fieldset className="equipment-wrapper">
       <legend>What sport are you interested in renting equipment for?</legend>
       <select
         name="equipment"
         id="equipment"
+        className="dropdown-equipment"
         onChange={handleEquipChange}
         onBlur={handleBlur}
         onInvalid={handleInvalid}

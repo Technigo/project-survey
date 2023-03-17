@@ -8,19 +8,21 @@ export const Textbox = ({ textbox, setTextbox }) => {
   };
 
   return (
-    <label htmlFor="textbox">
-      Add info:
-      <input
-        type="text"
-        id="textbox"
-        className="textbox"
-        name="textbox-free"
-        onChange={handleTextboxChange}
-        value={textbox}
-        placeholder="Enter text here..."
-        required
-        aria-describedby="textbox-instructions"
-        maxLength={100} />
-    </label>
+    <fieldset className="textbox-wrapper">
+      <legend>Add information:</legend>
+      <label htmlFor="textbox">
+        <input
+          type="text"
+          id="textbox"
+          className="textbox"
+          name="textbox-free"
+          onChange={handleTextboxChange}
+          value={textbox}
+          placeholder="Enter text here..."
+          required
+          aria-describedby="textbox-instructions"
+          maxLength={100} />
+      </label>
+    </fieldset>
   );
 };

@@ -1,3 +1,32 @@
-select {
-    padding: 3px 5px;
+.equipment-wrapper legend {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+.dropdown-equipment {
+    margin: 30px 0;
+    padding: 4px 6px;
+    font-size: 16px;
 }
+  
+  /*Tablet media query*/
+  @media (min-width: 667px) {
+    .equipment-wrapper legend {
+      font-size: 24px;
+      margin: 15px;
+    }
+
+    .dropdown-equipment {
+        margin: 40px 0;
+        font-size: 18px;
+    }
+  }
+  
+  
+  /*Desktop media query*/
+  @media (min-width: 1025px) {
+    .equipment-wrapper legend {
+      font-size: 26px;
+    }
+  }

@@ -16,10 +16,9 @@ export const AddInfo = ({
   };
 
   return (
-    <section className="add-info-form" onSubmit={handleSubmit} autoComplete="off">
-      <fieldset>
-        <legend>Would you like to add anything else?</legend>
-        <div id="add-info-description">Select this option if you would like to add additional information.</div>
+    <fieldset className="add-info-wrapper" onSubmit={handleSubmit} autoComplete="off">
+      <legend>Would you like to add anything else?</legend>
+      <section className="radio-buttons-add">
         <label htmlFor="yes-add">
           <input
             type="radio"
@@ -45,16 +44,16 @@ export const AddInfo = ({
             aria-describedby="add-info-description" />
           No
         </label>
+      </section>
 
-        {addInfo === 'yes' && (
-          <Textbox
-            textbox={textbox}
-            setTextbox={setTextbox}
-            handleSubmit={handleSubmit} />
-        )}
+      {addInfo === 'yes' && (
+        <Textbox
+          textbox={textbox}
+          setTextbox={setTextbox}
+          handleSubmit={handleSubmit} />
+      )}
 
-        <ButtonSubmit />
-      </fieldset>
-    </section>
+      <ButtonSubmit />
+    </fieldset>
   );
 }

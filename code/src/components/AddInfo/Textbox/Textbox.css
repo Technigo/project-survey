@@ -1,8 +1,51 @@
-.textbox [type=text]:focus {
-    outline: solid 3px rgb(79, 223, 139);
+.textbox-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-label {
-    display: flex;
-    flex-direction: column;
+.textbox-wrapper legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-self: center;
 }
+
+.textbox-wrapper input {
+    height: 100px;
+}
+
+.textbox-wrapper input::placeholder {
+    text-align: left;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 3px;
+}
+  
+
+
+  /*Tablet media query*/
+  @media (min-width: 667px) {
+    .textbox-wrapper legend {
+      font-size: 20px;
+      margin: 15px;
+    }
+
+    .textbox-wrapper input {
+        height: 100px;
+        width: 250px;
+    }
+
+    .textbox-wrapper input::placeholder {
+        font-size: 16px;
+    }
+  }
+  
+  
+  /*Desktop media query*/
+  @media (min-width: 1025px) {
+    .textbox-wrapper legend {
+      font-size: 22px;
+    }
+  }

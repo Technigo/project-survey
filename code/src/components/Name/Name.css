@@ -3,18 +3,49 @@
     flex-direction: column;
 }
 
-input {
-    font-family: 'Frank Ruhl Libre', serif;
-    margin: 2px;
+.name-wrapper legend {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.name-input[type=text] {
+  font-family: 'Frank Ruhl Libre', serif;
+  margin: 10px;
+  padding: 2px 0;
+  font-size: 18px;
 }
 
 .name-input[type=text]:focus {
-    outline: solid 1px rgb(9, 9, 9);
-    font-weight: bold;
+  outline: solid 1px rgb(9, 9, 9);
+  font-weight: bold;
+}
+
+.name-input::placeholder {
+  text-align: center;
+}
+  
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+  .name-wrapper legend {
+    font-size: 24px;
   }
 
-  label[for="name-input"] {
-    font-size: 24px;
-    font-weight: bold;
+  .name-input[type=text] {
+    padding: 6px;
+    font-size: 18px;
   }
-  
+}
+
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+  .name-wrapper legend {
+    font-size: 26px;
+  }
+
+  .name-input[type=text] {
+    font-size: 20px;
+  }
+}

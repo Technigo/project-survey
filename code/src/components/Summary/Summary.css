@@ -1,7 +1,29 @@
-em {
-    font-weight: bold;
-  }
+.summary-wrapper {
+  display: flex;
+  flex-direction: column;
+}
 
-  .regards-text {
-    margin-bottom: 0;
+.summary-wrapper h2 {
+  font-size: 22px;
+}
+
+.summary-wrapper p {
+  margin: 20px;
+}
+
+em {
+  font-weight: bold;
+}
+
+.regards-text {
+  margin: 0;
+}
+
+  /*Tablet media query*/
+  @media (min-width: 667px) {
+  }
+    
+    
+  /*Desktop media query*/
+  @media (min-width: 1025px) {
   }

@@ -7,9 +7,9 @@ export const Transportation = ({ transportation, setTransportation }) => {
     setTransportation(event.target.value);
   };
   return (
-    <fieldset aria-label="Transportation method">
+    <fieldset aria-label="Transportation method" className="radio-wrapper">
       <legend>Choose your transportation method</legend>
-      <section className="radio-wrapper">
+      <section className="radio-buttons-transport">
         <label htmlFor="taxi">
           <input
             type="radio"

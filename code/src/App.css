@@ -5,7 +5,7 @@
 }
 
 .step-counter {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 /*Tablet media query*/
@@ -13,11 +13,8 @@
     .question-wrappers {
         height: 450px;
     }
-}
 
-/*Desktop media query*/
-@media (min-width: 1025px) {
-    .question-wrappers {
-        height: 500px;
+    .step-counter {
+        font-size: 18px;
     }
 }

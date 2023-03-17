@@ -1,5 +1,13 @@
 .button-start {
-    width: 50px;
-    padding: 2px 6px;
-    margin: 20px;
+    width: 80px;
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+    .button-start {
+        font-size: 18px;
+    }
 }

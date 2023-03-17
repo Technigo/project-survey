@@ -28,7 +28,7 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-radius: 10%;
+  border-radius: 5%;
   padding: 20px;
   background-color: rgb(245, 242, 242);
   opacity: 0.9;

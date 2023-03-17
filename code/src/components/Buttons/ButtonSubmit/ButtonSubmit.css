@@ -1,0 +1,13 @@
+.button-submit {
+    width: 80px;
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #000000;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+    .button-submit {
+        font-size: 18px;
+    }
+}
