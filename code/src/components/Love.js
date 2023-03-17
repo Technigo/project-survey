@@ -15,9 +15,9 @@ const Love = ({ love, setLove }) => {
             <input
               id="yes"
               type="radio"
-              value="Yes!"
+              value="Yes! ❤️"
               onChange={handleLoveChange}
-              checked={love === 'Yes!'}
+              checked={love === 'Yes! ❤️'}
               aria-label="yes" />
             Yes, of course I love cats!
           </label>

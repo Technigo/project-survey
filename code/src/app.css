@@ -23,7 +23,7 @@ text-shadow: 0 0 3px #0000;
 }
 
 h2, h3 {
-      font-weight: 100;
+font-weight: 100;
 }
 
 h2 {
@@ -61,7 +61,6 @@ button {
     border-radius: 20px;
     font-weight: 700;
     height: 50px;
-    /* opacity: 1; */
 }
 
 button:hover {
@@ -158,6 +157,23 @@ option {
       font-size: 22px;
 }
 
+.audio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+audio {
+    border: 0.2rem solid #fff;
+    border-radius: 40px;
+    box-shadow: 0 0 0.2rem var(--tertiary-bg-color), 
+    0 0 0.2rem #fff, 0 0 2rem var(--tertiary-bg-color), 
+    0 0 0.8rem var(--tertiary-bg-color), 0 0 2.8rem var(--tertiary-bg-color), 
+    inset 0 0 1.3rem var(--tertiary-bg-color);
+    background-color: rgba(40, 39, 39, 0.7); 
+}
+
 /* ---- TABLET ----- */
 
 @media only screen and (min-width: 744px) {
@@ -198,7 +214,7 @@ option {
 
  .neon-text {
     width: 20%;
-    margin-top: 200px;
+    margin-top: 100px;
 }
 
 button {
@@ -214,7 +230,7 @@ select {
 
 .input-field {
     width: 40%;
-    margin: auto;
+    margin: 20px auto;
 }
 
 input[type="radio"]:hover, label:hover {
