@@ -2,7 +2,7 @@ import React from 'react';
 
 export const ThankYou = ({ name, hear, overall, delivery, purchase, rate, handleReset }) => {
   return (
-    <div>
+    <div className="thanks-container">
       <h2>Thank you for participating in the survey!</h2>
       <p>Here is a summary of your responses:</p>
       <ul>

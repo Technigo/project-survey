@@ -1,8 +1,8 @@
 import React from 'react';
 
-export const Hear = ({ hear, setHear, step }) => {
+export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
   return (
-    <div className="container-hear">
+    <div className="hear-container">
       <h2>Question {step}</h2>
       <p>How did you hear about us?</p>
       <form className="form">
@@ -15,6 +15,7 @@ export const Hear = ({ hear, setHear, step }) => {
           <option value="Through Advertising">Through Advertising</option>
           <option value="Other">Other</option>
         </select>
+        <button type="button" required onChange={handleStepIncrease}>Next</button>
       </form>
     </div>
   );

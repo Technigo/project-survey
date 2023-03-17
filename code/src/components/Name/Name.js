@@ -1,10 +1,20 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-export const Name = ({ name, setName, step }) => {
+export const Name = ({ name, setName, step, handleStepIncrease }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
+
+  const handleNextClick = (event) => {
+    event.preventDefault();
+    if (name.trim() === '') {
+      alert('Please enter your name');
+      return;
+    }
+    handleStepIncrease();
+  };
+
   return (
     <div className="name-container">
       <h2>Welcome to our Customer Survey!</h2>
@@ -22,8 +32,11 @@ export const Name = ({ name, setName, step }) => {
           value={name}
           onChange={handleNameChange}
           step={step} />
-        <button type="submit">Next</button>
+        <button type="submit" onClick={handleNextClick} required>
+          Next
+        </button>
       </form>
     </div>
-  )
+  );
 };
+

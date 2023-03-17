@@ -38,37 +38,43 @@ export const App = () => {
         <Name
           name={name}
           setName={setName}
-          step={step} />
+          step={step}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 2 && (
         <Hear
           hear={hear}
           setHear={setHear}
-          step={step} />
+          step={step}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 3 && (
         <Delivery
           delivery={delivery}
           setDelivery={setDelivery}
-          step={step} />
+          step={step}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 4 && (
         <Overall
           overall={overall}
           setOverall={setOverall}
-          step={step} />
+          step={step}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 5 && (
         <Purchase
           purchase={purchase}
           setPurchase={setPurchase}
-          step={step} />
+          step={step}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 6 && (
         <Rate
           rate={rate}
           setRate={setRate}
-          step={step} />
+          step={step}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 7 && (
         <ThankYou
@@ -79,9 +85,6 @@ export const App = () => {
           purchase={purchase}
           rate={rate}
           handleReset={handleReset} />
-      )}
-      {step < 7 && (
-        <button type="button" onClick={handleStepIncrease}>Next question</button>
       )}
     </>
   );
