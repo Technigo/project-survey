@@ -9,9 +9,11 @@ export const Result = ({ department, climate, activity }) => {
         <h4>Your ideal kind of activity would be {activity}.
         </h4>
       </div>
-      <h5>Thanks for taking time out of the {department} department to answer this survey!
+      <div className="thankYou">
+        <h5>Thanks for taking time out of the {department} department to answer this survey!
           We&apos;ll get back to you shortly.
-      </h5>
+        </h5>
+      </div>
     </div>
   );
 }

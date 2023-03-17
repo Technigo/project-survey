@@ -38,19 +38,18 @@ background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center center;
-background-color: rgba(0, 0, 0, 0.3);
 
 /* width: 100%; */
 } 
 
-html {
+/* html {
   background-image: url(../public/assets/background-image.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 
-}
+} */
 /* LANDING PAGE */
 
 .landingPageText {
@@ -58,12 +57,12 @@ html {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
   /* background-color: white; */
   width: 100%;
   height: auto;
-  /* padding-top: 20px; */
-
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 h1 {
@@ -72,9 +71,11 @@ h1 {
   color: #2B3467;
 
 }
-
+/* caa18a */
 h2 {
-  color: #FF9900;
+  padding-top: 20px;
+  color: #f33614f9;
+  font-size: 20px;
 
 }
 
@@ -85,30 +86,32 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-margin-top: 30px;
-border: white, 2px;
-color: white, bold;
+margin-top: 20px;
 }
 
 h3 {
-  color: #2B3467;
-  font-size: 25px;
+  color: #0e218a;
+  font-size: 20px;
   font-weight: bold;
   margin-bottom: 20px;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 
 .step {
   display: flex;
   position: fixed;
-  top: 45%;
+  bottom: 15%;
   right: 10%;
 }
 
 /* DEPARTMENT */
 
 .department {
-  padding: 8px;
+  /* padding: 8px; */
+  padding-right: 5%;
+  padding-left: 5%;
   font-size: 16px;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -117,6 +120,7 @@ h3 {
   font-family: 'Sono', sans-serif; 
   margin-top: 20px;
   text-align: center;
+  min-width: 200px;
 }
 
 /* ACTIVITY */
@@ -133,7 +137,6 @@ h3 {
   cursor: pointer; 
   font-family: 'Sono', sans-serif;
   margin-top: 20px;
-
 }
 
 .selectOptions:focus {
@@ -149,8 +152,8 @@ h3 {
 .radioButtons {
   display: flex;
   flex-direction: row;
-  margin: 10px;
-  font-size: 20px;
+  margin-top: 5px;
+  font-size: 18px;
 }
 
 input[type="radio"] {
@@ -166,38 +169,52 @@ input[type="radio"] {
   justify-items: center;
   align-items: center;
   text-align: center;
-  margin-top: -20px;
+  margin-top: 10px;
 }
 
 h4 {
   font-size: 15px;
   line-height: 30px;
-  margin-top: 20px;
+  /* margin-top: 20px; */
+}
+
+.resultsBox {
+  color: #2B3467;
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 h5 {
   font-size: 15px;
   color: #2B3467;
   line-height: 30px;
-  margin-top: 250px;
 }
 
 
-.resultsBox {
-  color: #2B3467;
-  /* border: 4px #FFF;
-  border-style: solid; */
-  /* padding: 5px; */
+
+.thankYou {
+  position: fixed;
+  bottom: 15%;
+
 }
 
 /* GENERAL BUTTONS  */
 
+.startButtonContainer {
+  position: fixed;
+  bottom: 70px;
+  align-self: center;
+
+}
+
 .buttonStart {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 40px;
   width: 60px;
-  margin: 40px;
+  /* margin: 40px; */
   border-radius: 10px;
   border: none;
   color: white;
@@ -219,7 +236,7 @@ h5 {
   position: fixed;
   gap: 60px;
   /* top: 35%; */
-  bottom: 20%;
+  bottom: 18%;
 }
 
 .buttonNext {

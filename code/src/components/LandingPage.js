@@ -5,7 +5,9 @@ export const LandingPage = ({ handleStepIncrease }) => {
     <div className="landingPageText" aria-label="welcome text">
       <h1>Company Retreat Survey</h1>
       <h2>Help plan our next trip!</h2>
-      <button type="button" className="buttonStart" onClick={handleStepIncrease}>Start</button>
+      <div className="startButtonContainer">
+        <button type="button" className="buttonStart" onClick={handleStepIncrease}>Start</button>
+      </div>
     </div>
   );
 }
