@@ -1,4 +1,5 @@
 import React from 'react'
+import '../index.css'
 
 const freeText = ({ headline, input, setInput, inputLabel, id, placeholder, htmlFor }) => {
   const handleInputChange = (event) => {

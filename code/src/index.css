@@ -11,7 +11,31 @@ code {
     monospace;
 }
 
-h1 {
-  font-family: 'Mulish', sans-serif;
+.inner-part {
+  position: relative;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 35px;
+  color: pink;
+  text-align: center;
+}
+
+input {
+  width: 80%;
+  height: 15px;
+  font-size: 20px;
+}
+
+footer img {
+  filter: invert(1);
+  max-width: 400px;
+  max-height: 400px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
 }
 

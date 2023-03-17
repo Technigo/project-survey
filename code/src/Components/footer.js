@@ -1,5 +1,6 @@
 import React from 'react'
 import Drink from './coffee-shop.png'
+import '../index.css'
 
 const footer = () => {
   return (

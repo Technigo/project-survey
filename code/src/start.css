@@ -1,3 +1,12 @@
 h1 {
     font-weight: bold;
+    font-size: 50px;
+    font-family: 'Mulish', sans-serif;
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
 }

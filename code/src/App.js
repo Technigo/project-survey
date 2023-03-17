@@ -80,9 +80,9 @@ export const App = () => {
             </div>
           )}
 
-          {step < 6 && step > 1 && (
+          {step > 1 && step < 6 && (
             <div>
-              <button className="next-btn" type="button" onClick={handleStepIncrease}>Submit answer</button>
+              <button className="next-btn" type="button" onClick={handleStepIncrease}>Submit and go to next</button>
             </div>
           )}
 
@@ -94,7 +94,7 @@ export const App = () => {
 
           {step <= 6 && (
             <div>
-              <button className="restart-btn" type="button" onClick={handleStepRestart}>Restart</button>
+              <button className="restart-btn" type="button" onClick={handleStepRestart}>Restart the survey</button>
             </div>
           )}
         </div>

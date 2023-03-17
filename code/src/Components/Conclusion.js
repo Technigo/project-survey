@@ -1,4 +1,5 @@
 import React from 'react'
+import '../index.css'
 
 const conclusion = ({ purchase, subscriptionQ, often, missing }) => {
   return (
@@ -6,7 +7,7 @@ const conclusion = ({ purchase, subscriptionQ, often, missing }) => {
       <h2>Thank you for completing this short survey! You will see a summary of
             your answers below.
       </h2>
-      <h3>Summary:</h3>
+      <h3>You answered:</h3>
       <ul>
         <li><span className="summary">Weekly purchases:</span> {purchase}</li>
         <li><span className="summary">Active subscription:</span> {subscriptionQ}</li>
