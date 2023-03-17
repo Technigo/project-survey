@@ -4,7 +4,7 @@ import { Points } from 'components/pointsFile'
 import { BestThing } from 'components/bestThingFile';
 import { Impression } from 'components/impression'
 import { Answer } from 'components/answer'
-import { Summary } from './components/summary';
+import { Summary } from 'components/summary';
 
 export const App = () => {
   const [step, setStep] = useState(1);
