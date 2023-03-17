@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +15,20 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-container {
+  border: 2px blue dotted;
+}
+
+.form-container {
+  border: 2px orangered dotted;
+}
+
+.form {
+  border: 2px purple dotted;
+}
+
+.button-container {
+  border: 2px purple dotted;
 }
