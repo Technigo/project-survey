@@ -25,3 +25,97 @@ code {
   justify-content: center;
   margin-top: 30px;
 }
+
+.hear-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+.hear-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.delivery-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+.delivery-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.overall-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+.overall-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.purchase-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+.purchase-options {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.rate-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+.rate-slider {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+.thanks-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300px; 
+}
+
+.results {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.go-again-btn {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}

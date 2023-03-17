@@ -21,16 +21,20 @@ export const Overall = ({ overall, setOverall, step, handleStepIncrease }) => {
 
   return (
     <div className="overall-container">
-      <h2>Question {step}</h2>
-      <p>What is your overall perception of us?</p>
-      <form className="form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={overall}
-          onChange={handleOverallChange}
-          required />
-        <button type="submit">Next</button>
-      </form>
+      <div className="overall-header">
+        <h2>Question {step}</h2>
+        <p>What is your overall perception of us?</p>
+      </div>
+      <div className="overall-form">
+        <form className="form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={overall}
+            onChange={handleOverallChange}
+            required />
+          <button type="submit">Next</button>
+        </form>
+      </div>
     </div>
   );
 };

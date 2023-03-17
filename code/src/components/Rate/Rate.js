@@ -15,17 +15,21 @@ export const Rate = ({ rate, setRate, step, handleStepIncrease }) => {
 
   return (
     <div className="rate-container">
-      <h2>Question {step}</h2>
-      <p>Last question, on a scale of 1 to 10, how would you rate your interaction with us?</p>
-      <input
-        type="range"
-        id="rate-slider"
-        name="rate"
-        min="1"
-        max="10"
-        value={rate}
-        onChange={handleRateChange} />
-      <button type="button" onClick={handleNextButtonClick} required>Next</button>
+      <div className="rate-header">
+        <h2>Question {step}</h2>
+        <p>Last question, on a scale of 1 to 10, how would you rate your interaction with us?</p>
+      </div>
+      <div className="rate-slider">
+        <input
+          type="range"
+          id="rate-slider"
+          name="rate"
+          min="1"
+          max="10"
+          value={rate}
+          onChange={handleRateChange} />
+        <button type="button" onClick={handleNextButtonClick} required>Next</button>
+      </div>
     </div>
   );
 };
