@@ -4,10 +4,11 @@ import mountain1 from '../../images/mountains1.png'
 import forest from '../../images/forest.png'
 import stars from '../../images/stars.png'
 
-export const Place = ({ place, setPlace }) => {
+export const Place = ({ place, setPlace, handleStepIncrease }) => {
   const handlePlaceChange = (event) => {
     setPlace(event.target.value);
   }
+
   return (
     <div className="place-container">
       <p>Which place do you prefer?</p>
@@ -26,6 +27,14 @@ export const Place = ({ place, setPlace }) => {
           <option value="stars">A mystical magical forest</option>
         </select>
       </form>
+      <div className="container-step-btn">
+        <button
+          className="step-btn"
+          type="button"
+          onClick={handleStepIncrease}
+          disabled={place === ''}> Next
+        </button>
+      </div>
     </div>
   )
 }

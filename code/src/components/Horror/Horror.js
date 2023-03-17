@@ -4,7 +4,7 @@ import pineapple from '../../images/pinapple.png'
 import snake from '../../images/snake.png'
 import plane from '../../images/plane.png'
 
-export const Horror = ({ horror, setHorror }) => {
+export const Horror = ({ horror, setHorror, handleStepIncrease }) => {
   const handleHorrorChange = (event) => {
     setHorror(event.target.value);
   }
@@ -28,6 +28,14 @@ export const Horror = ({ horror, setHorror }) => {
           <option value="airplane">Falling out of an airplane.</option>
         </select>
       </form>
+      <div className="container-step-btn">
+        <button
+          className="step-btn"
+          type="button"
+          onClick={handleStepIncrease}
+          disabled={horror === ''}> Next
+        </button>
+      </div>
     </div>
   )
 }

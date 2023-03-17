@@ -30,27 +30,32 @@ export const App = () => {
       {step === 1 && (
         <Name
           name={name}
-          setName={setName} />
+          setName={setName}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 2 && (
         <Place
           place={place}
-          setPlace={setPlace} />
+          setPlace={setPlace}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 3 && (
         <Animal
           animal={animal}
-          setAnimal={setAnimal} />
+          setAnimal={setAnimal}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 4 && (
         <Horror
           horror={horror}
-          setHorror={setHorror} />
+          setHorror={setHorror}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 5 && (
         <Food
           food={food}
-          setFood={setFood} />
+          setFood={setFood}
+          handleStepIncrease={handleStepIncrease} />
       )}
       {step === 6 && (
         <StoryTime
@@ -71,18 +76,6 @@ export const App = () => {
             <b>{step}</b> / {stepsTotalCount}
           </span>
         </p>
-      )}
-
-      {step < 6 && (
-        <div className="step-btn">
-          <button
-            type="button"
-            onClick={handleStepIncrease}
-            disabled={name === '' && food === ''}>
-            {step === 1 && 'Create story'}
-            {step > 1 && step < 6 && 'Next question'}
-          </button>
-        </div>
       )}
 
     </div>

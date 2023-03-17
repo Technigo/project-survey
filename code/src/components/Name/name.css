@@ -22,3 +22,8 @@
 .image-container-name img{
     width: 50px;
 }
+
+.container-step-btn{
+    display: flex;
+    justify-content: center;
+}

@@ -3,7 +3,7 @@ import './animal.css';
 import duck from '../../images/duck-saju-dey.png'
 import frog from '../../images/frog-Fadhil-Kya.png'
 
-export const Animal = ({ animal, setAnimal }) => {
+export const Animal = ({ animal, setAnimal, handleStepIncrease }) => {
   const handleAnimalChange = (event) => {
     setAnimal(event.target.value);
   }
@@ -35,6 +35,14 @@ export const Animal = ({ animal, setAnimal }) => {
               checked={animal === 'frog'} />
           </label>
         </form>
+      </div>
+      <div className="container-step-btn">
+        <button
+          className="step-btn"
+          type="button"
+          onClick={handleStepIncrease}
+          disabled={animal === ''}> Next
+        </button>
       </div>
     </div>
   )
