@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Delivery = ({ delivery, setDelivery, step }) => {
+export const Delivery = ({ delivery, setDelivery, step, handleStepIncrease }) => {
   const handleDeliveryChange = (event) => {
     setDelivery(event.target.value);
   }
@@ -10,6 +10,14 @@ export const Delivery = ({ delivery, setDelivery, step }) => {
     'No',
     'Do not know'
   ];
+
+  const handleNextButtonClick = () => {
+    if (!delivery) {
+      alert('Please select an option.');
+    } else {
+      handleStepIncrease();
+    }
+  }
 
   return (
     <div className="delivery-container">
@@ -27,6 +35,7 @@ export const Delivery = ({ delivery, setDelivery, step }) => {
           <label htmlFor={option}>{option}</label>
         </div>
       ))}
+      <button type="button" onClick={handleNextButtonClick} required>Next</button>
     </div>
   );
 };

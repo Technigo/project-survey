@@ -1,6 +1,15 @@
 import React from 'react';
 
 export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
+  const handleNextClick = (event) => {
+    if (!hear) {
+      alert('Please select an option before moving to the next question.');
+      return;
+    }
+
+    handleStepIncrease(event);
+  };
+
   return (
     <div className="hear-container">
       <h2>Question {step}</h2>
@@ -15,7 +24,7 @@ export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
           <option value="Through Advertising">Through Advertising</option>
           <option value="Other">Other</option>
         </select>
-        <button type="button" required onChange={handleStepIncrease}>Next</button>
+        <button type="button" onClick={handleNextClick}>Next</button>
       </form>
     </div>
   );
