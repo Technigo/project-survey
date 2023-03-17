@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export const quizResult = ({ prefer, color, thing, setResults }) => {
+export const QuizResult = ({ prefer, color, thing }) => {
+  const [results, setResults] = useState('');
   const handleResults = (event) => {
     setResults(event.target.value);
-
-    console.log('Name:', event.target.value);
-  }
+    const result = QuizResult({ prefer: 'surf', color: 'black', thing: 'ocean' });
+    setResults(result);
+    console.log(result);
+  };
   const quiz = () => {
     if (prefer === 'surf' && thing === 'ocean' && color === 'black') {
       return ('shark');
@@ -109,7 +111,7 @@ export const quizResult = ({ prefer, color, thing, setResults }) => {
   return (
     <div>
       <button onClick={handleResults} type="button">Calculate Results</button>
-      <p>Results: {quiz}</p>
+      <p>Results: {results}</p>
     </div>
   );
 }

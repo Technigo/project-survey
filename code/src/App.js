@@ -2,9 +2,10 @@
 import React, { useState } from 'react';
 import { Name } from './components/Name';
 import { Prefer } from './components/Prefer';
-import { Results } from './components/Results';
+// import { Results } from './components/Results';
 import { Color } from './components/Color';
 import { Thing } from './components/Thing';
+import { QuizResult } from './components/QuizResult'
 import './index.css';
 
 export const App = () => {
@@ -13,17 +14,21 @@ export const App = () => {
   const [prefers, setPrefers] = useState('')
   const [color, setColor] = useState('')
   const [things, setThing] = useState('')
-  const [results] = useState('')
+  const [results, setResults] = useState('')
   const [started, setStarted] = useState(false);
+  const [quizEnded, setQuizEnded] = useState(false);
 
   const handleNextStep = () => {
     console.log('counter before', counter);
     setCounter(counter + 1);
     console.log('after', counter)
-  }
+  };
   const handleStartQuiz = () => {
     setStarted(true);
     handleNextStep();
+    if (counter >= 5) {
+      setQuizEnded(true);
+    }
   };
 
   return (
@@ -52,8 +57,9 @@ export const App = () => {
       {counter === 4 && (
         <Thing thing={things} setThing={setThing} counterFromApp={counter} setCounter={setCounter} />
       )}
-      {counter >= 5 && (
-        <Results name={name} color={color} prefers={prefers} thing={things} result={results} />)}
+      {counter >= 5 && quizEnded && (
+        <QuizResult name={name} color={color} prefers={prefers} thing={things} result={results} setResults={setResults} QuizResult={QuizResult} />
+      )}
 
       {(counter === 1 && !name)
        || (counter === 2 && !prefers)
@@ -79,4 +85,5 @@ export const App = () => {
         <button type="button" onClick={handleNextStep} className="nextQuestion">
           Next question
         </button> */
+// why like this in nr 59 what does it mean?
 

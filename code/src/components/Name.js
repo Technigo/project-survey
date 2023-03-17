@@ -11,7 +11,7 @@ export const Name = ({ name, setName, counter }) => {
     <form>
       <section className="inputName">
         <p>What is your name?</p>
-        <input type="submit" onChange={handleNameChange} value={name} counter={counter} aria-labelledby="name-label" arial-label="Write your name here and then press button further down" />
+        <input type="text" onChange={handleNameChange} value={name} counter={counter} aria-labelledby="name-label" arial-label="Write your name here and then press button further down" />
       </section>
     </form>
   );

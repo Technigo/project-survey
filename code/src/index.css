@@ -18,23 +18,29 @@ code {
 body{
   margin: 0;
   overflow-x: hidden;
+  background-color: #FFFD37
 }
 /**/
 .StartPage{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  border: 2px solid green;
-  margin: 20px;
+  margin: 100px 60px 100px 60px;
+  background-color: #A8E4A0;
+  border-radius: 5px;
+
 
 }
 .StartPage h1{
   padding-left: 30px;
-  padding-right: 10px;
+  padding-right: 30px;
+  text-align: center;
 }
 .startBtn{
   width: 100px;
-  margin: 20px;
+  margin: 50px 30px 100px 70px;
+  ;
+
 }
 
 .nextQuestion{
