@@ -75,7 +75,7 @@ button {
   font-weight: bold;
 }
 
-button:hover, :active, :focus {
+button:hover, button:active, button:focus {
   background-color: #bbdd90;
   color: white;
 }
