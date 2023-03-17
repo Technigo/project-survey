@@ -11,33 +11,33 @@ export const Points = ({ points, setPoints }) => {
       <label>
         <input
           type="radio"
-          value="One"
+          value="Terrible"
           onChange={handlePoints}
-          checked={points === 'One'} />
+          checked={points === 'Terrible'} />
                 Terrible!
       </label>
       <label>
         <input
           type="radio"
-          value="Two"
+          value="Its alright..."
           onChange={(event) => setPoints(event.target.value)}
-          checked={points === 'Two'} />
+          checked={points === 'Its alright...'} />
                 Its alright...
       </label>
       <label>
         <input
           type="radio"
-          value="Three"
+          value="Quite nice!"
           onChange={(event) => setPoints(event.target.value)}
-          checked={points === 'Three'} />
+          checked={points === 'Quite nice!'} />
                 Quite nice!
       </label>
       <label>
         <input
           type="radio"
-          value="Four"
+          value="Awesome!"
           onChange={(event) => setPoints(event.target.value)}
-          checked={points === 'Four'} />
+          checked={points === 'Awesome!'} />
                 Awesome!
       </label>
     </div>

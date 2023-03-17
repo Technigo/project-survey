@@ -37,19 +37,15 @@ select {
   max-width: 100%
 }
 
-.introduction {
+.introduction, .namebox, .selectbox, .bestthingbox {
   color: #94BBCF;
   text-align: center;
   font-family: 'Cantarell', sans-serif;
   padding: 20px;
+  margin-top: 10%;
 }
 
-.namebox, .selectbox, .bestthingbox {
-  padding: 10px;
-  margin-bottom: 20px;
-}
-
-.namefield, .dropdown {
+input, .dropdown {
   border-radius: 15px;
   padding: 10px;
   font-weight: bolder;
@@ -75,11 +71,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 button {
@@ -115,6 +106,7 @@ button:hover {
   font-family: 'Cantarell', sans-serif;
 }
 
+/* Contact information showing in the summary */
 .contactme{
   display:flex;
   justify-content: center;

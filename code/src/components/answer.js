@@ -8,17 +8,19 @@ export const Answer = ({ answer, setAnswer }) => {
 
     <div className="bestthingbox">
       <h3><span>Would you recommend this site to a friend?</span></h3>
-      <label htmlFor="radio">
+      <label htmlFor="yesRadio">
         <input
           type="radio"
+          id="yesRadio"
           value="Yes"
           onChange={handleAnswer}
           checked={answer === 'Yes'} />
                 Yes!
       </label>
-      <label htmlFor="radio">
+      <label htmlFor="noRadio">
         <input
           type="radio"
+          id="noRadio"
           value="No"
           onChange={handleAnswer}
           checked={answer === 'No'} />

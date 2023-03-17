@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Impression = ({ setImpression }) => {
+export const Impression = ({ impression, setImpression }) => {
   const handleImpression = (event) => {
     setImpression(event.target.value);
   }
@@ -10,7 +10,7 @@ export const Impression = ({ setImpression }) => {
       <select
         className="dropdown"
         onChange={handleImpression}
-        value={Impression}>
+        value={impression}>
         <option value="None">Choose option</option>
         <option value="Bad">Bad!</option>
         <option value="Ordinary">Ordinary...</option>

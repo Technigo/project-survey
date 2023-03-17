@@ -9,10 +9,10 @@ import { Summary } from './Components/Summary';
 export const App = () => {
   const [step, setStep] = useState(1);
   const [bestThing, setBestThing] = useState('')
-  const [name, setName] = useState()
-  const [points, setPoints] = useState();
+  const [name, setName] = useState('')
+  const [points, setPoints] = useState('');
   const [impression, setImpression] = useState('')
-  const [answer, setAnswer] = useState();
+  const [answer, setAnswer] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -27,21 +27,21 @@ export const App = () => {
         <Points points={points} setPoints={setPoints} />
       )}
       {step === 3 && (
-        <BestThing bestThing={bestThing} setDrink={setBestThing} />
+        <BestThing bestThing={bestThing} setBestThing={setBestThing} />
       )}
       {step === 4 && (
         <Impression impression={impression} setImpression={setImpression} />
       )}
       {step === 5 && (
-        <Answer answer={answer} setImpression={setAnswer} />
+        <Answer answer={answer} setAnswer={setAnswer} />
       )}
       {step >= 6 && (
         <Summary
-          name={Name}
-          points={Points}
-          bestThing={BestThing}
-          impression={Impression}
-          answer={Answer} />
+          name={name}
+          points={points}
+          bestThing={bestThing}
+          impression={impression}
+          answer={answer} />
       )}
 
       {step < 6 && (
