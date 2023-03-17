@@ -71,7 +71,8 @@ export const App = () => {
             name={name}
             yourMonster={yourMonster}
             famousPerson={famousPerson}
-            yourTimeChoice={yourTimeChoice} />
+            yourTimeChoice={yourTimeChoice}
+            yourLove={yourLove} />
         )}
       </div>
       <footer>
