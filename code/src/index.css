@@ -28,7 +28,8 @@ code {
   flex-direction: column;
   align-items: center;
   justify-items: center;
-  margin: 0 0 5% 10%;
+  margin: 5%;
+  overflow: hidden;
   padding: 5%;
   background-color: rgba(255, 255, 255, 1);
 }
@@ -73,10 +74,6 @@ button {
   }
 
   @media only screen and (min-width: 768px) {
-
-    .content-container {
-      margin: 5%;
-    }
   
     button {
       width: 200px;
