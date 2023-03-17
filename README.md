@@ -14,6 +14,8 @@ I also added a progressbar and was able to style it after some googling.
 
 I decided to add some image credits in the last component. 
 
+I also wanted to make the user's input bold in the last component (where the story is presented) but I couldn't figure it out. If I had more time, that would be something that I would like to add. 
+
 ## View it live
 
 https://lovely-sprinkles-d1c505.netlify.app
