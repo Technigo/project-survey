@@ -1,19 +1,22 @@
 import React from 'react'
 import '../index.css'
+import '../conclusion.css'
 
 const conclusion = ({ purchase, subscriptionQ, often, missing }) => {
   return (
     <>
-      <h2>Thank you for completing this short survey! You will see a summary of
-            your answers below.
+      <h2>Thank you for completing this short survey! 💕 You will find a summary
+        of your answers below
       </h2>
       <h3>You answered:</h3>
-      <ul>
-        <li><span className="summary">Weekly purchases:</span> {purchase}</li>
-        <li><span className="summary">Active subscription:</span> {subscriptionQ}</li>
-        <li><span className="summary">Mostly purchased:</span> {often}</li>
-        <li><span className="summary">Missing on menu:</span> {missing}</li>
-      </ul>
+      <section className="list">
+        <ul>
+          <li><span className="summary">Weekly purchases:</span> {purchase}</li>
+          <li><span className="summary">Active subscription:</span> {subscriptionQ}</li>
+          <li><span className="summary">Mostly purchased:</span> {often}</li>
+          <li><span className="summary">Missing on menu:</span> {missing}</li>
+        </ul>
+      </section>
 
       <div className="link">
         <a

@@ -1,0 +1,10 @@
+.select-subscription {
+    display: flex;
+    background-color: #37505c;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 30px 0px 30px 0px;
+}

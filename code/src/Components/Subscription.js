@@ -21,6 +21,7 @@ const subscriptionQuestion = ({ subscriptionQ, setSubscriptionQ }) => {
           aria-live="polite">
 
           <option>Select your answer here:</option>
+          <option>...</option>
           <option lang="en" label="Yes" value="Yes">Yes</option>
           <option lang="en" label="No" value="No">No</option>
           <option lang="en" label="Soon" value="Soon">I will have one soon</option>
