@@ -15,8 +15,8 @@ import Result from './components/Result';
 export const App = () => {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
-  const [type, setType] = useState('');
-  const [genre, setGenre] = useState('');
+  const [type, setType] = useState('Surprise me!');
+  const [genre, setGenre] = useState('Surprise');
   const [score, setScore] = useState(8);
   const [apocalypse, setApocalypse] = useState(false);
 
@@ -27,8 +27,8 @@ export const App = () => {
   const handleStepReset = () => {
     setStep(0);
     setName('');
-    setType('');
-    setGenre('');
+    setType('Surprise me!');
+    setGenre('Surprise');
     setScore(8);
     setApocalypse(false);
   };
