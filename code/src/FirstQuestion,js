@@ -1,5 +1,0 @@
-import React from 'react'; 
-
-const FirstQuestion ({motivation, setMotivation }) => {
-    
-}
