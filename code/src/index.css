@@ -35,7 +35,6 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   gap: 10px;
   padding: 20px;
   background-color: #0f0f0f;
@@ -76,7 +75,7 @@ button {
   font-weight: bold;
 }
 
-button:hover, button:focus {
+button:hover {
   background-color: #bbdd90;
   color: white;
 }
