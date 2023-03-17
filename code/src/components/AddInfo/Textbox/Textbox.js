@@ -13,6 +13,7 @@ export const Textbox = ({ textbox, setTextbox }) => {
       <input
         type="text"
         id="textbox"
+        className="textbox"
         name="textbox-free"
         onChange={handleTextboxChange}
         value={textbox}

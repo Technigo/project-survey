@@ -74,7 +74,7 @@ export const App = () => {
             equipment={equipment}
             addInfo={addInfo}
             textbox={textbox}
-            handleStepIncrease={() => setStep(6)} />
+            handleStepIncrease={() => setStep(step + 1)} />
         )}
         {step > 0 && step < 5 && (
           <>

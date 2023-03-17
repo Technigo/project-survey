@@ -1,0 +1,8 @@
+.textbox [type=text]:focus {
+    outline: solid 3px rgb(79, 223, 139);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}

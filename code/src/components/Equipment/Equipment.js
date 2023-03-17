@@ -7,6 +7,19 @@ export const Equipment = ({ setEquipment }) => {
     setEquipment(event.target.value);
   };
 
+  const handleBlur = () => {
+    const selectElement = document.getElementById('equipment');
+    if (selectElement.value === 'choose-sport') {
+      selectElement.setCustomValidity('Please select a sport');
+    } else {
+      selectElement.setCustomValidity('');
+    }
+  };
+
+  const handleInvalid = (event) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <h2>What sport are you interested in renting equipment for?</h2>
@@ -14,6 +27,8 @@ export const Equipment = ({ setEquipment }) => {
         name="equipment"
         id="equipment"
         onChange={handleEquipChange}
+        onBlur={handleBlur}
+        onInvalid={handleInvalid}
         defaultValue="choose-sport"
         required>
         <option value="choose-sport" disabled>

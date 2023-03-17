@@ -14,6 +14,7 @@ export const Name = ({ name, setName }) => {
         <input
           type="text"
           id="name-input"
+          className="name-input"
           onChange={handleNameChange}
           value={name}
           placeholder="Enter name here"
