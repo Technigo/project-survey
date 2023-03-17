@@ -34,9 +34,15 @@ code {
   min-height: 400px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
   padding: 20px;
   background-color: #0f0f0f;
+  border-radius: 10px;
+}
+
+strong {
+  color: white;
 }
 
 h1 {
@@ -69,6 +75,10 @@ button {
   font-weight: bold;
 }
 
+button:hover, :active, :focus {
+  background-color: #bbdd90;
+  color: white;
+}
 
 
 

@@ -17,9 +17,13 @@ export const Name = ({ name, setName, step, setStep }) => {
   }
 
   return (
-    <div>
+    <div className="name-container">
       <h1>Sneaker Survey</h1>
       <h2>Hi there!</h2>
+      <p>Would you like to be part of shaping a new site
+        for second hand limited Sneakers?
+      </p>
+      <h3>If yes, fill in this survey!</h3>
       <p>Please start with entering your name:</p>
       <input
         className="input-text"

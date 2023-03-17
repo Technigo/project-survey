@@ -24,7 +24,7 @@ export const Secondhand = ({ secondHand, setSecondHand, step, setStep }) => {
         value={secondHand}
         onKeyDown={handleKeyDown}
         onChange={handleSecondHandChange}
-        placeholder="Type in your answer here" />
+        placeholder="Type your answer here" />
     </>
   )
 }
