@@ -21,6 +21,10 @@ export const Holiday = ({ holiday, setHoliday }) => {
           {locations}
         </label>
       ))}
+      <div className="icon-wrapper">
+        <img src="./assets/water.png" alt="water icon" />
+        <img src="./assets/land.png" alt="land icon" />
+      </div>
     </>
   )
 }
@@ -50,6 +54,10 @@ export const Water = ({ water, setWater, setLand }) => {
           {waterSpots}
         </label>
       ))}
+      <div className="icon-wrapper">
+        <img src="./assets/ocean.png" alt="ocean icon" />
+        <img src="./assets/lake.png" alt="lake icon" />
+      </div>
     </div>
   )
 }
@@ -79,6 +87,10 @@ export const Land = ({ land, setLand, setWater }) => {
           {landSpots}
         </label>
       ))}
+      <div className="icon-wrapper">
+        <img src="./assets/mountains.png" alt="mountains icon" />
+        <img src="./assets/forest.png" alt="forest icon" />
+      </div>
     </div>
   )
 }

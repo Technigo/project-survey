@@ -23,6 +23,12 @@ export const Season = ({ season, setSeason }) => {
           {seasons}
         </label>
       ))}
+      <div className="icon-wrapper">
+        <img src="./assets/spring.png" alt="spring icon" />
+        <img src="./assets/summer.png" alt="summer icon" />
+        <img src="./assets/autumn.png" alt="autumn icon" />
+        <img src="./assets/winter.png" alt="winter icon" />
+      </div>
     </>
   )
 }

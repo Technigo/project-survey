@@ -4,7 +4,7 @@ import { ResultOptions } from './ResultOptions';
 const resultLogic = ({ region, flavor, season }) => {
   if (region === 'cool as a cucumber' && flavor === 'salty' && season === 'spring') {
     return (
-      <ResultOptions dish="Asparagus" pic="./assets/asparagus.jpg" recipe="https://houseofnasheats.com/oven-roasted-asparagus-garlic-parmesan-lemon/" />
+      <ResultOptions dish="Roasted Asparagus" pic="./assets/asparagus.jpg" recipe="https://houseofnasheats.com/oven-roasted-asparagus-garlic-parmesan-lemon/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'salty' && season === 'summer') {
     return (

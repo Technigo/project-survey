@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Back, QuestionButton, StartOver } from './components/Button'
 import { Flavor } from './components/Flavor'
+import { Footer } from './components/Footer'
 import { Holiday, Water, Land } from './components/Holiday'
 import { HotSauce } from './components/HotSauce'
 import { Mayo } from './components/Mayo'
@@ -32,6 +33,12 @@ export const App = () => {
           <h1>What dish are you?</h1>
           <p>You seem like a tasty dish! But, which dish are you?</p>
           <p><span className="italics">Are you pie?  Are you cassarole?  Are you something deep fried?</span></p>
+          <div className="icon-wrapper">
+            <img src="./assets/asparagusi.png" alt="asparagus icon" />
+            <img src="./assets/icecream.png" alt="ice cream icon" />
+            <img src="./assets/corni.png" alt="corn icon" />
+            <img src="./assets/pie.png" alt="pie icon" />
+          </div>
           <p>Take this quiz and find out exactly which tasty dish <span className="highlight">you</span> are.</p>
           <Button counter={counter} setCounter={setCounter} />
         </div>
@@ -151,6 +158,9 @@ export const App = () => {
           <ResultsWrapper region={region} flavor={flavor} season={season} />
           <Back counter={counter} setCounter={setCounter} />
         </div>
+      )}
+      {counter < 10 && (
+        <Footer />
       )}
     </>
   );

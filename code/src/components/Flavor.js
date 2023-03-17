@@ -21,6 +21,10 @@ export const Flavor = ({ flavor, setFlavor }) => {
           {dispositions}
         </label>
       ))}
+      <div className="icon-wrapper">
+        <img src="./assets/sweet.png" alt="sweet icon" />
+        <img src="./assets/salty.png" alt="salty icon" />
+      </div>
     </>
   )
 }

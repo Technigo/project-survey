@@ -21,6 +21,10 @@ export const Region = ({ region, setRegion }) => {
           {qualities}
         </label>
       ))}
+      <div className="icon-wrapper">
+        <img src="./assets/cold.png" alt="cold icon" />
+        <img src="./assets/hot.png" alt="hot icon" />
+      </div>
     </>
   )
 }

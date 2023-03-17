@@ -6,6 +6,9 @@ export const Mayo = ({ mayo, setMayo }) => {
   }
   return (
     <>
+      <div className="icon-wrapper">
+        <img src="./assets/mayo.png" alt="mayo icon" />
+      </div>
       <p>Anything is a salad if you put mayo on it!</p>
       <select value={mayo} onChange={handleMayoSelection}>
         <option disabled value="">Agree or Disagree?</option>

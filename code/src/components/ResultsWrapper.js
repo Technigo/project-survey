@@ -7,7 +7,6 @@ export const ResultsWrapper = ({ region, flavor, season }) => {
       <h2>What a snack!</h2>
       <p>Congrats! You are...</p>
       <Results region={region} flavor={flavor} season={season} />
-      {/* <p>All recipes and images are from <a href="https://houseofnasheats.com/" target="_blank" rel="noopener noreferrer">House of Nash Eats</a></p> */}
     </>
   )
 }
