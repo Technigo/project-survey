@@ -39,6 +39,7 @@ export const Survey = () => {
                 firstName: value
               });
             }}
+            answers={answers}
             onPrevious={() => {
               setQuestionStep(questionStep - 1);
             }}
@@ -161,7 +162,7 @@ export const Survey = () => {
     const percentage = Math.floor((questionStep / 6) * 100)
     return (
       <div className="progres-bar-container">
-        <ProgressBar now={percentage} label={`${percentage}% completed`} />
+        <ProgressBar striped variant="danger" now={percentage} label={`${percentage}% completed`} />
       </div>
     );
   }

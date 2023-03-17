@@ -23,7 +23,7 @@ export const Results = (props) => {
                   className="result-image"
                   src={listing.image}
                   alt="property listed in Stockholm" />
-                {/* <p className="listing-info">{listing.listPrice} kr </p> */}
+                <p className="listing-info">{listing.location.address.streetAddress} </p>
                 <p className="listing-info">{listing.livingArea} m<sup>2</sup> </p>
                 <p className="listing-info">{listing.location.namedAreas} </p>
               </div>

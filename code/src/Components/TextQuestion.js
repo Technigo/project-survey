@@ -13,10 +13,11 @@ export const TextQuestion = (props) => {
             htmlFor={props.questionId}>{props.label}
           </label>
           <input
-            required
             title={props.label}
             type="text"
             id={props.questionId}
+            value={props.answers.firstName}
+            required
             onChange={(event) => props.onValueUpdate(event.target.value)} />
         </div>
         <div className="buttons-container">

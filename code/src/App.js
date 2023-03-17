@@ -4,7 +4,7 @@ import { Survey } from 'Components/Survey';
 export const App = () => {
   return (
     <div className="survey-container">
-      <img className="banner-image" src="https://images.unsplash.com/photo-1605063959681-3f84cac3d5a3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1192&q=80" alt="interior of a house" />
+      <img className="banner-image" src="https://blogger.googleusercontent.com/img/a/AVvXsEi_CdLLWqFq5jn84jKBAQBG2jngv2uBgkLqDV3OsJxvwr4rDxQ-1PurvnMQjqq3PlVIrv-inlyXHAkVxlnKEtLYopRdwlzsq4O5tlBC_fcEHjQ6LmnE5by5j17BbvORh007LdMu8U2EZyoHNZYTe6zJp5VHQouun7m1sdOAhsb4hz5IgONMGzLnOPiF=s16000" alt="interior of a house" />
       <form>
         <Survey />
       </form>

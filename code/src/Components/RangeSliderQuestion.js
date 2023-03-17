@@ -6,7 +6,7 @@ export const RangeSliderQuestion = (props) => {
   return (
     <div className="rangeQuestion-container">
       <p>{props.questionTitle}</p>
-      <div>
+      <div className="label-input-div">
         {/* <label htmlFor={props.questionId}></label> */}
         <input
           type="range"
@@ -14,6 +14,7 @@ export const RangeSliderQuestion = (props) => {
           name={props.questionId}
           min="3500000"
           max="7500000"
+          step="100000"
           onChange={(event) => props.onValueUpdate(event.target.value)} />
         <label htmlFor={props.questionId}>{props.answers.price} {props.label}</label>
       </div>
