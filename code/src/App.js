@@ -41,7 +41,7 @@ export const App = () => {
   return (
     <main className="main-wrapper">
       <Header />
-      <form className="question-wrappers" ref={formRef} onSubmit={handleSubmit}>
+      <form className="question-wrappers" ref={formRef} onSubmit={handleSubmit} title="Mountain Lodge Questionnaire">
         {step === 0 && (
           <Intro
             intro={intro}

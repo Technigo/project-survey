@@ -21,8 +21,8 @@ export const Equipment = ({ setEquipment }) => {
   };
 
   return (
-    <>
-      <h2>What sport are you interested in renting equipment for?</h2>
+    <fieldset>
+      <legend>What sport are you interested in renting equipment for?</legend>
       <select
         name="equipment"
         id="equipment"
@@ -39,6 +39,6 @@ export const Equipment = ({ setEquipment }) => {
         <option value="bob-sleighing">Bob sleighing</option>
         <option value="snowshoeing">Snowshoeing</option>
       </select>
-    </>
+    </fieldset>
   );
 };

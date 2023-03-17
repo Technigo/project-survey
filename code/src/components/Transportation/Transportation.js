@@ -7,9 +7,9 @@ export const Transportation = ({ transportation, setTransportation }) => {
     setTransportation(event.target.value);
   };
   return (
-    <>
-      <h2>What transportation method are you using to reach the lodge?</h2>
-      <div className="radio-wrapper">
+    <fieldset aria-label="Transportation method">
+      <legend>Choose your transportation method</legend>
+      <section className="radio-wrapper">
         <label htmlFor="taxi">
           <input
             type="radio"
@@ -18,8 +18,9 @@ export const Transportation = ({ transportation, setTransportation }) => {
             value="taxi"
             checked={transportation === 'taxi'}
             onChange={handleTransportationChange}
+            aria-checked={transportation === 'taxi'}
             required />
-        Taxi
+            Taxi
         </label>
 
         <label htmlFor="shuttle">
@@ -30,8 +31,9 @@ export const Transportation = ({ transportation, setTransportation }) => {
             checked={transportation === 'shuttle'}
             value="shuttle"
             onChange={handleTransportationChange}
+            aria-checked={transportation === 'shuttle'}
             required />
-        Hotel shuttle
+            Hotel shuttle
         </label>
 
         <label htmlFor="car">
@@ -42,11 +44,11 @@ export const Transportation = ({ transportation, setTransportation }) => {
             checked={transportation === 'car'}
             value="car"
             onChange={handleTransportationChange}
+            aria-checked={transportation === 'car'}
             required />
-        Car
+            Car
         </label>
-      </div>
-    </>
+      </section>
+    </fieldset>
   );
 };
-

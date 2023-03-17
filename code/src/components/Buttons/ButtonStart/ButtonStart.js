@@ -6,7 +6,8 @@ export const ButtonStart = ({ onClick }) => {
     <button
       type="button"
       className="button-start"
-      onClick={onClick}>
+      onClick={onClick}
+      aria-label="Start Questionnaire">
       Start
     </button>
   );

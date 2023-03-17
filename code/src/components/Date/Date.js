@@ -7,13 +7,18 @@ export const Date = ({ date, setDate }) => {
     setDate(event.target.value);
   };
   return (
-    <>
-      <h2>What is your arrival date?</h2>
+    <label htmlFor="date-input">
+        What is your arrival date?
       <input
         type="date"
+        id="date-input"
         onChange={handleDateChange}
         value={date}
-        required />
-    </>
+        required
+        autoComplete="off"
+        pattern="\d{4}-\d{2}-\d{2}"
+        min="2023-03-17"
+        max="2024-12-31" />
+    </label>
   );
 };
