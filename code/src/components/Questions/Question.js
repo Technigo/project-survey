@@ -3,6 +3,8 @@ import { answersQ1, answersQ2, answersQ3, answersQ4 } from 'library/answers';
 import FormTextField from 'components/FormTextField';
 import FormSelect from 'components/FormSelect';
 import FormRadioButton from '../FormRadioButtons/FormRadioButton';
+import NextButton from './assets/nextbutton.svg';
+import PreviousButton from './assets/previousbutton.svg';
 import styles from './Questions.module.css';
 /* {FormRadioButton
           answers={answers}
@@ -32,13 +34,14 @@ const Questions = (props) => {
             value={props.question1}
             onChange={props.setQuestion1} />
 
-          <button
+<NextButton />
+          {/* <button
             className={styles.pageButton}
             type="button"
             disabled={!props.question1}
             onClick={nextQuestion}>
   Next
-          </button>
+          </button> */}
         </div>
       )}
       {question === 2 && (
@@ -130,4 +133,4 @@ const Questions = (props) => {
   );
 };
 
-export default Question;
+export default Questions;

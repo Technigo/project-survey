@@ -2,6 +2,9 @@
 import React, { useState } from 'react';
 import StartSurvey from 'components/Start/StartSurvey';
 import Question from 'components/Questions/Question';
+import SubmitScreen from 'components/SubmitScreen';
+import NameInput from 'components/Start/NameInput';
+import ProgressCounter from 'components/ProgressCounter';
 import EndSurvey from './.components/EndSurvey/EndSurvey';
 import './index.css';
 
@@ -9,8 +12,8 @@ import './index.css';
 // import FormTextField from 'components/FormTextField';
 // import FormSelect from 'components/FormSelect';
 
-const App = () => {
-  // const [questionNo, setQuestionNo] = useState(0);
+export const App = () => {
+  const [counter, setCounter] = useState(0);
   const [name, setName] = useState('');
   const [page, setPage] = useState('start');
   const [question1, setQuestion1] = useState('');

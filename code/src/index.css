@@ -31,3 +31,9 @@ code {
   grid-template-columns: 1em auto;
   gap: 0.5em;
 }
+
+.progressCounter {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+}

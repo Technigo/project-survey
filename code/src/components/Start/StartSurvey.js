@@ -1,4 +1,5 @@
 import React from 'react';
+import NextButton from 'components/Buttons/NextButton';
 import styles from './StartSurvey.module.css';
 
 const Start = (props) => {
