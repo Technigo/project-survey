@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { Name } from 'components/Name';
-import { Food } from 'components/Food';
+import { Kitty } from 'components/Kitty';
 import { ZodiacSign } from 'components/ZodiacSign';
 import { Result } from 'components/Result';
 /* import { RadioButton } from 'components/Radiobutton'; */
@@ -10,8 +10,8 @@ export const App = () => {
   /* Is this VARIBLES ? */
   const [step, setStep] = useState(1);
   const [name, setName] = useState();
-  const [food, setFood] = useState();
   const [sign, setSign] = useState();
+  const [signmeeter, setSignmeeter] = useState(5);
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -26,10 +26,10 @@ export const App = () => {
         <ZodiacSign sign={sign} setSign={setSign} />
       )}
       {step === 3 && (
-        <Food food={food} setFood={setFood} />
+        <Kitty milk={sign} signmeeter={signmeeter} setSignmeeter={setSignmeeter} />
       )}
       {step >= 4 && (
-        <Result name={name} food={food} sign={sign} />
+        <Result name={name} hej={1} sign={sign} />
       )}
 
       {step < 4 && (
