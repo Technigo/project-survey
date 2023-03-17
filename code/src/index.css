@@ -65,7 +65,7 @@ button:hover {
 }
 
 .highlight {
-  text-decoration: underline wavy #973b80;
+  text-decoration: underline wavy #3B5898;
   /* color:green; */
   /* background-color: yellow; */
 }
@@ -188,6 +188,17 @@ input[type="range"] {
 }
 
 .result-entry p {
+  text-align: center;
+}
+
+.result-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0 0 0;
+}
+
+.result-wrapper p {
+  font-size: 14px;
   text-align: center;
 }
 
