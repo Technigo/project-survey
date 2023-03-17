@@ -10,11 +10,16 @@ export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
     handleStepIncrease(event);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleNextClick(event);
+  }
+
   return (
     <div className="hear-container">
       <h2>Question {step}</h2>
       <p>How did you hear about us?</p>
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <select
           onChange={(event) => setHear(event.target.value)}
           value={hear}>
@@ -24,7 +29,7 @@ export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
           <option value="Through Advertising">Through Advertising</option>
           <option value="Other">Other</option>
         </select>
-        <button type="button" onClick={handleNextClick}>Next</button>
+        <button type="submit">Next</button>
       </form>
     </div>
   );

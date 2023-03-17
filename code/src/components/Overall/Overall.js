@@ -14,17 +14,22 @@ export const Overall = ({ overall, setOverall, step, handleStepIncrease }) => {
     setOverall(event.target.value);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    handleNextClick();
+  };
+
   return (
     <div className="overall-container">
       <h2>Question {step}</h2>
       <p>What is your overall perception of us?</p>
-      <form className="form">
+      <form className="form" onSubmit={handleSubmit}>
         <input
           type="text"
           value={overall}
           onChange={handleOverallChange}
           required />
-        <button type="button" onClick={handleNextClick}>Next</button>
+        <button type="submit">Next</button>
       </form>
     </div>
   );

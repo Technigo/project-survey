@@ -12,3 +12,16 @@ code {
     monospace;
 }
 
+.name-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 300px;
+}
+
+.name-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

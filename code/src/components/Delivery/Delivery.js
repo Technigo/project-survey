@@ -19,6 +19,12 @@ export const Delivery = ({ delivery, setDelivery, step, handleStepIncrease }) =>
     }
   }
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      handleNextButtonClick();
+    }
+  }
+
   return (
     <div className="delivery-container">
       <h2>Question {step}</h2>
@@ -31,7 +37,9 @@ export const Delivery = ({ delivery, setDelivery, step, handleStepIncrease }) =>
             name="delivery"
             value={option}
             checked={delivery === option}
-            onChange={handleDeliveryChange} />
+            onChange={handleDeliveryChange}
+            onKeyDown={handleKeyDown}
+            tabIndex="0" />
           <label htmlFor={option}>{option}</label>
         </div>
       ))}

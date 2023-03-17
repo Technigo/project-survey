@@ -17,25 +17,29 @@ export const Name = ({ name, setName, step, handleStepIncrease }) => {
 
   return (
     <div className="name-container">
-      <h2>Welcome to our Customer Survey!</h2>
-      <p>Please take some time to fill this out in order for us</p>
-      <p>to give you the best possible customer experience.</p>
-      <p>First question, what is your name?</p>
-      <form>
-        <label htmlFor="nameInput">Name:</label>
-        <input
-          type="text"
-          id="nameInput"
-          name="name"
-          required
-          pattern="[A-Za-z ]+"
-          value={name}
-          onChange={handleNameChange}
-          step={step} />
-        <button type="submit" onClick={handleNextClick} required>
+      <div className="name-header">
+        <h2>Welcome to our Customer Survey!</h2>
+        <p>Please take some time to fill this out in order for us</p>
+        <p>to give you the best possible customer experience.</p>
+        <p>First question, what is your name?</p>
+      </div>
+      <div className="name-button">
+        <form>
+          <label htmlFor="nameInput">Name:</label>
+          <input
+            type="text"
+            id="nameInput"
+            name="name"
+            required
+            pattern="[A-Za-z ]+"
+            value={name}
+            onChange={handleNameChange}
+            step={step} />
+          <button type="submit" onClick={handleNextClick} required>
           Next
-        </button>
-      </form>
+          </button>
+        </form>
+      </div>
     </div>
   );
 };
