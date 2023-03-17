@@ -25,7 +25,7 @@ export const Name = ({ name, setName, step, setStep }) => {
         className="input-text"
         type="text"
         value={name}
-        placeholder="Type your answer here..."
+        placeholder="Type it here..."
         onKeyDown={handleKeyDown}
         onChange={handleNameChange} />
     </div>
