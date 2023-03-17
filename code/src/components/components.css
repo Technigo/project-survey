@@ -1,29 +1,62 @@
 .question {
     font-family: 'Yuji Syuku', serif;
-    font-size: 20px;
-    color: bisque;
+    font-size: 28px;
+    color: #324e66;
     padding: 0;
     margin: 0px 0px 10px 0px;
 }
 
 .input-field {
     font-family: 'Yuji Syuku', serif;
-    background: white;
-    opacity: 70%;
-    border: none;
-    border-radius: 5px;
+    color: #804247;
+    height: 24px;
+    /*background: white;*/
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 7px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    /*border: none;
+    border-radius: 5px;*/
     font-size: 16px;
-    padding: 0;
+    padding: 1px 0px 1px 3px;
     margin: 10px 0px 10px 0px;
+}
+
+input[type="radio"] {
+    color: #324e66;
+    margin: 20px 10px 35px 10px;
+}
+
+
+.age-options {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 20px;
+    color: #324e66;
+    opacity: 80%;
+    margin-bottom: 10px;
+}
+
+.radio-buttons {
+    margin-bottom: 10px;
+    border: none;
 }
 
 .select-menu {
     font-family: 'Yuji Syuku', serif;
-    color: #5489B3;
-    background-color: #F9DCD4;
-    opacity: 80%;
+    font-size: 18px;
+    color: #324e66;
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 7px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 10px 0px 30px 0px;
 }
 
+/* This does not do anything */
 #select option,
 #select optgroup {
     font-family: 'Yuji Syuku', serif;
@@ -41,7 +74,14 @@
     
     .input-field {
         font-size: 20px;
-        margin: 20px 0px 20px 0px;
+        height: 29px;
+        width: 280px;
+        padding: 2px 0px 3px 6px;
+        margin: 20px 20px 20px 0px;
+    }
+
+    .select-menu {
+        font-size: 20px;
     }
     
   }
@@ -51,12 +91,18 @@
     
     .question {
         font-size: 30px;
-        margin: 20px 0px 20px 0px;
+        margin: 20px 0px 10px 0px;
     }
     
     .input-field {
-        font-size: 20px;
-        margin: 20px 0px 20px 0px;
+        font-size: 22px;
+        height: 32px;
+        width: 300px;
+        padding: 2px 0px 3px 6px;
+        margin: 10px 0px 30px 0px;
     }
   
+    .select-menu {
+        font-size: 20px;
+    }
   } 

@@ -2,18 +2,26 @@
 button {
     display: inline-block;
     font-family: 'Yuji Syuku', serif;
-    font-size: 15px;
+    font-size: 18px;
     padding: 0px 15px 2px 15px;
     font-weight: 500;
-    border: solid 1px #5489B3;
+    border: none;
+    /*border: solid 1px #5489B3;*/
     color: #5489B3;
     margin-right: 10px;
     /*border: dotted 3px #5489B3;*/
-    border-radius: 7px;
+    /*border-radius: 7px;*/
     text-decoration: none;
-    background-color: #F9DCD4;
+    /*background-color: #f9eae6;*/
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.34);
+    border-radius: 7px;
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     /*background: #BBA6AD;*/
-    opacity: 70%;
+    /*opacity: 70%;*/
     cursor: pointer;
     text-align: center;
     transition: background 150ms ease-in-out, 
@@ -35,7 +43,7 @@ button:active {
     button {
         display: inline-block;
         font-size: 20px;
-        padding: 0px 15px 2px 15px;
+        padding: 0px 15px 3px 15px;
         margin-right: 10px;
         font-weight: 500;
     }
@@ -47,10 +55,9 @@ button:active {
 
     button {
         display: inline-block;
-        font-size: 20px;
-        padding: 0px 15px 2px 15px;
+        font-size: 22px;
+        padding: 0px 15px 3px 15px;
         margin-right: 10px;
-        font-weight: 500;
     }
   
   }  

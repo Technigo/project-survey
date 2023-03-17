@@ -6,9 +6,9 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <div className="page-name">
-      <p className="question">Firstly, what is your name?</p>
-      <input className="input-field" type="text" value={name} onChange={handleNameChange} />
+    <div>
+      <p className="question">Firstly, what is your name? Your full name please.</p>
+      <input className="input-field" htmlFor="name" type="text" value={name} onChange={handleNameChange} />
     </div>
   );
 }

@@ -1,0 +1,55 @@
+.summary-title {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 22px;
+    color: #5489B3;
+    margin-top: 0px;
+}
+
+.summary-text {
+    font-family: 'Yuji Syuku', serif;
+    font-size: 18px;
+    color: #5489B3;
+    text-transform: uppercase;
+}
+
+.signature {
+    font-family: 'Yuji Boku', serif;
+    font-size: 18px;
+    color: #5489B3;
+    margin: 5px 0px 5px 0px;
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+    .summary-title {
+        font-size: 24px;
+    }
+    
+    .summary-text {
+        font-size: 18px;
+    }
+    
+    .signature {
+        font-size: 20px;
+        margin: 5px 0px 5px 0px;
+    }
+
+  }
+      
+  
+  @media (min-width: 1025px) {
+
+    .summary-title {
+        font-size: 25px;
+    }
+    
+    .summary-text {
+        font-size: 18px;
+    }
+    
+    .signature {
+        font-size: 20px;
+        margin: 5px 0px 5px 0px;
+    }
+
+  } 

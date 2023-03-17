@@ -16,22 +16,21 @@
     opacity: 90%;
     padding: 0;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 
 
 @media (min-width: 668px) and (max-width: 1024px) {
 
     .welcome-title {
-        font-size: 55px;
+        font-size: 40px;
         font-weight: 700;
         opacity: 90%;
     }
     
     .welcome-text {
-        font-size: 35px;
+        font-size: 28px;
         margin-top: 10px;
-        margin-bottom: 10px;
     }
   }
       
@@ -39,14 +38,13 @@
   @media (min-width: 1025px) {
 
     .welcome-title {
-        font-size: 65px;
+        font-size: 40px;
         font-weight: 700;
         opacity: 90%;
     }
     
     .welcome-text {
-        font-size: 35px;
+        font-size: 30px;
         margin-top: 10px;
-        margin-bottom: 10px;
     }
   } 

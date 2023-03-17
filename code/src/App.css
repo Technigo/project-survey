@@ -1,27 +1,63 @@
+header {
+  display: flex;
+}
+
+.header-title {
+  font-size: 35px;
+  margin: auto;
+  padding-top: 20px;
+  color: #ECCCCF;
+  align-self: center;
+  opacity: 80%;
+}
+
 .page-container {
-    /*background: lightcoral;*/
-    /*height: 500px;*/
-    align-self: center;
-    margin: 30px;
-    margin-top: 70px;
-    padding: 30px;
-    border-radius: 20px;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.45);
-    border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(6.3px);
-    -webkit-backdrop-filter: blur(6.3px);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-  }
+  /*background: lightcoral;*/
+  /*height: 500px;*/
+  align-self: center;
+  width: 300px;
+  margin: auto;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer {
+  display: flex;
+  align-self: center;
+  position: absolute; bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.footer-text {
+  font-family: 'Yuji Boku', serif;
+  font-size: 18px;
+  color: #ebe0e1;
+  margin: auto;
+  padding: 30px 0px 10px 0px;
+}
 
   @media (min-width: 668px) and (max-width: 1024px) {
 
+    .header-title {
+      font-size: 45px;
+      padding-top: 20px;
+    }
+
     .page-container {
-        width: 500px;
+        width: 400px;
         margin: 0 auto;
-        margin-top: 70px;
-        padding: 40px;
+        margin-top: 25px;
+        padding: 30px 50px 45px 50px;
     }
     
   }
@@ -29,11 +65,16 @@
   
   @media (min-width: 1025px) {
 
+    .header-title {
+      font-size: 50px;
+      padding-top: 20px;
+    }
+
     .page-container {
-        width: 500px;
+        width: 450px;
         margin: 0 auto;
-        margin-top: 70px;
-        padding: 40px;
+        margin-top: 25px;
+        padding: 30px 50px 45px 50px;
     }
   
   }  

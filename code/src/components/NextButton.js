@@ -1,10 +1,16 @@
 import React from 'react';
 import './buttons.css';
 
-export const NextButton = ({ counter, setCounter }) => {
+export const NextButton = ({ page, setPage }) => {
   const handlePageIncrease = () => {
-    setCounter(counter + 1)
+    setPage(page + 1)
   }
-  return <button type="button" onClick={handlePageIncrease}>Next</button>
+  const handleEnterKey = (event) => {
+    if (event.keyCode === 'Enter') {
+      handlePageIncrease()
+    }
+  }
+
+  return <button type="button" onClick={handlePageIncrease} onKeyDown={handleEnterKey}>Next</button>
 }
 

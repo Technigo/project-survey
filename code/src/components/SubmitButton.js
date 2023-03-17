@@ -1,9 +1,9 @@
 import React from 'react';
 import './buttons.css'
 
-export const SubmitButton = ({ counter, setCounter }) => {
+export const SubmitButton = ({ page, setPage }) => {
   const handlePageIncrease = () => {
-    setCounter(counter + 1)
+    setPage(page + 1)
   }
   return <button type="submit" onClick={handlePageIncrease}>Submit</button>
 }
