@@ -31,16 +31,6 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
             checked={things === 'Mountain'} />
           <span>Mountain </span>
         </label>
-        <label htmlFor="sand">
-          <input
-            type="radio"
-            id="sand"
-            value="Sand"
-            className="sand"
-            onChange={handleThingChange}
-            checked={things === 'Sand'} />
-          <span>Sand </span>
-        </label>
 
         <label htmlFor="city">
           <input

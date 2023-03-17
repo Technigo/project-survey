@@ -16,7 +16,7 @@ export const App = () => {
   const [things, setThing] = useState('')
   const [results, setResults] = useState('')
   const [started, setStarted] = useState(false);
-  const [quizEnded, setQuizEnded] = useState(false);
+  // const [quizEnded, setQuizEnded] = useState(false);
 
   const handleNextStep = () => {
     console.log('counter before', counter);
@@ -26,9 +26,9 @@ export const App = () => {
   const handleStartQuiz = () => {
     setStarted(true);
     handleNextStep();
-    if (counter >= 5) {
+    /* if (counter >= 5) {
       setQuizEnded(true);
-    }
+    } */
   };
   const showResult = (
     <QuizResult name={name} results={results} />
@@ -59,7 +59,7 @@ export const App = () => {
       {counter === 4 && (
         <Thing thing={things} setThing={setThing} counterFromApp={counter} setCounter={setCounter} />
       )}
-      {counter >= 5 && quizEnded && (
+      {counter >= 5 && (
         <QuizResult name={name} color={color} prefers={prefers} thing={things} results={results} setResults={setResults} QuizResult={QuizResult} />
       )}
 

@@ -17,36 +17,16 @@ export const Color = ({ color, setColor, counterFromApp, setCounter }) => {
           onClick={handleColorChange}
           value="pink"
           aria-label="Select Pink color"
-          title="Select Pink color">
-          <p>Pink</p>
-        </button>
-        <button
-          className="green"
-          type="button"
-          onClick={handleColorChange}
-          value="green"
-          aria-label="Select Green color"
-          title="Select Green color">
-          <p>Green</p>
-        </button>
+          title="Select Pink color" />
+
         <button
           className="black"
           type="button"
           onClick={handleColorChange}
           value="black"
           aria-label="Select Black color"
-          title="Select Black color">
-          <p>Black</p>
-        </button>
-        <button
-          className="brown"
-          type="button"
-          onClick={handleColorChange}
-          value="brown"
-          aria-label="Select Brown color"
-          title="Select Brown color">
-          <p>Brown</p>
-        </button>
+          title="Select Black color" />
+
       </form>
 
     </div>
