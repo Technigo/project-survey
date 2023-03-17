@@ -195,7 +195,7 @@ input[type="range"] {
 .result-wrapper {
   display: flex;
   flex-direction: column;
-  margin: 15px 0 0 0;
+  margin: 15px 0;
 }
 
 .result-wrapper p {

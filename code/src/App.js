@@ -149,14 +149,14 @@ export const App = () => {
           <p>Or, click Next to see which tasty dish you are!</p>
           <div className="button-wrapper">
             <Button counter={counter} setCounter={setCounter} />
-            <Back counter={counter} setCounter={setCounter} />
+            {/* <Back counter={counter} setCounter={setCounter} /> */}
           </div>
         </div>
       )}
       {counter === 9 && (
         <div className="summary-wrapper">
           <ResultsWrapper region={region} flavor={flavor} season={season} />
-          <Back counter={counter} setCounter={setCounter} />
+          {/* <Back counter={counter} setCounter={setCounter} /> */}
         </div>
       )}
       {counter < 10 && (
