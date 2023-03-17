@@ -1,0 +1,13 @@
+/* ///////////////////////// GRAPEPAGE //////////////////////////////*/
+
+/*----- TITLE ---- */
+
+.grapetext {
+    display: flex;
+    font-size: 21px;
+    font-family: Futura;
+    color: #746dbaff;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+  }

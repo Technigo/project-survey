@@ -9,9 +9,10 @@ export const Grape = ({ grape, setGrape }) => {
   const handleGrapeChange = (event) => {
     setGrape(event.target.value);
   }
+
   return (
     <>
-      <h2 className="nametext">YUMMYEST GRAPE?</h2>
+      <h2 className="grapetext">YUMMYEST GRAPE?</h2>
       <input
         id="yummyest-grape"
         className="name-input"
