@@ -39,8 +39,8 @@ export const Name = ({ name, setName, step, handleStepIncrease }) => {
                 onChange={handleNameChange}
                 step={step} />
             </div>
-            <div className="name-button">
-              <button id="name-btn" type="submit" onClick={handleNextClick} required>
+            <div className="next-button">
+              <button type="submit" onClick={handleNextClick} required>
               Next
               </button>
             </div>

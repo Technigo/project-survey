@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 .name-container {
   display: flex;
   height: 100vh;
@@ -27,6 +26,7 @@ code {
   float: left;
   width: 50%;
   object-fit: fill;
+  height: 100vh;
 }
 
 .name-header {
@@ -46,27 +46,58 @@ code {
   justify-content: center;
   width: 50%;
   float: right;
+  height: 100vh;
 }
 
-.name-button {
 
-  font-family: 'Roboto', sans-serif;
+
+.hear-container {
+  display: flex;
+  height: 100vh;
 }
 
 .hear-header {
   display: flex;
+  width: 50%;
+  text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 300px;
   font-family: 'Roboto', sans-serif;
 }
 
-.hear-options {
+.form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 30px;
   font-family: 'Roboto', sans-serif;
+}
+
+.select {
+  margin-bottom: 1rem;
+}
+
+button {
+  margin-top: 1rem;
+  background-color: #aaf0d1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: 900px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+.delivery.container {
+  display: flex;
+  height: 100vh;
 }
 
 .delivery-header {
@@ -74,7 +105,6 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 300px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -91,7 +121,6 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 300px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -108,7 +137,6 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 300px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -125,7 +153,6 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 300px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -142,7 +169,6 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 300px; 
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
 }
@@ -157,26 +183,3 @@ code {
   font-size: 22px;
 }
 
-.go-again-btn {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  text-align: center;
-  margin-top: 30px;
-}
-
-#thanks-btn {
-  background-color: #aaf0d1;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 22px;
-  font-weight: 900px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#thanks-btn:hover {
-  background-color: #27ae60;
-}

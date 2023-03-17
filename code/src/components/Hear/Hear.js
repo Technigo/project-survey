@@ -17,11 +17,10 @@ export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
 
   return (
     <div className="hear-container">
+      <img src="/images/fashion.jpg" alt="fashion clothing" className="fashion-image" />
       <div className="hear-header">
         <h2>Question {step}</h2>
         <p>How did you hear about us?</p>
-      </div>
-      <div className="hear-options">
         <form className="form" onSubmit={handleSubmit}>
           <select
             onChange={(event) => setHear(event.target.value)}
@@ -32,7 +31,11 @@ export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
             <option value="Through Advertising">Through Advertising</option>
             <option value="Other">Other</option>
           </select>
-          <button type="submit">Next</button>
+          <div className="next-button">
+            <button type="submit" onClick={handleNextClick} required>
+            Next
+            </button>
+          </div>
         </form>
       </div>
     </div>
