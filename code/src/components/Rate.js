@@ -7,10 +7,10 @@ export const Rate = ({ rate, setRate }) => {
     setRate(event.target.value)
   }
   return (
-    <form>
+    <form className="rateForm">
       <p>How would you rate my progress so far?</p>
       {ratingGroup.map((rating) => (
-        <label key={rating} className="rateForm">
+        <label key={rating} className="rateLabel">
           <input
             type="radio"
             value={rating}

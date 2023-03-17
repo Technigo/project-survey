@@ -6,7 +6,7 @@ export const Final = ({ final, setFinal }) => {
   }
   return (
     <div className="finalForm">
-      <p>Thank you for participating.</p><p>Any final comments?</p>
+      <p>Thank you for participating in my performance review! Do you have any final comments?</p>
       <textarea
         value={final}
         onChange={handleFinalChange}
