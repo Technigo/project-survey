@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Name } from 'components/NameForm';
-import { Points } from 'components/PointsFile'
+import { Name } from 'components/nameForm';
+import { Points } from 'components/pointsFile'
 import { BestThing } from 'components/bestThingFile';
-import { Impression } from 'components/Impression'
-import { Answer } from 'components/Answer'
-import { Summary } from './components/Summary';
+import { Impression } from 'components/impression'
+import { Answer } from 'components/answer'
+import { Summary } from './components/summary';
 
 export const App = () => {
   const [step, setStep] = useState(1);
