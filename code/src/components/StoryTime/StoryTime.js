@@ -37,7 +37,7 @@ export const StoryTime = ({ name, place, animal, horror, food }) => {
         One day {name} learnt of a dark wizard who terrorized people by {horror}. Our hero set out to save the people of Technigoia.
         <br />
         <br />
-         Friddi and {name} traveled across the land until the arrived at {place}. There they met the dark wizard. {name} challenged the wizard. They fought for severals days and nights. One moment when they both were catching their breaths. {name} asked the wizard:
+         Friddi and {name} traveled across the land until they arrived at {place}. There they met the dark wizard. {name} challenged the wizard. They fought for severals days and nights. One moment when they both were catching their breaths {name} asked the wizard:
         <br />
         <br />
       &quot;Are you hungry?&quot;
