@@ -18,5 +18,13 @@
     grid-column: 1 / span 5;
     font-family: 'Roboto', sans-serif;
     font-weight: 200;
-    font-size: 2em;
+    font-size: 1.8em;
+}
+
+@media only screen and (min-width: 768px) { 
+
+    #name {
+        font-size: 2em;
+    }
+
 }

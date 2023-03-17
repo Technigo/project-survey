@@ -4,13 +4,12 @@
     line-height: 2em;
     text-align: center;
     width: 100%;
-    margin-top: 5%;
+    margin: 5% 0 5% 0;
 }
 
 .name, .gender, .age, .food, .times {
     background-color: rgba(253, 136, 136, 1);
     padding: 0 5px;
-
 }
 
 .slider-title {
@@ -18,6 +17,7 @@
     font-weight: 200;
     padding-bottom: 30px;
     text-align: center;
+    margin-top: 20px;;
 }
 
 .slider-parent{

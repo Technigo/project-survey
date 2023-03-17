@@ -6,7 +6,7 @@ body {
   background-image: url(https://img.freepik.com/free-vector/hand-drawn-food-elements_1411-48.jpg?w=1800&t=st=1678957536~exp=1678958136~hmac=24dcb12daba865287feb48600279d1789a96b4ae599e8383b2567e6e4433fd31);
 }
 
- p, a {
+p, a {
   text-align: center;
   display: block;
   position: relative;
@@ -17,6 +17,7 @@ body {
   color: black;
 }
 
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -26,13 +27,21 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5%;
+  justify-items: center;
+  margin: 0 0 5% 10%;
+  padding: 5%;
   background-color: rgba(255, 255, 255, 1);
+}
 
+.footer-container {
+  position: absolute;
+  margin-top: 50px;
+  width: 100%;
 }
 
 .buttons {
   display: flex;
+  align-items: center;
   margin-top: 10%;
   justify-items: space-evenly;
 }
@@ -64,6 +73,10 @@ button {
   }
 
   @media only screen and (min-width: 768px) {
+
+    .content-container {
+      margin: 5%;
+    }
   
     button {
       width: 200px;
