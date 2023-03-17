@@ -30,7 +30,9 @@ export const App = () => {
       setQuizEnded(true);
     }
   };
-
+  const showResult = (
+    <QuizResult name={name} results={results} />
+  )
   return (
     <main className="StartPage">
       {!started && (
@@ -65,8 +67,10 @@ export const App = () => {
        || (counter === 2 && !prefers)
        || (counter === 3 && !color)
        || (counter === 4 && !things) ? (
-          <p>Please answer the current question before proceeding.</p>
-        ) : (
+          <p className="answer">Please answer the current question before proceeding.</p>
+        )
+         || (counter === 5 && !showResult)
+        : (
           started && counter < 5 && (
             <button type="button" onClick={handleNextStep} className="nextQuestion" aria-label="press next question button after inserting your name">
               Next question

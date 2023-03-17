@@ -19,7 +19,7 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
             className="ocean"
             onChange={handleThingChange}
             checked={things === 'ocean'} />
-         Ocean
+          <span>Ocean </span>
         </label>
         <label htmlFor="mountain">
           <input
@@ -29,7 +29,7 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
             className="mountain"
             onChange={handleThingChange}
             checked={things === 'Mountain'} />
-         Mountain
+          <span>Mountain </span>
         </label>
         <label htmlFor="sand">
           <input
@@ -39,7 +39,7 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
             className="sand"
             onChange={handleThingChange}
             checked={things === 'Sand'} />
-         Sand
+          <span>Sand </span>
         </label>
 
         <label htmlFor="city">
@@ -50,7 +50,7 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
             className="city"
             onChange={handleThingChange}
             checked={things === 'City'} />
-       City
+          <span>City </span>
         </label>
       </form>
     </div>

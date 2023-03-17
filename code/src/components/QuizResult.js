@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const QuizResult = ({ prefer, color, thing, name }) => {
-  const [results, setResults] = useState('');
+export const QuizResult = ({ prefer, color, thing, name, setResults, results }) => {
+  // const [results, setResults] = useState('');
   const handleResults = (event) => {
     setResults(event.target.value);
-    const result = QuizResult({ prefer: 'surf', color: 'black', thing: 'ocean' });
+
+    const result = QuizResult({ prefer: '', color: '', thing: '' });
     setResults(result);
   };
   console.log(results)
@@ -112,7 +113,7 @@ export const QuizResult = ({ prefer, color, thing, name }) => {
   return (
     <div className="results">
       <button onClick={handleResults} type="button">Calculate Results</button>
-      <p> Hey {name} your favourite animal is{results}</p>
+      <p> Hey {name} your favorite animal is{results}</p>
     </div>
   );
 }

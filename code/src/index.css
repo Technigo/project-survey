@@ -20,27 +20,40 @@ body{
   overflow-x: hidden;
   background-color: #FFFD37
 }
+
+.answer{
+  font-size: 15px;
+  margin: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+
+}
 /**/
 .StartPage{
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  margin: 100px 60px 100px 60px;
+margin-top: 100px;
+margin-right: 30px;
+margin-left: 30px;
   background-color: #A8E4A0;
   border-radius: 5px;
+  width: 100%;
 
 
 }
 .StartPage h1{
-  padding-left: 30px;
-  padding-right: 30px;
-  text-align: center;
+ margin: 40px;
+ padding-top: 45px;
+ padding-bottom: 30px;
+text-align: center;
+
 }
 .startBtn{
+  display: flex;
+  justify-content: center;
   width: 100px;
-  margin: 50px 30px 100px 70px;
-  ;
-
+  margin: 40px;
 }
 
 .nextQuestion{
@@ -48,22 +61,46 @@ body{
   margin: 20px;
 }
 
-
-
 /*name-container*/
-.inputName{
+.inputClass{
   border: pink solid 2px;
 margin-top: 70px;
+width: 100%;
+padding: 7px;
 }
 
 .name-container{
   margin: 100px 50px 100px 50px;
+  
 }
 .name-container p{
   font-size: 40px;
 
 }
+/*Drop down*/
 
+
+.whatDoYou h2{
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: center;
+  padding-top: 40px;
+}
+.dropDown{
+margin: 70px;
+}
+.dropMenu{
+  border: blue solid 2px;
+  width: 100%;
+}
+/*How do I change font and size in my dropdown*/
+.choose p{
+  font-size: 20px;
+  color: green;
+}
+.books{
+  font-size: 100px;
+}
 /*favourite color*/
 .color h2{
 color: blue;
@@ -80,6 +117,7 @@ color: blue;
 .pink{
  
   background-color: #FF007F;
+  border: white solid 2px;
   width: 100px;
   height: 100px;
   margin: 10px;
@@ -88,7 +126,7 @@ color: blue;
   }
 .green{
   background-color: #00755E;
-  border: rgb(200, 253, 200) solid 2px;
+  border: white solid 2px;
   width: 100px;
   height: 100px;
   padding-left: 5px;
@@ -116,22 +154,25 @@ margin: 10px;
 
 
 /*whats your thing?*/
+
 .radioButton{
-  border: green solid 2px;
-  margin: 20px;
-  background-color: lightsalmon;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 40px;
 
 }
-
-
-/*What do you prefer*/
-.dropDown{
-  border: blue solid 2px;
-  margin: 20px;
-  
+.radioButton h2{
+  margin: 40px;
+  text-align: center;
 
 }
-
+.radioBtn{
+display: grid;
+grid-template-columns: 1fr;
+justify-self: center;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
 
 /*results*/
 .results{
