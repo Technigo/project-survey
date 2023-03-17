@@ -1,9 +1,14 @@
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-image: url("../src/images/background-aurora.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+margin: 0;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-image: url("../src/images/background-aurora.jpg");
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+}
+
+body:before {
+content: "Background image of northern lights";
+display: none; /* hide the label from sighted users */
 }
