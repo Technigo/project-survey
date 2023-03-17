@@ -14,7 +14,7 @@ export const Spend = ({ spend, setSpend }) => {
   return (
     <>
       <h1>How much are you willing to spend on a pair of sneakers you like?</h1>
-      <form>
+      <form className="form-radio-btn">
         <p>Amount:</p>
         {amount.map((eachAmount) => (
           <label className="radio-btn-control" key={eachAmount} htmlFor="AmountRadioButtons">

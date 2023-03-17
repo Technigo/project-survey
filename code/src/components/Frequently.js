@@ -1,4 +1,5 @@
 import React from 'react';
+import './frequently.css'
 
 export const Frequently = ({ frequently, setFrequently }) => {
   const handleFrequentlychange = (event) => {
@@ -10,6 +11,7 @@ export const Frequently = ({ frequently, setFrequently }) => {
       <h1>Please give us some insight in your shopping habits:</h1>
       <form>
         <select
+          className="how-often"
           onChange={handleFrequentlychange}
           value={frequently}>
           <option value="" disabled>You buy sneakers:</option>
