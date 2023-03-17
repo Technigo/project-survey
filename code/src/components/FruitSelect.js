@@ -4,7 +4,7 @@ import React from 'react';
 
 export const FruitSelect = ({ fruitSelect, setFruitSelect }) => {
   return (
-    <form>
+    <form className="content-wrapper">
       <p>Your favourite fruit?</p>
       <select
         onChange={(event) => setFruitSelect(event.target.value)}

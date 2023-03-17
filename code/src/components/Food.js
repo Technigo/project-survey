@@ -8,10 +8,10 @@ export const Food = ({ food, setFood }) => {
     setFood(event.target.value);
   }
   return (
-    <>
+    <div className="content-wrapper">
       <p>What is your favourite food?</p>
       <input type="text" value={food} onChange={handleFoodChange} />
-    </>
+    </div>
   );
 }
 /* above im giving the <input/> the value of the food from props and an onChange handler that will be handleFoodChange */

@@ -11,7 +11,7 @@ const Header = () => {
     <header className="header">
       <h1>My Little Pony</h1>
       <h2>Name Generator</h2>
-      <div img-container>
+      <div className="img-container">
         <img
           src={ponyLogo}
           alt="My Little Pony" />

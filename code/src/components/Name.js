@@ -5,9 +5,9 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <>
+    <div className="content-wrapper">
       <p>What is your nickname?</p>
       <input type="text" value={name} onChange={handleNameChange} />
-    </>
+    </div>
   );
 }

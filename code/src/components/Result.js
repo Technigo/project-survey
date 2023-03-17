@@ -6,7 +6,7 @@ import React from 'react';
 
 export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick, fruitSelect }) => {
   return (
-    <>
+    <div className="content-wrapper">
       {showAddMore && (
         <div>
           <p>dasadasd</p>
@@ -19,6 +19,6 @@ export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick, fru
           <p>Your pony name is {name}-{food}-{drink}-{fruitSelect}!</p>
         </>
       )}
-    </>
+    </div>
   );
 }

@@ -6,10 +6,10 @@ export const Drink = ({ drink, setDrink }) => {
     setDrink(event.target.value);
   }
   return (
-    <>
+    <div className="content-wrapper">
       <p>What is your favourite drink?</p>
       <input type="text" value={drink} onChange={handleDrinkChange} />{/*  <input/> will have the value of the drink from props and an onChange handler that will be handleDrinkChange */}
-    </>
+    </div>
   );
 }
 

@@ -4,7 +4,7 @@ import React from 'react';
 
 export const ToppingSelect = ({ toppingSelect, setToppingSelect }) => {
   return (
-    <form>
+    <form className="content-wrapper">
       <p>Your favourite Ice Cream topping?</p>
       <select
         onChange={(event) => setToppingSelect(event.target.value)}

@@ -2,14 +2,16 @@
 
 .header {
     display: flex;
-    /* flex-flow: column wrap; */
-    flex-direction: row;
+    flex-flow: column wrap; 
     margin: 24px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 10px black;
     align-items: center;
-    background-color: pink;
+    background-color: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
     display: flex;
   }
 
@@ -18,8 +20,17 @@ width: 200px;
   }
 
   .img-container {
-    background-color: aliceblue;
-    border: 2px solid green;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    
   }
   
-  
+  .header h1 {
+    font-size: 70px;
+    text-shadow: 6px 6px 8px rgb(161 66 195);
+  }
+.header h2 {
+  font-size: 45px;
+  text-shadow: 6px 6px 8px rgb(161 66 195);
+}

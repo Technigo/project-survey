@@ -22,7 +22,7 @@ export const App = () => {
   const [extraItem, setExtraItem] = useState('');
   const [fruitSelect, setFruitSelect] = useState('');
   const [toppingSelect, setToppingSelect] = useState('')
-  const [flowerSelect, setFlowerSelect] = useState('')
+  const [flowerSelect, setFlowerSelect] = useState()
 
 /*   const start = () => {
     setStart(start + 1);
@@ -54,13 +54,12 @@ export const App = () => {
       {step === 6 && (
         <ToppingSelect ToppingSelect={toppingSelect} setToppingSelect={setToppingSelect} />
        )}
-      {step === 7 && (
-        <ExtraItem ExtraItem={extraItem} setExtraItem={setExtraItem} />
-        )}
-      {step === 8 && (
+       {step === 7 && (
         <FlowerSelect flowerSelect={flowerSelect} setFlowerSelect={setFlowerSelect} />
       )}
-
+      {step === 8 && (
+        <ExtraItem ExtraItem={extraItem} setExtraItem={setExtraItem} />
+        )}
       {step === 9 && (
         <Result name={name} food={food} drink={drink} fruit={fruitSelect} topping={toppingSelect} />
       )}
@@ -69,11 +68,13 @@ export const App = () => {
           <p>Current step: {step}</p>
           <button type="button" onClick={handleStepIncrease}>
           {step === 1 && 'YAY LETS GO! 🦄!!'}
-          {step > 1 && step < 7 && 'Next question'}
-          {step === 7 && 'Find out my magical pony name! 🦄'}
+          {step > 1 && step < 8 && 'Next question🦄'}
+          {step === 8 && 'Find out my magical pony name! 🦄'}
+          {step >= 9 && 'Lets do this one more time!🦄'}
           </button>
         </>
       )}
     </>
   );
 }
+
