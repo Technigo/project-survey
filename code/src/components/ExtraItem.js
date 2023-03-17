@@ -1,15 +1,12 @@
 import React from 'react';
 
-export const ExtraItem = ({ extraItem, setExtraItem }) => {
+export const ExtraItem = () => {
   return (
   // eslint-disable-next-line indent
         // eslint-disable-next-line indent
     <>
-      <p>Please add your extra item!</p>
-      <input
-        type="text"
-        value={(extraItem)}
-        onChange={(event) => setExtraItem(event.target.value)} />
+      <p>Whohooo youre all done with the questions!</p>
+      <p>Are you ready for your magical pony name?! </p>
     </>
   )
 }

@@ -9,5 +9,15 @@
     box-shadow: 2px 4px 10px black;
     align-items: center;
     background-color: pink;
+    display: flex;
   }
+
+  img {
+width: 200px;
+  }
+
+  .img-container {
+    background-color: aliceblue;
+  }
+  
   

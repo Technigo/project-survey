@@ -9,9 +9,9 @@ export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick, fru
     <>
       {showAddMore && (
         <div>
-          <p>Do you want to add anything to the packing list?</p>
+          <p>dasadasd</p>
           <button type="button" onClick={() => handleAddMoreClick('yes')}>Yes</button>
-          <button type="button" onClick={() => handleAddMoreClick('no')}>No, that's all</button>
+          <button type="button" onClick={() => handleAddMoreClick('no')}>No, thats all</button>
         </div>
       )}
       {!showAddMore && (
