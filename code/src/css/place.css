@@ -1,0 +1,23 @@
+.place-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.place-img-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    margin:auto;
+}
+
+.place-img-container img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 1px solid #fff;
+}
