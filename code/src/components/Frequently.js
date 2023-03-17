@@ -11,7 +11,7 @@ export const Frequently = ({ frequently, setFrequently }) => {
       <h1>Please give us some insight in your shopping habits:</h1>
       <form>
         <select
-          aria-label="dropdown menu"
+          aria-label="dropdown how often do you buy sneakers"
           className="how-often"
           onChange={handleFrequentlychange}
           value={frequently}>

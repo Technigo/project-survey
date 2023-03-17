@@ -1,10 +1,5 @@
 import React from 'react';
-
-const amount = [
-  '100-150€',
-  '150-200€',
-  '200€+'
-]
+import './spend.css'
 
 export const Spend = ({ spend, setSpend }) => {
   const handleSpendChange = (event) => {
@@ -14,23 +9,23 @@ export const Spend = ({ spend, setSpend }) => {
   return (
     <>
       <h1>How much are you willing to spend on a pair of sneakers you like?</h1>
-      <form className="form-radio-btn">
-        <p>Amount:</p>
-        {amount.map((eachAmount) => (
-          <label className="radio-btn-control" key={eachAmount} htmlFor="AmountRadioButtons">
-            {' '}
-            {eachAmount}
+      <div className="slider-container">
+        <p>10€</p>
+        <form className="slider">
+          <label htmlFor="Amount" aria-label="range slider amount">
             <input
-              name="radio"
-              className="radio-btn"
-              id="AmountRadioButtons"
-              type="radio"
-              value={eachAmount}
+              id="Amount"
+              type="range"
+              min="10"
+              max="500"
+              step="10"
               onChange={handleSpendChange}
-              checked={spend === eachAmount} />
+              value={spend} />
           </label>
-        ))}
-      </form>
+        </form>
+        <p>500€</p>
+      </div>
+      <p>Amount choosen: {spend}€</p>
     </>
   );
 };

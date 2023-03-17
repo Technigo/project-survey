@@ -1,4 +1,9 @@
 .how-often {
   background-color: #bbdd90;
+  width: 200px;
+  font-size: 15px;
+}
 
+.how-often optgroup {
+  background: #bbdd90;
 }

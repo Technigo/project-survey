@@ -19,7 +19,7 @@ export const Brand = ({ brand, setBrand }) => {
       <h1>Which is your favorite sneaker brand?</h1>
       <p>Please, pick one of below</p>
       <p>Brand:</p>
-      <form className="form-radio-btn">
+      <form className="form-radio-btn" aria-label="radio buttons brands">
         {allBrands.map((singleBrand) => (
           <label className="radio-btn-control" key={singleBrand} htmlFor="BrandsRadioButtons">
             {' '}

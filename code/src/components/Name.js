@@ -25,13 +25,16 @@ export const Name = ({ name, setName, step, setStep }) => {
       </p>
       <h3>If yes, fill in this survey!</h3>
       <p>Please start with entering your name:</p>
-      <input
-        className="input-text"
-        type="text"
-        value={name}
-        placeholder="Type it here..."
-        onKeyDown={handleKeyDown}
-        onChange={handleNameChange} />
+      <form>
+        <input
+          aria-label="name-input"
+          className="input-text"
+          type="text"
+          value={name}
+          placeholder="Type it here..."
+          onKeyDown={handleKeyDown}
+          onChange={handleNameChange} />
+      </form>
     </div>
   );
 };
