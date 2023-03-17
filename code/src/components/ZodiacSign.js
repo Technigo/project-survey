@@ -14,14 +14,16 @@ export const ZodiacSign = ({ sign, setSign }) => {
       <h2>Select your Zodiac Sign:</h2>
       <form>
         {zodiacSigns.map((signselector) => (
-          <div key={sign}>
-            <input type="radio" id={signselector} name="zodiac-sign" value={signselector} onChange={handleZodiacSignChange} checked={sign === signselector} />
-            <label htmlFor={sign}>{sign}</label>
+          <div key={signselector}>
+            <div className="signs">
+              <input type="radio" id={signselector} name="zodiac-sign" value={signselector} onChange={handleZodiacSignChange} checked={sign === signselector} />
+              <label htmlFor={signselector}>{signselector}</label>
+            </div>
           </div>
         ))}
       </form>
       {sign && (
-        <p>You have selected {sign} as your Zodiac Sign.</p>
+        <p>Okey, so you´re a  {sign}, cool!</p>
       )}
     </div>
   );

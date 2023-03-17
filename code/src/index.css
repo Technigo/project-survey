@@ -1,14 +1,60 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(130, 176, 143);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: rgb(174, 149, 174);
+  /*background-image: url("https://images.pexels.com/photos/3934512/pexels-photo-3934512.jpeg");
+  background-size: 50%;*/
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.zodiac-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 9px;
+}
+.zodiac-container h2 {
+  text-align: center;
+}
+.zodiac-container p {
+  border: 1px solid green;
+  padding: 5px;
+}
+.signs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.name-container {
+  display: flex;
+  border: 1px solid black;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.name-container h2 {
+  border: 2px solid green;
+}
+
+.button {
+  text-align: center;
+}
+label {
+  padding: 5px;
+}
+
+.background-image {
+  height: 50%;
+  width: 50%;
+}
+
+.signmeeter {
+ text-align: center;
 }

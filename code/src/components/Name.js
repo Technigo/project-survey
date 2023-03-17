@@ -7,11 +7,12 @@ export const Name = ({ name, setName }) => {
   return (
     // <div>
     <div className="name-container">
-      <h2>bla bla bla</h2>
+      <h2>Welcome to this Astro survey</h2>
       <label htmlFor="name">
-        <p>Hello there, whats your name?</p>
+        <p>First of all, what´s your name?</p>
         <input type="text" id="name" value={name} onChange={handleNameChange} required />
       </label>
-    </div>)
+    </div>
+  )
 }
 /* NR 1 */
