@@ -19,7 +19,6 @@ export const Food = ({ food, setFood }) => {
         type="text"
         value={food}
         onChange={handleDrinkChange}
-        required
         aria-label="Enter what your going to eat" />
     </form>
   );

@@ -10,7 +10,7 @@ export const Favorite = ({ favorite, setFavorite }) => {
     setFavorite(event.target.value);
   }
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <label htmlFor="favorite-wine">
       <h1 title="Enter wine" className="nametext">FAVORITE WINE?</h1>
       <input
         id="favorite-wine"
@@ -20,6 +20,6 @@ export const Favorite = ({ favorite, setFavorite }) => {
         onChange={handleFavoriteChange}
         aria-label="Favorite wine"
         required />
-    </form>
+    </label>
   );
 };

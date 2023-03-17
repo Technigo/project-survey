@@ -19,6 +19,7 @@ export const Taste = ({ taste, setTaste }) => {
         id="tasteID"
         value={taste}
         onChange={handleTasteChange}>
+        <option value="">Aaah...</option>
         <option>Woddy</option>
         <option>Caramel</option>
         <option>Grassy</option>

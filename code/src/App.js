@@ -17,7 +17,7 @@ export const App = () => {
   const [step, setStep] = useState(0);
   const [favorite, setFavorite] = useState('');
   const [grape, setGrape] = useState('');
-  const [priceGroup, setPriceGroup] = useState('0-18');
+  const [priceGroup, setPriceGroup] = useState('');
   const [food, setFood] = useState('');
   const [taste, setTaste] = useState('');
   const [greeting] = useState('');
@@ -71,13 +71,89 @@ export const App = () => {
           </p>
         </>
       )}
-      {step < 6 && (
+      {[0].includes(step) && (
         <>
           {/* The button says "next question" until the total amount of steps is more than 5 */}
           <button
             title="Next page button"
             className="submit-button"
             type="button"
+            /* disabled={favorite === ''} */
+            onClick={handleStepIncrease}>
+            {step === 0 && 'START SURVEY'}
+            {step > 0 && step < stepsTotalCount && 'NEXT QUESTION'}
+            {step >= stepsTotalCount && 'SUBMIT'}
+          </button>
+        </>
+      )}
+      {[1].includes(step) && (
+        <>
+          {/* The button says "next question" until the total amount of steps is more than 5 */}
+          <button
+            title="Next page button"
+            className="submit-button"
+            type="button"
+            disabled={favorite === ''}
+            onClick={handleStepIncrease}>
+            {step === 0 && 'START SURVEY'}
+            {step > 0 && step < stepsTotalCount && 'NEXT QUESTION'}
+            {step >= stepsTotalCount && 'SUBMIT'}
+          </button>
+        </>
+      )}
+      {[2].includes(step) && (
+        <>
+          {/* The button says "next question" until the total amount of steps is more than 5 */}
+          <button
+            title="Next page button"
+            className="submit-button"
+            type="button"
+            disabled={grape === ''}
+            onClick={handleStepIncrease}>
+            {step === 0 && 'START SURVEY'}
+            {step > 0 && step < stepsTotalCount && 'NEXT QUESTION'}
+            {step >= stepsTotalCount && 'SUBMIT'}
+          </button>
+        </>
+      )}
+      {[3].includes(step) && (
+        <>
+          {/* The button says "next question" until the total amount of steps is more than 5 */}
+          <button
+            title="Next page button"
+            className="submit-button"
+            type="button"
+            disabled={priceGroup === ''}
+            onClick={handleStepIncrease}>
+            {step === 0 && 'START SURVEY'}
+            {step > 0 && step < stepsTotalCount && 'NEXT QUESTION'}
+            {step >= stepsTotalCount && 'SUBMIT'}
+          </button>
+        </>
+      )}
+      {[4].includes(step) && (
+        <>
+          {/* The button says "next question" until the total amount of steps is more than 5 */}
+          <button
+            title="Next page button"
+            className="submit-button"
+            type="button"
+            disabled={food === ''}
+            onClick={handleStepIncrease}>
+            {step === 0 && 'START SURVEY'}
+            {step > 0 && step < stepsTotalCount && 'NEXT QUESTION'}
+            {step >= stepsTotalCount && 'SUBMIT'}
+          </button>
+        </>
+      )}
+      {[5].includes(step) && (
+        <>
+          {/* The button says "next question" until the total amount of steps is more than 5 */}
+          <button
+            title="Next page button"
+            className="submit-button"
+            type="button"
+            disabled={taste === ''}
             onClick={handleStepIncrease}>
             {step === 0 && 'START SURVEY'}
             {step > 0 && step < stepsTotalCount && 'NEXT QUESTION'}

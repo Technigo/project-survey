@@ -13,14 +13,16 @@ export const Grape = ({ grape, setGrape }) => {
   return (
     <>
       <h2 className="grapetext">YUMMYEST GRAPE?</h2>
-      <input
-        id="yummyest-grape"
-        className="name-input"
-        type="text"
-        value={grape}
-        onChange={handleGrapeChange}
-        required
-        aria-label="Yummyest grape" />
+      <form>
+        <input
+          id="yummyest-grape"
+          className="name-input"
+          type="text"
+          value={grape}
+          onChange={handleGrapeChange}
+          aria-label="Yummyest grape"
+          required />
+      </form>
     </>
   );
 }
