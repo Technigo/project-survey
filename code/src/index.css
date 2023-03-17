@@ -26,6 +26,7 @@ code {
   background-position: center;
   background-repeat: no-repeat;
   color: white;
+  text-align: center;
  
 }
 
@@ -43,7 +44,7 @@ code {
   color: rgb(16, 16, 16);
 }
 
-.feedback-label, .name-label, .workplace-label, .time-label {
+.feedback-label, .name-label, .time-label {
   background-color: rgb(228, 208, 133);
   display: flex;
   flex-direction: column;
@@ -55,6 +56,15 @@ code {
   margin-bottom: 10px;
   
 }
+
+.workplace-label {
+  background-color: rgb(228, 208, 133);
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+ 
 
 .form {
   color: lightpink;
@@ -72,6 +82,11 @@ code {
 
 }
 
+.survey-button {
+  display: flex;
+  justify-content: center;
+}
+
 .next-button {
   
   color:rgb(18, 22, 25);
@@ -80,7 +95,7 @@ code {
   cursor: pointer;
   width: 150px;
   height: 80px;
-  border-radius: 15px;
+  border-radius: 45px;
   margin-top: 20px;
   
 }
@@ -92,6 +107,7 @@ code {
   padding: 8px;
   font-size: 1rem;
   color: #333;
+  margin-top: 20px;
 }
 
 .input-field-feedback {
@@ -103,9 +119,56 @@ code {
 
 h2 {
   color: rgb(14, 13, 13);
+  
 }
 
 p {
   color: rgb(14, 14, 14);
   font-size: 30px;
+}
+
+select {
+  background-color: #ffffff;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  color: #495057;
+  padding: 6px 12px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.time-label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+
+.progress-bar {
+  display: flex;
+  flex-direction: row;
+  height: 20px;
+  background-color: rgb(65, 237, 35);
+  border: solid #333 2px;
+  transition: width 0.3s ease-in-out;
+  margin-top: 20px;
+}
+
+.slidecontainer {
+  background-color: rgb(228, 208, 133);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  opacity: 0.8;
+  border-radius: 15px;
+  padding: 25px;
+  margin-bottom: 20px;
 }
