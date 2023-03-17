@@ -1,7 +1,8 @@
 # Survey form with React
 
 This React App is a simple example of how React can be used to create dynamic user interfaces that respond to user inputs.
-Background image from https://unsplash.com/. Credit Vincent Guth.
+Background image from https://unsplash.com/. Credit Vincent Guth. 
+Music by: Bensound.com/royalty-free-music License code: FWWNKLQQ5ERUJCEP
 
 
 ## The problem
