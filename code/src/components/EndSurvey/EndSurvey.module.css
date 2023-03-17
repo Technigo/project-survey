@@ -1,0 +1,28 @@
+.yourPersonality {
+    font-size: 20px;
+  }
+  
+  p {
+    font-family: 'verdana';
+  }
+  .end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .answer {
+    background-color: black;
+    padding: 6px;
+    color: black;
+    border-radius: 5px;
+    font-family: 'verdana';
+  }
+  
+  .finalPersonality {
+    font-size: 40px;
+    background-color: #c5c667;
+    padding: 6px;
+    color: black;
+    border-radius: 5px;
+    font-family: 'verdana';
+  }

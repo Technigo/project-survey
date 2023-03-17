@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const answersQ1 = [
   'Mark Zuckerberg',
   'Steve Jobs',

@@ -7,25 +7,28 @@ const handleChange = (event) => {
   // get data from radio buttons
   // save with setAndTheNameYouWantToCallIt
   // ...
+  // changed from "answers" to "props" - the orange letters below
 }
-const FormRadioButton = ({ answers }) => {
+const FormRadioButton = ({ props }) => {
+  console.log(props.question2);
+  console.log('props', props);
+
   return (
-    <div onChange={handleChange}>
-      {answers.map((answer) => (
-        <label className="form-control" key={answer}>
-          {answer}
-          <input
+    <React.Fragment>
+<form className={styles.radioButtons}>
+  {props.answers.map((answer) => (
+<label className={styles.label} key={answer} htmlFor={answer}
+          input
             id={answer}
             name={answer}
             type="radio"
             value={answer}
             onChange={(event) => props.onChange(event.target.value)}
-            checked={props.value === answer} />
+            checked={props.value === answer}
+            />
           {answer}
         </label>
-      ))}
-    </div>
-  );
-}
+        </form>
+  ))};
 
 export default FormRadioButton;

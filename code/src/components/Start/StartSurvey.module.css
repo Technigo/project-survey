@@ -17,6 +17,8 @@ h2 {
 .form {
     display: flex;
     flex-direction: column;
+    border: solid black 2rem;
+    /*borders will be deleted later*/
 }
 
 .input {

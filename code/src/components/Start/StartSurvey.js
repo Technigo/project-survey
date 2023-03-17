@@ -11,7 +11,7 @@ const Start = (props) => {
     <div className="survey-wrapper">
       <div className={styles.titleContainer}>
         <h2> What personality type do you have?</h2>
-        <p>First, please write your name here:</p>
+        <p>First, what is your name?</p>
         <form className={styles.form} onSubmit={handleSubmit}>
           <input
             className={styles.input}
@@ -20,7 +20,7 @@ const Start = (props) => {
             required />
 
           <button className={styles.startButton} type="submit" id="confirm-btn">
-                        Let's find out!
+                        Let`&apos;`s find out!
           </button>
         </form>
       </div>

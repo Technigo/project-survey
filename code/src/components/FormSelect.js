@@ -10,11 +10,11 @@ const FormSelect = ({ answers }) => {
       {answers.map((answer) => (
         <select className="form-control" key={answer}>
           {answer}
-          <option type="select" name="mySelect" value={answer} />
+          <option type="select" name="mySelect" value={answer} HEJ />
         </select>
       ))}
     </div>
   );
-}
+};
 
 export default FormSelect;
