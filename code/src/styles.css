@@ -1,0 +1,61 @@
+
+.app-container {
+height: 100vh;
+width:100vw;
+border:1px solid black;
+background-image: url("./assets/bouba3-1.webp");
+background-size:cover;
+}
+
+.next-btn {
+  color: red;
+}
+
+.question {
+  font-family: Helvetica, sans-serif;
+}
+/* Style for intro component starts here */
+.intro-container {
+  background-color: orange;
+}
+
+.intro-container h1 {
+  color: red;
+}
+
+.intro-container p {
+  
+}
+
+/* Style for name component starts here */
+
+.name-container {
+  background-color: green;
+}
+
+.name-container p {
+  color: red;
+}
+
+.name-input {
+  background-color: pink;
+}
+/* Style for yesno component starts here */
+
+.yesno-container {
+  background-color: yellow;
+}
+
+.yesno-container input { /* Label? */
+
+}
+
+.shape-container {
+
+}
+
+.shape-container form { /* Select? */
+  
+}
+/* Style for shape component starts here */
+
