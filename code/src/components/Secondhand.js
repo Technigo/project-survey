@@ -17,7 +17,7 @@ export const Secondhand = ({ secondHand, setSecondHand, step, setStep }) => {
 
   return (
     <>
-      <h1>Please share your best site for finding sneakers secondhand:</h1>
+      <h1>Please share your best site for finding sneakers second hand:</h1>
       <input
         className="input-text"
         type="text"

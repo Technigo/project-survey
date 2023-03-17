@@ -1,5 +1,21 @@
 .thank-you-page h1 {
   font-size: 30px;
   align-self: center;
+  color: #bbdd90;
+  font-family: 'Climate Crisis';
+  font-weight: 100;
 }
 
+.thank-you-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+@media (min-width: 668px) {
+  .thank-you-page h1 {
+    font-size: 50px;
+  } 
+}

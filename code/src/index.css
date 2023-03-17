@@ -82,13 +82,13 @@ button:hover {
 
 @media (min-width: 668px) {
   #root {
-    width: 70%;
+    width: 80%;
   } 
 }
 
-@media (min-width: 668px) {
+@media (min-width: 1024px) {
   #root {
-    width: 50%;
+    width: 60%;
   } 
 }
 
