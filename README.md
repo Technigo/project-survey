@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project was to build a survey using React. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Last week I didn't understand React at all but this week it felt so much easier and I feel like I understand how and why to work with components. I didn't put that much effort and time in deciding what the survey should be about, therefor the slightly boring topic. I focused on setting up the different components and decided to have a CSS for each component to make it easier to overview. I'm most proud over the animated transition for the welcome-page. As a motion designer I feel it's so fun I've started to understand more how to animate elements and components in code. If I had more time I would have tried to style the drop-downs (didn't get it to work) and put more time on making the subject of the survey slightly more fun.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://emilias-food-survey.netlify.app/
