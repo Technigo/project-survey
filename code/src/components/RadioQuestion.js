@@ -5,7 +5,7 @@ import React from 'react';
 
 const RadioQuestion = ({ nextPlease, radioBtn, setRadioBtn }) => {
     return (
-        <div>
+        <div className="gap-20">
             <p>How often do you eat out at restaurants?</p>
             <div className="flex flex-col">
                 <label>
@@ -49,8 +49,8 @@ const RadioQuestion = ({ nextPlease, radioBtn, setRadioBtn }) => {
                     Every day
                 </label>
             </div>
-            <div>
-                <button type="button" onClick={nextPlease}>Next question</button>
+            <div className="btnSection">
+                <button className="button" type="button" onClick={nextPlease}>Next question</button>
             </div>
         </div>
     )

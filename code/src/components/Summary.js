@@ -8,8 +8,8 @@ const Summary = ({ summaryList, resetForm }) => {
             <ul>
                 {summaryList.map((item) => <li>{item}</li>)}
             </ul>
-            <div>
-                <button type="button" onClick={resetForm}>Reset</button>
+            <div className="btnSection">
+                <button className="button" type="button" onClick={resetForm}>Reset</button>
             </div>
         </div>
     )
