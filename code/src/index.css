@@ -575,6 +575,7 @@ footer hr {
 .apocalypse-container,
 .sorry {
   max-height: 370px;
+  min-height: 350px;
 }
 
 .summary-container {
@@ -592,7 +593,7 @@ footer hr {
 
 
 .summary-box {
-  max-width: 300px;
+  max-width: 270px;
   margin: auto;
 }
 
