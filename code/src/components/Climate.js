@@ -1,6 +1,6 @@
 import React from 'react';
 
-const climateTypes = ['cold and snowy', 'warm and breezy', 'hot and tropical'];
+const climateTypes = ['cold and snowy ☃️', 'warm and breezy 🌤️', 'hot and tropical 🏝️'];
 
 export const Climate = ({ climate, setClimate }) => {
   // const handleClimateChange = (event) => {
@@ -11,7 +11,7 @@ export const Climate = ({ climate, setClimate }) => {
       <h3>What kind of climate is most appealing to you?</h3>
       <div className="range">
         {climateTypes.map((climates) => (
-          <label key={climates.id} htmlFor="radio">
+          <label className="radioButtons" key={climates.id} htmlFor="radio">
             <input
               type="radio"
               value={climates}

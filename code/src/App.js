@@ -48,7 +48,7 @@ export const App = () => {
           climate={climate}
           activity={activity} />
       )}
-      {step >= 1 && step < 3 && (
+      {step >= 1 && step <= 3 && (
         <>
           <div className="buttonContainer">
             <button type="button" className="buttonBack" onClick={handleStepDecrease}>Back</button>

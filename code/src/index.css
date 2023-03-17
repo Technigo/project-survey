@@ -27,15 +27,17 @@ root {
 
 body {
 
-background-image: url(/public/assets/background-image.jpg);
+background-image: url(../public/assets/background-image.jpg);
 background-size: cover;
 background-repeat: no repeat;
-display: absolute;
+position: absolute;
 font-family: 'Sono', sans-serif;
 height: 500px;
 width: 100%;
 }
 /* FIX THE IMAGE IN RESPONSIVE */
+
+/* LANDING PAGE */
 
 .landingPageText {
   display: flex;
@@ -54,6 +56,7 @@ h1 {
 
 }
 
+/* GENERAL */
 
 .questionWrapper {
 display: flex;
@@ -72,7 +75,89 @@ h3 {
   margin-bottom: 20px;
 }
 
-/* BUTTONS  */
+
+.step {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* DEPARTMENT */
+
+/* ACTIVITY */
+
+/* Remove default dropdown arrow */
+/* .selectOptions::-ms-expand {
+  display: none; 
+}    */
+
+.selectOptions {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 8px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer; 
+  font-family: 'Sono', sans-serif;
+
+}
+
+.selectOptions:focus {
+  border-color: #555;
+  border-width: 2px;
+  outline: none;
+}
+
+
+/* CLIMATE */
+
+
+.radioButtons {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  font-size: 20px;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+}
+
+
+/* RESULTS */
+
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  margin-top: 80px;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h5 {
+  font-size: 20px;
+  line-height: 35px;
+  margin-top: 20px;
+  color: grey;
+
+}
+
+h6 {
+  font-size: 15px;
+  line-height: 100px;
+  color: white;
+}
+
+
+/* GENERAL BUTTONS  */
 
 .buttonStart {
   display: flex;
@@ -144,7 +229,6 @@ h3 {
   transition: 0.3s;
 }
 
-
 .buttonSubmit {
   display: flex;
   justify-content: center;
@@ -168,36 +252,3 @@ h3 {
 /* select {
 
 } */
-
-.resultWrapper {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-  align-items: center;
-  margin-top: 80px;
-}
-
-h4 {
-  font-size: 25px;
-}
-
-h5 {
-  font-size: 20px;
-  line-height: 35px;
-  margin-top: 20px;
-  color: grey;
-
-}
-
-h6 {
-  font-size: 15px;
-  line-height: 100px;
-  color: white;
-}
-
-.step {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-top: 50px;
-}

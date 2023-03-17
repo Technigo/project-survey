@@ -6,9 +6,10 @@ export const Department = ({ department, setDepartment }) => {
   }
   return (
     <div className="questionWrapper">
-      <h3>Which department do you work in?</h3>
-      <input type="text" value={department} onChange={handleDepartmentChange} />
+      <h3 className="departmentQuestion" htmlFor="Department">Which department do you work in?</h3>
+      <label htmlFor="department">
+        <input type="text" className="department" value={department} onChange={handleDepartmentChange} />
+      </label>
     </div>
   );
 };
-
