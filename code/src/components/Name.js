@@ -1,14 +1,17 @@
 import React from 'react';
 
-/* is this a child component? (name component) to the parent in app.js? ? */
 export const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
   return (
-    <>
-      <p>What is your name?</p>
-      <input type="text" value={name} onChange={handleNameChange} />
-    </>
-  );
+    // <div>
+    <div className="name-container">
+      <h2>bla bla bla</h2>
+      <label htmlFor="name">
+        <p>Hello there, whats your name?</p>
+        <input type="text" id="name" value={name} onChange={handleNameChange} required />
+      </label>
+    </div>)
 }
+/* NR 1 */

@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const Result = ({ name, food, drink }) => {
+export const Result = ({ name, food, sign }) => {
   return (
     <>
       <p>Your name is {name}! 💗</p>
-      <p>Your favourite food is 🌮{food}, yummi!😋</p>
-      <p>Your favourite drink is {drink}, 🍸 delich!</p>
+      <p>You are a  {sign}</p>
+      <p>You like {food}, Yummi!</p>
     </>
   );
 }
