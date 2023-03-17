@@ -175,7 +175,7 @@ code {
   margin-top: 10px; 
 }
 
-.button:hover {
+.button:hover button:focus {
 filter: brightness(80%); 
 }
 
