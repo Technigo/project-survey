@@ -1,4 +1,4 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable */
 import React from 'react';
 import '../index.css';
 import './checkbox.css';

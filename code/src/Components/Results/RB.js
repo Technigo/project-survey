@@ -12,12 +12,12 @@ export const RB = ({ name, reason, location, feel, genre }) => {
         You often find yourself listening to music to {reason}, and
       your favourite place to listen to music is {location}. Out of the four genres
       I listed, you enjoy {genre} the most.
-      Most music you listen to could be described as {feel}.
+      The music you listen to could be described as {feel}.
           <br />
           <br />
       For this reason, I've curated a playlist of afrobeats with an R&B twist for you. Perhaps
       the most globally popular style of afrobeats currently, Afro-R&B boasts some of the biggest
-      names in music over the entire continent. Artists like WizKid and Burna Boy dominate
+      names in music over the entire continent. Artists like WizKid, Burna Boy and Tems dominate
       the Afro-R&B scene and have in the last couple of years had big global breakthroughs,
       helping push afrobeats onto the mainstream Western music scene. If you enjoy R&B,
       I'm sure you'll love the addition of a West African beat and Nigerian/Ghanaian pidgin.

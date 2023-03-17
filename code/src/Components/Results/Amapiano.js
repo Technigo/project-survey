@@ -10,9 +10,9 @@ export const Amapiano = ({ name, reason, location, feel, genre }) => {
         <h1 className="text-title">You got... amapiano-inspired afrobeats!</h1>
         <p>Great job, {name}! The results are in.</p>
         <p>You often find yourself listening to music to {reason}, and
-      your favourite place to listen to music is {location}. Out of the genres
+      your favourite place to listen to music is {location}. Out of the four genres
       I listed, you enjoy {genre} the most.
-      Most music you listen to could be described as {feel}.
+      The music you listen to could be described as {feel}.
         </p>
         <p>
       For this reason, I've curated a playlist of afrobeats with an amapiano twist for you.

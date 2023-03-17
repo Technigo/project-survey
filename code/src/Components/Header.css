@@ -2,7 +2,7 @@ h1 {
     font-size: 50px;
     color: rgb(0, 46, 0);
     line-height: 40px;
-    font-family: Archivo Black;
+    font-family: "Archivo Black";
 }
 
 strong {
@@ -27,4 +27,13 @@ a.title-link {
     text-decoration: none;
     color: white;
     font-style: italic;
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 40px;
+        color: rgb(0, 46, 0);
+        line-height: 30px;
+        font-family: "Archivo Black";
+    }
 }

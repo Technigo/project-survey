@@ -72,3 +72,26 @@ select {
 }
 
 
+@media (max-width: 700px) {
+  body {
+    margin: 0;
+    font-family: Ubuntu Mono;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color:rgb(224, 242, 224);
+    color:rgb(1, 40, 0);
+    font-size: 12x;
+    line-height: 16px;
+    accent-color: darkgreen;
+  }
+
+  .survey-wrapper {
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;
+    height: 500px;
+    padding: 20px 20px 20px 20px;
+    margin: auto;
+    justify-content: center;
+    }
+}

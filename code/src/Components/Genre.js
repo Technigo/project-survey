@@ -1,6 +1,5 @@
 /* eslint-disable react/button-has-type */
 /* eslint-disable react/no-unescaped-entities */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import '../index.css';
 

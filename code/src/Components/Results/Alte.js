@@ -12,7 +12,7 @@ export const Alte = ({ name, reason, location, feel, genre }) => {
         <p>You often find yourself listening to music to {reason}, and
       your favourite place to listen to music is {location}. Out of the genres
       I listed, you enjoy {genre} the most.
-      Most music you listen to could be described as {feel}.
+      The music you listen to could be described as {feel}.
         </p>
         <p>
       For this reason, I've curated a playlist of alternative afrobeats,
