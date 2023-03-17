@@ -12,18 +12,45 @@ code {
     monospace;
 }
 
+
+.name-container {
+  display: flex;
+  height: 100vh;
+}
+
+.name-form {
+  display: flex;
+  justify-content:space-between;
+  }
+
+.fashion-image {
+  float: left;
+  width: 50%;
+  object-fit: fill;
+}
+
 .name-header {
   display: flex;
+  width: 50%;
+  text-align: center;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 300px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  float: right;
 }
 
 .name-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
+
+  font-family: 'Roboto', sans-serif;
 }
 
 .hear-header {
@@ -32,12 +59,14 @@ code {
   align-items: center;
   flex-direction: column;
   margin-top: 300px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .hear-options {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .delivery-header {
@@ -46,6 +75,7 @@ code {
   align-items: center;
   flex-direction: column;
   margin-top: 300px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .delivery-options {
@@ -53,6 +83,7 @@ code {
   justify-content: center;
   margin-top: 30px;
   gap: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .overall-header {
@@ -61,6 +92,7 @@ code {
   align-items: center;
   flex-direction: column;
   margin-top: 300px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .overall-form {
@@ -68,6 +100,7 @@ code {
   justify-content: center;
   margin-top: 30px;
   gap: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .purchase-header {
@@ -76,6 +109,7 @@ code {
   align-items: center;
   flex-direction: column;
   margin-top: 300px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .purchase-options {
@@ -83,6 +117,7 @@ code {
   justify-content: center;
   margin-top: 30px;
   gap: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .rate-header {
@@ -91,6 +126,7 @@ code {
   align-items: center;
   flex-direction: column;
   margin-top: 300px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .rate-slider {
@@ -98,6 +134,7 @@ code {
   justify-content: center;
   margin-top: 30px;
   gap: 10px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .thanks-header {
@@ -106,16 +143,40 @@ code {
   align-items: center;
   flex-direction: column;
   margin-top: 300px; 
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .results {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 10px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .go-again-btn {
   display: flex;
   justify-content: center;
   gap: 10px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#thanks-btn {
+  background-color: #aaf0d1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 22px;
+  font-weight: 900px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#thanks-btn:hover {
+  background-color: #27ae60;
 }
