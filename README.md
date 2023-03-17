@@ -8,4 +8,4 @@ I started this weeks assignment by trying out the example provided and from ther
 
 ## View it live
 
-https://rad-marigold-533c40.netlify.app
+wine-two-three-winery-react.netlify.app
