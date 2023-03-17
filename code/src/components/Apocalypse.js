@@ -17,6 +17,7 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
               type="checkbox"
               className="apocalypsecheckbox"
               id="apocalypsecheck"
+              tabIndex="0"
               checked={apocalypse}
               onChange={(event) => setApocalypse(event.target.checked)} />
           </label>
