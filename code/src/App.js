@@ -80,19 +80,19 @@ export const App = () => {
             </div>
           )}
 
-          {step < 5 && step > 1 && (
+          {step < 6 && step > 1 && (
             <div>
-              <button className="next-btn" type="button" onClick={handleStepIncrease}>Next question</button>
+              <button className="next-btn" type="button" onClick={handleStepIncrease}>Submit answer</button>
             </div>
           )}
 
-          {step > 1 && step < 7 && (
+          {step > 2 && step < 6 && (
             <div>
               <button className="prev-btn" type="button" onClick={handleStepDecrease}>Previous question</button>
             </div>
           )}
 
-          {step <= 7 && (
+          {step <= 6 && (
             <div>
               <button className="restart-btn" type="button" onClick={handleStepRestart}>Restart</button>
             </div>

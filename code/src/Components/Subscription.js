@@ -18,7 +18,7 @@ const subscriptionQuestion = ({ subscriptionQ, setSubscriptionQ }) => {
           className="select-subscription"
           aria-live="polite">
 
-          <option style={{ display: 'none' }}>Select your answer here:</option>
+          <option value="" disabled defaultValue>Select your answer here:</option>
           <option lang="en" label="Yes" value="Yes">Yes</option>
           <option lang="en" label="No" value="No">No</option>
           <option lang="en" label="Soon" value="Soon">I will have one soon</option>
