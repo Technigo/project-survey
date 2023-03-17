@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ExperienceSlider.css';
 
-export const ExperienceSlider = () => {
-  const [experience, setExperience] = useState(1);
-
+export const ExperienceSlider = ({ experience, setExperience }) => {
   const handleExperienceChange = (event) => {
     setExperience(event.target.value);
   };

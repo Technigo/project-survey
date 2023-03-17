@@ -19,6 +19,7 @@ export const Calls = ({ calls, setCalls }) => {
       {options.map((option) => (
         <label key={option.value}>
           <input
+            className="radio"
             type="radio"
             name="calls"
             value={option.value}

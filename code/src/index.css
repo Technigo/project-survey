@@ -19,11 +19,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 50px;
+  line-height: 60px;
   margin-bottom: 30px;
   min-height: 100vh;
   background: rgb(63,94,251);
-background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(235,252,70,1) 77%);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(235,252,70,1) 77%);
 }
 
 button{
@@ -38,6 +38,11 @@ button{
   border-style: none;
   font-weight:bold;
   font-family: 'Panchang';
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(109, 126, 211, 0.392); ;
 }
 
 .buttonswrapper{
@@ -48,33 +53,9 @@ button{
 
 }
 
-button {
-  position: relative;
-  overflow: hidden;
+li {
+  list-style: none;
 }
-
-button:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: rgba(128, 140, 245, 0.7);
-  opacity: 0.7;
-  transition: width 0.3s ease-out, height 0.3s ease-out, opacity 0.3s ease-out;
-}
-
-button:hover:before,
-button:focus:before,
-button:active:before {
-  width: 300px;
-  height: 300px;
-  opacity: 0;
-}
-
 
 .outer-wrapper {
   background-size: 22px 22px;
@@ -107,6 +88,6 @@ input, select {
   cursor: pointer;
   font-family: 'Satoshi';
 
-  ;
 }
+
 

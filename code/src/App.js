@@ -15,6 +15,7 @@ export const App = () => {
   const [area, setArea] = useState('');
   const [calls, setCalls] = useState('');
   const [company, setCompany] = useState('');
+  const [experience, setExperience] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -43,7 +44,7 @@ export const App = () => {
           <Interest area={area} setArea={setArea} />
         )}
         {step === 3 && (
-          <ExperienceSlider />
+          <ExperienceSlider experience={experience} setExperience={setExperience} />
         )}
         {step === 4 && (
           <Calls calls={calls} setCalls={setCalls} />
@@ -53,7 +54,12 @@ export const App = () => {
         )}
 
         {step === 6 && (
-          <Summary name={name} area={area} calls={calls} />
+          <Summary
+            name={name}
+            area={area}
+            calls={calls}
+            company={company}
+            experience={experience} />
         )}
 
         {step === 7 && (
