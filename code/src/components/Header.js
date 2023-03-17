@@ -15,7 +15,7 @@ const Header = () => {
         <img
           src={ponyLogo}
           alt="My Little Pony" />
-        <img 
+        <img
           src={ponyLogo2}
           alt="My Little Pony 2" />
       </div>
