@@ -589,6 +589,13 @@ footer hr {
   max-width: 50%;
 }
 
+
+
+.summary-box {
+  max-width: 300px;
+  margin: auto;
+}
+
   /* Footer */
 
 footer p {
