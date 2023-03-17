@@ -34,32 +34,22 @@ code {
   background: white; 
   border-radius: 50%;
   box-shadow: 0 0 0 0 rgba(0, 0, 0, 1);
-	transform: scale(1);
-	animation: pulse 4s infinite;
-}
-
-@keyframes pulse {
-	0% {
-		transform: scale(0.99);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-	}
-
-	70% {
-		transform: scale(1);
-		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-	}
-
-	100% {
-		transform: scale(0.99);
-		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-	}
-}
-
+  }
+	
 .instructionText {
+  display: flex; 
   font-family: 'Roboto', sans-serif;
   font-weight: 700; 
   font-size: 40px; 
-  max-width: 500px;
+  width: 65%;
+  padding: 0% 20%; 
+  text-align: center;
+  justify-content: center;
+}
+
+.descriptiveText {
+  display: flex; 
+
 }
 
 .button {
@@ -70,8 +60,27 @@ code {
   background-color: lightblue; 
   border: none; 
   padding: 20px; 
-
+  transform: scale(1);
+	animation: pulse 4s infinite;
 }
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.97);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.97);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
  .input-field {
   font-family: 'Courier New', Courier, monospace;
   font-size:20px; 
@@ -84,13 +93,24 @@ code {
   width: 200px; 
  }
 
+ .dropdown-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+ }
+
  .drop-down {
   display: flex; 
   border: 2px solid pink;  
   height: 30px; 
   width: 200px; 
-  font-size: 20px; 
  }
+
+ .drop-down, .input-field {
+  font-size: 20px; 
+  text-align: center; 
+ }
+
  .counterText {
   font-family:'Roboto', sans-serif;
   font-size: 18px; 
@@ -101,16 +121,15 @@ code {
 .radio-btn-container {
   display: flex; 
   flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: center;
+  max-width: 30%; 
+  margin: 0 250px; 
+  width: 100%; 
 }
 
 .radio-button {
   display: flex; 
   flex-direction: row; 
-  flex-wrap: wrap; 
-  max-width: 150px; 
-  align-items: center;
+  justify-content: flex-start; 
 }
 
 .story-container {
@@ -119,13 +138,31 @@ code {
   height:auto; ;   
   width: 800px;
   padding: 20px;
-  background: white; 
-
+  background: rgb(248, 240, 240);
+  border-radius: 5%;
 }
 
+.result-title {
+  margin: 20px; 
+}
 .story-text {
   display: flex; 
   flex-direction: column;
-  font-family:'Roboto', sans-serif;
+  font-family:Arial, Helvetica, sans-serif; 
   font-weight: 400; 
+  margin: 20px; 
+}
+
+.restart-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; 
+  font-size: 20px; 
+  border-radius: 5%; 
+  background-color: pink; 
+  border: none; 
+  padding: 20px; 
+  transform: scale(1);
+	animation: pulse 4s infinite;
+  margin: 0 300px; 
+  margin-top: 10px; 
 }

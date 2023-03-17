@@ -5,7 +5,7 @@ export const FifthQuestion = ({ celebrity, setCelebrity }) => {
     setCelebrity(event.target.value);
   }
   return (
-    <form>
+    <form className="dropdown-container">
       <p className="instructionText"> Pick a celebrity! </p>
       <select aria-label="dropdown menu" className="drop-down" onChange={handleFifthAnswer} value={celebrity}>
         <option value="" disabled>Pick a celebrity </option>
@@ -21,7 +21,6 @@ export const FifthQuestion = ({ celebrity, setCelebrity }) => {
         <option value="Dwayne Johnson">Dwayne Johnson</option>
         <option value="Chuck Norris">Chuck Norris</option>
         <option value="Zlatan">Zlatan</option>
-
       </select>
     </form>
   )

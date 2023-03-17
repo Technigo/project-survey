@@ -20,18 +20,20 @@ export const FourthQuestion = ({ clothingNoun, setClothingNoun }) => {
     setClothingNoun(event.target.value);
   }
   return (
-    <form className="radio-btn-container" onSubmit={(event) => event.preventDefault()}>
-      <p className="instructionText"> Pick a piece of clothing or accessory!</p>
-      {clothing.map((group) => (
-        <label aria-label="select button" className="radio-button" key={group} htmlFor="piece-of-clothing">
-          <input
-            type="radio"
-            value={group}
-            onChange={handleFourthAnswer}
-            checked={clothingNoun === group} />
-          {group}
-        </label>
-      ))}
-    </form>
+    <div>
+      <p className="instructionText"> Pick a piece of clothing or accessory.</p>
+      <form className="radio-btn-container" onSubmit={(event) => event.preventDefault()}>
+        {clothing.map((group) => (
+          <label aria-label="select button" className="radio-button" key={group} htmlFor="piece-of-clothing">
+            <input
+              type="radio"
+              value={group}
+              onChange={handleFourthAnswer}
+              checked={clothingNoun === group} />
+            {group}
+          </label>
+        ))}
+      </form>
+    </div>
   )
 }

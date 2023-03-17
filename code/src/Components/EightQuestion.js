@@ -5,7 +5,7 @@ export const EightQuestion = ({ bodyPart, setBodyPart }) => {
     setBodyPart(event.target.value);
   }
   return (
-    <form>
+    <form className="dropdown-container">
       <p className="instructionText"> Pick a body part! </p>
       <select aria-label="dropdown menu" className="drop-down" onChange={handleEightAnswer} value={bodyPart}>
         <option value="" disabled>Pick a body part </option>

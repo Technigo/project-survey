@@ -14,7 +14,7 @@ export const Result = ({
 }) => {
   return (
     <div className="story-container">
-      <h1>This is what I learnt about you: </h1>
+      <h1 className="result-title">This is what I learnt about you: </h1>
       <div className="story-text">
         <p>
         What you like most about your workplace
@@ -47,6 +47,9 @@ export const Result = ({
         </p>
         <p> Your previous boss would probably describe you as {descriptiveAdjective}.</p>
       </div>
+      <button aria-label="restart-button" className="restart-button" type="button" onClick={() => window.location.reload()}>Try again!</button>
+
     </div>
+
   )
 }

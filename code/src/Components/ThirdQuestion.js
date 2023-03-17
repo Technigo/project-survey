@@ -5,7 +5,7 @@ export const ThirdQuestion = ({ ingVerb, setIngVerb }) => {
     setIngVerb(event.target.value);
   }
   return (
-    <form>
+    <form className="dropdown-container">
       <p className="instructionText"> Pick a verb! </p>
       <select aria-label="dropdown menu" className="drop-down" onChange={handleThirdAnswer} value={ingVerb}>
         <option value="" disabled>Choose verb </option>
