@@ -8,11 +8,13 @@ export const Name = ({ name, setName, counter }) => {
   }
 
   return (
-    <form>
-      <section className="inputName">
-        <p>What is your name?</p>
-        <input type="text" onChange={handleNameChange} value={name} counter={counter} aria-labelledby="name-label" arial-label="Write your name here and then press button further down" />
-      </section>
-    </form>
+    <div className="name-container">
+      <p>What is your name?</p>
+      <form>
+        <section className="inputName">
+          <input className="inputClass" type="text" onChange={handleNameChange} value={name} counter={counter} aria-labelledby="name-label" arial-label="Write your name here and then press button further down" />
+        </section>
+      </form>
+    </div>
   );
 }

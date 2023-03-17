@@ -50,11 +50,18 @@ body{
 
 
 
-/*input*/
+/*name-container*/
 .inputName{
   border: pink solid 2px;
-  margin: 20px;
-  padding: 5px;
+margin-top: 70px;
+}
+
+.name-container{
+  margin: 100px 50px 100px 50px;
+}
+.name-container p{
+  font-size: 40px;
+
 }
 
 /*favourite color*/

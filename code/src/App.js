@@ -34,7 +34,7 @@ export const App = () => {
   return (
     <main className="StartPage">
       {!started && (
-        <header>
+        <header className="start-container">
           <h1>Answer these questions and we will tell you your favourite animal</h1>
           <button type="button" onClick={handleStartQuiz} className="startBtn" aria-label="press button to start the quiz">
             Start quiz
@@ -58,7 +58,7 @@ export const App = () => {
         <Thing thing={things} setThing={setThing} counterFromApp={counter} setCounter={setCounter} />
       )}
       {counter >= 5 && quizEnded && (
-        <QuizResult name={name} color={color} prefers={prefers} thing={things} result={results} setResults={setResults} QuizResult={QuizResult} />
+        <QuizResult name={name} color={color} prefers={prefers} thing={things} results={results} setResults={setResults} QuizResult={QuizResult} />
       )}
 
       {(counter === 1 && !name)

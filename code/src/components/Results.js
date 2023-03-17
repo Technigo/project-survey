@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import { QuizResult } from './QuizResults';
 
 export const Results = ({ name, color, prefer, things }) => {
@@ -11,4 +11,4 @@ export const Results = ({ name, color, prefer, things }) => {
       </section>
     </div>
   );
-};
+}; */
