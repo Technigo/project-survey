@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Name } from './components/Name';
 import { Prefer } from './components/Prefer';
-// import { Results } from './components/Results';
 import { Color } from './components/Color';
 import { Thing } from './components/Thing';
 import { QuizResult } from './components/QuizResult'
@@ -60,7 +59,7 @@ export const App = () => {
         <Thing thing={things} setThing={setThing} counterFromApp={counter} setCounter={setCounter} />
       )}
       {counter >= 5 && (
-        <QuizResult name={name} color={color} prefers={prefers} thing={things} results={results} setResults={setResults} QuizResult={QuizResult} />
+        <QuizResult name={name} color={color} prefer={prefers} thing={things} results={results} setResults={setResults} QuizResult={QuizResult} />
       )}
 
       {(counter === 1 && !name)

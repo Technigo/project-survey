@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background-color: #FFFD37
 }
 
 code {
@@ -12,14 +13,8 @@ code {
     monospace;
 }
 
-*{
-  box-sizing: border-box;
-}
-body{
-  margin: 0;
-  overflow-x: hidden;
-  background-color: #FFFD37
-}
+
+
 
 .answer{
   font-size: 15px;
@@ -32,10 +27,7 @@ body{
 .StartPage{
   display: grid;
   grid-template-columns: 1fr;
-  justify-items: center;
-margin-top: 100px;
-margin-right: 30px;
-margin-left: 30px;
+margin: 100px;
   background-color: #A8E4A0;
   border-radius: 5px;
   width: 100%;
@@ -176,8 +168,31 @@ justify-self: center;
 
 /*results*/
 .results{
-  border: red solid 2px;
-  margin: 20px;
-
+  display: grid;
+  grid-template-columns: 1fr;
+  align-content: center;
+  justify-content: center;
+background-color: pink;
+margin: 100px;
+justify-items: center;
 }
 
+.results p{
+  font-size: 40px;
+  justify-items: center;
+  padding-left:20px;
+  text-align: center;
+}
+
+img{
+  justify-items: center;
+  width: 100%;
+  height: 500px;
+}
+.playagain{
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  width: 100px;
+  margin: 40px;
+}

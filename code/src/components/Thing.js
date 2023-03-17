@@ -25,7 +25,7 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
           <input
             type="radio"
             id="mountain"
-            value="Mountain"
+            value="mountain"
             className="mountain"
             onChange={handleThingChange}
             checked={things === 'Mountain'} />
@@ -36,7 +36,7 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
           <input
             type="radio"
             id="city"
-            value="City"
+            value="city"
             className="city"
             onChange={handleThingChange}
             checked={things === 'City'} />
@@ -47,7 +47,3 @@ export const Thing = ({ things, setThing, counterFromApp, setCounter }) => {
   );
 };
 
-/* const handleThingChange = (event) => {
-    setThing(event.target.value);
-    console.log('value is:', event.target.value);
-  } */
