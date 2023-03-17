@@ -17,13 +17,11 @@ export const Monster = ({ yourMonster, setYourMonster }) => {
           <option value="food">Food</option>
           <option value="sports">Sports</option>
           <option value="arts-crafts">Doing arts and crafts</option>
-          <option value="yeti">Yeti</option>
           <option value="movies-series">Watching movies/series</option>
           <option value="family-friends">Being with family and/or friends</option>
           <option value="partner">Being with my partner</option>
-          <option value="outdoor">Being outdoors</option>
+          <option value="outdoors">Being outdoors</option>
           <option value="animals">Being with animals</option>
-          <option value="zombie">Zombie</option>
         </select>
       </form>
     </>

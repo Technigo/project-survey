@@ -1,6 +1,7 @@
 import React from 'react';
 import './SummaryDreamFeedback.css';
 
+// eslint-disable-next-line max-len
 export const SummaryDreamFeedback = ({ name, yourMonster, famousPerson, yourTimeChoice, yourLove }) => {
   return (
     <>

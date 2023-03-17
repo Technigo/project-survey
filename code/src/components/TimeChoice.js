@@ -11,11 +11,11 @@ export const TimeChoice = ({ yourTimeChoice, setYourTimeChoice }) => {
     <form>
       <p className="question">In your non-fiction dreams, which time in your life do you prefer to dream about?</p>
       {timePeriods.map((timePeriod) => (
-        <label className="time-options" htmlFor="time" key={timePeriod}>
+        <label className="time-options" htmlFor="time periods" key={timePeriod}>
           <input
             className="radio-buttons"
             type="radio"
-            id=""
+            id="time-periods"
             onChange={handleTimeChoice}
             value={timePeriod}
             checked={yourTimeChoice === timePeriod} />
