@@ -3,10 +3,10 @@ import Woods from './assets/sunny-gc1abeb561_1920.jpg';
 import openedbox from './assets/box-open.svg';
 import closedbox from './assets/box-archive.svg';
 
-const RightBox = () => {
+const LogoBox = () => {
   return (
-    <div className="rightbox">
-      <div className="logo-box">
+    <div className="LogoBox">
+      <div className="logo-subbox">
         <h1 className="companyname">Fox-in-a-box™</h1>
         <i className={openedbox} />
         <i className={closedbox} />
@@ -16,4 +16,4 @@ const RightBox = () => {
   )
 }
 
-export default RightBox;
+export default LogoBox;

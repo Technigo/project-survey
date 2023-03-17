@@ -1,9 +1,9 @@
 import React from 'react';
-import NextButton from './Button';
+import NextButton from './NextButton';
 
-const question0 = ({ counter, setCounter }) => {
+const Welcome = ({ counter, setCounter }) => {
   return (
-    <div className="leftboxChild">
+    <div className="textboxChild">
       <h2>Hello dear customer!</h2>
       <p>To proceed with the reclamation survey please click below</p>
       <div className="button-container">
@@ -13,4 +13,4 @@ const question0 = ({ counter, setCounter }) => {
   )
 }
 
-export default question0;
+export default Welcome;

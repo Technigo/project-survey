@@ -1,10 +1,10 @@
 import React from 'react';
-import NextButton from './Button';
+import NextButton from './NextButton';
 import PreviousButton from './PreviousButton'
 
-const Page5 = ({ counter, setCounter, yesNews, setYesNews }) => {
+const YesNewsQ = ({ counter, setCounter, yesNews, setYesNews }) => {
   return (
-    <div className="leftboxChild">
+    <div className="textboxChild">
       <p>Would you like to opt for targeted discounts and special offers in the future?</p>
       <input
         type="checkbox"
@@ -18,4 +18,4 @@ const Page5 = ({ counter, setCounter, yesNews, setYesNews }) => {
   )
 }
 
-export default Page5;
+export default YesNewsQ;

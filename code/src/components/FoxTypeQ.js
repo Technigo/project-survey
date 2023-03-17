@@ -1,10 +1,10 @@
 import React from 'react';
-import NextButton from './Button';
+import NextButton from './NextButton';
 import PreviousButton from './PreviousButton'
 
-const Page2 = ({ counter, setCounter, foxtype, setFoxtype }) => {
+const FoxTypeQ = ({ counter, setCounter, foxtype, setFoxtype }) => {
   return (
-    <div className="leftboxChild">
+    <div className="textboxChild">
       <select
         className="selectFox"
         value={foxtype}
@@ -22,4 +22,4 @@ const Page2 = ({ counter, setCounter, foxtype, setFoxtype }) => {
   )
 }
 
-export default Page2;
+export default FoxTypeQ;

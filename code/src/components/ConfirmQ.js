@@ -2,7 +2,7 @@ import React from 'react';
 import SubmitButton from './SubmitButton';
 import PreviousButton from './PreviousButton';
 
-const Page7 = ({ name, foxtype, date, payment, yesNews, satisfaction, counter, setCounter }) => {
+const ConfirmQ = ({ name, foxtype, date, payment, yesNews, satisfaction, counter, setCounter }) => {
   return (
     <div className="summarizebox">
       <p>Your name is:</p>
@@ -26,4 +26,4 @@ const Page7 = ({ name, foxtype, date, payment, yesNews, satisfaction, counter, s
   )
 }
 
-export default Page7;
+export default ConfirmQ;

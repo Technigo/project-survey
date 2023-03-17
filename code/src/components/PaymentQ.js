@@ -1,21 +1,21 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
-import NextButton from './Button';
+import NextButton from './NextButton';
 import PreviousButton from './PreviousButton'
 
-const Page4 = ({ counter, setCounter, payment, setPayment }) => {
+const PaymentQ = ({ counter, setCounter, payment, setPayment }) => {
   const checkboxType = [
     'a replacement fox',
     'donate to the foxes-families® help center',
     'monetary reimbursement'
   ]
   return (
-    <div className="leftboxChild">
+    <div className="textboxChild">
       <p>In what manner would you like to be reimbursed?</p>
       <form>
               Choice of reimbursement:
         {checkboxType.map((choice) => (
-          <label key={choice}>
+          <label aria-label="radio button choice of payment" key={choice}>
             <input
               type="radio"
               value={choice}
@@ -33,4 +33,4 @@ const Page4 = ({ counter, setCounter, payment, setPayment }) => {
   )
 }
 
-export default Page4;
+export default PaymentQ;

@@ -21,7 +21,7 @@ code {
   width: 100vw;
 }
 
-.leftbox {
+.textbox {
   width: 100%;
   height: 60vh;
   display: flex;
@@ -31,16 +31,15 @@ code {
   align-items: center;
   background-image: url(./components/assets/wood-2045380_1920.jpg);
   color: white;
-  backdrop-filter: grayscale(0.3);
 }
 
-.leftboxChild {
+.textboxChild {
   display: flex;
   flex-direction: column;
   align-content: center;
   flex-wrap: wrap;
   align-items: center;
-  margin-top: 5%;
+  margin-top: 10%;
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -63,25 +62,39 @@ code {
   height: auto;
 }
 
-.rightbox {
+.LogoBox {
   width: 100%;
   height: 40vh;
   display: flex;
   justify-content: center;
-
+  align-items: center;
 }
 
-.logo-box {
+.logo-subbox {
   position: absolute;
   top: 15%;
   color: white;
-  backdrop-filter: blur(2px);
-  height: fit-content;
+  backdrop-filter: brightness(0.3);
+  height: 12%;
+  border-radius: 100px;
+  display: flex;
+  width: 350px;
+  justify-content: center;
+}
+
+.companyname {
+  font-size: 45px;
 }
 
 .background {
   object-fit: cover;
   width: 100vw;
+  height: 40vh;
+}
+
+.slidersatisfaction {
+  display: flex;
+  flex-direction: column;
 }
 
 .summarizebox {
@@ -97,6 +110,7 @@ justify-content: center;
 .summarizebox p {
   line-height: 12px;
   margin: 4px;
+  font-size: 22px;
 }
 
 .summarizebox h4 {
@@ -111,11 +125,27 @@ justify-content: center;
   max-width: 450px;
 }
 
+.countprogress {
+  position: absolute;
+  bottom: 4%;
+  right: 4%;
+}
+
 
 @media (min-width: 600px) {
 
-  .leftboxChild {
+  .textboxChild {
     margin-top: 12%;
+    font-size: 24px;
+  }
+
+  .logo-subbox {
+    width: 480px;
+    height: 190px;
+  }
+
+  .companyname {
+    font-size: 65px;
   }
 
 }
@@ -126,28 +156,36 @@ justify-content: center;
     flex-direction: row-reverse;
   }
 
-  .rightbox {
-    width: 50vw;
+  .background {
     height: 100vh;
   }
 
-  .leftbox, .summarizebox {
+  .textbox, .summarizebox {
     height: 100vh;
   }
 
-  .logo-box {
-    margin-top: 10%;
+  .textbox {
+    display: flex;
+    justify-content: center;
   }
 
-  .leftbox {
+  .LogoBox {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 50vw;
+  height: 100vh;
+    contain: content;
   }
 
-  .leftboxChild {
-    margin: 0;
+  .logo-subbox {
+    top: 25%;
+  }
+
+  .textboxChild {
+    position: relative;
+    margin-bottom: 15%;
+    width: 80%;
   }
 
   .button-container {
@@ -158,8 +196,6 @@ justify-content: center;
   .summarizebox p {
     margin: 20px;
     font-size: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
   }
 
   .summarizebox h1 {
@@ -167,7 +203,7 @@ justify-content: center;
     font-size: 38px;
   }
 
-  .checkboxsatisfaction {
+  .slidersatisfaction {
     display: flex;
     align-items: center;
     flex-wrap: wrap;

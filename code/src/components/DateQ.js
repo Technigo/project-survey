@@ -1,10 +1,10 @@
 import React from 'react';
-import NextButton from './Button';
+import NextButton from './NextButton';
 import PreviousButton from './PreviousButton'
 
-const Page3 = ({ counter, setCounter, date, setDate }) => {
+const DateQ = ({ counter, setCounter, date, setDate }) => {
   return (
-    <div className="leftboxChild">
+    <div className="textboxChild">
       <p>When did you make your purchase?</p>
       <input
         type="date"
@@ -18,4 +18,4 @@ const Page3 = ({ counter, setCounter, date, setDate }) => {
   )
 }
 
-export default Page3;
+export default DateQ;

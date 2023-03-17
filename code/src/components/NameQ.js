@@ -1,10 +1,10 @@
 import React from 'react';
-import NextButton from './Button';
+import NextButton from './NextButton';
 import PreviousButton from './PreviousButton'
 
-const Page1 = ({ counter, setCounter, name, setName }) => {
+const NameQ = ({ counter, setCounter, name, setName }) => {
   return (
-    <div className="leftboxChild">
+    <div className="textboxChild">
       <p>What is your name?</p>
       <input
         type="text"
@@ -20,4 +20,4 @@ const Page1 = ({ counter, setCounter, name, setName }) => {
   )
 }
 
-export default Page1;
+export default NameQ;

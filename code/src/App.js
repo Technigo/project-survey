@@ -1,15 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState } from 'react';
 import SubmitScreen from 'components/SubmitScreen';
-import RightBox from 'components/RightBox';
-import Page0 from 'components/Page0'
-import Page1 from 'components/Page1';
-import Page2 from 'components/Page2';
-import Page3 from 'components/Page3';
-import Page4 from 'components/Page4';
-import Page5 from 'components/Page5';
-import Page6 from 'components/Page6';
-import Page7 from 'components/Page7';
+import LogoBox from 'components/LogoBox';
+import Welcome from 'components/Welcome'
+import NameQ from 'components/NameQ';
+import FoxTypeQ from 'components/FoxTypeQ';
+import DateQ from 'components/DateQ';
+import PaymentQ from 'components/PaymentQ';
+import YesNewsQ from 'components/YesNewsQ';
+import SatisfactionQ from 'components/SatisfactionQ';
+import ConfirmQ from 'components/ConfirmQ';
 import CountProgress from 'components/CountProgress';
 
 export const App = () => {
@@ -23,54 +23,53 @@ export const App = () => {
 
   return (
     <div className="parent-container">
-      <div className="leftbox">
+      <div className="textbox">
         {counter === 0 && (
-          <Page0
+          <Welcome
             counter={counter}
             setCounter={setCounter} />
         )}
         {counter === 1 && (
-          <Page1
+          <NameQ
             counter={counter}
             setCounter={setCounter}
             name={name}
             setName={setName} />
         )}
         {counter === 2 && (
-          <Page2
+          <FoxTypeQ
             counter={counter}
             setCounter={setCounter}
             foxtype={foxtype}
             setFoxtype={setFoxtype} />
         )}
         {counter === 3 && (
-          <Page3
+          <DateQ
             counter={counter}
             setCounter={setCounter}
             date={date}
             setDate={setDate} />
         )}
         {counter === 4 && (
-          <Page4
+          <PaymentQ
             counter={counter}
             setCounter={setCounter}
             payment={payment}
             setPayment={setPayment} />
         )}
         {counter === 5 && (
-          <Page5
+          <YesNewsQ
             counter={counter}
             setCounter={setCounter}
             yesNews={yesNews}
             setYesNews={setYesNews} />
         )} {counter === 6 && (
-          <Page6
+          <SatisfactionQ
             counter={counter}
             setCounter={setCounter}
-            satisfaction={satisfaction}
             setSatisfaction={setSatisfaction} />
         )} {counter === 7 && (
-          <Page7
+          <ConfirmQ
             counter={counter}
             setCounter={setCounter}
             name={name}
@@ -89,9 +88,9 @@ export const App = () => {
             yesNews={yesNews}
             satisfaction={satisfaction} />
         )}
-       {/*  <CountProgress counter={counter} /> */}
+        {counter > 0 && counter < 8 ? <CountProgress counter={counter} /> : ''}
       </div>
-      <RightBox />
+      <LogoBox />
     </div>
   );
 }
