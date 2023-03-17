@@ -19,7 +19,7 @@ export const Name = ({ name, setName, handleStepIncrease }) => {
       <div className="logo-container-name">
         <img src={logo} alt="Story Time logo" />
       </div>
-      <h1>Create your very own silly story by answering questions.</h1>
+      <h1>Create your very own silly story by answering silly questions.</h1>
       <div className="image-container-name">
         <img src={Warrior} alt="warrior" />
       </div>
@@ -32,7 +32,7 @@ export const Name = ({ name, setName, handleStepIncrease }) => {
           className="step-btn"
           type="button"
           onClick={handleStepIncrease}
-          disabled={name === ''}> Next
+          disabled={name === ''}> Create story!
         </button>
       </div>
     </div>

@@ -9,6 +9,7 @@
 .image-container-horror {
     display: flex;
     flex-direction: row;
+    justify-content: center;
 }
 
 .image-container-horror img{

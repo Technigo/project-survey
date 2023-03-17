@@ -18,7 +18,7 @@ code {
   align-items: center;
   flex-direction: column;
   padding: 50px; 
-  max-width: 300px;
+  max-width: 420px;
   margin: auto;
   gap: 20px;
   background-color: #9FC088;
@@ -33,7 +33,7 @@ code {
 .progress-meter {
   display: flex;
   flex-direction: column;
- align-items: center;
+  align-items: center;
   gap: 2px;
 }
 
@@ -61,9 +61,61 @@ form {
   border-radius: 11%;
 }
 
+input {
+  box-sizing: border-box;
+  border: 2px solid #614124;
+  border-radius: 4px 0 0 4px;
+  background: #E8C07D;
+  color: #614124;;
+  font-size: 16px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+}
+
+select {
+  border: 2px solid #614124;
+  border-radius: 4px 0 0 4px;
+  background: #E8C07D;
+  color: #614124;
+  font-size: 16px;
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+}
 
 
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 2px solid #614124;
+}
 
+progress[value]::-webkit-progress-value {
+    background-color:#CC704B;
+    border-radius: 2px; 
+    /*border: 2px solid #614124;*/
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
 
+progress[value]::-webkit-progress-bar {
+  background-color: #E8C07D;
+}
+
+/*TABLET*/
+@media (min-width: 668px){
+
+}
+
+/*DESKTOP*/
+@media (min-width: 1024px){
+  .questions-container {
+    max-width: 430px;
+    
+  }
+
+  .question-text {
+    font-size: 22px;
+    
+  }
+}
 
 

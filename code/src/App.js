@@ -10,7 +10,7 @@ import { Food } from './components/Food/Food';
 import { StoryTime } from './components/StoryTime/StoryTime';
 
 export const App = () => {
-  const stepsTotalCount = 5;
+  const stepsTotalCount = 6;
   // useStates here
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');

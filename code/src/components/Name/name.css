@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 10px;
+    gap: 30px;
 }
 
 .name-container img {
@@ -17,7 +17,7 @@
 
 
 .image-container-name img{
-    width: 50px;
+    width: 90px;
 }
 
 .container-step-btn{

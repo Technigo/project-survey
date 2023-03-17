@@ -1,10 +1,7 @@
 import React from 'react';
 import './food.css';
-import cupcake from '../../images/cupcake.png'
 import hamburger from '../../images/hamburger.png'
-import pommes from '../../images/pommes.png'
 import donut from '../../images/donut.png'
-import cake from '../../images/cake.png'
 import pizza from '../../images/pizza.png'
 
 export const Food = ({ food, setFood, handleStepIncrease }) => {
@@ -18,16 +15,12 @@ export const Food = ({ food, setFood, handleStepIncrease }) => {
   }
   return (
     <div className="food-container">
+      <p className="question-text">What is your favourite food?</p>
       <div className="image-container-food">
-        <img src={donut} alt="donut" />
         <img src={pizza} alt="pizza" />
-        <img src={cupcake} alt="cupcake" />
-        <img src={pommes} alt="pommes frites" />
-        <img src={cake} alt="cake" />
+        <img src={donut} alt="donut" />
         <img src={hamburger} alt="hamburger" />
       </div>
-
-      <p className="question-text">What is your favourite food?</p>
       <input type="text" value={food} onChange={handleFoodChange} onKeyDown={handleKeyDown} className="input-field" />
       <div className="container-step-btn">
         <button
