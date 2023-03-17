@@ -1,13 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A website feedback form built in React. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Started out by building a simple one-page-form and made that one work. Then splitted it out into components and got a chance to practice the mounting part. After that I added styling and animations to make it look nice. 
+
+I planned the project by watching different forms and code on github. 
+
+If I had more time I would make a longer form with if/else statements to render more answers.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+

@@ -2,7 +2,7 @@ h1, h2 {
   color: white;
   font-size: 45px;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 5px;
   padding: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
@@ -70,7 +70,6 @@ body {
   margin: 0;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
 }
 
 button {
@@ -131,9 +130,8 @@ button:hover {
   gap: 5px;
   padding: 5px;
   font-size: 15px;
-  color:rgba(66, 65, 65, 0.444);
+  color:rgba(66, 65, 65, 0.441);
   text-align: center;
-  
 }
 
 .aboutme p {
@@ -145,14 +143,12 @@ button:hover {
   border-radius: 15px;
   color: #ffffff;
   opacity: .7;
-  background-color: #ffffffa3;
+  background-color: #ffffff;
   padding: 10px;
+  margin-bottom: 30px;
 }
 
 /* Transition effect */
-.body {
-  overflow: hidden; /* Add this line to prevent component overflow */
-}
 
 @keyframes fadeIn {
   0% { opacity: 0; }
