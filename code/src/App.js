@@ -7,6 +7,7 @@ import Name from './components/Name';
 import Love from './components/Love';
 import Favorite from './components/Favorite';
 import Result from './components/Result';
+import Footer from './components/Footer';
 import './app.css'
 import slowMotionAudio from './audio/slowmotion.mp3';
 
@@ -44,6 +45,7 @@ export const App = () => {
       {question === 0 && (
         <div>
           <button type="button" onClick={handleQuestionIncrease}>Start survey</button>
+          <Footer />
         </div>
       )}
       {/* If the current question is 1, render the Name component */}
