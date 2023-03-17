@@ -22,8 +22,10 @@ const Summary = ({ name, type, genre, score, apocalypse, data }) => {
   const filteredScoreArray = filteredGenreArray.filter((item) => item.score > score);
   console.log('filteredScoreArray:', filteredScoreArray);
 
-  // Filtering step 4, on apocalypse:
-  const filteredApocalypseArray = filteredScoreArray.filter((item) => item.apocalypse === apocalypse);
+  // Filtering step 4, on apocalypse. If user has not checked the box, we keep all:
+  const filteredApocalypseArray = apocalypse
+    ? filteredScoreArray.filter((item) => item.apocalypse === true)
+    : filteredScoreArray;
   console.log('filteredApocalypseArray:', filteredApocalypseArray);
 
   /* Gives a random number to put inside the return, change to the filtered array later */

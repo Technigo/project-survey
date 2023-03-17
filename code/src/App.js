@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import data from './data.json';
 import Starter from './components/Starter';
 import Name from './components/Name';
@@ -32,6 +32,22 @@ export const App = () => {
     setScore(8);
     setApocalypse(false);
   };
+
+  useEffect(() => {
+    const handleEnterKey = (event) => {
+      if (event.key === 'Enter') {
+        if (step === 7) {
+          handleStepReset();
+        } else {
+          handleStepIncrease();
+        }
+      }
+    };
+    document.addEventListener('keydown', handleEnterKey);
+    return () => {
+      document.removeEventListener('keydown', handleEnterKey);
+    };
+  }, [handleStepIncrease, step]);
 
   return (
     <>
