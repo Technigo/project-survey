@@ -1,69 +1,70 @@
 import React from 'react';
+import { ResultOptions } from './ResultOptions';
 
-const resultOptions = ({ region, flavor, season }) => {
+const resultLogic = ({ region, flavor, season }) => {
   if (region === 'cool as a cucumber' && flavor === 'salty' && season === 'spring') {
     return (
-      <p>Roasted Asparagus</p>
+      <ResultOptions dish="Asparagus" pic="./assets/asparagus.jpg" recipe="https://houseofnasheats.com/oven-roasted-asparagus-garlic-parmesan-lemon/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'salty' && season === 'summer') {
     return (
-      <p>Corn on the Cob</p>
+      <ResultOptions dish="Corn on the Cob" pic="./assets/corn.jpg" recipe="https://houseofnasheats.com/the-best-boiled-corn-on-the-cob/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'salty' && season === 'autumn') {
     return (
-      <p>Green Bean Cassarole</p>
+      <ResultOptions dish="Green Bean Cassarole" pic="./assets/greenbean.jpg" recipe="https://houseofnasheats.com/fresh-green-bean-casserole/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'salty' && season === 'winter') {
     return (
-      <p>Cheesy Potato Cassarole</p>
+      <ResultOptions dish="Cheesy Potato Cassarole" pic="./assets/cheesy.jpg" recipe="https://houseofnasheats.com/creamy-potluck-potatoes/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'sweet' && season === 'spring') {
     return (
-      <p>Rhubarb Crisp</p>
+      <ResultOptions dish="Rhubarb Crisp" pic="./assets/rhubarb.jpg" recipe="https://houseofnasheats.com/rhubarb-crisp-recipe/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'sweet' && season === 'summer') {
     return (
-      <p>Cherry Pie</p>
+      <ResultOptions dish="Cherry Pie" pic="./assets/cherry.jpg" recipe="https://houseofnasheats.com/best-homemade-cherry-pie-recipe/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'sweet' && season === 'autumn') {
     return (
-      <p>Pumpkin Pie</p>
+      <ResultOptions dish="Pumpkin Pie" pic="./assets/pumpkin.jpg" recipe="https://houseofnasheats.com/pumpkin-pie-recipe/" />
     )
   } else if (region === 'cool as a cucumber' && flavor === 'sweet' && season === 'winter') {
     return (
-      <p>Apple Crisp</p>
+      <ResultOptions dish="Apple Crisp" pic="./assets/apple.jpg" recipe="https://houseofnasheats.com/apple-crisp/" />
     )
   } else if (region === 'hot-headed' && flavor === 'salty' && season === 'spring') {
     return (
-      <p>Fried Green Tomatoes</p>
+      <ResultOptions dish="Fried Green Tomatoes" pic="./assets/tomatoes.jpg" recipe="https://houseofnasheats.com/fried-green-tomatoes/" />
     )
   } else if (region === 'hot-headed' && flavor === 'salty' && season === 'summer') {
     return (
-      <p>Fried Pickles</p>
+      <ResultOptions dish="Fried Pickles" pic="./assets/pickles.jpg" recipe="https://houseofnasheats.com/fried-pickles/" />
     )
   } else if (region === 'hot-headed' && flavor === 'salty' && season === 'autumn') {
     return (
-      <p>Fried Chicken</p>
+      <ResultOptions dish="Fried Chicken" pic="./assets/chicken.jpg" recipe="https://houseofnasheats.com/southern-fried-chicken/" />
     )
   } else if (region === 'hot-headed' && flavor === 'salty' && season === 'winter') {
     return (
-      <p>Biscuits & Gravy</p>
+      <ResultOptions dish="Biscuits & Gravy" pic="./assets/biscuits.jpg" recipe="https://houseofnasheats.com/sausage-gravy-and-biscuits/" />
     )
   } else if (region === 'hot-headed' && flavor === 'sweet' && season === 'spring') {
     return (
-      <p>Banana Pudding</p>
+      <ResultOptions dish="Banana Pudding" pic="./assets/banana.jpg" recipe="https://houseofnasheats.com/homemade-banana-pudding/" />
     )
   } else if (region === 'hot-headed' && flavor === 'sweet' && season === 'summer') {
     return (
-      <p>Peach Ice Cream</p>
+      <ResultOptions dish="Peach Ice Cream" pic="./assets/peach.jpg" recipe="https://houseofnasheats.com/old-fashioned-fresh-peach-ice-cream/" />
     )
   } else if (region === 'hot-headed' && flavor === 'sweet' && season === 'autumn') {
     return (
-      <p>Sweet Potato Cassarole</p>
+      <ResultOptions dish="Sweet Potato Cassarole" pic="./assets/sweetpo.jpg" recipe="https://houseofnasheats.com/sweet-potato-casserole-with-marshmallows-and-pecans/" />
     )
   } else if (region === 'hot-headed' && flavor === 'sweet' && season === 'winter') {
     return (
-      <p>Pecan Pie</p>
+      <ResultOptions dish="Pecan Pie" pic="./assets/pecan.jpg" recipe="https://houseofnasheats.com/classic-southern-pecan-pie/" />
     )
   } else {
     return (
@@ -74,6 +75,6 @@ const resultOptions = ({ region, flavor, season }) => {
 
 export const Results = ({ region, flavor, season }) => {
   return (
-    resultOptions({ region, flavor, season })
+    resultLogic({ region, flavor, season })
   )
 }

@@ -8,7 +8,7 @@ const regionList = [
 export const Region = ({ region, setRegion }) => {
   return (
     <>
-      My closest friends say that I am:
+      <p>My closest friends say that I am:</p>
       {regionList.map((qualities) => (
         <label htmlFor="region-question" key={qualities}>
           <input
@@ -16,7 +16,8 @@ export const Region = ({ region, setRegion }) => {
             type="radio"
             value={qualities}
             onChange={(event) => setRegion(event.target.value)}
-            checked={region === qualities} />
+            checked={region === qualities}
+            aria-label={qualities} />
           {qualities}
         </label>
       ))}

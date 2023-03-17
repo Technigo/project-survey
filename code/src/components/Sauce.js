@@ -14,7 +14,8 @@ export const Sauce = ({ sauce, setSauce }) => {
           className="slider"
           defaultValue={0}
           checked={sauce}
-          onChange={(event) => setSauce(event.target.value)} />
+          onChange={(event) => setSauce(event.target.value)}
+          aria-label={sauce} />
       </label>
       <datalist id="marks">
         <option value="0" label="Select a Sauce" />

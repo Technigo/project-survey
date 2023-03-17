@@ -6,7 +6,7 @@ export const Mayo = ({ mayo, setMayo }) => {
   }
   return (
     <>
-      Anything is a salad if you put mayo on it!
+      <p>Anything is a salad if you put mayo on it!</p>
       <select value={mayo} onChange={handleMayoSelection}>
         <option disabled value="">Agree or Disagree?</option>
         <option value="definitely">definitely!!</option>

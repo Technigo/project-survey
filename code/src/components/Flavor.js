@@ -8,7 +8,7 @@ const flavorList = [
 export const Flavor = ({ flavor, setFlavor }) => {
   return (
     <>
-        My finest acquaintances call me:
+      <p>My finest acquaintances call me:</p>
       {flavorList.map((dispositions) => (
         <label htmlFor="flavor-question" key={dispositions}>
           <input
@@ -16,7 +16,8 @@ export const Flavor = ({ flavor, setFlavor }) => {
             type="radio"
             value={dispositions}
             onChange={(event) => setFlavor(event.target.value)}
-            checked={flavor === dispositions} />
+            checked={flavor === dispositions}
+            aria-label={dispositions} />
           {dispositions}
         </label>
       ))}

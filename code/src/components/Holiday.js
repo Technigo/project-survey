@@ -16,7 +16,8 @@ export const Holiday = ({ holiday, setHoliday }) => {
             type="radio"
             value={locations}
             onChange={(event) => setHoliday(event.target.value)}
-            checked={holiday === locations} />
+            checked={holiday === locations}
+            aria-label={locations} />
           {locations}
         </label>
       ))}
@@ -35,8 +36,8 @@ export const Water = ({ water, setWater, setLand }) => {
     setLand('');
   }
   return (
-    <>
-    Preferably,
+    <div className="sub-question-wrapper">
+      <p>And, I would prefer to be at:</p>
       {waterList.map((waterSpots) => (
         <label htmlFor="water-question" key={waterSpots}>
           <input
@@ -44,11 +45,12 @@ export const Water = ({ water, setWater, setLand }) => {
             type="radio"
             value={waterSpots}
             onChange={handleWaterChoice}
-            checked={water === waterSpots} />
+            checked={water === waterSpots}
+            aria-label={waterSpots} />
           {waterSpots}
         </label>
       ))}
-    </>
+    </div>
   )
 }
 
@@ -63,8 +65,8 @@ export const Land = ({ land, setLand, setWater }) => {
     setWater('');
   }
   return (
-    <>
-    Preferably,
+    <div className="sub-question-wrapper">
+      <p>And, I would prefer to be at:</p>
       {landList.map((landSpots) => (
         <label htmlFor="land-question" key={landSpots}>
           <input
@@ -72,10 +74,11 @@ export const Land = ({ land, setLand, setWater }) => {
             type="radio"
             value={landSpots}
             onChange={handleLandChoice}
-            checked={land === landSpots} />
+            checked={land === landSpots}
+            aria-label={landSpots} />
           {landSpots}
         </label>
       ))}
-    </>
+    </div>
   )
 }

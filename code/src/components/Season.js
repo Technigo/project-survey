@@ -10,7 +10,7 @@ const seasonList = [
 export const Season = ({ season, setSeason }) => {
   return (
     <>
-        I am my best self in:
+      <p>I am my best self in:</p>
       {seasonList.map((seasons) => (
         <label htmlFor="season-question" key={seasons}>
           <input
@@ -18,7 +18,8 @@ export const Season = ({ season, setSeason }) => {
             type="radio"
             value={seasons}
             onChange={(event) => setSeason(event.target.value)}
-            checked={season === seasons} />
+            checked={season === seasons}
+            aria-label={seasons} />
           {seasons}
         </label>
       ))}

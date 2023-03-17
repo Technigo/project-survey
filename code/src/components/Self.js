@@ -6,7 +6,7 @@ export const Self = ({ self, setSelf }) => {
   }
   return (
     <>
-      I consider myself to be
+      <p>I consider myself to be</p>
       <select value={self} onChange={handleSelfSelection}>
         <option disabled value="">Please select one:</option>
         <option value="no nonsense">no-nonsense</option>

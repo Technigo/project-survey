@@ -6,7 +6,7 @@ export const HotSauce = ({ hotsauce, setHotSauce }) => {
   }
   return (
     <>
-      Food is just a vehicle for hot sauce!
+      <p>Food is just a vehicle for hot sauce!</p>
       <select value={hotsauce} onChange={handleHotSauceSelection}>
         <option disabled value="">Agree or Disagree?</option>
         <option value="definitely">definitely!!</option>
