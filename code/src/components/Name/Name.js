@@ -1,6 +1,7 @@
 import React from 'react';
 import './name.css';
 import Warrior from '../../images/Warrior_Idle_1.png'
+import logo from '../../images/logo.png'
 
 export const Name = ({ name, setName, handleStepIncrease }) => {
   const handleNameChange = (event) => {
@@ -15,12 +16,14 @@ export const Name = ({ name, setName, handleStepIncrease }) => {
 
   return (
     <div className="name-container">
-      <h1>Story Time</h1>
-      <h2>Create your very own silly story.</h2>
+      <div className="logo-container-name">
+        <img src={logo} alt="Story Time logo" />
+      </div>
+      <h1>Create your very own silly story by answering questions.</h1>
       <div className="image-container-name">
         <img src={Warrior} alt="warrior" />
       </div>
-      <p>What is your name, traveller?</p>
+      <p className="question-text">What is your name, traveller?</p>
       <form>
         <input type="text" value={name} onChange={handleNameChange} onKeyDown={handleKeyDown} />
       </form>

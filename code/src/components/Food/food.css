@@ -5,3 +5,22 @@
     text-align: center;
     gap: 20px;
 }
+
+.image-container-food {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.image-container-food img {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+
+.input-field {
+    width: 200px;
+    align-self: center;
+}

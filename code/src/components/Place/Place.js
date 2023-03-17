@@ -11,7 +11,7 @@ export const Place = ({ place, setPlace, handleStepIncrease }) => {
 
   return (
     <div className="place-container">
-      <p>Which place do you prefer?</p>
+      <p className="question-text">Which place do you prefer?</p>
       <div className="image-container-place">
         <img src={forest} alt="forest" />
         <img src={mountain1} alt="mountain" />
@@ -24,7 +24,7 @@ export const Place = ({ place, setPlace, handleStepIncrease }) => {
           <option value="" disabled>Select location</option>
           <option value="forest">A green forest</option>
           <option value="mountain">A stunning mountain valley</option>
-          <option value="stars">A mystical magical forest</option>
+          <option value="stars">A magical kingdom</option>
         </select>
       </form>
       <div className="container-step-btn">

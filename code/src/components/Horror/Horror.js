@@ -10,7 +10,7 @@ export const Horror = ({ horror, setHorror, handleStepIncrease }) => {
   }
   return (
     <div className="horror-container">
-      <p>What is the worst thing you can image?</p>
+      <p className="question-text">What is the worst thing you can image?</p>
 
       <div className="image-container-horror">
         <img src={snake} alt="snake" />

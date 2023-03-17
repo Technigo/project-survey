@@ -11,10 +11,11 @@
     flex-direction: row;
     justify-content: space-between;
     gap: 10px;
-
 }
+
 .image-container-place img {
     border-radius: 50%;
     height: 90px;
     width: 90px;
+    border: 2px solid #CC704B;
 }

@@ -3,7 +3,8 @@ body {
   font-family: 'Chakra Petch', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(195, 84, 84);
+  background-color: #4f5f44;
+  box-sizing: border-box;
 }
 
 code {
@@ -20,6 +21,8 @@ code {
   max-width: 300px;
   margin: auto;
   gap: 20px;
+  background-color: #9FC088;
+  border: 5px double #614124;
 }
 
 .step-btn {
@@ -33,5 +36,34 @@ code {
  align-items: center;
   gap: 2px;
 }
+
+.question-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #614124;
+}
+
+form {
+  font-size: 14px;
+  font-weight: bold;
+  color: #614124;
+}
+
+.step-btn{
+  font-family: 'Chakra Petch', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: #614124;
+  padding: 4px 8px;
+  text-decoration: none;
+  background-color: #E8C07D;
+  border: 2px solid #614124;
+  border-radius: 11%;
+}
+
+
+
+
+
 
 
