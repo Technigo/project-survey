@@ -13,10 +13,13 @@ body {
   height: 100%; 
   justify-content: center; 
   align-items: center;
+  border: 2px solid blue; 
+  overflow-x: hidden;
 }
 
 html {
   height: 100%; 
+  border: 2px solid red; 
 }
 
 code {
@@ -37,6 +40,7 @@ code {
   0 0 60px 30px #fff,  /* inner white */
   0 0 100px 60px #f0f, /* middle magenta */
   0 0 140px 90px #0ff; /* outer cyan */
+  border: 2px solid orange; 
   }
 	
 .instructionText {
@@ -138,8 +142,8 @@ code {
 .story-container {
   display: flex; 
   flex-direction: column; 
-  height:auto; ;   
-  width: 800px;
+  height:800px; ;   
+  width: 500px;
   padding: 20px;
   background: rgb(248, 240, 240);
   border-radius: 5%;
@@ -159,6 +163,7 @@ code {
   font-family:Arial, Helvetica, sans-serif; 
   font-weight: 400; 
   margin: 20px; 
+  line-height:30px;
 }
 
 .restart-button {
@@ -168,20 +173,62 @@ code {
   border-radius: 5%; 
   background-color: pink; 
   border: none; 
-  padding: 20px; 
+  padding: 20px 40px; 
   transform: scale(1);
 	animation: pulse 4s infinite;
   margin: 0 300px; 
   margin-top: 10px; 
+  align-self: center;
 }
 
 .button:hover button:focus {
 filter: brightness(80%); 
 }
 
-@media (max-width:667px) {
+@media (min-width:420px) and (max-width:667px) {
   .survey-container {
-    width: auto; 
-    overflow:hidden;   
+    width: 35em; 
+    height: 35em;
 }
+
+.instructionText{
+  font-size:x-large; 
+}
+}
+
+@media (max-width:420px) {
+.survey-container{
+  width: 30em; 
+  height: 30em;  
+}  
+
+.instructionText {
+  font-size: x-large;
+}
+
+.story-container {
+  display: flex;
+  width: 70%; 
+  height:550px; 
+  margin: 20px; 
+  overflow-x: hidden; 
+}
+
+.story-text {
+display: flex;
+flex-direction: column; 
+flex-wrap: wrap; 
+line-height: 25px;
+}
+
+.restart-button {
+  align-self: center;
+  padding: 20px 40px; 
+}
+
+.result-title {
+  font-size: 24px;
+  width: 70%; 
+}
+
 }
