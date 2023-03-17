@@ -144,13 +144,10 @@ export const App = () => {
             flavor={flavor}
             season={season} />
           <p>Does this look right?</p>
-          <p>If not, you can start over!</p>
+          <p>If so, click to see your results!</p>
+          <Button counter={counter} setCounter={setCounter} />
+          <p>If not, you can start over.</p>
           <StartOver setCounter={setCounter} />
-          <p>Or, click Next to see which tasty dish you are!</p>
-          <div className="button-wrapper">
-            <Button counter={counter} setCounter={setCounter} />
-            {/* <Back counter={counter} setCounter={setCounter} /> */}
-          </div>
         </div>
       )}
       {counter === 9 && (

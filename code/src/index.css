@@ -77,8 +77,8 @@ button:hover {
   background-color: white;
   margin: 50px auto;
   width: 90%;
-  min-height: 400px;
   max-width: 1200px;
+  height: 575px;
   border-radius: 30px;
   padding: 20px;
   display: flex;
