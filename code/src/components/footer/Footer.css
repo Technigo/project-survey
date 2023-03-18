@@ -1,0 +1,52 @@
+/* Footer */
+
+footer {
+    margin-top: 20px;
+    /* height: 120px; */
+    padding: 5px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer p {
+    text-align: center;
+    font-family: 'Nixie One', cursive;
+    color: black;
+    text-shadow: 1px 1px 2px white;
+  }
+  
+  .contact-me {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    margin-top: 10px;
+  }
+  
+  .contact-logo{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    opacity: .75;
+  }
+  
+  .contact-logo:hover{
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  
+  .about-me {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 5px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    font-family: 'Nixie One', cursive;
+    color: black;
+    text-shadow: 1px 1px 2px #3B5898;
+    text-align: center;
+  }
