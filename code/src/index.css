@@ -14,6 +14,8 @@
 
   --linecolor: rgb(206, 40, 40);
 
+  --rangehandlercolor: rgb(206, 40, 40);
+
   --buttoncolor: rgb(110, 94, 124);
   --button-hover-color: rgb(156, 130, 177);
 }
@@ -349,9 +351,9 @@ input[type=range]:hover {
 input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 30px;
-  height: 30px;
-  background: rgb(255, 29, 67);
+  width: 25px;
+  height: 25px;
+  background: var(--rangehandlercolor);
   border-radius: 50%;
   cursor: pointer;
 }
