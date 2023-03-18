@@ -63,7 +63,7 @@ export const Survey = () => {
             <select
               value={answerThree}
               onChange={(e) => setAnswerThree(e.target.value)}>
-              <option value="noodles">noodles</option>
+              <option value="noodles">plain spaghetti</option>
               <option value="ravioli">ravioli</option>
               <option value="tortellini">tortellini</option>
             </select>

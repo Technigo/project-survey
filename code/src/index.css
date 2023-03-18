@@ -93,6 +93,11 @@ code {
   padding: 5px;
 }
 
+.survey-question-container label {
+  font-size: 15px;
+  padding: 5px;
+}
+
 .survey-next-button {
   border-radius: 5px;
   background-color: white;
