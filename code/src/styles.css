@@ -1,61 +1,218 @@
-
-.app-container {
-height: 100vh;
-width:100vw;
-border:1px solid black;
-background-image: url("./assets/bouba3-1.webp");
-background-size:cover;
+body {
+  background-image: url("./assets/bouba-kiki-effect.avif");
+  background-size: cover;
 }
 
+.app-container {
+  border:1px solid black;
+height: 100vh;
+width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: center;
+overflow: hidden;
+}
+
+.app-container span {
+  color: rgb(62, 56, 56);
+  background-color: white;
+  font-family: Manga;
+  font-size: 40px;
+  margin-top: -17px;
+  margin-left: -750px;
+  padding-left: 4px;
+  padding-top: 4px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+  transform: rotate(-34deg);
+}
 .next-btn {
-  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  padding: 0%;
+  margin-top: 120px;
+  margin-right: -25px;
+  transform: rotate(-40deg);
+  color: rgb(62, 56, 56);
+  background-color: rgb(222, 96, 155);
+  font-family: Manga;
+  font-size: 25px;
+
 }
 
 .question {
-  font-family: Helvetica, sans-serif;
-}
-/* Style for intro component starts here */
-.intro-container {
-  background-color: orange;
+  font-family: Manga;
+  font-style: lowercase;
+  font-size: 30px;
 }
 
+/* Style for intro component starts here */
+.intro-container {
+  display: flex;
+  width: 1000px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0%;
+  overflow: hidden;
+  padding: 0%;
+  font-family: Manga;
+  }
+
 .intro-container h1 {
-  color: red;
+  color: rgb(62, 56, 56);
+  font-size: 55px;
+  margin: 2%;
 }
 
 .intro-container p {
-  
+  color: rgb(62, 56, 56);
+  font-size: 23px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  margin-left: 40px;
 }
 
 /* Style for name component starts here */
 
 .name-container {
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 100px;
+  padding: 20%;
+  padding-bottom: 50px;
+  margin-right: 150px;
+  font-family: Manga;
+  background-color: white;
+  opacity: 50%;
+  font-style: lowercase;
+  position: relative;
+  border: 2px solid red;
+}
+
+.bubble:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  border-left: 10px solid #00bfb6;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #00bfb6;
+  border-bottom: 10px solid transparent;
+  right: -19px;
+  top: 6px;
+  border: 2px solid blue;
 }
 
 .name-container p {
-  color: red;
+  font-family: Manga;
+  font-size: 30px;
+  margin-top: 5px;
+  color: black;
 }
 
 .name-input {
-  background-color: pink;
+  background-color: yellow;
+  font-size: 14px;
+  margin-bottom: 5px;  
+  border: 2px solid blue;
 }
 /* Style for yesno component starts here */
 
 .yesno-container {
-  background-color: yellow;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 100px;
+  padding: 20%;
+  margin-right: 150px;
+  font-family: Manga;
+  background-color: white;
+  opacity: 50%;
+  font-style: lowercase;
+  position: relative;
+  border: 2px solid red;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0%;
+  overflow: hidden;
+  padding: 0%;
+  font-family: Manga;
+  border:1px solid black; */
 }
 
 .yesno-container input { /* Label? */
-
+  font-family: Manga;
+  background-color: white;
+  font: inherit;
+  color: black;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
 }
 
-.shape-container {
+.yesno-container span {
+  margin-left: 0px;
+}
+/* Style for shape component starts here */
 
+.shape-container {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 100px;
+  padding: 20%;
+  margin-right: 150px;
+  font-family: Manga;
+  background-color: white;
+  opacity: 50%;
+  font-style: lowercase;
+  position: relative;
+  border: 2px solid red;
 }
 
 .shape-container form { /* Select? */
   
 }
-/* Style for shape component starts here */
+/* Style for end component starts here */
+
+.end-container p {
+  font-family: Manga;
+  font-size: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 100px;
+  padding: 20%;
+padding-top: 5px;
+  margin-right: 150px;
+  font-family: Manga;
+  background-color: white;
+  opacity: 50%;
+  font-style: lowercase;
+  position: relative;
+  border: 2px solid red;
+}
 

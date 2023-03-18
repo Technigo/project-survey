@@ -3,8 +3,11 @@ import React from 'react';
 export const Intro = () => {
   return (
     <div className="intro-container">
-      <h1>The Bouba Kiki Effect</h1>
-      <p>The shortest survey about the sound of shapes ever made</p>
+      <h1>BOUBA / KIKI</h1>
+      <p>
+        A short survey
+        <br />about the shape of sounds
+      </p>
     </div>
   )
 }
