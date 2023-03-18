@@ -42,7 +42,7 @@ code {
 }
 
 strong {
-  color: white;
+  color: #bbdd90;
 }
 
 h1 {
@@ -56,8 +56,10 @@ h2, h3 {
 }
 
 p {
-  color: #bbdd90;
+  /* color: #bbdd90; */
+  color: #d5d1cd;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .current-question {
@@ -65,6 +67,7 @@ p {
 }
 
 button {
+  font-size: 15px;
   border: none;
   width: 100px;
   padding: 5px 0;
@@ -77,7 +80,7 @@ button {
 
 button:hover {
   background-color: #bbdd90;
-  color: white;
+  color: #2b2b2b;
 }
 
 @media (min-width: 668px) {

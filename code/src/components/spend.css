@@ -5,17 +5,16 @@
 }
 
 .slider {
-  width: 200px;
+  width: 150px;
   height: 35px;
   background: #313131;
   border-radius: 20px;
   display: flex;
-  /* box-shadow: 0px 15px 40px #7E6D5766; */
   }
 
   .slider input[type="range"] {
-  -webkit-appearance:none !important;
-  width: 200px;
+  -webkit-appearance: none !important;
+  width: 150px;
   height: 2px;
   background: #c4c8cb;
   border: none;

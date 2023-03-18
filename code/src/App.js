@@ -6,6 +6,7 @@ import { Spend } from './components/Spend'
 import { Secondhand } from './components/Secondhand'
 import { Summary } from './components/Summary'
 import { ThankYouPage } from './components/ThankYouPage';
+import { ProgressBar } from './components/ProgressBar'
 
 export const App = () => {
   const [step, setStep] = useState(1)
@@ -57,10 +58,10 @@ export const App = () => {
         <ThankYouPage />
       )}
       {step < 5 && (
-        <>
-          <p className="current-question">Current question: {step}/5</p>
-          <button className="next-button" type="button" onClick={handleStepIncrease}>Next Question</button>
-        </>
+        <button className="next-button" type="button" onClick={handleStepIncrease}>Next &gt;&gt;</button>
+      )}
+      {step < 7 && (
+        <ProgressBar currentStep={step} totalSteps={6} />
       )}
     </div>
   );

@@ -7,9 +7,11 @@
 .input-text {
   background-color: #0f0f0f;
   border: none;
+  /* because it looks like it have border-radius on Iphone */
+  border-radius: none;
   border-bottom: 1px solid #c4c8cb;
   width: 100%;
-  font-size: 15px;
+  font-size: 20px;
   color: #c4c8cb;
   font-family: Titillium web, sans-serif;
 }

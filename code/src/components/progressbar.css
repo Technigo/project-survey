@@ -1,0 +1,26 @@
+.progress-bar {
+  margin-top: auto;
+  align-self: center;
+  width: 50%;
+  height: 10px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  
+}
+
+.bar {
+  height: 10px;
+  /* From https://css.glass */
+  background: rgba(187, 221, 144, 0.68);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(9.2px);
+  -webkit-backdrop-filter: blur(9.2px);
+  border: 1px solid rgba(187, 221, 144, 0.4);
+}
