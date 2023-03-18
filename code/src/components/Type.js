@@ -1,6 +1,6 @@
 import React from 'react';
 
-const tvtypes = ['Series', 'Mini-series', 'Documentary', 'Anthology series', 'Surprise me!'];
+const tvtypes = ['Surprise me!', 'Series', 'Mini-series', 'Documentary', 'Anthology series'];
 
 const Type = ({ type, setType, step, handleStepIncrease }) => {
   console.log('NOW RUNNING TYPE.js')

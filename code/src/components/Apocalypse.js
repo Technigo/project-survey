@@ -12,7 +12,6 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
         <form className="form-checkbox">
           <label htmlFor="apocalypsecheck">
                 Yes please
-            {apocalypse ? 'Checked: ' : 'Not checked: '}
             <input
               type="checkbox"
               className="apocalypsecheckbox"
@@ -21,6 +20,9 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
               checked={apocalypse}
               aria-checked={apocalypse}
               onChange={(event) => setApocalypse(event.target.checked)} />
+            <span className="visually-hidden">
+              {apocalypse ? 'The checkbox is checked' : 'The checkbox is not checked'}
+            </span>
           </label>
         </form>
         {/* <span>(Current state: {apocalypse ? 'Yes' : 'No'})</span> */}
