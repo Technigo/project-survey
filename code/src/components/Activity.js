@@ -1,11 +1,11 @@
 import React from 'react';
 
-const activechoice = ['Running 🏃🏻', 'Breathing 🌬', 'Movies 🍿 🎬', 'Walking 🚶🏽'];
+const activechoice = ['running 🏃🏻', 'breathing 🌬', 'stretching 🧘🏽', 'walking 🚶🏽'];
 
 export const Activity = ({ activity, setActivity, step }) => {
   return (
     <>
-      <div className="activity-container">
+      <div className="content-container">
         <div className="head">
           <p>Current step: {step} / 7</p>
         </div>

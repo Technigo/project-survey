@@ -28,7 +28,8 @@ export const App = () => {
     setName('');
   };
   return (
-    <>
+    <div className="main-container">
+      <h1>Super test</h1>
       {step === 0 && (
         <Start onButtonClick={() => handleStepIncrease(0)} />
       )}
@@ -64,11 +65,21 @@ export const App = () => {
         </>
       )}
       {step === 8 && (
-        <Breathe breathe={breathe} setBreathe={setBreathe} step={step} />
+        <>
+          <Breathe
+            name={name}
+            activity={activity}
+            colour={colour}
+            place={place}
+            temp={temp}
+            who={who} />
+          <button type="button" onClick={handleStepReset} className="restartBtn"> I need a new scenario</button>
+        </>
       )}
       {step < 7 && step !== 0 && (
-        <button type="button" onClick={handleStepIncrease}> Next question </button>
+        <button type="button" onClick={handleStepIncrease} className="submitBtn"> Next question </button>
       )}
-    </>
+    
+    </div>
   );
 }

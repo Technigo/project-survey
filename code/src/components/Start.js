@@ -5,7 +5,7 @@ export const Start = (begin) => {
     begin.onButtonClick();
   }
   return (
-    <div className="start-container">
+    <div className="content-container">
       <div className="start-head">
         <h3>Hi!</h3>
       </div>

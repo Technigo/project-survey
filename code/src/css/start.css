@@ -1,21 +1,30 @@
-.start-container {
+/*.start-container {
     display: flex;
     flex-direction: column;
     color:aquamarine;
+    font-size: 22px;
+    justify-content: center;
 }
 
 .start-head {
-
+    display: flex;
+    flex-direction: column;
+    color:aquamarine;
+    margin: auto;
+    margin-bottom: 0;
 }
 
 
 .start-info {
-
-}
+    display: flex;
+    flex-direction: column;
+    color:aquamarine;
+    margin: auto;
+}*/
 
 .start-p {
     color: rgb(235, 235, 251);
-    font-size: 14px;
+    font-size: 18px;
 }
 
 .startBtn {
@@ -34,17 +43,5 @@
 .startBtn:hover {
     background-color: aqua;
 }
-
-.activity-container {
-    display: flex;
-    flex-direction: column;
-    color:aquamarine;
-}
-
-.head {
-    font-size: 15px;
-    color: blanchedalmond;
-}
-
 
 

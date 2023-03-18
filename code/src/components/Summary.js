@@ -11,7 +11,7 @@ export const Summary = ({ name, activity, colour, place, temp, who }) => {
         In the distance you see a beutiful {colour} light.
       </p>
       <p className="sum-p">
-        {who} want to move on now.
+        {who} want you to move on now.
         Are you ready to take the next step for your mental health {name}?
       </p>
     </div>

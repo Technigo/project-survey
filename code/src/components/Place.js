@@ -15,10 +15,10 @@ export const Place = ({ place, setPlace, step }) => {
       <h4> Where do you feel the most at ease?</h4>
       <div className="place-img-container">
         <img src={ocean} alt="The ocean" />
-        <img src={forest} alt="The ocean" />
-        <img src={home} alt="The ocean" />
+        <img src={forest} alt="The Forest" />
+        <img src={home} alt="In my home" />
       </div>
-      <form>
+      <form className="radio-container">
         <label htmlFor="ocean">
             The ocean
           <input

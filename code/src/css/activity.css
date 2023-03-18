@@ -1,0 +1,12 @@
+.activity-container {
+    display: flex;
+    flex-direction: column;
+    color:aquamarine;
+}
+
+.head {
+    font-size: 15px;
+    color: blanchedalmond;
+}
+
+

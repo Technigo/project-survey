@@ -15,6 +15,12 @@
     margin:auto;
 }
 
+.radio-container label {
+    margin-right: 20px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
 .place-img-container img {
     border-radius: 50%;
     height: 150px;
