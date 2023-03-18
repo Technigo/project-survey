@@ -14,12 +14,24 @@ export const App = () => {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [area, setArea] = useState('');
+  const [experience, setExperience] = useState('');
   const [calls, setCalls] = useState('');
   const [company, setCompany] = useState('');
-  const [experience, setExperience] = useState('');
 
   const handleStepIncrease = () => {
-    setStep(step + 1);
+    if (step === 1 && name === '') {
+      alert('Please enter a valid name before proceeding to the next step.');
+    } else if (step === 2 && area === '') {
+      alert('Please enter a valid area before proceeding to the next step.');
+    } else if (step === 3 && experience === '') {
+      alert('Please enter years of experience before proceeding to the next step.');
+    } else if (step === 4 && calls === '') {
+      alert('Please enter a number of calls  before proceeding to the next step.');
+    } else if (step === 5 && company === '') {
+      alert('Please enter a company  before proceeding to the next step.');
+    } else {
+      setStep(step + 1);
+    }
   }
 
   const handleStepDecrease = () => {

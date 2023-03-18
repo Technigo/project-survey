@@ -10,6 +10,7 @@ export const Result = ({ descriptions }) => {
       <p>According to your submition your best fit mentor is: </p>
       <img className="mentorimg" src="mentor.jpeg" alt="Mentor" />
       <p className="description"> {descriptions} </p>
+      <p> Contact info : techmentor@gmail.com </p>
       <button onClick={refreshPage} type="submit">Reload</button>
     </>
   );
