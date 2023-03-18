@@ -3,7 +3,7 @@
 .header {
     display: flex;
     flex-flow: column wrap; 
-    margin: 24px;
+    margin: 49px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 10px black;
