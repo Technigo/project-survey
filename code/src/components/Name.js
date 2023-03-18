@@ -14,11 +14,15 @@ const Name = ({ name, setName, step }) => {
       </div>
       <div className="question-container">
         <h4>What is your name?</h4>
-        {/* <p>Current state: {name}</p> */}
-        <input
-          type="text"
-          value={name}
-          onChange={handleNameChange} />
+        <label htmlFor="nameInput">
+          <span className="visually-hidden">What is your name?</span>
+          {/* <p>Current state: {name}</p> */}
+          <input
+            type="text"
+            id="nameInput"
+            value={name}
+            onChange={handleNameChange} />
+        </label>
       </div>
     </div>
   );
