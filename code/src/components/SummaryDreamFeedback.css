@@ -3,6 +3,7 @@
     font-size: 22px;
     color: #5489B3;
     margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .summary-text {
@@ -11,6 +12,8 @@
     color: #5489B3;
     text-transform: uppercase;
     padding: 0px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .signature {
@@ -18,6 +21,22 @@
     font-size: 17px;
     color: #5489B3;
     margin: 0px 0px 0px 0px;
+}
+
+@media (min-width: 448px) and (max-width: 667px) {
+
+    .summary-title {
+        font-size: 24px;
+    }
+    
+    .summary-text {
+        font-size: 18px;
+    }
+    
+    .signature {
+        font-size: 20px;
+    }
+    
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {

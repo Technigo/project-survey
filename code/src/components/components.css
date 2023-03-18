@@ -1,6 +1,6 @@
 .question {
     font-family: 'Yuji Syuku', serif;
-    font-size: 23px;
+    font-size: 22px;
     color: #324e66;
     padding: 0;
     margin: 0px 0px 10px 0px;
@@ -68,8 +68,8 @@ input[type="radio"] {
 @media (min-width: 558px) and (max-width: 1024px) {
 
     .question {
-        font-size: 28px;
-        margin: 20px 0px 20px 0px;
+        font-size: 26px;
+        margin: 0px 0px 10px 0px;
     }
     
     .input-field {
@@ -77,7 +77,7 @@ input[type="radio"] {
         height: 27px;
         width: 280px;
         padding: 2px 0px 3px 6px;
-        margin: 10px 20px 30px 0px;
+        margin: 10px 0px 30px 0px;
     }
 
 
@@ -86,7 +86,7 @@ input[type="radio"] {
     }
 
     .select-menu {
-        font-size: 20px;
+        font-size: 18px;
     }
     
   }
@@ -96,7 +96,7 @@ input[type="radio"] {
     
     .question {
         font-size: 30px;
-        margin: 20px 0px 10px 0px;
+        margin: 0px 0px 10px 0px;
     }
     
     .input-field {
@@ -104,7 +104,7 @@ input[type="radio"] {
         height: 32px;
         width: 300px;
         padding: 2px 0px 3px 6px;
-        margin: 10px 0px 30px 0px;
+        margin: 10px 0px 40px 0px;
     }
   
     .time-options {

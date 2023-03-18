@@ -27,7 +27,8 @@ header {
 
 footer {
   display: flex;
-  position: absolute; bottom: 0;
+  position: absolute;
+  bottom: 0;
   left: 0;
   right: 0;
 }
@@ -37,19 +38,23 @@ footer {
   font-size: 20px;
   color: #D39CA1;
   margin: auto;
-  padding: 10px 0px 10px 0px;
+  padding: 0px 0px 10px 0px;
 }
 
 
 @media (min-width: 448px) and (max-width: 667px) {
 
-.page-container {
-  width: 300px;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 50px;
-  padding: 30px 35px 30px 35px;
-}
+  .header-title {
+    font-size: 34px;
+  } 
+
+  .page-container {
+    width: 320px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px 35px 30px 35px;
+  }
 
 }
 
@@ -65,12 +70,12 @@ footer {
     width: 420px;
     margin: 0 auto;
     margin-top: 25px;
-    margin-bottom: 50px;
+    margin-bottom: 250px;
     padding: 30px 35px 30px 35px;
   }
 
   .footer-text {
-    font-size: 20px;
+    font-size: 22px;
   }
 
 }  
@@ -92,7 +97,7 @@ footer {
   }
 
   .footer-text {
-    font-size: 20px;  
+    font-size: 22px;  
   }
 
 }
