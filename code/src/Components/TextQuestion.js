@@ -19,6 +19,7 @@ export const TextQuestion = (props) => {
             type="text"
             id={props.questionId}
             value={props.answers.firstName}
+            tabIndex="0"
             required
             onChange={(event) => props.onValueUpdate(event.target.value)} />
         </div>

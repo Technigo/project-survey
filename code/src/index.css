@@ -37,11 +37,9 @@ code {
   font-family: 'Red Hat Display', sans-serif;
   padding:5%;
   width:100%;
-  /* height:100vh; does not work on results page */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
 }
 
 form p{
@@ -72,7 +70,6 @@ font-size:2em;
 .landing-child{
   display: flex;
   flex-direction: column;
-  /* margin-top: 20%; */
   
 }
 
@@ -93,8 +90,7 @@ font-size:2em;
   display: flex;;
   align-self: center;
   width:100%;
-  margin-top: 50px;
-  height:100px;
+  margin-top: 50px; 
 }
 
 
@@ -117,7 +113,7 @@ font-size:2em;
   align-items: center;
   background-color: var(--beige);
   width: 40%;
-  padding:5%;
+  padding:2%;
   border-radius: 10px;
 
 }
@@ -306,6 +302,7 @@ input[type=range]:focus::-ms-fill-upper {
   border-radius: 7px;
   background-color: var(--beige);
   max-width:100vw;
+  cursor: pointer;
 }
 
 .result-card:hover{
@@ -318,6 +315,12 @@ input[type=range]:focus::-ms-fill-upper {
 
 .listing-info{
   font-size: 1.3em;
+}
+.range-slider-label{
+  background-color: var(--dark-red);
+  color: white;
+  border-radius: 5px;
+  padding:5px;
 }
 
 /* Tablet */

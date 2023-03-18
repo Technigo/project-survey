@@ -21,6 +21,7 @@ export const RadioQuestion = (props) => {
                 name={props.questionId}
                 key={label}
                 value={label}
+                tabIndex="0"
                 onChange={(event) => props.onValueUpdate(event.target.value)} />
             </div>
           );

@@ -18,7 +18,7 @@ export const Results = (props) => {
                 onClick={() => window.open(listing.url, '_blank')}
                 onKeyDown={() => window.open(listing.url, '_blank')}
                 role="link"
-                tabIndex={0}>
+                tabIndex="0">
                 <img
                   className="result-image"
                   src={listing.image}
