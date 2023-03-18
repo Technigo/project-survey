@@ -44,7 +44,7 @@ code {
 
 p {
   font-family: 'EB Garamond', serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 h1 {
@@ -119,6 +119,10 @@ hr {
   display: none;
 }
 
+.emphasis {
+  font-weight: bold;
+  color: var(--headingcolor);
+}
 
 /* Container formatting */
 
@@ -478,7 +482,7 @@ footer hr {
 
   p {
     font-family: 'EB Garamond', serif;
-    font-size: 18px;
+    font-size: 20px;
   }
   
 
