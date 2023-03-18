@@ -1,8 +1,6 @@
 /* Common variables, imports & roots */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&family=Montserrat:wght@400;700;900&display=swap');
 
-
-/* Reminder to clear out what I'm not using later */
 :root {
   --padding-mobile: 27px;
   --backgroundcol: rgb(17, 17, 36);
@@ -258,7 +256,7 @@ hr {
 
 .name-container .question-container input {
   height: 30px;
-  width: 100%;
+  width: 95%;
   font-size: 20px;
 }
 
