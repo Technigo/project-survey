@@ -5,6 +5,8 @@ import { Adjective } from 'components/Adjective'
 import { Loveact } from 'components/Loveact'
 import { Name } from 'components/Name'
 import { Story } from 'components/Story'
+import ClickSound from 'sounds/turning-page.mp3'
+import FinalSound from 'sounds/story.mp3'
 
 export const App = () => {
   const [step, setStep] = useState(1)
@@ -13,13 +15,32 @@ export const App = () => {
   const [horn, setHorn] = useState('')
   const [loveAct, setLoveAct] = useState('')
   const [name, setName] = useState('')
+  const [audio] = useState(new Audio(ClickSound))
+  const [audio2] = useState(new Audio(FinalSound))
+
+  const playSound = () => { // function to play the sound
+    audio.currentTime = 0
+    audio.play()
+  }
+
+  const playStorySound = () => { // function to play the sound
+    audio2.currentTime = 0
+    audio2.play()
+  }
 
   const handleNextQuestion = () => {
+    playSound()
     setStep(step + 1)
   }
+
+  const handleCreateStory = () => {
+    playStorySound()
+    setStep(step + 1)
+  }
+
   return (
     <section className="story-container">
-      <img src="images/parchment.png" className="book-img" alt="a book" />
+      <img src="./parchment.png" className="book-img" alt="a book" />
       <container className="side-in-book">
         <div className="form-div">
           {step === 1 && (
@@ -43,7 +64,7 @@ export const App = () => {
               <button
                 className="next-question-btn"
                 type="submit"
-                onClick={handleNextQuestion}>
+                onClick={handleCreateStory}>
                 Create your fairytale
               </button>
             </>

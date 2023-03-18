@@ -16,7 +16,7 @@ body {
 
 html {
   height: 100%;
-  background-image: url("/Users/Theres/Desktop/technigo-projects/project-survey/code/public/images/background.jpg");
+  background-image: url("./images/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
