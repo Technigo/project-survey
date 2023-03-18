@@ -14,6 +14,7 @@ const Genre = ({ genre, setGenre, step }) => {
         <form className="form type">
           {/* <p>Current state: {genre}</p> */}
           <select
+            aria-label="Drop down menu for selecting a genre"
             onChange={(event) => setGenre(event.target.value)}
             value={genre}>
             <option value="Surprise me!">Surprise me!</option>

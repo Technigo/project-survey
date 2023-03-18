@@ -20,6 +20,7 @@ const Type = ({ type, setType, step, handleStepIncrease }) => {
               <div
                 className="radiobtn"
                 role="button"
+                aria-label={item}
                 onClick={(event) => setType(event.target.value)}
                 onKeyDown={(event) => {
                   if (event.key === 'Enter' || event.key === ' ') {

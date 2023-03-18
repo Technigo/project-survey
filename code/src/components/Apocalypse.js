@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
-  console.log('NOW RUNNING Apocalypse.js')
   return (
     <div className="apocalypse-container">
       <div className="headings">
@@ -19,6 +18,7 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
               id="apocalypsecheck"
               tabIndex="0"
               checked={apocalypse}
+              aria-checked={apocalypse}
               onChange={(event) => setApocalypse(event.target.checked)} />
           </label>
         </form>
