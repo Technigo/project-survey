@@ -1,6 +1,6 @@
 .question {
     font-family: 'Yuji Syuku', serif;
-    font-size: 28px;
+    font-size: 23px;
     color: #324e66;
     padding: 0;
     margin: 0px 0px 10px 0px;
@@ -10,6 +10,7 @@
     font-family: 'Yuji Syuku', serif;
     color: #804247;
     height: 24px;
+    width: 230px;
     /*background: white;*/
     background: rgba(255, 255, 255, 0.34);
     border-radius: 7px;
@@ -17,25 +18,24 @@
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(255, 255, 255, 0.25);
+    opacity: 90%;
     /*border: none;
     border-radius: 5px;*/
     font-size: 16px;
     padding: 1px 0px 1px 3px;
-    margin: 10px 0px 10px 0px;
+    margin: 5px 0px 30px 0px;
 }
 
 input[type="radio"] {
     color: #324e66;
-    margin: 20px 10px 35px 10px;
+    margin: 10px 5px 40px 10px;
 }
 
 
-.age-options {
+.time-options {
     font-family: 'Yuji Syuku', serif;
-    font-size: 20px;
+    font-size: 16px;
     color: #324e66;
-    opacity: 80%;
-    margin-bottom: 10px;
 }
 
 .radio-buttons {
@@ -53,10 +53,10 @@ input[type="radio"] {
     backdrop-filter: blur(6.3px);
     -webkit-backdrop-filter: blur(6.3px);
     border: 1px solid rgba(255, 255, 255, 0.25);
-    margin: 10px 0px 30px 0px;
+    margin: 5px 0px 35px 0px;
 }
 
-/* This does not do anything */
+/* This doesn't do anything */
 #select option,
 #select optgroup {
     font-family: 'Yuji Syuku', serif;
@@ -65,19 +65,24 @@ input[type="radio"] {
     opacity: 80%;
 }
 
-@media (min-width: 668px) and (max-width: 1024px) {
+@media (min-width: 558px) and (max-width: 1024px) {
 
     .question {
-        font-size: 30px;
+        font-size: 28px;
         margin: 20px 0px 20px 0px;
     }
     
     .input-field {
         font-size: 20px;
-        height: 29px;
+        height: 27px;
         width: 280px;
         padding: 2px 0px 3px 6px;
-        margin: 20px 20px 20px 0px;
+        margin: 10px 20px 30px 0px;
+    }
+
+
+    .time-options {
+        font-size: 18px;
     }
 
     .select-menu {
@@ -102,6 +107,10 @@ input[type="radio"] {
         margin: 10px 0px 30px 0px;
     }
   
+    .time-options {
+        font-size: 18px;
+    }
+
     .select-menu {
         font-size: 20px;
     }

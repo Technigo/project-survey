@@ -3,7 +3,7 @@ header {
 }
 
 .header-title {
-  font-size: 35px;
+  font-size: 28px;
   margin: auto;
   padding-top: 20px;
   color: #ECCCCF;
@@ -12,13 +12,13 @@ header {
 }
 
 .page-container {
-  /*background: lightcoral;*/
-  /*height: 500px;*/
   align-self: center;
-  width: 300px;
+  /*width: 300px;
   margin: auto;
   margin-top: 20px;
-  padding: 30px;
+  margin-bottom: 20px;*/
+  margin: 15px 40px 40px 40px;
+  padding: 20px;
   border-radius: 20px;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.45);
