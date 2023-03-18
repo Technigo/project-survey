@@ -4,7 +4,8 @@ import React from 'react';
 import Question2Image from '../images/question2.jpg'
 
 const Food = (props) => {
-    const { food, setFood, avocado, setAvocado, percentboop, setPercentbop } = props
+    const { food, setFood } = props
+    // const { food, setFood, avocado, setAvocado, percentboop, setPercentbop } = props
 
     // const inputRef = useRef(null);
 
@@ -17,11 +18,11 @@ const Food = (props) => {
     //     setPercentbop(percentboop + 10)
     // }
 
-    const handleKeyDown = (event) => {
-        if (event.keyCode === 13) {
-          goToNextQuestion();
-        }
-    };
+    // const handleKeyDown = (event) => {
+    //     if (event.keyCode === 13) {
+    //       goToNextQuestion();
+    //     }
+    // };
 
     return (
         <div className="food-wrapper">
