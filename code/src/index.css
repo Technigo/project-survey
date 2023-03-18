@@ -5,10 +5,52 @@ body {
   /*background-image: url("https://images.pexels.com/photos/3934512/pexels-photo-3934512.jpeg");
   background-size: 50%;*/
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html {
+  text-align: center;
+}
+
+/* PAGE 1 */
+.name-container {
+  display: flex;
+  /*border: 1px solid black;*/
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 175px;
+}
+/*.name-container h2 {
+  border: 2px solid green;
+}*/
+ button {
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(38, 38, 38);
+  width: 79px;
+  border-radius: 30px;
+}
+button:hover {
+background-color: #89426c;
+}
+.button p {
+  color: transparent;
+}
+label {
+  padding: 5px;
+}
+
+/*.background-image {
+  height: 50%;
+  width: 50%;
+}*/
+
+/* PAGE 3 */
+.signmeeter {
+ text-align: center;
 }
 
 .zodiac-container {
@@ -29,32 +71,4 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-
-.name-container {
-  display: flex;
-  border: 1px solid black;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-.name-container h2 {
-  border: 2px solid green;
-}
-
-.button {
-  text-align: center;
-}
-label {
-  padding: 5px;
-}
-
-.background-image {
-  height: 50%;
-  width: 50%;
-}
-
-.signmeeter {
- text-align: center;
 }

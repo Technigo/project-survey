@@ -1,4 +1,4 @@
-import React from 'react'
+/* import React from 'react'
 
 export const Kitty = ({ milk, signmeeter, setSignmeeter }) => {
   const handleSignMeeter = (event) => {
@@ -17,6 +17,6 @@ export const Kitty = ({ milk, signmeeter, setSignmeeter }) => {
       )}
     </div>
   );
-}
+} */
 
 /* NR 3 */
