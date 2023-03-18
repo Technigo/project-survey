@@ -1,10 +1,12 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import { Name } from './components/Name';
 import { Age } from './components/Age';
 import { Gender } from './components/Gender';
 import { Result } from './components/Result';
 import { Country } from './components/Country';
+import { Happy } from './components/Happy';
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -12,24 +14,29 @@ export const App = () => {
   const [age, setAge] = useState(0);
   const [gender, setGender] = useState('');
   const [country, setCountry] = useState('');
+  const [happy, setHappy] = useState(50);
   const [error, setError] = useState(false);
   const handleStepIncrease = () => {
     setStep(step + 1);
     setError(false);
     if (name.length <= 1) {
       setError(true);
-      setStep(1);
+      setStep(2);
     } else if (age <= -1) {
       setError(true);
-      setStep(2);
+      setStep(3);
     }
   }
   return (
     <>
       {(step === 1) && (
-        <Name name={name} setName={setName} />
+        <>
+          <h1 className="typewriter">Hi and welcome to my survey!</h1>
+          <p>Please begin by filling out your name.</p>
+          <Name name={name} setName={setName} />
+        </>
       )}
-      {step === 2 && (
+      {(step === 2) && (
         <Age age={age} setAge={setAge} />
       )}
       {step === 3 && (
@@ -39,15 +46,18 @@ export const App = () => {
         <Country country={country} setCountry={setCountry} />
       )}
       {step === 5 && (
-        <Result name={name} age={age} gender={gender} country={country} />
+        <Happy happy={happy} setHappy={setHappy} />
       )}
-      {step < 5 && (
+      {step === 6 && (
+        <Result name={name} age={age} gender={gender} country={country} happy={happy} />
+      )}
+      {step < 6 && (
         <>
           <p>
-            Current step: {step}
+            Current step: {step}/5
           </p>
           <button type="button" onClick={handleStepIncrease}>
-            Next step
+            Next
           </button>
         </>
       )}
