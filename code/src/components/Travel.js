@@ -15,7 +15,7 @@ export const Travel = ({ travel, setTravel }) => {
           value={travel}>
           <option value="" selected disabled>Choose one...</option>
           <option value="yes">Yes, I have plans to travel abroad.</option>
-          <option value="yes">Yes, but only within my own country.</option>
+          <option value="yes">Yes, I have plans to travel within my own country. </option>
           <option value="no">No, I don&apos;t have any plans to travel. </option>
         </select>
       </label>

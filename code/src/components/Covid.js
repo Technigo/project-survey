@@ -15,7 +15,7 @@ export const Covid = ({ covid, setCovid }) => {
     <>
       <img src={covidWoman} alt="A masked woman, spraying disenfectant at covid bacteria" />
       <label className="question">
-        How much would you say Covid19 has changed your travel habits?
+        How much would you say Covid-19 has changed your travel habits?
         <div className="options-container">
           {radioValues.map((group) => (
           // eslint-disable-next-line jsx-a11y/label-has-associated-control

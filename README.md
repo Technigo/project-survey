@@ -1,13 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project was to create a survey in react, using controlled forms. There should be min. 3 different form inputs, including a select element and radio buttons. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To start, I made a sketch in figma, which I used as a starting point but later deviated from. I then build the necessary components with everything in them, and once they were done, I added the function to turn the form into a multi-step form.
+I found a lot of help in the example project, as well as the intructional video from this week.
+
+To start with I'd written all questions inside h2-elements, but that also meant, that I had no labels. I then changed to h2 to labels. After a wave-test, I realised the labels/inputs where orphaned, and I subsequently fixed that by nesting inputs inside the labels.
+
+One unresolved problem was validation. Tried added "reqiured" to some of the inputs, but it didn't do anything. 
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://inspiring-wisp-9e4734.netlify.app/
