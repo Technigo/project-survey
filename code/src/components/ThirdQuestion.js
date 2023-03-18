@@ -15,12 +15,12 @@ export const ThirdQuestion = ({ favoriteThing, setThing }) => {
           value={favoriteThing}
           required>
           <option value="">Select your favorite thing:</option>
-          <option value="new-people">meeting new people</option>
-          <option value="new-places">seeing new places</option>
-          <option value="cultures">learn about other cultures</option>
-          <option value="cuisine">the cuisine</option>
+          <option value="meeting new people">meeting new people</option>
+          <option value="seeing new places">seeing new places</option>
+          <option value="learn about the cultures">learn about other cultures</option>
+          <option value="the cuisine">the cuisine</option>
           <option value="adventure">adventure</option>
-          <option value="weather">the weather</option>
+          <option value="the weather">the weather</option>
         </select>
       </label>
       <Button button="Next question" />
