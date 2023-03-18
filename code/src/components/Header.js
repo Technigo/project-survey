@@ -4,7 +4,7 @@ import React from 'react';
 import './Header.css';
 // eslint-disable-next-line import/no-absolute-path
 import ponyLogo from '../Images/logo.svg';
-import ponyLogo2 from '../Images/logo2.svg'
+import ponyLogo2 from '../Images/logo2.svg';
 
 const Header = () => {
   return (

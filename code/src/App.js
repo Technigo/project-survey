@@ -10,7 +10,7 @@ import { Result } from 'components/Result';
 import { ExtraItem } from 'components/ExtraItem';
 import { FruitSelect } from 'components/FruitSelect';
 import { ToppingSelect } from 'components/ToppingSelect';
-import { FlowerSelect } from 'components/FlowerSelect';
+import { FlowerSelect } from 'components/FlowerSelect'; 
 import Header from './components/Header'
 import Start from './components/Start';
 
@@ -22,7 +22,7 @@ export const App = () => {
   const [extraItem, setExtraItem] = useState('');
   const [fruitSelect, setFruitSelect] = useState('');
   const [toppingSelect, setToppingSelect] = useState('')
-  const [flowerSelect, setFlowerSelect] = useState()
+  const [flowerSelect, setFlowerSelect] = useState() 
 
 /*   const start = () => {
     setStart(start + 1);
@@ -56,7 +56,7 @@ export const App = () => {
        )}
        {step === 7 && (
         <FlowerSelect flowerSelect={flowerSelect} setFlowerSelect={setFlowerSelect} />
-      )}
+      )} 
       {step === 8 && (
         <ExtraItem ExtraItem={extraItem} setExtraItem={setExtraItem} />
         )}
@@ -64,15 +64,16 @@ export const App = () => {
         <Result name={name} food={food} drink={drink} fruit={fruitSelect} topping={toppingSelect} />
       )}
     {step < 10 && (
-        <>
-          <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>
+        <div className="content-wrapper">
+          <p>Question number {step}/{10}</p>
+          <button className="button-wrapper" type="button" onClick={handleStepIncrease}>
           {step === 1 && 'YAY LETS GO! 🦄!!'}
-          {step > 1 && step < 8 && 'Next question🦄'}
+          {step > 1 && step < 7 && 'Next question 🦄'}
           {step === 8 && 'Find out my magical pony name! 🦄'}
           {step >= 9 && 'Lets do this one more time!🦄'}
+          {step === 7 && 'Submit! 🦄'}
           </button>
-        </>
+        </div>
       )}
     </>
   );

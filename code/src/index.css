@@ -40,17 +40,58 @@ background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, F
 }
 
 .button-wrapper {
+  min-height:30px; 
+  font-size: 1.5em;
+    min-width: 120px;
   display: flex;
   flex-flow: column wrap; 
+  align-items: center;
   margin: 24px;
-  padding: 20px;
+  /* padding: 20px; */
+  padding:0.35em 1.2em;
   border-radius: 10px;
   box-shadow: 2px 4px 10px black;
-  align-items: center;
   background: #B993D6;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient (to right, rgb 252, 115, 242); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
 .button {
-  
+  font-size: 20px;
+}
+
+p {
+  font-size: 1.5em;
+  padding: 0.5em;
+  margin: 0.5em;
+
+
+}
+
+input {
+  width: 74%;
+  padding: 0.5em;
+  border-radius: 13px;
+  box-shadow: 2px 4px 10px black;
+
+}
+
+input[type=text] {
+  border-radius: 6px;
+}
+
+.results-wrapper {
+  min-height:30px; 
+  font-size: 1.5em;
+    min-width: 120px;
+  display: flex;
+  flex-flow: column wrap; 
+  align-items: center;
+  margin: 24px;
+  /* padding: 20px; */
+  padding:0.35em 1.2em;
+  border: 9px solid rgba(136, 93, 241, 0.4);
+  border-radius: 33px;
+  box-shadow: -26px -13px 32px rgba(247, 246, 19, 0.5);
+  background: radial-gradient(rgb(252, 115, 242) 20%, rgb(139, 102, 241) 100%);;
 }

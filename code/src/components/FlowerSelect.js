@@ -5,19 +5,27 @@ export const FlowerSelect = ({ flowerSelect, setFlowerSelect }) => {
   return (
     <form className="content-wrapper">
       <p>Your favourite flower?</p>
-      <select
-        value={flowerSelect}>
-        <input type="radio" value="cherry-blossom" id="cherry-blossom" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'cherry-blossom'} />
+      <div>
+        <input type="radio" id="cherry-blossom" value="cherry-blossom" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'cherry-blossom'} />
         <label htmlFor="cherry-blossom">Cherry-blossom</label>
-        <input type="radio" value="cherry-blossom" id="cherry-blossom" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'change'} />
-        <input type="radio" value="cherry-blossom" id="cherry-blossom" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'cherry-blossom'} />
-        <input type="radio" value="cherry-blossom" id="cherry-blossom" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'cherry-blossom'} />
-      </select>
+      </div>
+      <div>
+        <input type="radio" id="lily" value="lily" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'lily'} />
+        <label htmlFor="lily">Lily</label>
+      </div>
+      <div>
+        <input type="radio" id="dandelion" value="dandelion" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'dandelion'} />
+        <label htmlFor="dandelion">Dandelion</label>
+      </div>
+      <div>
+        <input type="radio" id="lavender" value="lavender" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'lavender'} />
+        <label htmlFor="lavender">Lavender</label>
+      </div>
     </form>
   )
 }
 
-/* const flowerSelect = ["lily", "dandelion", "laverder"];
+/*  const flowerSelect = ["lily", "dandelion", "laverder"];
 
 return (
   <form>
@@ -34,5 +42,4 @@ return (
     ))}
 
   </form>
- ) */
-   
+ )  */

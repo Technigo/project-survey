@@ -6,19 +6,19 @@ import React from 'react';
 
 export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick, fruitSelect }) => {
   return (
-    <div className="content-wrapper">
+    <>
       {showAddMore && (
-        <div>
-          <p>dasadasd</p>
+        <div className="content-wrapper">
+          <p>Woohoo all questions done!! Are you ready to </p>
           <button type="button" onClick={() => handleAddMoreClick('yes')}>Yes</button>
           <button type="button" onClick={() => handleAddMoreClick('no')}>No, thats all</button>
         </div>
       )}
       {!showAddMore && (
-        <>
+        <div className="results-wrapper">
           <p>Your pony name is {name}-{food}-{drink}-{fruitSelect}!</p>
-        </>
+        </div>
       )}
-    </div>
+    </>
   );
 }
