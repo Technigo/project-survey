@@ -27,20 +27,22 @@ export const Purchase = ({ purchase, setPurchase, step, handleStepIncrease }) =>
           <h2>Question {step}</h2>
           <p>Would you consider making another purchase with us?</p>
         </div>
-        <div className="purchase-options">
-          {options.map((option) => (
-            <div key={option}>
-              <input
-                type="radio"
-                id={option}
-                name="purchase"
-                value={option}
-                checked={purchase === option}
-                onChange={handlePurchaseChange} />
-              <label htmlFor={option}>{option}</label>
-            </div>
-          ))}
-          <button type="button" onClick={handleNextButtonClick} required>Next</button>
+        <div className="purchase-options-container">
+          <div className="purchase-options">
+            {options.map((option) => (
+              <div key={option}>
+                <input
+                  type="radio"
+                  id={option}
+                  name="purchase"
+                  value={option}
+                  checked={purchase === option}
+                  onChange={handlePurchaseChange} />
+                <label htmlFor={option}>{option}</label>
+              </div>
+            ))}
+          </div>
+          <button id="next-button" type="button" onClick={handleNextButtonClick} required>Next</button>
         </div>
       </div>
     </div>

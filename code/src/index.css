@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -11,6 +12,309 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+@media only screen and (max-width: 767px) {
+
+  body {
+    margin: 0;
+      overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+
+  .name-input {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .name-input label {
+    margin-right: 10px;
+  }
+  
+  .name-container {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .name-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content:space-between;
+    font-size: 22px;
+    }
+  
+.name-form button {
+  display: flex;
+  align-items: center;
+  margin-left: 70px;
+}
+
+  .fashion-image {
+    width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  }
+  
+  .name-header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+  }
+  
+  .right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .hear-container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    height: 100vh;
+  }
+  
+  .hear-header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .select {
+    margin-bottom: 1rem;
+    font-size: 22px;
+  }
+  
+  button {
+    margin-top: 3rem;
+    background-color: #aaf0d1;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: 900px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button:hover {
+    background-color: #27ae60;
+  }
+  
+  .delivery.container {
+    display: flex;
+    height: 100vh;
+    max-width: 100%;
+  }
+  
+  .delivery-header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .delivery-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .overall-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .overall-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .purchase-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .purchase-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .purchase-options {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+      margin-top: 30px;
+      gap: 10px;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .purchase-options-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .purchase-options div {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .purchase-options input[type="radio"] {
+      margin-right: 10px;
+    }
+  
+    .rate-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+    }
+    
+    .rate-slider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      gap: 10px;
+      font-family: 'Roboto', sans-serif;
+    }
+    
+    .rate-slider span {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  
+    input[type=range] {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 300px;
+      border-radius: 10px;
+      background-color: #aaf0d1;
+      outline: none;
+    }
+    
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+    
+    .right-container button {
+      margin-top: 20px;
+      font-family: 'Roboto', sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+    
+    .right-container button:hover {
+      background-color: #27ae60;
+    }
+  
+    .name-input button {
+      align-items: center;
+      justify-content: center;
+    }
+    
+  .thanks-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .name-container,
+  .hear-container {
+    transition: transform 0.5s ease-out;
+  }
+}
+
+
+
+@media only screen and (min-width: 768px) {
 
 .name-input {
   margin-right: 155px;
@@ -260,3 +564,4 @@ button:hover {
   transition: transform 0.5s ease-out;
 }
 
+}
