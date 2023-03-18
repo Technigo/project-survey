@@ -1,10 +1,15 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable max-len */
 import React from 'react';
 
 const Love = ({ love, setLove }) => {
   const handleLoveChange = (event) => {
     setLove(event.target.value)
   }
+
+  // Renders a group of radio buttons for the user to select their level of love for cats.
+  // Does not use a form submission, as the user's selection can be updated in real-time without the need for a submit button.
+  // Defines a handleLoveChange function to update the state of love when the user selects a new radio button.
 
   return (
     <div>
