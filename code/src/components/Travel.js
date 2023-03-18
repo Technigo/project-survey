@@ -8,16 +8,17 @@ export const Travel = ({ travel, setTravel }) => {
   return (
     <>
       <img src={womanWithSuitcase} alt="A woman carrying a suitcase" />
-      <label className="question">Do you have plans to travel for a vacation within the next 6 months?</label>
-      <select
-        className="travel-input"
-        onChange={(event) => setTravel(event.target.value)}
-        value={travel}>
-        <option value="" selected disabled>Choose one...</option>
-        <option value="yes">Yes, I have plans to travel abroad.</option>
-        <option value="yes">Yes, but only within my own country.</option>
-        <option value="no">No, I don&apos;t have any plans to travel. </option>
-      </select>
+      <label className="question">Do you have plans to travel for a vacation within the next 6 months?
+        <select
+          className="travel-input"
+          onChange={(event) => setTravel(event.target.value)}
+          value={travel}>
+          <option value="" selected disabled>Choose one...</option>
+          <option value="yes">Yes, I have plans to travel abroad.</option>
+          <option value="yes">Yes, but only within my own country.</option>
+          <option value="no">No, I don&apos;t have any plans to travel. </option>
+        </select>
+      </label>
     </>
   )
 }

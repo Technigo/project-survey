@@ -4,6 +4,7 @@
 import React from 'react';
 import map from '../assets/map.gif'
 
+// a component that shows a text-area input (step 3)
 export const Location = ({ location, setLocation }) => {
   return (
     <>
@@ -11,14 +12,14 @@ export const Location = ({ location, setLocation }) => {
       <label className="question">
         Tell us more! Where are you travelling to? And if you&apos;re not travelling anywhere, then
          what are your current dream-destinations?
+        <textarea
+          placeholder="E.g. a shopping-trip to Berlin, hiking in Scotland..."
+          className="location-input"
+          rows="4"
+          cols="34"
+          onChange={(event) => setLocation(event.target.value)}
+          value={location} />
       </label>
-      <textarea
-        placeholder="E.g. a shopping-trip to Berlin, hiking in Scotland..."
-        className="location-input"
-        rows="4"
-        cols="34"
-        onChange={(event) => setLocation(event.target.value)}
-        value={location} />
     </>
   )
 }

@@ -79,7 +79,7 @@ img {
 
 .question {
   color: rgb(239, 239, 239);
-  margin: 1rem auto 1rem auto;
+  margin: 1.2rem auto auto auto;
   font-size: 1.2rem;
   font-family: 'Segoe UI', sans-serif;
   width: 85%;
@@ -96,7 +96,7 @@ img {
   flex-direction: column;
   align-items: center;
   color: white;
-  width: 90%
+  width: 85%
 }
 
 .summary-container h2 {
@@ -141,16 +141,17 @@ input {
   color: rgb(41, 52, 164);
   font-weight: bold;
   font-size: 1rem;
+  margin: 1rem auto auto auto;
 }
 
 .travel-input {
-  width: 85%;
-  margin: 1rem auto 1rem auto;
+  width: 100%;
+  margin: 1.5rem auto 1rem auto;
   padding: 10px;
   border: none;
   border-radius: 5px;
   color: rgb(41, 52, 164);
-  font-weight: bold;
+  font-weight: bold; 
 }
 
 .location-input {
@@ -159,7 +160,7 @@ input {
   box-shadow: 3px 3px rgb(219, 176, 248);
   color: rgb(41, 52, 164);
   font-size: 1rem;
-  margin: 1rem auto 1rem auto;
+  margin: 1.5rem auto 0.5rem auto;
   padding: 5px;
 }
 
@@ -167,7 +168,7 @@ input {
   display: flex;
   flex-direction: column;
   color: rgb(41, 52, 164);
-  margin-bottom: 1.5rem;
+  margin: 1rem auto 1.5rem auto;
 }
 
 .option {
@@ -176,9 +177,10 @@ input {
  padding: 0.5rem 1rem 0.5rem 0.7rem;
  border-radius: 15px;
  display: flex;
- margin-top: 1rem;
+ margin: 1rem auto auto auto;
  font-size: 1rem;
  font-weight: bold;
+ width: 50%;
 }
 
 .covid-input {
