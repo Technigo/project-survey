@@ -47,7 +47,7 @@ form {
   border-radius: 20px;
 }
 
-.Btn {
+.btn {
   font-size: 16px;
   padding: 16px 30px;
   border: none;
@@ -70,14 +70,28 @@ input[type=text], select {
   box-sizing: border-box;
 }
 
-.btn-container {
-  text-align: center;
-}
-
-.radioBtn {
+.radiobtn {
   text-align: center;
 }
 
 input[type=radio] {
   margin-bottom: 15px;
+}
+
+.btn:hover {
+background-color: black;
+color: orange;
+}
+
+@media (min-width: 768px) {
+  
+  .inner-wrapper {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .inner-wrapper {
+    width: 75%;
+  }
 }

@@ -11,7 +11,7 @@ export const App = () => {
   const [counter, setCounter] = useState(0);
   const [name, setName] = useState('');
   const [oftenTravels, setOftenTravels] = useState('');
-  const [thing, setThing] = useState('');
+  const [favoriteThing, setThing] = useState('');
   const [place, setPlace] = useState();
   const [dreamDestination, setDreamDestination] = useState('');
 
@@ -37,7 +37,7 @@ export const App = () => {
               setOftenTravels={setOftenTravels} />
           )}
           {counter === 3 && (
-            <ThirdQuestion thing={thing} setThing={setThing} />
+            <ThirdQuestion favoriteThing={favoriteThing} setThing={setThing} />
           )}
           {counter === 4 && (
             <FourthQuestion place={place} setPlace={setPlace} />
@@ -52,7 +52,7 @@ export const App = () => {
           <Summary
             name={name}
             oftenTravels={oftenTravels}
-            thing={thing}
+            favoriteThing={favoriteThing}
             place={place}
             dreamDestination={dreamDestination} />
         )}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'components/button';
 
-export const ThirdQuestion = ({ thing, setThing }) => {
+export const ThirdQuestion = ({ favoriteThing, setThing }) => {
   const handleFavoriteThing = (event) => {
     setThing(event.target.value)
   }
@@ -12,7 +12,7 @@ export const ThirdQuestion = ({ thing, setThing }) => {
         <select
           id="favoriteThing"
           onChange={handleFavoriteThing}
-          value={thing}
+          value={favoriteThing}
           required>
           <option value="">Select your favorite thing:</option>
           <option value="new-people">meeting new people</option>
