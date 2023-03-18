@@ -1,19 +1,22 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import womanWithSuitcase from '../assets/woman-suitcase.png'
 
+// a component that shows a select menu (step 2)
 export const Travel = ({ travel, setTravel }) => {
   return (
     <>
       <img src={womanWithSuitcase} alt="A woman carrying a suitcase" />
-      <h2 className="question">Do you have plans to travel within the next 6 months?</h2>
+      <label className="question">Do you have plans to travel for a vacation within the next 6 months?</label>
       <select
         className="travel-input"
         onChange={(event) => setTravel(event.target.value)}
         value={travel}>
+        <option value="" selected disabled>Choose one...</option>
         <option value="yes">Yes, I have plans to travel abroad.</option>
         <option value="yes">Yes, but only within my own country.</option>
-        <option value="no">No, I do not have plans to travel within next 6 months. </option>
+        <option value="no">No, I don&apos;t have any plans to travel. </option>
       </select>
     </>
   )

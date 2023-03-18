@@ -13,6 +13,7 @@ export const App = () => {
   const [location, setLocation] = useState('')
   const [covid, setCovid] = useState('')
 
+  // function that adds to the step-count.
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
@@ -41,7 +42,7 @@ export const App = () => {
         </form>
         <div className="button-container">
           {step < 5 && (
-            <button className="next-button" type="button" onClick={handleStepIncrease}>Next</button>
+            <button className="next-button" type="submit" onClick={handleStepIncrease}>Next</button>
           )}
 
         </div>

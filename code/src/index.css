@@ -32,7 +32,7 @@ h1 {
   text-align: center;
   font-family: 'Segoe UI', sans-serif;
   font-size: 2.5rem;
-  padding-bottom: 0.4rem;
+  padding-bottom: 0.6rem;
 }
 
 .bold {
@@ -67,6 +67,7 @@ img {
   width: 75%;
   color: white;
   word-spacing: 2px;
+  margin-bottom: 1rem;
 }
 
 .form {
@@ -84,7 +85,9 @@ img {
   width: 85%;
   word-spacing: 2px;
   text-align: center;
+  font-weight: bold;
 }
+
 
 /*Summary-page*/
 
@@ -109,6 +112,19 @@ img {
   margin: 1.8rem auto 2.2rem auto;
 }
 
+/*Links*/
+.links-container {
+  width: 60%;
+  margin: 4rem auto auto auto;
+  text-align: center;
+  font-size: 0.7rem;
+  color:rgb(219, 176, 248)
+}
+
+.links-container a {
+  text-decoration: none;
+  color:rgb(219, 176, 248)
+}
 
 /*Styling for inputs*/
 input {
@@ -116,12 +132,15 @@ input {
 }
 
 .name-input {
-  width: 80%;
+  width: 75%;
   border-radius: 5px;
   padding: 8px;
   border: none;
   box-shadow: 3px 3px rgb(219, 176, 248);
   margin-top: 5px;
+  color: rgb(41, 52, 164);
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .travel-input {
@@ -141,12 +160,31 @@ input {
   color: rgb(41, 52, 164);
   font-size: 1rem;
   margin: 1rem auto 1rem auto;
+  padding: 5px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  color: rgb(41, 52, 164);
+  margin-bottom: 1.5rem;
+}
+
+.option {
+ background-color:rgb(239, 239, 239);
+ box-shadow: 4px 4px rgb(219, 176, 248);
+ padding: 0.5rem 1rem 0.5rem 0.7rem;
+ border-radius: 15px;
+ display: flex;
+ margin-top: 1rem;
+ font-size: 1rem;
+ font-weight: bold;
 }
 
 .covid-input {
-  display: inline;
+  accent-color: rgb(21, 78, 76);
+  margin-right: 10px;
 }
-
 
 
 /*Styling for buttons*/
@@ -165,13 +203,12 @@ button {
   font-weight: bold;
   font-size: 1rem;
   color: rgb(41, 52, 164);
+  margin-top: 1.5rem;
 }
 
 button:hover {
   box-shadow: 5px 5px rgb(219, 176, 248);
 }
-
-
 
 /*footer*/
 footer {
