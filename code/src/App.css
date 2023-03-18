@@ -3,7 +3,7 @@ header {
 }
 
 .header-title {
-  font-size: 28px;
+  font-size: 29px;
   margin: auto;
   padding-top: 20px;
   color: #ECCCCF;
@@ -13,8 +13,8 @@ header {
 
 .page-container {
   align-self: center;
-  margin: 15px 40px 80px 40px;
-  padding: 20px;
+  margin: 15px 30px 80px 30px;
+  padding: 25px;
   border-radius: 20px;
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0.45);
@@ -27,11 +27,9 @@ header {
 
 footer {
   display: flex;
-  align-self: center;
-  position: absolute; bottom: 10px;
+  position: absolute; bottom: 5px;
   left: 0;
   right: 0;
-  margin: 0 auto;
 }
 
 .footer-text {
@@ -43,6 +41,19 @@ footer {
 }
 
 
+@media (min-width: 448px) and (max-width: 667px) {
+
+.page-container {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  padding: 30px 35px 30px 35px;
+}
+
+}
+
+
 @media (min-width: 668px) and (max-width: 1024px) {
 
   .header-title {
@@ -51,10 +62,11 @@ footer {
   }
 
   .page-container {
-    width: 400px;
+    width: 420px;
     margin: 0 auto;
     margin-top: 25px;
-    padding: 30px 50px 45px 50px;
+    margin-bottom: 50px;
+    padding: 30px 35px 30px 35px;
   }
 
   .footer-text {
@@ -75,6 +87,7 @@ footer {
     width: 450px;
     margin: 0 auto;
     margin-top: 25px;
+    margin-bottom: 60px;
     padding: 30px 50px 45px 50px;
   }
 

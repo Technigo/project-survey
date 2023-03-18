@@ -1,5 +1,5 @@
 .summary-title {
-    font-family: 'Yuji Syuku', serif;
+    font-family: 'Yuji Boku', serif;
     font-size: 22px;
     color: #5489B3;
     margin-top: 0px;
@@ -10,6 +10,7 @@
     font-size: 16px;
     color: #5489B3;
     text-transform: uppercase;
+    padding: 0px;
 }
 
 .signature {
