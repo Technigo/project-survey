@@ -1,10 +1,13 @@
-import QuestionThree from 'components/QuestionThree';
 import React from 'react';
 
-export const App = () => {
+import Form from 'components/Form';
+
+const App = () => {
   return (
     <div>
-      <QuestionThree />
+      <Form />
     </div>
   );
 };
+
+export default App;
