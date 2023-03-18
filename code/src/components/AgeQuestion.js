@@ -2,10 +2,11 @@
 
 import React from "react";
 import { NextQuestionButton } from "./NextQuestionButton";
+import { BackQuestionButton } from "./BackQuestionButton";
 
 
 const ageGroups = ["0-18", "19-30", "30-60", "60+"];
-export const AgeQuestion = ({ ageGroup, onAgeGroupChange }) => {
+export const AgeQuestion = ({ ageGroup, onAgeGroupChange, onClickBack, onClickNext }) => {
 
   return (
     <div className="ageGroupBox">
@@ -23,7 +24,10 @@ export const AgeQuestion = ({ ageGroup, onAgeGroupChange }) => {
           </label>
         ))}
       </div>
-      <NextQuestionButton button="Next" />
+      <div className="buttonWraperBox">
+        <BackQuestionButton button="Back" onClickBack={onClickBack} />
+        <NextQuestionButton button="Next" onClickNext={onClickNext} />
+      </div>
     </div>
   );
 };

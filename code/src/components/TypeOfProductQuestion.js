@@ -2,8 +2,10 @@
 
 import React from "react";
 import { NextQuestionButton } from "./NextQuestionButton";
+import { BackQuestionButton } from "./BackQuestionButton";
 
-export const TypeOfproductQuestion = ({ product, onProductChange }) => {
+
+export const TypeOfproductQuestion = ({ product, onProductChange, onClickBack, onClickNext}) => {
 
   return (
     <div className="productTypeBox">
@@ -21,7 +23,10 @@ export const TypeOfproductQuestion = ({ product, onProductChange }) => {
           <option value="Sunglasses">Sunglasses</option>
         </select>
       </div>
-      <NextQuestionButton button="Next" />
+      <div className="buttonWraperBox">
+        <BackQuestionButton button="Back" onClickBack={onClickBack} />
+        <NextQuestionButton button="Next" onClickNext={onClickNext} />
+      </div>
     </div>
   );
 };

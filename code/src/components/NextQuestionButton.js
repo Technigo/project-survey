@@ -3,12 +3,12 @@
 import React from "react";
 
 
-export const NextQuestionButton = ({ button }) => {
+export const NextQuestionButton = ({ button, onClickNext }) => {
 
     return (
         
-            <div>
-                <button className="nextQuestionButton" type="submit">
+            <div className="nextButtonBox">
+                <button className="nextQuestionButton" onClick={onClickNext} type="submit" >
                     {button}
                 </button>
             </div>
