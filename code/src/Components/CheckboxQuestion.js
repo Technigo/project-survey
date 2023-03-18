@@ -7,7 +7,14 @@ export const CheckboxQuestion = (props) => {
     <div className="checkboxQuestion-container">
       <p>{props.questionTitle}</p>
       <div>
+        <label
+          className="checkbox-label"
+          htmlFor={props.questionId}
+          aria-label={props.label}>
+          {props.label}
+        </label>
         <input
+          className="checkbox-input"
           type="checkbox"
           id={props.questionId}
           onChange={(event) => props.onValueUpdate(event.target.checked)} />

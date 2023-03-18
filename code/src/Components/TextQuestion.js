@@ -9,10 +9,12 @@ export const TextQuestion = (props) => {
       <div>
         <div className="label-input-div">
           <label
+            className="textQuestion-label"
             aria-label={props.label}
             htmlFor={props.questionId}>{props.label}
           </label>
           <input
+            className="textQuestion-label"
             title={props.label}
             type="text"
             id={props.questionId}

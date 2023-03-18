@@ -18,7 +18,3 @@ Alternatively, if you don't want a new git repo on your account;
 1. Install required dependencies with npm: `npm install`
 1. Start the project: `npm start`
 
-<a href="https://www.flaticon.com/free-icons/apartment" title="apartment icons">Apartment icons created by amonrat rungreangfangsai - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/villa" title="villa icons">Villa icons created by Freepik - Flaticon</a>
-<a href="https://www.flaticon.com/free-icons/townhouse" title="townhouse icons">Townhouse icons created by Freepik - Flaticon</a>
-Photo by  Damir: https://www.pexels.com/photo/barn-house-beside-tall-trees-during-winter-15483064/

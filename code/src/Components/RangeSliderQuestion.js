@@ -16,7 +16,11 @@ export const RangeSliderQuestion = (props) => {
           max="7500000"
           step="100000"
           onChange={(event) => props.onValueUpdate(event.target.value)} />
-        <label htmlFor={props.questionId}>{props.answers.price} {props.label}</label>
+        <label
+          htmlFor={props.questionId}
+          aria-label={props.label}>
+          {props.answers.price} {props.label}
+        </label>
       </div>
       <div className="buttons-container">
         <PreviousButton

@@ -13,7 +13,7 @@ import { Results } from 'Components/Results';
 
 export const Survey = () => {
   const [questionStep, setQuestionStep] = useState(0);
-  const [answers, setAnswers] = useState('');
+  const [answers, setAnswers] = useState({firstName:'Jamie', rooms: 3});
 
   const printQuestions = () => {
     console.log(questionStep)

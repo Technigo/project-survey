@@ -11,8 +11,9 @@ export const SelectQuestion = (props) => {
           <select
             id={props.questionId}
             name={props.questionId}
+            aria-label={props.questionId}
             onChange={(event) => props.onValueUpdate(event.target.value)}>
-            <option value="" disabled>Select {props.questionId} </option>
+            <option disabled value="">Select {props.questionId} </option>
             {props.option.map((option) => {
               return (
                 <option className="select-option" value={option}>{option}</option>

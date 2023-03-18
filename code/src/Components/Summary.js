@@ -5,12 +5,12 @@ import { PreviousButton } from './PreviousButton';
 export const Summary = (props) => {
   const printParking = () => {
     if (props.answers.typeOfHome === 'Apartment') {
-      return <p>{props.answers.parking === true ? 'Parking required' : 'Parking not required'}</p>
+      return <p className="parking-text">{props.answers.parking === true ? 'Parking required' : 'Parking not required'}</p>
     }
   }
   return (
     <div className="summary-container">
-      <p>Awesome {props.answers.firstName}!</p>
+      <p className="summary-title">Awesome {props.answers.firstName}!</p>
       <p>{props.summaryTitle}</p>
       <p>{props.answers.typeOfHome}</p>
       <p>{printParking()}</p>

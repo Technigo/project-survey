@@ -15,6 +15,7 @@ export const RadioQuestion = (props) => {
                 <img className="radio-icon" src={`../assets/${label}.png`} alt={`${label} type of property`} />
               </label>
               <input
+                className="radio-input"
                 type="radio"
                 id={props.questionId}
                 name={props.questionId}
