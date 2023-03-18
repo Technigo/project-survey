@@ -4,9 +4,9 @@ import { Starter } from './components/starter/starter'
 import { Pasta } from './components/pasta/pasta'
 import { Secondo } from './components/secondo/secondo'
 import { Dessert } from './components/dessert/dessert'
+import { Recap } from './components/recap/recap'
 
 export const App = () => {
-  const stepsTotalCount = 4
   // useState before the return function
   const [step, setStep] = useState(1);
   const [starter, setStarter] = useState('')
@@ -18,6 +18,14 @@ export const App = () => {
   const handleStepIncrease = () => {
     setStep(step + 1);
     console.log({ step })
+  }
+  // reset all states to their initial values
+  const handleRestart = () => {
+    setStep(1);
+    setStarter('');
+    setPasta('');
+    setSecondo('');
+    setDessert('');
   }
 
   return (
@@ -42,25 +50,32 @@ export const App = () => {
           dessert={dessert}
           setDessert={setDessert} />
       )}
-      {step > 1 && step < 5 && (
-        <p className="progress-meter">
-          <progress value={step} max={stepsTotalCount + 1}>
-            {step} of {stepsTotalCount}
-          </progress>
-          <span>
-            <br />
-            <b>{step}</b> / {stepsTotalCount}
-          </span>
-        </p>
+      {step === 5 && (
+        <Recap
+          starter={starter}
+          pasta={pasta}
+          secondo={secondo}
+          dessert={dessert} />
       )}
 
-      {step < 6 && (
-        <div className="step-btn">
+      {step < 5 && (
+        <div>
           <button
+            className="step-btn"
             type="button"
             onClick={handleStepIncrease}>
             {step === 1 && 'Create the perfect menu'}
-            {step > 1 && step < 6 && 'Next question'}
+            {step > 1 && step < 5 && 'Next question'}
+          </button>
+        </div>
+      )}
+      {step === 5 && (
+        <div>
+          <button
+            className="step-btn"
+            type="button"
+            onClick={handleRestart}>
+            Create a new menu
           </button>
         </div>
       )}

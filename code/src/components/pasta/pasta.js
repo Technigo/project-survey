@@ -9,7 +9,7 @@ export const Pasta = ({ pasta, setPasta }) => {
     setPasta(event.target.value);
   }
   return (
-    <div className="Pasta-container">
+    <div className="pasta-container">
       <h1>Welcome to the nonna restaurant</h1>
       <h2>Help us make a menu that suits you best!</h2>
       <p>Which pasta do you want?</p>
@@ -18,7 +18,7 @@ export const Pasta = ({ pasta, setPasta }) => {
         <img src={seafood} alt="seafood pasta" />
         <img src={spaghetti} alt="spaghetti al sugo" />
       </div>
-      <form>
+      <form className="selector">
         <select
           onChange={handlePastaChange}
           value={pasta}>

@@ -18,7 +18,7 @@ export const Dessert = ({ dessert, setDessert }) => {
         <img src={cake} alt="cake" />
         <img src={gelato} alt="gelato" />
       </div>
-      <form>
+      <form className="selector">
         <select
           onChange={handleDessertChange}
           value={dessert}>

@@ -14,7 +14,13 @@
 
 }
 .image-container-pasta img {
-    border-radius: 50%;
-    height: 90px;
-    width: 90px;
+    border-radius: 20%;
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+.selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

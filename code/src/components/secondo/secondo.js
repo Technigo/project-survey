@@ -10,7 +10,7 @@ export const Secondo = ({ secondo, setSecondo }) => {
     setSecondo(event.target.value);
   }
   return (
-    <div className="Secondo-container">
+    <div className="secondo-container">
       <h1>Welcome to the nonna restaurant</h1>
       <h2>Help us make a menu that suits you best!</h2>
       <p>Which Secondo do you want?</p>
@@ -20,7 +20,7 @@ export const Secondo = ({ secondo, setSecondo }) => {
         <img src={meatballs} alt="meatballs" />
         <img src={parmigiana} alt="parmigiana di melanzane" />
       </div>
-      <form>
+      <form className="selector">
         <select
           onChange={handleSecondoChange}
           value={secondo}>
