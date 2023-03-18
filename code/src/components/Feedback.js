@@ -13,6 +13,7 @@ export const Feedback = ({ feedback, setFeedback }) => {
         value={feedback}
         onChange={handleFeedbackChange}
         className="input-field-feedback"
+        placeholder="I would like to say..."
         rows={4}
         cols={20} />
     </label>

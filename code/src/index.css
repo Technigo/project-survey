@@ -32,8 +32,12 @@ code {
 
 h1 {
   background-color: #d6c4ad;
+  border: 6px double #8b6a7a;
   border-radius: 30px;
   padding: 15px;
+  
+  
+
 }
 
 .survey-result {
