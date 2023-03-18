@@ -16,7 +16,7 @@ const Summary = ({ name, type, genre, score, apocalypse }) => {
       </div>
       <div className="question-container">
         <div className="summary-box">
-          <h4>Looks like some nice choices you have selected {name}</h4>
+          <h4>Nice choices {name}</h4>
           <h5>Type: <span>{type}</span></h5>
           <h5>Genre: <span>{genre}</span></h5>
           <h5>Min IMDB score: <span>{score}</span></h5>

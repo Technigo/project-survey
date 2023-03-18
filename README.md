@@ -1,15 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project was centered around finally using React to its full potential by introducing State. The task was to create a Typeform-like survey to collect data from your users.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+For this weeks task, I quickly came up with the idea to create a site where the user answers questions about tv-preferences, and in the end it generates a random suggestion from an array based on data that has been filtered by the users answers. It turned out to also be great practice on arrays and ternary conditionals!
+
+I wanted to practice different forms of input, connecting it to the React Hook useState, and decided to include a text input, radio buttons, a drop down menu, a range slider and a checkbox. If I had time, I would include even more. One thing I was trying to create, but decided to skip since I thought it would take more time than I had left, was being able to select multiple genre options to filter on.
+
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
 
 https://matildas-tv-guide.netlify.app/
