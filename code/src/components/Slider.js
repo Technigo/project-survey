@@ -6,7 +6,7 @@ export const Slider = ({ slider, setSlider }) => {
   }
   return (
     <div className="slidecontainer">
-      <p>Do you like this workplace?<br /> Please input here how much: <span>{slider}%</span></p>
+      <p>How happy are you at work?<br /> Please input here: <span>{slider}%</span></p>
       <input
         type="range"
         min="0"

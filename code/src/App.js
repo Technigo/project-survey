@@ -31,7 +31,7 @@ export const App = () => {
 
   return (
     <div className="survey">
-      <h1>Welcome to this survey about your workplace!</h1>
+      <h1>Welcome to this employee survey!</h1>
       {submitted ? (
         // eslint-disable-next-line max-len
         <Summary name={name} workplace={workplace} time={time} feedback={feedback} slider={slider} />
@@ -63,14 +63,14 @@ export const App = () => {
           </div>
           {step === 6 && (
             <form onSubmit={handleSubmit}>
-              <p>You are done! Click submit to see your summary.</p>
+              <p>You are done!<br />Click submit to see your summary.</p>
               <button type="submit" className="submit-button">Submit</button>
             </form>
           )}
         </div>
       )}
       <footer>
-        Created by NinaW
+        ~Created by NinaW~
       </footer>
     </div>
   );
