@@ -1,0 +1,47 @@
+.title {
+  display: flex;
+  font-weight: 400;
+}
+
+.title p {
+  padding: 0.5rem 1rem 0 1rem;
+  color: #4fb0ae;
+}
+
+.title h1 {
+  font-weight: 400;
+}
+
+.title span {
+  padding: 0 0 0 0.5rem;
+  color: #4fb0ae;
+}
+.reset-button {
+  margin: 0 0 0 2rem;
+}
+form {
+  margin: 2rem;
+}
+input[type='text'],
+select {
+  width: 40vw;
+}
+
+input,
+select,
+label {
+  color: #4fb0ae;
+}
+
+button {
+  height: 2.5rem;
+  width: 4rem;
+  border-radius: 10px;
+  background-color: #4fb0ae;
+  color: #ededed;
+  text-align: center;
+}
+
+.submit-button {
+  margin-top: 1rem;
+}
