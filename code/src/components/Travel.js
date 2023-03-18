@@ -13,7 +13,7 @@ export const Travel = ({ travel, setTravel }) => {
         value={travel}>
         <option value="yes">Yes, I have plans to travel abroad.</option>
         <option value="yes">Yes, but only within my own country.</option>
-        <option value="no">No, I do not have plans to travel within next 6 months</option>
+        <option value="no">No, I do not have plans to travel within next 6 months. </option>
       </select>
     </>
   )

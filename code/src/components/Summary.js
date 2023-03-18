@@ -10,7 +10,7 @@ export const Summary = ({ name, travel, location, covid }) => {
       <h3>Just to summarise...</h3>
       <div className="summary">
         <p>When asked whether you will be travelling, you answered <span className="bold">{travel}</span>. </p>
-        <p>As for your planned/dream destination, you answered: <span className="bold">{location}</span></p>
+        <p>As for your planned/dream destinations, you answered: <span className="bold">{location}</span></p>
         <p>And lastly, has covid-19 changed your travel-habits? <span className="bold">{covid}</span>.</p>
       </div>
       <button type="button" onClick={() => window.location.reload(false)}>Start Over</button>

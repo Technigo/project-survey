@@ -1,7 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Segoe UI', sans-serif;
 }
 
 body {
@@ -18,6 +18,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*Layout and general styling*/
 
 .main-container {
   width: 23rem;
@@ -49,10 +51,14 @@ h1 {
 }
 
 img {
-  width: 160px;
-  height: 160px;
+  width: 11rem;
+  height: 11rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+
+.map-image {
+  width: 8rem;
 }
 
 .intro {
@@ -72,10 +78,15 @@ img {
 
 .question {
   color: rgb(239, 239, 239);
-  margin: 2rem auto 1rem auto;
-  font-size: 1.1rem;
+  margin: 1rem auto 1rem auto;
+  font-size: 1.2rem;
   font-family: 'Segoe UI', sans-serif;
+  width: 85%;
+  word-spacing: 2px;
+  text-align: center;
 }
+
+/*Summary-page*/
 
 .summary-container {
   display: flex;
@@ -95,17 +106,50 @@ img {
 }
 
 .summary {
-  margin: 1rem auto 1.2rem auto;
+  margin: 1.8rem auto 2.2rem auto;
 }
 
+
+/*Styling for inputs*/
 input {
   display: block;
+}
+
+.name-input {
+  width: 80%;
+  border-radius: 5px;
+  padding: 8px;
+  border: none;
+  box-shadow: 3px 3px rgb(219, 176, 248);
+  margin-top: 5px;
+}
+
+.travel-input {
+  width: 85%;
+  margin: 1rem auto 1rem auto;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(41, 52, 164);
+  font-weight: bold;
+}
+
+.location-input {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 3px 3px rgb(219, 176, 248);
+  color: rgb(41, 52, 164);
+  font-size: 1rem;
+  margin: 1rem auto 1rem auto;
 }
 
 .covid-input {
   display: inline;
 }
 
+
+
+/*Styling for buttons*/
 .button-container {
   display: flex;
   justify-content: center;
@@ -128,6 +172,8 @@ button:hover {
 }
 
 
+
+/*footer*/
 footer {
   text-align: center;
   color: rgb(41, 52, 164);
