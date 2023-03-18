@@ -6,12 +6,12 @@ export const Results = (props) => {
   console.log(data)
   console.log(data.listings.filter((listing) => listing.rooms === props.answers.rooms))
   return (
-    <div className="results-container">
-      <h1>{props.resultsTitle}</h1>
-      {
-        data.listings.filter((listing) => listing.rooms === parseInt(props.answers.rooms, 10))
+    <>
+      <h1 className="results-title">{props.resultsTitle}</h1>
+      <div className="results-container">
+        {data.listings.filter((listing) => listing.rooms === parseInt(props.answers.rooms, 10))
           .map((listing) => {
-            console.log(listing)
+            console.log(listing);
             return (
               <div
                 className="result-card"
@@ -28,11 +28,11 @@ export const Results = (props) => {
                 <p className="listing-info">{listing.location.namedAreas} </p>
               </div>
             );
-          })
-      }
+          })}
+      </div>
       <div className="buttons-container">
         <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
       </div>
-    </div>
+    </>
   );
 };

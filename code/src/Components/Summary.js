@@ -10,7 +10,7 @@ export const Summary = (props) => {
   }
   return (
     <div className="summary-container">
-      <p>Awesome, {props.answers.firstName}!</p>
+      <p>Awesome {props.answers.firstName}!</p>
       <p>{props.summaryTitle}</p>
       <p>{props.answers.typeOfHome}</p>
       <p>{printParking()}</p>

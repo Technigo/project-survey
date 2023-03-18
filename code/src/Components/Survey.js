@@ -114,7 +114,7 @@ export const Survey = () => {
         )}
         {questionStep === 5 && (
           <RangeSliderQuestion
-            questionTitle="What's the most you would spend on your new home?"
+            questionTitle="How much would you spend on your new home?"
             label="SEK"
             questionId="price"
             answers={answers}
