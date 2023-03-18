@@ -83,10 +83,6 @@ background-color: black;
 color: orange;
 }
 
-.oftenTravels {
-color: black;
-}
-
 @media (min-width: 768px) {
   
   .inner-wrapper {
