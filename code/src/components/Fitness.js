@@ -5,7 +5,7 @@ export const Fitness = ({ fitness, setFitness }) => {
     <>
       <h1>What is your level of physical fitness?</h1>
       <section>
-        <input id="name" value={fitness} onChange={(event) => setFitness(event.target.value)} placeholder="Your Fitness" required />
+        <input type="range" min="1" max="10" value={fitness} id="fitness" onChange={(event) => setFitness(event.target.value)} />
       </section>
     </>
   );

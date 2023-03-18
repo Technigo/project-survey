@@ -1,6 +1,6 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
-import { Greeting } from 'Greeting';
+import { Greeting } from 'components/Greeting';
 import { Name } from 'components/Name';
 import { Continent } from 'components/Continent';
 import { BadNews } from 'components/BadNews';
