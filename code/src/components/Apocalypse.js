@@ -4,7 +4,8 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
   return (
     <div className="apocalypse-container">
       <div className="headings">
-        <h2>Question {step} / 5</h2>
+        <h2 aria-hidden="true">Question {step} / 5</h2>
+        <h2 className="visually-hidden">Question {step} out of 5</h2>
         <hr />
       </div>
       <div className="question-container">
