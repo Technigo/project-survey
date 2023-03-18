@@ -1,46 +1,93 @@
 import React from 'react';
+import SnacksArray from './SnacksArray';
 
 const TypeOfSnack = ({ tasteGroup, type, setType }) => {
-  if (tasteGroup === ('Sweet')) {
+  const handleTypeChoice = (event) => {
+    setType(event.target.value);
+  };
+  const filteredForTasteGroup = SnacksArray.filter((snack) => snack.taste.includes(tasteGroup));
+  const uniqueTypes = [...new Set(filteredForTasteGroup.map((snack) => snack.type))];
+  (console.log({ tasteGroup }))
+  console.log({ uniqueTypes })
+  if (tasteGroup === ('sweet')) {
     return (
-      <form>
-        <p>Choose a type of snack</p>
-        <select
-          onChange={(event) => setType(event.target.value)}
-          value={type}>
-          <option value="" disabled>Type</option>
-          <option value="Candy">Candy</option>
-          <option value="Nuts">Nuts</option>
-          <option value="Fruit">Fruit</option>
-        </select>
-      </form>
+      <>
+        <h3>What type</h3>
+        <form>
+          {uniqueTypes.map((typeChoice) => (
+            <label
+              htmlFor="type"
+              key={typeChoice}>
+              <input
+                type="radio"
+                value={typeChoice}
+                onChange={handleTypeChoice}
+                checked={type === typeChoice} />
+              {typeChoice}
+            </label>
+          ))}
+        </form>
+      </>
     )
-  } else if ((tasteGroup === ('Sour')) || (tasteGroup === ('Salty'))) {
+  } else if (tasteGroup === ('sour')) {
     return (
-      <form>
-        <p>Choose a type of snack</p>
-        <select
-          onChange={(event) => setType(event.target.value)}
-          value={type}>
-          <option value="" disabled>Type</option>
-          <option value="Candy">Candy</option>
-          <option value="Fruit">Fruit</option>
-          <option value="Chips">Chips</option>
-        </select>
-      </form>
+      <>
+        <h3>What type</h3>
+        <form>
+          {uniqueTypes.map((typeChoice) => (
+            <label
+              htmlFor="type"
+              key={typeChoice}>
+              <input
+                type="radio"
+                value={typeChoice}
+                onChange={handleTypeChoice}
+                checked={type === typeChoice} />
+              {typeChoice}
+            </label>
+          ))}
+        </form>
+      </>
     )
-  } else {
+  } else if (tasteGroup === ('savory')) {
     return (
-      <form>
-        <p>Choose a type of snack</p>
-        <select
-          onChange={(event) => setType(event.target.value)}
-          value={type}>
-          <option value="" disabled>Type</option>
-          <option value="Nuts">Nuts</option>
-          <option value="Chips">Chips</option>
-        </select>
-      </form>
+      <>
+        <h3>What type</h3>
+        <form>
+          {uniqueTypes.map((typeChoice) => (
+            <label
+              htmlFor="type"
+              key={typeChoice}>
+              <input
+                type="radio"
+                value={typeChoice}
+                onChange={handleTypeChoice}
+                checked={type === typeChoice} />
+              {typeChoice}
+            </label>
+          ))}
+        </form>
+      </>
+    )
+  } else if (tasteGroup === ('salty')) {
+    return (
+      <>
+        <h3>What type</h3>
+        <form>
+          {uniqueTypes.map((typeChoice) => (
+            <label
+              htmlFor="type"
+              key={typeChoice}>
+              <input
+                type="radio"
+                value={typeChoice}
+                onChange={handleTypeChoice}
+                checked={type === typeChoice} />
+              {typeChoice}
+            </label>
+          ))}
+        </form>
+      </>
     )
   }
 }

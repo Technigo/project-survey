@@ -1,25 +1,26 @@
 import React from 'react';
-
-const tasteGroups = ['Sweet', 'Sour', 'Savory', 'Salty'];
+import SnacksArray from './SnacksArray';
 
 const TasteGroup = ({ tasteGroup, setTasteGroup }) => {
+  const uniqueTastes = [...new Set(SnacksArray.map((snack) => snack.taste))];
   const handleTasteChoice = (event) => {
     setTasteGroup(event.target.value)
   }
+  (console.log({ tasteGroup }))
   return (
     <>
       <h3>What taste would you like to see more of?</h3>
       <form>
-        {tasteGroups.map((tasteChoice) => (
+        {uniqueTastes.map((taste) => (
           <label
             htmlFor="tasteGroup"
-            key={tasteChoice}>
+            key={taste}>
             <input
               type="radio"
-              value={tasteChoice}
+              value={taste}
               onChange={handleTasteChoice}
-              checked={tasteGroup === tasteChoice} />
-            {tasteChoice}
+              checked={tasteGroup === taste} />
+            {taste}
           </label>
         ))}
       </form>
