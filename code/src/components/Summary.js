@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Survey = ({ name, volume, radioGroup, weapon, quest }) => {
+const Summary = ({ name, volume, raceGroup, weapon, quest }) => {
   return (
     <div className="summary">
       <h3>Summary:</h3>
       <p>Name: {name}</p>
-      <p>Race: {radioGroup}</p>
+      <p>Race: {raceGroup}</p>
       <p>Weapon of choise: {weapon}</p>
       <p>Quest: {quest}</p>
-      <p>How much you like the book: {volume}</p>
+      <p>Level of difficulty: {volume}</p>
       <a
         href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         target="_blank"
@@ -19,4 +19,4 @@ const Survey = ({ name, volume, radioGroup, weapon, quest }) => {
   );
 };
 
-export default Survey;
+export default Summary;

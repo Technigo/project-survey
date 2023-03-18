@@ -1,13 +1,49 @@
 * {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }
 
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: red;
+  background-image: url(./images/background.png);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000000;
   text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  color: #fff;
+  font-size: 44px;
+  margin: 20px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 22px;
+  padding-top: 20px;
+}
+
+.form-container {
+  background: #ffffff;
+  width: 50%;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 40px;
+  opacity: 90%;
+}
+
+.quest-dropdown select {
+  max-width: 250px;
+  width: -webkit-fill-available;
+}
+
+.weapon-section input {
+  max-width: 250px;
+  width: -webkit-fill-available;
 }

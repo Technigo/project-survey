@@ -2,7 +2,7 @@ import React from 'react';
 
 const Weapon = ({ weapon, onWeaponChange }) => {
   return (
-    <section className="name-section" alt="name input">
+    <section className="weapon-section" alt="weapon input">
       <h2>What is your weapon of choise?</h2>
       <input
         placeholder="Weapon of chosie"

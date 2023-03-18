@@ -1,17 +1,17 @@
 /* eslint-disable react/button-has-type */
 import React, { useState } from 'react';
-import Survey from './Survey';
+import Summary from './Summary';
 import Range, { ratingText } from './Range';
-import RadioGroup from './Radio';
+import RaceGroup from './Race';
 import Name from './Name';
 import Weapon from './Weapon';
 import Quest from './Quest';
 
-const SurveyForm = ({
+const SummaryForm = ({
   name,
   onNameChange,
-  radioGroup,
-  onRadioGroupChange,
+  raceGroup,
+  onRaceGroupChange,
   weapon,
   onWeaponChange,
   quest,
@@ -24,7 +24,7 @@ const SurveyForm = ({
     <form className="form-container" onSubmit={onSubmit}>
       <Name name={name} onNameChange={onNameChange} />
 
-      <RadioGroup onRadioChange={onRadioGroupChange} radioGroup={radioGroup} />
+      <RaceGroup onRaceChange={onRaceGroupChange} raceGroup={raceGroup} />
 
       <Weapon weapon={weapon} onWeaponChange={onWeaponChange} />
 
@@ -39,26 +39,26 @@ const SurveyForm = ({
 
 const Form = () => {
   const [name, setName] = useState('');
-  const [radioGroup, setRadioGroup] = useState('');
+  const [raceGroup, setRaceGroup] = useState('');
   const [weapon, setWeapon] = useState('');
   const [quest, setQuest] = useState('');
   const [volume, setVolume] = useState(3);
-  const [surveyComplete, setSurveyComplete] = useState(false);
+  const [summaryComplete, setSummaryComplete] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSurveyComplete(true);
+    setSummaryComplete(true);
   };
 
-  if (surveyComplete) {
+  if (summaryComplete) {
     return (
       <div>
         <header className="header">
           <h1 className="header-name">Adventure Awaits!</h1>
         </header>
-        <Survey
+        <Summary
           name={name}
-          radioGroup={radioGroup}
+          raceGroup={raceGroup}
           weapon={weapon}
           quest={quest}
           volume={ratingText[volume]} />
@@ -70,11 +70,11 @@ const Form = () => {
         <header className="header">
           <h1 className="header-name">Adventure Awaits!</h1>
         </header>
-        <SurveyForm
+        <SummaryForm
           name={name}
           onNameChange={(event) => setName(event.target.value)}
-          radioGroup={radioGroup}
-          onRadioGroupChange={(event) => setRadioGroup(event.target.value)}
+          raceGroup={raceGroup}
+          onRaceGroupChange={(event) => setRaceGroup(event.target.value)}
           weapon={weapon}
           onWeaponChange={(event) => setWeapon(event.target.value)}
           quest={quest}
