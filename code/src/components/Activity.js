@@ -1,6 +1,6 @@
 import React from 'react';
 
-const activechoice = ['Running 🏃🏻', 'Breathing 🌬', 'Movies 🍿 🎬', 'Not sure 😏'];
+const activechoice = ['Running 🏃🏻', 'Breathing 🌬', 'Movies 🍿 🎬', 'Walking 🚶🏽'];
 
 export const Activity = ({ activity, setActivity, step }) => {
   return (

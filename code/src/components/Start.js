@@ -10,9 +10,10 @@ export const Start = (begin) => {
         <h3>Hi!</h3>
       </div>
       <div className="start-info">
-        <p className="start-p">Do you feel stressed lately?</p>
-        <p className="start-p">Would you like to explore some methods to feel better?</p>
-        <p className="start-p">Let&apos;s take our first steps togheter...</p>
+        <p className="start-p">Have you been feeling a little bit stressed lately? <br />
+        I would like to help you feel better,
+        let&apos;s take our first steps togheter...
+        </p>
       </div>
       <button className="startBtn" type="button" onClick={handleClick}>Start</button>
     </div>

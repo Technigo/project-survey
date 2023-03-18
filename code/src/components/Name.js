@@ -10,7 +10,10 @@ export const Name = ({ name, setName, step }) => {
       <h4>Let&apos;s start of by introducing ourselves!
         What&apos;s your name?
       </h4>
-      <input type="text" value={name} onChange={handleNameChange} />
+      <input
+        type="text"
+        value={name}
+        onChange={handleNameChange} />
     </div>
   );
 }

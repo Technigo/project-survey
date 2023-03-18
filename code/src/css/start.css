@@ -4,6 +4,37 @@
     color:aquamarine;
 }
 
+.start-head {
+
+}
+
+
+.start-info {
+
+}
+
+.start-p {
+    color: rgb(235, 235, 251);
+    font-size: 14px;
+}
+
+.startBtn {
+    background-color: #fde2bf;
+    border: none;
+    border-radius: 50px;
+    color: #c42c2c;
+    font-size: .8em;
+    letter-spacing: 1px;
+    margin: 18px;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100px;
+}
+.startBtn:hover {
+    background-color: aqua;
+}
+
 .activity-container {
     display: flex;
     flex-direction: column;
@@ -14,5 +45,6 @@
     font-size: 15px;
     color: blanchedalmond;
 }
+
 
 

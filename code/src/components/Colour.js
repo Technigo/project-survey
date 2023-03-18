@@ -15,7 +15,7 @@ export const Colour = ({ colour, setColour, step }) => {
           <option value="yellow">Yellow</option>
           <option value="green">Green</option>
           <option value="purple">Purple</option>
-          <option value="Black">Black</option>
+          <option value="blue">Blue</option>
         </select>
       </form>
     </div>

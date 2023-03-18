@@ -1,0 +1,78 @@
+input[type=range] {
+    -webkit-appearance: none;
+    width: 400px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: #dddddd;
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    cursor: grab;
+  }
+  
+  input[type=range]:focus::-webkit-slider-thumb,
+  input[type=range]::-moz-focus-outer::-moz-range-thumb {
+    box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #bbbbbb;
+  }
+  
+  input[type=range]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    cursor: grab;
+  } 
+  
+  input[type=range]::-ms-track {
+    width: 100%;
+    cursor: pointer;
+    background-color: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  
+  input[type=range]::-ms-fill-lower {
+    background-color: #dddddd;
+    border-radius: 5px;
+  }
+  
+  input[type=range]::-ms-fill-upper {
+    background-color: #dddddd;
+    border-radius: 5px;
+  }
+  
+  input[type=range]::-ms-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    cursor: grab;
+    margin-top: -6px;
+  }
+
+  input[type=range]:active::-webkit-slider-thumb {
+    cursor: grabbing;
+  }
+  
+  input[type=range]:active::-moz-range-thumb {
+    cursor: grabbing;
+  }
+  
+  input[type=range]:active::-ms-thumb {
+    cursor: grabbing;
+  }
+  
+
+/* includes vendor prefixes for -webkit- (for Safari and older versions of Chrome),
+ -moz- (for Firefox), and -ms- (for Internet Explorer and Edge). With these prefixes,
+  the slider should be styled consistently across all web browsers.*/

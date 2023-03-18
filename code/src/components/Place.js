@@ -1,5 +1,7 @@
 import React from 'react';
 import ocean from '../img/ocean.png';
+import forest from '../img/forest.png';
+import home from '../img/home.png';
 
 export const Place = ({ place, setPlace, step }) => {
   const handlePlaceChange = (event) => {
@@ -13,8 +15,8 @@ export const Place = ({ place, setPlace, step }) => {
       <h4> Where do you feel the most at ease?</h4>
       <div className="place-img-container">
         <img src={ocean} alt="The ocean" />
-        <img src={ocean} alt="The ocean" />
-        <img src={ocean} alt="The ocean" />
+        <img src={forest} alt="The ocean" />
+        <img src={home} alt="The ocean" />
       </div>
       <form>
         <label htmlFor="ocean">
