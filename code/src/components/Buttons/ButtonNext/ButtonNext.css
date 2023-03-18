@@ -1,0 +1,31 @@
+.button-next {
+    display: flex;
+    justify-content: center;
+    width: 60px;
+    padding: 2px 6px;
+    font-size: 16px;
+    color: #000000;
+    background-color: transparent;
+    border: solid 1px #808080;
+    border-radius: 5%;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.button-next:hover {
+    background-color: #d6d1d1;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+    .button-next {
+        font-size: 18px;
+    }
+}
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+    .button-next {
+        width: 70px;
+        padding: 4px 6px;
+    }
+}

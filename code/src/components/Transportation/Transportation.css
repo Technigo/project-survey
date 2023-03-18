@@ -1,0 +1,54 @@
+.radio-wrapper legend {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+.radio-buttons-transport {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+.radio-buttons-transport label {
+    flex-direction: row;
+    align-self: center;
+    font-size: 20px;
+}
+
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+    .radio-wrapper legend {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .radio-buttons-transport {
+        flex-direction: row;
+        justify-content: space-around;
+        margin: 40px;
+    }
+
+    .radio-buttons-transport label {
+        font-size: 22px;
+    }
+
+    .radio-buttons-transport input {
+        margin: 5px;
+    }
+}
+
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+    .radio-wrapper legend {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+
+    .radio-buttons-transport label {
+        font-size: 24px;
+    }
+}

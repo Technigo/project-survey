@@ -1,0 +1,38 @@
+.date-wrapper legend {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+.date-wrapper input {
+    padding: 5px 10px;
+    font-size: 18px;
+    margin: 20px;
+}
+
+.date-wrapper input[type=date]:focus {
+    outline: solid 1px rgb(9, 9, 9);
+}
+
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+    .date-wrapper legend {
+        font-size: 24px;
+    }
+
+    .date-wrapper input {
+        padding: 5px 10px;
+        font-size: 20px;
+        margin: 30px;
+    }
+}
+
+
+/*Desktop media query*/
+@media (min-width: 1025px) {
+    .date-wrapper legend {
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+}

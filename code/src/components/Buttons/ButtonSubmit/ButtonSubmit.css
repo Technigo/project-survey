@@ -1,0 +1,23 @@
+.button-submit {
+    display: flex;
+    justify-content: center;
+    width: 80px;
+    padding: 4px 6px;
+    font-size: 16px;
+    color: #000000;
+    background-color: transparent;
+    border: solid 1px #808080;
+    border-radius: 5%;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.button-submit:hover {
+    background-color: #d6d1d1;
+}
+
+/*Tablet media query*/
+@media (min-width: 667px) {
+    .button-submit {
+        font-size: 18px;
+    }
+}

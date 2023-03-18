@@ -1,0 +1,47 @@
+.textbox-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.textbox-wrapper legend {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    align-self: center;
+}
+
+.textbox-wrapper input {
+    height: 100px;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.textbox:focus {
+    outline: solid 1px rgb(9, 9, 9);
+    font-weight: bold;
+}
+  
+
+  /*Tablet media query*/
+  @media (min-width: 667px) {
+    .textbox-wrapper legend {
+      font-size: 20px;
+      margin: 15px;
+    }
+
+    .textbox-wrapper input {
+        height: 100px;
+        width: 250px;
+    }
+
+    .textbox-wrapper input::placeholder {
+        font-size: 16px;
+    }
+  }
+  
+  
+  /*Desktop media query*/
+  @media (min-width: 1025px) {
+    .textbox-wrapper legend {
+      font-size: 22px;
+    }
+  }
