@@ -14,6 +14,7 @@ export const Topping = ({ topping, setTopping }) => {
                 value="yes"
                 onChange={handleToppingChange}
                 checked={topping === "yes"}
+                aria-label="Yes to chocolate topping"
             />
             Yes
             </label>
@@ -23,6 +24,7 @@ export const Topping = ({ topping, setTopping }) => {
                 value="no"
                 onChange={handleToppingChange}
                 checked={topping === "no"}
+                aria-label="No to chocolate topping"
             />
             No
         </label>

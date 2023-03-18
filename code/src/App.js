@@ -17,6 +17,7 @@ export const App = () => {
   }
 
   return (
+    <section className="main-container">
     <>
       <h1>The Popcorn picker 🍿</h1>
     
@@ -47,8 +48,10 @@ export const App = () => {
        <button type="button" onClick={handleStepIncrease}>OK</button>
     )}
   </>
+  </section>
   );
 }
 
+//Make fields required 
 //Add aria-labels
 //Add if/else if topping is chosen, will change the text under the result.

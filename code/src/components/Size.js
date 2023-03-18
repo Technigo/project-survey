@@ -14,6 +14,7 @@ export const Size = ({ size, setSize }) => {
                 value="Small"
                 onChange={handleSizeChange}
                 checked={size === "Small"}
+                aria-label="Small"
             />
             Small
         </label>
@@ -23,6 +24,7 @@ export const Size = ({ size, setSize }) => {
                 value="Medium"
                 onChange={handleSizeChange}
                 checked={size === "Medium"}
+                aria-label="Medium"
             />
             Medium
         </label>
@@ -32,6 +34,7 @@ export const Size = ({ size, setSize }) => {
                 value="Large"
                 onChange={handleSizeChange}
                 checked={size === "Large"}
+                aria-label="Large"
             />
             Large
         </label>

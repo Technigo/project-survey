@@ -19,3 +19,5 @@ export const Flavor = ({ flavor, setFlavor }) => {
         </form>
     );
 };
+
+// add aria-labels
