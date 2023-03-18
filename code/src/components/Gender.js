@@ -18,7 +18,7 @@ export const Gender = ({ gender, setGender }) => {
             value={genderType}
             onChange={handleGenderChange}
             checked={gender === genderType}
-            required />
+            required="required" />
           {genderType}
         </label>
       ))}

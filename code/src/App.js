@@ -4,12 +4,14 @@ import { Name } from './components/Name';
 import { Age } from './components/Age';
 import { Gender } from './components/Gender';
 import { Result } from './components/Result';
+import { Country } from './components/Country';
 
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [age, setAge] = useState(0);
   const [gender, setGender] = useState('');
+  const [country, setCountry] = useState('');
   const [error, setError] = useState(false);
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -34,9 +36,12 @@ export const App = () => {
         <Gender gender={gender} setGender={setGender} />
       )}
       {step === 4 && (
-        <Result name={name} age={age} gender={gender} />
+        <Country country={country} setCountry={setCountry} />
       )}
-      {step < 4 && (
+      {step === 5 && (
+        <Result name={name} age={age} gender={gender} country={country} />
+      )}
+      {step < 5 && (
         <>
           <p>
             Current step: {step}

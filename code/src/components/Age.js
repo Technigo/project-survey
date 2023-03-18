@@ -8,7 +8,7 @@ export const Age = ({ age, setAge }) => {
   return (
     <>
       <p>How old are you?</p>
-      <input type="number" min="0" value={age} onChange={handleAgeChange} required />
+      <input type="number" min="0" value={age} onChange={handleAgeChange} required="required" />
     </>
   );
 }
