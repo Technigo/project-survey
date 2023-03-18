@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +13,308 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+body {
+  /* background-image: url(./images/pexels-photo-4348401.jpeg); */
+  background-image: url(./images/iri-background.jpg);
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+p {
+  font-family: 'Press Start 2P', cursive;
+  color: #565151;
+  font-size: 15px;
+  line-height: 30px;
+  text-align: center;
+}
+
+/* body {
+   background-image: url(./images/pexels-photo-4348401.jpeg); 
+  background-image: url(./images/cat-pattern-1.jpg);
+  background-size: 15%;
+  background-repeat:repeat
+} */
+
+/* body {
+  background-image: url(./images/pexels-photo-4348401.jpeg); 
+  background-image: url(./images/cat-pattern.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+} */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-text {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;                                       
+  font-size: 15px;
+  text-align:center;
+  color: #fc4f84;
+  text-shadow: -.5625rem -.0625rem 0 #464444, .0625rem .0625rem 0 #685757;
+}
+
+.hero-wrapper {
+  margin-top: 100px;
+  background-image: url(./images/mobile-window.png);
+  background-size: 92%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: calc(50% - 5px) 5%;
+  height: 84vh;
+
+}
+
+.survey-body {
+  position: absolute;
+  top: 20%;
+  right: 0;
+  width: 75%;
+  height: 70%;
+  left: calc(50% - 75%/2);
+  /* margin: 100px auto; */
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(107, 99, 224, 0);
+  /* background-color: rgba(108, 99, 224, 0.184); */
+}
+
+.food-wrapper {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 80%;
+}
+
+.question2-image {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 2px auto;
+}
+
+input {
+  display: block;
+  margin: 0 auto;
+  font-size: 15px;
+  font-family: 'Press Start 2P', cursive;
+  width: 15rem;
+}
+
+select {
+  display: block;
+  width: 16rem;
+  margin: 0 auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: medium;
+  line-height: 15px;
+}
+
+button {
+  width: 150px;
+  height: 70px;
+  padding: 5px;
+  color: white;
+  line-height: 25px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: hotpink;
+}
+
+/* .question2 optgroup {
+  background: #b58585;
+  color: #000000;
+  font-style: normal;
+  font-weight: normal;
+} */
+
+.progress-bar-fill {
+  background-color: tomato;
+}
+
+.progress-bar {
+}
+
+/* Tablet MQ */
+
+@media (min-width: 768px) and (max-width: 991px) {
+    body {
+      /* background-image: url(./images/pexels-photo-4348401.jpeg); */
+      background-image: url(./images/iri-background.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  
+    .hero {
+      width: 100%;
+      display: flex;
+    }
+
+    .hero-text {
+      position: absolute;
+      width: 100%;
+      font-family: 'Press Start 2P', cursive;                                       
+      font-size: 30px;
+      text-align:center;
+      color: #fc4f84;
+      text-shadow: -.5625rem -.0625rem 0 #464444, .0625rem .0625rem 0 #685757;
+    }
+    
+    .hero-wrapper {
+      background-image: url(./images/hero-retro.png);
+      background-repeat:no-repeat;
+      background-size:100%;
+      background-position:center;
+      background-attachment: fixed;
+      height: 89vh;
+      width: 95%;
+      align-self: center;
+      overflow: hidden;
+      margin: auto 5px;
+    }
+  
+    .survey-body {
+      position: absolute;
+      width: 38%;
+      height: 50%;
+      top: 23%;
+      left: calc(50% - 40%/2);
+      /* margin: 100px auto; */
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      background-color: rgba(108, 99, 224, 0.184);
+    }
+}
+
+/* MQ for small-screen desktop */
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  body {
+    /* background-image: url(./images/pexels-photo-4348401.jpeg); */
+    background-image: url(./images/iri-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero {
+    width: 100%;
+    display: flex;
+  }
+
+  .hero-text {
+    position: absolute;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;                                       
+    font-size: 30px;
+    text-align:center;
+    color: #fc4f84;
+    text-shadow: -.5625rem -.0625rem 0 #464444, .0625rem .0625rem 0 #685757;
+  }
+  
+  .hero-wrapper {
+    background-image: url(./images/hero-retro.png);
+    background-repeat:no-repeat;
+    background-size:90%;
+    background-position:center;
+    background-attachment: fixed;
+    height: 80vh;
+    width: 80%;
+    align-self: center;
+    overflow: hidden;
+    margin: 50px auto;
+  }
+
+  .survey-body {
+    position: absolute;
+    width: 38%;
+    height: 50%;
+    top: 23%;
+    left: calc(50% - 40%/2);
+    /* margin: 100px auto; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(108, 99, 224, 0.184);
+  }
+}
+
+/* MQ for big-screen desktop*/
+
+@media screen and (min-width: 1200px) {
+
+  body {
+    /* background-image: url(./images/pexels-photo-4348401.jpeg); */
+    background-image: url(./images/iri-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero-text {
+    position: absolute;
+    width: 100%;
+    font-family: 'Press Start 2P', cursive;                                       
+    font-size: 30px;
+    text-align:center;
+    color: #fc4f84;
+    text-shadow: -.5625rem -.0625rem 0 #464444, .0625rem .0625rem 0 #685757;
+  }
+  
+  .hero-wrapper {
+    background-image: url(./images/hero-retro.png);
+    background-repeat:no-repeat;
+    background-size:70%;
+    background-position:center;
+    background-attachment: fixed;
+    height: 90vh;
+    width: 70%;
+    align-self: center;
+    overflow: hidden;
+    margin: 50px auto;
+  }
+
+  .survey-body {
+    position: absolute;
+    width: 38%;
+    height: 50%;
+    top: 25%;
+    left: calc(50% - 40%/2);
+    /* margin: 100px auto; */
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(107, 99, 224, 0);
+  }
+
+  .question2-image {
+    display: block;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+  }
+
+  select {
+    width: 20rem;
+  }
+
 }
