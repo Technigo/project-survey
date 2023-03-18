@@ -60,10 +60,10 @@ export const App = () => {
         {step === 5 && <Apocalypse apocalypse={apocalypse} setApocalypse={setApocalypse} step={step} />}
         {step < 6 && step !== 0 && (
           <div className="next-step">
-            <button type="button" onClick={handleStepIncrease}>
+            <button type="button" onClick={handleStepIncrease} aria-label="Button named Next Step">
                 Next step
             </button>
-            <button type="button" onClick={handleStepReset}>
+            <button type="button" onClick={handleStepReset} aria-label="Button named Reset All">
                 Reset All
             </button>
           </div>
@@ -71,19 +71,19 @@ export const App = () => {
         {step === 6 && (
           <>
             <Summary name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} />
-            <button type="button" onClick={handleStepIncrease} className="yes-btn">Yes!</button>
+            <button type="button" onClick={handleStepIncrease} className="yes-btn" aria-label="Button named Yes">Yes!</button>
           </>
         )}
         {step === 7 && (
           <>
             <Result name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} data={data} />
-            <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
+            <button type="button" onClick={handleStepReset} className="start-over-btn" aria-label="Button named Start over">Start over</button>
           </>
         )}
       </div>
       <footer>
         <hr />
-        <p>This site is created by <a href="https://www.linkedin.com/in/matilda-frid-7923bb88/" target="_blank" rel="noreferrer">Matilda Frid.</a></p>
+        <p>This site is created by <a href="https://www.linkedin.com/in/matilda-frid-7923bb88/" target="_blank" rel="noreferrer" aria-label="Link to Matilda Frids Linkedin">Matilda Frid.</a></p>
       </footer>
     </>
   );
