@@ -22,6 +22,7 @@ export const Rate = ({ rate, setRate, step, handleStepIncrease }) => {
           <p>Last question, on a scale of 1 to 10, how would you rate your interaction with us?</p>
         </div>
         <div className="rate-slider">
+          <span>1</span>
           <input
             type="range"
             id="rate-slider"
@@ -30,8 +31,9 @@ export const Rate = ({ rate, setRate, step, handleStepIncrease }) => {
             max="10"
             value={rate}
             onChange={handleRateChange} />
-          <button type="button" onClick={handleNextButtonClick} required>Next</button>
+          <span>10</span>
         </div>
+        <button type="button" onClick={handleNextButtonClick} required>Next</button>
       </div>
     </div>
   );

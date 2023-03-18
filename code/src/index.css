@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+.name-input {
+  margin-right: 155px;
+}
+
+.name-input label {
+  margin-right: 10px;
+}
+
 .name-container {
   display: flex;
   height: 100vh;
@@ -20,23 +28,25 @@ code {
 .name-form {
   display: flex;
   justify-content:space-between;
+  font-size: 22px;
   }
 
 .fashion-image {
   float: left;
   width: 50%;
-  object-fit: fill;
+  object-fit: cover;
   height: 100vh;
 }
 
 .name-header {
   display: flex;
   width: 50%;
-  text-align: center;
+  text-align: left;
   justify-content: center;
-  align-items: center;
+  align-items: left;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .right-container {
@@ -48,7 +58,6 @@ code {
   float: right;
   height: 100vh;
 }
-
 
 
 .hear-container {
@@ -64,6 +73,7 @@ code {
   align-items: center;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .form {
@@ -72,14 +82,16 @@ code {
   align-items: center;
   justify-content: center;
   font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .select {
   margin-bottom: 1rem;
+  font-size: 22px;
 }
 
 button {
-  margin-top: 1rem;
+  margin-top: 3rem;
   background-color: #aaf0d1;
   color: white;
   border: none;
@@ -106,14 +118,23 @@ button:hover {
   align-items: center;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .delivery-options {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 30px;
   gap: 10px;
   font-family: 'Roboto', sans-serif;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .overall-header {
@@ -122,6 +143,7 @@ button:hover {
   align-items: center;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .overall-form {
@@ -138,32 +160,82 @@ button:hover {
   align-items: center;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
+  font-size: 22px;
 }
 
 .purchase-options {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 10px;
-  font-family: 'Roboto', sans-serif;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
 
-.rate-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: 'Roboto', sans-serif;
-}
 
-.rate-slider {
-  display: flex;
-  justify-content: center;
-  margin-top: 30px;
-  gap: 10px;
-  font-family: 'Roboto', sans-serif;
-}
+  
+  .rate-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+  }
+  
+  .rate-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .rate-slider span {
+    font-size: 20px;
+    font-weight: bold;
+  }
 
+  input[type=range] {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #aaf0d1;
+    outline: none;
+  }
+  
+  input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    cursor: pointer;
+  }
+  
+  .right-container button {
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .right-container button:hover {
+    background-color: #27ae60;
+  }
+
+  .name-input button {
+    align-items: center;
+    justify-content: center;
+  }
+  
 .thanks-header {
   display: flex;
   justify-content: center;
@@ -181,5 +253,10 @@ button:hover {
   gap: 10px;
   font-family: 'Roboto', sans-serif;
   font-size: 22px;
+}
+
+.name-container,
+.hear-container {
+  transition: transform 0.5s ease-out;
 }
 

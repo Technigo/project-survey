@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
@@ -21,8 +22,7 @@ export const Name = ({ name, setName, step, handleStepIncrease }) => {
       <div className="right-container">
         <div className="name-header">
           <h2>Welcome to our Customer Survey!</h2>
-          <p>Please take some time to fill this out in order for us</p>
-          <p>to give you the best possible customer experience.</p>
+          <p>Please take some time to fill this out in order for us to give you the best possible customer experience.</p>
           <p>First question, what is your name?</p>
         </div>
         <div className="name-form">
