@@ -16,7 +16,7 @@ export const Topping = ({ topping, setTopping }) => {
                 checked={topping === "yes"}
                 aria-label="Yes to chocolate topping"
             />
-            Yes
+            Yes please
             </label>
             <label>
             <input
@@ -26,8 +26,11 @@ export const Topping = ({ topping, setTopping }) => {
                 checked={topping === "no"}
                 aria-label="No to chocolate topping"
             />
-            No
+            No thanks
         </label>
         </form>
     );
 }
+
+// If yes, display chocolate.
+// If no, without chocolate. 
