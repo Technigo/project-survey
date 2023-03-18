@@ -3,7 +3,7 @@ import React from 'react';
 export const Body = ({ body, setBody }) => {
   return (
     <section>
-      <form>
+      <form onSubmit={(event) => event.precentDefault()}>
         <h1>Which one do you think is your best body part? </h1>
         <label>
           <input

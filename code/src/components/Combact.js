@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Combact = ({ combact, setCombact }) => {
   return (
-    <form>
+    <form onSubmit={(event) => event.precentDefault()}>
       <h1> Which do you think is the most effective form of combat? </h1>
       <label>
         <input

@@ -26,7 +26,7 @@ export const App = () => {
   };
   return (
     <section className="contentBox">
-      <div className="question">
+      <div className="questionBox">
         {step === 0 && (<Greeting />)}
         {step === 1 && (<Human human={human} setHuman={setHuman} />)}
         {step === 2 && (<Name name={name} setName={setName} />)}
@@ -36,7 +36,7 @@ export const App = () => {
         {step === 6 && (<Combact combact={combact} setCombact={setCombact} />)}
         {step === 7 && (<Weapon weapon={weapon} setWeapon={setWeapon} />)}
         {step === 8 && (<Body body={body} setBody={setBody} />)}
-        {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combact={combact} body={body} />)}
+        {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combact={combact} weapon={weapon} body={body} />)}
       </div>
       <button type="button" onClick={handleStepIncrease}> Click for hope </button>
       <Footer />

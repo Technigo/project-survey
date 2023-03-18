@@ -4,7 +4,7 @@ export const Human = (human, setHuman) => {
   return (
     <>
       <h1>The question is: </h1>
-      <form>
+      <form onSubmit={(event) => event.precentDefault()}>
         <label>
         Are you human?
           <input
