@@ -8,7 +8,7 @@ export const ExperienceSlider = ({ experience, setExperience }) => {
 
   return (
     <>
-      <p>Years of Experience do you have</p>
+      <p>How many years of experience do you have?</p>
       <input
         type="range"
         min="0"

@@ -8,7 +8,7 @@ export const Company = ({ company, setCompany }) => {
 
   return (
     <>
-      <p>Mentor Current Company </p>
+      <p>Mentors Current Company </p>
       <select value={company} onChange={handleCompanyChange}>
         <option value="">Select Company</option>
         <option value="Volvo">Volvo</option>

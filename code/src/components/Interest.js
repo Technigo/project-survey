@@ -8,7 +8,7 @@ export const Interest = ({ area, setArea }) => {
 
   return (
     <>
-      <p>What area are you interested in?</p>
+      <p>Which area are you interested in?</p>
       <select value={area} onChange={handleAreaChange}>
         <option value="">Select your area of interest</option>
         <option value="Frontend">Frontend</option>

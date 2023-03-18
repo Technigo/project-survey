@@ -15,7 +15,7 @@ export const Calls = ({ calls, setCalls }) => {
 
   return (
     <>
-      <p>How many calls per month do you like with your mentor?</p>
+      <p>How many calls per month would you like with your mentor?</p>
       {options.map((option) => (
         <label key={option.value}>
           <input
