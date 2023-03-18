@@ -75,10 +75,11 @@ button:hover {
 
 .question-wrapper {
   background-color: white;
-  margin: 50px auto;
+  margin: 20px auto;
   width: 90%;
   max-width: 1200px;
-  height: 575px;
+  height: 90vh; 
+  /* height is set to 90% of the viewport so the footer shouldn't be floating in midair */
   border-radius: 30px;
   padding: 20px;
   display: flex;
@@ -157,14 +158,16 @@ input[type="range"] {
 
 .summary-wrapper {
   background-color: white;
-  margin: 50px auto;
+  margin: 20px auto;
   width: 90%;
   max-width: 1200px;
+  min-height: 90vh; 
   border-radius: 30px;
   padding: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .summary-component {
@@ -195,7 +198,10 @@ input[type="range"] {
 .result-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 15px 0;
+  height: 90vh; 
 }
 
 .result-wrapper p {
