@@ -12,6 +12,7 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
         <form className="form-checkbox">
           <label htmlFor="apocalypsecheck">
                 Yes please
+            {apocalypse ? 'Checked: ' : 'Not checked: '}
             <input
               type="checkbox"
               className="apocalypsecheckbox"
