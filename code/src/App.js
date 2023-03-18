@@ -3,8 +3,10 @@ import { Survey } from './components/Survey';
 
 export const App = () => {
   return (
-    <div>
-      <Survey />
+    <div className="hero-image">
+      <div className="app-container">
+        <Survey />
+      </div>
     </div>
   );
 }
