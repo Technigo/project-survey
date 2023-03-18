@@ -25,7 +25,7 @@ const Starter = (props) => {
         <p><span className="emphasis">Fear no more!</span> Matilda's TV support is here to help you find a good show to put on. We are filled with only shows that Matilda has seen and would recommend. Answer a few questions, and we will give you a suggestion.</p>
         <p>Let's get started!</p>
       </div>
-      <button className="startbtn" type="button" onClick={handleClick} aria-label="Button named Start">Start</button>
+      <button className="startbtn" type="button" onClick={handleClick} aria-label="Button named Start" aria-hidden="false">Start</button>
       <img src="https://i.postimg.cc/gjF9yC0z/pexels-jeshootscom-1040159.jpg" className="start-img" alt="woman watching tv" aria-label="image of woman watching tv" />
     </div>
   )
