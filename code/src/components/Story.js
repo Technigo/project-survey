@@ -36,7 +36,7 @@ export const Story = ({ fairyName, color, horn, loveAct, name }) => {
           that magical ride with<span className="fairy-name-span2">{fairyName}</span>, the unicorn.
         </p>
         <p>
-          From that day on, whenever <span className="name-span2">{name}</span> felt sad or lost the little creature visited <span className="fairy-name-span">{fairyName}</span>in the meadow.
+          From that day on, whenever <span className="name-span2">{name}</span> felt sad or lost the little creature visited <span className="fairy-name-span">{fairyName} </span>in the meadow.
           <span className="fairy-name-span2"> {fairyName}</span> was always there to help see the beauty in the world.
         </p>
         <p>
