@@ -42,6 +42,10 @@
         "allowSingleLine": true
       }
     ],
+    "linebreak-style":[
+      "off",
+      "unix"
+    ],
     "comma-dangle": [
       "error",
       "never"
