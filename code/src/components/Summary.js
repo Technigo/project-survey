@@ -11,7 +11,7 @@ const Summary = ({ name, type, genre, score, apocalypse }) => {
   return (
     <div className="summary-container">
       <div className="headings">
-        <h2>Summary <span className="emoji">📺</span></h2>
+        <h2>Summary <span role="img" className="emoji" aria-label="tv emoji">📺</span></h2>
         <hr />
       </div>
       <div className="question-container">

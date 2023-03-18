@@ -35,7 +35,7 @@ const Summary = ({ name, type, genre, score, apocalypse, data }) => {
   return (
     <div className="container result">
       <div className="headings">
-        <h2>Result <span className="emoji">🍿</span></h2>
+        <h2>Result <span role="img" className="emoji" aria-label="popcorn emoji">🍿</span></h2>
         <hr />
       </div>
       {filteredApocalypseArray.length !== 0 ? (
@@ -51,7 +51,7 @@ const Summary = ({ name, type, genre, score, apocalypse, data }) => {
             </div>
           </div>
           <div className="postercontainer">
-            <a href={filteredApocalypseArray[i].url} target="_blank" rel="noreferrer"><img src={filteredApocalypseArray[i].poster} alt="poster with link" className="posterimg" /></a>
+            <a href={filteredApocalypseArray[i].url} target="_blank" rel="noreferrer"><img src={filteredApocalypseArray[i].poster} alt="poster with link" className="posterimg" aria-label="Poster image with link to IMDB" /></a>
           </div>
         </>
       ) : (
