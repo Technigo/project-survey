@@ -54,7 +54,7 @@ const Form = () => {
     return (
       <div>
         <header className="header">
-          <h1 className="header-name">Adventure Awaits!</h1>
+          <h1 className="header-name">Lets send you off!</h1>
         </header>
         <Summary
           name={name}

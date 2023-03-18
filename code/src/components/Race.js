@@ -5,10 +5,10 @@ const RaceGroup = ({ onRaceChange, raceGroup }) => {
 
   return (
     <>
-      <h2 className="question-race" alt="race input">
+      <h2 className="race-container" alt="race input">
         What race are you?
       </h2>
-      <div className="first-race">
+      <div className="race-input">
         {raceGroups.map((group) => (
           <label key={group} htmlFor={group} className="label-container">
             <input
