@@ -8,7 +8,7 @@ const Type = ({ type, setType, step, handleStepIncrease }) => {
   return (
     <div className="type-container">
       <div className="headings">
-        <h2 aria-label={`Question ${step} out of 5`} aria-hidden="true">Question {step} / 5</h2>
+        <h2 aria-label={`Question ${step} out of 5`} aria-hidden="false">Question {step} / 5</h2>
         <hr />
       </div>
       <div className="question-container">
