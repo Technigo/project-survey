@@ -7,10 +7,10 @@ export const Calls = ({ calls, setCalls }) => {
   };
 
   const options = [
-    { value: '1-2', label: '1-2' },
-    { value: '3-4', label: '3-4' },
-    { value: '5-6', label: '5-6' },
-    { value: '7+', label: '7+' }
+    { value: '  1-2', label: '  1-2' },
+    { value: '  3-4', label: '  3-4' },
+    { value: '  5-6', label: '  5-6' },
+    { value: '  7+', label: '  7+' }
   ];
 
   return (

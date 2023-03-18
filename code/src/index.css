@@ -48,9 +48,10 @@ button:hover {
 .buttonswrapper{
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  gap: 20px;
-
+  align-self: center;
+  justify-content: space-between;
+  gap: 40px;
+  
 }
 
 li {
@@ -87,7 +88,26 @@ input, select {
   height: 28px;
   cursor: pointer;
   font-family: 'Satoshi';
+  font-size: 18px;
+  color: gray;
+}
 
+
+.mentorimg{
+  border-radius: 50%;
+  opacity: 70%;
+  width: 150px;
+  height: 150px;
+  display:flex;
+  flex-direction: column;
+  align-self: center;
+
+}
+
+.description{
+  text-align: center;
+  padding: 30px;
+  line-height: 30px;
 }
 
 

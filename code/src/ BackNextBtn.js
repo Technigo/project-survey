@@ -1,3 +1,5 @@
+/*
+
 import React, { useState } from 'react';
 
 export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) => {
@@ -27,3 +29,5 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
     </>
   );
 };
+
+*/

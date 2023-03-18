@@ -8,6 +8,7 @@ import { ProgressBar } from 'components/ProgressBar';
 import { ExperienceSlider } from 'components/ExperienceSlider';
 import { Company } from 'components/Company';
 import AnimatedPhrase from './components/AnimatedPhrase';
+import descriptions from './descriptions.json'
 
 export const App = () => {
   const [step, setStep] = useState(0);
@@ -63,9 +64,9 @@ export const App = () => {
         )}
 
         {step === 7 && (
-          <Result />
+          <Result descriptions={descriptions[area]} />
         )}
-        <div buttonswrapper>
+        <div className="buttonswrapper">
           {step > 0 && step < 7 && (
             <button className="next" type="button" onClick={handleStepDecrease}> BACK </button>
           )}
