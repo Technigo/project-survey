@@ -9,17 +9,19 @@ export const Rate = ({ rate, setRate }) => {
   return (
     <form className="rateForm">
       <p>How would you rate my progress so far?</p>
-      {ratingGroup.map((rating) => (
-        <label key={rating} className="rateLabel">
-          <input
-            type="radio"
-            value={rating}
-            onChange={handleRateChange}
-            checked={rate === rating} />
-          <span className="customRadio" />
-          {rating}
-        </label>
-      ))}
+      <div className="rateBox">
+        {ratingGroup.map((rating) => (
+          <label key={rating} className="rateLabel">
+            <input
+              type="radio"
+              value={rating}
+              onChange={handleRateChange}
+              checked={rate === rating} />
+            <span className="customRadio" />
+            {rating}
+          </label>
+        ))}
+      </div>
     </form>
   )
 }

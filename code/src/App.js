@@ -27,7 +27,7 @@ export const App = () => {
     setStep(1)
   }
   return (
-    <>
+    <div className="mainBody">
       <div className="mainTop">
         <Logo />
         <div className="topHeader">
@@ -68,6 +68,6 @@ export const App = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
