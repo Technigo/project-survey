@@ -11,7 +11,7 @@ export const SummaryPage = ({ name, ageGroup, product, range, onClickBack, onCli
                     Thank you {name}!
                     You are in age group: {ageGroup},
                     you purchase {product} from us,
-                    your satisfaction is {range}
+                    your satisfaction is {range} out of 10.
                 </h2>
             </div>
             <div className="buttonWraperBox">
