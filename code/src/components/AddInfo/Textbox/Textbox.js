@@ -18,9 +18,7 @@ export const Textbox = ({ textbox, setTextbox }) => {
           name="textbox-free"
           onChange={handleTextboxChange}
           value={textbox}
-          placeholder="Enter text here..."
           required
-          aria-describedby="textbox-instructions"
           maxLength={100} />
       </label>
     </fieldset>

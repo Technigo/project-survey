@@ -1,8 +1,11 @@
 .button-submit {
+    display: flex;
+    justify-content: center;
     width: 80px;
     padding: 4px 6px;
     font-size: 16px;
     color: #000000;
+    background-color: transparent;
 }
 
 /*Tablet media query*/

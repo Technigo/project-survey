@@ -14,16 +14,11 @@
     height: 100px;
 }
 
-.textbox-wrapper input::placeholder {
-    text-align: left;
-    font-size: 14px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 3px;
+.textbox:focus {
+    outline: solid 1px rgb(9, 9, 9);
+    font-weight: bold;
 }
   
-
 
   /*Tablet media query*/
   @media (min-width: 667px) {
