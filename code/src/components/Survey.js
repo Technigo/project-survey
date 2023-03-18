@@ -4,7 +4,7 @@ import { Result } from './Result'
 export const Survey = () => {
   const [answerOne, setAnswerOne] = useState('')
   const [answerTwo, setAnswerTwo] = useState('not good')
-  const [answerThree, setAnswerThree] = useState('noodles')
+  const [answerThree, setAnswerThree] = useState('plain spaghetti')
   const [surveyStep, setSurveyStep] = useState(0)
 
   return (
@@ -63,7 +63,7 @@ export const Survey = () => {
             <select
               value={answerThree}
               onChange={(e) => setAnswerThree(e.target.value)}>
-              <option value="noodles">plain spaghetti</option>
+              <option value="plain spaghetti">plain spaghetti</option>
               <option value="ravioli">ravioli</option>
               <option value="tortellini">tortellini</option>
             </select>

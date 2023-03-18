@@ -13,7 +13,7 @@ export const Result = (props) => {
 
   if (props.answerTwo === 'bad' || props.answerTeo === 'really bad') { badSchool = true; }
 
-  if (props.answerThree === 'noodles') { thinPasta = true; }
+  if (props.answerThree === 'plain spaghetti') { thinPasta = true; }
 
   if (longName && badSchool && thinPasta) {
     song = 'American Football - Never Meant';
