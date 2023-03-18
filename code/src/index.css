@@ -1,6 +1,7 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
 body {
@@ -10,6 +11,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:  rgb(241, 224, 252);
 }
 
 code {
@@ -18,17 +20,118 @@ code {
 }
 
 .main-container {
-  border: 2px blue dotted;
+  width: 23rem;
+  margin: 2rem auto auto auto;
+}
+
+h1 {
+  color: rgb(62, 73, 199);
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 2.5rem;
+  padding-bottom: 0.4rem;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .form-container {
-  border: 2px orangered dotted;
+  background-color: rgb(62, 73, 199);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: center;
+  min-height: 450px;
+  padding: 1rem;
+}
+
+img {
+  width: 160px;
+  height: 160px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  text-align: center;
+  font-weight: bold;
+  width: 75%;
+  color: white;
+  word-spacing: 2px;
 }
 
 .form {
-  border: 2px purple dotted;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question {
+  color: rgb(239, 239, 239);
+  margin: 2rem auto 1rem auto;
+  font-size: 1.1rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  width: 90%
+}
+
+.summary-container h2 {
+  text-align: center;
+}
+
+.summary-container h3 {
+  margin: 1rem auto auto auto;
+  text-align: center; 
+}
+
+.summary {
+  margin: 1rem auto 1.2rem auto;
+}
+
+input {
+  display: block;
+}
+
+.covid-input {
+  display: inline;
 }
 
 .button-container {
-  border: 2px purple dotted;
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+button {
+  border: none;
+  padding: 0.5em 2em;
+  border-radius: 20px;
+  background-color: rgb(239, 239, 239);;
+  box-shadow: 4px 4px rgb(219, 176, 248);
+  font-weight: bold;
+  font-size: 1rem;
+  color: rgb(41, 52, 164);
+}
+
+button:hover {
+  box-shadow: 5px 5px rgb(219, 176, 248);
+}
+
+
+footer {
+  text-align: center;
+  color: rgb(41, 52, 164);
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 10px;
 }
