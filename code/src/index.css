@@ -101,13 +101,25 @@ input, select {
   display:flex;
   flex-direction: column;
   align-self: center;
+  margin-top: 40px;
 
 }
 
 .description{
-  text-align: center;
-  padding: 30px;
+  text-align:start;
+  padding-top: 25px;
   line-height: 30px;
 }
+
+@media (max-width: 500px)
+{
+  .description{
+    width: 250px;
+  }
+}
+
+
+
+
 
 
