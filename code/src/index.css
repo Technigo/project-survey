@@ -200,16 +200,18 @@ button {
   border: none;
   padding: 0.5em 2em;
   border-radius: 20px;
-  background-color: rgb(239, 239, 239);;
-  box-shadow: 4px 4px rgb(219, 176, 248);
+  background-color: rgb(239, 239, 239);
   font-weight: bold;
   font-size: 1rem;
   color: rgb(41, 52, 164);
   margin-top: 1.5rem;
+  transition: 0.3s;
 }
 
 button:hover {
-  box-shadow: 5px 5px rgb(219, 176, 248);
+  box-shadow: 5px 5px rgb(183, 146, 208);
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 /*footer*/
