@@ -20,14 +20,20 @@ code {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 50px;
-  background-image: url('../public/images/blommagul.jpg');
+  padding: 25px;
+  background-image: url('../public/images/background-survey.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: black;
   text-align: center;
  
+}
+
+h1 {
+  background-color: #d6c4ad;
+  border-radius: 30px;
+  padding: 15px;
 }
 
 .survey-result {
@@ -44,6 +50,8 @@ code {
   justify-items: center;
   justify-content: center;
   color: rgb(16, 16, 16);
+  background-color: rgb(187, 178, 142);
+  border-radius: 20px;
 }
 
 .feedback-label, .name-label, .time-label {
@@ -70,7 +78,7 @@ code {
 
 
 .submit-button {
-  color:aliceblue;
+  color:rgb(36, 37, 38);
   background-color: rgb(236, 224, 120);
   font-size: 16px;
   cursor: pointer;
@@ -78,13 +86,10 @@ code {
   height: 80px;
   border-radius: 15px;
   margin-top: 20px;
+  margin-bottom: 30px;
 
 }
 
-.survey-button {
-  display: flex;
-  justify-content: center;
-}
 
 .next-button {
   
@@ -118,12 +123,16 @@ code {
 
 h2 {
   color: rgb(14, 13, 13);
+  font-size: x-large;
   
 }
 
 p {
   color: rgb(14, 14, 14);
   font-size: 30px;
+  font-weight: bolder;
+  opacity: 0.8;
+  border-radius: 10px;
 }
 
 select {
@@ -155,9 +164,10 @@ select:focus {
   flex-direction: row;
   height: 20px;
   background-color: rgb(220, 170, 62);
-  border: solid #333 2px;
+  border: solid #948f6e 2px;
   transition: width 0.3s ease-in-out;
   margin-top: 20px;
+  border-radius: 10px;
 }
 
 .slidecontainer {
@@ -188,7 +198,7 @@ input[type=range]::-webkit-slider-thumb {
   width: 20px;
   height: 20px;
   border-radius: 20%;
-  background-color: rgb(33, 89, 219);
+  background-color: rgb(41, 31, 27);
   cursor: pointer;
 }
 
@@ -209,4 +219,10 @@ input[type=range]::-webkit-slider-runnable-track {
 
 input[type=range]:focus::-webkit-slider-runnable-track {
   background-color: rgb(215, 176, 23);
+}
+
+footer {
+  margin-top: 50px;
+  color: #495057;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }

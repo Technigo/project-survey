@@ -38,6 +38,7 @@ export const Workplace = ({ workplace, setWorkplace }) => {
         id="workplace"
         value={workplace}
         onChange={handleWorkplaceChange}
+        readOnly
         className="input-field" />
     </label>
   )

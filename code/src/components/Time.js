@@ -18,6 +18,7 @@ export const Time = ({ time, setTime }) => {
         id="time"
         value={time}
         onChange={handleTimeChange}
+        readOnly
         className="input-field" />
     </label>
   );

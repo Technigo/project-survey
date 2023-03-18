@@ -5,11 +5,11 @@ export const Summary = ({ name, workplace, time, slider, feedback }) => {
     <div className="survey-result">
       <h2>Thank you for filling out this form!</h2>
       <h3>Summary:</h3>
-      <p>Name: {name}</p>
-      <p>Workplace: {workplace}</p>
-      <p>Time at workplace: {time}</p>
-      <p>Your input: {slider} %</p>
-      <p>Feedback: {feedback}</p>
+      <h2>Name: {name}</h2>
+      <h2>Workplace: {workplace}</h2>
+      <h2>Time at workplace: {time}</h2>
+      <h2>Your input: {slider} %</h2>
+      <h2>Feedback: {feedback}</h2>
     </div>
   );
 };

@@ -9,7 +9,7 @@ export const Slider = ({ slider, setSlider }) => {
       <p>Do you like this workplace?<br /> Please input here how much: <span>{slider}%</span></p>
       <input
         type="range"
-        min="1"
+        min="0"
         max="100"
         value={slider}
         onChange={handleSliderChange}

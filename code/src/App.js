@@ -63,12 +63,15 @@ export const App = () => {
           </div>
           {step === 6 && (
             <form onSubmit={handleSubmit}>
+              <p>You are done! Click submit to see your summary.</p>
               <button type="submit" className="submit-button">Submit</button>
             </form>
           )}
         </div>
       )}
+      <footer>
+        Created by NinaW
+      </footer>
     </div>
-
   );
 }
