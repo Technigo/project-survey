@@ -12,6 +12,7 @@
 
 .textbox-wrapper input {
     height: 100px;
+    font-family: 'Frank Ruhl Libre', serif;
 }
 
 .textbox:focus {

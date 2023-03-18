@@ -15,15 +15,36 @@ em {
   font-weight: bold;
 }
 
-.regards-text {
-  margin: 0;
+.regards-text p {
+  margin: 5px;
 }
 
   /*Tablet media query*/
   @media (min-width: 667px) {
+    .summary-wrapper h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+    
+    .summary-wrapper p {
+      font-size: 20px;
+      margin: 30px;
+    }
+
+    .regards-text p {
+      margin: 10px;
+    }
   }
     
     
   /*Desktop media query*/
   @media (min-width: 1025px) {
+    .summary-wrapper p {
+      font-size: 22px;
+      margin: 22px;
+    }
+
+    .regards-text p {
+      margin: 5px;
+    }
   }

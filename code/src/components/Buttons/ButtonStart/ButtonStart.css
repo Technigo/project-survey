@@ -6,6 +6,13 @@
     font-size: 16px;
     color: #000000;
     background-color: transparent;
+    border: solid 1px #808080;
+    border-radius: 5%;
+    font-family: 'Frank Ruhl Libre', serif;
+}
+
+.button-start:hover {
+    background-color: #d6d1d1;
 }
 
 /*Tablet media query*/

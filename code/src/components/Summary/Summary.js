@@ -10,6 +10,13 @@ export const Summary = ({
   textbox
 }) => {
   console.log(name, date, transportation, equipment, addInfo, textbox);
+
+  const formattedDate = new Date(date).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+
   return (
     <section className="summary-wrapper" aria-labelledby="summary-heading">
       <h2 id="summary-heading">
@@ -19,23 +26,23 @@ export const Summary = ({
         We have noted that you are going to the lodge by{' '}
         <em aria-label={`Selected transportation method: ${transportation}`}>{transportation}</em>, that you are interested in renting{' '}
         <em aria-label={`Selected equipment: ${equipment}`}>{equipment}</em> equipment,{' '}
-        <em>
-          {addInfo === 'yes' ? (
-            <>
-              {' '}
+        {addInfo === 'yes' ? (
+          <>
+            {' '}
               and that you would like to add that <em aria-label={`Added additional information: ${textbox}`}>{textbox}</em>.
-            </>
-          ) : (
-            ' and that you have nothing to add.'
-          )}
-        </em>
+          </>
+        ) : (
+          ' and that you have nothing to add.'
+        )}
       </p>
       <p>
         Thank you once again for choosing us as your destination, and we look
-        forward to welcoming you on <em aria-label={`Chosen arrival date: ${date}`}>{date}</em>!
+        forward to welcoming you on <em aria-label={`Chosen arrival date: ${formattedDate}`}>{formattedDate}</em>!
       </p>
-      <p className="regards-text">Best regards,</p>
-      <p className="regards-text">The Mountain Lodge team</p>
+      <div className="regards-text">
+        <p>Best regards,</p>
+        <p>The Mountain Lodge team</p>
+      </div>
     </section>
   );
 };
