@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { LandingPage } from 'components/LandingPage';
-import { Department } from 'components/Department';
+import { Team } from 'components/Team';
 import { Climate } from 'components/Climate';
 import { Activity } from 'components/Activity';
 import { Result } from 'components/Result';
 
 export const App = () => {
   const [step, setStep] = useState(0);
-  const [department, setDepartment] = useState('');
+  const [team, setTeam] = useState('');
   const [climate, setClimate] = useState('');
   const [activity, setActivity] = useState('');
 
@@ -26,9 +26,9 @@ export const App = () => {
           handleStepIncrease={handleStepIncrease} />
       )}
       {step === 1 && (
-        <Department
-          department={department}
-          setDepartment={setDepartment}
+        <Team
+          team={team}
+          setTeam={setTeam}
           handleStepIncrease={handleStepIncrease}
           handleStepDecrease={handleStepDecrease} />
       )}
@@ -48,7 +48,7 @@ export const App = () => {
       )}
       {step >= 4 && (
         <Result
-          department={department}
+          team={team}
           climate={climate}
           activity={activity} />
       )}

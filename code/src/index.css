@@ -25,19 +25,15 @@ root {
 }
 
 body {
-  overflow-y: hidden;
-  font-family: 'Sono', sans-serif;
-
-}
-
-
-body {
 
 background-image: url(../public/assets/background-image.jpg);
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-position: center center;
+overflow-y: hidden;
+font-family: 'Sono', sans-serif;
+
 
 /* width: 100%; */
 } 
@@ -58,14 +54,19 @@ background-position: center center;
   align-items: center;
   text-align: center;
   margin-top: 10px;
-  /* background-color: white; */
   width: 100%;
   height: auto;
-  padding-right: 5%;
-  padding-left: 5%;
+  /* padding-right: 5%;
+  padding-left: 5%; */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  max-width: 500px;
+  min-height: 270px;
+  margin: 20px auto;
 }
 
 h1 {
+  font-size: 43px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #2B3467;
@@ -73,9 +74,9 @@ h1 {
 }
 /* caa18a */
 h2 {
+  font-size: 35px;
   padding-top: 20px;
   color: #f33614f9;
-  font-size: 20px;
 
 }
 
@@ -85,13 +86,27 @@ h2 {
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: center;
-margin-top: 20px;
+text-align: center;
+padding-top: 20px;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 10px;
+max-width: 500px;
+min-height: 250px;
+margin: 20px auto;
 }
 
 h3 {
   color: #0e218a;
-  font-size: 20px;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.teamQuestion {
+  color: #0e218a;
+  font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
   padding-right: 5%;
@@ -102,17 +117,18 @@ h3 {
 .step {
   display: flex;
   position: fixed;
-  bottom: 15%;
+  bottom: 10%;
   right: 10%;
 }
 
-/* DEPARTMENT */
+/* TEAM */
 
-.department {
+.team {
   /* padding: 8px; */
   padding-right: 5%;
   padding-left: 5%;
   font-size: 16px;
+  font-weight: 900;
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: #fff;
@@ -123,6 +139,11 @@ h3 {
   min-width: 200px;
 }
 
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+}
+
 /* ACTIVITY */
 
 .selectOptions {
@@ -131,12 +152,14 @@ h3 {
   appearance: none;
   padding: 8px;
   font-size: 16px;
+  font-weight: 900;
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: #fff;
   cursor: pointer; 
   font-family: 'Sono', sans-serif;
   margin-top: 20px;
+
 }
 
 .selectOptions:focus {
@@ -151,9 +174,10 @@ h3 {
 
 .radioButtons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   margin-top: 5px;
   font-size: 18px;
+  font-weight: 900;
 }
 
 input[type="radio"] {
@@ -170,12 +194,18 @@ input[type="radio"] {
   align-items: center;
   text-align: center;
   margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.95);  
+  border-radius: 10px;
+  max-width: 500px;
+  min-height: 400px;
+  margin: 20px auto;
 }
 
 h4 {
-  font-size: 15px;
-  line-height: 30px;
-  /* margin-top: 20px; */
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 45px;
+  color: #2B3467;
 }
 
 .resultsBox {
@@ -183,20 +213,6 @@ h4 {
   margin-top: 10px;
   margin-left: 5%;
   margin-right: 5%;
-}
-
-h5 {
-  font-size: 15px;
-  color: #2B3467;
-  line-height: 30px;
-}
-
-
-
-.thankYou {
-  position: fixed;
-  bottom: 15%;
-
 }
 
 /* GENERAL BUTTONS  */
@@ -218,14 +234,15 @@ h5 {
   border-radius: 10px;
   border: none;
   color: white;
-  background-color: #67b4c5; 
+  background-color: #245566;
   line-height: 6vh; 
   font-weight: bold;
   font-size: 18px;
 }
 
 .buttonStart:hover {
-  background-color: #66D9CF;
+  color: #15297e;
+  background-color: white; 
   transition: 0.3s;
 }
 
@@ -242,6 +259,7 @@ h5 {
 .buttonNext {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: green;
   height: 40px;
   width: 80px;
@@ -249,20 +267,22 @@ h5 {
   border-radius: 10px;
   border: none;
   color: white;
-  background-color: #67b4c5;  
+  background-color: #245566; 
   line-height: 6vh; 
   font-weight: bold;
   font-size: 18px;
 }
 
 .buttonNext:hover {
-  background-color: #66D9CF;
+  color: #15297e;
+  background-color: white; 
   transition: 0.3s;
 }
 
 .buttonBack {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: green;
   height: 40px;
   width: 80px;
@@ -270,20 +290,22 @@ h5 {
   border-radius: 10px;
   border: none;
   color: white;
-  background-color: #67b4c5;  
+  background-color: #245566;
   line-height: 6vh; 
   font-weight: bold;
   font-size: 18px;
 }
 
 .buttonBack:hover {
-  background-color: #66D9CF;
+  color: #15297e;
+  background-color: white; 
   transition: 0.3s;
 }
 
 .buttonSubmit {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 40px;
   width: 70px;
   border-radius: 10px;
@@ -300,16 +322,3 @@ h5 {
   transition: 0.3s;
 }
 
-/* MEDIA QUERIES  */
-
-@media (min-width: 668px) and (max-width: 1024px) {
-
-}
-
-@media (min-width: 1025px) {
-
-  h5 {
-    /* margin-bottom: 0; */
-  /* position: fixed; */
-}
-}

@@ -1,18 +1,15 @@
 import React from 'react';
 
-export const Result = ({ department, climate, activity }) => {
+export const Result = ({ team, climate, activity }) => {
   return (
     <div className="resultWrapper">
       <div className="resultsBox">
-        <h4>You would like to go somewhere with a {climate} climate.
+        <h4>Thanks for taking time out of the {team} team
+        to answer this survey!<br /><br />
+        We have noted that you like the sound of {activity}
+        in a {climate} climate.<br /> <br />
+        We&apos;ll get back to you shortly!
         </h4>
-        <h4>Your ideal kind of activity would be {activity}.
-        </h4>
-      </div>
-      <div className="thankYou">
-        <h5>Thanks for taking time out of the {department} department to answer this survey!
-          We&apos;ll get back to you shortly.
-        </h5>
       </div>
     </div>
   );

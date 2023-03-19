@@ -3,23 +3,22 @@ import React from 'react';
 const climateTypes = ['cold and snowy ☃️', 'warm and breezy 🌤️', 'hot and tropical 🏝️'];
 
 export const Climate = ({ climate, setClimate, handleStepIncrease, handleStepDecrease }) => {
-  // const handleClimateChange = (event) => {
-  //   setClimate(event.target.value);
-  // }
   return (
     <div className="questionWrapper">
       <h3>What kind of climate is most appealing to you?</h3>
-      <div className="range">
-        {climateTypes.map((climates) => (
-          <label className="radioButtons" key={climates.id} htmlFor="radio">
+      <div className="radioButtons">
+        {climateTypes.map((climates, index) => (
+          <div key={climates}>
             <input
+              id={`climate-${index}`}
               type="radio"
               value={climates}
-              key={climate.id}
               onChange={(e) => setClimate(e.target.value)}
               checked={climate === climates} />
-            {climates}
-          </label>
+            <label htmlFor={`climate-${index}`}>
+              {climates}
+            </label>
+          </div>
         ))}
       </div>
       <div className="buttonContainer">
