@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,3 +13,315 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+root {
+  font-family: 'Sono', sans-serif;
+}
+
+body {
+
+background-image: url(../public/assets/background-image.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+overflow-y: hidden;
+font-family: 'Sono', sans-serif;
+
+
+/* width: 100%; */
+} 
+
+/* html {
+  background-image: url(../public/assets/background-image.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+
+} */
+/* LANDING PAGE */
+
+.landingPageText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  width: 100%;
+  height: auto;
+  /* padding-right: 5%;
+  padding-left: 5%; */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  max-width: 500px;
+  min-height: 270px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 43px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #2B3467;
+
+}
+/* caa18a */
+h2 {
+  font-size: 35px;
+  padding-top: 20px;
+  color: #f33614f9;
+
+}
+
+/* GENERAL */
+
+.questionWrapper {
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
+padding-top: 20px;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 10px;
+max-width: 500px;
+min-height: 250px;
+margin: 20px auto;
+}
+
+h3 {
+  color: #0e218a;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+.teamQuestion {
+  color: #0e218a;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-right: 5%;
+  padding-left: 5%;
+}
+
+
+.step {
+  display: flex;
+  position: fixed;
+  bottom: 10%;
+  right: 10%;
+}
+
+/* TEAM */
+
+.team {
+  /* padding: 8px; */
+  padding-right: 5%;
+  padding-left: 5%;
+  font-size: 16px;
+  font-weight: 900;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer; 
+  font-family: 'Sono', sans-serif; 
+  margin-top: 20px;
+  text-align: center;
+  min-width: 200px;
+}
+
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* ACTIVITY */
+
+.selectOptions {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 8px;
+  font-size: 16px;
+  font-weight: 900;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  cursor: pointer; 
+  font-family: 'Sono', sans-serif;
+  margin-top: 20px;
+
+}
+
+.selectOptions:focus {
+  border-color: #555;
+  border-width: 2px;
+  outline: none;
+}
+
+
+/* CLIMATE */
+
+
+.radioButtons {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start;
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+input[type="radio"] {
+  margin-right: 10px;
+  vertical-align: middle;
+  
+}
+
+
+/* RESULTS */
+
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.95);  
+  border-radius: 10px;
+  max-width: 500px;
+  min-height: 400px;
+  margin: 20px auto;
+}
+
+h4 {
+  font-size: 35px;
+  font-weight: 900;
+  line-height: 45px;
+  color: #2B3467;
+}
+
+.resultsBox {
+  color: #2B3467;
+  margin-top: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+/* GENERAL BUTTONS  */
+
+.startButtonContainer {
+  position: fixed;
+  bottom: 70px;
+  align-self: center;
+
+}
+
+.buttonStart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 60px;
+  /* margin: 40px; */
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #245566;
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonStart:hover {
+  color: #15297e;
+  background-color: white; 
+  transition: 0.3s;
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;  
+  position: fixed;
+  gap: 60px;
+  /* top: 35%; */
+  bottom: 18%;
+}
+
+.buttonNext {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  height: 40px;
+  width: 80px;
+  /* margin: 40px; */
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #245566; 
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonNext:hover {
+  color: #15297e;
+  background-color: white; 
+  transition: 0.3s;
+}
+
+.buttonBack {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  height: 40px;
+  width: 80px;
+  /* margin: 40px; */
+  border-radius: 10px;
+  border: none;
+  color: white;
+  background-color: #245566;
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonBack:hover {
+  color: #15297e;
+  background-color: white; 
+  transition: 0.3s;
+}
+
+.buttonSubmit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 70px;
+  border-radius: 10px;
+  border: none;
+  color: #2B3467;
+  background-color: #FFF; 
+  line-height: 6vh; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.buttonSubmit:hover {
+  background-color: #F0E365;
+  transition: 0.3s;
+}
+
