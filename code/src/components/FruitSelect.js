@@ -10,10 +10,10 @@ export const FruitSelect = ({ fruitSelect, setFruitSelect }) => {
         className="dropDown"
         onChange={(event) => setFruitSelect(event.target.value)}
         value={fruitSelect}>
-        <option value="apple">Apple</option>
-        <option value="cherry">Cherry</option>
-        <option value="rasberry">Rasberry</option>
-        <option value="lemon">Lemon</option>
+        <option value="Apple">Apple</option>
+        <option value="Cherry">Cherry</option>
+        <option value="Rasberry">Rasberry</option>
+        <option value="Lemon">Lemon</option>
       </select>
     </form>
   )

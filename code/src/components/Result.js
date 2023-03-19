@@ -1,10 +1,11 @@
 /* eslint-disable react/jsx-no-useless-fragment */
 /* eslint-disable max-len */
 import React from 'react';
+import resultspony from '../Images/resultspony.svg';
 
 /* the result component returns three paragraphs that display the name, favourite food and favourite drink from the props */
 
-export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick, fruitSelect }) => {
+export const Result = ({ toppingSelect, colorSelect, name, magicCrystalSelect, flowerSelect, showAddMore, handleAddMoreClick, fruitSelect }) => {
   return (
     <>
       {showAddMore && (
@@ -16,7 +17,11 @@ export const Result = ({ name, food, drink, showAddMore, handleAddMoreClick, fru
       )}
       {!showAddMore && (
         <div className="results-wrapper">
-          <p>Your pony name is {name}-{food}-{drink}-{fruitSelect}!</p>
+          <p>Your personal magical pony name is: </p>
+          <p className="pony-name-present"> 🌟 {colorSelect}-{fruitSelect}-{name}-{magicCrystalSelect}-{toppingSelect}! 🌟 </p>
+          <img
+            src={resultspony}
+            alt="My Little Pony" />
         </div>
       )}
     </>

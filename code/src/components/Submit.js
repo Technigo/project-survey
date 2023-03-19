@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const ExtraItem = () => {
+export const Submit = () => {
   return (
   // eslint-disable-next-line indent
         // eslint-disable-next-line indent

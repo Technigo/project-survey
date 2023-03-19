@@ -10,11 +10,11 @@ export const MagicCrystalSelect = ({ magicCrystalSelect, setMagicCrystalSelect }
         className="dropDown"
         onChange={(event) => setMagicCrystalSelect(event.target.value)}
         value={magicCrystalSelect}>
-        <option value="amethyst">Amethyst</option>
-        <option value="carnelian">Carnelian</option>
-        <option value="diamond">Diamond</option>
-        <option value="sapphire">Sapphire</option>
-        <option value="amber">Amber</option>
+        <option value="Amethyst">Amethyst</option>
+        <option value="Carnelian">Carnelian</option>
+        <option value="Diamond">Diamond</option>
+        <option value="Sapphire">Sapphire</option>
+        <option value="Amber">Amber</option>
       </select>
     </form>
   )

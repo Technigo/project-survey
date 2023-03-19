@@ -10,11 +10,11 @@ export const ToppingSelect = ({ toppingSelect, setToppingSelect }) => {
         className="dropDown"
         onChange={(event) => setToppingSelect(event.target.value)}
         value={toppingSelect}>
-        <option value="rainbow-sprinkles">Rainbow-Sprinkles</option>
-        <option value="caramel-crunch">Caramel-Crunch</option>
-        <option value="glitter-confetti">Glitter-Confetti</option>
-        <option value="cookie-crumbles">Cookie-crumbles</option>
-        <option value="silver-spark">Silver-Spark</option>
+        <option value="Rainbow-sprinkles">Rainbow-Sprinkles</option>
+        <option value="Caramel-crunch">Caramel-Crunch</option>
+        <option value="Glitter-confetti">Glitter-Confetti</option>
+        <option value="Cookie-crumbles">Cookie-crumbles</option>
+        <option value="Silver-spark">Silver-Spark</option>
       </select>
     </form>
   )

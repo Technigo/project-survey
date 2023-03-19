@@ -1,27 +1,48 @@
+/* eslint-disable react/jsx-indent-props */
+/* eslint-disable indent */
 import React from 'react';
 // eslint-disable-next-line indent
         // eslint-disable-next-line indent
 export const FlowerSelect = ({ flowerSelect, setFlowerSelect }) => {
   return (
-    <form className="content-wrapper">
-      <p>Your favourite flower?</p>
-      <div>
-        <input type="radio" id="cherry-blossom" value="cherry-blossom" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'cherry-blossom'} />
-        <label htmlFor="cherry-blossom">Cherry-blossom</label>
-      </div>
-      <div>
-        <input type="radio" id="lily" value="lily" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'lily'} />
-        <label htmlFor="lily">Lily</label>
-      </div>
-      <div>
-        <input type="radio" id="dandelion" value="dandelion" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'dandelion'} />
-        <label htmlFor="dandelion">Dandelion</label>
-      </div>
-      <div>
-        <input type="radio" id="lavender" value="lavender" onChange={(event) => setFlowerSelect(event.target.value)} checked={flowerSelect === 'lavender'} />
-        <label htmlFor="lavender">Lavender</label>
-      </div>
+    <div className="content-wrapper">
+      <p>Pick the one flower that makes you wanna inhale the deepest 🦋 </p>
+
+    <form>
+        <input
+          type="radio"
+          id="cherry-blossom"
+          value="cherry-blossom"
+          onChange={(event) => setFlowerSelect(event.target.value)}
+          checked={flowerSelect === 'cherry-blossom'} />
+        <label className="flower" htmlFor="cherry-blossom">Cherry-Blossom</label>
+
+        <input
+        type="radio"
+        id="lily"
+        value="lily"
+        onChange={(event) => setFlowerSelect(event.target.value)}
+        checked={flowerSelect === 'lily'} />
+        <label className="flower" htmlFor="lily">Lily</label>
+
+        <input 
+        type="radio" 
+        id="dandelion" 
+        value="dandelion" 
+        onChange={(event) => setFlowerSelect(event.target.value)} 
+        checked={flowerSelect === 'dandelion'} />
+        <label className="flower" htmlFor="Dandelion">Dandelion</label>
+
+        <input 
+        type="radio" 
+        id="lavender" 
+        value="lavender" 
+        onChange={(event) => setFlowerSelect(event.target.value)} 
+        checked={flowerSelect === 'lavender'} />
+        <label className="flower" htmlFor="lavender">Lavender</label>
+
     </form>
+    </div>
   )
 }
 

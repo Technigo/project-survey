@@ -5,6 +5,7 @@
   background: -webkit-linear-gradient(to right, #414345, #232526);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #414345, #232526); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   --secondary-color: #FBD3E9;  /* fallback for old browsers */
+  --form-control-color: #dca0c1; 
 
 }
 body {
@@ -59,26 +60,49 @@ background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, F
 .button {
   font-size: 20px;
   font-family: inherit;
-}
 
+}
+button:hover {
+  cursor: pointer;
+  background-color: #8CA6DB;
+  color: #232526;
+
+}
 p {
   font-size: 1.5em;
   padding: 0.5em;
   margin: 0.5em;
+  
 
+}
 
+.question-count {
+  font-size: 2vw;
+ padding: 0%;
 }
 
 input {
-  width: 74%;
+  width: 45%;
   padding: 0.5em;
   border-radius: 13px;
   box-shadow: 2px 4px 10px black;
+  flex-direction: column;
 
 }
 
-input[type=text] {
+.input [type="radio"] {
+  display: flex;
+  padding: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input[type="text"] {
   border-radius: 6px;
+}
+
+.flower {
+  display: flex;
 }
 
 .results-wrapper {
@@ -104,4 +128,19 @@ input[type=text] {
   border-radius: inherit;
   box-shadow: 3px -1px 21px rgb(30 51 194 / 91%);
   font-family: inherit;
+}
+
+.label {
+  padding: 1em;
+  margin: 1em;
+}
+
+.pony-name-present {
+border-radius: 20px;
+box-shadow: -7px -4px 35px 42px rgba(231, 121, 15, 0.3);
+background: radial-gradient(rgb(230, 242, 241) 51%, rgb(139, 102, 241) 100%);
+padding: 2em;
+font-size: 2em;
+font-family: cursive;
+text-align: center;
 }
