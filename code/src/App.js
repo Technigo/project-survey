@@ -33,6 +33,7 @@ export const App = () => {
     setApocalypse(false);
   };
 
+  // For navigating by enter key:
   useEffect(() => {
     const handleEnterKey = (event) => {
       if (event.key === 'Enter') {
