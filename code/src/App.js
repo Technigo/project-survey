@@ -17,7 +17,17 @@ export const App = () => {
   const [secondHand, setSecondHand] = useState('')
 
   const handleStepIncrease = () => {
-    setStep(step + 1)
+    if (step === 1 && name === '') {
+      alert('Please enter your name beforing proceeding to next question');
+    } else if (step === 2 && frequently === '') {
+      alert('Please choose one option before proceeding to next question');
+    } else if (step === 3 && brand === '') {
+      alert('Please pick one of the brands before proceeding to next question');
+    } else if (step === 4 && spend === '') {
+      alert('Please use the slider to pick an amount beforing proceeding to next question');
+    } else {
+      setStep(step + 1);
+    }
   }
 
   return (

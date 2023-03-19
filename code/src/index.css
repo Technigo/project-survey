@@ -13,11 +13,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   align-items: center;
-
+  overflow: hidden;
 } 
 
 code {
@@ -89,6 +88,10 @@ button:hover {
 
 .next-button {
   width: 80px;
+}
+
+a {
+  color: #bbdd90;
 }
 
 @media (min-width: 668px) {
