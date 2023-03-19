@@ -17,7 +17,7 @@ export const App = () => {
   const [name, setName] = useState('');
   const [type, setType] = useState('Surprise me!');
   const [genre, setGenre] = useState('Surprise me!');
-  const [score, setScore] = useState(8);
+  const [score, setScore] = useState(7.5);
   const [apocalypse, setApocalypse] = useState(false);
 
   const handleStepIncrease = () => {
@@ -29,7 +29,7 @@ export const App = () => {
     setName('');
     setType('Surprise me!');
     setGenre('Surprise me!');
-    setScore(8);
+    setScore(7.5);
     setApocalypse(false);
   };
 
