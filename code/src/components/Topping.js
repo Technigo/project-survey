@@ -1,32 +1,27 @@
 import React from 'react';
 
-export const Topping = ({ topping, setTopping }) => {
-    const handleToppingChange = (event) => {
-        setTopping(event.target.value);
+export const Time = ({ time, setTime }) => {
+    const handleTimeChange = (event) => {
+        setTime(event.target.value);
     }
 
     return (
         <form onSubmit={event => event.preventDefault()}>
             <label>
-            Add pieces of chocolate to your popcorn?
+            What time would you like your popcorn to be ready?
             <input 
-                type="radio"
-                value="yes"
-                onChange={handleToppingChange}
-                checked={topping === "yes"}
-                aria-label="Yes to chocolate topping"
+                type="time"
+                id="time-input"
+                className='time-input'
+                value={time}
+                required
+                onChange={handleTimeChange}
+                autoComplete="off"
+                pattern=''
+
+                aria-label="Time for when order should be done."
             />
-            Yes please
-            </label>
-            <label>
-            <input
-                type="radio"
-                value="no"
-                onChange={handleToppingChange}
-                checked={topping === "no"}
-                aria-label="No to chocolate topping"
-            />
-            No thanks
+
         </label>
         </form>
     );

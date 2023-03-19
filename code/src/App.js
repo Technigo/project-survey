@@ -45,7 +45,7 @@ export const App = () => {
     )}
 
     {step < 4 && (
-       <button type="button" onClick={handleStepIncrease}>OK</button>
+       <button type="button" onClick={handleStepIncrease}>Next question</button>
     )}
   </>
   </section>

@@ -65,11 +65,11 @@ select {
 }
 
 button {
-  width: 72px; 
+  width: 106px; 
   border: lined;
   border-radius: 20px;
   font-weight: 700;
-  padding: 16px, 40px;
+  padding: 6px;
   cursor: pointer;
   margin-top: 16px;
 }
