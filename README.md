@@ -1,12 +1,9 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+This is a survery project, built by React, prictice forms, "useState". 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I create components to each page, some pages doesn't work because used forms in wrong way. If I have more time, I would like to visualize to the user how far through the survey they are, and how much is left, by creating a progress bar.
 
 ## View it live
 
