@@ -19,11 +19,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  line-height: 60px;
+  line-height: 40px;
   margin-bottom: 30px;
   min-height: 100vh;
   background: rgb(63,94,251);
-  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(235,252,70,1) 77%);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(243, 252, 163) 77%);
 }
 
 button{
@@ -78,7 +78,9 @@ li {
   padding: 5rem;
   padding-top: 10rem;
   padding-bottom: 10rem;
-  ;
+  max-width: 600px;
+  min-height: 800px;
+  
 }
 
 input, select {
@@ -105,8 +107,17 @@ input, select {
 
 }
 
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
 .description{
   text-align:start;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
   padding-top: 25px;
   line-height: 30px;
 }
@@ -116,7 +127,36 @@ input, select {
   .description{
     width: 250px;
   }
+  .survey-wrapper{
+    max-width: 330px;
+    margin-top: 0px;
+  }
+  .body {
+    max-width: 330px;
+    max-height: 765px; 
+  }
 }
+
+
+@media (min-width: 700px)
+{
+  .survey-wrapper{
+    max-width: 600px;
+    min-width: 600px;
+    margin: 0;
+  }
+  
+}
+
+@media only screen and (min-width: 780px)
+{
+  .survey-wrapper{
+    max-width: 600px;
+    min-width: 600px;
+    margin: 0;
+  }
+}
+
 
 
 

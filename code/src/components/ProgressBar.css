@@ -7,3 +7,7 @@ border-radius: 5px;
  background-color: rgba(65, 105, 225, 0.345);
  border-radius: 5px;
 }
+
+.progressbar {
+    padding-bottom: 100px;
+}

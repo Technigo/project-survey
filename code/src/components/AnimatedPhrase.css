@@ -2,6 +2,7 @@
   .compleate-phrase{
       display: flex;
       flex-direction: column;
+      align-self: center;
       text-transform: uppercase;
       font-family: 'Panchang';
       font-weight: bold;
