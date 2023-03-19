@@ -1,13 +1,263 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #5A56BF;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.outerWrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.headerComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.headerComponent h1 {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  color: #5A56BF;
+  font-size: 45px;
+  background-color: #F2E18D;
+  padding: 10px;
+  margin-bottom: 0%;
+}
+
+.headerComponent h2 {
+  color: #F2E18D;
+  font-size: 40px;
+  margin-bottom: 0%;;
+}
+
+.nameComponent {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+  padding: 15px;
+}
+
+.nameComponent p {
+  padding-bottom: 15px;
+  color: #F2E18D;
+  font-size: 25px;
+}
+
+.nameComponent h6, .goingComponent h6, .rewardComponent h6 {
+  color: #F2E18D;
+  font-size: 15px;
+  font-weight: normal;
+  text-align: center;
+}
+
+.inputField {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  padding: 10px;
+  border-radius: 20px;
+  margin: 10px;
+  border: 3px black solid;
+  font-size: 20px;
+  font-weight: bold;
+} 
+
+.goingComponent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  align-items: stretch;
+  border-radius: 20px;
+  padding: 30px;
+  font-size: 20px;
+  color: #F2E18D;
+  margin-bottom: 0%;
+}
+
+.goingComponent h2 {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  line-height: 120%;
+  margin-top: 0px;
+  color: #5A56BF;
+  font-size: 45px;
+  background-color: #F2E18D;
+  padding: 10px;
+}
+
+.goingComponent input {
+  margin-right: 20px;
+  accent-color: #F2E18D;
+}
+
+.rewardComponent {
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rewardComponent h2 {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  text-align: center;
+  color: #5A56BF;
+  font-size: 45px;
+  background-color: #F2E18D;
+  padding: 10px;
+}
+
+.selectDropDown {
+  font-size: 20px;
+  padding: 5px;
+  width: 70%;
+  border-radius: 10px;
+  border: 3px black solid;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.resultComponent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 17px;
+}
+
+.results {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 25px;
+  padding: 30px;
+  line-height: 140%;
+  color: #F2E18D;
+  border: 3px black solid;
+  border-radius: 30px;
+  margin-bottom: 30px;
+}
+
+.resultComponent h2 {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  text-align: center;
+  color: #5A56BF;
+  font-size: 45px;
+  background-color: #F2E18D;
+  padding: 10px;
+}
+
+.resultComponent h3 {
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  color: #F2E18D;
+  font-size: 30px;
+  text-align: center;
+}
+
+.resultHeading {
+  font-weight: bold;
+  color: #F2E18D;
+}
+
+.nextStepButton {
+  position: absolute;
+  right: 200px;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 30px;
+  border: 3px black solid;
+}
+
+.nextStepButton:hover {
+  background-color: #5A56BF;
+  color: #F2E18D;
+}
+
+.submitButton,
+.restartButton {
+  position: absolute;
+  right: 200px;
+  background-color: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 1.5rem;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 30px;
+  border: 3px black solid;
+}
+
+.submitButton:hover {
+  background-color: #5A56BF;
+  color: #F2E18D;
+}
+
+.restartButton:hover {
+  background-color: #5A56BF;
+  color: #F2E18D;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #F2E18D;
+  font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+}
+
+footer a {
+  text-decoration: none;
+  color: #F2E18D;
+}
+
+@media only screen and (max-width: 768px) {
+
+  footer {
+    display: None;
+  }
+
+  .nameComponent {
+    text-align: center;
+  }
+
+  .goingComponent h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+  .rewardComponent h2 {
+    font-size: 30px;
+  }
+
+  .resultComponent h2 {
+    font-size: 30px;
+  }
+
 }
