@@ -1,6 +1,23 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-box {
+  width: 80%;
+  max-height: 50vh;
+}
+.image-box img {
+  max-width: 100%;
+  max-height: 50vh;
+}
+
 .title {
   display: flex;
   font-weight: 400;
+  width: 80%;
 }
 
 .title p {
@@ -17,10 +34,12 @@
   color: #4fb0ae;
 }
 .reset-button {
-  margin: 0 0 0 2rem;
+  margin: 0.5rem 0 0 10%;
 }
 form {
-  margin: 2rem;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
 }
 input[type='text'],
 select {
@@ -44,4 +63,12 @@ button {
 
 .submit-button {
   margin-top: 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .title,
+  .image-box,
+  form {
+    width: 60%;
+  }
 }
