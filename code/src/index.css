@@ -27,7 +27,7 @@ body {
 p {
   font-family: 'Press Start 2P', cursive;
   color: #565151;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 30px;
   text-align: center;
 }
@@ -102,7 +102,7 @@ p {
   margin: 2px auto;
 }
 
-input {
+.name-input {
   display: block;
   margin: 0 auto;
   font-size: 15px;
@@ -111,11 +111,12 @@ input {
 }
 
 select {
+  color: #565151;
   display: block;
   width: 16rem;
   margin: 0 auto;
   font-family: 'Press Start 2P', cursive;
-  font-size: medium;
+  font-size: small;
   line-height: 15px;
 }
 
@@ -129,6 +130,32 @@ button {
   background-color: hotpink;
 }
 
+label {
+  font-family: 'Press Start 2P', cursive;
+  font-size: small;
+  line-height: 20px;
+}
+
+.favorite-product {
+  display: flex;
+  flex-direction: row;
+}
+
+.product-button {
+  border: 0px;
+  width: 5%;
+  height: 2em;
+}
+
+.product-icon {
+  width: 50px;
+  height: 50px;
+}
+
+input[type="radio"]{
+  vertical-align: middle;
+}
+
 /* .question2 optgroup {
   background: #b58585;
   color: #000000;
@@ -136,11 +163,51 @@ button {
   font-weight: normal;
 } */
 
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+
 .progress-bar-fill {
-  background-color: tomato;
+  margin-top: 5px;
+  padding: 10px 0px;
+  background-color: #fc4f84;;
+  font-family: 'Press Start 2P', cursive;
+  font-size: smaller;
+  text-align: justify;
 }
 
 .progress-bar {
+}
+
+label{
+  margin: auto;
+}
+
+.textarea-opinion {
+  width: 90%;
+  font-family: 'Press Start 2P', cursive;
+  align-self: center;
+  display: flex;
+}
+
+.slider {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.food-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.finalImage {
+  width: 90%;
 }
 
 /* Tablet MQ */
@@ -294,7 +361,7 @@ button {
 
   .survey-body {
     position: absolute;
-    width: 38%;
+    width: 36%;
     height: 50%;
     top: 25%;
     left: calc(50% - 40%/2);
@@ -314,7 +381,34 @@ button {
   }
 
   select {
-    width: 20rem;
+    width: 35rem;
+    /* height: 10rem; */
+  }
+
+  .favorite-product {
+    margin: 1% 10%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+  .product-button {
+    margin: -3px 6px;
+    border: 0px;
+    width: 4%;
+    height: 2em;
+  }
+
+  .icon-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .textarea-opinion {
+    width: 95%;
+    font-family: 'Press Start 2P', cursive;
   }
 
 }

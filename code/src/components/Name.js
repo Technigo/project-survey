@@ -32,6 +32,7 @@ return (
 <div>
     <p>What is your name?</p>
     <input
+    className="name-input"
     type="text"
     name="name"
     value={name}

@@ -38,11 +38,11 @@ const Food = (props) => {
             onChange={handleFoodChange}
             value={food}>
                 <option value="">Select Location:</option>
-                <option value="one">Only once (thus far!)</option>
-                <option value="two">At least two times</option>
-                <option value="3-5">3-5 times</option>
-                <option value="5-20">5-20 times</option>
-                <option value="more than 20">More than 20 times! take my MONEY 💸</option>
+                <option value="ounce">Only once (thus far!)</option>
+                <option value="twice">At least two times</option>
+                <option value="3-5 times">3-5 times</option>
+                <option value="5-20 times">5-20 times</option>
+                <option value="more than 20 times">More than 20 times! take my MONEY ◝(ᵔᵕᵔ)◜</option>
             </select>
             {/* <input
             type="text"
