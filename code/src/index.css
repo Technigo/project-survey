@@ -120,7 +120,7 @@ code {
   
   button {
     margin-top: 3rem;
-    background-color: #aaf0d1;
+    background-color: #C9B9AD;
     color: white;
     border: none;
     border-radius: 5px;
@@ -132,7 +132,7 @@ code {
   }
   
   button:hover {
-    background-color: #27ae60;
+    background-color: #AD9F93;
   }
   
   .delivery.container {
@@ -262,7 +262,7 @@ code {
       height: 20px;
       width: 300px;
       border-radius: 10px;
-      background-color: #aaf0d1;
+      background-color: #C9B9AD;
       outline: none;
     }
     
@@ -288,7 +288,7 @@ code {
     }
     
     .right-container button:hover {
-      background-color: #27ae60;
+      background-color: #AD9F93;
     }
   
     .name-input button {
