@@ -12,7 +12,7 @@ const Summary = ({ nameInput, ageInput, locationInput, greenInput, feedbackInput
         <li><b>Like to have more of:</b><br />{feedbackInput}</li>
       </ul>
       <p className="submitAnswer">Click the button below to submit your answers.</p>
-      <button type="submit" onClick={submitBtn}> Submit</button>
+      <button title="Submit answers" type="submit" onClick={submitBtn}> Submit</button>
     </div>
   )
 };

@@ -6,8 +6,8 @@ import Footer from './components/Footer';
 const Buttons = ({ handleNextClick, handleBackClick }) => {
   return (
     <div className="btn">
-      <button type="button" onClick={handleBackClick}>👈 Back</button>
-      <button type="submit" onClick={handleNextClick}> Next 👉</button>
+      <button title="Go to previous question" type="button" onClick={handleBackClick}>👈 Back</button>
+      <button title="Go to next question" type="submit" onClick={handleNextClick}> Next 👉</button>
     </div>
   )
 };
@@ -52,7 +52,7 @@ export const App = () => {
           )}
           {counter === 2 && (
             <>
-              <legend className="label">How old are you?</legend>
+              <legend aria-label="How old are you?" className="label">How old are you?</legend>
               {ageGroups.map((group) => (
                 <label htmlFor="Age group" className="ageGroup" key={group}>
                   <input
