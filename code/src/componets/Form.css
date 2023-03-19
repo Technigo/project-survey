@@ -10,7 +10,7 @@ main {
   max-height: 50vh;
 }
 .image-box img {
-  max-width: 100%;
+  width: 100%;
   max-height: 50vh;
 }
 
@@ -21,12 +21,14 @@ main {
 }
 
 .title p {
-  padding: 0.5rem 1rem 0 1rem;
+  padding: 0 1rem 0 1rem;
   color: #4fb0ae;
+  font-size: 1.8rem;
 }
 
 .title h1 {
   font-weight: 400;
+  padding-top: 0.5rem;
 }
 
 .title span {
@@ -34,12 +36,11 @@ main {
   color: #4fb0ae;
 }
 .reset-button {
-  margin: 0.5rem 0 0 10%;
+  margin: 0.5rem 0 0 -70%;
 }
 form {
   width: 80%;
   margin: 0 auto;
-  text-align: center;
 }
 input[type='text'],
 select {
@@ -59,6 +60,7 @@ button {
   background-color: #4fb0ae;
   color: #ededed;
   text-align: center;
+  border: none;
 }
 
 .submit-button {
@@ -70,5 +72,8 @@ button {
   .image-box,
   form {
     width: 60%;
+  }
+  .reset-button {
+    margin: 0.5rem 0 0 -50%;
   }
 }

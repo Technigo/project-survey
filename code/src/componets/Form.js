@@ -85,10 +85,10 @@ export const Form = () => {
         {formStage === 0 && (
           <div>
             <h2>
-              Welcome to the mentor sign up survay, thankyou for showing
-              intresst in becoming a mentor, pleas press ok to continu in the
-              form. Please take a fwe minutes to fill in this survay to start
-              your journey in becoming a mentor
+              Welcome to the mentor sign up survey, thank you for showing
+              interest in becoming a mentor, press ok to continue in the form.
+              Please take a few minutes to fill in this survey to start your
+              journey in becoming a mentor.
             </h2>
           </div>
         )}
@@ -98,6 +98,7 @@ export const Form = () => {
             <input
               type="text"
               value={inputName}
+              aria-required="true"
               onChange={(e) => {
                 setInputName(e.target.value);
               }}
@@ -140,7 +141,7 @@ export const Form = () => {
         )}
         {formStage === 4 && (
           <div>
-            <h1>Whats your preferd meeting eviroment? *</h1>
+            <h1>What is your preferred meeting eviroment? *</h1>
             <input
               type="text"
               value={inputEnvironment}
