@@ -43,6 +43,10 @@ code {
 mark {
 background-color: #E5C551; 
 }
+
+h1 {
+  text-align: center;
+}
 .solution p {
  size: 10px;
  text-align: center;

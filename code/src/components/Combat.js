@@ -16,7 +16,7 @@ export const Combat = ({ combat, setCombat }) => {
             <img src={KungFu} alt="KungFuImg" />
           </div>
           <div className="radioOnly">
-            <label>
+            <label htmlFor="Judo">
               <input
                 type="radio"
                 id="Judo"
@@ -25,7 +25,7 @@ export const Combat = ({ combat, setCombat }) => {
                 checked={combat === 'Judo'} />
         Judo
             </label>
-            <label>
+            <label htmlFor="Kung-Fu">
               <input
                 type="radio"
                 id="Kung-Fu"

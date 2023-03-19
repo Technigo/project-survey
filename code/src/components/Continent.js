@@ -7,7 +7,7 @@ export const Continent = ({ continent, setContinent, name }) => {
         <h1> Where are you <mark>{name}</mark>? </h1>
         <select
           className="select"
-          onChange={(event) => setContinent(event.target.value)} 
+          onChange={(event) => setContinent(event.target.value)}
           value={continent}>
           <option value="">Select continent</option>
           <option value="Europe">Europe</option>

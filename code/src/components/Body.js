@@ -16,7 +16,7 @@ export const Body = ({ body, setBody }) => {
             <img src={brain} alt="brainFuImg" />
           </div>
           <div className="radioOnly">
-            <label>
+            <label htmlFor="Heart">
               <input
                 type="radio"
                 id="Heart"
@@ -25,7 +25,7 @@ export const Body = ({ body, setBody }) => {
                 checked={body === 'Heart'} />
         Heart
             </label>
-            <label>
+            <label htmlFor="Brain">
               <input
                 type="radio"
                 id="Brain"
