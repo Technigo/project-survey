@@ -11,7 +11,7 @@ export const Start = (begin) => {
       </div>
       <div>
         <p className="start-p">Have you been feeling a little bit stressed lately? <br />
-        I would like to help you feel a little bit better,
+        I would like to help you feel better,
         let&apos;s take our first steps together...
         </p>
       </div>
