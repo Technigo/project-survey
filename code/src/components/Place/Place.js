@@ -11,13 +11,13 @@ export const Place = ({ place, setPlace, handleStepIncrease }) => {
 
   return (
     <div className="place-container">
-      <p className="question-text">Which place do you prefer?</p>
+      <h1 className="question-text">Which place do you prefer?</h1>
       <div className="image-container-place">
         <img src={forest} alt="forest" />
         <img src={mountain1} alt="mountain" />
         <img src={stars} alt="starry night in forest" />
       </div>
-      <form>
+      <form label htmlFor="place">
         <select
           onChange={handlePlaceChange}
           value={place}>

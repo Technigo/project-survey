@@ -15,13 +15,15 @@ export const Food = ({ food, setFood, handleStepIncrease }) => {
   }
   return (
     <div className="food-container">
-      <p className="question-text">What is your favourite food?</p>
+      <h1 className="question-text">What is your favourite food?</h1>
       <div className="image-container-food">
         <img src={pizza} alt="pizza" />
         <img src={donut} alt="donut" />
         <img src={hamburger} alt="hamburger" />
       </div>
-      <input type="text" value={food} onChange={handleFoodChange} onKeyDown={handleKeyDown} className="input-field" />
+      <form label htmlFor="food">
+        <input type="text" value={food} onChange={handleFoodChange} onKeyDown={handleKeyDown} className="input-field" />
+      </form>
       <div className="container-step-btn">
         <button
           className="step-btn"

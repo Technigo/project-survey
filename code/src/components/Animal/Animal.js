@@ -9,7 +9,7 @@ export const Animal = ({ animal, setAnimal, handleStepIncrease }) => {
   }
   return (
     <div className="animal-container">
-      <p className="question-text">What animal do you prefer?</p>
+      <h1 className="question-text">What animal do you prefer?</h1>
       <div className="form-container">
         <div className="image-container-animal">
           <img src={duck} alt="duck" />

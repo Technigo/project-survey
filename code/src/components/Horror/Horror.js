@@ -10,7 +10,7 @@ export const Horror = ({ horror, setHorror, handleStepIncrease }) => {
   }
   return (
     <div className="horror-container">
-      <p className="question-text">What is the worst thing you can image?</p>
+      <h1 className="question-text">What is the worst thing you can image?</h1>
 
       <div className="image-container-horror">
         <img src={snake} alt="snake" />
@@ -18,7 +18,7 @@ export const Horror = ({ horror, setHorror, handleStepIncrease }) => {
         <img src={plane} alt="airplane" />
       </div>
 
-      <form>
+      <form label htmlFor="horror">
         <select
           onChange={handleHorrorChange}
           value={horror}>
