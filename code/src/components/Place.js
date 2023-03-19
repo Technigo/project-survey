@@ -7,11 +7,11 @@ export const Place = ({ place, setPlace }) => {
   return (
     <>
       <div className="question">
-        <h2>Write a favourite place or a new place you would like to visit.</h2>
+        <h2>Were in the world would you like to be in your dream?</h2>
       </div>
       <div className="answer-input">
         <input type="text" value={place} onChange={handlePlaceChange} />
       </div>
     </>
-)
+  )
 }

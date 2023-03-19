@@ -7,15 +7,16 @@ export const Drink = ({ drink, setDrink }) => {
   return (
     <>
       <div className="question">
-        <h2>Sounds delicious! 
-            And drink?</h2>
+        <h2>Sounds delicious!
+            And drink?
+        </h2>
       </div>
       <div className="select-container">
         <select
           className="select"
           id="drink"
-          value={drink} 
-          onChange={handleDrinkChange} >
+          value={drink}
+          onChange={handleDrinkChange}>
           <option value="">Menu</option>
           <option value="a great cup of coffee">Coffee</option>
           <option value="one rainbow colored drink">Tropical drinks</option>

@@ -4,7 +4,7 @@ const foodOption = [
   'the biggest cake you ever seen',
   'a buffé with your favourite food',
   'fruits in piles',
-  'ice cream that never melts',
+  'ice cream that never melts'
 ];
 
 export const Food = ({ food, setFood }) => {
@@ -14,7 +14,7 @@ export const Food = ({ food, setFood }) => {
   return (
     <>
       <div className="question">
-        <h2>What do you prefer to eat on your party?</h2>
+        <h2>What do you dream about to eat on your imaginary party?</h2>
       </div>
       <div className="foodBtn">
         {foodOption.map((group) => (
