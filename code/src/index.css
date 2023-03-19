@@ -13,11 +13,12 @@ code {
 
 .inner-part {
   position: relative;
+  padding-bottom: 50px;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 45px;
   color: pink;
   text-align: center;
 }
@@ -26,6 +27,32 @@ input {
   width: 80%;
   height: 15px;
 }
+
+.start-btn {
+  background-color: #03120e;
+  color: #eee5e5;
+  font-size: 20px;
+  border-radius: 20px;
+  border-color: #eee5e5;
+  border: 3px solid;
+  padding: 15px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.restart.btn {
+  background-color: #37392e;
+  color: #eee5e5;
+  font-size: 20px;
+  border-radius: 20px;
+  border-color: #eee5e5;
+  border: 3px solid;
+  padding: 15px;
+}
+
+
 
 footer img {
   filter: invert(1);
@@ -37,4 +64,5 @@ footer img {
   transform: translateX(-50%);
   z-index: -1;
 }
+
 

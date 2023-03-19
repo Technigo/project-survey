@@ -5,6 +5,7 @@ import Subscription from './components/Subscription';
 import FreeText from './components/FreeText';
 import Conclusion from './components/Conclusion';
 import Footer from './components/Footer';
+import './index.css'
 
 export const App = () => {
   const [step, setStep] = useState(1)
@@ -92,7 +93,7 @@ export const App = () => {
             </div>
           )}
 
-          {step <= 6 && (
+          {step > 1 && step <= 6 && (
             <div>
               <button className="restart-btn" type="button" onClick={handleStepRestart}>Restart the survey</button>
             </div>
