@@ -6,7 +6,7 @@ export const Intro = () => {
       <h1>BOUBA / KIKI</h1>
       <p>
         A short survey
-        <br />about the shape of sounds
+        <br />of the shape of sounds
       </p>
     </div>
   )

@@ -1,17 +1,17 @@
-import React, { useState } from "react";
-import "./styles.css";
+import React, { useState } from 'react';
+import './styles.css';
 
-import { Intro } from "components/Intro";
-import { Name } from "components/Name";
-import { YesNo } from "components/YesNo";
-import { Shape } from "components/Shape";
-import { End } from "components/End";
+import { Intro } from 'components/Intro';
+import { Name } from 'components/Name';
+import { YesNo } from 'components/YesNo';
+import { Shape } from 'components/Shape';
+import { End } from 'components/End';
 
 export const App = () => {
   const [step, setStep] = useState(1);
-  const [name, setName] = useState("");
-  const [yesno, setYesNo] = useState("");
-  const [shape, setShape] = useState("");
+  const [name, setName] = useState('');
+  const [yesno, setYesNo] = useState('');
+  const [shape, setShape] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -29,17 +29,6 @@ export const App = () => {
         {step === 2 && <YesNo yesno={yesno} setYesNo={setYesNo} />}
         {step === 3 && <Shape shape={shape} setShape={setShape} />}
         {step >= 4 && <End name={name} yesno={yesno} shape={shape} />}
-        {/* {step < 4 && (
-          <div>
-            <span>{step}/3</span>
-            <button
-              type="button"
-              className="next-btn"
-              onClick={handleStepIncrease}>
-              Next
-            </button>
-          </div>
-        )} */}
       </div>
     </div>
   );

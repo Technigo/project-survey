@@ -6,26 +6,27 @@ export const YesNo = ({ yesno, setYesNo }) => {
   }
   return (
     <div className="yesno-container">
-      <form>
-        <p className="question">Have you heard of the Bouba Kiki Effect?</p>
-        <label>
-          <input
-            type="radio"
-            value="Yes"
-            onChange={handleYesNo}
-            checked={yesno === 'Yes'} />
-          <span>Yes</span>
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="No"
-            onChange={handleYesNo}
-            checked={yesno === 'No'} />
-          <span>No</span>
-        </label>
-      </form>
+      <div className="question">Have you heard of the Bouba Kiki Effect?</div>
+      <div className="radio-buttons">
+        <form>
+          <label>
+            <input
+              type="radio"
+              value="Yes"
+              onChange={handleYesNo}
+              checked={yesno === 'Yes'} />
+          </label>
+          <p>Yes</p>
+          <label>
+            <input
+              type="radio"
+              value="No"
+              onChange={handleYesNo}
+              checked={yesno === 'No'} />
+          </label>
+          <p>No</p>
+        </form>
+      </div>
     </div>
   )
 }
-

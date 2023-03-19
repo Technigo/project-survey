@@ -6,12 +6,12 @@ export const Shape = ({ shape, setShape }) => {
   }
   return (
     <div className="shape-container">
-      <p className="question">If you had to choose a name for my hair style, what would it be?</p>
-      <form>
+      <div className="question">What would you choose to call the blue hair style?</div>
+      <form classname="shape-form">
         <select
           onChange={handleShape}
           value={shape}>
-          <option selected value="">Please choose</option>
+          <option selected value="">Hair styles</option>
           <option value="kiki">Kiki</option>
           <option value="bouba">Bouba</option>
         </select>

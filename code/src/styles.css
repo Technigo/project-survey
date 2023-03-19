@@ -19,35 +19,43 @@ overflow: hidden;
   background-color: white;
   font-family: Manga;
   font-size: 40px;
-  margin-top: -17px;
+  margin-top: 100px;
   margin-left: -750px;
   padding-left: 4px;
   padding-top: 4px;
   padding-right: 4px;
   padding-bottom: 0px;
-  transform: rotate(-34deg);
-}
+  transform: rotate(-28deg);
+  border: 3px solid rgb(178, 175, 175);
+  }
+
 .next-btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   overflow: hidden;
-  padding: 0%;
-  margin-top: 120px;
+  padding: 0.5%;
+  margin-top: 90px;
   margin-right: -25px;
   transform: rotate(-40deg);
   color: rgb(62, 56, 56);
-  background-color: rgb(222, 96, 155);
+  background-color: white;
+  opacity: 90%;
+  box-shadow: 2px 2px 3px 1px grey;
   font-family: Manga;
   font-size: 25px;
-
+  border-radius: 0.2em;
 }
 
 .question {
   font-family: Manga;
-  font-style: lowercase;
   font-size: 30px;
+  font-variant-caps: all-petite-caps;
+  position: absolute;
+  color: rgb(62, 56, 56);
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* Style for intro component starts here */
@@ -61,6 +69,7 @@ overflow: hidden;
   overflow: hidden;
   padding: 0%;
   font-family: Manga;
+  font-style: italic;
   }
 
 .intro-container h1 {
@@ -71,148 +80,147 @@ overflow: hidden;
 
 .intro-container p {
   color: rgb(62, 56, 56);
-  font-size: 23px;
-  display: flex;
-  align-items: center;
-  justify-items: center;
+  font-size: 25px;
   flex-direction: column;
-  margin-left: 40px;
+  justify-items: center;
+  text-align: center;
+  margin-top: 5px;
+  font-variant-caps: all-petite-caps;
 }
 
 /* Style for name component starts here */
 
 .name-container {
+  margin-top: 120px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   overflow: hidden;
   width: 300px;
-  height: 100px;
-  padding: 20%;
-  padding-bottom: 50px;
-  margin-right: 150px;
+  height: 130px;
   font-family: Manga;
   background-color: white;
-  opacity: 50%;
-  font-style: lowercase;
-  position: relative;
-  border: 2px solid red;
-}
-
-.bubble:before {
-  content: "";
-  width: 0px;
-  height: 0px;
+  opacity: 80%;
   position: absolute;
-  border-left: 10px solid #00bfb6;
-  border-right: 10px solid transparent;
-  border-top: 10px solid #00bfb6;
-  border-bottom: 10px solid transparent;
-  right: -19px;
-  top: 6px;
-  border: 2px solid blue;
-}
-
-.name-container p {
-  font-family: Manga;
-  font-size: 30px;
-  margin-top: 5px;
-  color: black;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
+  transform: translate(-62%, -38%)
 }
 
 .name-input {
-  background-color: yellow;
-  font-size: 14px;
-  margin-bottom: 5px;  
-  border: 2px solid blue;
+  background-color: rgb(178, 175, 175);
+  font-size: 16px;
+  width: 180px;
+  color: rgb(62, 56, 56);
+  font-family: Helvetica, sans-serif;
+  position: relative;
+  border-radius: 1em;
+        padding: 0.5em;
+  margin-top: 17px;
 }
 /* Style for yesno component starts here */
 
 .yesno-container {
-  display:flex;
+  margin-top: 120px;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   overflow: hidden;
   width: 300px;
-  height: 100px;
-  padding: 20%;
-  margin-right: 150px;
+  height: 130px;
   font-family: Manga;
   background-color: white;
-  opacity: 50%;
-  font-style: lowercase;
-  position: relative;
-  border: 2px solid red;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-items: center;
-  margin: 0%;
-  overflow: hidden;
-  padding: 0%;
-  font-family: Manga;
-  border:1px solid black; */
+  opacity: 80%;
+  position: absolute;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
+  transform: translate(-62%, -38%)
 }
 
-.yesno-container input { /* Label? */
-  font-family: Manga;
-  background-color: white;
-  font: inherit;
-  color: black;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 50%;
+.radio-buttons label { /* Label? */
+  display: flex-end;
 }
 
-.yesno-container span {
-  margin-left: 0px;
+.radio-buttons p form{ /* Label? */
+  border-radius: 100%;
+  display: flex-end;
+  font-size: 20px;
+  font-family: Manga;
 }
 /* Style for shape component starts here */
 
 .shape-container {
-  display:flex;
+  transform: translate(-62%, -38%);
+  margin-top: 120px;
+  overflow: hidden;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-items: center;
   overflow: hidden;
   width: 300px;
-  height: 100px;
-  padding: 20%;
-  margin-right: 150px;
+  height: 130px;
   font-family: Manga;
   background-color: white;
-  opacity: 50%;
-  font-style: lowercase;
-  position: relative;
-  border: 2px solid red;
+  opacity: 80%;
+  position: absolute;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
 }
 
-.shape-container form { /* Select? */
-  
+.shape-container .question {
+  position: relative;
+  margin-top: 5px;
+}
+
+.shape-form { /* Select? */
+  margin-top: 220px;
+  position: relative;
 }
 /* Style for end component starts here */
 
-.end-container p {
-  font-family: Manga;
-  font-size: 20px;
-  display:flex;
+.end-container .question{
+font-family: Manga;
+  font-size: 25px;
+  font-variant-caps: all-petite-caps;
+  position: absolute;
+  color: rgb(62, 56, 56);
+  text-align: center;
+  margin-top: 10px;
+  background-color: white;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
+  opacity: 80%;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-items: center;
   overflow: hidden;
-  width: 300px;
-  height: 100px;
-  padding: 20%;
-padding-top: 5px;
-  margin-right: 150px;
-  font-family: Manga;
-  background-color: white;
-  opacity: 50%;
-  font-style: lowercase;
-  position: relative;
-  border: 2px solid red;
+  display: flex;
+        margin-right: -50%;
+        margin-top: 80%;
+        transform: translate(-50%, -50%);
+margin-top: 135px;
 }
+
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  overflow: hidden;
+  display: flex;
+        margin-right: -50%;
+        margin-top: 80%;
+        transform: translate(-50%, -50%);
+margin-top: 220px;
+width: auto;
+height: auto;
 

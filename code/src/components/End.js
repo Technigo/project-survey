@@ -14,12 +14,12 @@ export const End = ({ name, yesno, shape }) => {
   }
   return (
     <div className="end-container">
-      <p>
+      <div className="question">
         Thank you {name} for your contribution!
         <br />{yesno}, most people haven't heard of the Bouba Kiki Effect.
-        <br />{shape} the blue hair style would be Bouba while the pink would be Kiki.
-      </p>
-      <div>Find out why!</div>
+        <br />{shape}
+        <br />the blue hair style would be Bouba while the pink would be Kiki.
+      </div>
     </div>
   );
 };
