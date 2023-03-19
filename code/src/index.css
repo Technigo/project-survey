@@ -32,6 +32,10 @@ code {
       monospace;
   }
 
+  .navbar {
+    display: none;
+  }
+
   .name-input {
     margin-right: 0;
     margin-bottom: 1rem;
@@ -60,6 +64,10 @@ code {
   align-items: center;
   margin-left: 70px;
   font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
 }
 
   .fashion-image {
@@ -127,7 +135,7 @@ code {
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: 900px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
@@ -280,9 +288,9 @@ code {
     }
     
     .right-container button {
-      margin-top: 10px;
+      margin-top: 15px;
       font-family: 'Nunito', sans-serif;
-      font-size: 22px;
+      font-size: 16px;
       font-weight: bold;
       border-radius: 5px;
       padding: 10px 20px;
@@ -298,6 +306,11 @@ code {
       align-items: center;
       justify-content: center;
       font-family: 'Nunito', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      padding: 10px 20px;
+      cursor: pointer;
     }
     
   .thanks-header {
@@ -305,6 +318,7 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
     font-family: 'Nunito', sans-serif;
     font-size: 18px;
     margin-left: 15px;
@@ -331,6 +345,48 @@ code {
 
 @media only screen and (min-width: 768px) {
 
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+  
+  .navbar-left a,
+  .navbar-right a {
+    margin: 0 10px;
+  }
+  
+  .navbar-left a {
+    text-decoration: none;
+    color:#605348;
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 30px;
+  }
+  
+  .navbar-right a {
+    text-decoration: none;
+    color:#605348;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 30px;
+  }
+
+  .navbar-logo {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .navbar-logo img {
+    max-height: 50px;
+  }
+  
+.nav-link {
+text-decoration: none;
+}  
+
 .name-input {
   margin-right: 100px;
   font-family: 'Nunito', sans-serif;
@@ -342,7 +398,7 @@ code {
 
 .name-container {
   display: flex;
-  height: 100vh;
+  height: 90vh;
 }
 
 .name-form {
@@ -417,7 +473,7 @@ button {
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 900px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
@@ -550,7 +606,7 @@ button:hover {
   .right-container button {
     margin-top: 20px;
     font-family: 'Nunito', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
     padding: 10px 20px;
@@ -567,6 +623,10 @@ button:hover {
     align-items: center;
     justify-content: center;
     font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 10px 20px;
   }
   
 .thanks-header {

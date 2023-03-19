@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Name } from 'components/Name/Name';
-import { Hear } from 'components/Hear/Hear';
-import { Overall } from 'components/Overall/Overall';
-import { Delivery } from 'components/Delivery/Delivery';
-import { Purchase } from 'components/Purchase/Purchase';
-import { Rate } from 'components/Rate/Rate';
+import { Header } from 'components/Header';
+import { Name } from 'components/Name';
+import { Hear } from 'components/Hear';
+import { Overall } from 'components/Overall';
+import { Delivery } from 'components/Delivery';
+import { Purchase } from 'components/Purchase';
+import { Rate } from 'components/Rate';
 import { ThankYou } from 'components/Thanks';
 
 export const App = () => {
@@ -34,6 +35,7 @@ export const App = () => {
 
   return (
     <>
+      <Header />
       {step === 1 && (
         <Name
           name={name}
