@@ -21,7 +21,7 @@ export const Colors = ({ colors, setColors }) => {
       <form>
         <label htmlFor="color">
         <select
-          name ="color"
+          name="color"
           onChange={handleColors}
           value={colors.value}>
           <option value="" disabled>Select color</option>
