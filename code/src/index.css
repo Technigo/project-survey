@@ -34,7 +34,7 @@ button{
   border-bottom-right-radius: 10px;
   color: rgb(255, 255, 255);
   padding :15px;
-  margin-top: 100px;
+  margin-top: 50px;
   border-style: none;
   font-weight:bold;
   font-family: 'Panchang';
@@ -51,6 +51,8 @@ button:hover {
   align-self: center;
   justify-content: space-between;
   gap: 40px;
+  padding :15px;
+  margin-top: 100px;
   
 }
 
@@ -135,6 +137,7 @@ input, select {
     max-width: 330px;
     max-height: 765px; 
   }
+ 
 }
 
 
@@ -143,7 +146,8 @@ input, select {
   .survey-wrapper{
     max-width: 600px;
     min-width: 600px;
-    margin: 0;
+    margin-top: 50px;
+    padding-bottom: 50px;
   }
   
 }
@@ -153,7 +157,7 @@ input, select {
   .survey-wrapper{
     max-width: 600px;
     min-width: 600px;
-    margin: 0;
+    margin-top: 100px;  
   }
 }
 
