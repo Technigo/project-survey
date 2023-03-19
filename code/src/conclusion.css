@@ -37,8 +37,6 @@ h3 {
 .related-link {
     display: flex;
     justify-content: center;
-    /*position: absolute;*/
-    /*align-self: center*/
     align-items: center;
     padding: 0.5rem;
 }
@@ -60,28 +58,8 @@ a:hover {
     text-decoration: underline;
 }
 
-/*ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
+@media (max-width: 667px) {
+    .list {
+        font-size: 15px;
+    }
 }
-
-/*li {
-    display: flex;
-    align-items: right;
-    margin: 10px 0;
-}
-
-li:before {
-    content: "\2022";
-    margin-right: 10px;
-}
-.summary {
-    display: inline-block;
-    width: 150px;
-    text-align: right;
-    margin-right: 15px;
-}*/
-

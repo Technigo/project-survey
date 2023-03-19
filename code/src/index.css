@@ -43,12 +43,6 @@ p {
   margin-bottom: 40px;
 }
 
-/*input {
-  flex-direction: column;
-  width: 80%;
-  height: 15px;
-}*/
-
 .start-btn {
   background-color: #03120e;
   color: #eee5e5;
@@ -57,11 +51,9 @@ p {
   border-color: #eee5e5;
   border: 3px solid;
   padding: 15px;
-  /*position: relative;*/
   align-content: center;
   left: 50%;
   bottom: 0;
-  /*transform: translateX(-50%);*/
 }
 
 .start-btn:hover {
@@ -79,7 +71,7 @@ p {
   border: 3px solid;
   padding: 15px;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   right: 0;
 }
 
@@ -97,7 +89,7 @@ p {
   border: 3px solid;
   padding: 15px;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
 }
 
@@ -136,41 +128,49 @@ footer img {
   z-index: -1;
 }
 
-@media (min-width: 280px) and (max-width: 663px) {
+@media (max-width: 667px) {
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .restart-btn {
+    position: fixed;
+    margin-right: 50px;
+    margin-bottom: 40px;
+  }
+
+  .next-btn {
+    font-size: 18px;
+  }
 
   footer img {
     display: none;
   }
-
-  h1 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 15px;
-  }
 }
 
-@media (min-width: 664px) and (max-width: 1024px) {
+@media ((min-width: 668px) and (max-width: 1023px)) {
  
   footer img {
     max-width: 200px;
     min-width: 200px;
   }
-
-  h1 {
-    font-size: 30px;
-  }
-
-  p {
-    font-size: 20px;
-  }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
 
   footer img {
     max-width: 300px;
     max-height: 300px;
+  }
+}
+
+@media (max-height: 600px) {
+  .restart-btn {
+    margin-bottom: 2px;
+  }
+
+  footer img {
+    display: none;
   }
 }

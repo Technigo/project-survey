@@ -12,3 +12,25 @@ p {
     margin-bottom: 40px;
     flex-wrap: wrap;
 }
+
+@media (max-width: 667px) {
+
+    h1 {
+      font-size: 20px;
+    }
+  
+    p {
+      font-size: 15px;
+    }
+  }
+  
+  @media ((min-width: 668px) and (max-width: 1023px)) {
+  
+    h1 {
+      font-size: 30px;
+    }
+  
+    p {
+      font-size: 20px;
+    }
+  }
