@@ -6,9 +6,9 @@ export const Ammount = ({ ammount, setAmmount }) => {
     setAmmount(event.target.value)
   }
   return (
-    <div className="ammount-container">
+    <div>
       <form>
-        <label htmlFor="ammount" className="ammount">How many shrimp would you like?
+        <label htmlFor="ammount">How many shrimp would you like?
           <p>Please remember, shrimp are social and need to be at least 10 to feel happy!</p>
           <input
             name="ammount"
