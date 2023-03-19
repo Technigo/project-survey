@@ -10,11 +10,12 @@ export const Result = ({
   happyAdjective,
   bodyPart,
   infinitiveVerb,
-  descriptiveAdjective
+  descriptiveAdjective,
+  introPage
 }) => {
   return (
     <div className="story-container">
-      <h1 className="result-title">This is what I learnt about you: </h1>
+      <h1 className="result-title">This is what I&#39;ve learned about you, {introPage}: </h1>
       <div className="story-text">
         <p>
         What you like most about your workplace

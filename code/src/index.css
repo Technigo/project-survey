@@ -2,6 +2,7 @@ body {
   display:flex; 
   box-sizing: border-box;
   margin: 0;
+  padding: 0; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -16,6 +17,7 @@ body {
   border: 2px solid blue; 
   overflow-x: hidden;
 }
+
 
 html {
   height: 100%; 
@@ -42,11 +44,26 @@ code {
   0 0 140px 90px #0ff; /* outer cyan */
   border: 2px solid orange; 
   }
+
+  .intro-title {
+  display: flex; 
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 40px; 
+  width: 65%;
+  padding: 0% 20%; 
+  text-align: center;
+  justify-content: center;
+  margin-top:50px; 
+  }
+
+  .intro-text {
+    display:flex; 
+    font-family: 'Roboto', sans-serif;
+  }
 	
 .instructionText {
   display: flex; 
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700; 
+  font-family: 'Sue Ellen Francisco', cursive;
   font-size: 40px; 
   width: 65%;
   padding: 0% 20%; 
@@ -55,7 +72,8 @@ code {
 }
 
 .descriptiveText {
-  display: flex; 
+  display: flex;
+
 
 }
 
@@ -119,10 +137,10 @@ code {
  }
 
  .counterText {
-  font-family:'Roboto', sans-serif;
-  font-size: 18px; 
+  font-family: 'Sue Ellen Francisco';
+  font-size: 24px; 
   font-weight: 400;
-  color: blue; 
+  color: rgb(255, 0, 136); 
  }
 
 .radio-btn-container {
@@ -199,19 +217,20 @@ filter: brightness(80%);
 @media (max-width:420px) {
 .survey-container{
   width: 30em; 
-  height: 30em;  
+  height: 30em;
 }  
 
 .instructionText {
-  font-size: x-large;
+  font-size: 28px;
 }
 
 .story-container {
   display: flex;
   width: 70%; 
-  height:550px; 
+  height:100%; 
   margin: 20px; 
   overflow-x: hidden; 
+  overflow-y:scroll; 
 }
 
 .story-text {

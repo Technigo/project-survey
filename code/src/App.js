@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IntroPage } from 'Components/IntroPage';
 import { FirstQuestion } from 'Components/FirstQuestion';
 import { SecondQuestion } from 'Components/SecondQuestion';
 import { ThirdQuestion } from 'Components/ThirdQuestion';
@@ -12,7 +13,7 @@ import { TenthQuestion } from 'Components/TenthQuestion';
 import { Result } from 'Components/Result';
 
 export const App = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [adjective, setAdjective] = useState('');
   const [foodNoun, setFoodNoun] = useState('');
   const [ingVerb, setIngVerb] = useState('');
@@ -23,6 +24,7 @@ export const App = () => {
   const [bodyPart, setBodyPart] = useState('');
   const [infinitiveVerb, setInfinitiveVerb] = useState('');
   const [descriptiveAdjective, setDescriptiveAdjective] = useState('');
+  const [introPage, setIntroPage] = useState('');
 
   const handleProgress = () => {
     setStep(step + 1);
@@ -30,6 +32,11 @@ export const App = () => {
 
   return (
     <div className="survey-container">
+      {step === 0 && (
+        <IntroPage
+          introPage={introPage}
+          setIntroPage={setIntroPage} />
+      )}
       {step === 1 && (
         <FirstQuestion
           adjective={adjective}
@@ -82,6 +89,7 @@ export const App = () => {
       )}
       {step === 11 && (
         <Result
+          introPage={introPage}
           adjective={adjective}
           foodNoun={foodNoun}
           ingVerb={ingVerb}
@@ -96,7 +104,7 @@ export const App = () => {
       {step < 11 && (
         <>
           <p className="counterText"> Questions answered: {step}/10 </p>
-          <button className="button" type="button" onClick={handleProgress}>Next question</button>
+          <button className="button" type="button" onClick={handleProgress}>Next</button>
         </>
       )}
     </div>
