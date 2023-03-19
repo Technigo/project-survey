@@ -36,7 +36,6 @@ export const App = () => {
       {step >= 4 && (
         <Result name={name} hej={1} sign={sign} />
       )}
-
       {step < 5 && (
         <div className="button">
           <p>{step}</p>

@@ -5,7 +5,7 @@ const howMuch = ['okey', 'a lot', 'to much', 'im extreme'];
 export const Selector = ({ select, setSelect }) => {
   return (
     <>
-      <div className="select-container">
+      <div className="howmuch-container">
         <h4> How much are you?
         </h4>
       </div>
@@ -38,46 +38,4 @@ export const Selector = ({ select, setSelect }) => {
     </>
   );
 }
-
-/* export const Selector = ({ select, setSelect }) => {
-  const howmuch = [
-    'Not so much', 'Okey', 'Extreme'
-  ];
-
-  return (
-
-    <div className="select-container">
-      <p>How much {select} are you?</p>
-      <form>
-        {howmuch.map((signselector) => (
-          <div key={signselector}>
-            <div className="signs">
-              <input
-                type="radio"
-                id={select}
-                name="zodiac-sign"
-                value={select}
-                onChange={(event) => setSelect(event.target.value)}
-                checked={select === signselector} />
-              <label htmlFor={select}>{select}</label>
-            </div>
-          </div>
-        ))}
-      </form>
-    </div>
-  );
-} */
-
-/* NR 4 */
-
-/* export const Selector = ({ milk, selector, setSelector }) => {
-  const handleSelector = (event) => {
-    setSelector(event.target.value);
-  }
-  return (
-    <div className="selector">
-      <p>What kind of {milk} are you? </p>
-      <input type="text" value={selector} onChange={handleSelector} />
-    </div>
-  );
-} */
+/* NR 3 */

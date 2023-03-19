@@ -1,13 +1,10 @@
 body {
   margin: 0;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  background-color: rgb(174, 149, 174);
-  /*background-image: url("https://images.pexels.com/photos/3934512/pexels-photo-3934512.jpeg");
-  background-size: 50%;*/
-}
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  background-color: rgb(58, 58, 58);
+  color: white;
+  background-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/11/astrology-sun-moon-rising-signs-1-copy.jpg?quality=75&strip=all");
+  background-size: 100%;
+  font-family: emoji;
 }
 
 html {
@@ -15,26 +12,65 @@ html {
 }
 
 /* PAGE 1 */
-.name-container {
+.container {
   display: flex;
-  /*border: 1px solid black;*/
+  position: relative;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding-top: 175px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
 }
-/*.name-container h2 {
-  border: 2px solid green;
-}*/
+.welcome {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  bottom: 94px;
+  color:#ffe27b;
+}
+.welcome h2 {
+  text-shadow: 10px;
+  font-size: 34px;
+  font-family: emoji;
+}
+.welcome p {
+  text-shadow: 10px;
+  font-size: 23px;
+  position: relative;
+  bottom: 21px;
+}
+/* button color */
  button {
   text-align: center;
-  background-color: rgb(255, 255, 255);
-  color: rgb(38, 38, 38);
+  background-color: rgb(240, 240, 240);
+  color: rgb(23, 23, 23);
   width: 79px;
   border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  bottom: 25px;
+}
+
+/* button container */
+div.button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* top: 2px; */
+  position: relative;
+  bottom: -54px;
 }
 button:hover {
-background-color: #89426c;
+background-color: #ffe27b;
 }
 .button p {
   color: transparent;
@@ -42,7 +78,11 @@ background-color: #89426c;
 label {
   padding: 5px;
 }
-
+input {
+  color: black;
+  position: relative;
+  bottom: 30px;
+}
 /*.background-image {
   height: 50%;
   width: 50%;
@@ -71,4 +111,79 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+/*page 2 choose sign select dropdown */
+.choose-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 175px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+}
+.choose-container h2 {
+  position: relative;
+  bottom: 111px;
+  font-size: 50px;
+}
+.button button {
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  color: rgb(23, 23, 23);
+  width: 79px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  bottom: 80px;
+}
+form.zodiacs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 190px;
+}
+
+/*page 3*/
+.howmuch-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 175px;
+  width: 700px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+}
+.howmuch-container h4 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 280px;
+    font-size: 30px;
+}
+.radio-activity {
+  display: flex;
+  flex-direction: column;
+  bottom: 100px;
+  position: relative;
 }
