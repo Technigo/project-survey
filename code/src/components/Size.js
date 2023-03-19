@@ -7,14 +7,13 @@ export const Size = ({ size, setSize }) => {
     }
 
     return (
-        <section className="sizecontainer">
-        <form onSubmit={event => event.preventDefault()}>
+            <form onSubmit={event => event.preventDefault()}>
             <p>What size would you like?</p>      
         <label>
             <input
                 id="size-small"
                 className="size-input"
-                type="checkbox"
+                type="radio"
                 value="small"
                 onChange={handleSizeChange}
                 checked={size === "small"}
@@ -27,7 +26,7 @@ export const Size = ({ size, setSize }) => {
             <input
                 id="size-medium"
                 className="size-input"
-                type="checkbox"
+                type="radio"
                 value="medium"
                 onChange={handleSizeChange}
                 checked={size === "medium"}
@@ -41,7 +40,7 @@ export const Size = ({ size, setSize }) => {
             <input
                 id="size-large"
                 className="size-input"
-                type="checkbox"
+                type="radio"
                 value="large"
                 onChange={handleSizeChange}
                 checked={size === "large"}
@@ -51,9 +50,6 @@ export const Size = ({ size, setSize }) => {
             Large
         </label>
         </form>
-        </section>
+        
     );
 };
-
-//Add images in buttons
-//Add div classname for img or checkbox 

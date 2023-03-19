@@ -8,8 +8,9 @@ export const Time = ({ time, setTime }) => {
 
     return (
         <form onSubmit={event => event.preventDefault()}>
+            <section className="timecontainer">
             <label for = "time-input">
-                At what time would you like your popcorn to be ready?
+                At what time would you like your popcorn to be ready? <br></br>
             </label>
             <input 
                 id="time-input"
@@ -22,7 +23,9 @@ export const Time = ({ time, setTime }) => {
                 onChange={handleTimeChange}
                 />
         <span class="validity"></span>
-        <small>Opening hours are 11am to 10pm. </small>
+        <br></br>
+        <small> Opening hours are 11am to 10pm. </small>
+        </section>
         </form>
     );
 }

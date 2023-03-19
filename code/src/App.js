@@ -54,8 +54,6 @@ export const App = () => {
   );
 }
 
-//Make fields required 
 //Add aria-labels
-//Add if/else if topping is chosen, will change the text under the result.
 //Add reload
 //Add pseudo-code

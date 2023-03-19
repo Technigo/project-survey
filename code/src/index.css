@@ -14,11 +14,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 .main-container {
   background: rgb(250, 250, 233);
   margin: 0 auto;
@@ -29,15 +24,10 @@ code {
   border: groove 6px black;
   padding: 20px 24px;
   padding-top: 100px;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-}
-
-.sizecontainer {
-  display: grid;
-  grid-template-columns: 3fr;
+  justify-content: center;
+  align-items: center;
 }
 
 h1 {
@@ -48,19 +38,36 @@ h1 {
 }
 
 select {
-  border: dotted green;
+  border: double black 8px;
   border-radius: 10px;
   font-family: Poppins;
   font-size: 18px;
   text-align: center;
   padding: 10px; 
-  width: 40%;
+  width: 100%;
   cursor: pointer;
 }
 
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+}
+
+.name-input {
+  font-family: Poppins;
+  font-size: 18px;
+}
+
+p {
+  text-align: center;
+  font-size: 22px;
+}
+
+/*Styling for button*/
+
 button {
   width: 114px; 
-  border: lined;
   border-radius: 20px;
   font-family: Poppins;
   padding: 6px;
@@ -68,14 +75,20 @@ button {
   margin-top: 16px;
 }
 
-p {
-  font-size: 22px;
+button:hover {
+  background-color: black;
+  color: white;
 }
 
-/* Styling for input Time */
+/*Styling for input Time */
+
+.timecontainer {
+  align-items: flex-end;
+}
 
 input [type="number"] {
   width: 100px;
+  padding-left: 20px;
 }
 
 input + span {

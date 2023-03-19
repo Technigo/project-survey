@@ -9,7 +9,7 @@ export const Name = ({ name, setName }) => {
 
     return (
         <form onSubmit={event => event.preventDefault()}>
-            <h2>Order your movie popcorn here</h2>
+            <h2>Order your movie popcorn with us!</h2>
             <p>What is your name?</p>
             <input
             id="name-input"
