@@ -19,6 +19,32 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  background-color: #d6c4ad;
+  border-radius: 20px;
+  padding: 15px;
+  border: solid #948f6e 2px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 25px;
+  background-image: url('../public/background-survey.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  text-align: center;
+}
+
 .title-container {
   display: flex;
   flex-direction: column;
@@ -35,11 +61,6 @@ body {
   display: grid;
   grid-template-columns: 1em auto;
   gap: 0.5em;
-}
-
-
-h2 {
-  font-size: 15px;
 }
 
 .form {
@@ -88,10 +109,22 @@ p {
 }
 
 .survey-summary {
-  font-size: 40px;
-  background-color: #c5c667;
-  padding: 6px;
+  font-size: 50px;
+  background-color: #e2e3c5;
+  padding: 6rem;
   color: black;
-  border-radius: 5px;
+  border-radius: 70px;
   font-family: 'verdana';
+  opacity: 0.8;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  color: rgb(16, 16, 16);
+  background-color: rgb(187, 178, 142);
+  border-radius: 20px;
+  border: solid #948f6e 2px;
 }
