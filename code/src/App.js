@@ -51,7 +51,7 @@ export const App = () => {
                 headline="Favorite purchases"
                 input={often}
                 setInput={setOften}
-                inputLabel="Which drink do you purchase most often when at a cafe?"
+                inputLabel="Which drink do you purchase most often when at a cafe? 💸"
                 id="favorite-purchase"
                 placeholder="My favorite purchase is..."
                 htmlFor="favorite-purchase" />
@@ -64,7 +64,7 @@ export const App = () => {
                 headline="Something missing?"
                 input={missing}
                 setInput={setMissing}
-                inputLabel="Is there a drink you feel is missing at most cafes?"
+                inputLabel="Is there a drink you feel is missing at most cafes? 🤔"
                 id="missing-drink"
                 placeholder="I would love if all cafes offered..."
                 htmlFor="missing-drink" />
