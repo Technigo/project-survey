@@ -5,9 +5,7 @@ import '../conclusion.css'
 const conclusion = ({ purchase, subscriptionQ, often, missing }) => {
   return (
     <>
-      <h2>Thank you for completing this short survey! 💕 You will find a summary
-        of your answers below
-      </h2>
+      <h2>Thank you for completing this short survey! 💕</h2>
       <h3>You answered:</h3>
       <section className="list">
         <ul>
@@ -18,13 +16,15 @@ const conclusion = ({ purchase, subscriptionQ, often, missing }) => {
         </ul>
       </section>
 
-      <div className="link">
+      <section className="related-link">
         <a
           href="https://www.hsph.harvard.edu/nutritionsource/healthy-drinks/other-healthy-beverage-options/"
           rel="noopener noreferrer"
-          target="_blank">Click here to find out which health benefits you get from coffee and tea
+          target="_blank"
+          title="Learn more about the health benefits of coffee and tea">
+            -Health benefits of drinking coffee and tea-
         </a>
-      </div>
+      </section>
     </>
   )
 }

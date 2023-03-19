@@ -10,4 +10,5 @@ p {
     text-align: center;
     font-weight: bold;
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }

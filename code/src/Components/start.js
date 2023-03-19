@@ -1,5 +1,6 @@
 import React from 'react'
 import '../start.css'
+import '../index.css'
 
 const start = () => {
   return (

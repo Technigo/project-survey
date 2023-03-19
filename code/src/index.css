@@ -64,6 +64,12 @@ p {
   /*transform: translateX(-50%);*/
 }
 
+.start-btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
 .restart-btn {
   background-color: #37392e;
   color: white;
@@ -77,9 +83,14 @@ p {
   right: 0;
 }
 
+.restart-btn:hover {
+  background-color: #59cd90;
+  cursor: pointer;
+}
+
 .next-btn {
-  background-color: #4e937a;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 20px;
   border-radius: 20px;
   border-color: #eee5e5;
@@ -88,6 +99,12 @@ p {
   position: absolute;
   bottom: 0px;
   left: 0;
+}
+
+.next-btn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
 }
 
 .prev-btn {
@@ -103,10 +120,15 @@ p {
   margin-top: 20px;
 }
 
+.prev-btn:hover {
+  color: black;
+  cursor: pointer;
+}
+
 footer img {
   filter: invert(1);
-  max-width: 400px;
-  max-height: 400px;
+  max-width: 300px;
+  max-height: 300px;
   position: absolute;
   bottom: 5%;
   left: 50%;
@@ -114,4 +136,41 @@ footer img {
   z-index: -1;
 }
 
+@media (min-width: 280px) and (max-width: 663px) {
 
+  footer img {
+    display: none;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 664px) and (max-width: 1024px) {
+ 
+  footer img {
+    max-width: 200px;
+    min-width: 200px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1025px) {
+
+  footer img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}

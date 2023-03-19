@@ -12,5 +12,6 @@
 
 .times-purchase {
     font-size: 22px;
-    color: pink;
+    color: black;
+    font-weight: bold;
 }
