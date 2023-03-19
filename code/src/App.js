@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import './index.css'
 
+import isabellefilms from './isabellefilms.json';
+import generalfilms from './generalfilms.json';
+
 import Intro from './components/Intro'
 import Name from './components/Name'
 import Isabelle from './components/Isabelle'
@@ -9,6 +12,8 @@ import Theme from './components/Theme'
 import Location from './components/Location';
 import MixedQuestions from './components/MixedQuestions'
 import Summary from './components/Summary'
+import Result1 from './components/Result1';
+import Result2 from './components/Result2';
 import ProgressBar from './components/ProgressBar';
 
 export const App = () => {
@@ -31,6 +36,18 @@ export const App = () => {
   const handleGoback = () => {
     setCounter(counter - 1);
   }
+
+  const handleReset = () => {
+    setCounter(0);
+    setName('');
+    setIsabelle('');
+    setIsabelleTheme('');
+    setTheme('');
+    setContinent('');
+    setCountry('');
+    setOpen('');
+    setGenre('');
+  };
 
   return (
     <div className={classList(
@@ -105,10 +122,28 @@ export const App = () => {
             counter={counter}
             setCounter={setCounter} />
         )}
+        {counter === 7 && isabelle === 'love' ? (
+          <Result1
+            isabelleTheme={isabelleTheme}
+            continent={continent}
+            open={open}
+            isabellefilms={isabellefilms} />
+        ) : counter === 7 && (
+          <Result2
+            theme={theme}
+            country={country}
+            genre={genre}
+            generalfilms={generalfilms} />
+        )}
         {counter > 0 && (
-          <button type="button" onClick={handleGoback} aria-label="Go backwards" className="go-back-button">
-            <i className="fa-solid fa-chevron-left" />
-          </button>)}
+          <div className="button-container">
+            <button type="button" onClick={handleGoback} aria-label="Go backwards" className="go-back-button">
+              <i className="fa-solid fa-chevron-left" />
+            </button>
+            <button type="button" onClick={handleReset} aria-label="Button named Reset All" className="reset-button">
+              Reset All
+            </button>
+          </div>)}
       </div>
     </div>
   )

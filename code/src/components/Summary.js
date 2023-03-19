@@ -12,7 +12,7 @@ const Summary = ({
   counter,
   setCounter
 }) => {
-  const handleIncreaseCounterClick = () => {
+  const nextStepResult = () => {
     setCounter(counter + 1);
   }
 
@@ -52,7 +52,7 @@ const Summary = ({
           <p className="next"><span>Okay, lets see what we can do for you!</span></p>
         </>
       )}
-      <button type="submit" onClick={handleIncreaseCounterClick}>See result</button>
+      <button type="submit" onClick={nextStepResult}>See result</button>
     </div>
   );
 }

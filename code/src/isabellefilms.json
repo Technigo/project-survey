@@ -1,0 +1,89 @@
+{
+    "films": [
+                {
+            "name": "The piano teacher",
+            "id": 1,
+            "url": "https://www.imdb.com/title/tt0254686/",
+            "poster": "https://www.amazon.com/Piano-Teacher-Criterion-Collection/dp/B071XF65JN/ref=sr_1_6?keywords=The+Piano+Teacher&qid=1679259984&sr=8-6",
+            "director": "Michael Haneke",
+            "details": "Austria, France, 2001",
+            "themes": ["Provocation / Eroticism", "Destructive relationships", "Mind games"],
+            "continent_set": "an European",
+            "synopsis": "Erika, a piano teacher at the Vienna Conservatory, lives with her tyrannical mother in a hermetically sealed world of love-hate and dependency. Her sex life consists of voyeurism and masochistic self-injury. But when one of Erika's students decides to seduce her, the barriers around her collapse.",
+            "trailer": "https://www.youtube.com/watch?v=TdKPbyvS0qc"
+        },
+        {
+            "name": "In another country",
+            "id": 2,
+            "url": "https://www.imdb.com/title/tt1989712/",
+            "poster": "https://m.media-amazon.com/images/I/91n-IIsHOOL._SY679_.jpg",
+            "director": "Hong Sang-soo",
+            "details": "South Korea, France, 2012",
+            "themes": ["Trying to find oneself", "The stranger", "Friendship"],
+            "continent_set": "an Asian",
+            "synopsis": "In a triptych of overlapping stories, three different French women (a filmmaker, an adulterer and a divorcee, all played by Isabelle Huppert) visit a small Korean resort town and encounter a flirtatious director, a lovestruck lifeguard and far too much soju.",
+            "trailer": "https://www.youtube.com/watch?v=TdKPbyvS0qc"
+        },
+                {
+            "name": "La Cérémonie",
+            "id": 3,
+            "url": "https://www.imdb.com/title/tt0112769/?ref_=fn_al_tt_1",
+            "poster": "https://m.media-amazon.com/images/I/41CF5BDWZ5L.jpg",
+            "director": "Claude Chabrol",
+            "details": "France, Germany, 1995",
+            "themes": ["Friendship", "Destructive relationships", "The stranger"],
+            "continent_set": "an European",
+            "synopsis": "Sophie works as a maid for Mme. Leliévre in Saint-Malo, where she befriends the outspoken postal clerk Jeanne. However, when Jeanne encourages her to rebel against her employers, Sophie is dismissed from her position. Brought together by their hidden secrets, the two women decide to take revenge.",
+            "trailer": "https://www.youtube.com/watch?v=TdKPbyvS0qc"
+        },
+                {
+            "name": "Things to come",
+            "id": 4,
+            "url": "https://www.imdb.com/title/tt4120176/",
+            "poster": "https://m.media-amazon.com/images/I/41XO6FQsBjL.jpg",
+            "director": "Mia Hansen-Løve",
+            "details": "France, Germany, 2016",
+            "themes": ["Trying to find oneself", "On the verge of a nervous breakdown"],
+            "continent_set": "an European",
+            "synopsis": "Nathalie teaches philosophy at a Parisian high school. She is deeply passionate about her job and enjoys passing on the pleasure of thinking to others. Unexpectedly, Nathalie’s husband announces he is leaving her. With a newfound freedom suddenly thrust upon her, Nathalie must reinvent herself.",
+            "trailer": "https://www.youtube.com/watch?v=TdKPbyvS0qc"
+        },
+        {
+            "name": "The Lacemaker",
+            "id": 5,
+            "url": "https://www.imdb.com/title/tt0075932/?ref_=fn_al_tt_1",
+            "poster": "https://m.media-amazon.com/images/I/51W05NCDE7L._AC_.jpg",
+            "director": "Claude Goretta",
+            "details": "Switzerland, West Germany, 1977",
+            "themes": ["Coming of age", "Trying to find oneself", "Destructive relationships"],
+            "continent_set": "an European",
+            "synopsis": "Johnny is a charming and eloquent, but relentlessly vicious, drifter. Rejecting anyone who might care for him, the volcanic Johnny hurls himself around London on a nocturnal odyssey, colliding with a succession of other desperate and dispossessed people and scorching everyone in his path.",
+            "trailer": "https://www.youtube.com/watch?v=TdKPbyvS0qc"
+        },
+                {
+            "name": "Elle",
+            "id": 6,
+            "url": "https://www.imdb.com/title/tt3716530/",
+            "poster": "https://m.media-amazon.com/images/I/61ANcMlQwaL._SY679_.jpg",
+            "director": "Paul Verhoeven",
+            "details": "2016",
+            "themes": ["On the verge of a nervous breakdown", "Mind games", "Provocation / Eroticism"],
+            "continent_set": "an European",
+            "synopsis": "A successful businesswoman gets caught up in a game of cat and mouse as she tracks down the unknown man who raped her.",
+            "trailer": "https://www.youtube.com/watch?v=TdKPbyvS0qc"
+        },
+                {
+            "name": "White Material",
+            "id": 7,
+            "url": "https://www.imdb.com/title/tt1135952/?ref_=fn_al_tt_1",
+            "poster": "https://m.media-amazon.com/images/I/61VjY824xBL._AC_SX679_.jpg",
+            "director": "Claire Denis",
+            "details": "France, Cameroon, 2009",
+            "themes": ["History", "Mind games", "Trying to find oneself"],
+            "continent_set": "an African",
+            "synopsis": "Amidst turmoil and racial conflict in a Francophone African state, a white French woman fights for her coffee crop, her family and ultimately for her life.",
+            "trailer": "https://www.youtube.com/watch?v=TdKPbyvS0qc"
+        }
+
+    ]
+}

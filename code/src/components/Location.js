@@ -44,6 +44,7 @@ const Location = ({
             <option value="an European">Europe</option>
             <option value="an Asian">Asia</option>
             <option value="an African">Africa</option>
+            <option value="an undecided">Any continent</option>
           </select>
           <button
             type="button"

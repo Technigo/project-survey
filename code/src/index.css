@@ -104,10 +104,14 @@ p {
   position: relative;
 }
 
-.go-back-button {
+.button-container {
   position: absolute;
-  bottom: -4px;
+  bottom: -6px;
   left: 0px;
+}
+
+.button-container button {
+  margin-right: 10px;
 }
 
 .text-wrapper {
@@ -182,12 +186,13 @@ input::placeholder {
   flex-direction: column;
 }
 
-.theme-form {
-  max-height: 350px;
+.theme-form, .form-mixed {
+  max-height: 300px;
   overflow: scroll;
+  width: 400px;
 }
 
-.isabelle-form label, .theme-form label, .survey-wrapper.mixed label{
+.isabelle-form label, .theme-form label, .form-mixed label{
     display: flex;
     -webkit-box-align: center;
     align-items: center;
@@ -303,4 +308,49 @@ input[type="radio" i] {
 
 .background-image.image7 {
   background-image: url(https://images.unsplash.com/photo-1642344061678-f1cdba55dcb6?crop=entropy&cs=tinysrgb&fm=jpg&ixid=MnwzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE2NzkxMDc4MjU&ixlib=rb-4.0.3&q=80);
+}
+
+.result-box img {
+  height:400px;
+}
+
+.container-result h2 {
+  margin-bottom: 10px;
+  margin-top: 0;
+  font-size: 52px;
+  font-family: "montserrat", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+  padding: 0 7px;
+  background-color: white;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+hr {
+  height: 1px;
+  border: none;
+  background-color: #FF1493;
+}
+
+.result-box h4 {
+  font-style: italic;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 30px;
+  font-family: "montserrat", sans-serif;
+  font-weight: 500;
+  padding: 0 5px;
+  background-color: white;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.result-details {
+  margin: 10px 0;
+}
+
+.result-details p {
+  font-weight:500;
+  line-height: 25px;
 }

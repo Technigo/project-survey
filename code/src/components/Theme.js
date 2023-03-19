@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
-const isabelleThemes = ['Friendship', 'Provocative', 'Coming of age', 'Trying to find oneself', 'The stranger', 'Destructive relationships', 'Mind games', 'On the verge of a nervous breakdown', 'About Isabelle Huppert']
-const themesGeneral = ['Coming of age', 'Social satire', 'Historical commentary', 'Provocative / Erotic', 'Anything']
+const isabelleThemes = ['Friendship', 'Mind Games', 'Provocation / Eroticism', 'Coming of age', 'Trying to find oneself', 'The stranger', 'Destructive relationships', 'On the verge of a nervous breakdown', 'Anything']
+const themesGeneral = ['Coming of age', 'Social issues', 'The existence', 'Provocation / Eroticism', 'Crime', 'Relationships', 'Social Satire', 'History', 'Loneliness', 'Anything']
 
 const Theme = ({
   isabelle,
