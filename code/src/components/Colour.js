@@ -8,7 +8,8 @@ export const Colour = ({ colour, setColour, step }) => {
       <form className="colourForm">
         <select
           onChange={(event) => setColour(event.target.value)}
-          value={colour}>
+          value={colour}
+          aria-label="dropdown for your favourite colours">
           <option value="" disabled>Choose colour</option>
           <option value="white">White</option>
           <option value="pink">Pink</option>

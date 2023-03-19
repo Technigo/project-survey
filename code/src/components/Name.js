@@ -11,9 +11,11 @@ export const Name = ({ name, setName, step }) => {
         What&apos;s your name?
       </h4>
       <input
+        aria-label="name-input"
         type="text"
         value={name}
         className="name-input"
+        placeholder="Type name here"
         onChange={handleNameChange} />
     </div>
   );
