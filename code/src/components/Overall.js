@@ -3,7 +3,7 @@ import React from 'react';
 export const Overall = ({ overall, setOverall, step, handleStepIncrease }) => {
   const handleNextClick = (event) => {
     if (!overall) {
-      alert('Please fill out the required field.');
+      alert('Please fill out this field');
       return;
     }
 
@@ -16,6 +16,12 @@ export const Overall = ({ overall, setOverall, step, handleStepIncrease }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    if (overall === '') {
+      alert('Please fill out this field');
+      return;
+    }
+
     handleNextClick();
   };
 
@@ -32,8 +38,7 @@ export const Overall = ({ overall, setOverall, step, handleStepIncrease }) => {
             <input
               type="text"
               value={overall}
-              onChange={handleOverallChange}
-              required />
+              onChange={handleOverallChange} />
             <button type="submit">Next</button>
           </form>
         </div>
@@ -41,3 +46,4 @@ export const Overall = ({ overall, setOverall, step, handleStepIncrease }) => {
     </div>
   );
 };
+

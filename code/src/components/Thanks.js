@@ -19,7 +19,7 @@ export const ThankYou = ({ name, hear, overall, delivery, purchase, rate, handle
             <li>How likely are you to recommend us?: {rate}</li>
           </ul>
           <div className="next-btn">
-            <button id="next-button" type="button" onClick={handleReset}>One more time</button>
+            <button id="next-button" type="button" onClick={handleReset}>Again</button>
           </div>
         </div>
       </div>
