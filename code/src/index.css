@@ -12,9 +12,14 @@ code {
     monospace;
 }
 
+
 body {
-  background-color: #f784b6;
+  background-image: url(https://img.freepik.com/free-vector/background-seamless-pattern-vector-with-cute-memphis_53876-105506.jpg?w=826&t=st=1679181975~exp=1679182575~hmac=dda545ef1c82269851309f7ff4b4b4c8c11d4620ab842fde78f016e887d5c95f);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
 }
+
 
 .survey-container {
   display: flex;
@@ -22,27 +27,34 @@ body {
   align-self: center;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 450px;
-  border-radius: 30px;
-  margin-top: 80px;
+  background-color:rgba(213, 165, 195, 0.371);
+  height: 500px;
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
 
 }
 
 .header {
-  font-family: 'Roboto' sans-serif;
-  color: #fffef3;
+  color: #ffffff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 2px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  margin-top: 90px;
   
+}
+
+.header h1 {
+  margin-bottom: -30px;
 }
 
 .header span {
     color: white;
     font-family: 'Pacifico', cursive;
     text-shadow: 1px 1px 2px rgb(219, 77, 241), 0 0 25px rgb(138, 138, 205), 0 0 5px rgb(216, 152, 206);
+    margin-top: -90px;
   
 }
 
@@ -50,19 +62,30 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-self: center;
   margin-left: 30px;
   margin-right: 30px;
   font-size: 23px;
-  color: white;
-  font-family: 'Roboto' sans-serif;
+  color: rgb(255, 255, 255);
   padding: 13px;
+  margin-top: 50px;
+  margin-bottom: -30px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+}
+
+.question h2 {
+font-size: 23px;
+font-weight: 300;
+margin-top: 70px;
+margin-bottom: 30px;
 }
 
 .step {
   margin-top: 20px;
   color: rgb(255, 255, 255);
-  font-family: 'Roboto' sans-serif;
-  font-weight: bold;
+  font-family: 'Rubik' sans-serif;
+  font-weight: 300;
 }
 
 .step-btn button {
@@ -71,7 +94,7 @@ body {
   border-radius: 8px;;
   border-style: none;
   font-size: 20px;
-  font-family: 'Roboto' sans-serif;
+  font-family: 'Rubik', sans-serif;
   color: rgb(255, 255, 255);
   background-color: #c86181;
 }
@@ -87,7 +110,9 @@ body {
   height: 30px;
   border-style: none;
   margin-bottom: 20px;
-  font-size: 23px;
+  font-size: 20px;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
 }
 
 .foodBtn {
@@ -107,12 +132,31 @@ body {
 
 .party-btn button {
   padding: 8px;
-  font-family: 'Roboto' sans-serif;
+  font-family: 'Rubik', sans-serif;
   border-style: none;
   border-radius: 10px;
   font-size: 18px;
   color: rgb(255, 255, 255);
   background-color: #fc5a88;
+  
+}
+
+.party-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Rubik', sans-serif;
+  font-weight: 300;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: 21px;
+  color: white;
+  padding: 13px;
+
+}
+
+.party-text p {
+  margin-bottom: -15px;
 }
 
 .party-btn button:hover {

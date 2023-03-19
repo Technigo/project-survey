@@ -1,10 +1,10 @@
 import React from 'react';
 
 const foodOption = [
-  'the biggest 🎂 you ever seen',
-  'buffé with all your favourite food🍲',
-  '🍐🍊🥝🍇🍉 in piles',
-  '🍦 that never melts',
+  'the biggest cake you ever seen',
+  'buffé with all your favourite food',
+  'fruits in piles',
+  'ice cream that never melts',
 ];
 
 export const Food = ({ food, setFood }) => {
@@ -14,7 +14,7 @@ export const Food = ({ food, setFood }) => {
   return (
     <>
     <div className="question">
-      <p>On this amazing party you prefer to eat...</p>
+      <h2>What do you want to eat on your party?</h2>
       </div>
       <div className="foodBtn">
         {foodOption.map((group) => (

@@ -29,17 +29,19 @@ export const App = () => {
       )}
       {step === 4 && (
         <Drink drink={drink} setDrink={setDrink} />
+
       )}
       {step >= 5 && (
-        <Party name={name} place={place} food={food} drink={drink} />      
+
+        <Party name={name} place={place} food={food} drink={drink} />
         )}
       {step < 5 && (
         <>
         <div className="step-btn">
-          <button type="button" onClick={handleStepIncrease}>Next</button>
+          <button type="button" onClick={handleStepIncrease}>NEXT</button>
         </div>
         <div className="step">
-          <p>STEP {step}/5 TIL' PARTY START!</p>
+          <p>PARTYSTEP {step}/5</p>
           </div>
           
         </>

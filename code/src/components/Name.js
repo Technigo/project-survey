@@ -8,10 +8,10 @@ export const Name = ({ name, setName }) => {
     <>
     <div className="header">
       <h1>Crappy day?</h1> 
-      <h1>Lets throw a <span>party!</span></h1>
+      <h1>Let's throw a <span>party</span> !</h1>
       </div>
       <div className="question">
-      <p>What's your name?</p>
+      <p><span>What's your name?</span></p>
       </div>
       <div className="answer-input">
       <input type="text" value={name} onChange={handleNameChange} />
