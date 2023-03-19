@@ -1,6 +1,6 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-tag-spacing */
 /* eslint-disable max-len */
-/* eslint-disable linebreak-style */
 import React, { useState } from 'react';
 import Name from './Name';
 import Food from './Food';
@@ -12,7 +12,6 @@ import Satisfaction from './Satisfaction';
 import ThankYouImage from '../images/thankyou.png'
 
 const allRange = ['It sucks', 'It is aiiight ', 'It is okay', 'it works niiiicely', 'Superb /chefs kiss']
-
 
 const Survey = () => {
   const [step, setStep] = useState(1);
@@ -83,7 +82,7 @@ const Survey = () => {
         </>
       )}
       {step > 6 && (
-        <a href='https://ultranostalgia-survey.netlify.app/'> <img className='finalImage' src={ThankYouImage} alt='thank you'/> </a>
+        <a href="https://ultranostalgia-survey.netlify.app/"> <img className="finalImage" src={ThankYouImage} alt="thank you"/> </a>
       )}
     </>
   );

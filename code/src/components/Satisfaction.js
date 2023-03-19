@@ -2,8 +2,7 @@
 import React from 'react';
 
 const Satisfaction = (props) => {
-  const { satisfactionRange, satisfaction, setSatisfaction, handleSatisfactionChange } = props
-  
+  const { satisfactionRange, satisfaction, handleSatisfactionChange } = props
   return (
     <div className="food-counter">
       <form className="satisfaction-container">

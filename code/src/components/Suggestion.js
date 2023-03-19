@@ -1,5 +1,5 @@
-/* eslint-disable padded-blocks */
 /* eslint-disable linebreak-style */
+/* eslint-disable padded-blocks */
 import React from 'react';
 
 const Suggestion = ({ suggestion, setSuggestion }) => {
@@ -13,7 +13,7 @@ const Suggestion = ({ suggestion, setSuggestion }) => {
       <p> Got any suggestions?</p>
       <label htmlFor="suggestion">
         <textarea
-          className='textarea-opinion'
+          className="textarea-opinion"
           name="suggestion"
           rows="10"
           cols="50"
