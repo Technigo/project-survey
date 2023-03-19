@@ -76,7 +76,7 @@ const Survey = () => {
 
       {step < 7 && (
         <>
-          <p>Question: {step}/5</p>
+          <p>Step: {step}/6</p>
           <button type="button" onClick={handleStepIncrease}>Next question</button>
           <ProgressBar percent={percent} />
         </>
