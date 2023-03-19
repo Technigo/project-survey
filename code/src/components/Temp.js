@@ -30,7 +30,7 @@ export const Temp = ({ temp, setTemp, step }) => {
         <p className="p-step">Current step: {step} / 7</p>
       </div>
       <div className="content-container">
-        <h3>What is your prefered temperature?</h3>
+        <h4>What is your prefered temperature?</h4>
         <p>{tempText}</p>
         <label htmlFor="temperature">
           <input
