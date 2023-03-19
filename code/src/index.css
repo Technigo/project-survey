@@ -1,13 +1,123 @@
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  background-image: url("./components/images/popcorn1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: Poppins;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.main-container {
+  background: rgb(250, 250, 233);
+  margin: 100px auto;
+  margin-top: 80px;
+  width: 100%;
+  max-width: 300px;
+  height: 900px;
+  border: groove 6px black;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: Tilt Prism, cursive;
+  font-size: 68px;
+  text-align: center;
+  font-weight: 500;
+}
+
+h2 {
+  text-align: center;
+  font-size: 28px;
+}
+
+.name-input {
+  font-family: Poppins;
+  font-size: 18px;
+}
+
+p {
+  text-align: center;
+  font-size: 22px;
+}
+
+/*Styling for button*/
+button {
+  width: 140px; 
+  border-radius: 20px;
+  font-size: 16px;
+  font-family: Poppins;
+  padding: 6px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+/*Styling for select menu (flavor)*/
+select {
+  border: double black 8px;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-size: 18px;
+  text-align: center;
+  padding: 10px; 
+  width: 100%;
+  cursor: pointer;
+}
+
+/*Styling for input Time */
+
+.order-time {
+  font-size: 32px;
+}
+
+.time-input {
+  font-size: 20px;
+}
+
+input [type="number"] {
+  width: 100px;
+  padding-left: 20px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
+}
+
+/*Media queries*/
+@media ((min-width: 667px)) {
+  .main-container{
+    max-width: 900px;
+    height: 700px;
+  }
+
+  .name-input{
+    margin-left: 130px;
+  }
 }

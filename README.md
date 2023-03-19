@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The completed project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I tried input type = "time" for the first time in this project. 
+If I had more time I would fix the fields that should be required. I have added "required" to them but something is missing since it is not working. I would also spend some more time on the styling. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://the-popcorn-picker.netlify.app/
