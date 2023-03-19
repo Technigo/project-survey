@@ -1,4 +1,6 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable indent */
+
 import React from 'react';
 
 const ProgressBar = ({ percent }) => {

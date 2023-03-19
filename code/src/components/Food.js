@@ -1,5 +1,7 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-indent-props */
 /* eslint-disable indent */
+
 import React from 'react';
 import Question2Image from '../images/question2.jpg'
 

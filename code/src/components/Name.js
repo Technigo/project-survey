@@ -1,5 +1,7 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable react/jsx-indent-props */
 /* eslint-disable indent */
+
 import React, { useRef, useEffect } from 'react';
 
 const Name = (props) => {
