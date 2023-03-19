@@ -6,6 +6,7 @@ import { Color } from './components/Color';
 import { Thing } from './components/Thing';
 import { QuizResult } from './components/QuizResult'
 import './index.css';
+import './reset.css';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
@@ -15,7 +16,6 @@ export const App = () => {
   const [things, setThing] = useState('')
   const [results, setResults] = useState('')
   const [started, setStarted] = useState(false);
-  // const [quizEnded, setQuizEnded] = useState(false);
 
   const handleNextStep = () => {
     console.log('counter before', counter);

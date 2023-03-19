@@ -7,105 +7,90 @@ body {
   -moz-osx-font-smoothing: grayscale;
    background-color: #FFFD37
 }
-
+.animals{
+  width: 100%;
+  height: 50%;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-
-
-
-.answer{
-  font-size: 15px;
-  margin: 10px;
-  text-align: center;
-  padding-bottom: 10px;
-
-}
-/**/
 .StartPage{
   display: grid;
   grid-template-columns: 1fr;
-margin: 100px;
-  background-color: #A8E4A0;
-  border-radius: 5px;
-  width: 100%;
-
-
-}
-.StartPage h1{
- margin: 40px;
- padding-top: 45px;
- padding-bottom: 30px;
-text-align: center;
-
-}
-.startBtn{
-  display: flex;
+  justify-items: center;
   justify-content: center;
-  width: 100px;
+  background-color: white;
+  margin: 40px;
+  padding: 20px;
+}
+
+.start-container{
   margin: 40px;
 }
-
-.nextQuestion{
-  width: 100px;
-  margin: 20px;
+.start-container h1{
+  font-size: 40px;
+  padding-bottom: 20px;
+  
+ 
 }
-
-/*name-container*/
-.inputClass{
-  border: pink solid 2px;
-margin-top: 70px;
-width: 100%;
-padding: 7px;
+.startBtn{
+  border-radius: 10px;
+  padding: 5px;
+  width: 150px;
+  font-size: 20px;
+  background-color: antiquewhite;
 }
 
 .name-container{
-  margin: 100px 50px 100px 50px;
-  
+  margin: 40px;
 }
 .name-container p{
   font-size: 40px;
-
+  padding-bottom: 20px;
+  
+ 
 }
-/*Drop down*/
+.nextQuestion{
+  border-radius: 10px;
+  padding: 5px;
+  width: 150px;
+  font-size: 20px;
+  background-color: antiquewhite;
+}
 
-
+.whatDoYou{
+  margin: 40px;
+}
 .whatDoYou h2{
-  padding-left: 30px;
-  padding-right: 30px;
+  font-size: 40px;
+  padding-bottom: 20px;
   text-align: center;
-  padding-top: 40px;
-}
-.dropDown{
-margin: 70px;
+  
 }
 .dropMenu{
-  border: blue solid 2px;
-  width: 100%;
-}
-/*How do I change font and size in my dropdown*/
-.choose p{
+  border-radius: 10px;
+  padding: 5px;
+  width: 200px;
   font-size: 20px;
-  color: green;
+  background-color: antiquewhite;
 }
-.books{
-  font-size: 100px;
+
+.color{
+  margin: 40px;
 }
-/*favourite color*/
 .color h2{
-color: blue;
+  font-size: 35px;
+  padding-bottom: 20px;
+  text-align: center;
+  
 }
 
 .favouriteColor{
   display: grid;
   grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  margin: 20px;
-
 }
-
 .pink{
  
   background-color: #FF007F;
@@ -116,83 +101,67 @@ color: blue;
   grid-column: 1/2;
  
   }
-.green{
-  background-color: #00755E;
-  border: white solid 2px;
-  width: 100px;
-  height: 100px;
-  padding-left: 5px;
-   margin: 10px;
-   grid-column: 2/3;
 
-}
 .black{
-background-color: black;
-border: white solid 2px;
-width: 100px;
-height: 100px;
-padding: 5px;
-margin: 10px;
+ 
+    background-color: black;
+    border: white solid 2px;
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    margin: 10px;
+
 }
 
-.brown{
-  background-color: rgb(154, 80, 80);
-border: white solid 2px;
-width: 100px;
-height: 100px;
-padding: 5px;
-margin: 10px;
+.answer{
+  padding-left: 30px;
 }
 
-
-/*whats your thing?*/
 
 .radioButton{
-  display: grid;
-  grid-template-columns: 1fr;
   margin: 40px;
-
 }
 .radioButton h2{
-  margin: 40px;
+  font-size: 40px;
+  padding-bottom: 20px;
   text-align: center;
-
+  
 }
 .radioBtn{
-display: grid;
-grid-template-columns: 1fr;
-justify-self: center;
-  padding-top: 10px;
-  padding-bottom: 5px;
+  border-radius: 10px;
+  padding: 5px;
+  width: 200px;
+  font-size: 23px;
+  background-color: antiquewhite;
 }
 
-/*results*/
-.results{
-  display: grid;
-  grid-template-columns: 1fr;
-  align-content: center;
-  justify-content: center;
-background-color: pink;
-margin: 100px;
-justify-items: center;
-}
 
-.results p{
-  font-size: 40px;
-  justify-items: center;
-  padding-left:20px;
-  text-align: center;
-}
-
-img{
-  justify-items: center;
-  width: 100%;
-  height: 500px;
-}
-.playagain{
-  display: flex;
-  justify-content: center;
-  justify-items: center;
-  width: 100px;
+.text{
   margin: 40px;
+}
+.text p{
+  font-size: 40px;
+  padding-bottom: 20px;
+  text-align: center;
+  
+}
+.calculate{
+  border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  font-size: 20px;
+  background-color: antiquewhite;
+  margin-bottom: 10px;
+
+}
+.playAgain{
+  border-radius: 5px;
+  padding: 5px;
+  width: 200px;
+  font-size: 20px;
+  background-color: antiquewhite;
+}
+
+.Results img{
+  width: 100%;
 }

@@ -15,19 +15,19 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
       if (color === 'black') {
         if (thing === 'ocean') {
           return (
-            <div>
+            <div className="Results">
               Dum dum dum dum Shark <img src={shark} alt="Shark" />
             </div>
           );
         } else if (thing === 'city') {
           return (
-            <div>
+            <div className="Results">
               Its a dog surfing <img src={dogsurfer} alt="Dog surfing" />
             </div>
           );
         } else if (thing === 'mountain') {
           return (
-            <div>
+            <div className="Results">
               Its a dog surfing <img src={dogsurfer} alt="Dog surfing" />
             </div>
           );
@@ -35,19 +35,19 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
       } else if (color === 'pink') {
         if (thing === 'ocean') {
           return (
-            <div>
+            <div className="Results">
              Dont burn is a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
             </div>
           );
         } else if (thing === 'mountain') {
           return (
-            <div>
+            <div className="Results">
               Its a dog surfing <img src={dogsurfer} alt="Dog surfing" />
             </div>
           );
         } else if (thing === 'city') {
           return (
-            <div>
+            <div className="Results">
              Dont burn is a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
             </div>
           );
@@ -57,19 +57,19 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
       if (color === 'black') {
         if (thing === 'city') {
           return (
-            <div>
+            <div className="Results">
               Its a dog surfing <img src={dogsurfer} alt="Dog surfing" />
             </div>
           );
         } else if (thing === 'ocean') {
           return (
-            <div>
+            <div className="Results">
              Holy moly its a dog... no a shark no a dog shark <img src={dogshark} alt="Dog dressed as a shark" />
             </div>
           );
         } else if (thing === 'mountain') {
           return (
-            <div>
+            <div className="Results">
               Its a Goat <img src={goat} alt="Mountain Goat" />
             </div>
           );
@@ -77,19 +77,19 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
       } else if (color === 'pink') {
         if (thing === 'ocean') {
           return (
-            <div>
+            <div className="Results">
              Dont burn is a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
             </div>
           );
         } else if (thing === 'city') {
           return (
-            <div>
+            <div className="Results">
              Smelly cat smelly cat... <img src={nakedcat} alt="A pink naked cat" />
             </div>
           );
         } else if (thing === 'mountain') {
           return (
-            <div>
+            <div className="Results">
              Its a himalayan salt water crab <img src={crab} alt="a pink crab" />
             </div>
           );
@@ -99,19 +99,19 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
       if (color === 'black') {
         if (thing === 'city') {
           return (
-            <div>
+            <div className="Results">
               Its a dove <img src={dove} alt="A dove" />
             </div>
           );
         } else if (thing === 'ocean') {
           return (
-            <div>
+            <div className="Results">
               Dum dum dum dum Shark <img src={shark} alt="Shark" />
             </div>
           );
         } else if (thing === 'mountain') {
           return (
-            <div>
+            <div className="Results">
               Its a Goat <img src={goat} alt="Mountain Goat" />
             </div>
           );
@@ -119,21 +119,22 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
       } else if (color === 'pink') {
         if (thing === 'ocean') {
           return (
-            <div>
+            <div className="Results">
               Its a dog surfing <img src={dogsurfer} alt="Dog surfing" />
             </div>
           );
         } else if (thing === 'city') {
           return (
-            <div>
+            <div className="Results">
              Un pequeño gatito <img src={nakedcat} alt="Pink naked cat" />
             </div>
           );
         } else if (thing === 'mountain') {
           return (
-            <div>
+            <div className="Results">
               Its a dog  <img src={nakeddog} alt="Mountain Goat" />
             </div>
+
           );
         }
       }
@@ -145,12 +146,12 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
   };
 
   return (
-    <div className="results">
+    <div className="text">
 
       <p> Hey {name}, your favorite animal is {results}</p>
       <button onClick={handleResults} type="button" className="calculate"> <span>Calculate Results</span></button>
-      <button className="playagain" type="button" onClick={() => window.location.reload(false)}>
-        <span>Play Again!</span>
+      <button className="playAgain" type="button" onClick={() => window.location.reload(false)}>
+        <span>Play Again Please!</span>
       </button>
     </div>
 
