@@ -4,7 +4,7 @@ A survey made in React, using different types of forms and summarizing the answe
 
 ## The problem
 
-The major hurdle while constructing this survey was to place everything correctly on the page. If I has more time I would place the buttons better and would also add some sort of counter so that the respondent can see how many steps they have completed and how many steps are left.
+The major hurdle while constructing this survey was to place everything correctly on the page. If I had more time I would place the buttons better and would also add some sort of counter, so that the respondent can see how many steps they have completed and how many steps are left.
 
 ## View it live
 
