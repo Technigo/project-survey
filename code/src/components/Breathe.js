@@ -13,7 +13,7 @@ export const Breathe = ({ name, activity, colour, place, temp, who }) => {
           strokeDasharray="20 20" />
         <circle cx="10" cy="10" r="8" fill={colour} className="blurryCircle">
           <animateMotion
-            dur="8s"
+            dur="9s"
             repeatCount="indefinite"
             path="M 10,10 L 160,10 L 160,160 L 10,160 Z" />
         </circle>
@@ -22,12 +22,11 @@ export const Breathe = ({ name, activity, colour, place, temp, who }) => {
       <p>
         Remember, you are by the {place} and you&apos;re going to start {activity} soon. <br />
         It&apos;s around {temp} degrees, {who} is next to you and already looking at
-        the {colour} dot. Let&apos;s do this, focus {name}!
-      </p>
-      <p>
+        the {colour} light. Let&apos;s do this, focus {name}!
+        <br /><br />
         One breath is illustated by the dot.<br />
         Each step is one side of the square.<br />
-        Start by breathing out slowly, releasing the air from your lungs <br /><br />
+        Start by breathing out slowly, releasing the air from your lungs. <br /><br />
         1. Breathe in through your nose<br />
         2. Hold your breath  <br />
         3. Exhale slowly <br />
