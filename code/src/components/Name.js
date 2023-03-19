@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react'
 
 export const Name = ({ name, setName }) => {

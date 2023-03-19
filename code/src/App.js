@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 /* eslint-disable global-require */
 /* eslint-disable react-hooks/rules-of-hooks */
 import React, { useState } from 'react';

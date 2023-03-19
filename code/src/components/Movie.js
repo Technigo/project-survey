@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react'
 
 export const Movie = ({ movie, setMovie }) => {
@@ -7,25 +8,26 @@ export const Movie = ({ movie, setMovie }) => {
   return (
     <>
       <h3 className="moviePrompt">What is your favorite movie?</h3>
-      <form className="movieFav"
+      <form
+        className="movieFav"
         value={movie}
         onChange={handleMovieChange}>
-        <label>
-        <input type="radio" value="Arrival"/>
+        <div>
+          <input type="radio" value="Arrival" />
         Arrival
-        </label>
-        <label>
-        <input type="radio" value="Love Actually"/>
+        </div>
+        <div>
+          <input type="radio" value="Love Actually" />
         Love Actually
-        </label>
-        <label>
-        <input type="radio" value="Everything, Everywhere, All At Once" />
+        </div>
+        <div>
+          <input type="radio" value="Everything, Everywhere, All At Once" />
         Everything, Everywhere, All At Once
-        </label>
-        <label>
-        <input type="radio" value="Game Night" />
+        </div>
+        <div>
+          <input type="radio" value="Game Night" />
         Game Night
-        </label>
+        </div>
       </form>
     </>
   )
