@@ -16,7 +16,7 @@ export const Colors = ({ colors, setColors }) => {
     setColors(selectedColor)
   }
   return (
-    <div className="color-container">
+    <div>
       <form>
         <label htmlFor="color" className="label">What color of shrimp would you like?
         <select
