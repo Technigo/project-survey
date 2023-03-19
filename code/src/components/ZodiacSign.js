@@ -27,9 +27,11 @@ export const ZodiacSign = ({ sign, setSign }) => {
           <option value="Pisces">Pisces</option>
         </select>
       </form>
-      {sign && (
-        <p>Okey, so you&apos;re a  {sign}, cool!</p>
-      )}
+      <div className="Okey">
+        {sign && (
+          <p>Okey, so you&apos;re a  {sign}, cool!</p>
+        )}
+      </div>
     </div>
   )
 }

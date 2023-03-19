@@ -35,7 +35,7 @@ html {
   position: relative;
   align-items: center;
   bottom: 94px;
-  color:#ffe27b;
+  color:#f2f2f2;
 }
 .welcome h2 {
   text-shadow: 10px;
@@ -78,11 +78,7 @@ background-color: #ffe27b;
 label {
   padding: 5px;
 }
-input {
-  color: black;
-  position: relative;
-  bottom: 30px;
-}
+
 /*.background-image {
   height: 50%;
   width: 50%;
@@ -154,7 +150,7 @@ form.zodiacs {
   top: 190px;
 }
 
-/*page 3*/
+/*page 3 HOW MUCH*/
 .howmuch-container {
   display: flex;
   position: relative;
@@ -186,4 +182,39 @@ form.zodiacs {
   flex-direction: column;
   bottom: 100px;
   position: relative;
+}
+form {
+  position: relative;
+  /* bottom: 60px; */
+  /* size: 29px; */
+  /* text-align: center; */
+  font-size: 20px;
+  background: #19273c;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  left: 435px;
+}
+.Okey p {
+  background-color: #19273c;
+  font-size: 25px;
+}
+
+.result {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-top: 92px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+  font-size: 20px;
 }
