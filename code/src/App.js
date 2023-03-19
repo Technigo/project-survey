@@ -28,6 +28,10 @@ export const App = () => {
       .join(' ');
   }
 
+  const handleGoback = () => {
+    setCounter(counter - 1);
+  }
+
   return (
     <div className={classList(
       'background-image',
@@ -89,20 +93,22 @@ export const App = () => {
             setCounter={setCounter} />
         )}
         {counter === 6 && (
-          <div>
-            <Summary
-              name={name}
-              isabelle={isabelle}
-              isabelleTheme={isabelleTheme}
-              theme={theme}
-              continent={continent}
-              country={country}
-              open={open}
-              genre={genre}
-              counter={counter}
-              setCounter={setCounter} />
-          </div>
+          <Summary
+            name={name}
+            isabelle={isabelle}
+            isabelleTheme={isabelleTheme}
+            theme={theme}
+            continent={continent}
+            country={country}
+            open={open}
+            genre={genre}
+            counter={counter}
+            setCounter={setCounter} />
         )}
+        {counter > 0 && (
+          <button type="button" onClick={handleGoback} aria-label="Go backwards" className="go-back-button">
+            <i className="fa-solid fa-chevron-left" />
+          </button>)}
       </div>
     </div>
   )

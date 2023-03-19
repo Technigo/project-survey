@@ -101,7 +101,13 @@ p {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
 
+.go-back-button {
+  position: absolute;
+  bottom: -4px;
+  left: 0px;
 }
 
 .text-wrapper {
