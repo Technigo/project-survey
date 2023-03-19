@@ -1,13 +1,131 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@500&family=Sail&display=swap');
+
+html {
+  height: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  min-height: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(10,18,121);
+  background: linear-gradient(5deg, rgba(10,18,121,1) 0%, rgba(103,27,187,1) 100%);
+}
+
+h1 {
+  font-family: 'Sail', sans-serif;
+  font-size: 60px;
+  color: white;
+}
+
+header {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+header img {
+  width: 100px;
+  align-self: flex-end;
+}
+
+button {
+  width: 90px;
+  padding: 5px;
+  background-color: #D11149;
+  border: solid 1px aliceblue;
+  border-radius: 10px;
+  align-self: center;
+  margin-top: 1em;
+  border: none;
+  font-family: 'Assistant', sans-serif;
+  color: white;
+}
+
+button:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
+.label {
+  font-family: 'Assistant', sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+footer {
+  background-color: rgba(248, 238, 238, 0.633);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+/*Main container */
+
+.main {
+  width: 200px;
+  margin: auto;
+  background: rgba(248, 238, 238, 0.633);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+/* Inputs */
+
+input[type=text] {
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+input[type=text]:focus {
+  background-color: lightblue;
+}
+
+select {
+  font-family: 'Assistant', sans-serif;
+  padding: 0.5rem;
+  width: 150px;
+  border-radius: 5px;
+}
+
+select option {
+  color: white;
+  background-color: #D11149;
+}
+
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.shrimp-img {
+  margin-top: 1em;
+  width: 150px;
+  border-radius: 10px;
+}
+
+
+/* Larger screens */
+
+@media(min-width:667px) {
+
+.main {
+    width: 500px;
+}
+
 }
