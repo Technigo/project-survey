@@ -12,6 +12,7 @@ export const Ammount = ({ ammount, setAmmount }) => {
       <form>
         <label htmlFor="ammount">
           <input
+            name="ammount"
             type="range"
             min="0"
             max="20"

@@ -17,6 +17,7 @@ export const Aquarium = ({ shape, setShape }) => {
             htmlFor="shape"
             key={singleShape}>
             <input
+              name="shape"
               type="radio"
               value={singleShape}
               onChange={handleShape}

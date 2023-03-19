@@ -10,7 +10,7 @@ export const Name = ({ name, setName }) => {
       <p>Hi, what is your name?</p>
       <form onSubmit={(event) => event.preventDefault()}>
         <label htmlFor="name">
-          <input type="text" value={name} onChange={handleName} />
+          <input type="text" name="name" value={name} onChange={handleName} />
         </label>
       </form>
     </>

@@ -19,7 +19,9 @@ export const Colors = ({ colors, setColors }) => {
     <div className="color-container">
       <p>What color of shrimp would you like?</p>
       <form>
+        <label htmlFor="color">
         <select
+          name ="color"
           onChange={handleColors}
           value={colors.value}>
           <option value="" disabled>Select color</option>
@@ -27,6 +29,7 @@ export const Colors = ({ colors, setColors }) => {
             {color.label}
                                       </option>)}
         </select>
+        </label>
       </form>
     </div>
   )
