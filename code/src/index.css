@@ -1,13 +1,138 @@
+* {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-image: url(./images/background.png);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: #000000;
+  text-align: center;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  color: #fff;
+  font-size: 44px;
+  margin: 20px;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 22px;
+  padding-top: 20px;
+}
+
+.form-container {
+  background: #ffffff;
+  width: 50%;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 40px;
+  opacity: 90%;
+}
+
+.name-dropdown select {
+  padding: 5px;
+}
+
+.quest-dropdown select {
+  max-width: 250px;
+  width: -webkit-fill-available;
+  padding: 5px;
+}
+
+.weapon-section input {
+  max-width: 250px;
+  width: -webkit-fill-available;
+  padding: 5px;
+}
+
+.race-input label {
+  margin: 8px;
+}
+
+.race-input input {
+  margin: 5px;
+}
+
+.difficulty-level {
+  margin-bottom: 10px;
+}
+
+.difficulty-level .slider {
+  -webkit-appearance: none;
+  width: 40%;
+  height: 9px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3f4d3b;
+  cursor: pointer;
+}
+
+.submit-button {
+  background-color: #3f4d3b;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+/* SUMMARY SECTION */
+
+.summary {
+  background: #ffffff;
+  width: 50%;
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: 40px;
+  opacity: 90%;
+}
+
+.summary p {
+  font-size: 18px;
+  line-height: 1.8;
+  font-style: italic;
+  letter-spacing: 0.6px;
+  padding: 5px;
+}
+
+.summary h3 {
+  font-size: 20px;
+  margin: 10px;
+}
+
+.summary-button {
+  background-color: #3f4d3b;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.summary-styling {
+  font-size: 18px;
+  font-style: normal;
 }
