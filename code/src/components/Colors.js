@@ -22,10 +22,9 @@ export const Colors = ({ colors, setColors }) => {
           onChange={handleColors}
           value={colors.value}>
           <option value="" disabled>Select color</option>
-          {shrimpColor.map((color) => 
-            <option key={color.value} value={color.value}>
-              {color.label}
-            </option>)}
+          {shrimpColor.map((color) => <option key={color.value} value={color.value}>
+            {color.label}
+          </option>)}
         </select>
       </form>
     </div>
