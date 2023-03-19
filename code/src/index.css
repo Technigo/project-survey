@@ -44,6 +44,14 @@ p {
   font-family: 'Assistant', sans-serif;
 }
 
+.label {
+  font-family: 'Assistant', sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .main {
   width: 200px;
   margin: auto;

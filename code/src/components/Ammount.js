@@ -7,10 +7,9 @@ export const Ammount = ({ ammount, setAmmount }) => {
   }
   return (
     <div className="ammount-container">
-      <p>How many shrimp would you like?</p>
-      <p>Please remember, shrimp are social and need to be at least 10 to feel happy!</p>
       <form>
-        <label htmlFor="ammount">
+        <label htmlFor="ammount" className="ammount">How many shrimp would you like?
+          <p>Please remember, shrimp are social and need to be at least 10 to feel happy!</p>
           <input
             name="ammount"
             type="range"
