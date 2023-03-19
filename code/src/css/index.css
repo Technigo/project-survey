@@ -88,11 +88,6 @@ h4 {
   padding: 10px 15px;
   text-align: center;
   text-transform: uppercase;
-  min-width: 100px;
-}
-
-.restartBtn {
-  margin-bottom: 50px;
 }
 
 .startBtn:hover, 
@@ -114,8 +109,16 @@ h4 {
   opacity: 60%;
 }
 
-  
 /* the dot in the end */
 .blurryCircle {
   filter: blur(2px);
+}
+
+@media (max-width: 668px) {
+  .submitBtn,
+  .startBtn,
+  .restartBtn {
+    margin: 10px;
+    padding: 10px 10px
+  }
 }

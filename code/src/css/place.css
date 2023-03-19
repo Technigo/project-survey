@@ -27,3 +27,15 @@
     width: 150px;
     border: 1px solid #fff;
 }
+
+@media (max-width: 668px) {
+    .place-img-container img {
+      height: 80px;
+      width: 80px;
+  }
+  .radio-container label {
+    margin-right: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+  }

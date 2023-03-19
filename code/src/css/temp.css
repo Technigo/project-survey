@@ -73,6 +73,11 @@ input[type=range] {
     cursor: grabbing;
   }
   
+  @media (max-width: 668px) {
+    input[type=range] {
+      width: 300px;
+    }
+  }
 
 /* includes vendor prefixes for -webkit- (for Safari and older versions of Chrome),
  -moz- (for Firefox), and -ms- (for Internet Explorer and Edge). With these prefixes,
