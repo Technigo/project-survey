@@ -11,6 +11,7 @@ export const Experience = ({ experience, setExperience }) => {
       <lable>
         Experience
         <select value={experience} onChange={handleExpChange}>
+          <option value="none" selected>Select an Option</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
         </select>

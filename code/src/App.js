@@ -3,6 +3,7 @@ import { Name } from './components/Name';
 import { Experience } from './components/Experience';
 import { Size } from './components/Size';
 import { Summary } from './components/Summary';
+import './index.css';
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -14,21 +15,26 @@ export const App = () => {
     setStep(step + 1);
   }
   return (
-    <div>
+    <div className="main-container">
       {step === 1 && (
-        <Name name={name} setName={setName}/>
+        <div className="question-box">
+          <Name name={name} setName={setName} />
+        </div>
       )}
       {step === 2 && (
         <Experience experience={experience} setExperience={setExperience} />
       )}
       {step === 3 && (
-        <Size size={size} setSize={setSize} />
+        <>
+          <Size size={size} setSize={setSize} />
+          <button type="button" onClick={handleStepIncrease}>Submit</button>
+        </>
       )}
       {step >= 4 && (
         <Summary name={name} experience={experience} size={size} />
       )}
-      {step < 4 &&(
-      <button type="button" onClick={handleStepIncrease}>Next question</button>
+      {step < 3 && (
+        <button type="button" onClick={handleStepIncrease}>Next question</button>
       )}
     </div>
   );
