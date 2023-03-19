@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 export const Name = ({ name, setName }) => {
@@ -6,20 +7,20 @@ export const Name = ({ name, setName }) => {
         setName(upCaseUserName);
 };
 
-return (
-    <form onSubmit={event => event.preventDefault()}>
-        <h2>Order your movie popcorn here</h2>
-        <p>What is your name?</p>
-        <input
-        id="name-input"
-        className="name-input" 
-        type="text" 
-        value={name}
-        placeholder="Enter name here"
-        maxLength={30}
-        onChange={handleNameChange}
-        aria-label="Name"
-        required /> 
-    </form>
-);
+    return (
+        <form onSubmit={event => event.preventDefault()}>
+            <h2>Order your movie popcorn here</h2>
+            <p>What is your name?</p>
+            <input
+            id="name-input"
+            className="name-input" 
+            type="text" 
+            value={name}
+            placeholder="Enter name here"
+            maxLength={30}
+            onChange={handleNameChange}
+            aria-label="Name"
+            required /> 
+        </form>
+    );
 };

@@ -9,7 +9,7 @@ body {
   background-image: url("./components/images/popcorn1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: Gloock, sans-serif;
+  font-family: Poppins;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -20,14 +20,13 @@ code {
 }
 
 .main-container {
-  background: rgb(236, 236, 187);
+  background: rgb(250, 250, 233);
   margin: 0 auto;
   margin-top: 200px;
   width: 100%;
   max-width: 700px;
-  height: 600px;
-  border-radius: 20px;
-  border: dotted red;
+  height: 640px;
+  border: groove 6px black;
   padding: 20px 24px;
   padding-top: 100px;
   box-sizing: border-box;
@@ -48,15 +47,10 @@ h1 {
   font-weight: 500;
 }
 
-h2 {
-  font-family: Gloock, sans-serif;
-  font-weight: 500;
-}
-
 select {
   border: dotted green;
   border-radius: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins;
   font-size: 18px;
   text-align: center;
   padding: 10px; 
@@ -65,10 +59,10 @@ select {
 }
 
 button {
-  width: 106px; 
+  width: 114px; 
   border: lined;
   border-radius: 20px;
-  font-weight: 700;
+  font-family: Poppins;
   padding: 6px;
   cursor: pointer;
   margin-top: 16px;
@@ -76,4 +70,26 @@ button {
 
 p {
   font-size: 22px;
+}
+
+/* Styling for input Time */
+
+input [type="number"] {
+  width: 100px;
+}
+
+input + span {
+  padding-right: 30px;
+}
+
+input:invalid + span::after {
+  position: absolute;
+  content: "✖";
+  padding-left: 5px;
+}
+
+input:valid + span::after {
+  position: absolute;
+  content: "✓";
+  padding-left: 5px;
 }

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 export const Size = ({ size, setSize }) => {
@@ -14,10 +15,10 @@ export const Size = ({ size, setSize }) => {
                 id="size-small"
                 className="size-input"
                 type="checkbox"
-                value="Small"
+                value="small"
                 onChange={handleSizeChange}
-                checked={size === "Small"}
-                aria-label="Size Small"
+                checked={size === "small"}
+                aria-label="Size small"
                 required
             />
             Small
@@ -27,11 +28,12 @@ export const Size = ({ size, setSize }) => {
                 id="size-medium"
                 className="size-input"
                 type="checkbox"
-                value="Medium"
+                value="medium"
                 onChange={handleSizeChange}
-                checked={size === "Medium"}
-                aria-label="Size Medium"
+                checked={size === "medium"}
+                aria-label="Size medium"
                 required
+                
             />
             Medium
         </label>
@@ -40,10 +42,10 @@ export const Size = ({ size, setSize }) => {
                 id="size-large"
                 className="size-input"
                 type="checkbox"
-                value="Large"
+                value="large"
                 onChange={handleSizeChange}
-                checked={size === "Large"}
-                aria-label="Size Large"
+                checked={size === "large"}
+                aria-label="Size large"
                 required
             />
             Large

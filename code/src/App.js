@@ -1,8 +1,9 @@
+/* eslint-disable */
 import React, { useState } from 'react';
 import { Name } from 'components/Name';
 import { Size } from 'components/Size';
 import { Flavor } from 'components/Flavor';
-import { Topping } from 'components/Topping';
+import { Time } from 'components/Time';
 import { Result } from 'components/Result';
 
 export const App = () => {
@@ -10,11 +11,12 @@ export const App = () => {
   const [name, setName] = useState('');
   const [size, setSize] = useState('');
   const [flavor, setFlavor] = useState('');
-  const [topping, setTopping] = useState('');
+  const [time, setTime] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1)
   }
+
 
   return (
     <section className="main-container">
@@ -35,13 +37,13 @@ export const App = () => {
 
     {step === 4 && (
     <>
-      <Topping topping={topping} setTopping={setTopping} />
+      <Time time={time} setTime={setTime} />
       <button type="submit"onClick={handleStepIncrease}>Submit</button>
     </>
     )}
 
     {step >= 5 && (
-      <Result name={name} size={size} flavor={flavor} topping={topping} />
+      <Result name={name} size={size} flavor={flavor} time={time} />
     )}
 
     {step < 4 && (

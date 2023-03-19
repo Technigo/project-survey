@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 export const Flavor = ({ flavor, setFlavor }) => {
@@ -14,7 +15,7 @@ export const Flavor = ({ flavor, setFlavor }) => {
                 <option value="" disabled="disabled">Choose flavor</option>
                 <option value="sweet">Sweet</option>
                 <option value="salty">Salty</option>
-                <option value="sweet-and-salty">Sweet &amp; Salty</option>
+                <option value="sweet and salty">Sweet &amp; Salty</option>
             </select>
         </form>
     );
