@@ -8,7 +8,8 @@ export const Spend = ({ spend, setSpend }) => {
 
   return (
     <>
-      <h1>How much are you willing to spend on a pair of sneakers you like?</h1>
+      <h1 className="survey-title">Sneaker Survey</h1>
+      <h2>How much are you willing to spend on a pair of sneakers you like?</h2>
       <div className="slider-container">
         <p>10€</p>
         <form className="slider">

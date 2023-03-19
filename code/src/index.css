@@ -13,7 +13,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,16 +47,20 @@ strong {
 
 h1 {
   color: #bbdd90;
-  font-size: 25px;
+  font-size: 21px;
+}
+
+.survey-title {
+  font-family: 'Climate Crisis', sans-serif;
+  font-weight: 200;
 }
 
 h2, h3 {
   color: #bbdd90;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 p {
-  /* color: #bbdd90; */
   color: #d5d1cd;
   font-size: 15px;
   font-weight: 600;
@@ -69,18 +73,22 @@ p {
 button {
   font-size: 15px;
   border: none;
-  width: 100px;
+  width: 120px;
   padding: 5px 0;
   border-radius: 10px;
+  background-color: #bbdd90;
   color: #2b2b2b;
-  background-color: #c4c8cb;
   font-family: Titillium web, sans-serif;
   font-weight: bold;
 }
 
 button:hover {
-  background-color: #bbdd90;
   color: #2b2b2b;
+  background-color: #c4c8cb;
+}
+
+.next-button {
+  width: 80px;
 }
 
 @media (min-width: 668px) {

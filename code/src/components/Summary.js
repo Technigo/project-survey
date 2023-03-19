@@ -11,7 +11,7 @@ export const Summary = ({ name, frequently, brand, spend, secondHand }) => {
       when it comes to second hand treasures
       </p>
       <h2>If you want to change your answers, please click below:</h2>
-      <button type="button" onClick={() => window.location.reload()}>Start over</button>
+      <button className="start-over-btn" type="button" onClick={() => window.location.reload()}>Start over</button>
       <h3>If you are happy with your answers please submit:</h3>
     </>
   )

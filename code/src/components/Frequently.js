@@ -8,7 +8,8 @@ export const Frequently = ({ frequently, setFrequently }) => {
 
   return (
     <>
-      <h1>Please give us some insight in your shopping habits:</h1>
+      <h1 className="survey-title">Sneaker Survey</h1>
+      <h2>Please give us some insight in your shopping habits:</h2>
       <form>
         <select
           aria-label="dropdown how often do you buy sneakers"

@@ -16,7 +16,8 @@ export const Brand = ({ brand, setBrand }) => {
   }
   return (
     <div>
-      <h1>Which is your favorite sneaker brand?</h1>
+      <h1 className="survey-title">Sneaker Survey</h1>
+      <h2>Which is your favorite sneaker brand?</h2>
       <p>Please, pick one of below</p>
       <p>Brand:</p>
       <form className="form-radio-btn" aria-label="radio buttons brands">
@@ -25,7 +26,6 @@ export const Brand = ({ brand, setBrand }) => {
             {' '}
             {singleBrand}
             <input
-              name="radio"
               className="radio-btn"
               id="BrandsRadioButtons"
               type="radio"

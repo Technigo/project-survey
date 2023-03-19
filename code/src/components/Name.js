@@ -18,7 +18,7 @@ export const Name = ({ name, setName, step, setStep }) => {
 
   return (
     <div className="name-container">
-      <h1>Sneaker Survey</h1>
+      <h1 className="survey-title">Sneaker Survey</h1>
       <h2>Hi there!</h2>
       <p>Would you like to be part of shaping a new site
         for second hand limited Sneakers?
