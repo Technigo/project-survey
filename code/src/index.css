@@ -59,6 +59,7 @@ code {
   display: flex;
   align-items: center;
   margin-left: 70px;
+  font-family: 'Nunito', sans-serif;
 }
 
   .fashion-image {
@@ -122,6 +123,7 @@ code {
     margin-top: 3rem;
     background-color: #C9B9AD;
     color: white;
+    font-family: 'Nunito', sans-serif;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -150,6 +152,7 @@ code {
     font-family: 'Nunito', sans-serif;
     font-size: 22px;
     margin-left: 15px;
+    margin-right: 15px;
   }
   
   .delivery-options {
@@ -294,6 +297,7 @@ code {
     .name-input button {
       align-items: center;
       justify-content: center;
+      font-family: 'Nunito', sans-serif;
     }
     
   .thanks-header {
@@ -562,6 +566,7 @@ button:hover {
   .name-input button {
     align-items: center;
     justify-content: center;
+    font-family: 'Nunito', sans-serif;
   }
   
 .thanks-header {
