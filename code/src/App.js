@@ -2,28 +2,17 @@
 import React, { useState } from 'react';
 import Background from 'components/Background';
 import Header from 'components/Header';
-import QuestionOne from 'components/QuestionOne';
+import Name from 'components/Name';
 
 export const App = () => {
-  const [step, setStep] = useState(0);
-  const [questionOne, setQuestionOne] = useState(0);
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setStep(1);
-  };
+  const [counter, setCounter] = useState(0);
+  const [name, setName] = useState('');
 
   return (
     <>
       <Background />
-      <Header />
-      <form className="question-wrapper" onSubmit={handleSubmit} title="Space tour company Survey">
-        {step === 0 && (
-          <QuestionOne
-            QuestionOne={questionOne}
-            setQuestionOne={setQuestionOne} />
-        )}
-      </form>
+      {counter === 0 && <Header counter={counter} setCounter={setCounter} />}
+      {counter === 1 && <Name counter={name} setCounter={setName} />}
     </>
   )
 }
