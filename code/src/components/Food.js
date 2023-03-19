@@ -2,7 +2,7 @@ import React from 'react';
 
 const foodOption = [
   'the biggest cake you ever seen',
-  'a buffé with all your favourite food',
+  'a buffé with your favourite food',
   'fruits in piles',
   'ice cream that never melts',
 ];

@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   align-items: center;
   font-family: 'Ubuntu', sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 30px;
   margin-bottom: 20px;
   
@@ -122,6 +122,7 @@ margin-bottom: 30px;
   flex-direction: column;
   color: #ffffff;
   font-size: 20px;
+  padding: 15px;
 }
 
 .select {
@@ -136,26 +137,6 @@ margin-bottom: 30px;
   margin-top: -90px;
   color: white;
   font-family: 'Ubuntu', sans-serif;
-}
-
-.party-btn {
-  margin-top: 20px;
-}
-
-.party-btn button {
-  padding: 8px;
-  font-family: 'Rubik', sans-serif;
-  border-style: none;
-  border-radius: 10px;
-  font-size: 18px;
-  color: rgb(255, 255, 255);
-  background-color: #d88baf;
-  
-}
-
-.party-btn button:hover {
-  background: #cb3978;
-  box-shadow: 1px 1px 2px rgb(255, 173, 209), 0 0 25px rgb(246, 237, 243), 0 0 5px rgb(255, 62, 226);
 }
 
 .party-text {
@@ -176,3 +157,25 @@ margin-bottom: 30px;
   margin: -2px;
 }
 
+.party-text h3 {
+  color: white;
+  font-size: 35px;
+  margin: 0px;
+}
+
+
+.party-btn button {
+  padding: 8px;
+  font-family: 'Rubik', sans-serif;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  background-color: #d88baf;
+  
+}
+
+.party-btn button:hover {
+  background: #cb3978;
+  box-shadow: 1px 1px 2px rgb(255, 173, 209), 0 0 25px rgb(246, 237, 243), 0 0 5px rgb(255, 62, 226);
+}

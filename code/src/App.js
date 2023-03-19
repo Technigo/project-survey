@@ -43,9 +43,9 @@ export const App = () => {
           <div className="step">
             <p>PARTYSTEP {step}/5</p>
           </div>
+
         </>
       )}
-
     </div>
   );
 };

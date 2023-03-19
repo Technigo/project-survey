@@ -7,7 +7,7 @@ export const Name = ({ name, setName }) => {
   return (
     <>
       <div className="header">
-        <h1>Bad day?</h1> 
+        <h1>Are you a daydreamer?</h1> 
         <h1>Let's throw a <span>party</span> !</h1>
       </div>
       <div className="question">
