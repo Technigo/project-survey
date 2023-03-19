@@ -6,8 +6,8 @@ import Footer from './components/Footer';
 const Buttons = ({ handleNextClick, handleBackClick }) => {
   return (
     <div className="btn">
-      <button aria-label="Go to previous question" type="button" onClick={handleBackClick}><span aria-hidden="true">👈 Back</span></button>
-      <button aria-label="Go to next question" type="submit" onClick={handleNextClick}><span aria-hidden="true">Next 👉</span></button>
+      <button aria-label="Go to previous question" type="button" onClick={handleBackClick}><span aria-hidden="true">👈</span> Back</button>
+      <button aria-label="Go to next question" type="submit" onClick={handleNextClick}>Next <span aria-hidden="true">👉</span></button>
     </div>
   )
 };

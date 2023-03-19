@@ -2,7 +2,7 @@ import React from 'react';
 
 const Summary = ({ nameInput, ageInput, locationInput, greenInput, feedbackInput, submitBtn }) => {
   return (
-    <div className="summary">
+    <div lang="us" className="summary">
       <h2>Summary of your answers:</h2>
       <ul>
         <li><b>Name:</b><br />{nameInput}</li>
@@ -12,7 +12,7 @@ const Summary = ({ nameInput, ageInput, locationInput, greenInput, feedbackInput
         <li><b>Like to have more of:</b><br />{feedbackInput}</li>
       </ul>
       <p className="submitAnswer">Click the button below to submit your answers.</p>
-      <button title="Submit answers" type="submit" onClick={submitBtn}> Submit</button>
+      <button type="submit" onClick={submitBtn}> Submit</button>
     </div>
   )
 };
