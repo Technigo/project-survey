@@ -95,7 +95,6 @@ code {
     align-items: center;
   }
   
-  
   .hear-container {
     display: flex;
     flex-direction: column;
@@ -351,6 +350,7 @@ code {
     align-items: center;
     background-color: #f2f2f2;
     padding: 10px;
+    height: 5vh;
   }
   
   .navbar-left a,
@@ -387,6 +387,10 @@ code {
 text-decoration: none;
 }  
 
+.navbar a:hover {
+  color: #AD9F93; 
+}
+
 .name-input {
   margin-right: 100px;
   font-family: 'Nunito', sans-serif;
@@ -411,7 +415,7 @@ text-decoration: none;
   float: left;
   width: 50%;
   object-fit: cover;
-  height: 100vh;
+  height: 95vh;
 }
 
 .name-header {
@@ -432,9 +436,8 @@ text-decoration: none;
   justify-content: center;
   width: 50%;
   float: right;
-  height: 100vh;
+  height: 95vh;
 }
-
 
 .hear-container {
   display: flex;
@@ -555,8 +558,6 @@ button:hover {
     font-family: 'Nunito', sans-serif;
   }
 
-
-  
   .rate-header {
     display: flex;
     justify-content: center;

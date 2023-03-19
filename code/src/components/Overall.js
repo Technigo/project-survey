@@ -25,7 +25,7 @@ export const Overall = ({ overall, setOverall, step, handleStepIncrease }) => {
       <div className="right-container">
         <div className="overall-header">
           <h2>Question {step}</h2>
-          <p>What is your overall perception of us?</p>
+          <p>What&apos;s your overall perception of us?</p>
         </div>
         <div className="overall-form">
           <form className="form" onSubmit={handleSubmit}>

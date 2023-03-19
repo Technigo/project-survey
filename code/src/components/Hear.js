@@ -32,8 +32,8 @@ export const Hear = ({ hear, setHear, step, handleStepIncrease }) => {
             <option value="Other">Other</option>
           </select>
           <div className="next-button">
-            <button type="submit" onClick={handleNextClick} required>
-            Next
+            <button type="submit">
+              Next
             </button>
           </div>
         </form>
