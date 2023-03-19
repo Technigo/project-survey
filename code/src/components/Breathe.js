@@ -18,7 +18,7 @@ export const Breathe = ({ name, activity, colour, place, temp, who }) => {
             path="M 10,10 L 160,10 L 160,160 L 10,160 Z" />
         </circle>
       </svg>
-      <h4 className="sumh4">Keep your happy scenario in our mind and let&apos;s breathe.</h4>
+      <h4 className="sumh4">Keep your happy scenario in your mind and let&apos;s slow down...</h4>
       <p>
         Remember, you are by the {place} and you&apos;re going to start {activity} soon. <br />
         It&apos;s around {temp} degrees, {who} is next to you and already looking at

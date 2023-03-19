@@ -7,7 +7,7 @@ export const Who = ({ who, setWho, step }) => {
   return (
     <div className="content-container">
       <p className="p-step">Current step: {step} / 7</p>
-      <h4> We are almost there, who would you like to have next to you?</h4>
+      <h4> We are almost there. Who would you like to have next to you?</h4>
       <input
         type="text"
         value={who}

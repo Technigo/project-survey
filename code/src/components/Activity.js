@@ -9,7 +9,7 @@ export const Activity = ({ activity, setActivity, step }) => {
         <div>
           <p className="p-step">Current step: {step} / 7</p>
         </div>
-        <h4> Ok, What activity sparks your joy and makes your ears wiggle?
+        <h4> Ok, what activity sparks your joy and makes your ears wiggle?
         </h4>
       </div>
       <div>

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    gap: 50px;
+    gap: 20px;
 }
 
 .place-img-container {
@@ -13,6 +13,11 @@
     gap: 20px;
     box-sizing: border-box;
     margin:auto;
+}
+
+.radio-container {
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 
 .radio-container label {

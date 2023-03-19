@@ -9,11 +9,11 @@ export const Summary = ({ name, activity, colour, place, temp, who }) => {
         {name}, picture yourself by the {place} where you are about to start your {activity}. <br />
         You feel the atmosphere beeing just the way you want, it is around {temp} degrees.  <br />
         By your side you have {who} looking at you with a smile.  <br />
-        In the distance you see a beutiful {colour} light.
+        In the distance you see a beautiful {colour} light.
       </p>
       <p>
         {who} want you to move on now.
-        Are you ready to take the next step for your mental health {name}?
+        Are you ready to take the next step {name}?
       </p>
     </div>
   )

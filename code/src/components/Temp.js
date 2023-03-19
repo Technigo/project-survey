@@ -22,7 +22,7 @@ export const Temp = ({ temp, setTemp, step }) => {
       tempText = 'Extremely Hot 🔥';
       break;
     default:
-      tempText = '';
+      tempText = 'Drag the slider to desired temp';
   }
   return (
     <form className="content-container">
@@ -31,7 +31,7 @@ export const Temp = ({ temp, setTemp, step }) => {
       </div>
       <div className="content-container">
         <h3>What is your prefered temperature?</h3>
-        <p> I like it to be: {tempText}</p>
+        <p>{tempText}</p>
         <label htmlFor="temperature">
           <input
             type="range"
