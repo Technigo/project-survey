@@ -7,12 +7,12 @@ const PriceSlider = ({ priceValue, setPriceValue }) => {
 
   return (
 
-    <div>
-      <h3>Average price</h3>
+    <div className="sliderContainer">
+      <h3>How much do you spend on an average snackrun?</h3>
       <input
         type="range"
         min="0.75"
-        max="7"
+        max="15"
         step="0.25"
         value={priceValue}
         onChange={readSlider} />

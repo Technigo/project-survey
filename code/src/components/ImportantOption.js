@@ -1,48 +1,52 @@
 import React from 'react';
 
 const ImportantOption = ({ importantValue, setImportantValue }) => {
-  const handleCheck = (event) => {
-    const { value, checked } = event.target;
-    if (checked) {
-      setImportantValue([...importantValue, value]);
-    } else {
-      setImportantValue(importantValue.filter((item) => item !== value));
+  const handleImportantChoice = (event) => {
+    const isChecked = event.target.checked;
+
+    if (isChecked) {
+      setImportantValue(isChecked)
     }
+
+    console.log({ importantValue });
   };
 
   return (
-    <form>
-      <label htmlFor="vegan">
-        <input
-          type="checkbox"
-          id="vegan"
-          name="vegan"
-          value="vegan"
-          checked={importantValue.includes('vegan')}
-          onChange={handleCheck} />
-        vegan
-      </label>
-      <label htmlFor="sugarfree">
-        <input
-          type="checkbox"
-          id="sugarfree"
-          name="sugarfree"
-          value="sugarfree"
-          checked={importantValue.includes('sugarfree')}
-          onChange={handleCheck} />
-        sugarfree
-      </label>
-      <label htmlFor="ecological">
-        <input
-          type="checkbox"
-          id="ecological"
-          name="ecological"
-          value="ecological"
-          checked={importantValue.includes('ecological')}
-          onChange={handleCheck} />
-        ecological
-      </label>
-    </form>
+    <>
+      <h3>Are any of these important to you?</h3>
+      <form>
+        <label htmlFor="vegan">
+          <input
+            type="checkbox"
+            id="vegan"
+            name="vegan"
+            value="vegan"
+            onChange={handleImportantChoice}
+            checked={importantValue.includes('vegan')} />
+        Vegan
+        </label>
+        <label htmlFor="sugarfree">
+          <input
+            type="checkbox"
+            id="sugarfree"
+            name="sugarfree"
+            value="sugarfree"
+            onChange={handleImportantChoice}
+            checked={importantValue.includes('sugarfree')} />
+        Sugarfree
+        </label>
+        <label htmlFor="ecological">
+          <input
+            type="checkbox"
+            id="ecological"
+            name="ecological"
+            value="ecological"
+            onChange={handleImportantChoice}
+            checked={importantValue.includes('ecological')} />
+        Ecological
+        </label>
+      </form>
+    </>
   );
 };
 

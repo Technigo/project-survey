@@ -7,15 +7,17 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
   };
   const filteredForTasteGroup = SnacksArray.filter((snack) => snack.taste.includes(tasteGroup));
   const uniqueTypes = [...new Set(filteredForTasteGroup.map((snack) => snack.type))];
+
   (console.log({ tasteGroup }))
   console.log({ uniqueTypes })
   if (tasteGroup === ('sweet')) {
     return (
-      <>
-        <h3>What type</h3>
+      <div className="TypeComp">
+        <h3>What type of snack would you prefer?</h3>
         <form>
           {uniqueTypes.map((typeChoice) => (
             <label
+              className={type === typeChoice ? 'selected' : ''}
               htmlFor="type"
               key={typeChoice}>
               <input
@@ -23,19 +25,30 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
                 value={typeChoice}
                 onChange={handleTypeChoice}
                 checked={type === typeChoice} />
-              {typeChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setType(typeChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setType(typeChoice);
+                  }
+                }}>
+                {typeChoice}
+              </span>
             </label>
           ))}
         </form>
-      </>
+      </div>
     )
   } else if (tasteGroup === ('sour')) {
     return (
-      <>
-        <h3>What type</h3>
+      <div>
+        <h3>What type of snack would you prefer?</h3>
         <form>
           {uniqueTypes.map((typeChoice) => (
             <label
+              className={type === typeChoice ? 'selected' : ''}
               htmlFor="type"
               key={typeChoice}>
               <input
@@ -43,19 +56,30 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
                 value={typeChoice}
                 onChange={handleTypeChoice}
                 checked={type === typeChoice} />
-              {typeChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setType(typeChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setType(typeChoice);
+                  }
+                }}>
+                {typeChoice}
+              </span>
             </label>
           ))}
         </form>
-      </>
+      </div>
     )
   } else if (tasteGroup === ('savory')) {
     return (
-      <>
-        <h3>What type</h3>
+      <div>
+        <h3>What type of snack would you prefer?</h3>
         <form>
           {uniqueTypes.map((typeChoice) => (
             <label
+              className={type === typeChoice ? 'selected' : ''}
               htmlFor="type"
               key={typeChoice}>
               <input
@@ -63,19 +87,30 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
                 value={typeChoice}
                 onChange={handleTypeChoice}
                 checked={type === typeChoice} />
-              {typeChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setType(typeChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setType(typeChoice);
+                  }
+                }}>
+                {typeChoice}
+              </span>
             </label>
           ))}
         </form>
-      </>
+      </div>
     )
   } else if (tasteGroup === ('salty')) {
     return (
-      <>
-        <h3>What type</h3>
+      <div>
+        <h3>What type of snack would you prefer?</h3>
         <form>
           {uniqueTypes.map((typeChoice) => (
             <label
+              className={type === typeChoice ? 'selected' : ''}
               htmlFor="type"
               key={typeChoice}>
               <input
@@ -83,11 +118,21 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
                 value={typeChoice}
                 onChange={handleTypeChoice}
                 checked={type === typeChoice} />
-              {typeChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setType(typeChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setType(typeChoice);
+                  }
+                }}>
+                {typeChoice}
+              </span>
             </label>
           ))}
         </form>
-      </>
+      </div>
     )
   }
 }

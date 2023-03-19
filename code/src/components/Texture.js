@@ -13,10 +13,11 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
   if (type === ('candy')) {
     return (
       <>
-        <h3>What texture</h3>
+        <h3>What texture would you like?</h3>
         <form>
           {uniqueTextures.map((textureChoice) => (
             <label
+              className={texture === textureChoice ? 'selected' : ''}
               htmlFor="type"
               key={textureChoice}>
               <input
@@ -24,7 +25,17 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
                 value={textureChoice}
                 onChange={handleTextureChoice}
                 checked={texture === textureChoice} />
-              {textureChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setTexture(textureChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setTexture(textureChoice);
+                  }
+                }}>
+                {textureChoice}
+              </span>
             </label>
           ))}
         </form>
@@ -33,10 +44,11 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
   } else if (type === ('nut')) {
     return (
       <>
-        <h3>What texture</h3>
+        <h3>What texture would you like?</h3>
         <form>
           {uniqueTextures.map((textureChoice) => (
             <label
+              className={texture === textureChoice ? 'selected' : ''}
               htmlFor="type"
               key={textureChoice}>
               <input
@@ -44,7 +56,17 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
                 value={textureChoice}
                 onChange={handleTextureChoice}
                 checked={texture === textureChoice} />
-              {textureChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setTexture(textureChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setTexture(textureChoice);
+                  }
+                }}>
+                {textureChoice}
+              </span>
             </label>
           ))}
         </form>
@@ -53,10 +75,11 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
   } else if (type === ('fruit')) {
     return (
       <>
-        <h3>What texture</h3>
+        <h3>What texture would you like?</h3>
         <form>
           {uniqueTextures.map((textureChoice) => (
             <label
+              className={texture === textureChoice ? 'selected' : ''}
               htmlFor="type"
               key={textureChoice}>
               <input
@@ -64,7 +87,17 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
                 value={textureChoice}
                 onChange={handleTextureChoice}
                 checked={texture === textureChoice} />
-              {textureChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setTexture(textureChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setTexture(textureChoice);
+                  }
+                }}>
+                {textureChoice}
+              </span>
             </label>
           ))}
         </form>
@@ -73,10 +106,11 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
   } else if (type === ('chips')) {
     return (
       <>
-        <h3>What texture</h3>
+        <h3>What texture would you like?</h3>
         <form>
           {uniqueTextures.map((textureChoice) => (
             <label
+              className={texture === textureChoice ? 'selected' : ''}
               htmlFor="type"
               key={textureChoice}>
               <input
@@ -84,7 +118,17 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
                 value={textureChoice}
                 onChange={handleTextureChoice}
                 checked={texture === textureChoice} />
-              {textureChoice}
+              <span
+                role="button"
+                tabIndex={0}
+                onClick={() => setTexture(textureChoice)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    setTexture(textureChoice);
+                  }
+                }}>
+                {textureChoice}
+              </span>
             </label>
           ))}
         </form>
