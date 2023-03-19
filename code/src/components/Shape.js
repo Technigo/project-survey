@@ -7,7 +7,7 @@ export const Shape = ({ shape, setShape }) => {
   return (
     <div className="shape-container">
       <div className="question">What would you choose to call the blue hair style?</div>
-      <form classname="shape-form">
+      <form>
         <select
           onChange={handleShape}
           value={shape}>

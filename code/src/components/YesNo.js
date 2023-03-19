@@ -9,18 +9,16 @@ export const YesNo = ({ yesno, setYesNo }) => {
       <div className="question">Have you heard of the Bouba Kiki Effect?</div>
       <div className="radio-buttons">
         <label>
-            <input
-              type="radio"
-              value="Yes"
-              onChange={handleYesNo}
-              checked={yesno === 'Yes'}
-              />Yes
-            <input
-              type="radio"
-              value="No"
-              onChange={handleYesNo}
-              checked={yesno === 'No'}
-              />No
+          <input
+            type="radio"
+            value="Yes"
+            onChange={handleYesNo}
+            checked={yesno === 'Yes'} />Yes
+          <input
+            type="radio"
+            value="No"
+            onChange={handleYesNo}
+            checked={yesno === 'No'} />No
         </label>
       </div>
     </div>
