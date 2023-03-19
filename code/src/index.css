@@ -28,12 +28,12 @@ code {
   margin-top: 10%;
   margin-bottom: 5%;
   gap: 20px;
-  border: 5px double #614124;
+  border: 5px double black;
   border-radius: 25px;
 
 }
 
-.greeting, .human, .badNewsClass, .fitness, .sliderSection, .solution {
+.questionBox, .progressBox, .greeting, .human, .badNewsClass, .fitness, .sliderSection, .solution {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,8 +41,6 @@ code {
 }
 
 .button {
-  /* 
-  color: rgb(255, 255, 255); */
   background-color: yellow; 
   cursor: pointer;
   font-weight: 700;
@@ -142,3 +140,32 @@ input[type=range]::-webkit-slider-runnable-track:hover {
   justify-content: center;
   gap: 30px; 
 }
+
+/*
+progress {
+  accent-color: black;
+  height: 17px;
+}
+
+background-size: 35px 20px, 100% 100%, 100% 100%;
+*/
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color:black;
+    border-radius: 2px;
+    height: 17px;
+    
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: white;
+}
+
+

@@ -13,6 +13,7 @@ import { Footer } from 'components/footer/Footer';
 import { Weapon } from 'components/Weapon';
 
 export const App = () => {
+  const stepsTotalCount = 9;
   const [step, setStep] = useState(0);
   const [human, setHuman] = useState(false);
   const [name, setName] = useState('');
@@ -38,9 +39,22 @@ export const App = () => {
           {step === 7 && (<Weapon weapon={weapon} setWeapon={setWeapon} />)}
           {step === 8 && (<Body body={body} setBody={setBody} />)}
           {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combact={combact} weapon={weapon} body={body} />)}
+          <button className="button" type="button" onClick={handleStepIncrease}> Next </button>
         </div>
-        <button className="button" type="button" onClick={handleStepIncrease}> Next </button>
       </section>
+      <div className="progressBox">
+        {step >= 1 && step < 9 && (
+          <p className="progress-meter">
+            <progress value={step} max={stepsTotalCount + 1}>
+              {step} of {stepsTotalCount}
+            </progress>
+            <span>
+              <br />
+              <b>{step}</b> / {stepsTotalCount}
+            </span>
+          </p>
+        )}
+      </div>
       <Footer />
     </>
   );
