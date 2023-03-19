@@ -125,19 +125,24 @@ code {
   border: 2px solid black; 
   height:30px; 
   width: 200px; 
+  margin: 0px 20px; 
+  
  }
 
  .dropdown-container {
   display: flex; 
   flex-direction: column; 
   align-items: center; 
+  padding:0 20px; 
+
  }
 
  .drop-down {
   display: flex; 
   border: 2px solid pink;  
   height: 30px; 
-  width: 200px; 
+  width: 200px;
+ 
  }
 
  .drop-down, .input-field {
@@ -181,8 +186,9 @@ code {
   }
 
 
-.result-title {
+.story-title {
   margin: 20px; 
+  font-size: 24px; 
 }
 .story-text {
   display: flex; 
@@ -212,6 +218,8 @@ code {
 filter: brightness(80%); 
 }
 
+
+
 @media (min-width:600px) and (max-width:667px) {
   .survey-container {
     box-sizing: border-box;
@@ -225,9 +233,9 @@ filter: brightness(80%);
 
 @media (max-width:420px) {
 .survey-container{
+display: flex; 
 box-sizing: border-box;
 width:100%; 
-overflow:hidden; 
 }  
 
 .instructionText {
@@ -237,26 +245,30 @@ overflow:hidden;
 
 .story-container {
   display: flex;
-  width: 70%; 
+  width: 90%; 
   height:100%; 
   margin: 20px; 
-  overflow-x: hidden; 
   overflow-y:scroll; 
+  position:absolute; 
+}
+
+.story-title {
+  margin-top: 30px; 
 }
 
 .story-text {
 display: flex;
 flex-direction: column; 
 flex-wrap: wrap; 
-line-height: 25px;
 }
 
 .restart-button {
   align-self: center;
   padding: 20px 40px; 
+  margin: 0; 
 }
 
-.result-title {
+.story-title {
   font-size: 24px;
   width: 70%; 
 }
