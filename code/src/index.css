@@ -58,6 +58,7 @@ background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, F
 
 .button {
   font-size: 20px;
+  font-family: inherit;
 }
 
 p {
@@ -93,5 +94,14 @@ input[type=text] {
   border: 9px solid rgba(136, 93, 241, 0.4);
   border-radius: 33px;
   box-shadow: -26px -13px 32px rgba(247, 246, 19, 0.5);
-  background: radial-gradient(rgb(252, 115, 242) 20%, rgb(139, 102, 241) 100%);;
+  background: radial-gradient(rgb(252, 115, 242) 20%, rgb(139, 102, 241) 100%);
+}
+
+.dropDown {
+  background: radial-gradient(rgb(115, 252, 243) 20%, rgb(139, 102, 241) 100%);
+  padding: 1em;
+  font-size: 1em;
+  border-radius: inherit;
+  box-shadow: 3px -1px 21px rgb(30 51 194 / 91%);
+  font-family: inherit;
 }
