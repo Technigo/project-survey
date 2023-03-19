@@ -37,7 +37,29 @@ code {
   font-size: 3rem;
 }
 
+.header-copy2 {
+  font-family: 'Rubik Iso', cursive;
+  font-size: 2rem;
+  color:rgb(58, 16, 248);
+}
+
 .header-paragraph {
+  font-family: "Lucida Console", "Courier New", monospace;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0 30px;
+}
+
+.summary-paragraph {
+  font-family: "Lucida Console", "Courier New", monospace;
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.footer-paragraph {
+  padding-top: 40px;
   font-family: "Lucida Console", "Courier New", monospace;
   letter-spacing: 2px;
   text-align: center;
@@ -85,7 +107,7 @@ code {
   object-fit: cover;
   max-width: 50%;
   padding-bottom: 40px;
-  -webkit-filter: brightness(80%);
+  -webkit-filter: brightness(60%);
   -webkit-transition: all 1s ease;
   -moz-transition: all 1s ease;
   -o-transition: all 1s ease;
@@ -104,7 +126,7 @@ code {
 .button-start {
   font-family: 'Rubik Iso', cursive;
   padding: 10px 20px;
-  margin-top: 20px;
+  margin-top: 50px;
   font-size: 2rem;
   background-color: transparent;
   border: solid 2px rgb(255, 255, 255);
@@ -122,7 +144,28 @@ code {
   transition: 1s ease;
 }
 
+.content-container {
+  display: flex;
+  flex-direction: column; 
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
+ a {
+  color: rgb(58, 16, 248);
+  text-decoration: none;
+ }
+ a:link{
+  color: rgb(58, 16, 248);
+ }
+ a:hover{
+  color: rgb(116, 10, 158);
+ }
 
 @media (min-width: 667px) and (max-width: 1024px) {
 

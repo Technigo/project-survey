@@ -7,7 +7,7 @@ const Dates = ({ monthType, onMonthTypeChange, onClickNext }) => {
   return (
     <section className="content-container">
       <h1 className="header-copy">
-        Which year would you like to book?
+        When do you wish to travel?
       </h1>
       <div className="month-container">
         {monthTypes.map((type) => (
