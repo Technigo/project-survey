@@ -60,7 +60,7 @@ export const App = () => {
             temp={temp}
             who={who} />
           <div className="button-container">
-            <button type="button" onClick={handleStepIncrease} className="submitBtn">Yes</button>
+            <button type="button" onClick={handleStepIncrease} className="submitBtn">Yes please</button>
             <button type="button" onClick={handleStepReset} className="restartBtn">No, restart</button>
           </div>
         </>
