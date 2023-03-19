@@ -21,20 +21,21 @@ code {
   align-items: center;
   min-height: 100vh;
   padding: 25px;
-  background-image: url('../public/images/background-survey.jpg');
+  background-image: url('../public/images/background-image.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: black;
   text-align: center;
+  
  
 }
 
 h1 {
   background-color: #d6c4ad;
-  border: 6px double #8b6a7a;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 15px;
+  border: solid #948f6e 2px;
   
   
 
@@ -56,6 +57,7 @@ h1 {
   color: rgb(16, 16, 16);
   background-color: rgb(187, 178, 142);
   border-radius: 20px;
+  border: solid #948f6e 2px;
 }
 
 .feedback-label, .name-label, .time-label {
@@ -234,4 +236,5 @@ footer {
   margin-top: 50px;
   color: #495057;
   font-family:Georgia, 'Times New Roman', Times, serif;
+  border: solid #948f6e 2px;
 }

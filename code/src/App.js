@@ -70,7 +70,8 @@ export const App = () => {
         </div>
       )}
       <footer>
-        ~Created by NinaW~
+        ~Created by NinaW~<br />
+        Image by rawpixel.com
       </footer>
     </div>
   );

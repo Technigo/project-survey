@@ -7,7 +7,7 @@ export const Feedback = ({ feedback, setFeedback }) => {
   return (
     // eslint-disable-next-line jsx-a11y/label-has-associated-control
     <label htmlFor="feedback" className="feedback-label">
-      <p>Please give some feedback to your closest manage:</p>
+      <p>Please give some feedback to your closest manager:</p>
       <textarea
         id="feedback"
         value={feedback}
