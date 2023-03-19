@@ -1,0 +1,108 @@
+header {
+  display: flex;
+}
+
+.header-title {
+  font-size: 29px;
+  margin: auto;
+  padding-top: 20px;
+  color: #ECCCCF;
+  opacity: 80%;
+}
+
+.page-container {
+  margin: 15px 30px 15px 30px;
+  padding: 25px;
+  border-radius: 20px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.3px);
+  -webkit-backdrop-filter: blur(6.3px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding-bottom: 10px;
+  /*margin-top: 120px;*/
+}
+
+.footer-text {
+  font-family: 'Yuji Boku', serif;
+  font-size: 18px;
+  color: #D39CA1;
+  margin: auto;
+  padding: 0px;
+}
+
+
+@media (min-width: 448px) and (max-width: 667px) {
+
+  .header-title {
+    font-size: 34px;
+  } 
+
+  .page-container {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 30px 35px 30px 35px;
+  }
+
+  .footer-text {
+    font-size: 20px;
+  }
+
+}
+
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+  .header-title {
+    font-size: 45px;
+    padding-top: 20px;
+  }
+
+  .page-container {
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px 35px 30px 35px;
+  }
+
+  .footer-text {
+    font-size: 22px;
+  }
+
+}  
+      
+  
+@media (min-width: 1025px) {
+
+  .header-title {
+    font-size: 50px;
+    padding-top: 20px;
+  }
+
+  .page-container {
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 30px 50px 45px 50px;
+  }
+
+  .footer-text {
+    font-size: 22px;  
+  }
+
+}

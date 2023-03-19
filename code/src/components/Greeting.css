@@ -1,0 +1,60 @@
+.welcome-title {
+    font-family: 'Yuji Boku', serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #5489B3;
+    opacity: 90%;
+    padding: 0;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.welcome-text {
+    font-family: 'Yuji Boku', serif;
+    font-size: 20px;
+    color: #5489B3;
+    opacity: 90%;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+
+@media (min-width: 448px) and (max-width: 667px) {
+
+    .welcome-title {
+        font-size: 26px;
+    }
+
+    .welcome-text {
+        font-size: 24px;
+    }
+    
+}
+
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+    .welcome-title {
+        font-size: 36px;
+
+    }
+    
+    .welcome-text {
+        font-size: 28px;
+        margin-top: 10px;
+    }
+  }
+      
+  
+  @media (min-width: 1025px) {
+
+    .welcome-title {
+        font-size: 38px;
+    }
+    
+    .welcome-text {
+        font-size: 30px;
+        margin-top: 10px;
+    }
+  } 
