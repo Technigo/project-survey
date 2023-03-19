@@ -8,8 +8,7 @@ export const Time = ({ time, setTime }) => {
 
     return (
         <form onSubmit={event => event.preventDefault()}>
-            <section className="timecontainer">
-            <label for = "time-input">
+            <label>
                 At what time would you like your popcorn to be ready? <br></br>
             </label>
             <input 
@@ -21,14 +20,12 @@ export const Time = ({ time, setTime }) => {
                 required 
                 value={time}
                 onChange={handleTimeChange}
+                aria-label="Chose the time for when the order should be ready for pick-up."
                 />
         <span class="validity"></span>
         <br></br>
-        <small> Opening hours are 11am to 10pm. </small>
-        </section>
+        <small> Opening hours are 11am to 10pm.</small>
         </form>
     );
 }
 
-
-//aria-label="Time for when order should be done."

@@ -32,7 +32,6 @@ export const Size = ({ size, setSize }) => {
                 checked={size === "medium"}
                 aria-label="Size medium"
                 required
-                
             />
             Medium
         </label>
@@ -50,6 +49,5 @@ export const Size = ({ size, setSize }) => {
             Large
         </label>
         </form>
-        
     );
 };

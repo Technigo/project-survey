@@ -19,7 +19,7 @@ export const Name = ({ name, setName }) => {
             placeholder="Enter name here"
             maxLength={30}
             onChange={handleNameChange}
-            aria-label="Name"
+            aria-label="Insert your name"
             required /> 
         </form>
     );

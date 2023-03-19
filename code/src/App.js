@@ -17,43 +17,38 @@ export const App = () => {
     setStep(step + 1)
   }
 
-
   return (
     <section className="main-container">
-    <>
-      <h1>The Popcorn picker 🍿</h1>
-    
-    {step === 1 && (
-      <Name name={name} setName={setName} />
-    )}
+      <>
+        <h1>The Popcorn picker 🍿</h1>
+      
+      {step === 1 && (
+        <Name name={name} setName={setName} />
+      )}
 
-    {step === 2 && (
-      <Size size={size} setSize={setSize} />
-    )}
+      {step === 2 && (
+        <Size size={size} setSize={setSize} />
+      )}
 
-    {step === 3 && (
-      <Flavor flavor={flavor} setFlavor={setFlavor} />
-    )}
+      {step === 3 && (
+        <Flavor flavor={flavor} setFlavor={setFlavor} />
+      )}
 
-    {step === 4 && (
-    <>
-      <Time time={time} setTime={setTime} />
-      <button type="submit"onClick={handleStepIncrease}>Submit</button>
-    </>
-    )}
+      {step === 4 && (
+      <>
+        <Time time={time} setTime={setTime} />
+        <button type="submit"onClick={handleStepIncrease}>Submit</button>
+      </>
+      )}
 
-    {step >= 5 && (
-      <Result name={name} size={size} flavor={flavor} time={time} />
-    )}
+      {step >= 5 && (
+        <Result name={name} size={size} flavor={flavor} time={time} />
+      )}
 
-    {step < 4 && (
-       <button type="button" onClick={handleStepIncrease}>Next question</button>
-    )}
-  </>
-  </section>
+      {step < 4 && (
+        <button type="button" onClick={handleStepIncrease}>Next question</button>
+      )}
+      </>
+    </section>
   );
 }
-
-//Add aria-labels
-//Add reload
-//Add pseudo-code

@@ -11,6 +11,7 @@ export const Flavor = ({ flavor, setFlavor }) => {
             <select
                 onChange={handleFlavorChange}
                 value={flavor}
+                aria-label="Choose what flavor you would like"
             >
                 <option value="" disabled="disabled">Choose flavor</option>
                 <option value="sweet">Sweet</option>
@@ -20,5 +21,3 @@ export const Flavor = ({ flavor, setFlavor }) => {
         </form>
     );
 };
-
-// add aria-labels
