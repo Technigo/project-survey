@@ -22,6 +22,7 @@ export const Reward = ({ reward, setReward }) => {
           <option value="A Ramen Feast dinner">🍜 A Ramen Feast dinner: Reward yourself with a delicious ramen feast, complete with all the toppings you love.</option>
           <option value="Nerf Gun War Break">🔫 Nerf Gun War Break: Take a break and blow off some steam with a friendly nerf gun war with your coworkers or friends.</option>
         </select>
+        <h6>Question 3/3</h6>
       </div>
     </form>
   )

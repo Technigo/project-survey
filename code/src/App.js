@@ -46,6 +46,12 @@ export const App = () => {
           )
         }
       </div>
+      <footer>
+        <p>
+          Survey made by <a href="mailto:sammyolsson@gmail.com">Sammy Olsson</a>,
+          Team-🐢
+        </p>
+      </footer>
     </section>
   );
 }

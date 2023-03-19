@@ -24,6 +24,7 @@ export const Going = ({ going, setGoing }) => {
             {goingType}
           </label>
         ))}
+        <h6>Question 2/3</h6>
       </div>
     </form>
   )

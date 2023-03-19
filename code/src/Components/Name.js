@@ -9,7 +9,7 @@ export const Name = ({ name, setName }) => {
   return (
     <><Header />
       <div className="nameComponent">
-        <p>Start by typing your name in the box below:</p>
+        <p>Start by typing your name in the box below</p>
         <input
           tabIndex="0"
           aria-label="Name field"
@@ -18,6 +18,7 @@ export const Name = ({ name, setName }) => {
           className="inputField"
           onChange={handleNameChange}
           value={name} />
+        <h6>Question 1/3</h6>
 
       </div>
     </>
