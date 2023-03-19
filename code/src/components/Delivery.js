@@ -8,7 +8,7 @@ export const Delivery = ({ delivery, setDelivery, step, handleStepIncrease }) =>
   const options = [
     'Yes',
     'No',
-    'Do not know'
+    'Don&apos;t know'
   ];
 
   const handleNextButtonClick = () => {
