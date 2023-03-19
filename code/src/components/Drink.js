@@ -6,8 +6,9 @@ export const Drink = ({ drink, setDrink }) => {
   }
   return (
     <>
-    <div className="question">
-      <h2>Sounds delicious! What do you prefer to drink to that?</h2>
+      <div className="question">
+        <h2>Sounds delicious! 
+            And drink?</h2>
       </div>
       <div className="select-container">
         <select

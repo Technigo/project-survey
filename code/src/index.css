@@ -14,7 +14,7 @@ code {
 
 
 body {
-  background-image: url(https://img.freepik.com/free-vector/background-seamless-pattern-vector-with-cute-memphis_53876-105506.jpg?w=826&t=st=1679181975~exp=1679182575~hmac=dda545ef1c82269851309f7ff4b4b4c8c11d4620ab842fde78f016e887d5c95f);
+  background-image: url(https://img.freepik.com/free-vector/linear-flat-abstract-lines-pattern_23-2148944144.jpg?w=740&t=st=1679234138~exp=1679234738~hmac=77ea19501fff6a0b8d30afafdb0fb128a8565547be77430806cc0d20fe6363ec);
   background-repeat:no-repeat;
   background-size:cover;
   background-attachment: fixed;
@@ -27,11 +27,12 @@ body {
   align-self: center;
   align-items: center;
   justify-content: center;
-  background-color:rgba(213, 165, 195, 0.371);
+  background-color:rgba(239, 154, 181, 0.458);
   height: 500px;
   margin-top: 50px;
   margin-left: 25px;
   margin-right: 25px;
+  border-radius: 10px;
 
 }
 
@@ -40,23 +41,24 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 16px;
-  margin-top: 90px;
+  margin-top: 30px;
+  margin-bottom: 20px;
   
 }
 
 .header h1 {
-  margin-bottom: -30px;
+  margin-bottom: -25px;
 }
 
 .header span {
-    color: white;
-    font-family: 'Pacifico', cursive;
-    text-shadow: 1px 1px 2px rgb(219, 77, 241), 0 0 25px rgb(138, 138, 205), 0 0 5px rgb(216, 152, 206);
-    margin-top: -90px;
-  
+  color: white;
+  font-family: 'Pacifico', cursive;
+  font-weight: 200;
+  text-shadow: 1px 1px 2px rgb(240, 240, 240), 0 0 25px rgba(0, 0, 255, 0.467), 0 0 5px rgb(202, 23, 196);
 }
+
 
 .question {
   display: flex;
@@ -66,11 +68,11 @@ body {
   margin-left: 30px;
   margin-right: 30px;
   font-size: 23px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   padding: 13px;
-  margin-top: 50px;
+  /*margin-top: 30px;*/
   margin-bottom: -30px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
 }
 
@@ -85,7 +87,7 @@ margin-bottom: 30px;
   margin-top: 20px;
   color: rgb(255, 255, 255);
   font-family: 'Rubik' sans-serif;
-  font-weight: 300;
+  font-weight: bold;
 }
 
 .step-btn button {
@@ -94,9 +96,9 @@ margin-bottom: 30px;
   border-radius: 8px;;
   border-style: none;
   font-size: 20px;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   color: rgb(255, 255, 255);
-  background-color: #c86181;
+  background-color: #f47bb4;
 }
 
 .step-btn button:hover {
@@ -124,10 +126,20 @@ margin-bottom: 30px;
 
 .select {
   font-size: 18px;
-  background-color: #f3c7d6;
-  padding: 5px;
+  background-color: #ffffff;
+  padding: 10px;
   border-radius: 10px;
-  border-color: none;
+  border-style: none;
+}
+
+.party-name {
+  margin-top: -90px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.party-btn {
+  margin-top: 20px;
 }
 
 .party-btn button {
@@ -137,29 +149,30 @@ margin-bottom: 30px;
   border-radius: 10px;
   font-size: 18px;
   color: rgb(255, 255, 255);
-  background-color: #fc5a88;
+  background-color: #d88baf;
   
+}
+
+.party-btn button:hover {
+  background: #cb3978;
+  box-shadow: 1px 1px 2px rgb(255, 173, 209), 0 0 25px rgb(246, 237, 243), 0 0 5px rgb(255, 62, 226);
 }
 
 .party-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-weight: 300;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
   font-size: 21px;
   color: white;
-  padding: 13px;
+  padding: 9px;
 
 }
 
 .party-text p {
-  margin-bottom: -15px;
+  margin: -2px;
 }
 
-.party-btn button:hover {
-    background: #cb3978;
-    box-shadow: 1px 1px 2px rgb(255, 173, 209), 0 0 25px rgb(246, 237, 243), 0 0 5px rgb(255, 62, 226);
-}

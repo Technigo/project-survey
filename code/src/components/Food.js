@@ -2,7 +2,7 @@ import React from 'react';
 
 const foodOption = [
   'the biggest cake you ever seen',
-  'buffé with all your favourite food',
+  'a buffé with all your favourite food',
   'fruits in piles',
   'ice cream that never melts',
 ];
@@ -13,8 +13,8 @@ export const Food = ({ food, setFood }) => {
   }
   return (
     <>
-    <div className="question">
-      <h2>What do you want to eat on your party?</h2>
+      <div className="question">
+        <h2>What do you prefer to eat on your party?</h2>
       </div>
       <div className="foodBtn">
         {foodOption.map((group) => (

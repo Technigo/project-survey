@@ -34,19 +34,18 @@ export const App = () => {
       {step >= 5 && (
 
         <Party name={name} place={place} food={food} drink={drink} />
-        )}
+      )}
       {step < 5 && (
         <>
-        <div className="step-btn">
-          <button type="button" onClick={handleStepIncrease}>NEXT</button>
-        </div>
-        <div className="step">
-          <p>PARTYSTEP {step}/5</p>
+          <div className="step-btn">
+            <button type="button" onClick={handleStepIncrease}>NEXT</button>
           </div>
-          
+          <div className="step">
+            <p>PARTYSTEP {step}/5</p>
+          </div>
         </>
       )}
-    
+
     </div>
   );
 };
