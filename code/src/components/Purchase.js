@@ -8,7 +8,7 @@ export const Purchase = ({ purchase, setPurchase, step, handleStepIncrease }) =>
   const options = [
     'Yes',
     'No',
-    'Don&apos;t know'
+    'Do not know'
   ];
 
   const handleNextButtonClick = () => {
