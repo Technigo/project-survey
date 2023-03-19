@@ -8,9 +8,9 @@ export const End = ({ name, yesno, shape }) => {
     yesno = 'Unlike you';
   }
   if (shape === 'kiki') {
-    shape = "95% of the people we've asked before you would disagree –";
+    shape = "But 95% of the people we've asked before you would disagree –";
   } else if (shape === 'bouba') {
-    shape = "95% of the people we've asked before you would agree –";
+    shape = "But 95% of the people we've asked before you would agree –";
   }
   return (
     <div className="end-container">

@@ -4,7 +4,6 @@ body {
 }
 
 .app-container {
-  border:1px solid black;
 height: 100vh;
 width: 100vw;
 display: flex;
@@ -15,18 +14,20 @@ overflow: hidden;
 }
 
 .app-container span {
-  color: rgb(62, 56, 56);
+  color: rgb(88, 80, 80);
   background-color: white;
   font-family: Manga;
+  align-items: center;
+  text-align: center;
   font-size: 40px;
-  margin-top: 100px;
-  margin-left: -750px;
+  margin-top: 172px;
+  margin-left: -692px;
   padding-left: 4px;
-  padding-top: 4px;
+  padding-top: -10px;
   padding-right: 4px;
   padding-bottom: 0px;
-  transform: rotate(-28deg);
-  border: 3px solid rgb(178, 175, 175);
+  transform: rotate(-80deg);
+  border: 0.5px solid rgb(178, 175, 175);
   }
 
 .next-btn {
@@ -36,7 +37,7 @@ overflow: hidden;
   justify-items: center;
   overflow: hidden;
   padding: 0.5%;
-  margin-top: 90px;
+  margin-top: 23px;
   margin-right: -25px;
   transform: rotate(-40deg);
   color: rgb(62, 56, 56);
@@ -102,7 +103,7 @@ overflow: hidden;
   height: 130px;
   font-family: Manga;
   background-color: white;
-  opacity: 80%;
+  opacity: 90%;
   position: absolute;
   border: 3px solid rgb(178, 175, 175);
   border-radius: 1em;
@@ -111,7 +112,7 @@ overflow: hidden;
 }
 
 .name-input {
-  background-color: rgb(178, 175, 175);
+  background-color: rgb(226, 225, 225);
   font-size: 16px;
   width: 180px;
   color: rgb(62, 56, 56);
@@ -128,8 +129,8 @@ overflow: hidden;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-items: center;
+  align-items: center;
   overflow: hidden;
   width: 300px;
   height: 130px;
@@ -140,18 +141,14 @@ overflow: hidden;
   border: 3px solid rgb(178, 175, 175);
   border-radius: 1em;
   padding: 1em;
-  transform: translate(-62%, -38%)
-}
-
-.radio-buttons label { /* Label? */
-  display: flex-end;
-}
-
-.radio-buttons p form{ /* Label? */
-  border-radius: 100%;
-  display: flex-end;
+  transform: translate(-62%, -38%);
   font-size: 20px;
-  font-family: Manga;
+}
+
+.radio-buttons label input { /* Label? */
+  margin-top: 110px;
+  justify-content: space-between;
+  opacity: 90%;
 }
 /* Style for shape component starts here */
 
