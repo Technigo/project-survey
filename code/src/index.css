@@ -1,13 +1,130 @@
+:root {
+  --form-control-color: #e15f37;
+}
+
+@font-face {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Verdana", "Geneva", "Tahoma", "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  background-color: #d6c4ad;
+  border-radius: 20px;
+  padding: 15px;
+  border: solid #948f6e 2px;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+.survey {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 25px;
+  background-image: url('../public/background-survey.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: black;
+  text-align: center;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color:aqua;
+}
+
+.form-control {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  border: solid black 2rem;
+  /*borders will be deleted later*/
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  border-bottom: 1rem solid #c507f5;
+}
+
+.start-button {
+  background-color: #4430f6;
+  border-radius: 2rem;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 4rem;
+}
+
+p {
+  font-family: 'verdana';
+}
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #7e49df;
+}
+
+.answer {
+  background-color: black;
+  padding: 6px;
+  color: black;
+  border-radius: 5px;
+  font-family: 'verdana';
+}
+
+.survey-summary {
+  font-size: 50px;
+  background-color: #e2e3c5;
+  padding: 6rem;
+  color: black;
+  border-radius: 70px;
+  font-family: 'verdana';
+  opacity: 0.8;
+}
+
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  justify-content: center;
+  color: rgb(16, 16, 16);
+  background-color: rgb(187, 178, 142);
+  border-radius: 20px;
+  border: solid #948f6e 2px;
 }

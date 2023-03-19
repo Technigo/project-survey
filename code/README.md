@@ -1,19 +1,9 @@
-# Technigo React Starter App
+# Survey done with React
+Week 2 of working with React and this weeks project was to do a survey with React.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+# The problem
+At first I found it useful and easy, but once I wanted to grow my app I just ended up with soooo many problems. Had to delete most of my folders and just to a very easy version of what my original idea was. 
+Now I'm just happy it works but I definitely have to work more on this to get bigger applications to work. This was just a minor and I really did a very basic version of this weeks task.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
-
-## Usage
-
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+# View it live
+https://ylva-karlsson-week6-survey.netlify.app

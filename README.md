@@ -1,13 +1,9 @@
-# Survey form with React
+# Survey done with React
+Week 2 of working with React and this weeks project was to do a survey with React.
 
-Replace this readme with your own information about your project.
+# The problem
+At first I found it useful and easy, but once I wanted to grow my app I just ended up with soooo many problems. Had to delete most of my folders and just to a very easy version of what my original idea was. 
+Now I'm just happy it works but I definitely have to work more on this to get bigger applications to work. This was just a minor and I really did a very basic version of this weeks task.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+# View it live
+https://ylva-karlsson-week6-survey.netlify.app
