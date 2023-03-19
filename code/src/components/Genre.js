@@ -1,19 +1,17 @@
 import React from 'react';
 
 const Genre = ({ genre, setGenre, step }) => {
-  console.log('NOW RUNNING GENRE.js')
-  // console.log('{ genre, setGenre, step };', { genre, setGenre, step })
   return (
     <div className="genre-container">
       <div className="headings">
         <h2 aria-hidden="true">Question {step} / 5</h2>
+        {/* For screen reader */}
         <h2 className="visually-hidden">Question {step} out of 5</h2>
         <hr />
       </div>
       <div className="question-container">
         <h4>Any genre preferences?</h4>
         <form className="form type">
-          {/* <p>Current state: {genre}</p> */}
           <select
             aria-label="Drop down menu for selecting a genre"
             onChange={(event) => setGenre(event.target.value)}

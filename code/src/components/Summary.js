@@ -1,13 +1,6 @@
 import React from 'react';
 
 const Summary = ({ name, type, genre, score, apocalypse }) => {
-  console.log('NOW RUNNING SUMMARY.js')
-  console.log('name:', name)
-  console.log('type:', type)
-  console.log('genre:', genre)
-  console.log('score:', score)
-  console.log('apocalypse:', apocalypse)
-
   return (
     <div className="summary-container">
       <div className="headings">

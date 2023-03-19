@@ -9,14 +9,15 @@ const Name = ({ name, setName, step }) => {
     <div className="name-container">
       <div className="headings">
         <h2 aria-hidden="true">Question {step} / 5</h2>
+        {/* For screen reader */}
         <h2 className="visually-hidden">Question {step} out of 5</h2>
         <hr />
       </div>
       <div className="question-container">
         <h4>What is your name?</h4>
         <label htmlFor="nameInput">
-          <span className="visually-hidden">What is your name?</span>
-          {/* <p>Current state: {name}</p> */}
+          {/* For screen reader */}
+          <span className="visually-hidden">Name input field</span>
           <input
             type="text"
             id="nameInput"

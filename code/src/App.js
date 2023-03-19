@@ -77,7 +77,7 @@ export const App = () => {
         )}
         {step === 7 && (
           <>
-            <Result name={name} type={type} genre={genre} score={score} apocalypse={apocalypse} data={data} />
+            <Result type={type} genre={genre} score={score} apocalypse={apocalypse} data={data} />
             <button type="button" onClick={handleStepReset} className="start-over-btn" aria-label="Button named Start over">Start over</button>
           </>
         )}

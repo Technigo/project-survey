@@ -1,15 +1,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-const Summary = ({ name, type, genre, score, apocalypse, data }) => {
-  console.log('---- NOW RUNNING RESULT.js')
-  console.log('data:', data)
-  console.log('name:', name)
-  console.log('type:', type)
-  console.log('genre:', genre)
-  console.log('score:', score)
-  console.log('apocalypse:', apocalypse)
-
+const Summary = ({ type, genre, score, apocalypse, data }) => {
   // Filtering step 1, on type:
   const filteredTypeArray = type === 'Surprise me!' ? data.series : data.series.filter((item) => item.tvtype === type);
   console.log('filteredTypeArray:', filteredTypeArray);

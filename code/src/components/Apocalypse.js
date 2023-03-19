@@ -5,6 +5,7 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
     <div className="apocalypse-container">
       <div className="headings">
         <h2 aria-hidden="true">Question {step} / 5</h2>
+        {/* For screen reader */}
         <h2 className="visually-hidden">Question {step} out of 5</h2>
         <hr />
       </div>
@@ -21,12 +22,12 @@ const Apocalypse = ({ apocalypse, setApocalypse, step }) => {
               checked={apocalypse}
               aria-checked={apocalypse}
               onChange={(event) => setApocalypse(event.target.checked)} />
+            {/* For screen reader */}
             <span className="visually-hidden">
               {apocalypse ? 'The checkbox is checked' : 'The checkbox is not checked'}
             </span>
           </label>
         </form>
-        {/* <span>(Current state: {apocalypse ? 'Yes' : 'No'})</span> */}
       </div>
     </div>
   );
