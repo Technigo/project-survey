@@ -73,8 +73,10 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family:'Nunito', sans-serif;;
     font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   
   .right-container {
@@ -98,7 +100,7 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 22px;
   }
   
@@ -145,8 +147,9 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 22px;
+    margin-left: 15px;
   }
   
   .delivery-options {
@@ -170,7 +173,7 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 22px;
   }
   
@@ -193,9 +196,12 @@ code {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 22px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   
   .purchase-options {
@@ -230,8 +236,11 @@ code {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Nunito', sans-serif;
       font-size: 22px;
+      text-align: center;
+      margin-left: 15px;
+      margin-right: 15px;
     }
     
     .rate-slider {
@@ -240,7 +249,7 @@ code {
       align-items: center;
       margin-top: 30px;
       gap: 10px;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Nunito', sans-serif;
     }
     
     .rate-slider span {
@@ -268,8 +277,8 @@ code {
     }
     
     .right-container button {
-      margin-top: 20px;
-      font-family: 'Roboto', sans-serif;
+      margin-top: 10px;
+      font-family: 'Nunito', sans-serif;
       font-size: 22px;
       font-weight: bold;
       border-radius: 5px;
@@ -292,8 +301,10 @@ code {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   
   .results {
@@ -302,8 +313,10 @@ code {
     align-items: center;
     flex-direction: column;
     gap: 10px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 22px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
   
   .name-container,
@@ -312,12 +325,11 @@ code {
   }
 }
 
-
-
 @media only screen and (min-width: 768px) {
 
 .name-input {
-  margin-right: 155px;
+  margin-right: 100px;
+  font-family: 'Nunito', sans-serif;
 }
 
 .name-input label {
@@ -344,12 +356,12 @@ code {
 
 .name-header {
   display: flex;
-  width: 50%;
+  width: 70%;
   text-align: left;
   justify-content: center;
   align-items: left;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 22px;
 }
 
@@ -376,7 +388,7 @@ code {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 22px;
 }
 
@@ -396,7 +408,7 @@ code {
 
 button {
   margin-top: 3rem;
-  background-color: #aaf0d1;
+  background-color: #C9B9AD;
   color: white;
   border: none;
   border-radius: 5px;
@@ -405,10 +417,11 @@ button {
   font-weight: 900px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  font-family: 'Nunito', sans-serif;
 }
 
 button:hover {
-  background-color: #27ae60;
+  background-color: #AD9F93;
 }
 
 .delivery.container {
@@ -421,8 +434,11 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
   font-size: 22px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .delivery-options {
@@ -446,7 +462,7 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 22px;
 }
 
@@ -463,8 +479,11 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
   font-size: 22px;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .purchase-options {
@@ -473,7 +492,7 @@ button:hover {
     justify-content: center;
     margin-top: 30px;
     gap: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
   }
 
 
@@ -483,30 +502,34 @@ button:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 22px;
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 20%;
   }
   
   .rate-slider {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 10px;
     gap: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
   }
   
   .rate-slider span {
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
+    font-family: 'Nunito', sans-serif;
   }
 
   input[type=range] {
     -webkit-appearance: none;
     height: 20px;
-    width: 300px;
+    width: 270px;
     border-radius: 10px;
-    background-color: #aaf0d1;
+    background-color: #AD9F93;
     outline: none;
   }
   
@@ -522,17 +545,18 @@ button:hover {
   
   .right-container button {
     margin-top: 20px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 22px;
     font-weight: bold;
     border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
+    background-color: #C9B9AD;
   }
   
   .right-container button:hover {
-    background-color: #27ae60;
+    background-color: #AD9F93;
   }
 
   .name-input button {
@@ -545,7 +569,10 @@ button:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  text-align: center;
   font-size: 22px;
 }
 
@@ -555,8 +582,10 @@ button:hover {
   align-items: center;
   flex-direction: column;
   gap: 10px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 22px;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 18px;
 }
 
 .name-container,

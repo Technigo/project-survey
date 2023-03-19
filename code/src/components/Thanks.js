@@ -6,7 +6,7 @@ export const ThankYou = ({ name, hear, overall, delivery, purchase, rate, handle
       <img src="/images/fashion.jpg" alt="fashion clothing" className="fashion-image" />
       <div className="right-container">
         <div className="thanks-header">
-          <h2>Thank you for participating in the survey!</h2>
+          <h2>Thank you for participating in the survey {name}!</h2>
           <p>Here is a summary of your responses:</p>
         </div>
         <div className="results">
