@@ -39,8 +39,10 @@ export const App = () => {
           {step === 7 && (<Weapon weapon={weapon} setWeapon={setWeapon} />)}
           {step === 8 && (<Body body={body} setBody={setBody} />)}
           {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combact={combact} weapon={weapon} body={body} />)}
-          <button className="button" type="button" onClick={handleStepIncrease}> Next </button>
         </div>
+        {step === 0 && (<button className="button" type="button" onClick={handleStepIncrease}> Start </button>)}
+        {step >= 1 && step <= 8 && (<button className="button" type="button" onClick={handleStepIncrease}> Next </button>)}
+        {step === 9 && (<button className="button" type="button" onClick={() => window.location.reload(false)} > Game Over </button>)}
       </section>
       <div className="progressBox">
         {step >= 1 && step < 9 && (
