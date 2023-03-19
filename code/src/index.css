@@ -5,9 +5,193 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #D8D9CF;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column; 
+}
+
+.logoImage {
+  display: flex;
+}
+
+.logoImage img {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.welcomeBox,
+.nameQuestionBox,
+.ageGroupBox,
+.productTypeBox,
+.sliderQuesionBox,
+.summaryBox,
+.goodbyPageBox {
+  text-align: center;
+  padding: 10px;
+}
+
+.nameBox,
+.ageBox,
+.selectBox,
+.sliderBox {
+  margin-bottom: 20px;
+}
+
+#name-input {
+  width: 100%;
+  height: 25px;
+  border: none;
+  border-bottom: 1px solid #709078;
+  outline: none;
+  color: #4A403A;
+  background-color: #D8D9CF;
+}
+
+select {
+  color: #4A403A;
+  font-size: 24px;
+  background-color: whitesmoke;
+  border:2px solid #709078; 
+  border-radius: 5px;
+}
+
+.ageGroupBox label {
+  color: #4A403A;
+  font-size: 28px;
+}
+
+h1 {
+  color: #4A403A;
+  font-size: 36px;
+  font-family: 'OxyFira Sansgen';
+
+}
+
+h2 {
+  color: #4A403A;
+  font-size: 36px;
+  font-family: "Droid Sans";
+}
+
+p {
+  color: #4A403A;
+  font-size: 36px;
+  font-family: 800;
+
+}
+.sliderBox input{
+ width: 100%;
+ height: 25px;
+ cursor: pointer;
+}
+
+.backQuestionButton{
+  width: 80px;
+  height: 28px;
+  border-radius: 6px;
+  color: #4A403A;
+  font-size: 20px;
+  background-color: #E2C2B9;
+  border-color: #E2C2B9;
+  margin: 0 0 10px 10px;
+}
+
+.nextQuestionButton{
+  width: 80px;
+  height: 28px;
+  border-radius: 6px;
+  color: #4A403A;
+  font-size: 20px;
+  background-color: #709078;
+  border-color: #709078;
+  margin: 0 0 10px 10px;
+
+}
+
+.backQuestionButton:hover{
+  background-color: #709078;
+  cursor: pointer;
+}
+.nextQuestionButton:hover{
+  background-color: #E2C2B9;
+  cursor: pointer;
+
+}
+
+.buttonWraperBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+/***************tablet design******************************/
+@media (min-width:600px) {
+  .mainContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   
+  }
+  .logoImage img {
+    width: 100vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+  
+}
+
+
+
+
+/****************desktop design normal*********************/
+@media (min-width:992px) {
+  .mainContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 750px;
+
+  }
+  .welcomeBox,
+  .nameQuestionBox,
+  .ageGroupBox,
+  .productTypeBox,
+  .summaryBox,
+  .goodbyPageBox {
+    text-align: center;
+    padding: 20px;
+  }
+
+  .logoImage {
+    display: flex;
+    width: 40%;
+    float: left;
+  }
+
+  .logoImage img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .surveyWrap {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+
 }
