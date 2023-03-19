@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Purchase from './components/Purchase';
 import Start from './components/Start';
 import Subscription from './components/Subscription';
+import Purchase from './components/Purchase';
 import FreeText from './components/FreeText';
 import Conclusion from './components/Conclusion';
 import Footer from './components/Footer';
