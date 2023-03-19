@@ -9,8 +9,8 @@ export const Place = ({ place, setPlace, step }) => {
   }
   return (
     <div className="place-container">
-      <div className="head">
-        <p>Current step: {step} / 7</p>
+      <div>
+        <p className="p-step">Current step: {step} / 7</p>
       </div>
       <h4> Where do you feel the most at ease?</h4>
       <div className="place-img-container">

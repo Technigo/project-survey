@@ -11,20 +11,20 @@ export const Breathe = ({ name, activity, colour, place, temp, who }) => {
           height="170"
           fill="none"
           strokeDasharray="20 20" />
-        <circle cx="10" cy="10" r="8" fill={colour}>
+        <circle cx="10" cy="10" r="8" fill={colour} className="blurryCircle">
           <animateMotion
             dur="8s"
             repeatCount="indefinite"
             path="M 10,10 L 160,10 L 160,160 L 10,160 Z" />
         </circle>
       </svg>
-      <h4>Let&apos;s Picture the scenario for yourself and breathe with me.</h4>
-      <p className="sum-p">
-        Remember you are by the {place} and you&apos;re going to start {activity} soon. <br />
-        Its around {temp} degrees, {who} is next to you and looking at the {colour} dot. <br />
-        Moving on again, focus {name}!
+      <h4 className="sumh4">Keep your happy scenario in our mind and let&apos;s breathe.</h4>
+      <p>
+        Remember, you are by the {place} and you&apos;re going to start {activity} soon. <br />
+        It&apos;s around {temp} degrees, {who} is next to you and already looking at
+        the {colour} dot. Let&apos;s do this, focus {name}!
       </p>
-      <p className="dot-p">
+      <p>
         One breath is illustated by the dot.<br />
         Each step is one side of the square.<br />
         Start by breathing out slowly, releasing the air from your lungs <br /><br />

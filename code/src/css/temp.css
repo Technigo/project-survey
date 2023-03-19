@@ -3,8 +3,9 @@ input[type=range] {
     width: 400px;
     height: 5px;
     border-radius: 20px;
-    background-color: #dddddd;
+    background-color: #c5baaa;
     outline: none;
+    margin: 20px;
   }
   
   input[type=range]::-webkit-slider-thumb {
@@ -13,8 +14,8 @@ input[type=range] {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
+    background-color: #ee7828;
+    border: 1px solid #c5baaa;
     cursor: grab;
   }
   

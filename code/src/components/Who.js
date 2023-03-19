@@ -5,10 +5,14 @@ export const Who = ({ who, setWho, step }) => {
     setWho(event.target.value);
   }
   return (
-    <div className="name-container">
-      <p>Current step: {step} / 7</p>
+    <div className="content-container">
+      <p className="p-step">Current step: {step} / 7</p>
       <h4> We are almost there, who would you like to have next to you?</h4>
-      <input type="text" value={who} onChange={handleWhoChange} />
+      <input
+        type="text"
+        value={who}
+        className="name-input"
+        onChange={handleWhoChange} />
     </div>
   );
 }

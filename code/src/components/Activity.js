@@ -1,19 +1,19 @@
 import React from 'react';
 
-const activechoice = ['running 🏃🏻', 'breathing 🌬', 'stretching 🧘🏽', 'walking 🚶🏽'];
+const activechoice = ['running 🏃🏻', 'breathing 🌬', 'stretching 🧘🏽', 'walking 🚶🏽', 'biking 🚵🏽'];
 
 export const Activity = ({ activity, setActivity, step }) => {
   return (
     <>
       <div className="content-container">
-        <div className="head">
-          <p>Current step: {step} / 7</p>
+        <div>
+          <p className="p-step">Current step: {step} / 7</p>
         </div>
         <h4> Ok, What activity sparks your joy and makes your ears wiggle?
         </h4>
       </div>
-      <div className="radio-activity">
-        <form>
+      <div>
+        <form className="radio-activity">
           {activechoice.map((item) => (
             <label key={item} htmlFor="activeradio">
               <div

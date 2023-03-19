@@ -1,12 +1,15 @@
-.activity-container {
+
+.radio-activity label {
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.radioBtn {
     display: flex;
-    flex-direction: column;
-    color:aquamarine;
-}
-
-.head {
-    font-size: 15px;
-    color: blanchedalmond;
-}
-
-
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .radioBtn span {
+    margin-left: 8px;
+  }

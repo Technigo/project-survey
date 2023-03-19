@@ -3,7 +3,7 @@ import React from 'react';
 export const Colour = ({ colour, setColour, step }) => {
   return (
     <div className="content-container">
-      <p>Current step: {step} / 7</p>
+      <p className="p-step">Current step: {step} / 7</p>
       <h4> What&apos;s your favourite color?</h4>
       <form className="colourForm">
         <select
@@ -15,7 +15,7 @@ export const Colour = ({ colour, setColour, step }) => {
           <option value="yellow">Yellow</option>
           <option value="green">Green</option>
           <option value="purple">Purple</option>
-          <option value="blue">Blue</option>
+          <option value="orange">Blue</option>
         </select>
       </form>
     </div>

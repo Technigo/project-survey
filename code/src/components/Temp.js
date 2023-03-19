@@ -25,11 +25,11 @@ export const Temp = ({ temp, setTemp, step }) => {
       tempText = '';
   }
   return (
-    <form className="temp-container">
+    <form className="content-container">
       <div className="head">
-        <p>Current step: {step} / 7</p>
+        <p className="p-step">Current step: {step} / 7</p>
       </div>
-      <div className="tempRange-container">
+      <div className="content-container">
         <h3>What is your prefered temperature?</h3>
         <p> I like it to be: {tempText}</p>
         <label htmlFor="temperature">

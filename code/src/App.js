@@ -8,6 +8,7 @@ import { Temp } from './components/Temp'
 import { Who } from './components/Who'
 import { Summary } from './components/Summary'
 import { Breathe } from './components/Breathe'
+import hug from './img/hug.svg';
 
 export const App = () => {
   const [step, setStep] = useState(0);
@@ -17,8 +18,6 @@ export const App = () => {
   const [place, setPlace] = useState('');
   const [temp, setTemp] = useState('');
   const [who, setWho] = useState('');
-  const [summary, setSummary] = useState('');
-  const [breathe, setBreathe] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -29,7 +28,7 @@ export const App = () => {
   };
   return (
     <div className="main-container">
-      <h1>Super test</h1>
+      <img src={hug} alt="A hug" className="hugImg" />
       {step === 0 && (
         <Start onButtonClick={() => handleStepIncrease(0)} />
       )}
@@ -60,8 +59,10 @@ export const App = () => {
             place={place}
             temp={temp}
             who={who} />
-          <button type="button" onClick={handleStepIncrease} className="submitBtn">Yes</button>
-          <button type="button" onClick={handleStepReset} className="restartBtn">No, restart</button>
+          <div className="button-container">
+            <button type="button" onClick={handleStepIncrease} className="submitBtn">Yes</button>
+            <button type="button" onClick={handleStepReset} className="restartBtn">No, restart</button>
+          </div>
         </>
       )}
       {step === 8 && (
@@ -79,7 +80,6 @@ export const App = () => {
       {step < 7 && step !== 0 && (
         <button type="button" onClick={handleStepIncrease} className="submitBtn"> Next question </button>
       )}
-    
     </div>
   );
 }
