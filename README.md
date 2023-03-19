@@ -1,13 +1,20 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+"This week we're finally gonna use React to its full potential by introducing State. You will create a Typeform-like survey to collect data from your users.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+✓ What the purpose of state in React is.
+✓ How to use the `useState` hook in React.
+✓ How to connect HTML form inputs to state.
+✓ How to use form fields with React
+✓ How to use state to show different components based on where you are in the survey"
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This week started out great! On monday i had a really good idea of what i wanted to make, i made a beautiful Figma-sketch and was feeling good!
+I worked on my project happely all week until friday morning when i realized i hated everything i had made so far. So i did what anyone whould,
+i canceled my weekend plans (as if i had any. lol) made a batch of strong coffee and started from the beginning! I dont love what i ended up with, but at least
+its more "me" than what i hade originally planned. I dunno. I might come back here and re-do everything again some time.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://glittery-begonia-b99ccf.netlify.app/
