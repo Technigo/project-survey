@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import './index.css';
 import { Name } from 'components/Name';
 import { Food } from 'components/Food';
-import { Drink } from 'components/Drink';
+import { MagicCrystalSelect } from 'components/MagicCrystalSelect.js.js';
 import { Result } from 'components/Result';
 /* import { AddMoreButton } from 'components/AddMoreButton'; */
 import { ExtraItem } from 'components/ExtraItem';
@@ -18,7 +18,7 @@ export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [food, setFood] = useState('');
-  const [drink, setDrink] = useState('');
+  const [magicCrystalSelect, setMagicCrystalSelect] = useState('');
   const [extraItem, setExtraItem] = useState('');
   const [fruitSelect, setFruitSelect] = useState('');
   const [toppingSelect, setToppingSelect] = useState('')
@@ -49,7 +49,8 @@ export const App = () => {
         <Food food={food} setFood={setFood} />
       )}
       {step === 5 && (
-        <Drink drink={drink} setDrink={setDrink} />
+        // eslint-disable-next-line max-len
+        <MagicCrystalSelect magicCrystalSelect={magicCrystalSelect} setMagicCrystalSelect={setMagicCrystalSelect} />
       )}
       {step === 6 && (
         <ToppingSelect ToppingSelect={toppingSelect} setToppingSelect={setToppingSelect} />
@@ -61,7 +62,8 @@ export const App = () => {
         <ExtraItem ExtraItem={extraItem} setExtraItem={setExtraItem} />
         )}
       {step === 9 && (
-        <Result name={name} food={food} drink={drink} fruit={fruitSelect} topping={toppingSelect} />
+        // eslint-disable-next-line max-len
+        <Result name={name} food={food} drink={magicCrystalSelect} fruit={fruitSelect} topping={toppingSelect} />
       )}
     {step < 10 && (
         <div className="content-wrapper">

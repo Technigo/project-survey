@@ -2,7 +2,7 @@ import React from 'react';
 // eslint-disable-next-line indent
         // eslint-disable-next-line indent
 
-export const MagicCrystalSelect = ({magicCrystalSelect, setMagicCrystalSelect }) => {
+export const MagicCrystalSelect = ({ magicCrystalSelect, setMagicCrystalSelect }) => {
   return (
     <form className="content-wrapper">
       <p>Which of these magic crystals speaks to you the most  ?</p>
