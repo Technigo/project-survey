@@ -6,7 +6,7 @@ export const Colors = ({ colors, setColors }) => {
     { label: 'crystal red', value: 'red', name: 'red', imgSrc: '/assets/red.jpg' },
     { label: 'blue', value: 'blue', name: 'blue', imgSrc: '/assets/blue.jpg' },
     { label: 'zebra', value: 'zebra', name: 'zebra', imgSrc: '/assets/zebra.jpg' },
-    { label: 'orange', value: 'orange', name: 'orange', imgSrc: 'assets/orange.jpg' },
+    { label: 'orange', value: 'orange', name: 'orange', imgSrc: '/assets/orange.jpg' },
     { label: 'random mix', value: 'random', name: 'random', imgSrc: '/assets/random.jpg' }
   ];
 
@@ -22,9 +22,10 @@ export const Colors = ({ colors, setColors }) => {
           onChange={handleColors}
           value={colors.value}>
           <option value="" disabled>Select color</option>
-          {shrimpColor.map((color) => <option key={color.value} value={color.value}>
-            {color.label}
-          </option>)}
+          {shrimpColor.map((color) => 
+            <option key={color.value} value={color.value}>
+              {color.label}
+            </option>)}
         </select>
       </form>
     </div>
