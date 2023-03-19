@@ -10,7 +10,7 @@ import { Combact } from 'components/Combact';
 import { Body } from 'components/Body';
 import { Summary } from 'components/Summary';
 import { Footer } from 'components/footer/Footer';
-import { Weapon } from 'components/Weapons';
+import { Weapon } from 'components/Weapon';
 
 export const App = () => {
   const [step, setStep] = useState(0);
@@ -25,21 +25,23 @@ export const App = () => {
     setStep(step + 1);
   };
   return (
-    <section className="contentBox">
-      <div className="questionBox">
-        {step === 0 && (<Greeting />)}
-        {step === 1 && (<Human human={human} setHuman={setHuman} />)}
-        {step === 2 && (<Name name={name} setName={setName} />)}
-        {step === 3 && (<Continent name={name} continent={continent} setContinent={setContinent} />)}
-        {step === 4 && (<BadNews name={name} continent={continent} />)}
-        {step === 5 && (<Fitness fitness={fitness} setFitness={setFitness} />)}
-        {step === 6 && (<Combact combact={combact} setCombact={setCombact} />)}
-        {step === 7 && (<Weapon weapon={weapon} setWeapon={setWeapon} />)}
-        {step === 8 && (<Body body={body} setBody={setBody} />)}
-        {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combact={combact} weapon={weapon} body={body} />)}
-      </div>
-      <button type="button" onClick={handleStepIncrease}> Click for hope </button>
+    <>
+      <section className="contentBox">
+        <div className="questionBox">
+          {step === 0 && (<Greeting />)}
+          {step === 1 && (<Human human={human} setHuman={setHuman} />)}
+          {step === 2 && (<Name name={name} setName={setName} />)}
+          {step === 3 && (<Continent name={name} continent={continent} setContinent={setContinent} />)}
+          {step === 4 && (<BadNews name={name} continent={continent} />)}
+          {step === 5 && (<Fitness fitness={fitness} setFitness={setFitness} />)}
+          {step === 6 && (<Combact combact={combact} setCombact={setCombact} />)}
+          {step === 7 && (<Weapon weapon={weapon} setWeapon={setWeapon} />)}
+          {step === 8 && (<Body body={body} setBody={setBody} />)}
+          {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combact={combact} weapon={weapon} body={body} />)}
+        </div>
+        <button className="button" type="button" onClick={handleStepIncrease}> Next </button>
+      </section>
       <Footer />
-    </section>
+    </>
   );
 }

@@ -2,10 +2,13 @@ import React from 'react';
 
 export const Continent = ({ continent, setContinent, name }) => {
   return (
-    <>
-      <h1> Where are you {name}? </h1>
-      <form onSubmit={(event) => event.precentDefault()}>
-        <select onChange={(event) => setContinent(event.target.value)} value={continent}>
+    <form className="selectContainer" onSubmit={(event) => event.preventDefault()}>
+      <section>
+        <h1> Where are you {name}? </h1>
+        <select
+          className="select"
+          onChange={(event) => setContinent(event.target.value)} 
+          value={continent}>
           <option value="">Select continent</option>
           <option value="Europe">Europe</option>
           <option value="Australia">Australia</option>
@@ -15,7 +18,7 @@ export const Continent = ({ continent, setContinent, name }) => {
           <option value="South America">South America</option>
           <option value="Antarctica">Antarctica</option>
         </select>
-      </form>
-    </>
+      </section>
+    </form>
   );
 }

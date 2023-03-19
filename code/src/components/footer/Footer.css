@@ -1,17 +1,16 @@
 /* Footer */
 
 footer {
-    margin-top: 20px;
-    /* height: 120px; */
-    padding: 5px;
-    background-color: white;
+    /* margin-top: 20px;
+    height: 120px; 
+    padding: 5px; */
     display: flex;
     flex-direction: column;
+    align-self: flex-end;
   }
   
   footer p {
     text-align: center;
-    font-family: 'Nixie One', cursive;
     color: black;
     text-shadow: 1px 1px 2px white;
   }
@@ -22,12 +21,13 @@ footer {
     align-items: center;
     gap: 5px;
     padding: 5px;
-    margin-top: 10px;
+    /*
+    margin-top: 10px; */
   }
   
   .contact-logo{
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     object-fit: cover;
     opacity: .75;
   }
@@ -41,12 +41,12 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5px;
-    padding: 5px;
-    font-size: 15px;
+    font-size: 5px;
+    /* gap: 5px;
+     padding: 5px;
     margin-bottom: 10px;
-    font-family: 'Nixie One', cursive;
+    */
     color: black;
-    text-shadow: 1px 1px 2px #3B5898;
+    text-shadow: 1px 1px 2px white;
     text-align: center;
   }

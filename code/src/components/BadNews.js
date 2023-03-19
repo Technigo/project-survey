@@ -2,10 +2,11 @@ import React from 'react';
 
 export const BadNews = ({ name, continent }) => {
   return (
-    <section>
-      <h1> TERRIBLE NEWS {name} </h1>
-      <h2> A zombie apocalypse is coming to {continent} on the (today+1 month) </h2>
-      <h3> Will you survive it? </h3>
+    <section className="badNewsClass">
+      <h1> <em>Terrible</em> news <mark>{name}</mark> </h1>
+      <h1> A zombie apocalypse is coming to <mark>{continent}</mark> in a month! </h1>
+      <h1> Will <em>you</em> survive it? </h1>
     </section>
   );
 }
+

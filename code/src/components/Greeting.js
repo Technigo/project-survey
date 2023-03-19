@@ -2,9 +2,11 @@ import React from 'react';
 
 export const Greeting = () => {
   return (
-    <section>
-      <h1>Hello! 👋</h1>
-      <h2>The sun is shining today, but what about tomorrow?</h2>
-    </section>
+    <form>
+      <section className="greeting">
+        <h1> Hello! 👋</h1>
+        <h1>The sun is <mark> shining</mark> today, but what about <em>tomorrow?</em> </h1>
+      </section>
+    </form>
   );
 }
