@@ -1,0 +1,6 @@
+
+export const BackgroundImage = () => {
+    return(
+        <div style={{backgroundImage:"url(./Assets/movies-background.jpg)"}}
+    )
+}
