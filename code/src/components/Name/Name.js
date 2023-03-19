@@ -25,7 +25,7 @@ export const Name = ({ name, setName, handleStepIncrease }) => {
       </div>
       <h2 className="question-text">What is your name, traveller?</h2>
       <form>
-        <input type="text" value={name} onChange={handleNameChange} onKeyDown={handleKeyDown} label htmlFor="name" />
+        <input type="text" value={name} onChange={handleNameChange} onKeyDown={handleKeyDown} label htmlFor="name" placeholder="Enter your name." />
       </form>
       <div className="container-step-btn">
         <button
