@@ -21,8 +21,8 @@ export const Food = ({ food, setFood, handleStepIncrease }) => {
         <img src={donut} alt="donut" />
         <img src={hamburger} alt="hamburger" />
       </div>
-      <form label htmlFor="food">
-        <input type="text" value={food} onChange={handleFoodChange} onKeyDown={handleKeyDown} className="input-field" />
+      <form>
+        <input type="text" value={food} onChange={handleFoodChange} onKeyDown={handleKeyDown} className="input-field" label htmlFor="food" />
       </form>
       <div className="container-step-btn">
         <button
