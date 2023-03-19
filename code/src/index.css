@@ -47,7 +47,7 @@ p {
 .main {
   width: 200px;
   margin: auto;
-  background: rgba(240, 248, 255, 0.3);
+  background: rgba(248, 238, 238, 0.633);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -91,19 +91,19 @@ select option {
 button {
   width: 90px;
   padding: 5px;
-  background-color: aliceblue;
+  background-color: #D11149;
   border: solid 1px aliceblue;
-  border-radius: 5px;
+  border-radius: 10px;
   align-self: center;
   margin-top: 1em;
   border: none;
   font-family: 'Assistant', sans-serif;
+  color: white;
 }
 
 button:hover {
-  background-color: #D11149;
-  color: white;
-  border: solid 1px aliceblue;
+  background-color: aliceblue;
+  color: black;
 }
 
 .shrimp-img {
@@ -116,4 +116,13 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 1em;
+}
+
+footer {
+  background-color: rgba(248, 238, 238, 0.633);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 1rem;
+  text-align: center;
 }

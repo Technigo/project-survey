@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <header>
       <h1>Shrimp order</h1>
-      <img src="\assets\shrimp.svg" alt="shrimp" />
+      <img src="\assets\shrimp.svg" alt="" />
     </header>
   )
 }

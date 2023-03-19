@@ -3,11 +3,11 @@ import '../index.css';
 
 export const Colors = ({ colors, setColors }) => {
   const shrimpColor = [
-    { label: 'crystal red', value: 'red', name: 'crystal red shrimp', imgSrc: '/assets/red.jpg' },
-    { label: 'blue', value: 'blue', name: 'blue shrimp', imgSrc: '/assets/blue.jpg' },
-    { label: 'zebra', value: 'zebra', name: 'zebra shrimp', imgSrc: '/assets/zebra.jpg' },
-    { label: 'orange', value: 'orange', name: 'orange shrimp', imgSrc: 'assets/orange.jpg' },
-    { label: 'random mix', value: 'random', name: 'random shrimp', imgSrc: '/assets/random.jpg' }
+    { label: 'crystal red', value: 'red', name: 'red', imgSrc: '/assets/red.jpg' },
+    { label: 'blue', value: 'blue', name: 'blue', imgSrc: '/assets/blue.jpg' },
+    { label: 'zebra', value: 'zebra', name: 'zebra', imgSrc: '/assets/zebra.jpg' },
+    { label: 'orange', value: 'orange', name: 'orange', imgSrc: 'assets/orange.jpg' },
+    { label: 'random mix', value: 'random', name: 'random', imgSrc: '/assets/random.jpg' }
   ];
 
   const handleColors = (event) => {
@@ -20,9 +20,11 @@ export const Colors = ({ colors, setColors }) => {
       <form>
         <select
           onChange={handleColors}
-          value={colors}>
+          value={colors.value}>
           <option value="" disabled>Select color</option>
-          {shrimpColor.map((color) => <option value={color.value}>{color.label}</option>)}
+          {shrimpColor.map((color) => <option key={color.value} value={color.value}>
+            {color.label}
+          </option>)}
         </select>
       </form>
     </div>
