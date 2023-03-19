@@ -11,6 +11,7 @@ import { EightQuestion } from 'Components/EightQuestion';
 import { NinthQuestion } from 'Components/NinthQuestion';
 import { TenthQuestion } from 'Components/TenthQuestion';
 import { Result } from 'Components/Result';
+import { Footer } from 'Components/Footer';
 
 export const App = () => {
   const [step, setStep] = useState(0);
@@ -32,6 +33,7 @@ export const App = () => {
 
   return (
     <div className="survey-container">
+      <Footer />
       {step === 0 && (
         <IntroPage
           introPage={introPage}
