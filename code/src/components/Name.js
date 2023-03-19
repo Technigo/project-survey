@@ -7,7 +7,7 @@ export const Name = ({ name, setName }) => {
   }
   return (
     <div>
-      <p className="question">Firstly, what is your name?</p>
+      <h3 className="question">Firstly, what is your name?</h3>
       <input className="input-field" htmlFor="name" type="text" value={name} onChange={handleNameChange} />
     </div>
   );

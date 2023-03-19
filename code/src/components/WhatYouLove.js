@@ -7,7 +7,7 @@ export const WhatYouLove = ({ yourLove, setYourLove }) => {
   }
   return (
     <div>
-      <p className="question">What do you love the most?</p>
+      <h3 className="question">What do you love the most?</h3>
       <input className="input-field" htmlFor="what you love" type="text" value={yourLove} onChange={handleWhatYouLove} />
     </div>
   );

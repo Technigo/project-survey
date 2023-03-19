@@ -7,13 +7,11 @@ header {
   margin: auto;
   padding-top: 20px;
   color: #ECCCCF;
-  align-self: center;
   opacity: 80%;
 }
 
 .page-container {
-  align-self: center;
-  margin: 15px 30px 80px 30px;
+  margin: 15px 30px 15px 30px;
   padding: 25px;
   border-radius: 20px;
   /* From https://css.glass */
@@ -27,18 +25,21 @@ header {
 
 footer {
   display: flex;
-  position: absolute;
+  flex-direction: column;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;
+  padding-bottom: 5px;
+  /*margin-top: 120px;*/
 }
 
 .footer-text {
   font-family: 'Yuji Boku', serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #D39CA1;
   margin: auto;
-  padding: 0px 0px 10px 0px;
+  padding: 0px;
 }
 
 
@@ -49,11 +50,15 @@ footer {
   } 
 
   .page-container {
-    width: 320px;
+    width: 350px;
     margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     padding: 30px 35px 30px 35px;
+  }
+
+  .footer-text {
+    font-size: 20px;
   }
 
 }
@@ -67,10 +72,10 @@ footer {
   }
 
   .page-container {
-    width: 420px;
+    width: 450px;
     margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 250px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 30px 35px 30px 35px;
   }
 
@@ -89,10 +94,10 @@ footer {
   }
 
   .page-container {
-    width: 450px;
+    width: 500px;
     margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 60px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 30px 50px 45px 50px;
   }
 

@@ -4,8 +4,8 @@ import './Greeting.css';
 export const Greeting = () => {
   return (
     <>
-      <h1 className="welcome-title">Hello dreamer!</h1>
-      <p className="welcome-text">Sandman here, creator of the dreams and nightmares in your sleep. If you have some time I would like to ask you some questions to be able to provide you with better content in the future. Proceed by clicking on the button below.</p>
+      <h2 className="welcome-title">Hello dreamer!</h2>
+      <p className="welcome-text">Sandman here, creator of the dreams and nightmares in your sleep. If you have some time I would like to ask you some questions to be able to provide you with better content in the future. Proceed by clicking on the button below please.</p>
     </>
   );
 }

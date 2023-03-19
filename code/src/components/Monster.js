@@ -4,7 +4,7 @@ import './components.css';
 export const Monster = ({ yourMonster, setYourMonster }) => {
   return (
     <>
-      <p className="question">Which is your favorite kind of monster?</p>
+      <h3 className="question">Which is your favorite kind of monster?</h3>
       <form>
         <select
           className="select-menu"

@@ -10,7 +10,8 @@
     font-family: 'Yuji Syuku', serif;
     font-size: 16px;
     color: #5489B3;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
+    /*line-height: 25px;*/
     padding: 0px;
     margin-top: 10px;
     margin-bottom: 20px;
@@ -30,7 +31,7 @@
     }
     
     .summary-text {
-        font-size: 18px;
+        font-size: 20px;
     }
     
     .signature {
@@ -42,15 +43,15 @@
 @media (min-width: 668px) and (max-width: 1024px) {
 
     .summary-title {
-        font-size: 24px;
+        font-size: 26px;
     }
     
     .summary-text {
-        font-size: 18px;
+        font-size: 22px;
     }
     
     .signature {
-        font-size: 20px;
+        font-size: 22px;
     }
 
   }
@@ -59,15 +60,15 @@
   @media (min-width: 1025px) {
 
     .summary-title {
-        font-size: 25px;
+        font-size: 30px;
     }
     
     .summary-text {
-        font-size: 18px;
+        font-size: 24px;
     }
     
     .signature {
-        font-size: 20px;
+        font-size: 24px;
     }
 
   } 

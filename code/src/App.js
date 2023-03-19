@@ -76,8 +76,12 @@ export const App = () => {
         )}
       </div>
       <footer>
-        <p className="footer-text">Site by Frida Nordenlöw</p>
+        <p className="footer-text">Designed by Frida Nordenlöw</p>
+        <p className="footer-text">Technigo Web Development</p>
+        <p className="footer-text">Boot Camp 2023</p>
       </footer>
     </>
   )
 }
+
+// <p className="footer-text">Technigo Boot Camp 2023</p>

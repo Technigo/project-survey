@@ -11,7 +11,7 @@
 
 .welcome-text {
     font-family: 'Yuji Boku', serif;
-    font-size: 22px;
+    font-size: 20px;
     color: #5489B3;
     opacity: 90%;
     padding: 0;
@@ -37,8 +37,7 @@
 
     .welcome-title {
         font-size: 36px;
-        font-weight: 700;
-        opacity: 90%;
+
     }
     
     .welcome-text {
@@ -52,8 +51,6 @@
 
     .welcome-title {
         font-size: 38px;
-        font-weight: 700;
-        opacity: 90%;
     }
     
     .welcome-text {

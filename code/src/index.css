@@ -9,10 +9,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(beautiful-sky.jpg);
-  /*display: flex;
-  flex-direction: column;
-  height: 100%;*/
 }
+
+/*#root {
+  display: flex;
+  flex-direction: column;
+}*/
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

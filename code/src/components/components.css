@@ -65,6 +65,7 @@ input[type="radio"] {
     opacity: 80%;
 }
 
+
 @media (min-width: 558px) and (max-width: 1024px) {
 
     .question {
