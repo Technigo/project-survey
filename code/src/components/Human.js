@@ -2,13 +2,13 @@ import React from 'react';
 
 export const Human = (human, setHuman) => {
   return (
-    <form onSubmit={(event) => event.precentDefault()}>
+    <form>
       <section className="human">
-        <h1><mark>Question</mark> is: </h1>
-        <label> Are you <em>human?</em>
+        <h1><em>Question</em> is: </h1>
+        <label> Are you <mark>human?</mark>
           <input
             type="checkbox"
-            /* checked={human} not working */
+            /* checked={human} */
             onChange={(event) => setHuman(event.target.checked)} />
         </label>
       </section>

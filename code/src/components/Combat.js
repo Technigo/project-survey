@@ -2,11 +2,14 @@ import React from 'react';
 import judo from 'components/judo.png'
 import KungFu from 'components/KungFu.png'
 
-export const Combact = ({ combact, setCombact }) => {
+export const Combat = ({ combat, setCombat }) => {
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
-      <section className="combact">
-        <h1> Which do you think is the most effective form of combat? </h1>
+    <form>
+      <section className="combat">
+        <h1> Which one do <em>you</em> think
+          <br />
+          is the most effective style of <mark>combat</mark>?
+        </h1>
         <div className="imageAndRadio">
           <div className="imageOnlyRadio">
             <img src={judo} alt="JudoImg" />
@@ -18,8 +21,8 @@ export const Combact = ({ combact, setCombact }) => {
                 type="radio"
                 id="Judo"
                 value="Judo"
-                onChange={(event) => setCombact(event.target.value)}
-                checked={combact === 'Judo'} />
+                onChange={(event) => setCombat(event.target.value)}
+                checked={combat === 'Judo'} />
         Judo
             </label>
             <label>
@@ -27,8 +30,8 @@ export const Combact = ({ combact, setCombact }) => {
                 type="radio"
                 id="Kung-Fu"
                 value="Kung-Fu"
-                onChange={(event) => setCombact(event.target.value)}
-                checked={combact === 'Kung-Fu'} />
+                onChange={(event) => setCombat(event.target.value)}
+                checked={combat === 'Kung-Fu'} />
         Kung-Fu
             </label>
           </div>

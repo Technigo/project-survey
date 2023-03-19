@@ -1,29 +1,33 @@
 import React from 'react';
 
-export const Summary = ({ name, continent, fitness, combact, weapon, body }) => {
-  if ({ fitness } <= 5) {
+export const Summary = ({ name, continent, fitness, combat, weapon, body }) => {
+  if (fitness <= 5) {
     return (
       <section className="solution">
 
-        <h1> {name} - Zombies are coming to {continent}. </h1>
-        <h2>WILL YOU SURVIVE THE ZOMBIE APOCALYPSE?</h2>
-        <p>
-       With a {fitness} fitness level, your chances are low.
-       Most likely you will be the first to fall and be turned into a zombie.
-        </p>
-        <p>
-       Honestly, {combact} won’t be of much help to you.
-       Keep your friends close and your {weapon} closer.
-        </p>
-
-        <h3>
-        Look at the bright side!
-        You will spend eternity feasting on your favourite dish - human {body}.
-        </h3>
-        <h1>GOOD LUCK!</h1>
-        <p>
-           BONUS TIP: To prepare better and increase your chances of survival
-           - watch Pride Prejudice and Zombies daily for the next month.
+        <p> <span> {name}</span>
+          <br />
+        Zombies are coming to <span> {continent}</span>.
+          <br />
+         With a <span> {fitness}</span>  fitness level, <u>your chances are low</u>.
+          <br />
+          <u>Most likely</u> you will be the first to fall and be turned into a zombie.
+          <br />
+         Honestly, <span> {combat}</span> skills won’t be of much help to you.
+          <br />
+         Keep your <u>friends</u> close and your <span> {weapon} </span> closer.
+          <br />
+         Look at the <mark>bright side</mark>!
+          <br />
+         You will spend <u>eternity</u> feasting
+          <br />
+         on your favourite dish - human <span> {body}</span> .
+          <br />
+         GOOD LUCK!
+          <br />
+         BONUS TIP: To <u>prepare better</u> and increase your chances of survival
+          <br />
+           - watch <em>Pride Prejudice and Zombies</em> daily for the next month.
         </p>
 
       </section>
@@ -31,30 +35,30 @@ export const Summary = ({ name, continent, fitness, combact, weapon, body }) => 
   } else {
     return (
       <section className="solution">
-
-        <h1> {name} - Zombies are coming to {continent}. </h1>
-        <h2>WILL YOU SURVIVE THE ZOMBIE APOCALYPSE?</h2>
-
-        <p>
-       Even with a {fitness} fitness level, your chances are slim.
-       To be honest, you will probably survive a couple of days max
-       by leveraging your {combact} skills.
+        <p> <span> {name}</span>
+          <br />
+         Zombies are coming to <span> {continent}</span>.
+          <br />
+         Even with a <span> {fitness}</span>  fitness level, <u>your chances are slim</u>.
+          <br />
+          <u>To be honest</u>, you will probably survive a couple of days <u>max</u>
+          <br />
+          by leveraging your <span> {combat} </span> skills.
+          <br />
+         Keep your <u>friends</u> close and your <span> {weapon} </span> closer.
+          <br />
+          Look at the <mark>bright side</mark>, when zombies do get you,
+          <br />
+         you will spend <u>eternity</u> feasting
+          <br />
+         on your favourite dish - human <span> {body}</span> .
+          <br />
+         GOOD LUCK!
+          <br />
+         BONUS TIP: To <u>prepare better</u> and increase your chances of survival
+          <br />
+           - watch <em>Pride Prejudice and Zombies</em> daily for the next month.
         </p>
-        <p>
-       If I were you I would start training asap.
-       Keep your friends close and your {weapon} closer.
-        </p>
-
-        <h3>
-       Look at the bright side, when the zombies get you,
-       you will spend eternity feasting on your favourite dish - human {body}.
-        </h3>
-        <h1>GOOD LUCK!</h1>
-        <p>
-          BONUS TIP: To prepare better and increase your chances of survival
-          - watch Pride Prejudice and Zombies daily for the next month.
-        </p>
-
       </section>
     );
   }

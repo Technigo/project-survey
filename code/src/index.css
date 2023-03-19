@@ -5,10 +5,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  background-image:url("./components/sfondoSole.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background: conic-gradient(from 135deg, #F9EAA7, #E5C551);
 }
 
 code {
@@ -17,13 +14,17 @@ code {
 }
 
 .contentBox {
+  background-image:url("./components/sfondoSole.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   padding: 50px; 
-  width: 40%;
-  height: 50%;
+  width: 70%;
+  height: 80%;
   margin: auto;
   margin-top: 10%;
   margin-bottom: 5%;
@@ -39,9 +40,23 @@ code {
   align-items: center;
   flex-direction: column;
 }
+mark {
+background-color: #E5C551; 
+}
+.solution p {
+ size: 10px;
+ text-align: center;
+ text-decoration: solid;
+ font-weight: 700;
+}
+
+.solution span {
+  text-decoration: 2px double black;
+  background-color: #E5C551;
+}
 
 .button {
-  background-color: yellow; 
+  background-color: #E5C551; 
   cursor: pointer;
   font-weight: 700;
   height: 75px;
@@ -140,15 +155,6 @@ input[type=range]::-webkit-slider-runnable-track:hover {
   justify-content: center;
   gap: 30px; 
 }
-
-/*
-progress {
-  accent-color: black;
-  height: 17px;
-}
-
-background-size: 35px 20px, 100% 100%, 100% 100%;
-*/
 
 progress[value] {
   -webkit-appearance: none;

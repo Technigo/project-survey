@@ -6,7 +6,10 @@ export const Body = ({ body, setBody }) => {
   return (
     <form onSubmit={(event) => event.preventDefault()}>
       <section className="body">
-        <h1>Which one do you think is your best body part? </h1>
+        <h1>Which one do you <em>think</em>
+          <br />
+          is your best <mark>body</mark> part?
+        </h1>
         <div className="imageAndRadio">
           <div className="imageOnlyRadio">
             <img src={heart} alt="heartImg" />

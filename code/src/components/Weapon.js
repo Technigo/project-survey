@@ -6,7 +6,7 @@ export const Weapon = ({ weapon, setWeapon }) => {
       className="selectContainer"
       onSubmit={(event) => event.preventDefault()}>
       <section>
-        <h1> <em>Weapon</em> of choice? </h1>
+        <h1> <em>Weapon</em> of <mark>choice?</mark> </h1>
         <select
           className="select"
           onChange={(event) => setWeapon(event.target.value)}

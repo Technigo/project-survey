@@ -4,7 +4,7 @@ export const Continent = ({ continent, setContinent, name }) => {
   return (
     <form className="selectContainer" onSubmit={(event) => event.preventDefault()}>
       <section>
-        <h1> Where are you {name}? </h1>
+        <h1> Where are you <mark>{name}</mark>? </h1>
         <select
           className="select"
           onChange={(event) => setContinent(event.target.value)} 
