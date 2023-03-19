@@ -35,16 +35,9 @@ export const App = () => {
             {step === 1 && (<Human human={human} setHuman={setHuman} />)}
             {step === 2 && (<Name name={name} setName={setName} />)}
             {step === 3 && (<Continent name={name} continent={continent} setContinent={setContinent} />)}
-            {step === 4 && (<BadNews name={name} continent={continent} />)}
-            {step === 5 && (<Fitness fitness={fitness} setFitness={setFitness} />)}
-            {step === 6 && (<Combat combat={combat} setCombat={setCombat} />)}
-            {step === 7 && (<Weapon weapon={weapon} setWeapon={setWeapon} />)}
-            {step === 8 && (<Body body={body} setBody={setBody} />)}
-            {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combat={combat} weapon={weapon} body={body} />)}
           </div>
           {step === 0 && (<button className="button" type="button" onClick={handleStepIncrease}> Start </button>)}
           {step >= 1 && step <= 8 && (<button className="button" type="button" onClick={handleStepIncrease}> Next </button>)}
-          {step === 9 && (<button className="button" type="button" onClick={() => window.location.reload(false)}> Game Over </button>)}
         </section>
         <div className="progressBox">
           {step >= 1 && step < 9 && (
@@ -67,10 +60,6 @@ export const App = () => {
       <>
         <div className="contentBox" style={{ backgroundImage: `url(${zombie})` }}>
           <div className="questionBox">
-            {step === 0 && (<Greeting />)}
-            {step === 1 && (<Human human={human} setHuman={setHuman} />)}
-            {step === 2 && (<Name name={name} setName={setName} />)}
-            {step === 3 && (<Continent name={name} continent={continent} setContinent={setContinent} />)}
             {step === 4 && (<BadNews name={name} continent={continent} />)}
             {step === 5 && (<Fitness fitness={fitness} setFitness={setFitness} />)}
             {step === 6 && (<Combat combat={combat} setCombat={setCombat} />)}
@@ -78,7 +67,6 @@ export const App = () => {
             {step === 8 && (<Body body={body} setBody={setBody} />)}
             {step === 9 && (<Summary name={name} continent={continent} fitness={fitness} combat={combat} weapon={weapon} body={body} />)}
           </div>
-          {step === 0 && (<button className="button" type="button" onClick={handleStepIncrease}> Start </button>)}
           {step >= 1 && step <= 8 && (<button className="button" type="button" onClick={handleStepIncrease}> Next </button>)}
           {step === 9 && (<button className="button" type="button" onClick={() => window.location.reload(false)}> Game Over </button>)}
         </div>
