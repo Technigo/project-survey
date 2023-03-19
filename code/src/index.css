@@ -33,7 +33,7 @@ h2 {
   text-align: center;
   font-weight: bold;
   font-size: 45px;
-  color: pink;
+  color: #f7d6e0;
 }
 
 p {
@@ -77,6 +77,7 @@ p {
 
 .restart-btn:hover {
   background-color: #59cd90;
+  color: black;
   cursor: pointer;
 }
 
@@ -100,7 +101,7 @@ p {
 }
 
 .prev-btn {
-  background-color: #948392;
+  background-color: #4b2840;
   color: white;
   font-size: 20px;
   border-radius: 20px;
@@ -113,7 +114,8 @@ p {
 }
 
 .prev-btn:hover {
-  color: black;
+  color: #4b2840;
+  background-color: white;
   cursor: pointer;
 }
 
