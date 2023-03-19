@@ -14,14 +14,12 @@ body {
   height: 100%; 
   justify-content: center; 
   align-items: center;
-  border: 2px solid blue; 
   overflow-x: hidden;
 }
 
 
 html {
   height: 100%; 
-  border: 2px solid red; 
 }
 
 code {
@@ -42,7 +40,6 @@ code {
   0 0 60px 30px #fff,  /* inner white */
   0 0 100px 60px #f0f, /* middle magenta */
   0 0 140px 90px #0ff; /* outer cyan */
-  border: 2px solid orange; 
   }
 
   .intro-title {
@@ -203,10 +200,10 @@ code {
 filter: brightness(80%); 
 }
 
-@media (min-width:420px) and (max-width:667px) {
+@media (min-width:600px) and (max-width:667px) {
   .survey-container {
-    width: 35em; 
-    height: 35em;
+    box-sizing: border-box;
+    width:100%; 
 }
 
 .instructionText{
@@ -216,11 +213,13 @@ filter: brightness(80%);
 
 @media (max-width:420px) {
 .survey-container{
-  width: 30em; 
-  height: 30em;
+box-sizing: border-box;
+width:100%; 
+overflow:hidden; 
 }  
 
 .instructionText {
+  margin-top:40px; 
   font-size: 28px;
 }
 
