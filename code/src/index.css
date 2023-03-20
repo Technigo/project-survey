@@ -100,7 +100,7 @@ h1 {
 .next-button {
   
   color:rgb(18, 22, 25);
-  background-color: rgb(201, 164, 174);
+  background-color: rgb(127, 176, 163);
   font-size: 16px;
   cursor: pointer;
   width: 150px;
@@ -174,12 +174,20 @@ select:focus {
   display: flex;
   flex-direction: row;
   height: 20px;
-  background-color: rgb(223, 183, 192);
+  width: 99%;
+  background-color: rgb(8, 162, 142);
   border: solid #948f6e 2px;
   transition: width 0.3s ease-in-out;
   margin-top: 20px;
   border-radius: 10px;
 }
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(to right, #b9ddc1 25%, #a1d9c7 50%, #62d1b9 75%, #4dc8ae 100%);
+  border-radius: 10px;
+}
+
 
 .slidecontainer {
   background-color: rgb(228, 208, 133);
