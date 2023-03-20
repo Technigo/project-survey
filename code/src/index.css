@@ -451,6 +451,10 @@ hr {
     padding-top:50px;
   } */
 
+  h3 span {
+  font-size: 30px;
+}
+
   .survey-wrapper {
     max-width: 350px;
   }
