@@ -20,7 +20,16 @@ const Result1 = ({
       <hr />
       {openArray.length !== 0 ? (
         <div className="result-box">
-          <a href={openArray[i].url} target="_blank" rel="noreferrer"><img src={openArray[i].poster} alt="poster with link" className="posterimg" aria-label="Poster image with link to IMDB" /></a>
+          <a
+            href={openArray[i].url}
+            target="_blank"
+            rel="noreferrer">
+            <img
+              src={openArray[i].poster}
+              alt="film poster with link"
+              className="posterimg"
+              aria-label="Film poster with link to IMDB" />
+          </a>
           <div className="result-text">
             <h4>{openArray[i].name}</h4>
             <div className="result-details">

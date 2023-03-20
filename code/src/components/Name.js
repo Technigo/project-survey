@@ -29,7 +29,8 @@ const Name = ({ name, setName, counter, setCounter }) => {
       </label>
       <button
         type="button"
-        onClick={handleIncreaseCounterClick}>
+        onClick={handleIncreaseCounterClick}
+        aria-label="Next button">
         Next
       </button>
     </div>

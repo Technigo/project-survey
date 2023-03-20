@@ -41,8 +41,10 @@ const Theme = ({
               <label key={option} htmlFor={option}>
                 <input
                   type="radio"
-                  value={option}
                   id={option}
+                  value={option}
+                  role="button"
+                  tabIndex={0}
                   onChange={(event) => setIsabelleTheme(event.target.value)}
                   checked={isabelleTheme === option} />
                 {option}
@@ -51,7 +53,8 @@ const Theme = ({
           </form>
           <button
             type="button"
-            onClick={nextStepIsabelle}>
+            onClick={nextStepIsabelle}
+            aria-label="Next button">
             Next
           </button>
         </>
@@ -64,8 +67,10 @@ const Theme = ({
               <label key={option} htmlFor={option}>
                 <input
                   type="radio"
-                  value={option}
                   id={option}
+                  value={option}
+                  role="button"
+                  tabIndex={0}
                   onChange={(event) => setTheme(event.target.value)}
                   checked={theme === option} />
                 {option}
@@ -74,7 +79,8 @@ const Theme = ({
           </form>
           <button
             type="button"
-            onClick={nextStepGeneral}>
+            onClick={nextStepGeneral}
+            aria-label="Next button">
             Next
           </button>
         </div>

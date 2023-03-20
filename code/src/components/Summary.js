@@ -22,37 +22,84 @@ const Summary = ({
 
   return (
     <div className="survey-wrapper summary">
-      <h2><span>Summary</span></h2>
+      <h2>
+        <span>Summary</span>
+      </h2>
+      <br />
       {open ? (
         <>
           <div className="summary-box">
             <p>
-              <span>Your name is <span className="summary-span">{name}</span> and you
-                <span className="summary-span">{isabelle}</span>
-                Isabelle Huppert. Tonight you would like to watch
-                <span className="summary-span">{continent}</span>
-                film about <span className="summary-span">{isabelleThemeToLowerCase}</span>
-                but you are <span className="summary-span">{open}</span> to anything.
+              <span>
+                Your name is&nbsp;
+                <span className="summary-span">
+                  {name}
+                </span>
+                &nbsp;and you&nbsp;
+                <span className="summary-span">
+                  {isabelle}
+                </span>
+                &nbsp;Isabelle Huppert. Tonight you would like to watch&nbsp;
+                <span className="summary-span">
+                  {continent}
+                </span>
+                &nbsp;film about&nbsp;
+                <span className="summary-span">
+                  {isabelleThemeToLowerCase}
+                </span>
+                &nbsp;but you are&nbsp;
+                <span className="summary-span">
+                  {open}
+                </span>
+                &nbsp;to anything.
               </span>
             </p>
           </div>
-          <p><span>Okay, lets see what we can do for you!</span></p>
+          <br />
+          <p>
+            <span>Okay, lets see what we can do for you!</span>
+          </p>
         </>
       ) : (
         <>
           <div className="summary-box">
             <p>
-              <span>Your name is <span className="summary-span">{name}</span> and you
-                <span className="summary-span"> {isabelle}</span>
-                  about Isabelle Huppert and tonight you want to watch a <span className="summary-span">{genreToLowerCase}</span> film set <span className="summary-span">{country}</span>
-                  about <span className="summary-span">{themeToLowerCase}</span>.
+              <span className="summary-main-span">
+                Your name is&nbsp;
+                <span className="summary-span">
+                  {name}
+                </span>
+                &nbsp;and you&nbsp;
+                <span className="summary-span">
+                  {isabelle}
+                </span>
+                  &nbsp;about Isabelle Huppert and tonight you want to watch a&nbsp;
+                <span className="summary-span">
+                  {genreToLowerCase}
+                </span>
+                &nbsp;film set&nbsp;
+                <span className="summary-span">
+                  {country}
+                </span>
+                  &nbsp;about&nbsp;
+                <span className="summary-span">
+                  {themeToLowerCase}.
+                </span>
               </span>
             </p>
           </div>
-          <p className="next"><span>Okay, lets see what we can do for you!</span></p>
+          <br />
+          <p className="next">
+            <span>Okay, lets see what we can do for you!</span>
+          </p>
         </>
       )}
-      <button type="submit" onClick={nextStepResult}>See result</button>
+      <button
+        type="submit"
+        onClick={nextStepResult}
+        aria-label="Submit button">
+          See result
+      </button>
     </div>
   );
 }

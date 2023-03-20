@@ -43,6 +43,7 @@ const MixedQuestions = ({
           <form className="form-mixed">
             <label htmlFor={open}>
               <input
+                id={open}
                 type="checkbox"
                 checked={open}
                 tabIndex="0"
@@ -54,7 +55,8 @@ const MixedQuestions = ({
           </form>
           <button
             type="submit"
-            onClick={submitOpen}>
+            onClick={submitOpen}
+            aria-label="Submit answers button">
             Submit Answers
           </button>
         </>
@@ -77,7 +79,8 @@ const MixedQuestions = ({
           </form>
           <button
             type="submit"
-            onClick={submitGenre}>
+            onClick={submitGenre}
+            aria-label="Submit answers button">
             Submit Answers
           </button>
         </>

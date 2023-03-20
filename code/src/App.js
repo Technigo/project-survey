@@ -50,16 +50,20 @@ export const App = () => {
   }
 
   return (
-    <div className={classList(
-      'background-image',
-      counter === 0 && 'image1',
-      counter === 1 && 'image2',
-      counter === 2 && 'image3',
-      counter === 3 && 'image4',
-      counter === 4 && 'image5',
-      counter === 5 && 'image6',
-      counter === 6 && 'image7'
-    )}>
+    <div
+    // I had no idea how to put an alt tag on a background image, so I put an aria label instead
+      aria-label="Background images of cinematic locations"
+      className={classList(
+        'background-image',
+        counter === 0 && 'image1',
+        counter === 1 && 'image2',
+        counter === 2 && 'image3',
+        counter === 3 && 'image4',
+        counter === 4 && 'image5',
+        counter === 5 && 'image6',
+        counter === 6 && 'image7'
+      )}>
+      {/* The total count is not 5 but it was the only number which corrsponded visually */}
       <ProgressBar counter={counter} totalCount={5} />
       <div className="main-wrapper">
         {counter === 0 && (
@@ -137,10 +141,18 @@ export const App = () => {
         )}
         {counter > 0 && (
           <div className="button-container">
-            <button type="button" onClick={handleGoback} aria-label="Go backwards" className="go-back-button">
+            <button
+              type="button"
+              onClick={handleGoback}
+              tabIndex="0"
+              aria-label="Go backwards button">
               <i className="fa-solid fa-chevron-left" />
             </button>
-            <button type="button" onClick={handleReset} aria-label="Reset Button" className="reset-button">
+            <button
+              type="button"
+              onClick={handleReset}
+              tabIndex="0"
+              aria-label="Reset Button">
               Reset All
             </button>
           </div>)}

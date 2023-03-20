@@ -21,6 +21,9 @@ h1 span {
   background-color: white;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -webkit-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -moz-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
 }
 
 h2 span {
@@ -33,6 +36,9 @@ h2 span {
   background-color: white;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -webkit-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -moz-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
 }
 
 h2 {
@@ -49,6 +55,9 @@ h3 span {
   background-color: white;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -webkit-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -moz-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
 }
 
 h4 span {
@@ -60,6 +69,9 @@ h4 span {
   background-color: white;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
+  box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -webkit-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
+  -moz-box-shadow: 9px 10px 0px 0px rgba(255,20,147,1);
 }
 
 p span {
@@ -100,7 +112,7 @@ p {
 
 .button-container {
   position: fixed;
-  bottom: 0px;
+  bottom: 6px;
   left: 0px; 
   display: flex;
   gap: 10px;
@@ -134,28 +146,26 @@ button {
   padding: 11px 20px;
   margin: 20px 0;
   cursor: pointer;
-  transition-duration: 0.1s;
-  transition-property: background-color, color, border-color, opacity, box-shadow;
-  transition-timing-function: ease-out;
-  outline: none;
   border: 1px solid transparent;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
   min-height: 40px;
-  background-color: 	#FF1493;
+  background-color:	rgb(255, 20, 147);
   color: rgb(255, 255, 255);
   border-radius: 5px;
 }
 
+button:hover {
+  background-color:	rgb(255, 255, 255);
+  color: #FF1493;
+}
+
 .name-input {
-  appearance: none;
-  display: block;
   width: 100%;
   font-family: inherit;
   color: 	#FF1493;
   padding: 5px 8px 8px 8px;
   border-radius: 0px;
   border: none;
-  outline: none;
   background-color: transparent;
   font-size: 30px;
   line-height: 38px;
@@ -198,11 +208,7 @@ input::placeholder {
   max-width: 100%;
   min-width: 130px;
   min-height: 40px;
-  outline: 0px;
   padding: 4px;
-  transition-duration: 0.1s;
-  transition-property: background-color, color, border-color, opacity, box-shadow;
-  transition-timing-function: ease-out;
   margin: 5px 0;
   font-family: "montserrat", sans-serif;
   font-weight: 700;
@@ -219,14 +225,12 @@ input::placeholder {
   color:white;
   outline: 0px;
   padding: 4px;
-  transition-duration: 0.1s;
-  transition-property: background-color, color, border-color, opacity, box-shadow;
-  transition-timing-function: ease-out;
-  margin:5px;
+  margin:5px 0;
   font-family: "montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
   border-radius: 5px;
+  gap: 5px;
 }
 
 .isabelle-form label, .theme-form.general {
@@ -284,10 +288,6 @@ input[type="radio" i] {
   width:100%;
   position:absolute;
   left:0;
-  -webkit-transition: opacity 1s ease-in-out;
-  -moz-transition: opacity 1s ease-in-out;
-  -o-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
 }
 
 .background-image.image1 {
@@ -297,7 +297,6 @@ input[type="radio" i] {
 .background-image.image2 {
   background-image: url(../public/images/toothbrush.jpg);
 }
-
 
 .background-image.image3 {
   background-image: url(../public/images/curtains.jpg);
