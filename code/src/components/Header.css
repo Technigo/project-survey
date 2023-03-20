@@ -17,6 +17,8 @@
 
   img {
 max-width: 200px;
+width: 40%;
+
   }
 
   .img-container {
@@ -24,6 +26,7 @@ max-width: 200px;
     justify-content: space-between;
     width: 100%;
     max-width: 700px;
+    width: 100%;
     
   }
   
