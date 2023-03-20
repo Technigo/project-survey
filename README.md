@@ -1,13 +1,5 @@
-# Survey form with React
+# The meta survey - A survey about surveys
+This is survey about your experience of surveys. The survey uses different input types for different kind of answers. Your result is presented back to you in the end, but the data is not posted anywhere.
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## About the project
+The survey is built using React and JSX. It uses an App as parent and different components for the questions. useState keeps track of the user input.
