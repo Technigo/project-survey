@@ -3,7 +3,7 @@
 .header {
     display: flex;
     flex-flow: column wrap; 
-    margin: 49px;
+    margin: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 4px 10px black;
@@ -16,15 +16,15 @@
   }
 
   img {
-max-width: 200px;
 width: 40%;
+margin-bottom: 30px;
+max-width: 400px;
 
   }
 
   .img-container {
     display: flex;
     justify-content: space-between;
-    width: 100%;
     max-width: 700px;
     width: 100%;
     
@@ -37,4 +37,29 @@ width: 40%;
 .header h2 {
   font-size: 1.5em;
   text-shadow: 6px 6px 8px rgb(161 66 195);
+}
+
+@media only screen and (min-width: 768px) {
+
+  p {
+    font-size: 1.5em;
+    padding: 1.5em;
+    margin: 1.5em;
+  }
+
+  .header h1 {
+font-size: 5em;
+margin-bottom: 5px;
+  }
+
+  .header h2 {
+    font-size: 3em;
+  }
+
+  img {
+    margin-bottom: 100px;
+    max-width: 700px;
+    
+      }
+
 }
