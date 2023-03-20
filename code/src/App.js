@@ -20,7 +20,6 @@ export const App = () => {
   const backHandler = () => {
     setCounter(counter - 1);
   };
-
   const restartSurvey = () => {
     setCounter(0);
     setAnswer1('');
@@ -28,7 +27,6 @@ export const App = () => {
     setAnswer3(0);
     setAnswer4('');
   };
- 
   return (
     <div className="main-container">
       {counter === 0 && (
@@ -63,8 +61,7 @@ export const App = () => {
           <button type="button" onClick={backHandler}>
           Back
           </button>
-        )
-        }
+        )}
         {counter > 0 && counter < 5 && (
           <>
             <p>Question: {counter}/4</p>
@@ -75,5 +72,5 @@ export const App = () => {
         )}
       </div>
     </div>
-  ); 
+  );
 };
