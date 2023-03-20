@@ -13,7 +13,7 @@ export const Gender = ({ gender, setGender }) => {
         <select
           onChange={handleGender}
           value={gender}>
-          <option value=" " id="option">Gender:</option>
+          <option disabled value="" id="option">Gender:</option>
           <option value="woman" id="option">Woman</option>
           <option value="man" id="option">Man</option>
           <option value="other" id="option">Other</option>

@@ -12,6 +12,7 @@
 }
 
 .dropdown select {
+    -webkit-appearance: none;
     border-top-style: hidden;
     border-right-style: hidden;
     border-left-style: hidden;

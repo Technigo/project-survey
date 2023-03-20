@@ -4,7 +4,6 @@
 /* eslint-disable no-sequences */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { Name } from 'components/Name';
 import { Gender } from 'components/Gender';
 import { Age } from 'components/Age';
