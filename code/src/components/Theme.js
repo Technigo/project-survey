@@ -35,7 +35,7 @@ const Theme = ({
       {isabelle === 'love' ? (
         <>
           <h3><span>What theme do you want your Isabelle Huppert film to have?</span></h3>
-          <form className="theme-form">
+          <form className="theme-form isabelle">
             {error && (<p>* Please select an option</p>)}
             {isabelleThemes.map((option) => (
               <label key={option} htmlFor={option}>
@@ -56,7 +56,7 @@ const Theme = ({
           </button>
         </>
       ) : (
-        <>
+        <div className="survey-wrapper general">
           <h3><span>What themes are you curious about?</span></h3>
           <form className="theme-form general">
             {error && (<p>* Please select an option</p>)}
@@ -77,7 +77,7 @@ const Theme = ({
             onClick={nextStepGeneral}>
             Next
           </button>
-        </>
+        </div>
       )}
     </div>
   );

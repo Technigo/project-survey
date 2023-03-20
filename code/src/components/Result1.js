@@ -20,12 +20,15 @@ const Result1 = ({
       <hr />
       {openArray.length !== 0 ? (
         <div className="result-box">
-          <h4 className="result-name">{openArray[i].name}</h4>
-          <div className="result-details">
-            <p>Directed by {openArray[i].director}</p>
-            <p>{openArray[i].details}</p>
+          <a href={openArray[i].url} target="_blank" rel="noreferrer"><img src={openArray[i].poster} alt="poster with link" className="posterimg" aria-label="Poster image with link to IMDB" /></a>
+          <div className="result-text">
+            <h4>{openArray[i].name}</h4>
+            <div className="result-details">
+              <p>Directed by {openArray[i].director}</p>
+              <p>{openArray[i].details}</p>
+            </div>
+            <p className="synopsis-paragraph">{openArray[i].synopsis}</p>
           </div>
-          <a href={openArray[i].url} target="_blank" rel="noreferrer"><img src={openArray[i].poster} alt="poster with link" className="poster-img" aria-label="Poster image with link to IMDB" /></a>
         </div>
       ) : (
         <div className="result-nothing">

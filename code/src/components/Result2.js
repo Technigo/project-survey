@@ -20,12 +20,15 @@ const Result2 = ({
       <hr />
       {filteredGenreArray.length !== 0 ? (
         <div className="result-box">
-          <h4>{filteredGenreArray[i].name}</h4>
-          <div className="result-details">
-            <p>Directed by {filteredGenreArray[i].director}</p>
-            <p>{filteredGenreArray[i].details}</p>
-          </div>
           <a href={filteredGenreArray[i].url} target="_blank" rel="noreferrer"><img src={filteredGenreArray[i].poster} alt="poster with link" className="posterimg" aria-label="Poster image with link to IMDB" /></a>
+          <div className="result-text">
+            <h4>{filteredGenreArray[i].name}</h4>
+            <div className="result-details">
+              <p>Directed by {filteredGenreArray[i].director}</p>
+              <p>{filteredGenreArray[i].details}</p>
+            </div>
+            <p className="synopsis-paragraph">{filteredGenreArray[i].synopsis}</p>
+          </div>
         </div>
       ) : (
         <div className="result-nothing">

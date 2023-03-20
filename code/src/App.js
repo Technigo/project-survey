@@ -27,12 +27,6 @@ export const App = () => {
   const [open, setOpen] = useState('');
   const [genre, setGenre] = useState('');
 
-  const classList = (...classes) => {
-    return classes
-      .filter((item) => !!item)
-      .join(' ');
-  }
-
   const handleGoback = () => {
     setCounter(counter - 1);
   }
@@ -48,6 +42,12 @@ export const App = () => {
     setOpen('');
     setGenre('');
   };
+
+  const classList = (...classes) => {
+    return classes
+      .filter((item) => !!item)
+      .join(' ');
+  }
 
   return (
     <div className={classList(
