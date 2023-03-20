@@ -5,7 +5,7 @@ import resultspony from '../Images/resultspony.svg';
 
 /* the result component returns three paragraphs that display the name, favourite food and favourite drink from the props */
 
-export const Result = ({ toppingSelect, colorSelect, name, magicCrystalSelect, flowerSelect, showAddMore, handleAddMoreClick, fruitSelect }) => {
+export const Result = ({ toppingSelect, colorSelect, name, magicCrystalSelect, showAddMore, handleAddMoreClick, fruitSelect }) => {
   return (
     <>
       {showAddMore && (
@@ -16,10 +16,13 @@ export const Result = ({ toppingSelect, colorSelect, name, magicCrystalSelect, f
         </div>
       )}
       {!showAddMore && (
-        <div className="results-wrapper">
+        <div className="pony-name-present">
           <p>Your personal magical pony name is: </p>
-          <p className="pony-name-present"> 🌟 {colorSelect}-{fruitSelect}-{name}-{magicCrystalSelect}-{toppingSelect}! 🌟 </p>
+          <p> 🌟 {colorSelect} {fruitSelect}  {name}!🌟 </p>
+          <p><strong> 💎 Cutie Mark:</strong> {magicCrystalSelect} </p>
+          <p><strong> ⚡️ Your secret pony weapon: </strong>{toppingSelect} </p>
           <img
+            className="resultspony-img"
             src={resultspony}
             alt="My Little Pony" />
         </div>

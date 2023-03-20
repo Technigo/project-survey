@@ -10,10 +10,10 @@ export const ColorSelect = ({ colorSelect, setColorSelect }) => {
         className="dropDown"
         onChange={(event) => setColorSelect(event.target.value)}
         value={colorSelect}>
-        <option value="Purple">Purple Haze</option>
-        <option value="Ruby">Ruby Red</option>
-        <option value="Baby">Baby Blue</option>
-        <option value="Sunshine">Sunshine Yellow</option>
+        <option value="Purple Haze">Purple Haze</option>
+        <option value="Ruby red">Ruby Red</option>
+        <option value="Baby Blue">Baby Blue</option>
+        <option value="Sunshine Yellow">Sunshine Yellow</option>
       </select>
     </form>
   )

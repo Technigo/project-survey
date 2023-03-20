@@ -69,7 +69,7 @@ button:hover {
 
 }
 p {
-  font-size: 1.5em;
+  font-size: 1em;
   padding: 0.5em;
   margin: 0.5em;
   
@@ -107,18 +107,21 @@ input[type="text"] {
 
 .results-wrapper {
   min-height:30px; 
-  font-size: 1.5em;
-    min-width: 120px;
+  font-size: 1em;
   display: flex;
   flex-flow: column wrap; 
-  align-items: center;
-  margin: 24px;
+  /* align-items: center; */
+  margin-top: 24px;
   /* padding: 20px; */
   padding:0.35em 1.2em;
   border: 9px solid rgba(136, 93, 241, 0.4);
   border-radius: 33px;
   box-shadow: -26px -13px 32px rgba(247, 246, 19, 0.5);
   background: radial-gradient(rgb(252, 115, 242) 20%, rgb(139, 102, 241) 100%);
+}
+
+.results-pony-img {
+
 }
 
 .dropDown {
