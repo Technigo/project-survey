@@ -16,21 +16,22 @@
   }
 
   img {
-width: 200px;
+max-width: 200px;
   }
 
   .img-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 700px;
     
   }
   
   .header h1 {
-    font-size: 70px;
+    font-size: 2em;
     text-shadow: 6px 6px 8px rgb(161 66 195);
   }
 .header h2 {
-  font-size: 45px;
+  font-size: 1.5em;
   text-shadow: 6px 6px 8px rgb(161 66 195);
 }
