@@ -423,6 +423,11 @@ hr {
     align-items: flex-start;
   }
 
+  .result-box img {
+    max-height: 400px;
+    max-width: 350px;
+}
+
   .result-text {
     margin:0;
   }
