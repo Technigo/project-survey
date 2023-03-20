@@ -11,3 +11,111 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(foodBackground.jpg);
+  background-size: cover;
+
+
+}
+
+.content {
+  width: 50%;
+  border-radius: 50px;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #eae8da;
+  opacity: 90%;
+}
+
+.progressBar {
+  position: relative;
+  color: white;
+}
+
+.progressBar span {
+  position: absolute;
+  left: 44%;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+progress {
+  -webkit-appearance: none;
+}
+
+::-webkit-progress-bar {
+  background-color: orange;
+}
+
+.btnSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.button {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding: 12px;
+  min-width: 100px;
+  border: 0px;
+  -webkit-transition: background-color 100ms linear;
+  -ms-transition: background-color 100ms linear;
+  transition: background-color 100ms linear;
+  background: #3498db;
+  color: #ffffff;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background: #2980b9;
+  color: #ffffff;
+}
+
+.checkboxSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.question p {
+  padding: 20px;
+}
+
+.emailSection {
+  align-items: center;
+  justify-content: center;
+}
