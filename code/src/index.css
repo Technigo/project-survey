@@ -282,6 +282,12 @@ input[type="radio" i] {
   min-height: 100%;
   overflow: hidden;
   width:100%;
+  position:absolute;
+  left:0;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .background-image.image1 {
@@ -290,26 +296,72 @@ input[type="radio" i] {
 
 .background-image.image2 {
   background-image: url(../public/images/toothbrush.jpg);
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
+
+@keyframes cf3FadeInOut {
+  0% {
+  opacity:1;
+}
+45% {
+opacity:1;
+}
+55% {
+opacity:0;
+}
+100% {
+opacity:0;
+}
+}
+
 
 .background-image.image3 {
   background-image: url(../public/images/curtains.jpg);
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
 
 .background-image.image4 {
   background-image: url(../public/images/house.jpg);
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
 
 .background-image.image5 {
   background-image: url(../public/images/boat.jpeg);
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
 
 .background-image.image6 {
   background-image: url(../public/images/green-building.jpg);
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
 
 .background-image.image7 {
   background-image: url(../public/images/traffic.jpg);
+  animation-name: cf3FadeInOut;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-direction: alternate;
 }
 
 .result-box img {
@@ -391,13 +443,13 @@ hr {
     justify-content: flex-start;
   }
 
-  .survey-wrapper.name, .result-nothing {
+/*   .survey-wrapper.name, .result-nothing {
     padding-top:100px;
   }
 
   .survey-wrapper.summary, .survey-wrapper.mixed, .survey-wrapper.general, .survey-wrapper.location {
     padding-top:50px;
-  }
+  } */
 
   .survey-wrapper {
     max-width: 350px;
