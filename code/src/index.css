@@ -24,7 +24,6 @@ code {
 }
 
 .header {
-  position: fixed;
   text-align: center;
   padding: 30px 40px;
   letter-spacing: 2px;
@@ -68,7 +67,7 @@ code {
 
 .question-wrapper {
   top: 250px;
-  padding: 5px 20px;
+  padding: 5px 15px;
   margin-top: 150px;
   text-align: center;
   position: fixed;
