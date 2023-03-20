@@ -37,7 +37,7 @@ const Food = (props) => {
             className="question2"
             onChange={handleFoodChange}
             value={food}>
-                <option value="">Select Location:</option>
+                <option value="">Select option:</option>
                 <option value="ounce">Only once (thus far!)</option>
                 <option value="twice">At least two times</option>
                 <option value="3-5 times">3-5 times</option>
