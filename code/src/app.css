@@ -165,7 +165,6 @@ option {
 }
 
 audio {
-    border: 0.2rem solid #fff;
     border-radius: 40px;
     box-shadow: 0 0 0.2rem var(--tertiary-bg-color), 
     0 0 0.2rem #fff, 0 0 2rem var(--tertiary-bg-color), 
