@@ -441,4 +441,12 @@ hr {
   .image1, .image2, .image3, .image4, .image5, .image6, .image7 {
     overflow: hidden;
   }
+
+  .survey-wrapper.summary h2 {
+    font-size: 35px;
+  }
+
+  .survey-wrapper.summary p{
+    font-size: 25px;
+  }
 }
