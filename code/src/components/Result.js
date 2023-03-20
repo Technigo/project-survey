@@ -4,25 +4,20 @@ import React from 'react';
 const Summary = ({ type, genre, score, apocalypse, data }) => {
   // Filtering step 1, on type:
   const filteredTypeArray = type === 'Surprise me!' ? data.series : data.series.filter((item) => item.tvtype === type);
-  console.log('filteredTypeArray:', filteredTypeArray);
 
   // Filtering step 2, on genre:
   const filteredGenreArray = genre === 'Surprise me!' ? filteredTypeArray : filteredTypeArray.filter((item) => item.genres.includes(genre));
-  console.log('filteredGenreArray:', filteredGenreArray);
 
   // Filtering step 3, on score:
   const filteredScoreArray = filteredGenreArray.filter((item) => item.score > score);
-  console.log('filteredScoreArray:', filteredScoreArray);
 
   // Filtering step 4, on apocalypse. If user has not checked the box, we keep all:
   const filteredApocalypseArray = apocalypse
     ? filteredScoreArray.filter((item) => item.apocalypse === true)
     : filteredScoreArray;
-  console.log('filteredApocalypseArray:', filteredApocalypseArray);
 
-  /* Gives a random number to put inside the return, change to the filtered array later */
+  /* Gives a random number to put inside the return */
   const i = Math.floor(Math.random() * filteredApocalypseArray.length);
-  console.log('filteredApocalypseArray.length:', filteredApocalypseArray.length, 'i:', i);
 
   return (
     <div className="container result">
@@ -56,14 +51,3 @@ const Summary = ({ type, genre, score, apocalypse, data }) => {
 }
 
 export default Summary;
-
-// Find posters:
-// https://www.omdbapi.com/?t=black-mirror&apikey=e170d343
-// https://www.omdbapi.com/?t=chernobyl&apikey=e170d343
-
-/*
-  const setRandomSuggestion = () => {
-    const suggestion = filteredSeriesArray[Math.floor(Math.random() * filteredSeriesArray.length)]
-    console.log('series suggestion:', suggestion);
-  }
-  */
