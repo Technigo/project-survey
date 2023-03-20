@@ -12,19 +12,25 @@ import Email from 'components/Email';
 export const App = () => {
   /* Changes to next question in form */
   const [nextPage, setNextPage] = useState(0);
-  /* this function changes to next page. It sets nextPage variable to +1 */
-  const goToNextPage = () => {
-    setNextPage(nextPage + 1)
-  }
-  const resetForm = () => {
-    setNextPage(0)
-  }
-
   const [nameInput, setNameInput] = useState('')
   const [radioBtn, setRadioBtn] = useState('Never')
   const [selectBtn, setSelectBtn] = useState('select')
   const [checkboxBtn, setCheckboxBtn] = useState(false)
   const [emailBtn, setEmailBtn] = useState('')
+  /* this function changes to next page. It sets nextPage variable to +1 */
+  const goToNextPage = () => {
+    if (nameInput === '' && nextPage === 1) {
+      alert('Name is required')
+      return
+    } else if (selectBtn === 'select' && nextPage === 3) {
+      alert('Choose an option')
+      return
+    }
+    setNextPage(nextPage + 1)
+  }
+  const resetForm = () => {
+    setNextPage(0)
+  }
 
   // eslint-disable-next-line prefer-const
   let progressValue = ((100 / 6) * (nextPage))
