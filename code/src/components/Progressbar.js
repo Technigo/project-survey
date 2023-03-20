@@ -2,7 +2,7 @@ import React from 'react';
 
 const Progressbar = ({ progress }) => {
   const ChildWidth = {
-    width: `${progress + 10}%`
+    width: `${progress * 20}%`
   }
 
   return (
