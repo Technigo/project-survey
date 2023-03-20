@@ -33,7 +33,7 @@ const Location = ({
         <form>
           <h3>
             <span>
-              In what continent do you want your Isabelle Huppert films to be set?
+              In what continent do you want your Isabelle Huppert film to be set?
             </span>
           </h3>
           {error && (<p>* Please select an option</p>)}
