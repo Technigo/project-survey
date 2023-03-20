@@ -434,7 +434,7 @@ width: 240px;
   .button_container{
 
     position: absolute;
-    top: 650px;
+    top: 580px;
     left: calc(50% - 28px);
     }
     
@@ -537,7 +537,7 @@ width: 240px;
     
   }
 
-  @media (min-width: 480px) {
+  @media (min-width: 520px) {
     .gym_app_container {
       display: flex;
       justify-content: center;
@@ -572,3 +572,8 @@ width: 240px;
 
  
        
+ 
+
+
+
+
