@@ -40,6 +40,13 @@ p {
 }
 
 
+.gym_app_container {
+  transform: scale(0.84);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .page-one-container {
 
   display: flex;
@@ -414,6 +421,14 @@ width: 240px;
 
 @media (min-width: 380px) {
 
+  .gym_app_container {
+    transform: scale(0.84);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
   .page-one-container {
     margin-top: 120px;
   }
@@ -434,7 +449,7 @@ width: 240px;
   .button_container{
 
     position: absolute;
-    top: 580px;
+    top: 560px;
     left: calc(50% - 28px);
     }
     
