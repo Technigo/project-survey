@@ -7,7 +7,7 @@ export const Fairyname = ({ fairyName, setFairyName }) => {
   return (
     <form className="fairy-name-from" onSubmit={(event) => event.preventDefault()} required>
       Come up with a fairytale name
-      <input type="text" required value={fairyName} onChange={handleFairyName} />
+      <input aria-label="fairytale name input" type="text" required value={fairyName} onChange={handleFairyName} />
     </form>
   )
 }

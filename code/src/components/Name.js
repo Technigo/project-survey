@@ -7,7 +7,7 @@ export const Name = ({ name, setName }) => {
   return (
     <form className="name-form" onSubmit={(event) => event.preventDefault()} required>
       Finally, what is your name?
-      <input type="text" required value={name} onChange={handleName} />
+      <input aria-label="name input" type="text" required value={name} onChange={handleName} />
     </form>
   )
 }
