@@ -40,7 +40,7 @@ p {
 }
 
 .gym_app_container {
-  transform: scale(0.94);
+  transform: scale(0.86);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -420,7 +420,7 @@ width: 240px;
 @media (min-width: 380px) {
 
   .gym_app_container {
-    transform: scale(0.94);
+    transform: scale(0.86);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -552,7 +552,7 @@ width: 240px;
 
   @media (min-width: 520px) {
     .gym_app_container {
-      transform: scale(0.94);
+      transform: scale(0.86);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -582,9 +582,4 @@ width: 240px;
   }
 
  
-       
- 
-
-
-
-
+      
