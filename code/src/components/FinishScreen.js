@@ -3,7 +3,7 @@ import React from 'react';
 const FinishScreen = () => {
   return (
     <>
-      <h1>Thank&apos;s a lot for your help!</h1>
+      <h1>Thanks a lot for your help!</h1>
       <h2>Come see us soon</h2>
     </>
   )

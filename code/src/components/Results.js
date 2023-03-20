@@ -15,7 +15,7 @@ const Results = ({ tasteGroup, type, texture, flavor, priceValue, textInput }) =
       {textInput !== '' && <p>Your specific snack request is: <span>{textInput}</span></p>}
       <p>Your preferred average price is <span>{priceValue}</span>€.
       </p>
-      <p>Does that sound about right to you or would you like to restart?</p>
+      <p>Does that sound about right or would you like to restart?</p>
     </div>
   );
 }
