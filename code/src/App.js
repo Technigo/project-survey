@@ -139,7 +139,7 @@ export const App = () => {
             genre={genre}
             generalfilms={generalfilms} />
         )}
-        {counter > 0 && (
+        {counter > 0 && counter < 6 && (
           <div className="button-container">
             <button
               type="button"
@@ -154,6 +154,16 @@ export const App = () => {
               tabIndex="0"
               aria-label="Reset Button">
               Reset All
+            </button>
+          </div>)}
+        {counter === 7 && (
+          <div className="button-container">
+            <button
+              type="button"
+              onClick={handleReset}
+              tabIndex="0"
+              aria-label="Reset Button">
+              Do it again
             </button>
           </div>)}
       </div>
