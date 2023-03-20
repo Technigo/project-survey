@@ -12,7 +12,7 @@ const PaymentQ = ({ counter, setCounter, payment, setPayment }) => {
   return (
     <div className="textboxChild">
       <p>In what manner would you like to be reimbursed?</p>
-      <form>
+      <form className="paymentchoice">
               Choice of reimbursement:
         {checkboxType.map((choice) => (
           <label aria-label="radio button choice of payment" key={choice}>

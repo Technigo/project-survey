@@ -193,6 +193,11 @@ justify-content: center;
     flex-direction: row-reverse;
   }
 
+  .paymentchoice {
+    display: flex;
+    flex-direction: column;
+  }
+
   .summarizebox p {
     margin: 20px;
     font-size: 20px;
