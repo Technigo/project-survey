@@ -53,7 +53,7 @@ p {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
 .page-one-title {
@@ -340,7 +340,7 @@ input[type=number] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 44px;
+  margin-top: 30px;
 
 }
 
@@ -393,7 +393,7 @@ width: 240px;
 .close_button_container{
 
   position: absolute;
-  top: 90%;
+  top: 364px;
   left: calc(50% - 10px);
   }
 
@@ -528,7 +528,7 @@ width: 240px;
     .close_button_container{
     
       position: absolute;
-      top: 760px;
+      top: 660px;
       left: calc(50% - 10px);
       max-height: 100px;
       }
