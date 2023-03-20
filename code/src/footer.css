@@ -47,10 +47,8 @@
   font-size: 28px;
   filter: drop-shadow(2px 4px 1px rgb(0 0 0 / 0.3));
   text-decoration: none;
-}
-
-.fa-github, .fa-linkedin {
   color: #fff;
+  margin:2px;
 }
 
 
