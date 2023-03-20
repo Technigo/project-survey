@@ -83,6 +83,7 @@ export const App = () => {
           genre === 'pop' ? <Classic name={name} reason={reason} location={location} feel={feel} genre={genre} />
             : genre === 'R&B' ? <RB name={name} reason={reason} location={location} feel={feel} genre={genre} />
               : genre === 'alternative' ? <Alte name={name} reason={reason} location={location} feel={feel} genre={genre} />
+                // eslint-disable-next-line max-len
                 : <Amapiano name={name} reason={reason} location={location} feel={feel} genre={genre} />
         )}
         {step <= 6 && (
