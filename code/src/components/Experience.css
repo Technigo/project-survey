@@ -1,0 +1,27 @@
+.dropdown {
+    display: flex;
+    margin-top: 5%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.dropdown form {
+    display: block;
+    background-color: antiquewhite;
+}
+
+.dropdown select {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+    font-weight: 200;
+    font-size: 1.2em;
+    width: 100%;
+    padding: 0.5em 1em;
+    text-align: center;
+}

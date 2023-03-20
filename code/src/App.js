@@ -15,9 +15,9 @@ export const App = () => {
     setStep(step + 1);
   }
   return (
-    <div className="main-container">
+    <div className="content-container">
       {step === 1 && (
-        <div className="question-box">
+        <div className="name-container">
           <Name name={name} setName={setName} />
         </div>
       )}
@@ -34,7 +34,7 @@ export const App = () => {
         <Summary name={name} experience={experience} size={size} />
       )}
       {step < 3 && (
-        <button type="button" onClick={handleStepIncrease}>Next question</button>
+        <button type="button" onClick={handleStepIncrease}>Next</button>
       )}
     </div>
   );

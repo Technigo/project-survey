@@ -1,0 +1,22 @@
+.name-text {
+    display: flex;
+    width:100%;
+    margin: 10% 5% 5% 5%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+#name {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+    width: 100%;
+    height: auto;
+    font-weight: 200;
+    font-size: 1.2em;
+    text-align: center;
+}
