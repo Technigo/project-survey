@@ -3,7 +3,7 @@
 import React from 'react';
 import resultspony from '../Images/resultspony.svg';
 
-/* the result component returns three paragraphs that display the name, favourite food and favourite drink from the props */
+/* the result component returns three paragraphs that display the name, favorite food and favorite drink from the props */
 
 export const Result = ({ toppingSelect, colorSelect, name, magicCrystalSelect, showAddMore, handleAddMoreClick, fruitSelect }) => {
   return (
@@ -18,7 +18,7 @@ export const Result = ({ toppingSelect, colorSelect, name, magicCrystalSelect, s
       {!showAddMore && (
         <div className="pony-name-present">
           <p>Your personal magical pony name is: </p>
-          <p> 🌟 {colorSelect} {fruitSelect}  {name}!🌟 </p>
+          <p> 🌟 {colorSelect} {fruitSelect} {name}!🌟 </p>
           <p><strong> 💎 Cutie Mark:</strong> {magicCrystalSelect} </p>
           <p><strong> ⚡️ Your secret pony weapon: </strong>{toppingSelect} </p>
           <img

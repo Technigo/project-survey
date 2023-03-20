@@ -79,7 +79,7 @@ export const App = () => {
           {step === 1 && 'YEAH!! LETS GO!! 🥳'}
           {step > 1 && step < 7 && 'Next question 🦄'}
           {step === 8 && 'Find out my magical pony name! 🦄'}
-          {step >= 8 && 'Lets do this one more time!🦄'}
+          {step >= 9 && 'Lets do this one more time!🦄'}
           {step === 7 && 'Submit! 🦄'}
           </button>
           <p className="question-count">Question number {step}/{10}</p>
