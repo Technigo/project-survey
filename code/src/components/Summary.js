@@ -57,7 +57,7 @@ const Summary = ({
           </div>
           <br />
           <p>
-            <span>Okay, lets see what we can do for you!</span>
+            <span>Okay, lets see what we can do for you!👇</span>
           </p>
         </>
       ) : (
@@ -90,7 +90,7 @@ const Summary = ({
           </div>
           <br />
           <p className="next">
-            <span>Okay, lets see what we can do for you!</span>
+            <span>Okay, lets see what we can do for you!👇</span>
           </p>
         </>
       )}
