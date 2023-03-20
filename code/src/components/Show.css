@@ -1,0 +1,33 @@
+.showFav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+    object-fit: contain;
+}
+
+.normalPeople img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}
+
+.madMen img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}
+
+.newGirl img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}
+
+.attackOnTitan img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}

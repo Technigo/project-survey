@@ -1,0 +1,30 @@
+.movieFav {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+    padding: 1rem;
+    object-fit: contain;
+}
+
+.arrival img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}
+.loveActually img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}
+.eeaao img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}
+.gameNight img {
+    display: flex;
+    width: 200px;
+    height: 250px;
+}

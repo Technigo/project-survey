@@ -5,9 +5,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./components/Assets/movies-background.jpg');
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.surveyForm {
+  display: flex;
+  width: auto;
+  margin: 5rem 5rem 5rem 5rem;
+  border: 2px solid rgb(245, 175, 10);
+  color: rgb(0, 255, 145);
+  background-color: rgb(107, 108, 109);
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
