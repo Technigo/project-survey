@@ -18,7 +18,15 @@ const Name = ({ name, setName, counter, setCounter }) => {
   return (
     <div className="survey-wrapper name">
       <h2><span>What is your name?</span></h2>
-      <input className="name-input" type="text" placeholder={!error ? 'Type your name here...' : '* Please enter your name'} value={name} onChange={handleNameChange} />
+      <label htmlFor="nameInput">
+        <input
+          className="name-input"
+          type="text"
+          placeholder={!error ? 'Type your name here...' : '* Please enter your name'}
+          value={name}
+          id="nameInput"
+          onChange={handleNameChange} />
+      </label>
       <button
         type="button"
         onClick={handleIncreaseCounterClick}>

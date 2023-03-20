@@ -140,7 +140,7 @@ export const App = () => {
             <button type="button" onClick={handleGoback} aria-label="Go backwards" className="go-back-button">
               <i className="fa-solid fa-chevron-left" />
             </button>
-            <button type="button" onClick={handleReset} aria-label="Button named Reset All" className="reset-button">
+            <button type="button" onClick={handleReset} aria-label="Reset Button" className="reset-button">
               Reset All
             </button>
           </div>)}

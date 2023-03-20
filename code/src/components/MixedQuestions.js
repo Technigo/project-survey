@@ -45,6 +45,8 @@ const MixedQuestions = ({
               <input
                 type="checkbox"
                 checked={open}
+                tabIndex="0"
+                aria-checked={open}
                 value="open"
                 onChange={handleCheckBox} />
                 Check here

@@ -38,6 +38,7 @@ const Location = ({
           </h3>
           {error && (<p>* Please select an option</p>)}
           <select
+            aria-label="Drop down menu to select a continent"
             onChange={(event) => setContinent(event.target.value)}
             value={continent}>
             <option value="" disabled>Select continent</option>
@@ -57,6 +58,7 @@ const Location = ({
           <h3><span>Where do you want your film to be set?</span></h3>
           {error && (<p>* Please select an option</p>)}
           <select
+            aria-label="Drop down menu to select a continent"
             onChange={(event) => setCountry(event.target.value)}
             value={country}>
             <option value="" disabled>Select genre</option>
