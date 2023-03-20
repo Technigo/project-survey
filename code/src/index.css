@@ -1,13 +1,166 @@
-body {
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Quintessential', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  height: 100%;
+  background-image: url("./images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.story-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.side-in-book {
+  max-width: 610px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+}
+
+.form-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+form {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+
+.book-img {
+  max-width: 90%;
+  max-height: auto;
+  display: flex;
+  margin-top: 20px;
+}
+
+input,
+.love-act-drop-down {
+  border: none;
+  border-radius: 8px;
+  background-color: #f0ece2;
+  padding: 10px;
+  font-size: 16px;
+  font-family: 'Quintessential', cursive;
+}
+
+.love-act-drop-down {
+  padding: 5px;
+}
+
+input:focus,
+.love-act-drop-down:focus {
+  outline-color: black;
+}
+
+button {
+  font-family: 'Quintessential', cursive;
+  border-radius: 20px;
+  border: #c7b198;
+  background-color: #dfd3c3;
+  padding: 5px 10px;
+  box-shadow: 1px 3px #c7b198;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #f0ece2;
+  cursor: pointer;
+}
+
+.radio-btn {
+  accent-color: black;
+}
+
+.radio-btn:hover {
+  cursor: pointer;
+}
+
+.story-page {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  align-self: center;
+  max-width: 70%;
+  height: 600px;
+  gap: 16px;
+  overflow-y: scroll;
+}
+
+.big-letter-span {
+  font-size: 40px;
+}
+
+.fairy-name-span {
+  color: purple;
+}
+
+.fairy-name-span2 {
+  color: green;
+}
+
+.name-span {
+  color: blue;
+}
+
+.name-span2 {
+  color: deeppink;
+}
+
+.love-span {
+  color: red;
+}
+
+.color-span {
+  color: indianred;
+}
+
+.horn-span {
+  color: darkorange;
+}
+
+@media (max-width: 570px) {
+  .story-container {
+    margin-top: 30px;
+  }
+
+  .story-page {
+    height: 380px;
+    font-size: 12px;
+    max-width: 60%;
+  }
+
+  .form-div {
+    gap: 14px;
+  }
+
+  .reload-btn {
+    font-size: 14px;
+  }
 }
