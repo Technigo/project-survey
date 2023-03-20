@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types'
 
 export const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
@@ -15,10 +14,3 @@ export const Name = ({ name, setName }) => {
     </div>
   );
 }
-
-Name.propTypes = {
-  name: PropTypes.string.isRequired
-
-}
-
-export default Name
