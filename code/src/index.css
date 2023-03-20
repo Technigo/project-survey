@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -22,7 +21,6 @@ html {
 }
 
 .story-container {
-  /* border: 2px blue solid; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +28,6 @@ html {
 }
 
 .side-in-book {
-  /* border: 2px aqua solid; */
   max-width: 610px;
   position: absolute;
   display: flex;
@@ -104,7 +101,6 @@ button:hover {
 }
 
 .story-page {
-  /* border: solid 2px red; */
   font-size: 16px;
   display: flex;
   flex-direction: column;
@@ -116,7 +112,6 @@ button:hover {
   gap: 16px;
   overflow-y: scroll;
 }
-
 
 .big-letter-span {
   font-size: 40px;
@@ -150,9 +145,7 @@ button:hover {
   color: darkorange;
 }
 
-
 @media (max-width: 570px) {
-
   .story-container {
     margin-top: 30px;
   }
