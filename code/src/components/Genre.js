@@ -1,5 +1,6 @@
 /* eslint-disable linebreak-style */
 import React from 'react'
+import './Genre.css'
 
 export const Genre = ({ genre, setGenre }) => {
   const handleGenreChange = (event) => {
@@ -8,7 +9,7 @@ export const Genre = ({ genre, setGenre }) => {
   return (
     <>
       <div className="genrePrompt">
-        <p>What is your favorite genre?</p>
+        <h3>What is your favorite genre of movie/tv show?</h3>
       </div>
       <div className="genreDropdown">
         <select

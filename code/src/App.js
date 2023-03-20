@@ -20,32 +20,29 @@ export const App = () => {
   }
 
   return (
-    <>
-      <img src={require('./components/Assets/movies-background.jpg')} alt="background of movie/tv related stuff" />
-      <form className="surveyForm">
-        {step === 1 && (
-          <Name name={name} setName={setName} />
-        )}
-        {step === 2 && (
-          <Genre genre={genre} setGenre={setGenre} />
-        )}
-        {step === 3 && (
-          <Movie movie={movie} setMovie={setMovie} />
-        )}
-        {step === 4 && (
-          <Show show={show} setShow={setShow} />
-        )}
-        {step >= 5 && (
-          <Results name={name} genre={genre} movie={movie} show={show} />
-        )}
+    <form className="surveyForm">
+      {step === 1 && (
+        <Name name={name} setName={setName} />
+      )}
+      {step === 2 && (
+        <Genre genre={genre} setGenre={setGenre} />
+      )}
+      {step === 3 && (
+        <Movie movie={movie} setMovie={setMovie} />
+      )}
+      {step === 4 && (
+        <Show show={show} setShow={setShow} />
+      )}
+      {step >= 5 && (
+        <Results name={name} genre={genre} movie={movie} show={show} />
+      )}
 
-        {step < 5 && (
-          <>
-            <p>Current page: {step} </p>
-            <button type="button" onClick={handleStepIncrease}>Next</button>
-          </>
-        )}
-      </form>
-    </>
+      {step < 5 && (
+        <>
+          <p>Current page: {step} </p>
+          <button type="button" onClick={handleStepIncrease}>Next</button>
+        </>
+      )}
+    </form>
   )
 }
