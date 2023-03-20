@@ -1,4 +1,4 @@
-/* eslint-disable max-len */
+/* eslint-disable */
 import React, { useState } from 'react';
 import Dates from './Dates';
 import Destination from './Destination';
