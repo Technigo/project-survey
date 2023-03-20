@@ -36,19 +36,19 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
         if (thing === 'ocean') {
           return (
             <div className="Results">
-             Dont burn is a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
+             Dont burn its a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
             </div>
           );
         } else if (thing === 'mountain') {
           return (
             <div className="Results">
-              Its a dog surfing <img src={dogsurfer} alt="Dog surfing" />
+              It´s a dog surfing <img src={dogsurfer} alt="Dog surfing" />
             </div>
           );
         } else if (thing === 'city') {
           return (
             <div className="Results">
-             Dont burn is a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
+             Dont burn its a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
             </div>
           );
         }
@@ -78,7 +78,7 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
         if (thing === 'ocean') {
           return (
             <div className="Results">
-             Dont burn is a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
+             Dont burn its a Jelly Fish <img src={jelly} alt="Pink Jelly fish" />
             </div>
           );
         } else if (thing === 'city') {
@@ -148,8 +148,8 @@ export const QuizResult = ({ prefer, color, thing, name, setResults, results }) 
   return (
     <div className="text">
 
-      <p> Hey {name}, your favorite animal is {results}</p>
-      <button onClick={handleResults} type="button" className="calculate"> <span>Calculate Results</span></button>
+      <p> Hey {name}, your favorite animal is: {results}</p>
+      <button onClick={handleResults} type="button" className="calculate"> <span>Whats my animal?</span></button>
       <button className="playAgain" type="button" onClick={() => window.location.reload(false)}>
         <span>Play Again Please!</span>
       </button>
