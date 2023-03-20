@@ -39,9 +39,8 @@ p {
   margin: 30px, 0, 0, 30px;
 }
 
-
 .gym_app_container {
-  transform: scale(0.84);
+  transform: scale(0.94);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,8 +51,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .page-one-title {
@@ -70,7 +68,7 @@ p {
 
 .page-one-question {
   font-size: 18px;
-  margin-top: 100px;
+  margin-top: 90px;
   font-weight: 800;
 }
 
@@ -393,7 +391,7 @@ width: 240px;
 .close_button_container{
 
   position: absolute;
-  top: 364px;
+  top: 500px;
   left: calc(50% - 10px);
   }
 
@@ -422,7 +420,7 @@ width: 240px;
 @media (min-width: 380px) {
 
   .gym_app_container {
-    transform: scale(0.84);
+    transform: scale(0.94);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -456,7 +454,7 @@ width: 240px;
 
     .page-two-question {
  
-      margin-top: 140px;
+      padding-top: 80px;
 
     }
 
@@ -554,6 +552,7 @@ width: 240px;
 
   @media (min-width: 520px) {
     .gym_app_container {
+      transform: scale(0.94);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -565,9 +564,6 @@ width: 240px;
       height: 902px;
       border-radius: 10px;
       box-shadow: var(--dark-box-shadow); 
-      
-      
-      transform: scale(0.84);
       align-self: center;
       display: flex;
       margin-left: auto;
