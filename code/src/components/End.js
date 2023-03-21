@@ -16,7 +16,7 @@ export const End = ({ name, yesno, shape }) => {
     <div className="end-container">
       <div className="question">
         Thank you {name} for your contribution!
-        <br />{yesno}, most people haven't heard of the Bouba Kiki Effect.
+        <br />{yesno}, most people haven`&apos;`t heard of the Bouba Kiki Effect.
         <br />{shape}
         <br />the blue hair style would be Bouba while the pink would be Kiki.
       </div>
