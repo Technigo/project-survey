@@ -8,4 +8,4 @@ The major hurdle while constructing this survey was to place everything correctl
 
 ## View it live
 
-I am having problems with the deploy, will add a link when the deploy has succeeded.
+https://at-the-cafe-survey.netlify.app/
