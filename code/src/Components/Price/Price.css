@@ -1,0 +1,26 @@
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .radio-container {
+    display: flex;
+    width: 60px;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px 5px 0px 5px;
+  }
+  
+  .radio-form {
+  display: flex;
+  flex-direction: row;
+  }
+
+  .pricegrouptext {
+    display: flex;
+    font-size: 15px;
+    font-family: Futura;
+    color: #746dbaff;
+    justify-content: center;
+    align-items: center;
+  }

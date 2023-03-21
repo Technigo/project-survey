@@ -1,3 +1,6 @@
+/* /////////////////////////////// BACKGROUND & FONT //////////////////////////////*/
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +8,140 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 22% 5% 0% 1%;
+  background-image: url("./Components/pictures/wine-1.png");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* ///////////////////////// APP.JS - SURVEY MAIN BUBBLE //////////////////////////////*/
+
+/*----- SURVEY MAIN BUBBLE ---- */
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255,255,255);
+  border-radius: 50%;
+  width: 236px;
+  border-style: solid;
+  border-width: 17px;
+  border-color: #746dbaff;
+  height: 236px; 
+  padding: 22px;
+}
+
+/*----- COUNTER ---- */
+
+progress {
+  accent-color: #746dbaff;
+  height: 17px;
+}
+
+.count-numbers {
+  font-family: Futura;
+  font-size: 11px;
+  padding-left: 5px;
+}
+
+.steps-text {
+  color: #746dbaff;
+  font-family: Futura;
+}
+
+/*----- TITLES TO ALL QUESTIONS ---- */
+
+.nametext {
+  display: flex;
+  font-size: 21.9px;
+  font-family: Futura;
+  color: #746dbaff;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/*----- TEXT INPUT ---- */
+
+.name-input {
+  background-color: transparent;
+  font-size: 20px;
+  width: 160px;
+  border-width: 10px;
+  border-color: #746dbaff;
+  border-radius: 7px;
+  padding: 10px;
+  color: #746dbaff;
+  font-family: Futura;
+  font-weight: bold;
+  border-style: solid;
+  box-shadow: none;
+}
+
+/*----- START SURVEY / NEXT QUESTION / SUBMIT BUTTON ---- */
+
+.submit-button {
+  background: #746dbaff;
+  border-radius: 999px;
+  box-shadow: #746dbaff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 24px;
+  font-family: Futura;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 3px 10px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+/* ///////////////////////// MEDIA QUERIES //////////////////////////////*/
+
+/*----- IPHONE 13 (375px) ---- */
+
+@media (min-width: 374px) {
+
+body {
+  padding: 22% 5% 0% 5%;
+}
+
+.question-container {
+  padding: 38px;
+}
+}
+
+/*----- TABLET ---- */
+
+@media (min-width: 668px) {
+
+body {
+  padding: 22% 5% 0% 28%;
+}
+.question-container {
+  padding: 45px;
+}
+}
+
+/*----- LAPTOP // LARGESCREEN ---- */
+
+@media (min-width: 1023px) {
+
+body {
+  padding: 22% 5% 0% 36%;
+}
+.question-container {
+  padding: 45px;
+}
 }

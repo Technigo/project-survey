@@ -1,0 +1,14 @@
+/* ///////////////////////// FIRST PAGE //////////////////////////////*/
+
+/*----- "Let us give you a suggestion"-text ---- */
+
+.greetingtext {
+    display: flex;
+    font-size: 15px;
+    margin: 5px;
+    font-family: Futura;
+    color: #746dbaff;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
