@@ -1,3 +1,4 @@
+/* eslint-disable */ 
 import React, { useState } from 'react';
 import Start from './components/Start';
 import Subscription from './components/Subscription';
