@@ -8,7 +8,7 @@ export const Name = ({ name, setName }) => {
   return (
     <>
       <p>What is your name?</p>
-      <input type="text" minLength="1" value={name} onChange={handleNameChange} required="required" />
+      <input type="text" minLength="1" value={name} onChange={handleNameChange} required />
     </>
   );
 }

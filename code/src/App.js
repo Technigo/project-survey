@@ -3,36 +3,40 @@
 import React, { useState } from 'react';
 import { Name } from './components/Name';
 import { Animal } from './components/Animal';
-import { Gender } from './components/Gender';
+import { Color } from './components/Color';
 import { Result } from './components/Result';
-import { Country } from './components/Country';
-import { Happy } from './components/Happy';
+import { Job } from './components/Job';
+import { Verb } from './components/Verb';
+import { Adjective } from './components/Adjective';
 
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [animal, setAnimal] = useState('');
-  const [gender, setGender] = useState('');
-  const [country, setCountry] = useState('');
-  const [happy, setHappy] = useState(50);
+  const [job, setJob] = useState('');
+  const [color, setColor] = useState('');
+  const [verb, setVerb] = useState('');
+  const [adjective, setAdjective] = useState('');
   const [error, setError] = useState(false);
   const handleStepIncrease = () => {
     setStep(step + 1);
     setError(false);
+  }
+  /* const handleError = () => {
     if (name.length <= 1) {
       setError(true);
       setStep(2);
     } else if (animal.length <= 1) {
       setError(true);
-      setStep(3);
+      setStep(2);
     }
-  }
+  } */
   return (
     <>
       {(step === 1) && (
         <>
-          <h1 className="typewriter">Let's play a MADLIBS game.</h1>
-          <p>Begin by filling out your name.</p>
+          <h1 className="typewriter">Welcome to the MADLIBS game. Let&#39;s play a round.</h1>
+          <p>Start by entering your name.</p>
           <Name name={name} setName={setName} />
         </>
       )}
@@ -40,18 +44,21 @@ export const App = () => {
         <Animal animal={animal} setAnimal={setAnimal} />
       )}
       {step === 3 && (
-        <Gender gender={gender} setGender={setGender} />
+        <Job job={job} setJob={setJob} />
       )}
       {step === 4 && (
-        <Country country={country} setCountry={setCountry} />
+        <Color color={color} setColor={setColor} />
       )}
       {step === 5 && (
-        <Happy happy={happy} setHappy={setHappy} />
+        <Verb verb={verb} setVerb={setVerb} />
       )}
       {step === 6 && (
-        <Result name={name} age={age} gender={gender} country={country} happy={happy} />
+        <Adjective adjective={adjective} setAdjective={setAdjective} />
       )}
-      {step < 6 && (
+      {step === 7 && (
+        <Result name={name} animal={animal} job={job} color={color} verb={verb} adjective={adjective} />
+      )}
+      {step < 7 && (
         <>
           <p>
             Current step: {step}/5
@@ -63,6 +70,7 @@ export const App = () => {
       )}
       {error && (<p>Please fill out this field.</p>)}
       {error && (<p>Field required.</p>)}
+      <canvas id="particles" />
     </>
   );
 }

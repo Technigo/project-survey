@@ -13,6 +13,8 @@ code {
 }
 
 .typewriter {
+    font-family: 'Audiowide', cursive;
+    font-size: 48px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -35,3 +37,12 @@ code {
     50% { border-color: orange; }
   }
 
+input[type="radio"] {
+    display: none;
+  }
+  
+.color-options {
+  display: flex;
+	gap: 10px;
+	flex-wrap: wrap;
+}
