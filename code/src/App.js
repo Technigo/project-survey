@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
 import React, { useState } from 'react';
+import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { Name } from './components/Name';
 import { Animal } from './components/Animal';
 import { Color } from './components/Color';
@@ -32,13 +33,23 @@ export const App = () => {
     }
   } */
   return (
-    <>
+    <section className="container">
       {(step === 1) && (
-        <>
-          <h1 className="typewriter">Welcome to the MADLIBS game. Let&#39;s play a round.</h1>
-          <p>Start by entering your name.</p>
-          <Name name={name} setName={setName} />
-        </>
+        <section className="header-container">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" />
+          <Player
+            autoplay
+            loop
+            src="https://assets8.lottiefiles.com/packages/lf20_nw3e7mtx.json"
+            style={{ height: '150px', width: '150px' }}>
+            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+          </Player>
+          <h1 className="typewriter">WELCOME.</h1>
+          <section className="form-input">
+            <p>Let us begin by entering your name.</p>
+            <Name name={name} setName={setName} />
+          </section>
+        </section>
       )}
       {(step === 2) && (
         <Animal animal={animal} setAnimal={setAnimal} />
@@ -59,18 +70,17 @@ export const App = () => {
         <Result name={name} animal={animal} job={job} color={color} verb={verb} adjective={adjective} />
       )}
       {step < 7 && (
-        <>
+        <section className="step-counter">
           <p>
-            Current step: {step}/5
+              Current step: {step}/5
           </p>
-          <button type="button" onClick={handleStepIncrease}>
-            Next
+          <button id="next-step-btn" type="button" onClick={handleStepIncrease}>
+              Next
           </button>
-        </>
+        </section>
       )}
       {error && (<p>Please fill out this field.</p>)}
       {error && (<p>Field required.</p>)}
-      <canvas id="particles" />
-    </>
+    </section>
   );
 }

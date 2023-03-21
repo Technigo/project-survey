@@ -12,15 +12,15 @@ export const Color = ({ color, setColor }) => {
       <p>Please choose a color.</p>
       <div className="color-options">
         {colorOptions.map((colorType) => (
-        // eslint-disable-next-line jsx-a11y/label-has-associated-control
+          // eslint-disable-next-line jsx-a11y/label-has-associated-control
           <label key={colorType}>
+            {colorType}
             <input
               type="radio"
               value={colorType}
               onChange={handleColorChange}
               checked={color === colorType}
               required />
-            {colorType}
           </label>
         ))}
       </div>

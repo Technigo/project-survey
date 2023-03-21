@@ -5,6 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fff68f;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 code {
@@ -14,7 +18,8 @@ code {
 
 .typewriter {
     font-family: 'Audiowide', cursive;
-    font-size: 48px;
+    font-size: 28px;
+    padding: 20px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -37,12 +42,75 @@ code {
     50% { border-color: orange; }
   }
 
+.form-input {
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 15px;
+}
+
+p {
+  font-family: 'Nippo', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+}
+
+span {
+  font-family: 'Nippo', sans-serif;
+  font-weight: 300;
+  font-size: 23px;
+}
+
 input[type="radio"] {
     display: none;
   }
   
+.step-counter {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 200px;
+  justify-self: center;
+  gap: 20px;
+  text-align: left;
+}
+
+#next-step-btn {
+  border: 2px solid black;
+  border-radius: 12px;
+  width: 100px;
+  padding: 10px;
+  align-self: center;
+  font-family: 'Audiowide', cursive;
+  font-size: 21px;
+
+}
+
+#next-step-btn:hover {
+  background-color: black;
+  color: white;
+}
+
 .color-options {
   display: flex;
 	gap: 10px;
 	flex-wrap: wrap;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 12px;
+  margin: 1em;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 2em;
+  padding: 0.5em;
 }

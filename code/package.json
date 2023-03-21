@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@babel/eslint-parser": "^7.18.9",
+    "@lottiefiles/lottie-player": "^1.7.1",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "eslint": "^8.21.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.26.0",
