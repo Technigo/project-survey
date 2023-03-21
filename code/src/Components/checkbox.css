@@ -18,3 +18,9 @@
     height: 30px;
     justify-content: baseline;
   }
+
+  @media (max-width: 700px) {
+    .adjective-container {
+      width: 140px;
+    }
+  }

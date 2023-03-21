@@ -8,6 +8,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   accent-color: darkgreen;
+  overflow-x: hidden;
 }
 
 .survey-header {
@@ -23,6 +24,7 @@ height: 500px;
 padding: 20px 20px 20px 30px;
 margin: auto;
 justify-content: center;
+overflow-y: scroll;
 }
 
 /* CSS */
@@ -83,6 +85,7 @@ select {
     font-size: 12x;
     line-height: 16px;
     accent-color: darkgreen;
+    overflow-x: hidden;
   }
 
   .survey-wrapper {
@@ -93,5 +96,16 @@ select {
     padding: 20px 20px 20px 20px;
     margin: auto;
     justify-content: center;
+    }
+
+    input[type=text] {
+      margin:10px 0;
+      width: 150px;
+      height: 25px;
+    }
+
+    select {
+      width: 250px;
+      height: 30px;
     }
 }
