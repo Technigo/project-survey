@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 import React from 'react';
 
-const colorOptions = ['red', 'yellow', 'pink', 'green', 'orange', 'purple', 'blue'];
+const colorOptions = ['red', 'yellow', 'pink', 'green', 'orange', 'violet', 'blue'];
 
 export const Color = ({ color, setColor }) => {
   const handleColorChange = (event) => {
@@ -9,7 +9,7 @@ export const Color = ({ color, setColor }) => {
   }
   return (
     <form>
-      <p>Please choose a color.</p>
+      <p>Pick a color.</p>
       <div className="color-options">
         {colorOptions.map((colorType) => (
           // eslint-disable-next-line jsx-a11y/label-has-associated-control

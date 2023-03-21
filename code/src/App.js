@@ -18,20 +18,9 @@ export const App = () => {
   const [color, setColor] = useState('');
   const [verb, setVerb] = useState('');
   const [adjective, setAdjective] = useState('');
-  const [error, setError] = useState(false);
   const handleStepIncrease = () => {
     setStep(step + 1);
-    setError(false);
   }
-  /* const handleError = () => {
-    if (name.length <= 1) {
-      setError(true);
-      setStep(2);
-    } else if (animal.length <= 1) {
-      setError(true);
-      setStep(2);
-    }
-  } */
   return (
     <section className="container">
       {(step === 1) && (
@@ -45,20 +34,47 @@ export const App = () => {
             <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
           </Player>
           <h1 className="typewriter">WELCOME.</h1>
-          <section className="form-input">
+          <section className="name-input">
             <p>Let us begin by entering your name.</p>
             <Name name={name} setName={setName} />
           </section>
         </section>
       )}
       {(step === 2) && (
-        <Animal animal={animal} setAnimal={setAnimal} />
+        <section className="form-input">
+          <Animal animal={animal} setAnimal={setAnimal} />
+        </section>
       )}
       {step === 3 && (
-        <Job job={job} setJob={setJob} />
+        <section className="form-input">
+          <Job job={job} setJob={setJob} />
+        </section>
       )}
       {step === 4 && (
-        <Color color={color} setColor={setColor} />
+        <section className="form-input">
+          <Color color={color} setColor={setColor} />
+        </section>
+      )}
+      {color === 'red' && (
+        <p className="color-pick-msg">You choose: ❤️</p>
+      )}
+      {color === 'yellow' && (
+        <p className="color-pick-msg">You choose: 💛</p>
+      )}
+      {color === 'pink' && (
+        <p className="color-pick-msg">You choose: 💗</p>
+      )}
+      {color === 'green' && (
+        <p className="color-pick-msg">You choose: 💚</p>
+      )}
+      {color === 'orange' && (
+        <p className="color-pick-msg">You choose: 🧡</p>
+      )}
+      {color === 'violet' && (
+        <p className="color-pick-msg">You choose: 💜</p>
+      )}
+      {color === 'blue' && (
+        <p className="color-pick-msg">You choose: 💙</p>
       )}
       {step === 5 && (
         <Verb verb={verb} setVerb={setVerb} />
@@ -79,8 +95,6 @@ export const App = () => {
           </button>
         </section>
       )}
-      {error && (<p>Please fill out this field.</p>)}
-      {error && (<p>Field required.</p>)}
     </section>
   );
 }

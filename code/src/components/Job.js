@@ -7,7 +7,7 @@ export const Job = ({ job, setJob }) => {
   };
   return (
     <>
-      <p>Please select a profession</p>
+      <span>Pick a profession.</span>
       <select value={job} onChange={handleJobChange}>
         <option value=" ">Select a job</option>
         <option value="Doctor">Doctor</option>

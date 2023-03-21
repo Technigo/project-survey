@@ -42,13 +42,33 @@ code {
     50% { border-color: orange; }
   }
 
-.form-input {
+.name-input {
   border: 2px solid black;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   padding: 1em;
   gap: 15px;
+}
+
+.form-input {
+  border: 2px solid black;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 2em;
+  gap: 15px;
+}
+
+input {
+  height: 25px;
+}
+
+select {
+  height: 25px;
+  font-family: Nippo, sans-serif;
+  font-weight: 200;
 }
 
 p {
@@ -62,10 +82,6 @@ span {
   font-weight: 300;
   font-size: 23px;
 }
-
-input[type="radio"] {
-    display: none;
-  }
   
 .step-counter {
   display: flex;
@@ -93,10 +109,47 @@ input[type="radio"] {
   color: white;
 }
 
+.color-options input[type="radio"] {
+  display:none;
+}
+
 .color-options {
   display: flex;
-	gap: 10px;
-	flex-wrap: wrap;
+  flex-direction: column;
+  width: 200px;
+  gap: 5px;
+  margin-top: 3px;
+}
+
+.color-options label {
+  display: inline-block;
+  background-color: #fff68f;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 2px solid black;
+  border-radius: 12px;
+  cursor: pointer;
+  font-family: 'Audiowide', cursive;
+  font-size: 21px;
+}
+
+input[type="radio"]:checked ~label {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor,
+  0 0 40px currentColor, 0 0 50px currentColor;
+}
+
+label:hover {
+  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+.color-pick-msg {
+  font-weight: 300;
+  font-size: 25px;
+  justify-self: center;
+  margin-bottom: 1em;
 }
 
 .container {

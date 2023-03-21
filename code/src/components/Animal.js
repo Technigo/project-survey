@@ -7,7 +7,7 @@ export const Animal = ({ animal, setAnimal }) => {
   }
   return (
     <>
-      <p>Please choose an animal.</p>
+      <span>Pick an animal.</span>
       <input type="text" minLength="1" value={animal} onChange={handleAnimalChange} required="required" />
     </>
   );
