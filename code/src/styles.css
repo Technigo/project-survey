@@ -145,7 +145,7 @@ overflow: hidden;
   font-size: 20px;
 }
 
-.radio-buttons label input { /* Label? */
+.radio-buttons input { /* Label? */
   margin-top: 110px;
   justify-content: space-between;
   opacity: 90%;
