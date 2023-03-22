@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-icon {
+    font-size: 100px;
+    padding: 20px;
+}
+
+.header>p {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.btn-subtitle {
+    display: flex;
+    padding: 10px;
+}
+
+.btn-subtitle>p,
+.clock-icon {
+    font-size: 10px;
+}

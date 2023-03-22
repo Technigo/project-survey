@@ -1,13 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html,
+#root,
+.App,
+.header {
+  height: 100%;
+}
+
+#root {
+  height: 100vh;
+  background: linear-gradient(119.36deg, #F3F7FF 0%, #FEE2F6 100%);
+}
+
+.App,
+.survey-questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #f8daff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1;
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #1A2653;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #1A2653;
+  cursor: pointer;
+}
+
+.slider-descriptions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-descriptions>p {
+  font-size: 10px;
+}
+
+.btn {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 0px;
+  padding: 6px 14px;
+  min-height: 40px;
+  margin: 10px 0 5px;
+  background: #1A2653;
+  border-radius: 16px;
+  color: #FFFFFF;
+}
+
+.btn:hover {
+  opacity: 40%;
+}
+
+.survey-questions {
+  width: 100%;
+  height: 100%;
+}
+
+.survey-question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 40px;
+  height: 100%;
+}
+
+.answer-block {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.question {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.name-input {
+  min-height: 40px;
+  font-size: 20px;
+}
+
+.difficulties-select {
+  font-family: 'Poppins', sans-serif;
+  min-height: 40px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.difficulties-select>option {
+  font-family: 'Poppins', sans-serif;
+}
+
+.equipments-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.equipment-btn {
+  width: 80px;
+  height: 110px;
+  opacity: 70%;
+  background: #d9cbdd;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  margin: 0 10px;
+}
+
+.on {
+  background: #87718d;
+}
+
+.equipment-btn:hover {
+  opacity: 40%;
+}
+
+.equipment-logo {
+  font-size: 40px;
+}
+
+.equipment-btn>p {
+  font-size: 10px;
+  padding: 5px 0;
+}
+
+.support-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: flex-start;
+  background: #F1E2F5;
+  border: 12px solid #FFFFFF;
+  box-shadow: 0px 56px 84px rgba(122, 58, 173, 0.15);
+  border-radius: 12px;
+  max-height: 100%;
+  max-width: 100%;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+.result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.result>ul {
+  margin: 0;
+  padding: 0;
+}
+
+.result-user {
+  font-size: 14px;
+}
+
+.progress-parent {
+  width: 100%;
+  background-color: 'whitesmoke';
+  border-radius: 40;
+  margin: 50;
+}
+
+.progress-child {
+  height: 40px;
+  background-color: #1A2653;
+  border-radius: 40;
+  text-align: 'right';
+}
+
+.progresstext {
+  padding: 10;
+  color: #ffffff;
+  font-weight: 900;
+}
+
+
+@media only screen and (min-device-width: 768px) {
+
+  .equipment-btn {
+    width: 120px;
+    height: 150px;
+  }
+
+  .equipment-logo {
+    font-size: 70px;
+  }
 }
