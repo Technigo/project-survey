@@ -116,13 +116,18 @@ p {
 
 }
 
-#generator-btn {
+#generator-btn, #restart-btn {
   border: 2px solid black;
   border-radius: 12px;
   font-family: 'Audiowide', cursive;
   font-size: 21px;
   width: 150px;
   align-self: left;
+}
+
+#generator-btn:hover, #restart-btn:hover {
+  background-color: black;
+  color: white;
 }
 
 #next-step-btn:hover {
@@ -180,11 +185,15 @@ span {
   font-size: 40px;
 }
 
+.madlibs-txt {
+  font-family: 'Audiowide', cursive;
+}
+
 .result {
   display: flex;
   flex-direction: column;
   width: 250px;
-  gap: 10px;
+  gap: 11px;
 }
 
 .container {
@@ -208,4 +217,10 @@ span {
   border-radius: 12px;
   background-color: pink;
   padding: 20px;
+}
+
+@media (min-width: 668px) {
+  .typewriter {
+    font-size: 40px;
+  }
 }
