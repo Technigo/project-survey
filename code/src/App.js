@@ -41,7 +41,7 @@ export const App = () => {
           </Player>
           <h1 className="typewriter">WELCOME.</h1>
           <section className="name-input">
-            <p>Let us begin by entering your name.</p>
+            <p>Let us start by typing your name.</p>
             <Name name={name} setName={setName} />
           </section>
         </section>
