@@ -105,7 +105,7 @@ const SnacksArray = [
     flavor: 'spicy'
   },
   {
-    name: 'Hot&Spicy Pringles',
+    name: 'Hot&Spicys',
     taste: 'salty',
     type: 'chips',
     texture: 'crispy',
@@ -123,13 +123,13 @@ const SnacksArray = [
     taste: 'savory',
     type: 'chips',
     texture: 'crispy',
-    flavor: 'butter'
+    flavor: ['butter', 'spicy']
   },
   {
     name: 'Butter drops',
     taste: 'sweet',
     type: 'candy',
-    texture: 'crunchy',
+    texture: 'soft',
     flavor: 'butter'
   },
   {
@@ -151,7 +151,7 @@ const SnacksArray = [
     taste: 'savory',
     type: 'fruit',
     texture: 'soft',
-    flavor: 'spicy'
+    flavor: ['spicy', 'plain']
   },
   {
     name: 'Dried mango',
@@ -235,7 +235,7 @@ const SnacksArray = [
     taste: 'sweet',
     type: 'chips',
     texture: 'crispy',
-    flavor: ['spicy', 'chocolate']
+    flavor: 'chocolate'
   },
   {
     name: 'Jump!',
@@ -285,6 +285,55 @@ const SnacksArray = [
     type: 'fruit',
     texture: 'soft',
     flavor: 'fruit'
+  },
+  {
+    name: 'Snackeletties',
+    taste: 'salty',
+    type: 'candy',
+    texture: 'crunchy',
+    flavor: ['licorice', 'caramel']
+  },
+  {
+    name: 'YumPunch',
+    taste: 'sweet',
+    type: 'candy',
+    texture: 'soft',
+    flavor: ['licorice', 'liquor', 'chocolate', 'caramel']
+  },
+  {
+    name: 'Rumnanas',
+    taste: 'sweet',
+    type: 'fruit',
+    texture: 'crunchy',
+    flavor: ['liquor', 'fruit', 'caramel']
+  },
+  {
+    name: 'Roast flake mix',
+    taste: 'savory',
+    type: 'chips',
+    texture: 'crispy',
+    flavor: ['spicy', 'nut', 'plain', 'butter']
+  },
+  {
+    name: 'Marziballs',
+    taste: 'sweet',
+    type: 'candy',
+    texture: 'soft',
+    flavor: ['liquor', 'plain', 'chocolate']
+  },
+  {
+    name: 'Crisp-o-bars',
+    taste: 'sweet',
+    type: 'candy',
+    texture: 'crispy',
+    flavor: ['nut', 'fruit', 'chocolate']
+  },
+  {
+    name: 'NutPots',
+    taste: 'savory',
+    type: 'nut',
+    texture: 'crunchy',
+    flavor: ['nut', 'plain']
   }
 ]
 
