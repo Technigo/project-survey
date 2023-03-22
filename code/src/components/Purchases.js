@@ -5,14 +5,14 @@
 import React from 'react';
 import Question2Image from '../images/question2.jpg'
 
-const Food = (props) => {
-    const { food, setFood } = props
+const Purchases = (props) => {
+    const { purchases, setPurchases } = props
     // const { food, setFood, avocado, setAvocado, percentboop, setPercentbop } = props
 
     // const inputRef = useRef(null);
 
-    const handleFoodChange = (event) => {
-        setFood(event.target.value)
+    const handlePurchasesChange = (event) => {
+        setPurchases(event.target.value)
     }
 
     // const goToNextQuestion = () => {
@@ -35,8 +35,8 @@ const Food = (props) => {
             <p>How many retail therapy purchases have you done with us?</p>
             <select
             className="question2"
-            onChange={handleFoodChange}
-            value={food}>
+            onChange={handlePurchasesChange}
+            value={purchases}>
                 <option value="">Select option:</option>
                 <option value="ounce">Only once (thus far!)</option>
                 <option value="twice">At least two times</option>
@@ -55,4 +55,4 @@ const Food = (props) => {
     )
 }
 
-export default Food;
+export default Purchases;

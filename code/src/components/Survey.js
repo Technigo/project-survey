@@ -3,13 +3,13 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
 import Name from './Name';
-import Food from './Food';
 import Result from './Result';
 import ProgressBar from './ProgressBar';
 import RadioProduct from './RadioProduct';
 import Suggestion from './Suggestion';
 import Satisfaction from './Satisfaction';
 import ThankYouImage from '../images/thankyou.png'
+import Purchases from './Purchases';
 
 const allRange = ['It sucks', 'It is aiiight ', 'It is okay', 'it works niiiicely', 'Superb /chefs kiss']
 
@@ -21,7 +21,7 @@ const Survey = () => {
   const [satisfactionRange, setSatisfactionRange] = useState('')
   const [satisfaction, setSatisfaction] = useState(allRange[satisfactionRange])
   const [suggestion, setSuggestion] = useState('');
-  const [food, setFood] = useState('');
+  const [purchases, setPurchases] = useState('');
   // const [result, setResult] = useState('');
 
   const handleStepIncrease = () => {
@@ -53,9 +53,9 @@ const Survey = () => {
           setPercentbop={setPercent} />
       )}
       {step === 2 && (
-        <Food
-          food={food}
-          setFood={setFood}
+        <Purchases
+          purchases={purchases}
+          setPurchases={setPurchases}
           avocado={step}
           setAvocado={setStep}
           percentboop={percent}
@@ -71,7 +71,7 @@ const Survey = () => {
         <Satisfaction satisfaction={satisfaction} setSatisfaction={setSatisfaction} satisfactionRange={satisfactionRange} handleSatisfactionChange={handleSatisfactionChange} />
       )}
       {step === 6 && (
-        <Result name={name} food={food} favProduct={favProduct} />
+        <Result name={name} purchases={purchases} favProduct={favProduct} />
       )}
 
       {step < 7 && (
