@@ -184,6 +184,7 @@ span {
   display: flex;
   flex-direction: column;
   width: 250px;
+  gap: 10px;
 }
 
 .container {
@@ -200,4 +201,11 @@ span {
   text-align: center;
   margin: 2em;
   padding: 0.5em;
+}
+
+.result-txt {
+  border: 2px dotted black;
+  border-radius: 12px;
+  background-color: pink;
+  padding: 20px;
 }
