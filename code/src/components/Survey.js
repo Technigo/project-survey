@@ -1,4 +1,4 @@
-/* eslint-disable */
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import Dates from './Dates';
 import Destination from './Destination';
@@ -15,9 +15,10 @@ const Survey = () => {
   const [range, setRange] = useState('');
 
   const onSubmit = (event) => {
+    event.preventDefault()
   };
 
-  const onClickNext = (event) => {
+  const onClickNext = () => {
     setStep(step + 1);
     if (step === 5) {
       setStep(0)
@@ -43,7 +44,10 @@ const Survey = () => {
   return (
     <form className="form" onSubmit={onSubmit}>
       {step === 0 && <WelcomePage onClickNext={onClickNext} />}
-      {step === 1 && <Name name={name} onNameChange={onNameChange} onClickNext={onClickNext} />}
+      {step === 1 && (<Name
+        name={name}
+        onNameChange={onNameChange}
+        onClickNext={onClickNext} />)}
       {step === 2 && <Dates monthType={monthType} onMonthTypeChange={onMonthTypeChange} onClickNext={onClickNext} />}
       {step === 3 && <Destination place={place} onPlaceChange={onPlaceChange} onClickNext={onClickNext} />}
       {step === 4 && <Zipper range={range} onRangeChange={onRangeChange} onClickNext={onClickNext} />}

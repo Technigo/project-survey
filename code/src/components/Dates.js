@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 import React from 'react';
 import ButtonNext from './ButtonNext';
 
@@ -11,8 +11,9 @@ const Dates = ({ monthType, onMonthTypeChange, onClickNext }) => {
       </h1>
       <div className="month-container">
         {monthTypes.map((type) => (
-          <label key={type}>
+          <label htmlFor={type} key={type}>
             <input
+              id={type}
               type="radio"
               value={type}
               onChange={onMonthTypeChange}
