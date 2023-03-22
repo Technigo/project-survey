@@ -10,7 +10,7 @@ export const Verb = ({ verb, setVerb }) => {
   return (
     <>
       <label className="form-label" htmlFor="verb">Pick a verb.</label>
-      <input type="text" id="verb" name="verb" placeholder="any verb" minLength="1" value={verb} onChange={handleVerbChange} required="required" />
+      <input type="text" id="verb" name="verb" placeholder="any verb, like swim" minLength="1" value={verb} onChange={handleVerbChange} required="required" />
     </>
   );
 }

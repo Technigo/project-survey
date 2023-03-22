@@ -50,6 +50,7 @@ code {
   flex-direction: column;
   padding: 1em;
   gap: 15px;
+  align-items: center;
 }
 
 .form-input {
@@ -125,14 +126,10 @@ p {
   align-self: left;
 }
 
-#generator-btn:hover, #restart-btn:hover {
+#generator-btn:hover, #restart-btn:hover, #next-step-btn:hover {
   background-color: black;
   color: white;
-}
-
-#next-step-btn:hover {
-  background-color: black;
-  color: white;
+  font-size: 25px;
 }
 
 option {
@@ -166,6 +163,7 @@ option {
 
 .color-options label:hover {
   box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+  font-size: 25px;
 }
 
 /* input[type="radio"]:checked {
@@ -219,8 +217,51 @@ span {
   padding: 20px;
 }
 
+#username {
+  font-weight: 400;
+  font-size: 27px;
+}
+
+#play-again {
+  font-size: 35px;
+  font-family: 'Audiowide', cursive;
+}
+
 @media (min-width: 668px) {
   .typewriter {
-    font-size: 40px;
+    font-size: 47px;
   }
+
+  input {
+    width: 333px;
+  }
+
+  .result {
+    width: 382px;
+  }
+
+  .color-options {
+    gap: 15px;
+  }
+
+  p {
+    font-size: 27px;
+  }
+
+  .form-label {
+    font-size: 27px;
+  }
+
+  #generator-btn, #restart-btn, #next-step-btn {
+    font-size: 25px;
+  }
+
+  #generator-btn:hover, #restart-btn:hover, #next-step-btn:hover {
+    font-size: 29px;
+  }
+
+  #generator-btn {
+    width: 164px;
+  }
+
 }

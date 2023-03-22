@@ -3,7 +3,7 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-const adjectives = ['happy', 'sad', 'spicy', 'flippin', 'darn', 'cheesy', 'chaotic', 'lazy', 'cruel', 'cringe-y', 'hot', 'bold', 'crooked', 'voluptuous', 'beautiful', 'spell-binding', 'magical', 'controversial'];
+const adjectives = ['happy', 'sad', 'spicy', 'flippin', 'darn', 'cheesy', 'chaotic', 'lazy', 'cruel', 'cringe-y', 'hot', 'bold', 'crooked', 'voluptuous', 'beautiful', 'spell-binding', 'magical', 'controversial', 'greedy', 'disgusting'];
 
 export const Adjective = ({ adjective, setAdjective }) => {
   const generatedAdjective = () => {
