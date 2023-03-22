@@ -57,7 +57,7 @@ export const App = () => {
           </form>
         </div>
       )}
-      {/* If the current question is 1, render the Name component */}
+      {/* If the current question is 2, render the Name component */}
       {question === 2 && (
         <div className="form-container">
           <form>
