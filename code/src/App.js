@@ -1,6 +1,6 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import { Name } from './components/Name';
 import { Animal } from './components/Animal';
@@ -18,6 +18,13 @@ export const App = () => {
   const [color, setColor] = useState('');
   const [verb, setVerb] = useState('');
   const [adjective, setAdjective] = useState('');
+  const [isVisible, setIsVisible] = useState(false);
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setIsVisible(true);
+    }, 5000);
+    return () => clearTimeout(timeoutId);
+  }, []);
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
@@ -25,7 +32,6 @@ export const App = () => {
     <section className="container">
       {(step === 1) && (
         <section className="header-container">
-          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js" />
           <Player
             autoplay
             loop
@@ -53,42 +59,55 @@ export const App = () => {
       {step === 4 && (
         <section className="form-input">
           <Color color={color} setColor={setColor} />
+          {color === 'red' && (
+            <p className="color-pick-msg">You choose: <span>❤️</span></p>
+          )}
+          {color === 'yellow' && (
+            <p className="color-pick-msg">You choose: <span>💛</span></p>
+          )}
+          {color === 'pink' && (
+            <p className="color-pick-msg">You choose: <span>💗</span></p>
+          )}
+          {color === 'green' && (
+            <p className="color-pick-msg">You choose: <span>💚</span></p>
+          )}
+          {color === 'orange' && (
+            <p className="color-pick-msg">You choose: <span>🧡</span></p>
+          )}
+          {color === 'violet' && (
+            <p className="color-pick-msg">You choose: <span>💜</span></p>
+          )}
+          {color === 'blue' && (
+            <p className="color-pick-msg">You choose: <span>💙</span></p>
+          )}
         </section>
       )}
-      {color === 'red' && (
-        <p className="color-pick-msg">You choose: ❤️</p>
-      )}
-      {color === 'yellow' && (
-        <p className="color-pick-msg">You choose: 💛</p>
-      )}
-      {color === 'pink' && (
-        <p className="color-pick-msg">You choose: 💗</p>
-      )}
-      {color === 'green' && (
-        <p className="color-pick-msg">You choose: 💚</p>
-      )}
-      {color === 'orange' && (
-        <p className="color-pick-msg">You choose: 🧡</p>
-      )}
-      {color === 'violet' && (
-        <p className="color-pick-msg">You choose: 💜</p>
-      )}
-      {color === 'blue' && (
-        <p className="color-pick-msg">You choose: 💙</p>
-      )}
       {step === 5 && (
-        <Verb verb={verb} setVerb={setVerb} />
+        <section className="form-input">
+          <Verb verb={verb} setVerb={setVerb} />
+        </section>
       )}
       {step === 6 && (
-        <Adjective adjective={adjective} setAdjective={setAdjective} />
+        <section className="form-input">
+          <Adjective adjective={adjective} setAdjective={setAdjective} />
+        </section>
       )}
       {step === 7 && (
-        <Result name={name} animal={animal} job={job} color={color} verb={verb} adjective={adjective} />
+        <section className="result">
+          {isVisible && <Result name={name} animal={animal} job={job} color={color} verb={verb} adjective={adjective} />}
+          <Player
+            autoplay
+            loop
+            src="https://assets5.lottiefiles.com/packages/lf20_jpxsQh.json"
+            style={{ height: '150px', width: '150px' }}>
+            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
+          </Player>
+        </section>
       )}
       {step < 7 && (
         <section className="step-counter">
           <p>
-              Current step: {step}/5
+              Current step: {step}/6
           </p>
           <button id="next-step-btn" type="button" onClick={handleStepIncrease}>
               Next

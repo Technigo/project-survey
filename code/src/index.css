@@ -19,7 +19,8 @@ code {
 .typewriter {
     font-family: 'Audiowide', cursive;
     font-size: 28px;
-    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
@@ -62,13 +63,24 @@ code {
 }
 
 input {
-  height: 25px;
+  height: 45px;
+  font-size: 21px;
+  font-family: 'Nippo', sans-serif;
+  width: 200px;
+}
+
+::placeholder{
+  font-size: 21px;
+  font-family: 'Nippo', sans-serif;
+  font-weight: 200;
+  font-size: 22px;
 }
 
 select {
-  height: 25px;
+  height: 35px;
   font-family: Nippo, sans-serif;
   font-weight: 200;
+  font-size: 22px;
 }
 
 p {
@@ -77,7 +89,7 @@ p {
   font-size: 22px;
 }
 
-span {
+.form-label {
   font-family: 'Nippo', sans-serif;
   font-weight: 300;
   font-size: 23px;
@@ -104,9 +116,22 @@ span {
 
 }
 
+#generator-btn {
+  border: 2px solid black;
+  border-radius: 12px;
+  font-family: 'Audiowide', cursive;
+  font-size: 21px;
+  width: 150px;
+  align-self: left;
+}
+
 #next-step-btn:hover {
   background-color: black;
   color: white;
+}
+
+option {
+  font-size: 25px;
 }
 
 .color-options input[type="radio"] {
@@ -134,22 +159,31 @@ span {
   font-size: 21px;
 }
 
-input[type="radio"]:checked ~label {
+.color-options label:hover {
+  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+/* input[type="radio"]:checked {
   background-color: black;
   color: white;
   box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor,
   0 0 40px currentColor, 0 0 50px currentColor;
-}
-
-label:hover {
-  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-}
+} */
 
 .color-pick-msg {
   font-weight: 300;
   font-size: 25px;
   justify-self: center;
-  margin-bottom: 1em;
+}
+
+span {
+  font-size: 40px;
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
 }
 
 .container {
