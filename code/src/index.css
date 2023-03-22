@@ -1,13 +1,178 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  font-family: 'Mulish', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #846a6a;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.outer-part {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-part {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 150px;
+  min-width: 50%;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 45px;
+  color: #f7d6e0;
+}
+
+p {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.start-btn {
+  background-color: #03120e;
+  color: #eee5e5;
+  font-size: 20px;
+  border-radius: 20px;
+  border-color: #eee5e5;
+  border: 3px solid;
+  padding: 15px;
+  align-content: center;
+  left: 50%;
+  bottom: 0;
+}
+
+.start-btn:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.restart-btn {
+  background-color: #37392e;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  border-color: #eee5e5;
+  border: 3px solid;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.restart-btn:hover {
+  background-color: #59cd90;
+  color: black;
+  cursor: pointer;
+}
+
+.next-btn {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border-radius: 20px;
+  border-color: #eee5e5;
+  border: 3px solid;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.next-btn:hover {
+  color: white;
+  background-color: black;
+  cursor: pointer;
+}
+
+.prev-btn {
+  background-color: #4b2840;
+  color: white;
+  font-size: 20px;
+  border-radius: 20px;
+  border-color: #eee5e5;
+  border: 3px solid;
+  padding: 15px;
+  position: absolute;
+  right: 0;
+  margin-top: 20px;
+}
+
+.prev-btn:hover {
+  color: #4b2840;
+  background-color: white;
+  cursor: pointer;
+}
+
+footer img {
+  filter: invert(1);
+  max-width: 300px;
+  max-height: 300px;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+@media (max-width: 667px) {
+
+  h2 {
+    font-size: 25px;
+  }
+
+  .restart-btn {
+    position: fixed;
+    margin-right: 50px;
+    margin-bottom: 40px;
+  }
+
+  .next-btn {
+    font-size: 18px;
+  }
+
+  footer img {
+    display: none;
+  }
+}
+
+@media ((min-width: 668px) and (max-width: 1023px)) {
+ 
+  footer img {
+    max-width: 200px;
+    min-width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  footer img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
+
+@media (max-height: 600px) {
+  .restart-btn {
+    margin-bottom: 2px;
+  }
+
+  footer img {
+    display: none;
+  }
 }

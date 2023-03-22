@@ -1,0 +1,17 @@
+.radio-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 30px 0px 30px 0px;
+}
+
+.radio-button:hover {
+    transform: scale(1.5);
+}
+
+.times-purchase {
+    font-size: 22px;
+    color: black;
+    font-weight: bold;
+}
