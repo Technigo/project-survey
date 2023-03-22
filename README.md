@@ -1,13 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This React App is a simple example of how React can be used to create dynamic user interfaces that respond to user inputs.
+Background image from https://unsplash.com/. Credit Vincent Guth. 
+Music by: Bensound.com/royalty-free-music License code: FWWNKLQQ5ERUJCEP
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I made a sketch of the app using pen and paper. I used an example project as a guide, adapted its structure to my needs, and customized the questions for my survey. ChatGPT provided React assistance, while a code mentor helped with CSS. If I had more time I would add more questions with a slider and a progress bar to each page. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-survey-smirrebinx.netlify.app/

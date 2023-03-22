@@ -1,0 +1,66 @@
+:root {
+  --headings-font-family: "Rye", cursive;
+  --paragraph-font-family: "Newsreader", serif;
+  --border-color: #94b1aa;
+  --primary-bg-color: #282727;
+  --secondary-bg-color: #94b1aa;
+  --tertiary-bg-color: #5B8B7F;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*footer*/
+.footer-container {
+  color: #fff;
+  background-color: rgba(40, 39, 39, 0.7); 
+  padding: 10px 0 10px 0;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-container p {
+  font-size: 18px;
+  margin: 0 5px 0 5px; 
+}
+
+.logo-footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  font-family: var(--paragraph-font-family);
+}
+
+.footer-icons {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fa-linkedin,
+.fa-github {
+  font-size: 28px;
+  filter: drop-shadow(2px 4px 1px rgb(0 0 0 / 0.3));
+  text-decoration: none;
+  color: #fff;
+  margin:2px;
+}
+
+
+  /* ---- DESKTOP ----- */
+@media only screen and (min-width: 1280px) {
+.footer-container {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+}
