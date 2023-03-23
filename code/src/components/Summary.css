@@ -1,0 +1,75 @@
+.summary {
+    font-size: 1.5em;
+    font-weight: 200;
+    line-height: 2em;
+    text-align: center;
+    width: 100%;
+    margin: 5% 0 5% 0;
+}
+
+.name, .gender, .age, .food, .times {
+    background-color: rgba(253, 136, 136, 1);
+    padding: 0 5px;
+}
+
+.slider-title {
+    font-size: 30px;
+    font-weight: 200;
+    padding-bottom: 30px;
+    text-align: center;
+    margin-top: 20px;;
+}
+
+.slider-parent{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position:relative;
+    accent-color: #000000;
+    margin-top: 20%;
+  }
+
+  .buble {
+    font-weight: 400;
+  }
+
+.slider-1, .slider-2 {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    width: 40%;
+  }
+
+  .slider-1 {
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .slider-2 {
+    text-align: right;
+    margin-right: 5px;
+  }
+
+.slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 5px;
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .summary {
+    width: 60%;
+  }
+    
+  .slider-parent {
+    width: 50%;
+    margin-top: 10%;
+  }
+
+}
+

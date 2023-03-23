@@ -1,0 +1,27 @@
+.dropdown {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    margin-top: 5%;
+}
+
+.dropdown form {
+    display: block;
+    grid-column: 2 / span 3;
+    background-color: antiquewhite;
+}
+
+.dropdown select {
+    -webkit-appearance: none;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 1.5em;
+    width: 100%;
+    padding: 0.5em 1em;
+    background-color: antiquewhite;
+}

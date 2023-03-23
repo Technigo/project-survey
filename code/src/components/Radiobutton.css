@@ -1,0 +1,41 @@
+.radiobutton form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-items: center;
+    margin: 5%;
+}
+
+.title {
+    font-weight: 200;
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 30px;
+    align-content: center;
+    margin-top: 5%;
+}
+
+#radiobutton {
+    accent-color: rgb(253, 136, 136);
+    scale: 1.5;
+    margin: 10px;
+    vertical-align: middle;
+}
+
+.radiobutton label {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+#radiobutton:hover {
+    accent-color: rgb(255, 193, 193);
+}
+
+.value {
+    font-size: 1.5em;
+    font-weight: 200;
+    padding: 10px;
+}

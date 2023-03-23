@@ -1,0 +1,30 @@
+.name-text {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    margin: 30% 5% 5% 5%;
+}
+
+
+#name {
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    outline: none;
+    width: 100%;
+    height: auto;
+    display: block;
+    grid-column: 1 / span 5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    font-size: 1.8em;
+}
+
+@media only screen and (min-width: 768px) { 
+
+    #name {
+        font-size: 2em;
+    }
+
+}
