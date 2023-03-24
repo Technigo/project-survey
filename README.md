@@ -1,11 +1,6 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-I´ve done a Zodiac survey. Not 100% done!
-## The problem
-
-:)
+This is my Zodiac survey! 💫
 
 ## View it live
 
