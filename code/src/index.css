@@ -15,6 +15,7 @@ html {
 .container {
   display: flex;
   position: relative;
+  height: 400px;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -22,9 +23,6 @@ html {
   box-sizing: border-box;
   margin: auto;
   border-radius: 10px;
-  box-shadow: black;
-  box-shadow: 10px;
-  box-shadow: 10px 5px 5px #26262659;
   top: 140px;
   text-shadow: -3px 2px #1a1919;
   background: #2121218a;
@@ -57,7 +55,6 @@ html {
   border-radius: 30px;
   position: relative;
   cursor: pointer;
-  bottom: 25px;
 }
 /*.button button {
   text-align: center;
@@ -71,14 +68,7 @@ html {
 }*/
 
 /* button container */
-div.button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* top: 2px; */
-  position: relative;
-  bottom: -54px;
-}
+
 button:hover {
 background-color: #ffe27b;
 }
@@ -88,11 +78,6 @@ background-color: #ffe27b;
 label {
   padding: 5px;
 }
-
-/*.background-image {
-  height: 50%;
-  width: 50%;
-}*/
 
 /* PAGE 3 */
 .signmeeter {
@@ -105,6 +90,7 @@ label {
   flex-direction: column;
   text-align: center;
   margin: 9px;
+  height: 400px;
 }
 .zodiac-container h2 {
   text-align: center;
@@ -155,24 +141,20 @@ form.zodiacs {
 
 /*page 3 HOW MUCH*/
 .howmuch-container {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 175px;
-  width: 700px;
-  height: 400px;
-  box-sizing: border-box;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: black;
-  box-shadow: 10px;
-  box-shadow: 10px 5px 5px #26262659;
-  top: 140px;
-  text-shadow: -3px 2px #1a1919;
-  background: #2121218a;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+    box-shadow: black;
+    box-shadow: 10px;
+    box-shadow: 10px 5px 5px #26262659;
+    top: 140px;
+    text-shadow: -3px 2px #1a1919;
+    background: #2121218a;
+    padding: -10px;
 }
+
 .howmuch-container h4 {
     display: flex;
     flex-direction: column;
@@ -183,9 +165,11 @@ form.zodiacs {
 .radio-activity {
   display: flex;
   flex-direction: column;
-  bottom: 100px;
   position: relative;
+  bottom: 102px;
+  font-size: 19px;
 }
+
 form {
   position: relative;
   /* bottom: 60px; */
@@ -200,7 +184,7 @@ form {
   left: 435px;
 }
 .Okey p {
-  background-color: #19273c;
+  background-color: #d26767;
   font-size: 25px;
   position: relative;
   top: -96px;

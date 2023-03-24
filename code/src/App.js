@@ -33,7 +33,7 @@ export const App = () => {
       {step >= 4 && (
         <Result name={name} hej={1} select={select} sign={sign} />
       )}
-      {step < 5 && (
+      {step < 4 && (
         <div className="button">
           <p>{step}</p>
           <button type="button" onClick={handleStepIncrease}>Let´s go</button>
