@@ -59,6 +59,16 @@ html {
   cursor: pointer;
   bottom: 25px;
 }
+/*.button button {
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  color: rgb(23, 23, 23);
+  width: 79px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  bottom: 80px;
+}*/
 
 /* button container */
 div.button {
@@ -130,24 +140,17 @@ label {
 }
 .choose-container h2 {
   position: relative;
-  bottom: 111px;
+  bottom: 167px;
   font-size: 50px;
 }
-.button button {
-  text-align: center;
-  background-color: rgb(240, 240, 240);
-  color: rgb(23, 23, 23);
-  width: 79px;
-  border-radius: 30px;
-  position: relative;
-  cursor: pointer;
-  bottom: 80px;
-}
+
 form.zodiacs {
   display: flex;
   flex-direction: column;
   position: absolute;
   top: 190px;
+  right: auto;
+  left: auto;
 }
 
 /*page 3 HOW MUCH*/
@@ -199,6 +202,8 @@ form {
 .Okey p {
   background-color: #19273c;
   font-size: 25px;
+  position: relative;
+  top: -96px;
 }
 
 .result {

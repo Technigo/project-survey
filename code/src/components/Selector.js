@@ -1,12 +1,12 @@
 import React from 'react';
 
-const howMuch = ['okey', 'a lot', 'to much', 'im extreme'];
+const howMuch = ['Normal', 'A lot', 'Im extreme'];
 
-export const Selector = ({ select, setSelect }) => {
+export const Selector = ({ select, setSelect, sign }) => {
   return (
     <>
       <div className="howmuch-container">
-        <h4> How much are you?
+        <h4> How much {sign} are you?
         </h4>
       </div>
       <div className="radio-activity">

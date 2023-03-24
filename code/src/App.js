@@ -1,18 +1,14 @@
 import React, { useState } from 'react';
 
 import { Name } from 'components/Name';
-/* import { Kitty } from 'components/Kitty'; */
 import { ZodiacSign } from 'components/ZodiacSign';
 import { Result } from 'components/Result';
 import { Selector } from 'components/Selector'
-/* import { RadioButton } from 'components/Radiobutton'; */
 
 export const App = () => {
-  /* Is this VARIBLES ? */
   const [step, setStep] = useState(1);
   const [name, setName] = useState();
   const [sign, setSign] = useState();
-  /* const [signmeeter, setSignmeeter] = useState(5); */
   const [select, setSelect] = useState();
 
   const handleStepIncrease = () => {
@@ -21,20 +17,21 @@ export const App = () => {
 
   return (
     <>
+      {/* Whats your name? */}
       {step === 1 && (
         <Name name={name} setName={setName} /> /* alla the name.js codestuff is in NAME */
       )}
+      {/* Choose your Zodiac sign */}
       {step === 2 && (
         <ZodiacSign sign={sign} setSign={setSign} />
       )}
-      {/* {step === 3 && (
-        <Kitty milk={sign} signmeeter={signmeeter} setSignmeeter={setSignmeeter} />
-      )} */}
+      {/* How much *sign* are you? */}
       {step === 3 && (
-        <Selector milk={sign} select={select} setSelect={setSelect} />
+        <Selector sign={sign} setSign={setSign} select={select} setSelect={setSelect} />
       )}
+      {/* Your name is, you are  */}
       {step >= 4 && (
-        <Result name={name} hej={1} sign={sign} />
+        <Result name={name} hej={1} select={select} sign={sign} />
       )}
       {step < 5 && (
         <div className="button">

@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const Result = ({ name, sign, item }) => {
+export const Result = ({ name, sign, select }) => {
   return (
     <div className="result">
-      <p>Your name is {name}! 💗</p>
-      <p>You are a  {sign}</p>
-      <p> You are the {item} laid back kind of {sign} </p>
-      <p> Wow that´s totally awesome! </p>
+      <p>Okey {name}!</p>
+      <p>Your zodiac sign is {sign}</p>
+      <p> You are the {select} type of {sign}! </p>
+      <p> More {sign}´s to the people!!! </p>
     </div>
   );
 }
