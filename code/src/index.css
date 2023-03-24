@@ -207,3 +207,18 @@ form {
   background: #2121218a;
   font-size: 20px;
 }
+
+@media only screen and (max-width: 767px) {
+  /* styles for mobile devices */
+  button {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    color: rgb(23, 23, 23);
+    width: 79px;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    top: 27px;
+}
+
+}
