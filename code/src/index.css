@@ -220,5 +220,38 @@ form {
     cursor: pointer;
     top: 27px;
 }
-
+.Okey p {
+  background-color: #d26767;
+  font-size: 25px;
+  position: relative;
+  top: -149px;
+}
+.result p {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  bottom: 22px;
+  text-shadow: -3px 2px #1a1919;
+  font-size: 20px;
+}
+.howmuch-container h4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 247px;
+  font-size: 30px;
+}
+/*.welcome h2 {
+  text-shadow: 10px;
+  font-size: 34px;
+  font-family: emoji;
+  position: relative;
+  top: -46px;
+}
+.welcome p {
+  text-shadow: 10px;
+  font-size: 23px;
+  position: relative;
+  bottom: 48px;
+} */
 }
