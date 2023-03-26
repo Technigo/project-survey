@@ -1,8 +1,6 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+So this is an unfinished project. I still need to style it and make it more accesible. i focused on getting the react code and components to work.
 
 ## The problem
 
@@ -10,4 +8,4 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://willowy-paletas-c102cf.netlify.app/
