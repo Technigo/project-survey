@@ -106,16 +106,6 @@ code {
   object-fit: cover;
   max-width: 50%;
   padding-bottom: 40px;
-  -webkit-filter: brightness(60%);
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  -ms-transition: all 1s ease;
-  transition: all 1s ease;
-}
-
-.icon:hover {
-  -webkit-filter: brightness(120%);
 }
 
 .button {
