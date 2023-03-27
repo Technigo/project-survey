@@ -1,0 +1,209 @@
+body {
+  background-image: url("./assets/bouba-kiki-effect.avif");
+  background-size: cover;
+}
+
+.app-container {
+height: 100vh;
+width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-items: center;
+overflow: hidden;
+}
+
+.app-container span {
+  color: rgb(88, 80, 80);
+  background-color: white;
+  font-family: Manga;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 172px;
+  margin-left: -692px;
+  padding-left: 4px;
+  padding-top: -10px;
+  padding-right: 4px;
+  padding-bottom: 0px;
+  transform: rotate(-80deg);
+  border: 0.5px solid rgb(178, 175, 175);
+  }
+
+.next-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  padding: 0.5%;
+  margin-top: 23px;
+  margin-right: -25px;
+  transform: rotate(-40deg);
+  color: rgb(62, 56, 56);
+  background-color: white;
+  opacity: 90%;
+  box-shadow: 2px 2px 3px 1px grey;
+  font-family: Manga;
+  font-size: 25px;
+  border-radius: 0.2em;
+}
+
+.question {
+  font-family: Manga;
+  font-size: 30px;
+  font-variant-caps: all-petite-caps;
+  position: absolute;
+  color: rgb(62, 56, 56);
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Style for intro component starts here */
+.intro-container {
+  display: flex;
+  width: 1000px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  margin: 0%;
+  overflow: hidden;
+  padding: 0%;
+  font-family: Manga;
+  font-style: italic;
+  }
+
+.intro-container h1 {
+  color: rgb(62, 56, 56);
+  font-size: 55px;
+  margin: 2%;
+}
+
+.intro-container p {
+  color: rgb(62, 56, 56);
+  font-size: 25px;
+  flex-direction: column;
+  justify-items: center;
+  text-align: center;
+  margin-top: 5px;
+  font-variant-caps: all-petite-caps;
+}
+
+/* Style for name component starts here */
+
+.name-container {
+  margin-top: 120px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 130px;
+  font-family: Manga;
+  background-color: white;
+  opacity: 90%;
+  position: absolute;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
+  transform: translate(-62%, -38%)
+}
+
+.name-input {
+  background-color: rgb(226, 225, 225);
+  font-size: 16px;
+  width: 180px;
+  color: rgb(62, 56, 56);
+  font-family: Helvetica, sans-serif;
+  position: relative;
+  border-radius: 1em;
+        padding: 0.5em;
+  margin-top: 17px;
+}
+/* Style for yesno component starts here */
+
+.yesno-container {
+  margin-top: 120px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 130px;
+  font-family: Manga;
+  background-color: white;
+  opacity: 80%;
+  position: absolute;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
+  transform: translate(-62%, -38%);
+  font-size: 20px;
+}
+
+.radio-buttons input { /* Label? */
+  margin-top: 110px;
+  justify-content: space-between;
+  opacity: 90%;
+}
+/* Style for shape component starts here */
+
+.shape-container {
+  transform: translate(-62%, -38%);
+  margin-top: 120px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 130px;
+  font-family: Manga;
+  background-color: white;
+  opacity: 80%;
+  position: absolute;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
+}
+
+.shape-container .question {
+  position: relative;
+  margin-top: 5px;
+}
+
+.shape-form { /* Select? */
+  margin-top: 220px;
+  position: relative;
+}
+/* Style for end component starts here */
+
+.end-container .question{
+font-family: Manga;
+  font-size: 25px;
+  font-variant-caps: all-petite-caps;
+  position: absolute;
+  color: rgb(62, 56, 56);
+  text-align: center;
+  margin-top: 10px;
+  background-color: white;
+  border: 3px solid rgb(178, 175, 175);
+  border-radius: 1em;
+  padding: 1em;
+  opacity: 80%;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-items: center;
+  overflow: hidden;
+  display: flex;
+        margin-right: -50%;
+        margin-top: 80%;
+        transform: translate(-50%, -50%);
+margin-top: 135px;
+}
