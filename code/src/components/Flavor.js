@@ -17,7 +17,7 @@ const Flavor = ({
     const isChecked = event.target.checked;
     let chosenFlavorGroup = [];
 
-    if (isChecked) { 
+    if (isChecked) {
       chosenFlavorGroup = [...flavor, chosenFlavor];
     } else {
       chosenFlavorGroup = flavor.filter((flavorChoice) => flavorChoice !== chosenFlavor);
