@@ -16,7 +16,7 @@ const SnacksArray = [
   {
     name: 'Macadamianuts',
     taste: 'savory',
-    type: 'nut',
+    type: 'nuts',
     texture: 'crunchy',
     flavor: 'nut'
   },
@@ -65,7 +65,7 @@ const SnacksArray = [
   {
     name: 'Caramilized almonds',
     taste: 'sweet',
-    type: 'nut',
+    type: 'nuts',
     texture: 'crunchy',
     flavor: 'caramel'
   },
@@ -100,7 +100,7 @@ const SnacksArray = [
   {
     name: 'Wasabi nuts',
     taste: 'savory',
-    type: 'nut',
+    type: 'nuts',
     texture: 'crunchy',
     flavor: 'spicy'
   },
@@ -191,7 +191,7 @@ const SnacksArray = [
   {
     name: 'Bobo macadamia bar',
     taste: 'sweet',
-    type: 'nut',
+    type: 'nuts',
     texture: 'crunchy',
     flavor: ['nut', 'chocolate', 'caramel']
   },
@@ -331,7 +331,7 @@ const SnacksArray = [
   {
     name: 'NutPots',
     taste: 'savory',
-    type: 'nut',
+    type: 'nuts',
     texture: 'crunchy',
     flavor: ['nut', 'plain']
   }

@@ -1,19 +1,30 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SnacksArray from './SnacksArray';
+import ProgressButton from './ProgressButton';
 
-const Flavor = ({ tasteGroup, type, texture, flavor, setFlavor }) => {
+const Flavor = ({
+  tasteGroup,
+  type, texture,
+  flavor,
+  setFlavor,
+  progress,
+  setProgress,
+  showProgressButton,
+  setShowProgressButton
+}) => {
   const handleFlavorChoice = (event) => {
     const chosenFlavor = event.target.value;
     const isChecked = event.target.checked;
     let chosenFlavorGroup = [];
 
-    if (isChecked) {
+    if (isChecked) { 
       chosenFlavorGroup = [...flavor, chosenFlavor];
     } else {
       chosenFlavorGroup = flavor.filter((flavorChoice) => flavorChoice !== chosenFlavor);
     }
 
     setFlavor(chosenFlavorGroup);
+    setShowProgressButton(true);
   };
 
   const handleSpanClick = (event) => {
@@ -28,7 +39,14 @@ const Flavor = ({ tasteGroup, type, texture, flavor, setFlavor }) => {
     }
 
     setFlavor(chosenFlavorGroup);
+    setShowProgressButton(true);
   };
+
+  useEffect(() => {
+    setShowProgressButton(false)
+    console.log('UE', { showProgressButton })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const filteredTasteTypeTexture = SnacksArray.filter(
     (snack) => snack.taste === tasteGroup && snack.type === type && snack.texture === texture
@@ -58,6 +76,7 @@ const Flavor = ({ tasteGroup, type, texture, flavor, setFlavor }) => {
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     handleSpanClick(e);
+                    setShowProgressButton(true);
                   }
                 }}>
                 {flavorChoice}
@@ -65,6 +84,12 @@ const Flavor = ({ tasteGroup, type, texture, flavor, setFlavor }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            flavor={flavor} />
+        )}
       </>
     )
   } else if (texture === ('chewy')) {
@@ -97,6 +122,12 @@ const Flavor = ({ tasteGroup, type, texture, flavor, setFlavor }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            flavor={flavor} />
+        )}
       </>
     )
   } else if (texture === ('crunchy')) {
@@ -129,6 +160,12 @@ const Flavor = ({ tasteGroup, type, texture, flavor, setFlavor }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            flavor={flavor} />
+        )}
       </>
     )
   } else if (texture === ('crispy')) {
@@ -161,6 +198,12 @@ const Flavor = ({ tasteGroup, type, texture, flavor, setFlavor }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            flavor={flavor} />
+        )}
       </>
     )
   }

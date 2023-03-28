@@ -1,16 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SnacksArray from './SnacksArray';
+import ProgressButton from './ProgressButton';
 
-const TypeOfSnack = ({ tasteGroup, type, setType }) => {
-  const handleTypeChoice = (event) => {
-    setType(event.target.value);
+const TypeOfSnack = ({
+  tasteGroup,
+  type,
+  setType,
+  progress,
+  setProgress,
+  showProgressButton,
+  setShowProgressButton
+}) => {
+  const handleTypeChoice = () => {
+    console.log('handletypechoice happened');
   };
+
+  useEffect(() => {
+    setShowProgressButton(false);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   const filteredForTasteGroup = SnacksArray.filter((snack) => snack.taste.includes(tasteGroup));
   const uniqueTypes = [...new Set(filteredForTasteGroup.map((snack) => snack.type))];
 
   (console.log({ tasteGroup }))
   console.log({ uniqueTypes })
-  if (tasteGroup === ('sweet')) {
+  if (tasteGroup === 'sweet') {
     return (
       <div className="TypeComp">
         <h3>What type of snack would you prefer?</h3>
@@ -28,10 +43,15 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setType(typeChoice)}
+                onClick={() => {
+                  setType(typeChoice);
+                  setShowProgressButton(true);
+                  console.log('snackbutton incoming');
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setType(typeChoice);
+                    setShowProgressButton(true);
                   }
                 }}>
                 {typeChoice}
@@ -39,11 +59,17 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            type={type} />
+        )}
       </div>
-    )
+    );
   } else if (tasteGroup === ('sour')) {
     return (
-      <div>
+      <div className="TypeComp">
         <h3>What type of snack would you prefer?</h3>
         <form>
           {uniqueTypes.map((typeChoice) => (
@@ -59,10 +85,15 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setType(typeChoice)}
+                onClick={() => {
+                  setType(typeChoice);
+                  setShowProgressButton(true);
+                  console.log('snackbutton incoming');
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setType(typeChoice);
+                    setShowProgressButton(true);
                   }
                 }}>
                 {typeChoice}
@@ -70,11 +101,17 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            type={type} />
+        )}
       </div>
-    )
+    );
   } else if (tasteGroup === ('savory')) {
     return (
-      <div>
+      <div className="TypeComp">
         <h3>What type of snack would you prefer?</h3>
         <form>
           {uniqueTypes.map((typeChoice) => (
@@ -90,10 +127,15 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setType(typeChoice)}
+                onClick={() => {
+                  setType(typeChoice);
+                  setShowProgressButton(true);
+                  console.log('snackbutton incoming');
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setType(typeChoice);
+                    setShowProgressButton(true);
                   }
                 }}>
                 {typeChoice}
@@ -101,11 +143,17 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            type={type} />
+        )}
       </div>
-    )
+    );
   } else if (tasteGroup === ('salty')) {
     return (
-      <div>
+      <div className="TypeComp">
         <h3>What type of snack would you prefer?</h3>
         <form>
           {uniqueTypes.map((typeChoice) => (
@@ -121,10 +169,15 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setType(typeChoice)}
+                onClick={() => {
+                  setType(typeChoice);
+                  setShowProgressButton(true);
+                  console.log('snackbutton incoming');
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setType(typeChoice);
+                    setShowProgressButton(true);
                   }
                 }}>
                 {typeChoice}
@@ -132,8 +185,14 @@ const TypeOfSnack = ({ tasteGroup, type, setType }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            type={type} />
+        )}
       </div>
-    )
+    );
   }
 }
 

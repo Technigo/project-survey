@@ -1,15 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SnacksArray from './SnacksArray';
+import ProgressButton from './ProgressButton';
 
-const Texture = ({ tasteGroup, type, texture, setTexture }) => {
+const Texture = ({
+  tasteGroup,
+  type, texture, setTexture, progress, setProgress, showProgressButton,
+  setShowProgressButton
+}) => {
   const handleTextureChoice = (event) => {
+    setShowProgressButton(false);
     setTexture(event.target.value);
+    console.log('handle texture choice was called')
+    setShowProgressButton(true);
   };
   const filteredTasteType = SnacksArray.filter(
     (snack) => snack.taste === tasteGroup && snack.type === type
   );
+
+  useEffect(() => {
+    setShowProgressButton(false)
+    console.log('UE', { showProgressButton })
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const uniqueTextures = [...new Set(filteredTasteType.map((snack) => snack.texture))];
   console.log({ uniqueTextures })
+  console.log({ showProgressButton })
   if (type === ('candy')) {
     return (
       <>
@@ -28,10 +44,14 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setTexture(textureChoice)}
+                onClick={() => {
+                  setTexture(textureChoice);
+                  setShowProgressButton(true);
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setTexture(textureChoice);
+                    setShowProgressButton(true);
                   }
                 }}>
                 {textureChoice}
@@ -39,9 +59,15 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            texture={texture} />
+        )}
       </>
     )
-  } else if (type === ('nut')) {
+  } else if (type === ('nuts')) {
     return (
       <>
         <h3>What texture would you like?</h3>
@@ -59,10 +85,14 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setTexture(textureChoice)}
+                onClick={() => {
+                  setTexture(textureChoice);
+                  setShowProgressButton(true);
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setTexture(textureChoice);
+                    setShowProgressButton(true);
                   }
                 }}>
                 {textureChoice}
@@ -70,6 +100,12 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            texture={texture} />
+        )}
       </>
     )
   } else if (type === ('fruit')) {
@@ -90,10 +126,14 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setTexture(textureChoice)}
+                onClick={() => {
+                  setTexture(textureChoice);
+                  setShowProgressButton(true);
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setTexture(textureChoice);
+                    setShowProgressButton(true)
                   }
                 }}>
                 {textureChoice}
@@ -101,6 +141,12 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            texture={texture} />
+        )}
       </>
     )
   } else if (type === ('chips')) {
@@ -121,10 +167,14 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
               <span
                 role="button"
                 tabIndex={0}
-                onClick={() => setTexture(textureChoice)}
+                onClick={() => {
+                  setTexture(textureChoice);
+                  setShowProgressButton(true);
+                }}
                 onKeyDown={(e) => {
                   if (e.key === 'Enter') {
                     setTexture(textureChoice);
+                    setShowProgressButton(true)
                   }
                 }}>
                 {textureChoice}
@@ -132,6 +182,12 @@ const Texture = ({ tasteGroup, type, texture, setTexture }) => {
             </label>
           ))}
         </form>
+        {showProgressButton && (
+          <ProgressButton
+            progress={progress}
+            setProgress={setProgress}
+            texture={texture} />
+        )}
       </>
     )
   }

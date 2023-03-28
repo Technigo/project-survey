@@ -1,18 +1,22 @@
 import React from 'react';
 import SnacksArray from './SnacksArray';
+import ProgressButton from './ProgressButton';
 
-const TasteGroup = ({ tasteGroup, setTasteGroup }) => {
+const TasteGroup = ({
+  tasteGroup,
+  setTasteGroup,
+  progress,
+  setProgress,
+  showProgressButton,
+  setShowProgressButton
+}) => {
   const uniqueTastes = [...new Set(SnacksArray.map((snack) => snack.taste))];
 
-  if (!tasteGroup) {
-    [tasteGroup] = uniqueTastes;
-    setTasteGroup(tasteGroup);
-  }
-
   const handleTasteChoice = (event) => {
-    setTasteGroup(event.target.value)
+    setTasteGroup(event.target.value);
+    setShowProgressButton(true);
   }
-  (console.log({ tasteGroup }))
+  console.log({ tasteGroup });
   return (
     <div className="tasteGroup-container">
       <h3>First, please pick a taste.</h3>
@@ -30,10 +34,14 @@ const TasteGroup = ({ tasteGroup, setTasteGroup }) => {
             <span
               role="button"
               tabIndex={0}
-              onClick={() => setTasteGroup(taste)}
+              onClick={() => {
+                setTasteGroup(taste);
+                setShowProgressButton(true);
+              }}
               onKeyDown={(e) => {
                 if (e.key === 'Enter') {
                   setTasteGroup(taste);
+                  setShowProgressButton(true);
                 }
               }}>
               {taste}
@@ -41,6 +49,12 @@ const TasteGroup = ({ tasteGroup, setTasteGroup }) => {
           </label>
         ))}
       </form>
+      {showProgressButton && (
+        <ProgressButton
+          progress={progress}
+          setProgress={setProgress}
+          taste={tasteGroup} />
+      )}
     </div>
   )
 }
