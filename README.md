@@ -1,13 +1,13 @@
-# Survey form with React
+Survey form with React
 
-Replace this readme with your own information about your project.
+This is a simple survey built in react using useState hooks. The survey is using form elements and should return a summary of users answers.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Ive started of by sketching up my idea and how i best should structure the code in React. I realized pretty soon that i needed to get my hands dirty so to speak and actually starting the building of components and structure while still learning to think of the code in the "react" kind of way. I also wanted to keep it as simple as possible understanding every piece of code and how to use the state variables for each purpose. I´ve learned a lot from making this project even though i still need to figure out some things before this MLP-name generator will work as i want i to. Things i will need to fix is:
 
-## The problem
+1. radiobuttons. I made a component for selecting a favorite flower, but i didn't manage to figure out how to return the input from the component into the results-page.
+2. Fix so that the "return" button takes you back to the start page. Right now its just a button doing nothing.
+3. Make it more responsive.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+View it live
 
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://superb-starship-a80a3a.netlify.app/

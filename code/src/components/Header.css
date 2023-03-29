@@ -1,0 +1,65 @@
+/* --------------------------- WRAPPER & ALIGNMENT -------------------------- */
+
+.header {
+    display: flex;
+    flex-flow: column wrap; 
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 4px 10px black;
+    align-items: center;
+    background-color: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    display: flex;
+  }
+
+  img {
+width: 40%;
+margin-bottom: 30px;
+max-width: 400px;
+
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 700px;
+    width: 100%;
+    
+  }
+  
+  .header h1 {
+    font-size: 2em;
+    text-shadow: 6px 6px 8px rgb(161 66 195);
+  }
+.header h2 {
+  font-size: 1.5em;
+  text-shadow: 6px 6px 8px rgb(161 66 195);
+}
+
+@media only screen and (min-width: 768px) {
+
+  p {
+    font-size: 1.5em;
+    padding: 1.5em;
+    margin: 1.5em;
+  }
+
+  .header h1 {
+font-size: 5em;
+margin-bottom: 5px;
+  }
+
+  .header h2 {
+    font-size: 3em;
+  }
+
+  img {
+    margin-bottom: 100px;
+    max-width: 700px;
+    
+      }
+
+}
