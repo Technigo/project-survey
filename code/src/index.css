@@ -1,13 +1,169 @@
-body {
+
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+body {
+  margin: 0;
+  font-family:'Satoshi',
+    sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color:rgb(74, 72, 72);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 40px;
+  margin-bottom: 30px;
+  min-height: 100vh;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgb(243, 252, 163) 77%);
 }
+
+button{
+  background-color: rgb(0, 0, 0);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 10px;
+  color: rgb(255, 255, 255);
+  padding :15px;
+  margin-top: 50px;
+  border-style: none;
+  font-weight:bold;
+  font-family: 'Panchang';
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgba(109, 126, 211, 0.392); ;
+}
+
+.buttonswrapper{
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding :15px;
+  margin-top: 100px;
+  
+}
+
+li {
+  list-style: none;
+}
+
+.outer-wrapper {
+  background-size: 22px 22px;
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  padding-top: 1px;
+}
+
+
+.survey-wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-color:#a5a8af53;
+  filter: blur();
+  margin: 5rem auto;
+  border-radius: 10px;
+  padding: 5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  max-width: 600px;
+  min-height: 800px;
+  
+}
+
+input, select {
+  background-color:rgba(255, 255, 255, 0.495);
+  border-radius: 10px;
+  border-style: none;
+  height: 28px;
+  cursor: pointer;
+  font-family: 'Satoshi';
+  font-size: 18px;
+  color: gray;
+}
+
+
+.mentorimg{
+  border-radius: 50%;
+  opacity: 70%;
+  width: 150px;
+  height: 150px;
+  display:flex;
+  flex-direction: column;
+  align-self: center;
+  margin-top: 40px;
+
+}
+
+.contact{
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.description{
+  text-align:start;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  padding-top: 25px;
+  line-height: 30px;
+}
+
+@media (max-width: 500px)
+{
+  .description{
+    width: 250px;
+  }
+  .survey-wrapper{
+    max-width: 330px;
+    margin-top: 0px;
+  }
+  .body {
+    max-width: 330px;
+    max-height: 765px; 
+  }
+ 
+}
+
+
+@media (min-width: 700px)
+{
+  .survey-wrapper{
+    max-width: 600px;
+    min-width: 600px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+}
+
+@media only screen and (min-width: 780px)
+{
+  .survey-wrapper{
+    max-width: 600px;
+    min-width: 600px;
+    margin-top: 100px;  
+  }
+}
+
+
+
+
+
+
+

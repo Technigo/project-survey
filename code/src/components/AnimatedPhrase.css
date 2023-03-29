@@ -1,0 +1,29 @@
+
+  .compleate-phrase{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      text-transform: uppercase;
+      font-family: 'Panchang';
+      font-weight: bold;
+      font-size: 40px;
+      
+  }
+
+  .find-your {
+    color: black;
+  }
+  
+  .perfect {
+    color: black;
+  }
+  
+  .word {
+    color: rgb(255, 255, 255);
+  }
+  
+  .mentor {
+    color: black;
+  }
+  
+ 
