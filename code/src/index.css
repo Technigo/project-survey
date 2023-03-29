@@ -3,7 +3,7 @@ body {
   background-color: rgb(58, 58, 58);
   color: white;
   background-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/11/astrology-sun-moon-rising-signs-1-copy.jpg?quality=75&strip=all");
-  background-size: 100%;
+  background-size: 100%; /* cover */
   font-family: emoji;
 }
 

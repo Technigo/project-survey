@@ -14,7 +14,12 @@ export const App = () => {
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
-
+  const restartQuiz = () => {
+    setStep(1);
+    setName('');
+    setSign('');
+    setSelect('');
+  }
   return (
     <>
       {/* Whats your name? */}
@@ -37,6 +42,11 @@ export const App = () => {
         <div className="button">
           <p>{step}</p>
           <button type="button" onClick={handleStepIncrease}>Let´s go</button>
+        </div>
+      )}
+      {step >= 4 && (
+        <div className="button">
+          <button type="button" onClick={restartQuiz}>Start over</button>
         </div>
       )}
     </>

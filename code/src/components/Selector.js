@@ -1,5 +1,5 @@
 import React from 'react';
-
+/* values */
 const howMuch = ['Normal', 'A lot', 'Im extreme'];
 
 export const Selector = ({ select, setSelect, sign }) => {
@@ -32,6 +32,17 @@ export const Selector = ({ select, setSelect, sign }) => {
             </div>
           </label>
         ))}
+      </div>
+      <div className="HowMuch">
+        {select === 'Normal' && (
+          <p>It´s good to be {select} too I guess!</p>
+        )}
+        {select === 'A lot' && (
+          <p>Okey, so you&apos;re a {select}, cool!</p>
+        )}
+        {select === 'Im extreme' && (
+          <p>Okey, so you&apos;re a {select}, cool!</p>
+        )}
       </div>
     </>
   );
