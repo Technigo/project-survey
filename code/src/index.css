@@ -34,6 +34,7 @@ html {
   align-items: center;
   bottom: 94px;
   color:#f2f2f2;
+  left: -15px;
 }
 .welcome h2 {
   text-shadow: 10px;
@@ -55,20 +56,12 @@ html {
   border-radius: 30px;
   position: relative;
   cursor: pointer;
+  left: -13px;
+  bottom: -4px;
 }
-/*.button button {
-  text-align: center;
-  background-color: rgb(240, 240, 240);
-  color: rgb(23, 23, 23);
-  width: 79px;
-  border-radius: 30px;
-  position: relative;
-  cursor: pointer;
-  bottom: 80px;
-}*/
+
 
 /* button container */
-
 button:hover {
 background-color: #ffe27b;
 }
@@ -79,9 +72,36 @@ label {
   padding: 5px;
 }
 
-/* PAGE 3 */
-.signmeeter {
- text-align: center;
+
+
+/* PAGE 2 choose sign select dropdown */
+.choose-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 175px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  /* text-shadow: -3px 2px #1a1919; */
+  background: #2121218a;
+}
+.choose-container h2 {
+  position: relative;
+  bottom: 167px;
+  font-size: 50px;
+}
+form.zodiacs {
+  position: relative;
+  left: -15px;
+  top: -170px;
 }
 
 .zodiac-container {
@@ -105,46 +125,11 @@ label {
   justify-content: center;
 }
 
-/*page 2 choose sign select dropdown */
-.choose-container {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding-top: 175px;
-  height: 400px;
-  box-sizing: border-box;
-  margin: auto;
-  border-radius: 10px;
-  box-shadow: black;
-  box-shadow: 10px;
-  box-shadow: 10px 5px 5px #26262659;
-  top: 140px;
-  text-shadow: -3px 2px #1a1919;
-  background: #2121218a;
-}
-.choose-container h2 {
-  position: relative;
-  bottom: 167px;
-  font-size: 50px;
-}
-
-form.zodiacs {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 190px;
-  right: auto;
-  left: auto;
-}
-
-/*page 3 HOW MUCH*/
+/* PAGE 3 - how much */
 .howmuch-container {
     display: flex;
     position: relative;
     flex-direction: column;
-    align-items: center;
     height: 400px;
     box-shadow: black;
     box-shadow: 10px;
@@ -152,29 +137,33 @@ form.zodiacs {
     top: 140px;
     text-shadow: -3px 2px #1a1919;
     background: #2121218a;
-    padding: -10px;
 }
-
 .howmuch-container h4 {
     display: flex;
     flex-direction: column;
     position: absolute;
     bottom: 280px;
     font-size: 30px;
+    right: 485px;
 }
+/* how much: normal, a lot, im extreme radio buttons */
 .radio-activity {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 102px;
-  font-size: 19px;
+  left: 568px;
+  position: absolute;
+  top: 235px;
 }
-
+/* answer how much */
+.HowMuch p {
+  background-blend-mode: overlay;
+  font-size: 20px;
+  background: #d26767;
+  width: 300px;
+  position: absolute;
+  top: 350px;
+  right: 506px;
+}
 form {
   position: relative;
-  /* bottom: 60px; */
-  /* size: 29px; */
-  /* text-align: center; */
   font-size: 20px;
   background: #19273c;
   width: 150px;
@@ -183,13 +172,81 @@ form {
   flex-direction: column;
   left: 435px;
 }
+/* PAGE 4 - results */
 .Okey p {
   background-color: #d26767;
   font-size: 25px;
   position: relative;
-  top: -96px;
+  top: -125px;
+}
+.result {
+  position: relative;
+  padding-top: 92px;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+  font-size: 25px;
+  text-align: center;
+}
+.result p {
+  margin: 10px;
+  left: -10px;
+  position: relative;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  button {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    color: rgb(23, 23, 23);
+    width: 79px;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    top: 27px;
+}
+.Okey p {
+  background-color: #d26767;
+  font-size: 25px;
+  position: relative;
+  top: -149px;
+}
 .result {
   display: flex;
   position: relative;
@@ -207,51 +264,108 @@ form {
   background: #2121218a;
   font-size: 20px;
 }
-
-@media only screen and (max-width: 767px) {
-  /* styles for mobile devices */
-  button {
-    text-align: center;
-    background-color: rgb(240, 240, 240);
-    color: rgb(23, 23, 23);
-    width: 79px;
-    border-radius: 30px;
-    position: relative;
-    cursor: pointer;
-    top: 27px;
-}
-.Okey p {
-  background-color: #d26767;
-  font-size: 25px;
-  position: relative;
-  top: -149px;
-}
 .result p {
   display: flex;
-  position: relative;
-  flex-direction: column;
-  bottom: 22px;
-  text-shadow: -3px 2px #1a1919;
-  font-size: 20px;
+    flex-direction: column;
+    bottom: 43px;
+    text-shadow: -3px 2px #1a1919;
+    font-size: 22px;
+    margin: 7px;
 }
 .howmuch-container h4 {
   display: flex;
   flex-direction: column;
-  position: absolute;
+  /* position: absolute; */
   bottom: 247px;
-  font-size: 30px;
+  font-size: 20px;
 }
-/*.welcome h2 {
-  text-shadow: 10px;
-  font-size: 34px;
-  font-family: emoji;
+.howmuch-container {
+  display: flex;
   position: relative;
-  top: -46px;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+  padding: -10px;
+  max-width: 370px;
 }
-.welcome p {
-  text-shadow: 10px;
-  font-size: 23px;
+.radio-activity {
+  display: flex;
+  flex-direction: column;
+  bottom: 324px;
+  display: flex;
+  font-size: 19px;
+  left: 119px;
+}
+.howmuch-container h4 {
+  display: flex;
+  flex-direction: column;
+  bottom: 280px;
+  font-size: 24px;
+  right: 501px;
+}
+.HowMuch p {
+  background-blend-mode: overlay;
+  font-size: 20px;
+  background: #000000bf;
+  width: 300px;
+  position: absolute;
+  top: 360px;
+  right: 40px;
+}
+form.zodiacs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 190px;
+  left: 108px;
+}
+}
+/* styles for tablet devices */
+/*@media only screen and (min-width: 820px) {
+  form.zodiacs {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 190px;
+    right: auto;
+    left: 325px;
+}
+.radio-activity {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  bottom: 48px;
+  bottom: 845px;
+  font-size: 19px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  font-size: 19px;
+  left: 325px;
+}
+.HowMuch p {
+  background-blend-mode: overlay;
+  font-size: 20px;
+  background: #d26767;
+  width: 300px;
+  position: absolute;
+  top: 337px;
+  right: 276px;
+}
+button {
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  color: rgb(23, 23, 23);
+  width: 79px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  left: -13px;
+  bottom: -35px;
+}
 } */
-}

@@ -35,13 +35,13 @@ export const Selector = ({ select, setSelect, sign }) => {
       </div>
       <div className="HowMuch">
         {select === 'Normal' && (
-          <p>It´s good to be {select} too I guess!</p>
+          <p> {select} is pretty good too, I guess! 👵🏻</p>
         )}
         {select === 'A lot' && (
-          <p>Okey, so you&apos;re a {select}, cool!</p>
+          <p> Sugar & spice, {select}, is nice! 🌶🔥</p>
         )}
         {select === 'Im extreme' && (
-          <p>Okey, so you&apos;re a {select}, cool!</p>
+          <p>The {select}´s turn´s the world upside down. You go you wild thing 😎</p>
         )}
       </div>
     </>
