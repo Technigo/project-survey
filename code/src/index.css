@@ -330,7 +330,7 @@ form.zodiacs {
 }
 }
 /* styles for tablet devices */
-/*@media only screen and (min-width: 820px) {
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
   form.zodiacs {
     display: flex;
     flex-direction: column;
@@ -338,27 +338,34 @@ form.zodiacs {
     top: 190px;
     right: auto;
     left: 325px;
-}
-.radio-activity {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  bottom: 845px;
-  font-size: 19px;
+ }
+ .howmuch-container h4 {
   display: flex;
   flex-direction: column;
   position: absolute;
+  bottom: 280px;
+  font-size: 30px;
+  right: 297px;
+}
+.Okey p {
+  background-color: #d26767;
+  font-size: 25px;
+  position: relative;
+  top: -68px;
+}
+.radio-activity {
+  position: absolute;
+  top: 209px;
   font-size: 19px;
   left: 325px;
 }
 .HowMuch p {
-  background-blend-mode: overlay;
-  font-size: 20px;
   background: #d26767;
   width: 300px;
   position: absolute;
-  top: 337px;
   right: 276px;
+  font-size: 20px;
+  top: 352px;
 }
 button {
   text-align: center;
@@ -371,4 +378,4 @@ button {
   left: -13px;
   bottom: -35px;
 }
-} */
+}
