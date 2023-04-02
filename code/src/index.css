@@ -336,8 +336,7 @@ form.zodiacs {
     flex-direction: column;
     position: absolute;
     top: 190px;
-    right: auto;
-    left: 303px;
+    left: 293px;
  }
  .howmuch-container h4 {
   display: flex;
@@ -345,27 +344,28 @@ form.zodiacs {
   position: absolute;
   bottom: 280px;
   font-size: 30px;
-  right: 297px;
+  right: 220px;
 }
 .Okey p {
   background-color: #d26767;
   font-size: 25px;
   position: relative;
   top: -68px;
+  left: -18px;
 }
 .radio-activity {
   position: absolute;
   top: 209px;
   font-size: 19px;
-  left: 325px;
+  left: 300px;
 }
 .HowMuch p {
   background: #d26767;
   width: 300px;
   position: absolute;
-  right: 276px;
   font-size: 20px;
   top: 352px;
+  right: 257px;
 }
 button {
   text-align: center;
