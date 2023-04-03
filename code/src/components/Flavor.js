@@ -25,6 +25,7 @@ const Flavor = ({
 
     setFlavor(chosenFlavorGroup);
     setShowProgressButton(true);
+    console.log('checkbox click');
   };
 
   const handleSpanClick = (event) => {
@@ -40,6 +41,7 @@ const Flavor = ({
 
     setFlavor(chosenFlavorGroup);
     setShowProgressButton(true);
+    console.log('span-click');
   };
 
   useEffect(() => {

@@ -9,6 +9,8 @@ font-family: 'Permanent Marker', cursive;
   font-size: 22px;
   padding-left: 1em;
   padding-right: 1em;
+  color: white;
+  background-color: rgb(79, 69, 69);
 }
 
 code {
@@ -37,13 +39,14 @@ p, h3 {
 
 input {
   opacity: 0;
-}
+} 
 
 label {
   display: inline-block;
   justify-content: space-between;
   cursor: pointer;
   transition: transform 0.4s;
+  padding-right: 1rem;
 }
 
 .selected span{

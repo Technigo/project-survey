@@ -1,10 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+import React, { useState } from 'react';
 import Header from 'components/Header';
-
 import ProgressButton from 'components/ProgressButton';
 import TasteGroup from 'components/TasteGroup';
 import TypeOfSnack from 'components/TypeOfSnack';
-import React, { useState } from 'react';
 import Texture from 'components/Texture';
 import Flavor from 'components/Flavor';
 import PriceSlider from 'components/PriceSlider';
@@ -23,7 +22,7 @@ export const App = () => {
   const [priceValue, setPriceValue] = useState(7);
   const [comment, setComment] = useState('');
   const [textInput, setTextInput] = useState('');
-  const [importantValue, setImportantValue] = useState('');
+  const [importantLabel, setImportantLabel] = useState([]);
   const [screenRender, setScreenRender] = useState(null)
   const [showProgressButton, setShowProgressButton] = useState(false);
 
@@ -101,8 +100,12 @@ export const App = () => {
         showProgressButton={showProgressButton}
         setShowProgressButton={setShowProgressButton} />}
       {progress === 7 && <ImportantOption
-        importantValue={importantValue}
-        setImportantValue={setImportantValue} />}
+        importantLabel={importantLabel}
+        setImportantLabel={setImportantLabel}
+        progress={progress}
+        setProgress={setProgress}
+        showProgressButton={showProgressButton}
+        setShowProgressButton={setShowProgressButton} />}
       {progress === 8 && <Results
         tasteGroup={tasteGroup}
         type={type}
@@ -112,7 +115,8 @@ export const App = () => {
         comment={comment}
         setComment={setComment}
         textInput={textInput}
-        setTextInput={setTextInput} />}
+        setTextInput={setTextInput}
+        importantLabel={importantLabel} />}
       {progress === 0 || progress === 5 ? (
         console.log('ProgressButton mounted'),
         <ProgressButton
