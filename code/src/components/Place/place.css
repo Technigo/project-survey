@@ -1,0 +1,38 @@
+.place-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 50px;
+}
+
+.image-container-place {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+.image-container-place img {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+    border: 2px solid #CC704B;
+}
+
+/*TABLET*/
+@media (min-width: 668px){
+    .image-container-place img {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+/*DESKTOP*/
+@media (min-width: 1024px){
+    .image-container-place img {
+        height: 150px;
+        width: 150px;
+    }
+}

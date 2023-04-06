@@ -1,0 +1,26 @@
+.animal-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 70px;
+}
+
+.image-container-animal img{
+    height: 90px;
+    width: 90px;
+}
+
+.image-container-animal{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px; 
+}

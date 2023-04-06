@@ -1,0 +1,27 @@
+.name-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.name-container img {
+    width: 210px;
+    height: auto;
+}
+
+.name-container h1 {
+    font-size: 18px;
+}
+
+
+.image-container-name img{
+    width: 90px;
+}
+
+.container-step-btn{
+    display: flex;
+    justify-content: center;
+}
+
