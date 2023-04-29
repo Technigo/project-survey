@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Background } from './styles/Background';
 
 const Name = ({ name, setName, counter, setCounter }) => {
   const [error, setError] = useState(false);
@@ -16,24 +17,26 @@ const Name = ({ name, setName, counter, setCounter }) => {
   }
 
   return (
-    <div className="survey-wrapper name">
-      <h2><span>What is your name?</span></h2>
-      <label htmlFor="nameInput">
-        <input
-          className="name-input"
-          type="text"
-          placeholder={!error ? 'Type your name here...' : '* Please enter your name'}
-          value={name}
-          id="nameInput"
-          onChange={handleNameChange} />
-      </label>
-      <button
-        type="button"
-        onClick={handleIncreaseCounterClick}
-        aria-label="Next button">
-        Next
-      </button>
-    </div>
+    <Background counter={counter}>
+      <div className="survey-wrapper name">
+        <h2><span>What is your name?</span></h2>
+        <label htmlFor="nameInput">
+          <input
+            className="name-input"
+            type="text"
+            placeholder={!error ? 'Type your name here...' : '* Please enter your name'}
+            value={name}
+            id="nameInput"
+            onChange={handleNameChange} />
+        </label>
+        <button
+          type="button"
+          onClick={handleIncreaseCounterClick}
+          aria-label="Next button">
+          Next
+        </button>
+      </div>
+    </Background>
   );
 }
 

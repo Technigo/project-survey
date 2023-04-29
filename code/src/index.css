@@ -4,6 +4,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color:	#FF1493;
   font-family: "montserrat", sans-serif;
+  width: 100%;
+  height: 100vh;
+}
+
+#root {
+  width: 100%;
+  height: 100vh;
 }
 
 code {
@@ -112,7 +119,7 @@ p {
 
 .button-container {
   position: fixed;
-  bottom: 6px;
+  bottom: 0px;
   left: 0px; 
   display: flex;
   gap: 10px;
@@ -280,44 +287,6 @@ input[type="radio" i] {
   font-style: normal;
 }
 
-.background-image {
-  height: 100vh;
-  background-size: cover;
-  min-height: 100%;
-  overflow: hidden;
-  width:100%;
-  position:absolute;
-  left:0;
-}
-
-.background-image.image1 {
-  background-image: url(../public/images/buildings-sun.jpg);
-}
-
-.background-image.image2 {
-  background-image: url(../public/images/toothbrush.jpg);
-}
-
-.background-image.image3 {
-  background-image: url(../public/images/curtains.jpg);
-}
-
-.background-image.image4 {
-  background-image: url(../public/images/house.jpg);
-}
-
-.background-image.image5 {
-  background-image: url(../public/images/boat.jpeg);
-}
-
-.background-image.image6 {
-  background-image: url(../public/images/green-building.jpg);
-}
-
-.background-image.image7 {
-  background-image: url(../public/images/traffic.jpg);
-}
-
 .result-box img {
   height:400px;
 }
@@ -392,7 +361,6 @@ hr {
     overflow-y: visible;
   }
   .main-wrapper {
-    padding: 15px;
     box-sizing: border-box;
     justify-content: flex-start;
   }
@@ -403,6 +371,7 @@ hr {
 
   .survey-wrapper {
     max-width: 350px;
+    padding: 0 15px;
   }
 
   .name-input {
@@ -416,6 +385,10 @@ hr {
   .theme-form, .form-mixed {
     max-width: 350px;
     max-height: 200px;
+  }
+
+  .container-result {
+    padding: 15px;
   }
 
   .result-box {

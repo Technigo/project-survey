@@ -43,28 +43,9 @@ export const App = () => {
     setGenre('');
   };
 
-  const classList = (...classes) => {
-    return classes
-      .filter((item) => !!item)
-      .join(' ');
-  }
-
   return (
-    <div
-    // I had no idea how to put an alt tag on a background image, so I put an aria label instead
-      aria-label="Background images of cinematic locations"
-      className={classList(
-        'background-image',
-        counter === 0 && 'image1',
-        counter === 1 && 'image2',
-        counter === 2 && 'image3',
-        counter === 3 && 'image4',
-        counter === 4 && 'image5',
-        counter === 5 && 'image6',
-        counter === 6 && 'image7'
-      )}>
-      {/* The total count is not 5 but it was the only number which corrsponded visually */}
-      <ProgressBar counter={counter} totalCount={5} />
+    <>
+      {counter !== 7 && (<ProgressBar counter={counter} totalCount={5} />)}
       <div className="main-wrapper">
         {counter === 0 && (
           <Intro counter={counter} setCounter={setCounter} />
@@ -167,7 +148,7 @@ export const App = () => {
             </button>
           </div>)}
       </div>
-    </div>
+    </>
   )
 }
 
