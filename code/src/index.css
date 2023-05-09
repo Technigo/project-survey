@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Press Start 2P', cursive;
+  font-family: 'Audiowide', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #684386;
@@ -10,89 +10,44 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.outer-wrapper {
+  height: auto;
+  width:auto;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid springgreen;
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.inner-wrapper {
   display: grid;
+  text-align: center;
   justify-content: center;
   border: 2px solid springgreen;
   border-radius: 12px;
-  width: 100%;
-  
+  margin: 5px;
+  padding: 5px;
 }
 
-.header-container {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 2em;
-  padding: 0.5em;
-}
-
-.typewriter {
-    font-family: 'Press Start 2P', cursive;
-    font-size: 28px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #3ee7ad;; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-    color: #3ee7ad;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #3ee7ad;; }
-  }
-
-.form-input {
-  border: 2px solid black;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  padding: 1em;
-  margin: 2em;
-  gap: 15px;
-}
-
-.name-input-field {
+input[type="text"] {
+  height: 45px;
+  width: 200px;
+  font-family: 'Press Start 2P', cursive;
   font-size: 21px;
   border: 2px solid black;
   border-radius: 12px;
   padding: 0 5px 0 5px;
-}
-
-.name-input-field ::placeholder {
-  font-size: 16px;
-}
-
-input {
-  height: 45px;
-  font-size: 16px;
-  width: 200px;
-  font-family: 'Press Start 2P', cursive;
-}
-
-::placeholder{
-  font-size: 16px;
-  font-family: 'Press Start 2P', cursive;
-  font-weight: 200;
-  font-size: 22px;
+  background-color: springgreen;
+  ::placeholder {
+      font-size: 21px;
+      color: #684386;
+    }
 }
 
 select {
   height: 35px;
-  font-family: Nippo, sans-serif;
+  font-family: 'Press Start 2P', cursive;
   font-weight: 200;
   font-size: 22px;
 }
@@ -102,6 +57,7 @@ p {
   font-weight: 200;
   font-size: 22px;
 }
+  
 
 .form-label {
   font-family: 'Nippo', sans-serif;
@@ -109,7 +65,7 @@ p {
   font-size: 23px;
 }
   
-.step-counter {
+.counter {
   display: flex;
   flex-direction: column;
   width: 200px;
@@ -119,15 +75,13 @@ p {
   text-align: left;
 }
 
-#next-step-btn {
-  border: 2px solid black;
-  border-radius: 12px;
+button[type="button"] {
+  border: 6px solid springgreen;
+  border-radius: 50%;
   width: 100px;
-  padding: 10px;
+  height: 100px;
+  background-image: url('./assets/next.png');
   align-self: center;
-  font-family: 'Audiowide', cursive;
-  font-size: 21px;
-
 }
 
 #generator-btn, #restart-btn {
@@ -149,48 +103,9 @@ option {
   font-size: 25px;
 }
 
-.color-options input[type="radio"] {
+input[type="radio"] {
   display:none;
-}
-
-.color-options {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  gap: 5px;
-  margin-top: 3px;
-}
-
-.color-options label {
-  display: inline-block;
-  background-color: white;
-  color: black;
-  padding: 10px 20px;
-  font-size: 16px;
-  border: 2px solid black;
-  border-radius: 12px;
-  cursor: pointer;
-  font-family: 'Audiowide', cursive;
-  font-size: 21px;
-}
-
-.color-options label:hover {
-  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-  font-size: 25px;
-}
-
-/* input[type="radio"]:checked {
-  background-color: black;
-  color: white;
-  box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor,
-  0 0 40px currentColor, 0 0 50px currentColor;
-} */
-
-.color-pick-msg {
-  font-weight: 300;
-  font-size: 25px;
-  justify-self: center;
-}
+};
 
 span {
   font-size: 40px;

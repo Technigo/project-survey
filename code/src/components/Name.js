@@ -1,5 +1,4 @@
 /* eslint-disable linebreak-style */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 
 import React from 'react';
 
@@ -8,6 +7,8 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <input className="name-input-field" name="name" placeholder="username" type="text" minLength="1" value={name} onChange={handleNameChange} required />
+    <label htmlFor="username-input">
+      <input name="username-input" id="username-input" placeholder="enter your username" type="text" minLength="1" value={name} onChange={handleNameChange} required />
+    </label>
   );
 }

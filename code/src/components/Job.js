@@ -9,8 +9,8 @@ export const Job = ({ job, setJob }) => {
   };
   return (
     <>
-      <label className="form-label" htmlFor="job">Pick a profession.</label>
-      <select id="job" name="job" value={job} onChange={handleJobChange}>
+      <label className="form-label" htmlFor="job-dropdown">Pick a profession.</label>
+      <select id="job-dropdown" name="job-dropdown" value={job} onChange={handleJobChange}>
         <option value=" " disabled>Select a job</option>
         <option value="doctor">Doctor</option>
         <option value="teacher">Teacher</option>

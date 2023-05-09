@@ -1,7 +1,7 @@
 /* eslint-disable linebreak-style */
 /* eslint-disable max-len */
-import React, { useState, useEffect } from 'react';
-import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import React, { useState } from 'react';
+import { Header } from 'components/Header';
 import { Name } from './components/Name';
 import { Animal } from './components/Animal';
 import { Color } from './components/Color';
@@ -18,106 +18,46 @@ export const App = () => {
   const [color, setColor] = useState('');
   const [verb, setVerb] = useState('');
   const [adjective, setAdjective] = useState('');
-  const [isVisible, setIsVisible] = useState(false);
-  useEffect(() => {
-    const timeoutId = setTimeout(() => {
-      setIsVisible(true);
-    }, 5000);
-    return () => clearTimeout(timeoutId);
-  }, []);
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
   return (
-    <section className="container">
-      {(step === 1) && (
-        <section className="header-container">
-          <h1>MADLIBS GAME</h1>
-          <p className="typewriter">WELCOME TO A MADLIBS GAME CREATED BY TESS AQUILON.</p>
-          <section className="name-form">
-            <p>Enter your</p>
+    <section className="outer-wrapper">
+      <section className="inner-wrapper">
+        <Header />
+        {(step === 1) && (
+          <>
             <Name name={name} setName={setName} />
-            <p>to continue.</p>
-          </section>
-        </section>
-      )}
-      {(step === 2) && (
-        <>
-          <Player
-            autoplay
-            loop
-            src="https://assets8.lottiefiles.com/packages/lf20_nw3e7mtx.json"
-            style={{ height: '150px', width: '150px' }}>
-            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
-          </Player>
-          <section className="form-input">
-            <Animal animal={animal} setAnimal={setAnimal} />
-          </section>
-        </>
-      )}
-      {step === 3 && (
-        <section className="form-input">
+            <button type="button" onClick={handleStepIncrease}> </button>
+          </>
+        )}
+        {(step === 2) && (
+          <Animal animal={animal} setAnimal={setAnimal} />
+        )}
+        {step === 3 && (
           <Job job={job} setJob={setJob} />
-        </section>
-      )}
-      {step === 4 && (
-        <section className="form-input">
+        )}
+        {step === 4 && (
           <Color color={color} setColor={setColor} />
-          {color === 'red' && (
-            <p className="color-pick-msg">You choose: <span>❤️</span></p>
-          )}
-          {color === 'yellow' && (
-            <p className="color-pick-msg">You choose: <span>💛</span></p>
-          )}
-          {color === 'pink' && (
-            <p className="color-pick-msg">You choose: <span>💗</span></p>
-          )}
-          {color === 'green' && (
-            <p className="color-pick-msg">You choose: <span>💚</span></p>
-          )}
-          {color === 'orange' && (
-            <p className="color-pick-msg">You choose: <span>🧡</span></p>
-          )}
-          {color === 'violet' && (
-            <p className="color-pick-msg">You choose: <span>💜</span></p>
-          )}
-          {color === 'blue' && (
-            <p className="color-pick-msg">You choose: <span>💙</span></p>
-          )}
-        </section>
-      )}
-      {step === 5 && (
-        <section className="form-input">
+        )}
+        {step === 5 && (
           <Verb verb={verb} setVerb={setVerb} />
-        </section>
-      )}
-      {step === 6 && (
-        <section className="form-input">
+        )}
+        {step === 6 && (
           <Adjective adjective={adjective} setAdjective={setAdjective} />
-        </section>
-      )}
-      {step === 7 && (
-        <section className="result">
-          {isVisible && <Result name={name} animal={animal} job={job} color={color} verb={verb} adjective={adjective} />}
-          <Player
-            autoplay
-            loop
-            src="https://assets5.lottiefiles.com/packages/lf20_jpxsQh.json"
-            style={{ height: '150px', width: '150px' }}>
-            <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
-          </Player>
-        </section>
-      )}
-      {step < 7 && (
-        <section className="step-counter">
-          <p>
+        )}
+        {step === 7 && (
+          <Result name={name} animal={animal} job={job} color={color} verb={verb} adjective={adjective} />
+        )}
+        {step >= 2 && step < 7 ? (
+          <section className="counter">
+            <p>
               Current step: {step}/6
-          </p>
-          <button id="next-step-btn" type="button" onClick={handleStepIncrease}>
-              Next
-          </button>
-        </section>
-      )}
+            </p>
+            <button type="button" onClick={handleStepIncrease}> </button>
+          </section>
+        ) : null}
+      </section>
     </section>
   );
 }
