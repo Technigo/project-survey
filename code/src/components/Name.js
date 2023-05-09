@@ -8,9 +8,6 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <>
-      <label className="form-label" htmlFor="name">What is your name?</label>
-      <input id="name" name="name" placeholder="your name" type="text" minLength="1" value={name} onChange={handleNameChange} required />
-    </>
+    <input className="name-input-field" name="name" placeholder="username" type="text" minLength="1" value={name} onChange={handleNameChange} required />
   );
 }

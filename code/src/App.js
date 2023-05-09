@@ -32,6 +32,17 @@ export const App = () => {
     <section className="container">
       {(step === 1) && (
         <section className="header-container">
+          <h1>MADLIBS GAME</h1>
+          <p className="typewriter">WELCOME TO A MADLIBS GAME CREATED BY TESS AQUILON.</p>
+          <section className="name-form">
+            <p>Enter your</p>
+            <Name name={name} setName={setName} />
+            <p>to continue.</p>
+          </section>
+        </section>
+      )}
+      {(step === 2) && (
+        <>
           <Player
             autoplay
             loop
@@ -39,17 +50,10 @@ export const App = () => {
             style={{ height: '150px', width: '150px' }}>
             <Controls visible={false} buttons={['play', 'repeat', 'frame', 'debug']} />
           </Player>
-          <h1 className="typewriter">WELCOME.</h1>
-          <section className="name-input">
-            <p>Let us start by typing your name.</p>
-            <Name name={name} setName={setName} />
+          <section className="form-input">
+            <Animal animal={animal} setAnimal={setAnimal} />
           </section>
-        </section>
-      )}
-      {(step === 2) && (
-        <section className="form-input">
-          <Animal animal={animal} setAnimal={setAnimal} />
-        </section>
+        </>
       )}
       {step === 3 && (
         <section className="form-input">
