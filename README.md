@@ -9,9 +9,9 @@ Practice React state and controlled forms by making a Typeform-like product. You
 ## Project requirements 
 
 - [x] Ideate, design and code your app.
-- [x] Your survey should consist of at least 3 questions.
-- [x] At least one question should use radio buttons.
-- [x] At least one question should use a select dropdown.
+- [x] Connect HTML form inputs to state.
+- [x] Use form fields and `useState` hook in React
+- [x] Use state to show different components based on where you are in the survey
 - [x] There should be a submit button. When pressed your app should hide the input form and show a summary of the user's submissions.
 - [x]  Your site should follow accessibility guidelines
 
