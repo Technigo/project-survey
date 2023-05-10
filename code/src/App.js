@@ -28,7 +28,7 @@ export const App = () => {
         {(step === 1) && (
           <>
             <Name name={name} setName={setName} />
-            <button type="button" onClick={handleStepIncrease}> </button>
+            <button type="button" className="next-btn" onClick={handleStepIncrease}> </button>
           </>
         )}
         {(step === 2) && (
@@ -51,10 +51,10 @@ export const App = () => {
         )}
         {step >= 2 && step < 7 ? (
           <section className="counter">
+            <button className="next-btn" type="button" onClick={handleStepIncrease}> </button>
             <p>
               Current step: {step}/6
             </p>
-            <button type="button" onClick={handleStepIncrease}> </button>
           </section>
         ) : null}
       </section>

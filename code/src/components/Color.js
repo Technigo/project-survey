@@ -1,58 +1,53 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-
 import React from 'react';
-import styled from 'styled-components/macro';
 
-const colorOptions = ['red', 'yellow', 'pink', 'green', 'orange', 'violet', 'blue'];
+const colorOptions = [
+  { label: 'Hot Pink', color: '#ff69b4' },
+  { label: 'Electric Blue', color: '#00ffff' },
+  { label: 'Lime Green', color: '#00ff00' },
+  { label: 'Bright Orange', color: '#ff8c00' },
+  { label: 'Purple Haze', color: '#8a2be2' },
+  { label: 'Sunny Yellow', color: '#ffff00' },
+  { label: 'Cherry Red', color: '#ff0000' },
+  { label: 'Neon Green', color: '#39ff14' },
+  { label: 'Turquoise', color: '#40e0d0' },
+  { label: 'Magenta', color: '#ff00ff' }
+];
 
 export const Color = ({ color, setColor }) => {
   const handleColorChange = (event) => {
     setColor(event.target.value);
-  }
-  const ColorForm = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  gap: 5px;
-  margin-top: 3px;
-  ::input[type="radio"] {
-    display:none;
   };
-  ::label {
-    display: inline-block;
-    background-color: white;
-    color: black;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: 2px solid black;
-    border-radius: 12px;
-    cursor: pointer;
-    font-family: 'Audiowide', cursive;
-    font-size: 21px;
-  };
-  ::label:hover {
-    box-shadow: 0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor;
-    font-size: 25px;
-  }
-  `
+
+  const colorStyles = colorOptions.reduce((acc, option) => {
+    acc[option.label] = { backgroundColor: option.color };
+    return acc;
+  }, {});
+
   return (
-    <>
-      {colorOptions.map((colorType) => (
-        <ColorForm>
-          <label key={colorType} className="form-label" htmlFor="color-options">
-            {colorType}
+    <div className="coloroptions-wrapper">
+      <label className="input-label">Pick a color:
+        {colorOptions.map((colorType) => (
+          <label
+            className="color-label"
+            key={colorType.label}
+            htmlFor="color-options"
+            style={colorStyles[colorType.label]}>
+            {colorType.label}
             <input
               id="color-options"
               name="color-options"
               type="radio"
-              value={colorType}
+              key={colorType.label}
+              value={colorType.label}
               onChange={handleColorChange}
-              checked={color === colorType}
+              checked={color === colorType.label}
               required />
           </label>
-        </ColorForm>
-      ))}
-    </>
+        ))}
+      </label>
+    </div>
   );
-}
+};

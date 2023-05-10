@@ -11,13 +11,11 @@ export const Adjective = ({ adjective, setAdjective }) => {
     setAdjective(adjectives[randomIndex]);
   }
   return (
-    <>
-      <label className="form-label" htmlFor="adjective">Pick a random adjective.</label>
-      <input id="adjective" name="adjective" placeholder="click button" type="text" value={adjective} />
-      <button id="generator-btn" type="button" onClick={generatedAdjective}>
-        Generate Adjective
-      </button>
-    </>
+    <div className="generator-wrapper">
+      <label className="input-label" htmlFor="pick-adjective">Pick a random adjective.</label>
+      <input id="pick-adjective" name="pick-adjective" placeholder="click button" type="text" defaultValue={adjective} />
+      <button className="generator-btn" type="button" onClick={generatedAdjective}> </button>
+    </div>
 
   )
 }

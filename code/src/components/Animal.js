@@ -8,9 +8,9 @@ export const Animal = ({ animal, setAnimal }) => {
     setAnimal(event.target.value);
   }
   return (
-    <>
-      <label className="form-label" htmlFor="animal">Pick an animal.</label>
-      <input id="animal" name="animal" placeholder="any animal, like cat" type="text" minLength="1" value={animal} onChange={handleAnimalChange} required="required" />
-    </>
+    <div className="choices-wrapper">
+      <label className="input-label" htmlFor="pick-animal">Pick any animal.</label>
+      <input id="pick-animal" name="pick-animal" placeholder="like cat, dog, donkey..." type="text" minLength="1" value={animal} onChange={handleAnimalChange} required="required" />
+    </div>
   );
 }

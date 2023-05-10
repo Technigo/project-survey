@@ -8,9 +8,9 @@ export const Job = ({ job, setJob }) => {
     setJob(event.target.value);
   };
   return (
-    <>
-      <label className="form-label" htmlFor="job-dropdown">Pick a profession.</label>
-      <select id="job-dropdown" name="job-dropdown" value={job} onChange={handleJobChange}>
+    <div className="choices-wrapper">
+      <label className="input-label" htmlFor="job-dropdown">Pick a profession.</label>
+      <select className="dropdown-menu" name="job-dropdown" value={job} onChange={handleJobChange}>
         <option value=" " disabled>Select a job</option>
         <option value="doctor">Doctor</option>
         <option value="teacher">Teacher</option>
@@ -22,6 +22,6 @@ export const Job = ({ job, setJob }) => {
         <option value="housekeeper">Housekeeper</option>
         <option value="chef">Chef</option>
       </select>
-    </>
+    </div>
   )
 }

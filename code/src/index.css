@@ -45,24 +45,59 @@ input[type="text"] {
     }
 }
 
-select {
+.styled-color-picker {
+  width: 30vw;
+  height: 10vh;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  justify-self: center;
+  margin: 10px;
+}
+
+.styled-color-picker::-webkit-color-swatch {
+  border-radius: 12px;
+  border: none;
+}
+
+.styled-color-picker::-moz-color-swatch {
+  border-radius: 12px;
+  border: none;
+}
+
+.dropdown-menu {
   height: 35px;
   font-family: 'Press Start 2P', cursive;
   font-weight: 200;
   font-size: 22px;
+  border: 2px solid springgreen;
+  border-radius: 5px;
+  width: 40vw;
+  justify-self: center;
 }
 
-p {
-  font-family: 'Nippo', sans-serif;
-  font-weight: 200;
-  font-size: 22px;
+select:focus, input:focus {
+  outline:none;
 }
   
+.input-label {
+  font-size: 26px;
+  margin-bottom: 7px;
+  display: grid;
+  justify-content: center;
+}
 
-.form-label {
-  font-family: 'Nippo', sans-serif;
-  font-weight: 300;
-  font-size: 23px;
+.choices-wrapper {
+  border: 2px solid springgreen;
+  border-radius: 12px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
   
 .counter {
@@ -71,25 +106,44 @@ p {
   width: 200px;
   height: 200px;
   justify-self: center;
+  align-items: center;
   gap: 20px;
-  text-align: left;
 }
 
-button[type="button"] {
+.counter p {
+  font-size: 20px;
+}
+
+.next-btn {
   border: 6px solid springgreen;
   border-radius: 50%;
   width: 100px;
   height: 100px;
   background-image: url('./assets/next.png');
+  justify-self: center;
+  margin: 30px;
+}
+
+.generator-btn {
+  background-image: url('./assets/play.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  height: 30px;
   align-self: center;
 }
+
+.generator-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 
 #generator-btn, #restart-btn {
   border: 2px solid black;
   border-radius: 12px;
   font-family: 'Audiowide', cursive;
-  font-size: 21px;
-  width: 150px;
   align-self: left;
 }
 
@@ -118,7 +172,7 @@ span {
 .result {
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 40vw;
   gap: 11px;
 }
 
@@ -126,7 +180,8 @@ span {
   border: 2px dotted black;
   border-radius: 12px;
   color: springgreen;
-  background-color: #684386;
+  font-family: 'Press Start 2P', cursive;
+  background-color: white;
   padding: 20px;
 }
 
@@ -140,6 +195,13 @@ span {
   font-family: 'Audiowide', cursive;
 }
 
+.color-label {
+  border-radius: 50%;
+  color: black;
+  padding: 10px;
+  margin: 5px;
+}
+
 @media (min-width: 668px) {
   .typewriter {
     font-size: 47px;
@@ -151,18 +213,6 @@ span {
 
   .result {
     width: 382px;
-  }
-
-  .color-options {
-    gap: 15px;
-  }
-
-  p {
-    font-size: 27px;
-  }
-
-  .form-label {
-    font-size: 27px;
   }
 
   #generator-btn, #restart-btn, #next-step-btn {

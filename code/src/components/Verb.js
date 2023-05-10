@@ -8,9 +8,9 @@ export const Verb = ({ verb, setVerb }) => {
     setVerb(event.target.value);
   }
   return (
-    <>
-      <label className="form-label" htmlFor="verb">Pick a verb.</label>
-      <input type="text" id="verb" name="verb" placeholder="any verb, like swim" minLength="1" value={verb} onChange={handleVerbChange} required="required" />
-    </>
+    <div className="choices-wrapper">
+      <label className="input-label" htmlFor="pick-verb">Pick any verb.</label>
+      <input type="text" id="pick-verb" name="pick-verb" placeholder="like swim, eat, run..." minLength="1" value={verb} onChange={handleVerbChange} required="required" />
+    </div>
   );
 }

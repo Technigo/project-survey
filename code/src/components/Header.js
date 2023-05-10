@@ -7,11 +7,8 @@ import styled from 'styled-components/macro';
 export const Header = () => {
   const Title = styled.h1`
     margin: 70px 20px 10px 20px;
-    border: 2px solid springgreen;
-    border-radius: 12px;`
+  `
   const StyledHeader = styled.header`
-    border: 2px solid springgreen;
-    border-radius: 12px;
     margin: 5px;`
   return (
     <StyledHeader>
