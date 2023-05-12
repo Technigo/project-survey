@@ -14,6 +14,7 @@ export const Location = ({ location, setLocation }) => {
          what are your current dream-destinations?
         <textarea
           placeholder="E.g. a shopping-trip to Berlin, hiking in Scotland..."
+          required
           className="location-input"
           rows="4"
           cols="34"

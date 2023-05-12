@@ -16,6 +16,7 @@ export const Name = ({ name, setName }) => {
           type="text"
           onChange={(event) => setName(event.target.value)}
           value={name}
+          required
           placeholder="Your name" />
       </label>
     </>

@@ -24,6 +24,7 @@ export const Covid = ({ covid, setCovid }) => {
                 className="covid-input"
                 type="radio"
                 value={group}
+                required
                 onChange={(event) => setCovid(event.target.value)}
                 checked={covid === group} />
               {group}

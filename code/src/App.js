@@ -14,7 +14,8 @@ export const App = () => {
   const [covid, setCovid] = useState('')
 
   // function that adds to the step-count.
-  const handleStepIncrease = () => {
+  const handleStepIncrease = (event) => {
+    event.preventDefault()
     setStep(step + 1);
   }
   return (
@@ -23,7 +24,7 @@ export const App = () => {
         <h1>Travel Survey</h1>
       </header>
       <div className="form-container">
-        <form className="form" onSubmit={(event) => event.preventDefault()}>
+        <form className="form" onSubmit={handleStepIncrease}>
           {step === 1 && (
             <Name name={name} setName={setName} />
           )}
@@ -39,13 +40,12 @@ export const App = () => {
           {step === 5 && (
             <Summary name={name} travel={travel} location={location} covid={covid} />
           )}
-        </form>
-        <div className="button-container">
           {step < 5 && (
-            <button className="next-button" type="submit" onClick={handleStepIncrease}>Next</button>
+            <div className="button-container">
+              <button className="next-button" type="submit">Next</button>
+            </div>
           )}
-
-        </div>
+        </form>
       </div>
       <footer>
         <p>{step}/5</p>

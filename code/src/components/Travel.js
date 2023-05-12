@@ -12,7 +12,8 @@ export const Travel = ({ travel, setTravel }) => {
         <select
           className="travel-input"
           onChange={(event) => setTravel(event.target.value)}
-          value={travel}>
+          value={travel}
+          required>
           <option value="" selected disabled>Choose one...</option>
           <option value="yes">Yes, I have plans to travel abroad.</option>
           <option value="yes">Yes, I have plans to travel within my own country. </option>
