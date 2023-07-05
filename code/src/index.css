@@ -1,13 +1,181 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background: conic-gradient(from 135deg, #F9EAA7, #E5C551);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.contentBox {
+  background-image:url("./components/sfondoSole.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px; 
+  width: 70%;
+  height: 80%;
+  margin: auto;
+  margin-top: 10%;
+  margin-bottom: 5%;
+  gap: 20px;
+  border: 5px double black;
+  border-radius: 25px;
+
+}
+
+.questionBox, .progressBox, .greeting, .human, .badNewsClass, .fitness, .sliderSection, .solution {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+mark {
+background-color: #E5C551; 
+}
+
+h1 {
+  text-align: center;
+}
+.solution p {
+ size: 10px;
+ text-align: center;
+ text-decoration: solid;
+ font-weight: 700;
+}
+
+.solution span {
+  text-decoration: 2px double black;
+  background-color: #E5C551;
+}
+
+.button {
+  background-color: #E5C551; 
+  cursor: pointer;
+  font-weight: 700;
+  height: 75px;
+  width: 75px;
+  border: 2px double #614124;
+  border-radius: 50%;
+  margin: 10px;
+  padding: 8px 15px;
+  opacity: 0.7;
+}
+
+.button:hover{
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+input:checked {
+  border: none;
+  outline: 2px solid black;
+}
+
+input[type=text] {
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid black;
+}
+
+input[type=text]:focus {
+  border: 3px black;
+}
+
+.selectContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.select {
+  background-color: transparent;
+  width: 200px;
+  border-color: 2px solid black;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 200px;
+  margin: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 32px;
+  height: 32px;
+  /* border: 0; */
+  background: url('./components/fitness.png');
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  /* width: 100%; */
+  height: 25px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px white, 0px 0px 1px white;
+  background: white;
+  border-radius: 1.3px;
+  border: 0.2px double #010101;
+}
+
+input[type=range]::-webkit-slider-runnable-track:hover {
+  transform: scale(1.2);
+}
+
+.imageAndRadio {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.imageOnlyRadio {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 70px;
+}
+
+.radioOnly{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px; 
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 0.5px solid black;
+  border-radius: 2px;
+}
+
+progress[value]::-webkit-progress-value {
+    background-color:black;
+    border-radius: 2px;
+    height: 17px;
+    
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: white;
+}
+
+
