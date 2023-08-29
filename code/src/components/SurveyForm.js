@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 
 // components
 import { QuestionTextInputName } from './QuestionTextInputName';
+import QuestionRadioButtonsAge from './QuestionRadioButtonsAge';
 
 export const SurveyForm = () => {
   const [section, setSection] = useState('firstQuestion');
   const [firstName, setFirstName] = useState(''); // Declare a state variable...
+  const [ageGroup, setAgeGroup] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
   const [otherPlatforms, setOtherPlatforms] = useState('');
   const [comment, setComment] = useState('');
@@ -31,51 +33,11 @@ export const SurveyForm = () => {
             setSection={setSection} />
         )}
         {section === 'secondQuestion' && (
-          <p>
-        How old are you?
-            <label htmlFor="15-25">
-              <input
-                type="radio"
-                name="age"
-                value="15-25"
-                id="15-25" /> 15-25
-            </label>
-            <label htmlFor="26-35">
-              <input
-                type="radio"
-                name="age"
-                value="26-35"
-                id="26-35" /> 26-35
-            </label>
-            <label htmlFor="36-45">
-              <input
-                type="radio"
-                name="age"
-                value="36-45"
-                id="36-45" /> 36-45
-            </label>
-            <label htmlFor="46-55">
-              <input
-                type="radio"
-                name="age"
-                value="46-55"
-                id="46-55" /> 46-55
-            </label>
-            <label htmlFor="56-65">
-              <input
-                type="radio"
-                name="age"
-                value="56-65"
-                id="56-65" /> 56-65
-            </label>
-            <label htmlFor="secret">
-              <input
-                type="radio"
-                name="age"
-                value="secret"
-                id="secret" /> I prefer not to say
-            </label>
-          </p>
+          <QuestionRadioButtonsAge
+            section={section}
+            setSection={setSection}
+            ageGroup={ageGroup}
+            setAgeGroup={setAgeGroup} />
         )}
         {section === 'thirdQuestion' && (
           <label htmlFor="dropdownMenu">
@@ -149,6 +111,9 @@ export const SurveyForm = () => {
         )}
         {section === 'fifthQuestion' && (
           <textarea name="comment" placeholder="Comment" value={comment} onChange={(e) => setComment(e.target.value)} autoComplete="off" />
+        )}
+        {section === 'summary' && (
+          <p>Your name is {firstName}</p>
         )}
       </form>
     </div>

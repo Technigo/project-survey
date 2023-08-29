@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import Popup from './Popup';
 
-const NextButton = ({ currentState, defaultState, whatQuestionNext }) => {
+const NextButton = ({ setSection, currentState, defaultState, whatQuestionNext }) => {
   const [popup, setPopup] = useState(true);
   const handleNextButton = () => {
     if (currentState !== defaultState) {
-      SVGComponentTransferFunctionElement(whatQuestionNext);
+      setSection(whatQuestionNext);
     } else {
       setPopup(true)
     }
