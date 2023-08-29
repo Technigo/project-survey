@@ -51,7 +51,7 @@ export const SurveyForm = () => {
       </p>
       <textarea name="comment" placeholder="Comment" value={comment} onChange={(e) => setComment(e.target.value)} />
       {comment !== '' && <p>Here is what you think: {comment}</p>}
-      <button type="submit" className="submit-btn">Submit form</button>
+      <button type="submit" className="submit-button">Submit form</button>
     </form>
   )
 }
