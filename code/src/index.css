@@ -28,12 +28,6 @@ body {
   margin: 0 auto;
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .submit-button {
   appearance: none;
   background-color: transparent;
@@ -76,7 +70,32 @@ body {
   transform: translateY(0);
 }
 
-.header-logo{
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo, .music-logo, .footer-logo {
   width: 40px;
   height: auto;
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
+
+.questions-wrapper {
+  height: 25vh;
+  max-width: 80vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
 }

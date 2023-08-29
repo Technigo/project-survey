@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 
 export const SurveyForm = () => {
   const [firstName, setFirstName] = useState(''); // Declare a state variable...
-  const [email, setEmail] = useState('');
-  const [age, setAge] = useState('');
   const [selectedOption, setSelectedOption] = useState('');
   const [comment, setComment] = useState('');
   const handleSubmit = (e) => {
@@ -18,41 +16,114 @@ export const SurveyForm = () => {
     console.log(formJson);
   }
   return (
-    <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
-      <label htmlFor="name" id="name-label">Name:<input name="firstName" type="text" id="name" value={firstName} onChange={(e) => setFirstName(e.target.value)} autoComplete="given-name" required /></label>
-      {firstName !== '' && <p>Your name is {firstName}.</p>}
-      <label htmlFor="email" id="email-label">Email:<input name="email" type="email" id="email" value={email} required onChange={(e) => setEmail(e.target.value)} autoComplete="email" /></label>
-      {email !== '' && <p>Your email is {email}.</p>}
-      <label htmlFor="number" id="number-label">Age:<input name="age" type="number" id="number" min="1" max="100" value={age} onChange={(e) => setAge(e.target.value)} autoComplete="off" /></label>
-      {age !== '' && <p>You are {age} years old.</p>}
-      <label htmlFor="selectedOption">
-          Select an option:
-        <select
-          id="selectedOption"
-          name="selectedOption"
-          value={selectedOption} // force the select's value to match the state variable and update the state variable on any change
-          onChange={(e) => setSelectedOption(e.target.value)}>
-          <option value="someOption">Some option</option>
-          <option value="otherOption">Other option</option>
-        </select>
-      </label>
-      <p>Your selected option: {selectedOption}</p>
-      <label htmlFor="checkboxOne">
-        Checkbox: <input type="checkbox" name="myCheckboxOne" id="checkboxOne" />
-      </label>
-      <label htmlFor="checkboxTwo">
-        Checkbox: <input type="checkbox" name="myCheckboxTwo" id="checkboxTwo" defaultChecked={false} />
-      </label>
-      <p>
-        Radio buttons:
-        <label htmlFor="radioOne"><input type="radio" name="myRadio" value="option1" id="radioOne" /> Option 1</label>
-        <label htmlFor="radioTwo"><input type="radio" name="myRadio" value="option2" id="radioTwo" defaultChecked /> Option 2</label>
-        <label htmlFor="radioThree"><input type="radio" name="myRadio" value="option3" id="radioThree" /> Option 3</label>
-      </p>
-      <textarea name="comment" placeholder="Comment" value={comment} onChange={(e) => setComment(e.target.value)} />
-      {comment !== '' && <p>Here is what you think: {comment}</p>}
-      <button type="submit" className="submit-button">Submit form</button>
-    </form>
+    <div className="questions-wrapper">
+      <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
+        <label htmlFor="firstName" id="name-label">Hi! What&apos;s your name?
+          <input
+            placeholder="Type your name here please..."
+            name="name"
+            type="text"
+            id="firstName"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            autoComplete="given-name"
+            required />
+        </label>
+        {firstName !== '' && <p>Your name is {firstName}.</p>}
+        <p>
+        How old are you?
+          <label htmlFor="15-25">
+            <input
+              type="radio"
+              name="age"
+              value="15-25"
+              id="15-25" /> 15-25
+          </label>
+          <label htmlFor="26-35">
+            <input
+              type="radio"
+              name="age"
+              value="26-35"
+              id="26-35" /> 26-35
+          </label>
+          <label htmlFor="36-45">
+            <input
+              type="radio"
+              name="age"
+              value="36-45"
+              id="36-45" /> 36-45
+          </label>
+          <label htmlFor="46-55">
+            <input
+              type="radio"
+              name="age"
+              value="46-55"
+              id="46-55" /> 46-55
+          </label>
+          <label htmlFor="56-65">
+            <input
+              type="radio"
+              name="age"
+              value="56-65"
+              id="56-65" /> 56-65
+          </label>
+        </p>
+        <label htmlFor="dropdownMenu">
+          How often do you listen to music?
+          <select
+            id="dropdownMenu"
+            name="musicUsage"
+            value={selectedOption} // force the select's value to match the state variable and update the state variable on any change
+            onChange={(e) => setSelectedOption(e.target.value)}>
+            <option value="daily">Daily</option>
+            <option value="weekly">Once a week</option>
+            <option value="monthly">Once a month</option>
+            <option value="yearly">Once a year</option>
+          </select>
+        </label>
+        <p>You listen to music {selectedOption}.</p>
+        <p>What streaming platform(s) do you use?
+          <label htmlFor="checkbox1">
+            <input
+              type="checkbox"
+              name="spotify"
+              id="checkbox1"
+              defaultChecked={false} />Spotify
+          </label>
+          <label htmlFor="checkbox2">
+            <input
+              type="checkbox"
+              name="soundcloud"
+              id="checkbox2"
+              defaultChecked={false} />SoundCloud
+          </label>
+          <label htmlFor="checkbox3">
+            <input
+              type="checkbox"
+              name="bandcamp"
+              id="checkbox3"
+              defaultChecked={false} />Bandcamp
+          </label>
+          <label htmlFor="checkbox4">
+            <input
+              type="checkbox"
+              name="YouTube Music"
+              id="checkbox4"
+              defaultChecked={false} />YouTube Music
+          </label>
+          <label htmlFor="checkbox5">
+            <input
+              type="checkbox"
+              name="other"
+              id="checkbox5"
+              defaultChecked={false} />Other:
+          </label>
+        </p>
+        <textarea name="comment" placeholder="Comment" value={comment} onChange={(e) => setComment(e.target.value)} />
+        {comment !== '' && <p>Here is what you think: {comment}</p>}
+        <button type="submit" className="submit-button">Submit form</button>
+      </form>
+    </div>
   )
 }
 
