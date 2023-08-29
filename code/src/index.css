@@ -28,7 +28,7 @@ body {
   margin: 0 auto;
 }
 
-.submit-button {
+.next-button {
   appearance: none;
   background-color: transparent;
   border: 2px solid #1A1A1A;
@@ -54,18 +54,18 @@ body {
   will-change: transform;
 }
 
-.submit-button:disabled {
+.next-button:disabled {
   pointer-events: none;
 }
 
-.submit-button:hover {
+.next-button:hover {
   color: #fff;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-.submit-button:active {
+.next-button:active {
   box-shadow: none;
   transform: translateY(0);
 }
