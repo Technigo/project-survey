@@ -28,7 +28,7 @@ body {
   margin: 0 auto;
 }
 
-.next-button {
+.next-button, .previous-button, .submit-button {
   appearance: none;
   background-color: transparent;
   border: 2px solid #1A1A1A;
@@ -54,18 +54,18 @@ body {
   will-change: transform;
 }
 
-.next-button:disabled {
+.next-button:disabled, .previous-button:disabled, .submit-button:disabled {
   pointer-events: none;
 }
 
-.next-button:hover {
+.next-button:hover, .previous-button:hover, .submit-button:hover {
   color: #fff;
   background-color: #1A1A1A;
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
   transform: translateY(-2px);
 }
 
-.next-button:active {
+.next-button:active, .previous-button:active, .submit-button:active {
   box-shadow: none;
   transform: translateY(0);
 }

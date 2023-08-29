@@ -1,5 +1,6 @@
 import React from 'react';
 import NextButton from './NextButton';
+import PreviousButton from './PreviousButton';
 
 const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection }) => {
   const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Prefer not to say'];
@@ -25,6 +26,9 @@ const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection })
           </label>
         </span>
       ))}
+      <PreviousButton
+        whatQuestionPrevious="firstQuestion"
+        setSection={setSection} />
       <NextButton
         whatQuestionNext="thirdQuestion"
         section={section}
