@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 // components
 import { QuestionTextInputName } from './QuestionTextInputName';
 import QuestionRadioButtonsAge from './QuestionRadioButtonsAge';
+import QuestionDropdownMenu from './QuestionDropdownMenu';
 
 export const SurveyForm = () => {
   const [section, setSection] = useState('firstQuestion');
@@ -40,19 +41,11 @@ export const SurveyForm = () => {
             setAgeGroup={setAgeGroup} />
         )}
         {section === 'thirdQuestion' && (
-          <label htmlFor="dropdownMenu">
-          How often do you listen to music?
-            <select
-              id="dropdownMenu"
-              name="musicUsage"
-              value={selectedOption} // force the select's value to match the state variable and update the state variable on any change
-              onChange={(e) => setSelectedOption(e.target.value)}>
-              <option value="daily">Daily</option>
-              <option value="weekly">Once a week</option>
-              <option value="monthly">Once a month</option>
-              <option value="yearly">Once a year</option>
-            </select>
-          </label>
+          <QuestionDropdownMenu
+            selectedOption={selectedOption}
+            setSelectedOption={setSelectedOption}
+            section={section}
+            setSection={setSection} />
         )}
         {section === 'fourthQuestion' && (
           <p>What streaming platform(s) do you use?

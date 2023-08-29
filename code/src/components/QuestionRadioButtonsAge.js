@@ -28,13 +28,14 @@ const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection })
       ))}
       <PreviousButton
         whatQuestionPrevious="firstQuestion"
+        section={section}
         setSection={setSection} />
       <NextButton
         whatQuestionNext="thirdQuestion"
         section={section}
         setSection={setSection}
         currentState={ageGroup}
-        defaultState={undefined}
+        defaultState=""
         message="Age is required" />
     </>
   )
