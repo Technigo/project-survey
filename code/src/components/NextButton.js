@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Popup from './Popup';
 
-const NextButton = ({ setSection, currentState, defaultState, whatQuestionNext }) => {
-  const [popup, setPopup] = useState(true);
+const NextButton = ({ setSection, currentState, defaultState, whatQuestionNext, message }) => {
+  const [popup, setPopup] = useState(false);
   const handleNextButton = () => {
     if (currentState !== defaultState) {
       setSection(whatQuestionNext);
@@ -12,7 +12,7 @@ const NextButton = ({ setSection, currentState, defaultState, whatQuestionNext }
   }
   return (
     <>
-      {popup && <Popup />}
+      {popup && <Popup message={message} />}
       <button
         type="button"
         className="next-button"
