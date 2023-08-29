@@ -75,3 +75,8 @@ body {
   box-shadow: none;
   transform: translateY(0);
 }
+
+.header-logo{
+  width: 40px;
+  height: auto;
+}

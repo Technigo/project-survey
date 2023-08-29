@@ -3,6 +3,7 @@
 import React from 'react';
 import { SurveyForm } from 'components/SurveyForm';
 import { Header } from 'components/Header';
+import { Footer } from 'components/Footer';
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
       <section className="inner-wrapper">
         <Header />
         <SurveyForm />
+        <Footer />
       </section>
     </section>
   );

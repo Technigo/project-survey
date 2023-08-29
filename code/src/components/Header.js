@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import backgroundMusic from 'assets/music/Jazz Night - Golden Age Radio.mp3';
+import headerLogo from 'assets/noun-music-1620687.png';
 
 export const Header = () => {
   // A variable importing the music file outside of the App function
@@ -23,6 +24,7 @@ export const Header = () => {
   }
   return (
     <div className="header">
+      <img src={headerLogo} alt="logo" className="header-logo" />
       <button type="submit" className="music-btn" onClick={togglePlay}><span className="music-emoji">&#127925;</span></button>
       <h1>Survey Form</h1>
       <p>Description</p>
