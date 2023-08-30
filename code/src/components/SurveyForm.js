@@ -60,16 +60,16 @@ export const SurveyForm = () => {
             setSection={setSection} />
         )}
         {section === 'fifthQuestion' && (
-          <QuestionTextInputSong
-            favoriteSong={favoriteSong}
-            setFavoriteSong={setFavoriteSong}
+          <QuestionDropdownGenre
+            genre={genre}
+            setGenre={setGenre}
             section={section}
             setSection={setSection} />
         )}
         {section === 'sixthQuestion' && (
-          <QuestionDropdownGenre
-            genre={genre}
-            setGenre={setGenre}
+          <QuestionTextInputSong
+            favoriteSong={favoriteSong}
+            setFavoriteSong={setFavoriteSong}
             section={section}
             setSection={setSection} />
         )}
