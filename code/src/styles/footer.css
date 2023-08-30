@@ -6,3 +6,8 @@ footer {
     right: 0;
     position: absolute;
   }
+
+  .footer-logo {
+    width: 40px;
+    height: auto;
+  }

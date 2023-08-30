@@ -10,6 +10,9 @@ import QuestionTextInputSong from './QuestionTextInputSong';
 import QuestionDropdownGenre from './QuestionDropdownGenre';
 import Summary from './Summary';
 
+// Styling
+import 'styles/form.css';
+
 export const SurveyForm = () => {
   const [section, setSection] = useState('firstQuestion');
   const [firstName, setFirstName] = useState(''); // Declare a state variable...

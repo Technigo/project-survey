@@ -1,6 +1,9 @@
 import React from 'react';
 import footerLogo from 'assets/noun-music-1620687.png';
 
+// styling
+import 'styles/footer.css'
+
 export const Footer = () => {
   return (
     <footer>

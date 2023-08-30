@@ -3,6 +3,9 @@ import backgroundMusic from 'assets/music/Jazz Night - Golden Age Radio.mp3';
 import headerLogo from 'assets/noun-music-1620687.png';
 import musicLogo from 'assets/noun-music-6011738.png';
 
+// styling
+import 'styles/header.css'
+
 export const Header = () => {
   // A variable importing the music file outside of the App function
   // because the toggling didn't work inside it for some reason:
@@ -26,7 +29,9 @@ export const Header = () => {
   return (
     <div className="header">
       <img src={headerLogo} alt="logo" className="header-logo" />
-      <button type="submit" className="music-btn" onClick={togglePlay}><img src={musicLogo} className="music-logo" alt="music" /></button>
+      <div className="cta__button">
+        <button type="submit" className="music-btn" onClick={togglePlay}><img src={musicLogo} className="music-logo" alt="music" /></button>
+      </div>
     </div>
   )
 }
