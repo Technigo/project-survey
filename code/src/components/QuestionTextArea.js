@@ -1,7 +1,7 @@
 import React from 'react';
 
 // components
-import NextButton from './NextButton';
+import SubmitButton from './SubmitButton';
 import PreviousButton from './PreviousButton';
 
 const QuestionTextArea = ({ favoriteSong, setFavoriteSong, section, setSection }) => {
@@ -22,7 +22,7 @@ const QuestionTextArea = ({ favoriteSong, setFavoriteSong, section, setSection }
         whatQuestionPrevious="fourthQuestion"
         section={section}
         setSection={setSection} />
-      <NextButton
+      <SubmitButton
         whatQuestionNext="summary"
         defaultState={0}
         currentState={favoriteSong.length}

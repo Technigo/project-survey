@@ -7,6 +7,7 @@ import QuestionRadioButtonsAge from './QuestionRadioButtonsAge';
 import QuestionRangeSlider from './QuestionRangeSlider';
 import QuestionCheckboxes from './QuestionCheckboxes';
 import QuestionTextArea from './QuestionTextArea';
+import Summary from './Summary';
 
 export const SurveyForm = () => {
   const [section, setSection] = useState('firstQuestion');
@@ -64,7 +65,14 @@ export const SurveyForm = () => {
             setSection={setSection} />
         )}
         {section === 'summary' && (
-          <p>Your name is {firstName}</p>
+          <Summary
+            firstName={firstName}
+            ageGroup={ageGroup}
+            range={range}
+            platforms={platforms}
+            favoriteSong={favoriteSong}
+            section={section}
+            setSection={setSection} />
         )}
       </form>
     </div>
