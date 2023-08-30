@@ -4,17 +4,17 @@ import React from 'react';
 import SubmitButton from './SubmitButton';
 import PreviousButton from './PreviousButton';
 
-const QuestionTextInputSong = ({ favoriteSong, setFavoriteSong, section, setSection }) => {
+const QuestionTextInputSong = ({ song, setSong, section, setSection }) => {
   return (
     <>
-      <label htmlFor="favoriteSongTitle" id="song-label">What&apos;s a song that you like?
+      <label htmlFor="songTitle" id="song-label">What&apos;s a song that you can&apos;t get enough of right now?
         <input
           placeholder="Type the title here please..."
-          name="favoriteSong"
+          name="goodSong"
           type="text"
-          id="favoriteSongTitle"
-          value={favoriteSong}
-          onChange={(e) => setFavoriteSong(e.target.value)}
+          id="songTitle"
+          value={song}
+          onChange={(e) => setSong(e.target.value)}
           autoComplete="off"
           required />
       </label>
@@ -25,7 +25,7 @@ const QuestionTextInputSong = ({ favoriteSong, setFavoriteSong, section, setSect
       <SubmitButton
         whatQuestionNext="summary"
         defaultState={0}
-        currentState={favoriteSong.length}
+        currentState={song.length}
         message="Just...something?"
         section={section}
         setSection={setSection} />
