@@ -7,7 +7,7 @@ import PreviousButton from './PreviousButton';
 const QuestionTextInputSong = ({ favoriteSong, setFavoriteSong, section, setSection }) => {
   return (
     <>
-      <label htmlFor="favoriteSongTitle" id="song-label">What&apos;s a song you like to listen to?
+      <label htmlFor="favoriteSongTitle" id="song-label">What&apos;s a song that you like?
         <input
           placeholder="Type the title here please..."
           name="favoriteSong"

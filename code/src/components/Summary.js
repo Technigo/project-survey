@@ -1,9 +1,9 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-const Summary = ({ firstName, ageGroup, range, platforms, favoriteSong }) => {
+const Summary = ({ firstName, ageGroup, range, platforms, genre, favoriteSong }) => {
   return (
-    <>
+    <article className="summary">
       <p>Your name is {firstName}, you are {ageGroup} years old. Music is {range} important to you in life and you use {platforms} to listen to it.</p>
       <p>When asked about your favorite song, you said the following:</p>
       <p>{favoriteSong}</p>
