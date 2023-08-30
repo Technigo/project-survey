@@ -6,7 +6,7 @@ import { QuestionTextInputName } from './QuestionTextInputName';
 import QuestionRadioButtonsAge from './QuestionRadioButtonsAge';
 import QuestionRangeSlider from './QuestionRangeSlider';
 import QuestionCheckboxes from './QuestionCheckboxes';
-import QuestionTextArea from './QuestionTextArea';
+import QuestionTextInputSong from './QuestionTextInputSong';
 import Summary from './Summary';
 
 export const SurveyForm = () => {
@@ -58,7 +58,7 @@ export const SurveyForm = () => {
             setSection={setSection} />
         )}
         {section === 'fifthQuestion' && (
-          <QuestionTextArea
+          <QuestionTextInputSong
             favoriteSong={favoriteSong}
             setFavoriteSong={setFavoriteSong}
             section={section}

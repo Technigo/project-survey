@@ -4,7 +4,7 @@ import React from 'react';
 import SubmitButton from './SubmitButton';
 import PreviousButton from './PreviousButton';
 
-const QuestionTextArea = ({ favoriteSong, setFavoriteSong, section, setSection }) => {
+const QuestionTextInputSong = ({ favoriteSong, setFavoriteSong, section, setSection }) => {
   return (
     <>
       <p>What&apos;s your favorite song?</p>
@@ -32,4 +32,4 @@ const QuestionTextArea = ({ favoriteSong, setFavoriteSong, section, setSection }
     </>
   )
 }
-export default QuestionTextArea;
+export default QuestionTextInputSong;
