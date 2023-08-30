@@ -4,15 +4,17 @@ import React, { useState } from 'react';
 // components
 import { QuestionTextInputName } from './QuestionTextInputName';
 import QuestionRadioButtonsAge from './QuestionRadioButtonsAge';
-import QuestionDropdownMenu from './QuestionDropdownMenu';
+import QuestionRangeSlider from './QuestionRangeSlider';
+import QuestionCheckboxes from './QuestionCheckboxes';
+import QuestionTextArea from './QuestionTextArea';
 
 export const SurveyForm = () => {
   const [section, setSection] = useState('firstQuestion');
   const [firstName, setFirstName] = useState(''); // Declare a state variable...
   const [ageGroup, setAgeGroup] = useState('');
-  const [selectedOption, setSelectedOption] = useState('');
-  const [otherPlatforms, setOtherPlatforms] = useState('');
-  const [comment, setComment] = useState('');
+  const [range, setRange] = useState('');
+  const [platforms, setPlatforms] = useState('');
+  const [favoriteSong, setFavoriteSong] = useState('');
   const handleSubmit = (e) => {
     // Prevent the browser from reloading the page
     e.preventDefault();
@@ -41,69 +43,25 @@ export const SurveyForm = () => {
             setAgeGroup={setAgeGroup} />
         )}
         {section === 'thirdQuestion' && (
-          <QuestionDropdownMenu
-            selectedOption={selectedOption}
-            setSelectedOption={setSelectedOption}
+          <QuestionRangeSlider
+            range={range}
+            setRange={setRange}
             section={section}
             setSection={setSection} />
         )}
         {section === 'fourthQuestion' && (
-          <p>What streaming platform(s) do you use?
-            <label htmlFor="checkbox1">
-              <input
-                type="checkbox"
-                name="spotify"
-                id="checkbox1"
-                defaultChecked={false} />Spotify
-            </label>
-            <label htmlFor="checkbox2">
-              <input
-                type="checkbox"
-                name="soundcloud"
-                id="checkbox2"
-                defaultChecked={false} />SoundCloud
-            </label>
-            <label htmlFor="checkbox3">
-              <input
-                type="checkbox"
-                name="bandcamp"
-                id="checkbox3"
-                defaultChecked={false} />Bandcamp
-            </label>
-            <label htmlFor="checkbox4">
-              <input
-                type="checkbox"
-                name="YouTube Music"
-                id="checkbox4"
-                defaultChecked={false} />YouTube Music
-            </label>
-            <label htmlFor="checkbox5">
-              <input
-                type="checkbox"
-                name="otherPlatforms"
-                id="checkbox5"
-                defaultChecked={false} />Other:
-            </label>
-            <label htmlFor="otherPlatformsTextInput">
-              <input
-                type="text"
-                value={otherPlatforms}
-                onChange={(e) => setOtherPlatforms(e.target.value)}
-                placeholder="Type other platforms here please..."
-                id="otherPlatformsTextInput"
-                autoComplete="off" />
-            </label>
-            <label htmlFor="checkbox6">
-              <input
-                type="checkbox"
-                name="noPlatforms"
-                id="checkbox6"
-                defaultChecked={false} />None
-            </label>
-          </p>
+          <QuestionCheckboxes
+            platforms={platforms}
+            setPlatforms={setPlatforms}
+            section={section}
+            setSection={setSection} />
         )}
         {section === 'fifthQuestion' && (
-          <textarea name="comment" placeholder="Comment" value={comment} onChange={(e) => setComment(e.target.value)} autoComplete="off" />
+          <QuestionTextArea
+            favoriteSong={favoriteSong}
+            setFavoriteSong={setFavoriteSong}
+            section={section}
+            setSection={setSection} />
         )}
         {section === 'summary' && (
           <p>Your name is {firstName}</p>
