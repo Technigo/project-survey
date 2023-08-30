@@ -5,7 +5,7 @@ import NextButton from './NextButton';
 import PreviousButton from './PreviousButton';
 
 const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) => {
-  const platformsGroup = ['Spotify', 'SoundCloud', 'Bandcamp', 'Apple Music', 'YouTube Music', 'Other'];
+  const platformsGroup = ['Spotify', 'SoundCloud', 'Bandcamp', 'Apple Music', 'YouTube Music', 'Other platform(s)'];
   const handlePlatformsChange = (platformValue) => {
     if (platforms.includes(platformValue)) {
       setPlatforms(platforms.filter((item) => item !== platformValue))
