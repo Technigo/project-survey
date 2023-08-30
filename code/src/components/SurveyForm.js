@@ -7,6 +7,7 @@ import QuestionRadioButtonsAge from './QuestionRadioButtonsAge';
 import QuestionRangeSlider from './QuestionRangeSlider';
 import QuestionCheckboxes from './QuestionCheckboxes';
 import QuestionTextInputSong from './QuestionTextInputSong';
+import QuestionDropdownGenre from './QuestionDropdownGenre';
 import Summary from './Summary';
 
 export const SurveyForm = () => {
@@ -16,6 +17,7 @@ export const SurveyForm = () => {
   const [range, setRange] = useState('');
   const [platforms, setPlatforms] = useState('');
   const [favoriteSong, setFavoriteSong] = useState('');
+  const [genre, setGenre] = useState('');
   const handleSubmit = (e) => {
     // Prevent the browser from reloading the page
     e.preventDefault();
@@ -64,6 +66,13 @@ export const SurveyForm = () => {
             section={section}
             setSection={setSection} />
         )}
+        {section === 'sixthQuestion' && (
+          <QuestionDropdownGenre
+            genre={genre}
+            setGenre={setGenre}
+            section={section}
+            setSection={setSection} />
+        )}
         {section === 'summary' && (
           <Summary
             firstName={firstName}
@@ -71,6 +80,7 @@ export const SurveyForm = () => {
             range={range}
             platforms={platforms}
             favoriteSong={favoriteSong}
+            genre={genre}
             section={section}
             setSection={setSection} />
         )}
