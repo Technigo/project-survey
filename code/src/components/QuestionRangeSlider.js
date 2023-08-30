@@ -6,12 +6,14 @@ import PreviousButton from './PreviousButton';
 
 const QuestionDropdownMenu = ({ range, setRange, section, setSection }) => {
   const getLabelForValue = (value) => {
-    if (value <= 24) {
+    if (value <= 5) {
       return 'Not important at all';
+    } else if (value <= 24) {
+      return 'There are more important things'
     } else if (value <= 49) {
-      return 'Not very important';
+      return 'I like music';
     } else if (value <= 74) {
-      return 'There are more important things';
+      return 'I love music';
     } else {
       return 'Music is life';
     }
@@ -19,7 +21,7 @@ const QuestionDropdownMenu = ({ range, setRange, section, setSection }) => {
   return (
     <>
       <label htmlFor="myRange">
-          How important is music to you?
+          How important is music to you in life?
         <input
           type="range"
           min="1"
