@@ -98,13 +98,17 @@
     transform: translateY(0);
   }
   
+  .buttons__wrapper{
+    display: flex;
+    justify-content: space-evenly;
+  }
 /* Popup */
 
 .form__popup__wrapper {
     position: absolute;
     width: 100%;
     left: 0;
-    top: 190px;
+    top: 220px;
     background: #000;
   }
   

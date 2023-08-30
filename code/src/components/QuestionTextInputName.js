@@ -18,13 +18,15 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
             required />
         </div>
       </label>
-      <NextButton
-        whatQuestionNext="secondQuestion"
-        section={section}
-        setSection={setSection}
-        currentState={firstName}
-        defaultState=""
-        message="Name is required" />
+      <div className="buttons__wrapper">
+        <NextButton
+          whatQuestionNext="secondQuestion"
+          section={section}
+          setSection={setSection}
+          currentState={firstName}
+          defaultState=""
+          message="Name is required" />
+      </div>
     </article>
   )
 }

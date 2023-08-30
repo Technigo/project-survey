@@ -32,17 +32,19 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
           </span>
         ))}
       </div>
-      <PreviousButton
-        whatQuestionPrevious="thirdQuestion"
-        section={section}
-        setSection={setSection} />
-      <NextButton
-        whatQuestionNext="fifthQuestion"
-        section={section}
-        setSection={setSection}
-        currentState={platforms.length}
-        defaultState={0}
-        message="Please select a platform" />
+      <div className="buttons__wrapper">
+        <PreviousButton
+          whatQuestionPrevious="thirdQuestion"
+          section={section}
+          setSection={setSection} />
+        <NextButton
+          whatQuestionNext="fifthQuestion"
+          section={section}
+          setSection={setSection}
+          currentState={platforms.length}
+          defaultState={0}
+          message="Please select a platform" />
+      </div>
     </>
   )
 }

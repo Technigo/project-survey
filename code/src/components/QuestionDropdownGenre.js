@@ -43,17 +43,19 @@ const QuestionDropdownGenre = ({ section, setSection, genre, setGenre }) => {
           </select>
         </div>
       </label>
-      <PreviousButton
-        section={section}
-        setSection={setSection}
-        whatQuestionPrevious="fifthQuestion" />
-      <NextButton
-        whatQuestionNext="sixthQuestion"
-        defaultState=""
-        currentState={genre}
-        message="Please select a genre"
-        section={section}
-        setSection={setSection} />
+      <div className="buttons__wrapper">
+        <PreviousButton
+          section={section}
+          setSection={setSection}
+          whatQuestionPrevious="fourthQuestion" />
+        <NextButton
+          whatQuestionNext="sixthQuestion"
+          defaultState=""
+          currentState={genre}
+          message="Please select a genre"
+          section={section}
+          setSection={setSection} />
+      </div>
     </>
   )
 }

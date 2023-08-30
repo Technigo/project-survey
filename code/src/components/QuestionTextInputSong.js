@@ -20,17 +20,19 @@ const QuestionTextInputSong = ({ song, setSong, section, setSection }) => {
           required />
         </div>
       </label>
-      <PreviousButton
-        whatQuestionPrevious="fifthQuestion"
-        section={section}
-        setSection={setSection} />
-      <SubmitButton
-        whatQuestionNext="summary"
-        defaultState={0}
-        currentState={song.length}
-        message="Just...something?"
-        section={section}
-        setSection={setSection} />
+      <div className="buttons__wrapper">
+        <PreviousButton
+          whatQuestionPrevious="fifthQuestion"
+          section={section}
+          setSection={setSection} />
+        <SubmitButton
+          whatQuestionNext="summary"
+          defaultState={0}
+          currentState={song.length}
+          message="Just...something?"
+          section={section}
+          setSection={setSection} />
+      </div>
     </>
   )
 }
