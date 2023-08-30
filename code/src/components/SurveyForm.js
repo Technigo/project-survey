@@ -16,7 +16,7 @@ export const SurveyForm = () => {
   const [ageGroup, setAgeGroup] = useState('');
   const [range, setRange] = useState('');
   const [platforms, setPlatforms] = useState('');
-  const [favoriteSong, setFavoriteSong] = useState('');
+  const [song, setSong] = useState('');
   const [genre, setGenre] = useState('');
   const handleSubmit = (e) => {
     // Prevent the browser from reloading the page
@@ -68,8 +68,8 @@ export const SurveyForm = () => {
         )}
         {section === 'sixthQuestion' && (
           <QuestionTextInputSong
-            favoriteSong={favoriteSong}
-            setFavoriteSong={setFavoriteSong}
+            song={song}
+            setSong={setSong}
             section={section}
             setSection={setSection} />
         )}
@@ -79,7 +79,7 @@ export const SurveyForm = () => {
             ageGroup={ageGroup}
             range={range}
             platforms={platforms}
-            favoriteSong={favoriteSong}
+            song={song}
             genre={genre}
             section={section}
             setSection={setSection} />
