@@ -98,6 +98,33 @@
     transform: translateY(0);
   }
   
+/* Popup */
+
+.form__popup__wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 190px;
+    background: #000;
+  }
+  
+  .form__popup {
+    font-size: 14px;
+    padding: 5px 30px;
+    margin: auto;
+    color: white;
+  }
+  
+  .form__popup-tag {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    transform: rotate(45deg);
+    position: absolute;
+    margin-top: -10px;
+    z-index: -1;
+  }
+
   datalist {
     display: flex;
     flex-direction: column;

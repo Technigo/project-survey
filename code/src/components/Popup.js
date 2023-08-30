@@ -2,7 +2,9 @@ import React from 'react';
 
 const Popup = ({ message }) => {
   return (
-    <p>{message}</p>
+    <span className="form__popup__wrapper"><p className="form__popup">{message}</p>
+      <span className="form__popup-tag" />
+    </span>
   )
 }
 
