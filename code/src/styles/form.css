@@ -1,0 +1,26 @@
+.questions-wrapper {
+    height: 25vh;
+    max-width: 80vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+  
+  datalist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    writing-mode: horizontal;
+    width: 200px;
+  }
+  
+  option {
+    padding: 0;
+  }
+  
+  input[type="range"] {
+    width: 200px;
+    margin: 0;
+  }

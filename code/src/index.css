@@ -11,6 +11,7 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
   box-sizing: border-box;
 }
@@ -68,51 +69,4 @@ body {
 .next-button:active, .previous-button:active, .submit-button:active {
   box-shadow: none;
   transform: translateY(0);
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.header-logo, .music-logo, .footer-logo {
-  width: 40px;
-  height: auto;
-}
-
-footer {
-  text-align: center;
-  font-size: 12px;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  position: absolute;
-}
-
-.questions-wrapper {
-  height: 25vh;
-  max-width: 80vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-datalist {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  writing-mode: horizontal;
-  width: 200px;
-}
-
-option {
-  padding: 0;
-}
-
-input[type="range"] {
-  width: 200px;
-  margin: 0;
 }
