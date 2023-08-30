@@ -4,6 +4,8 @@ import React from 'react';
 import NextButton from './NextButton';
 import PreviousButton from './PreviousButton';
 
+import 'styles/form.css'
+
 const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) => {
   const platformsGroup = ['Spotify', 'SoundCloud', 'Bandcamp', 'Apple Music', 'YouTube Music', 'Other platform(s)'];
   const handlePlatformsChange = (platformValue) => {
@@ -15,7 +17,8 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
   }
   return (
     <>
-      <p>What streaming platform(s) do you use?
+      <p className="form__question">What streaming platform(s) do you use?</p>
+      <div className="question__content-wrapper">
         {platformsGroup.map((platform) => (
           <span key={platform} className="platform-checkbox">
             <label htmlFor={platform}>
@@ -28,7 +31,7 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
             </label>
           </span>
         ))}
-      </p>
+      </div>
       <PreviousButton
         whatQuestionPrevious="thirdQuestion"
         section={section}

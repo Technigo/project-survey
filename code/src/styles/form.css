@@ -1,4 +1,18 @@
-.questions-wrapper {
+.form__wrapper {
+    text-align: center;
+  margin: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  }
+
+.form__question {
+    max-width: 60vw;
+    margin: auto;
+    display: block;
+  }
+
+.question__content-wrapper {
     height: 25vh;
     max-width: 80vw;
     display: flex;
@@ -7,6 +21,7 @@
     flex-wrap: wrap;
     position: relative;
   }
+  
   
   datalist {
     display: flex;

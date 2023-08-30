@@ -4,6 +4,8 @@ import React from 'react';
 import NextButton from './NextButton';
 import PreviousButton from './PreviousButton';
 
+import 'styles/form.css'
+
 const QuestionDropdownMenu = ({ range, setRange, section, setSection }) => {
   const getLabelForValue = (value) => {
     if (value <= 25) {
@@ -16,18 +18,20 @@ const QuestionDropdownMenu = ({ range, setRange, section, setSection }) => {
   };
   return (
     <>
-      <label htmlFor="myRange">
+      <label htmlFor="myRange" className="form__question">
       On a scale from 0 to 100, how important is music to you?
-        <input
-          type="range"
-          min="1"
-          max="100"
-          value={range}
-          onChange={(e) => setRange(e.target.value)}
-          className="slider"
-          name="importance"
-          list="markers"
-          id="myRange" />
+        <div className="question__content-wrapper">
+          <input
+            type="range"
+            min="1"
+            max="100"
+            value={range}
+            onChange={(e) => setRange(e.target.value)}
+            className="slider"
+            name="importance"
+            list="markers"
+            id="myRange" />
+        </div>
       </label>
       <datalist id="markers">
         <option value="0" />

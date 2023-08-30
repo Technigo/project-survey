@@ -2,6 +2,8 @@ import React from 'react';
 import NextButton from './NextButton';
 import PreviousButton from './PreviousButton';
 
+import 'styles/form.css'
+
 const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection }) => {
   const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Prefer not to say'];
   const handleAgeChange = (e) => {
@@ -9,23 +11,25 @@ const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection })
   }
   return (
     <>
-      <p>
+      <p className="form__question">
         How old are you?
       </p>
-      {ageGroups.map((group) => (
-        <span key={group} className="radio-buttons">
-          <input
-            id={group}
-            type="radio"
-            name={group}
-            value={group}
-            onChange={handleAgeChange}
-            checked={ageGroup === group} />
-          <label htmlFor={group} key={group}>
-            {group}
-          </label>
-        </span>
-      ))}
+      <div className="question__content-wrapper">
+        {ageGroups.map((group) => (
+          <span key={group} className="radio-buttons">
+            <input
+              id={group}
+              type="radio"
+              name={group}
+              value={group}
+              onChange={handleAgeChange}
+              checked={ageGroup === group} />
+            <label htmlFor={group} key={group}>
+              {group}
+            </label>
+          </span>
+        ))}
+      </div>
       <PreviousButton
         whatQuestionPrevious="firstQuestion"
         section={section}

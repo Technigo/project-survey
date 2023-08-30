@@ -7,8 +7,8 @@ import PreviousButton from './PreviousButton';
 const QuestionTextInputSong = ({ song, setSong, section, setSection }) => {
   return (
     <>
-      <label htmlFor="songTitle" id="song-label">What&apos;s a song that you can&apos;t get enough of right now?
-        <input
+      <label htmlFor="songTitle" className="form__question">What&apos;s a song that you can&apos;t get enough of right now?
+        <div className="question__content-wrapper"><input
           placeholder="Type the title here please..."
           name="goodSong"
           type="text"
@@ -17,6 +17,7 @@ const QuestionTextInputSong = ({ song, setSong, section, setSection }) => {
           onChange={(e) => setSong(e.target.value)}
           autoComplete="off"
           required />
+        </div>
       </label>
       <PreviousButton
         whatQuestionPrevious="fifthQuestion"

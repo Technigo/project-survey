@@ -32,7 +32,7 @@ export const SurveyForm = () => {
     console.log(formJson);
   }
   return (
-    <div className="questions-wrapper">
+    <section className="form__wrapper">
       <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
         {section === 'firstQuestion' && (
           <QuestionTextInputName
@@ -88,7 +88,7 @@ export const SurveyForm = () => {
             setSection={setSection} />
         )}
       </form>
-    </div>
+    </section>
   )
 }
 

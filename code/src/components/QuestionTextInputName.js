@@ -3,9 +3,9 @@ import NextButton from './NextButton';
 
 export const QuestionTextInputName = ({ firstName, setFirstName, section, setSection }) => {
   return (
-    <article className="form-question1">
-      <label htmlFor="firstName" id="name-label">Hi! What&apos;s your name?
-        <input
+    <article>
+      <label htmlFor="firstName" className="form__question">Hi! What&apos;s your name?
+        <div className="question__content-wrapper"><input
           placeholder="Type your name here please..."
           name="name"
           type="text"
@@ -14,6 +14,7 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
           onChange={(e) => setFirstName(e.target.value)}
           autoComplete="given-name"
           required />
+        </div>
       </label>
       <NextButton
         whatQuestionNext="secondQuestion"
