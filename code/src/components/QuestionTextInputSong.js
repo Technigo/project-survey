@@ -11,6 +11,7 @@ const QuestionTextInputSong = ({ song, setSong, section, setSection }) => {
         <div className="question__content-wrapper"><input
           placeholder="Type the title here please..."
           name="goodSong"
+          className="form__input"
           type="text"
           id="songTitle"
           value={song}

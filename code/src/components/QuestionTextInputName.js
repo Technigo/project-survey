@@ -5,15 +5,17 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
   return (
     <article>
       <label htmlFor="firstName" className="form__question">Hi! What&apos;s your name?
-        <div className="question__content-wrapper"><input
-          placeholder="Type your name here please..."
-          name="name"
-          type="text"
-          id="firstName"
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          autoComplete="given-name"
-          required />
+        <div className="question__content-wrapper">
+          <input
+            placeholder="Type your name here please..."
+            name="name"
+            className="form__input"
+            type="text"
+            id="firstName"
+            value={firstName}
+            onChange={(e) => setFirstName(e.target.value)}
+            autoComplete="off"
+            required />
         </div>
       </label>
       <NextButton
