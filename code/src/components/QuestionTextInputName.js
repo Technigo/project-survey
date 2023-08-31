@@ -25,7 +25,7 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
           setSection={setSection}
           currentState={firstName}
           defaultState=""
-          message="Name is required" />
+          message="Please enter a name" />
       </div>
     </article>
   )

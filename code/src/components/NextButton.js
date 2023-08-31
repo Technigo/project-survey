@@ -11,15 +11,14 @@ const NextButton = ({ setSection, currentState, defaultState, whatQuestionNext, 
     }
   }
   return (
-    <>
-      {popup && <Popup message={message} />}
+    <div className="form__button__popup__wrapper">
       <button
         type="button"
         className="next-button"
         onClick={handleNextButton}>Next question
       </button>
-
-    </>
+      {popup && <Popup message={message} />}
+    </div>
 
   )
 }

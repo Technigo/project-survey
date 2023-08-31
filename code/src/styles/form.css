@@ -10,18 +10,24 @@
     max-width: 60vw;
     margin: auto;
     display: block;
+    font-size: 20px;
+    font-weight: 300;
   }
 
 .question__content-wrapper {
-    height: 25vh;
+    height: 15vh;
     max-width: 80vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
-    margin-bottom: 80px
+    padding: 30px;
   }
+
+.form__checkbox {
+    margin: 10px 25px 10px 5px;
+}
 
   /* --- Input styling --- */
 .form__input {
@@ -111,7 +117,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 330px;
+    top: 470px;
     background: #000;
   }
   

@@ -42,7 +42,7 @@ const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection })
           setSection={setSection}
           currentState={ageGroup}
           defaultState=""
-          message="Age is required" />
+          message="Please enter an age" />
       </div>
     </>
   )
