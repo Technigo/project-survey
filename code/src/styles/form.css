@@ -15,7 +15,7 @@
   }
 
 .question__content-wrapper {
-    height: 15vh;
+    height: 25vh;
     max-width: 80vw;
     display: flex;
     align-items: center;
@@ -55,12 +55,78 @@
     color: #000 !important;
     }
 
-    .form__radiobuttons {
-        padding: 5px;
-      }
-      .form__radiobutton__input {
-        margin: 10px;
-      }
+input[type="range"] {
+    width: 200px;
+    margin: 0;
+    accent-color: coral;
+  }
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  /* Not removed via appearance */
+  margin: 0;
+  font: inherit;
+  color: #000;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #000;
+  border-radius: 50%;
+  transform: translateY(0.2em);
+  
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+  
+  input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+  input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid #000;
+    outline-offset: max(2px, 0.15em);
+  }
+
+input[type="checkbox"] {
+    /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  appearance: none;
+  /* For iOS < 15 to remove gradient background */
+  background-color: #fff;
+  font: inherit;
+  color: #000;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid #000;
+  border-radius: 0.15em;
+  transform: translateY(0.3em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em coral;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
       
   /* Buttons */
   .next-button, .previous-button, .submit-button {
@@ -136,23 +202,6 @@
     position: absolute;
     margin-top: -10px;
     z-index: -1;
-  }
-
-  datalist {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    writing-mode: horizontal;
-    width: 200px;
-  }
-  
-  option {
-    padding: 0;
-  }
-  
-  input[type="range"] {
-    width: 200px;
-    margin: 0;
   }
 
 @media (min-width: 1024px) {

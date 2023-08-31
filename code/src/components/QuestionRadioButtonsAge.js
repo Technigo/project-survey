@@ -25,7 +25,7 @@ const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection })
               value={group}
               onChange={handleAgeChange}
               checked={ageGroup === group} />
-            <label htmlFor={group} key={group}>
+            <label htmlFor={group} key={group} className="form-control">
               <span className="form__radiobutton__input">{group}</span>
             </label>
           </span>

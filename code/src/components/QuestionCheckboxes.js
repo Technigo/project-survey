@@ -21,7 +21,7 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
       <div className="question__content-wrapper">
         {platformsGroup.map((platform) => (
           <span key={platform} className="form__checkbox">
-            <label htmlFor={platform}>
+            <label htmlFor={platform} className="form-control">
               <input
                 type="checkbox"
                 checked={platforms.includes(platform)}

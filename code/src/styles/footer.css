@@ -1,9 +1,10 @@
 footer {
     text-align: center;
     font-size: 12px;
+    margin-top: 50px;
   }
 
   .footer-logo {
-    width: 40px;
+    width: 30px;
     height: auto;
   }

@@ -14,7 +14,7 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
             id="firstName"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            autoComplete="off"
+            autoComplete="given-name"
             required />
         </div>
       </label>
