@@ -7,12 +7,10 @@ import { Footer } from 'components/Footer';
 
 export const App = () => {
   return (
-    <section className="outer-wrapper">
-      <section className="inner-wrapper">
-        <Header />
-        <SurveyForm />
-        <Footer />
-      </section>
-    </section>
+    <main className="wrapper">
+      <Header />
+      <SurveyForm />
+      <Footer />
+    </main>
   );
 }

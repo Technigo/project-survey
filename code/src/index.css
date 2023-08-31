@@ -1,5 +1,7 @@
-:root {
-  --color-black: black;
+html,
+body,
+#root {
+  height: 100%;
 }
 
 body {
@@ -16,16 +18,12 @@ body {
   box-sizing: border-box;
 }
 
-.outer-wrapper {
-  width: 100%;
+.wrapper {
+  padding: 30px;
+  height: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-
-.inner-wrapper {
+  flex-direction: column;
   width: 80%;
+  margin: auto;
   max-width: 600px;
-  margin: 0 auto;
 }

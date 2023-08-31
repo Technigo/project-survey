@@ -20,6 +20,7 @@
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
+    margin-bottom: 80px
   }
 
   /* --- Input styling --- */
@@ -108,7 +109,7 @@
     position: absolute;
     width: 100%;
     left: 0;
-    top: 220px;
+    top: 330px;
     background: #000;
   }
   
@@ -145,3 +146,9 @@
     width: 200px;
     margin: 0;
   }
+
+@media (min-width: 1024px) {
+    .form__popup__wrapper {
+        top: 400px;
+    }
+}
