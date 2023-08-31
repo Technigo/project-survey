@@ -101,7 +101,9 @@
   
   .buttons__wrapper{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 /* Popup */
 
@@ -150,5 +152,8 @@
 @media (min-width: 1024px) {
     .form__popup__wrapper {
         top: 400px;
+    }
+    .wrapper {
+        max-width: 700px;
     }
 }
