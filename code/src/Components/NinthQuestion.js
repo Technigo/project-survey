@@ -6,7 +6,7 @@ export const NinthQuestion = ({ infinitiveVerb, setInfinitiveVerb }) => {
   }
   return (
     <>
-      <p className="instructionText"> Write an infititive verb</p>
+      <p className="instructionText"> Write an infinitive verb</p>
       <p className="descriptiveText"> e.g. run, complain, eat </p>
       <input aria-label="input field" className="input-field" type="text" value={infinitiveVerb} onChange={handleNinthAnswer} />
     </>
