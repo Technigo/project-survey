@@ -9,6 +9,9 @@ body,
   --input-focus-s: 100%;
   --input-focus-l: 42%;
   --form-control-color: rebeccapurple;
+  --select-border: #777;
+  --select-focus: blue;
+  --select-arrow: var(--select-border);
 }
 *,
 *:before,

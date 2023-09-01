@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
 // components
@@ -11,6 +12,8 @@ const QuestionDropdownGenre = ({ section, setSection, genre, setGenre }) => {
     <>
       <label htmlFor="selectGenre" className="form__question">
         What is a genre you like to listen to?
+      </label>
+      <div className="select">
         <select
           value={genre}
           onChange={(e) => setGenre(e.target.value)}
@@ -40,7 +43,8 @@ const QuestionDropdownGenre = ({ section, setSection, genre, setGenre }) => {
           <option value="Indie">Indie</option>
           <option value="New-age">New-age</option>
         </select>
-      </label>
+        <span className="focus" />
+      </div>
       <div className="buttons__wrapper">
         <PreviousButton
           section={section}
