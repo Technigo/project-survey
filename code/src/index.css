@@ -13,6 +13,9 @@ body,
   --select-focus: blue;
   --select-arrow: var(--select-border);
   --btn-color: 	#3e68ff;
+  --btn-color--hsl: hsl(227, 100%, 62%);
+  --btn-color--dark: hsl(227, 100%, 51%);
+  --btn-color--border: hsl(227, 100%, 37%);
 }
 *,
 *:before,

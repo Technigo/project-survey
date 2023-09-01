@@ -244,8 +244,14 @@ select:focus + .focus {
     min-height: 44px;
     text-align: center;
     line-height: 1.1;
-    &:hover {
-        background-color: darken(var(--btn-color));
+    transition: 220ms all ease-in-out;
+    &:hover, &:active {
+        background-color: var(--btn-color--dark);
+    };
+    &:focus {
+        outline-style: solid;
+        outline-color: transparent;
+        box-shadow: 0 0 0 4px var(--btn-color--border);
     }
   }
 
