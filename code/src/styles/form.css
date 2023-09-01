@@ -1,28 +1,9 @@
-.form__wrapper {
-    text-align: center;
-  margin: auto;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  }
-
 .form__question {
     max-width: 60vw;
     margin: auto;
     display: block;
     font-size: 20px;
     font-weight: 300;
-  }
-
-.question__content-wrapper {
-    height: 25vh;
-    max-width: 80vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    position: relative;
-    padding: 30px;
   }
 
 .form__checkbox {
@@ -61,22 +42,32 @@ input[type="range"] {
     accent-color: coral;
   }
 
+/* Radio buttons */
+
+.form-control {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 2em auto;
+    gap: 0.5em;
+}
+
 input[type="radio"] {
-  /* Add if not using autoprefixer */
   -webkit-appearance: none;
   appearance: none;
-  /* For iOS < 15 to remove gradient background */
-  background-color: #fff;
-  /* Not removed via appearance */
-  margin: 0;
+  background-color: #fff; /* For iOS < 15 to remove gradient background */
+  margin: 0; /* Not removed via appearance */
   font: inherit;
-  color: #000;
+  color: currentColor;
   width: 1.15em;
   height: 1.15em;
-  border: 0.15em solid #000;
+  border: 0.15em solid currentColor;
   border-radius: 50%;
-  transform: translateY(0.2em);
-  
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
 }
 
 input[type="radio"]::before {
@@ -87,15 +78,20 @@ input[type="radio"]::before {
     transform: scale(0);
     transition: 120ms transform ease-in-out;
     box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText; /* WHCM */
   }
-  
-  input[type="radio"]:checked::before {
+
+input[type="radio"]:checked::before {
     transform: scale(1);
   }
 
-  input[type="radio"]:focus {
-    outline: max(2px, 0.15em) solid #000;
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
     outline-offset: max(2px, 0.15em);
+  }
+
+.form-control + .form-control {
+    margin-top: 1em; /* adjacent sibling combinator */
   }
 
 input[type="checkbox"] {
