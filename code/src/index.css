@@ -12,15 +12,7 @@ body,
   --select-border: #777;
   --select-focus: blue;
   --select-arrow: var(--select-border);
-  --btn-color: var(--btn-color-h), var(--btn-color-s), var(--btn-color-l);
-  --btn-color-h: 227;
-  --btn-color-s: 100%;
-  --btn-color-l: 62%;
-  --lighten-percentage: 20%;
-  --darken-percentage: -20%;
-  --btn-color--light: var(--btn-color-h), var(--btn-color-s), calc(var(--btn-color-l)+var(--lighten-percentage));
-  --btn-color--dark: var(--btn-color-h), var(--btn-color-s), calc(var(--btn-color-l) - var(--darken-percentage));
-  /* https://una.im/css-color-theming/ */
+  --btn-color: 	#3e68ff;
 }
 *,
 *:before,

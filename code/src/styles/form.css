@@ -245,7 +245,7 @@ select:focus + .focus {
     text-align: center;
     line-height: 1.1;
     &:hover {
-        background-color: var(--btn-color--dark);
+        background-color: darken(var(--btn-color));
     }
   }
 
