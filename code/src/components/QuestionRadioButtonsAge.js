@@ -16,19 +16,16 @@ const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection })
       </p>
       <div className="question__content-wrapper">
         {ageGroups.map((group) => (
-          <span key={group} className="form__radiobuttons">
+          <label htmlFor={group} key={group} className="form-control">
             <input
               id={group}
               type="radio"
-              name={group}
-              className="form__radiobuttons"
+              name="ageGroup"
               value={group}
               onChange={handleAgeChange}
               checked={ageGroup === group} />
-            <label htmlFor={group} key={group} className="form-control">
-              <span className="form__radiobutton__input">{group}</span>
-            </label>
-          </span>
+            {group}
+          </label>
         ))}
       </div>
       <div className="buttons__wrapper">
