@@ -7,7 +7,7 @@ const PreviousButton = ({ setSection, whatQuestionPrevious }) => {
   return (
     <button
       type="button"
-      className="previous-button"
+      className="button"
       onClick={handlePreviousButton}>Go back
     </button>
   )

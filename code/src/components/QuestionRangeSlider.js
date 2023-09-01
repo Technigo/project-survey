@@ -10,7 +10,7 @@ const QuestionDropdownMenu = ({ range, setRange, section, setSection }) => {
   return (
     <>
       <label htmlFor="myRange" className="form__question">
-      On a scale from 0 to 100, how important is music to you?
+      On a scale from 0 to 100, how much do you love music?
         <div className="question__content-wrapper">
           <input
             type="range"
@@ -23,7 +23,7 @@ const QuestionDropdownMenu = ({ range, setRange, section, setSection }) => {
             id="myRange" />
         </div>
       </label>
-      <div className="buttons__wrapper">
+      <div>
         <PreviousButton
           section={section}
           setSection={setSection}

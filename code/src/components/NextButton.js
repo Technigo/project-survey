@@ -14,7 +14,7 @@ const NextButton = ({ setSection, currentState, defaultState, whatQuestionNext, 
     <div className="form__button__popup__wrapper">
       <button
         type="button"
-        className="next-button"
+        className="button"
         onClick={handleNextButton}>Next question
       </button>
       {popup && <Popup message={message} />}

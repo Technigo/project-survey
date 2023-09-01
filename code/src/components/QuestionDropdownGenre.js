@@ -45,7 +45,7 @@ const QuestionDropdownGenre = ({ section, setSection, genre, setGenre }) => {
         </select>
         <span className="focus" />
       </div>
-      <div className="buttons__wrapper">
+      <div>
         <PreviousButton
           section={section}
           setSection={setSection}

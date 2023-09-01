@@ -17,7 +17,7 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
         onChange={(e) => setFirstName(e.target.value)}
         autoComplete="given-name"
         required />
-      <div className="buttons__wrapper">
+      <div>
         <NextButton
           whatQuestionNext="secondQuestion"
           section={section}

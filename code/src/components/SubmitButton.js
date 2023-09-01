@@ -16,7 +16,7 @@ const SubmitButton = ({ currentState, defaultState, setSection, message }) => {
       {popup && <Popup message={message} />}
       <button
         type="submit"
-        className="submit-button"
+        className="button"
         onClick={handleSubmitButton}>Submit form
       </button>
     </>

@@ -28,7 +28,7 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
             id={platform} />{platform}
         </label>
       ))}
-      <div className="buttons__wrapper">
+      <div>
         <PreviousButton
           whatQuestionPrevious="thirdQuestion"
           section={section}

@@ -25,7 +25,7 @@ const Summary = ({ firstName, ageGroup, range, platforms, genre, favoriteSong })
       </ul>
       <button
         type="button"
-        className="reload-button"
+        className="button"
         onClick={() => window.location.reload()}>
         Retake survey
       </button>

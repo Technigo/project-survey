@@ -8,19 +8,18 @@ const QuestionTextInputSong = ({ song, setSong, section, setSection }) => {
   return (
     <>
       <label htmlFor="songTitle" className="form__question">What&apos;s a song that you can&apos;t get enough of right now?
-        <div className="question__content-wrapper"><input
+        <input
           placeholder="Type the title here please..."
           name="goodSong"
-          className="form__input"
+          className="input"
           type="text"
           id="songTitle"
           value={song}
           onChange={(e) => setSong(e.target.value)}
           autoComplete="off"
           required />
-        </div>
       </label>
-      <div className="buttons__wrapper">
+      <div>
         <PreviousButton
           whatQuestionPrevious="fifthQuestion"
           section={section}

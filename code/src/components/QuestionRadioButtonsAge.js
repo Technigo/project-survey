@@ -26,7 +26,7 @@ const QuestionRadioButtonsAge = ({ ageGroup, setAgeGroup, section, setSection })
           {group}
         </label>
       ))}
-      <div className="buttons__wrapper">
+      <div>
         <PreviousButton
           whatQuestionPrevious="firstQuestion"
           section={section}
