@@ -255,6 +255,11 @@ select:focus + .focus {
     }
   }
 
+  .button__icon {
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.5em;
+  }
 
   /* Popup */
 

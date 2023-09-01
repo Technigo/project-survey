@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import backgroundMusic from 'assets/music/Jazz Night - Golden Age Radio.mp3';
-import playIcon from 'assets/play.svg';
+import playIcon from 'assets/play2-svgrepo-com.svg';
 
 // styling
 import 'styles/header.css'
@@ -27,7 +27,13 @@ export const Header = () => {
   }
   return (
     <div className="header">
-      <button type="submit" className="music-btn" onClick={togglePlay}><img src={playIcon} className="music-logo" alt="music" />Play some Jazz</button>
+      <button type="submit" className="button" onClick={togglePlay}><img
+        src={playIcon}
+        className="button__icon"
+        alt="music"
+        aria-hidden="true"
+        focusable="false" />Play some Jazz
+      </button>
     </div>
   )
 }
