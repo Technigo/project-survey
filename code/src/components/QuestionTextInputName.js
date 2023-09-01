@@ -4,7 +4,7 @@ import NextButton from './NextButton';
 
 export const QuestionTextInputName = ({ firstName, setFirstName, section, setSection }) => {
   return (
-    <article>
+    <>
       <label htmlFor="text-input" className="form__question">Hi! What&apos;s your name?</label>
       <input
         placeholder="Type your name here please..."
@@ -26,6 +26,6 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
           defaultState=""
           message="Please enter a name" />
       </div>
-    </article>
+    </>
   )
 }
