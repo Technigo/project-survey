@@ -18,20 +18,16 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
   return (
     <>
       <p className="form__question">What streaming platform(s) do you use?</p>
-      <div className="question__content-wrapper">
-        {platformsGroup.map((platform) => (
-          <span key={platform} className="form__checkbox">
-            <label htmlFor={platform} className="form-control">
-              <input
-                type="checkbox"
-                checked={platforms.includes(platform)}
-                onChange={() => handlePlatformsChange(platform)}
-                name="platform"
-                id={platform} />{platform}
-            </label>
-          </span>
-        ))}
-      </div>
+      {platformsGroup.map((platform) => (
+        <label htmlFor={platform} className="form-control">
+          <input
+            type="checkbox"
+            checked={platforms.includes(platform)}
+            onChange={() => handlePlatformsChange(platform)}
+            name="platform"
+            id={platform} />{platform}
+        </label>
+      ))}
       <div className="buttons__wrapper">
         <PreviousButton
           whatQuestionPrevious="thirdQuestion"
