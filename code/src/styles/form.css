@@ -257,13 +257,7 @@ select:focus + .focus {
         min-width: 10ch;
         min-height: 44px;
         padding: 0.25em 0.75em;
-      }
-  }
-
-  .button__icon {
-    width: 0.9em;
-    height: 0.9em;
-    margin-right: 0.5em;
+    }
   }
 
   .icon-button {
@@ -277,6 +271,12 @@ select:focus + .focus {
       height: 100%;
       fill: #fff;
     }
+  }
+
+  .button__icon {
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.5em;
   }
 
   /* Popup */
