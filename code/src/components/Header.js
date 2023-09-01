@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react';
 import backgroundMusic from 'assets/music/Jazz Night - Golden Age Radio.mp3';
-import headerLogo from 'assets/noun-music-1620687.png';
-import musicLogo from 'assets/noun-music-6011738.png';
+import playIcon from 'assets/play.svg';
 
 // styling
 import 'styles/header.css'
@@ -28,10 +27,7 @@ export const Header = () => {
   }
   return (
     <div className="header">
-      <img src={headerLogo} alt="logo" className="header-logo" />
-      <div className="cta__button">
-        <button type="submit" className="music-btn" onClick={togglePlay}><img src={musicLogo} className="music-logo" alt="music" /></button>
-      </div>
+      <button type="submit" className="music-btn" onClick={togglePlay}><img src={playIcon} className="music-logo" alt="music" />Play some Jazz</button>
     </div>
   )
 }
