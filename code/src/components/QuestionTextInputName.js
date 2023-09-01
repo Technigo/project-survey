@@ -10,6 +10,7 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
         placeholder="Type your name here please..."
         name="firstName"
         className="input"
+        inputMode="text"
         type="text"
         id="text-input"
         value={firstName}
