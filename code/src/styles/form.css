@@ -6,8 +6,10 @@
     font-weight: 300;
   }
 
-.form__checkbox {
-    margin: 10px 25px 10px 5px;
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
   /* --- Input styling --- */
@@ -36,10 +38,17 @@
     color: #000 !important;
     }
 
+/* Range */
+
 input[type="range"] {
     width: 200px;
     margin: 0;
-    accent-color: coral;
+    accent-color: #C75000;
+    color: #000;
+    &:focus {
+        outline: max(2px, 0.15em) solid currentColor;
+        outline-offset: max(2px, 0.15em);
+    }
   }
 
 /* Radio buttons */

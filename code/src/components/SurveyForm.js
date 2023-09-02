@@ -32,7 +32,7 @@ export const SurveyForm = () => {
     console.log(formJson);
   }
   return (
-    <section>
+    <section className="form-wrapper">
       <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
         {section === 'firstQuestion' && (
           <QuestionTextInputName

@@ -11,17 +11,15 @@ const QuestionDropdownMenu = ({ range, setRange, section, setSection }) => {
     <>
       <label htmlFor="myRange" className="form__question">
       On a scale from 0 to 100, how much do you love music?
-        <div className="question__content-wrapper">
-          <input
-            type="range"
-            min="1"
-            max="100"
-            value={range}
-            onChange={(e) => setRange(e.target.value)}
-            className="slider"
-            name="importance"
-            id="myRange" />
-        </div>
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value={range}
+          onChange={(e) => setRange(e.target.value)}
+          name="lovesMusic"
+          aria-label="Select a value"
+          id="myRange" />
       </label>
       <div>
         <PreviousButton
