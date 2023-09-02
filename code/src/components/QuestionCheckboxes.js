@@ -19,7 +19,7 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
     <>
       <p className="form__question">What streaming platform(s) do you use?</p>
       {platformsGroup.map((platform) => (
-        <label htmlFor={platform} className="form-control">
+        <label key={platform} htmlFor={platform} className="form-control">
           <input
             type="checkbox"
             checked={platforms.includes(platform)}

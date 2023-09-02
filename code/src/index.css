@@ -12,10 +12,10 @@ body,
   --select-border: #777;
   --select-focus: blue;
   --select-arrow: var(--select-border);
-  --btn-color: 	#3e68ff;
+  --btn-color: 	#000;
   --btn-color--hsl: hsl(227, 100%, 62%);
-  --btn-color--dark: #002A69;
-  --btn-color--border: hsl(227, 100%, 37%);
+  --btn-color--hover: #C75000;
+  --btn-color--border: #C75000;
 }
 *,
 *:before,

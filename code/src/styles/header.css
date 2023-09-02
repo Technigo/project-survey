@@ -1,50 +1,6 @@
-.header {
+header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-  }
-  
-.header-logo, .music-logo {
-    width: 40px;
-    height: auto;
+    justify-content: flex-end;
   }
 
-.music-btn {
-    border: none;
-    background-color: transparent;
-}
-
-.cta__button{
-    position: relative;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    color: #efefef;
-    border: 3px solid black;
-    border-radius: 50%;
-    &:after{
-        content: "";
-        position: absolute;
-        top: 7%;
-        left: 7%;
-        border-radius: 50%;
-        border-top: 1px solid transparent;
-        border-right: 1px solid black;
-        border-bottom: 1px solid transparent;
-        border-left: 1px solid black;
-        width: 85%;
-        height: 85%;
-        transition: border 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86), transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-        transform: rotate(45deg);
-        backface-visibility: hidden;
-    }
-    &:hover{
-        &:after{
-            border: 1px solid black;
-            transform: rotate(135deg);
-        }
-    }
-}

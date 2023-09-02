@@ -29,9 +29,9 @@ export const Header = () => {
     }
   }
   return (
-    <div className="header">
+    <header>
       <button type="submit" className="button" onClick={togglePlay}><FontAwesomeIcon icon={faMusic} className="button__icon" />Play some Jazz
       </button>
-    </div>
+    </header>
   )
 }

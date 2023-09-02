@@ -248,7 +248,7 @@ a.button, button.button {
     line-height: 1.1;
     transition: 220ms all ease-in-out;
     &:hover, &:active {
-        background-color: var(--btn-color--dark);
+        background-color: var(--btn-color--hover);
     };
     &:focus {
         outline-style: solid;
@@ -305,11 +305,6 @@ a.button, button.button {
   }
 
 
-  footer {
-    text-align: center;
-    font-size: 16px;
-    margin-top: 50px;
-  }
 
 @media (min-width: 1024px) {
     .form__popup__wrapper {
