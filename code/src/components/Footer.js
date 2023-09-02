@@ -1,18 +1,20 @@
 import React from 'react';
 
-// icon
-
+// icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 // styling
 import 'styles/form.css'
 
 export const Footer = () => {
   return (
     <footer>
-      <p>This website was created by Nino Aquilon, Technigo student spring &apos;23.</p>
-      <a href="https://www.github.com" className="button icon-button" aria-label="Icon-only Button">
-        <FontAwesomeIcon icon="fab fa-github" />
+      <p>A website by Nino Aquilon, created @Technigo &apos;23.</p>
+      <a href="https://www.github.com" className="button icon-button">
+        <FontAwesomeIcon icon={faGithub} />
+      </a>
+      <a href="https://www.github.com" className="button icon-button">
+        <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </footer>
   )

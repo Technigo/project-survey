@@ -222,7 +222,11 @@ select:focus + .focus {
 
 /* Buttons */
 
-  .button {
+a.button {
+    text-decoration: none;
+  }
+
+button.button {
     font-family: inherit;
     background-color: transparent;
     border: none;
@@ -232,16 +236,14 @@ select:focus + .focus {
     @media screen and (-ms-high-contrast: active) {
         border: 1px solid currentColor
     };
+}
+a.button, button.button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     background-color: var(--btn-color);
     color: #fff;
-    border-radius: 8px;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
-    padding: 0.25em 0.75em;
-    min-width: 10ch;
-    min-height: 44px;
     text-align: center;
     line-height: 1.1;
     transition: 220ms all ease-in-out;
@@ -254,29 +256,25 @@ select:focus + .focus {
         box-shadow: 0 0 0 4px var(--btn-color--border);
     };
     &:not(.icon-button) {
+        padding: 0.25em 0.75em;
         min-width: 10ch;
         min-height: 44px;
-        padding: 0.25em 0.75em;
+        border-radius: 8px;
     }
-  }
+}
 
-  .icon-button {
+.icon-button {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0.35em;
     border-radius: 50%;
-  
-    &__icon {
-      width: 100%;
-      height: 100%;
-      fill: #fff;
-    }
-  }
+}
 
   .button__icon {
     width: 0.9em;
     height: 0.9em;
     margin-right: 0.5em;
+    fill: currentColor;
   }
 
   /* Popup */
@@ -309,7 +307,7 @@ select:focus + .focus {
 
   footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 16px;
     margin-top: 50px;
   }
 
