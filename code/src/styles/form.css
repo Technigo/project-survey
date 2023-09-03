@@ -396,6 +396,32 @@ a.button, button.button {
     z-index: -1;
   }
 
+/* Progress bar */
+
+progress {
+    display: block;
+    appearance: none;
+    width: calc(100%);
+    height: 1rem;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 0 1rem #fff, 0 1rem 0.75rem -0.25rem rgba(0,0,0,0.3);
+}
+
+progress::-webkit-progress-bar {
+    background: linear-gradient(90deg, #cfcfcf 49%, #cfcfcf 85%, #959595 100%);
+    background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--btn-color--hover);
+}
+
+/* Firefox-specific styles */
+progress::-moz-progress-bar {
+    background-color: var(--btn-color--hover);
+}
 
 
 @media (min-width: 1024px) {

@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/no-redundant-roles */
 import React from 'react';
 
 const ProgressBar = ({ step }) => {
   return (
-    <progress id="progress" className="progress" aria-label="Survey progress" value={step} aria-valuemin="0" aria-valuenow="0" aria-valuemax="5" max="5" />
+    // eslint-disable-next-line jsx-a11y/no-noninteractive-tabindex
+    <progress id="progress" className="progress" aria-label="Step" value={step} aria-valuemin="1" aria-valuenow={step} aria-valuemax="5" max="5" tabIndex={0} />
   )
 }
 
