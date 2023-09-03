@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 // components
 import { QuestionTextInputName } from './QuestionTextInputName';
 import QuestionRadioButtonsAge from './QuestionRadioButtonsAge';
-import QuestionRangeSliderRating from './QuestionRangeSliderRating';
 import QuestionCheckboxes from './QuestionCheckboxes';
 import QuestionTextInputSong from './QuestionTextInputSong';
 import QuestionDropdownGenre from './QuestionDropdownGenre';
@@ -49,27 +48,20 @@ export const SurveyForm = () => {
             setAgeGroup={setAgeGroup} />
         )}
         {section === 'thirdQuestion' && (
-          <QuestionRangeSliderRating
-            range={range}
-            setRange={setRange}
-            section={section}
-            setSection={setSection} />
-        )}
-        {section === 'fourthQuestion' && (
           <QuestionCheckboxes
             platforms={platforms}
             setPlatforms={setPlatforms}
             section={section}
             setSection={setSection} />
         )}
-        {section === 'fifthQuestion' && (
+        {section === 'fourthQuestion' && (
           <QuestionDropdownGenre
             genre={genre}
             setGenre={setGenre}
             section={section}
             setSection={setSection} />
         )}
-        {section === 'sixthQuestion' && (
+        {section === 'fifthQuestion' && (
           <QuestionTextInputSong
             song={song}
             setSong={setSong}

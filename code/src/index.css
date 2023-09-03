@@ -14,8 +14,8 @@ body,
   --select-arrow: var(--select-border);
   --btn-color: 	#000;
   --btn-color--hsl: hsl(227, 100%, 62%);
-  --btn-color--hover: #C75000;
-  --btn-color--border: #C75000;
+  --btn-color--hover: #DB3A00;
+  --btn-color--border: #DB3A00;
 }
 *,
 *:before,
