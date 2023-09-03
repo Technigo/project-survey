@@ -52,7 +52,7 @@ const QuestionDropdownGenre = ({ step, setStep, section, setSection, genre, setG
           setSection={setSection}
           whatQuestionPrevious="thirdQuestion"
           setStep={setStep}
-          whatStepBefore="4" />
+          whatStepBefore="3" />
         <NextButton
           whatQuestionNext="fifthQuestion"
           defaultState=""
