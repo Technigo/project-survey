@@ -1,8 +1,9 @@
 import React from 'react';
 
-const PreviousButton = ({ setSection, whatQuestionPrevious }) => {
+const PreviousButton = ({ setStep, whatStepBefore, setSection, whatQuestionPrevious }) => {
   const handlePreviousButton = () => {
-    setSection(whatQuestionPrevious)
+    setSection(whatQuestionPrevious);
+    setStep(whatStepBefore)
   }
   return (
     <button

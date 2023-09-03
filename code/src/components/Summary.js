@@ -1,24 +1,12 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-const Summary = ({ firstName, ageGroup, range, platforms, genre, favoriteSong }) => {
-  let message;
-
-  if (range <= 33) {
-    message = 'Music is not that important to you.';
-  } else if (range <= 66) {
-    message = 'Music is quite important to you.';
-  } else {
-    message = 'Music means everything to you.';
-  }
+const Summary = ({ firstName, ageGroup, platforms, genre, favoriteSong }) => {
   return (
     <article className="summary-wrapper">
       <ul>
         <li>Name: {firstName}</li>
         <li>Age: {ageGroup}</li>
-        <li>
-          {message}
-        </li>
         <li>Platform(s) used: {platforms.join(', ')}.</li>
         <li>Likes: {genre} music.</li>
         <li>Good song: {favoriteSong}.</li>

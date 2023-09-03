@@ -3,10 +3,11 @@ import React from 'react';
 // components
 import NextButton from './NextButton';
 import PreviousButton from './PreviousButton';
+import ProgressBar from './ProgressBar';
 
 import 'styles/form.css'
 
-const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) => {
+const QuestionCheckboxes = ({ step, setStep, section, setSection, platforms, setPlatforms }) => {
   const platformsGroup = ['Spotify', 'SoundCloud', 'Bandcamp', 'Apple Music', 'YouTube Music', 'Other platform(s)'];
   const handlePlatformsChange = (platformValue) => {
     if (platforms.includes(platformValue)) {
@@ -30,17 +31,24 @@ const QuestionCheckboxes = ({ section, setSection, platforms, setPlatforms }) =>
       ))}
       <div>
         <PreviousButton
-          whatQuestionPrevious="thirdQuestion"
+          whatQuestionPrevious="secondQuestion"
           section={section}
-          setSection={setSection} />
+          setSection={setSection}
+          setStep={setStep}
+          whatStepBefore="2" />
         <NextButton
-          whatQuestionNext="fifthQuestion"
+          whatQuestionNext="fourthQuestion"
           section={section}
           setSection={setSection}
           currentState={platforms.length}
           defaultState={0}
-          message="Please select a platform" />
+          message="Please select a platform"
+          step={step}
+          setStep={setStep}
+          whatStepNext="4" />
       </div>
+      <ProgressBar
+        step={step} />
     </>
   )
 }

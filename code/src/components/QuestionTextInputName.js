@@ -1,8 +1,10 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 import NextButton from './NextButton';
+import ProgressBar from './ProgressBar';
 
-export const QuestionTextInputName = ({ firstName, setFirstName, section, setSection }) => {
+export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, section, setSection }) => {
   return (
     <>
       <label htmlFor="text-input" className="form__question">Hi! What&apos;s your name?</label>
@@ -24,8 +26,13 @@ export const QuestionTextInputName = ({ firstName, setFirstName, section, setSec
           setSection={setSection}
           currentState={firstName}
           defaultState=""
-          message="Please enter a name" />
+          message="Please enter a name"
+          step={step}
+          setStep={setStep}
+          whatStepNext="2" />
       </div>
+      <ProgressBar
+        step={step} />
     </>
   )
 }

@@ -4,10 +4,11 @@ import React from 'react';
 // components
 import NextButton from './NextButton';
 import PreviousButton from './PreviousButton';
+import ProgressBar from './ProgressBar';
 
 import 'styles/form.css';
 
-const QuestionDropdownGenre = ({ section, setSection, genre, setGenre }) => {
+const QuestionDropdownGenre = ({ step, setStep, section, setSection, genre, setGenre }) => {
   return (
     <>
       <label htmlFor="selectGenre" className="form__question">
@@ -49,15 +50,22 @@ const QuestionDropdownGenre = ({ section, setSection, genre, setGenre }) => {
         <PreviousButton
           section={section}
           setSection={setSection}
-          whatQuestionPrevious="fourthQuestion" />
+          whatQuestionPrevious="thirdQuestion"
+          setStep={setStep}
+          whatStepBefore="4" />
         <NextButton
-          whatQuestionNext="sixthQuestion"
+          whatQuestionNext="fifthQuestion"
           defaultState=""
           currentState={genre}
           message="Please select a genre"
           section={section}
-          setSection={setSection} />
+          setSection={setSection}
+          step={step}
+          setStep={setStep}
+          whatStepNext="5" />
       </div>
+      <ProgressBar
+        step={step} />
     </>
   )
 }

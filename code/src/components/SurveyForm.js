@@ -13,10 +13,10 @@ import Summary from './Summary';
 import 'styles/form.css';
 
 export const SurveyForm = () => {
+  const [step, setStep] = useState('1');
   const [section, setSection] = useState('firstQuestion');
   const [firstName, setFirstName] = useState(''); // Declare a state variable...
   const [ageGroup, setAgeGroup] = useState('');
-  const [range, setRange] = useState('');
   const [platforms, setPlatforms] = useState('');
   const [song, setSong] = useState('');
   const [genre, setGenre] = useState('');
@@ -35,6 +35,8 @@ export const SurveyForm = () => {
       <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
         {section === 'firstQuestion' && (
           <QuestionTextInputName
+            step={step}
+            setStep={setStep}
             firstName={firstName}
             setFirstName={setFirstName}
             section={section}
@@ -42,6 +44,8 @@ export const SurveyForm = () => {
         )}
         {section === 'secondQuestion' && (
           <QuestionRadioButtonsAge
+            step={step}
+            setStep={setStep}
             section={section}
             setSection={setSection}
             ageGroup={ageGroup}
@@ -49,6 +53,8 @@ export const SurveyForm = () => {
         )}
         {section === 'thirdQuestion' && (
           <QuestionCheckboxes
+            step={step}
+            setStep={setStep}
             platforms={platforms}
             setPlatforms={setPlatforms}
             section={section}
@@ -56,6 +62,8 @@ export const SurveyForm = () => {
         )}
         {section === 'fourthQuestion' && (
           <QuestionDropdownGenre
+            step={step}
+            setStep={setStep}
             genre={genre}
             setGenre={setGenre}
             section={section}
@@ -63,6 +71,8 @@ export const SurveyForm = () => {
         )}
         {section === 'fifthQuestion' && (
           <QuestionTextInputSong
+            step={step}
+            setStep={setStep}
             song={song}
             setSong={setSong}
             section={section}
@@ -72,7 +82,6 @@ export const SurveyForm = () => {
           <Summary
             firstName={firstName}
             ageGroup={ageGroup}
-            range={range}
             platforms={platforms}
             song={song}
             genre={genre}
