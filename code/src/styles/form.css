@@ -407,6 +407,11 @@ progress {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 0 1rem #fff, 0 1rem 0.75rem -0.25rem rgba(0,0,0,0.3);
+    &:focus {
+        outline-style: solid;
+        outline-color: transparent;
+        box-shadow: 0 0 0 4px #000;
+    }
 }
 
 progress::-webkit-progress-bar {
@@ -418,7 +423,6 @@ progress::-webkit-progress-value {
     background-color: var(--btn-color--hover);
 }
 
-/* Firefox-specific styles */
 progress::-moz-progress-bar {
     background-color: var(--btn-color--hover);
 }
