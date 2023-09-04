@@ -30,7 +30,7 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
           </label>
         ))}
       </fieldset>
-      <div>
+      <section className="user-navigation">
         <PreviousButton
           whatQuestionPrevious="firstQuestion"
           section={section}
@@ -47,7 +47,7 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
           step={step}
           setStep={setStep}
           whatStepNext="3" />
-      </div>
+      </section>
       <ProgressBar
         step={step} />
     </>

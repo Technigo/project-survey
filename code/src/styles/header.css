@@ -1,6 +1,8 @@
 header {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
+    font-size: inherit;
+    border: 2px solid black;
   }
 

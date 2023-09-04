@@ -25,6 +25,7 @@ const QuestionCheckboxes = ({ step, setStep, section, setSection, devices, setDe
           <label key={device} htmlFor={device} className="form-control">
             <input
               type="checkbox"
+              autoComplete="off"
               checked={devices.includes(device)}
               onChange={() => handleDevicesChange(device)}
               name="platform"

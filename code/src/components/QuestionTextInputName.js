@@ -8,7 +8,7 @@ export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, 
   return (
     <>
       <h2>Name (Step 1 of 5)</h2>
-      <label id="inputLabel" htmlFor="nameInput">Hi! What&apos;s your name?<span>Required</span></label>
+      <label id="inputLabel" htmlFor="nameInput">What&apos;s your name?<span>Required</span></label>
       <input
         aria-labelledby="inputLabel"
         aria-describedby="form-error"
@@ -23,18 +23,16 @@ export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, 
         onChange={(e) => setFirstName(e.target.value)}
         autoComplete="given-name"
         required />
-      <section>
-        <NextButton
-          whatQuestionNext="secondQuestion"
-          section={section}
-          setSection={setSection}
-          currentState={firstName}
-          defaultState=""
-          message="Please enter a name"
-          step={step}
-          setStep={setStep}
-          whatStepNext="2" />
-      </section>
+      <NextButton
+        whatQuestionNext="secondQuestion"
+        section={section}
+        setSection={setSection}
+        currentState={firstName}
+        defaultState=""
+        message="Please enter a name"
+        step={step}
+        setStep={setStep}
+        whatStepNext="2" />
       <ProgressBar
         step={step} />
     </>

@@ -1,3 +1,30 @@
+main {
+    border: 2px solid black;
+}
+
+form {
+    height: 70vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.notification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-navigation {
+    display: flex;
+}
+
+/* Labels */
+
+label {
+    display: block;
+}
+
 /* Required Label */
 
 label span, legend span {
@@ -265,7 +292,7 @@ a.button, button.button {
 progress {
     display: block;
     appearance: none;
-    width: calc(100%);
+    width: calc(70%);
     height: 1rem;
     border: none;
     border-radius: 1rem;

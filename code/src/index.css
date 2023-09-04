@@ -39,11 +39,17 @@ body {
 }
 
 .container {
-  padding: 30px;
     height: 100%;
     width: 80%;
     margin: auto;
     max-width: 600px;
     display: flex;
     flex-direction: column;
+    border: 2px solid black;
+}
+
+h1 {
+  &:hover {
+    color: var(--orange);
+  }
 }
