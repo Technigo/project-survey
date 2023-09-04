@@ -20,7 +20,7 @@ export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, 
         onChange={(e) => setFirstName(e.target.value)}
         autoComplete="given-name"
         required />
-      <div>
+      <section>
         <NextButton
           whatQuestionNext="secondQuestion"
           section={section}
@@ -31,7 +31,7 @@ export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, 
           step={step}
           setStep={setStep}
           whatStepNext="2" />
-      </div>
+      </section>
       <ProgressBar
         step={step} />
     </>

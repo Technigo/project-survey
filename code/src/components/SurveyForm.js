@@ -31,65 +31,67 @@ export const SurveyForm = () => {
     console.log(formJson);
   }
   return (
-    <section className="form-wrapper">
-      <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
-        {section === 'firstQuestion' && (
-          <QuestionTextInputName
-            step={step}
-            setStep={setStep}
-            firstName={firstName}
-            setFirstName={setFirstName}
-            section={section}
-            setSection={setSection} />
-        )}
-        {section === 'secondQuestion' && (
-          <QuestionRadioButtonsAge
-            step={step}
-            setStep={setStep}
-            section={section}
-            setSection={setSection}
-            ageGroup={ageGroup}
-            setAgeGroup={setAgeGroup} />
-        )}
-        {section === 'thirdQuestion' && (
-          <QuestionCheckboxes
-            step={step}
-            setStep={setStep}
-            platforms={platforms}
-            setPlatforms={setPlatforms}
-            section={section}
-            setSection={setSection} />
-        )}
-        {section === 'fourthQuestion' && (
-          <QuestionDropdownGenre
-            step={step}
-            setStep={setStep}
-            genre={genre}
-            setGenre={setGenre}
-            section={section}
-            setSection={setSection} />
-        )}
-        {section === 'fifthQuestion' && (
-          <QuestionTextInputSong
-            step={step}
-            setStep={setStep}
-            song={song}
-            setSong={setSong}
-            section={section}
-            setSection={setSection} />
-        )}
-        {section === 'summary' && (
-          <Summary
-            firstName={firstName}
-            ageGroup={ageGroup}
-            platforms={platforms}
-            song={song}
-            genre={genre}
-            section={section}
-            setSection={setSection} />
-        )}
-      </form>
-    </section>
+    <main>
+      <article className="form__container">
+        <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
+          {section === 'firstQuestion' && (
+            <QuestionTextInputName
+              step={step}
+              setStep={setStep}
+              firstName={firstName}
+              setFirstName={setFirstName}
+              section={section}
+              setSection={setSection} />
+          )}
+          {section === 'secondQuestion' && (
+            <QuestionRadioButtonsAge
+              step={step}
+              setStep={setStep}
+              section={section}
+              setSection={setSection}
+              ageGroup={ageGroup}
+              setAgeGroup={setAgeGroup} />
+          )}
+          {section === 'thirdQuestion' && (
+            <QuestionCheckboxes
+              step={step}
+              setStep={setStep}
+              platforms={platforms}
+              setPlatforms={setPlatforms}
+              section={section}
+              setSection={setSection} />
+          )}
+          {section === 'fourthQuestion' && (
+            <QuestionDropdownGenre
+              step={step}
+              setStep={setStep}
+              genre={genre}
+              setGenre={setGenre}
+              section={section}
+              setSection={setSection} />
+          )}
+          {section === 'fifthQuestion' && (
+            <QuestionTextInputSong
+              step={step}
+              setStep={setStep}
+              song={song}
+              setSong={setSong}
+              section={section}
+              setSection={setSection} />
+          )}
+          {section === 'summary' && (
+            <Summary
+              firstName={firstName}
+              ageGroup={ageGroup}
+              platforms={platforms}
+              song={song}
+              genre={genre}
+              section={section}
+              setSection={setSection} />
+          )}
+        </form>
+      </article>
+    </main>
   )
 }
 

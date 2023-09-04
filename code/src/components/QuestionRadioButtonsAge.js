@@ -15,18 +15,20 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
       <p className="form__question">
         How old are you?
       </p>
-      {ageGroups.map((group) => (
-        <label htmlFor={group} key={group} className="form-control">
-          <input
-            id={group}
-            type="radio"
-            name="ageGroup"
-            value={group}
-            onChange={handleAgeChange}
-            checked={ageGroup === group} />
-          {group}
-        </label>
-      ))}
+      <section className="form__radio-buttons">
+        {ageGroups.map((group) => (
+          <label htmlFor={group} key={group} className="form-control">
+            <input
+              id={group}
+              type="radio"
+              name="ageGroup"
+              value={group}
+              onChange={handleAgeChange}
+              checked={ageGroup === group} />
+            {group}
+          </label>
+        ))}
+      </section>
       <div>
         <PreviousButton
           whatQuestionPrevious="firstQuestion"

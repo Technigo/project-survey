@@ -7,8 +7,8 @@ import { faTriangleExclamation } from '@fortawesome/free-solid-svg-icons';
 const Alert = ({ message }) => {
   return (
     <div role="alert" id="form-alert" className="alert enabled">
+      <FontAwesomeIcon icon={faTriangleExclamation} id="alert-icon" />
       <div id="form-error">
-        <FontAwesomeIcon icon={faTriangleExclamation} id="alert-icon" />
         {message}
       </div>
     </div>

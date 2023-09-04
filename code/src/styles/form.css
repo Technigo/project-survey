@@ -1,16 +1,18 @@
+.form__container {
+    text-align: center;
+    transform: translateY(-3rem);
+    margin: auto;
+    padding: 15vw;
+}
+
 .form__question {
     max-width: 60vw;
     margin: auto;
     display: block;
     font-size: 20px;
     font-weight: 300;
+    text-align: center;
   }
-
-.form-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
   /* --- Input styling --- */
 .form__input {
@@ -143,7 +145,6 @@ input[type="range"] {
     line-height: 1.1;
     display: grid;
     grid-template-columns: 2em auto;
-    gap: 0.5em;
 }
 
 input[type="radio"] {
@@ -185,6 +186,7 @@ input[type="radio"]:focus {
 .form-control + .form-control {
     margin-top: 1em; /* adjacent sibling combinator */
   }
+
 
 /* Checkboxes */
 
@@ -244,10 +246,9 @@ input[type="checkbox"]:focus {
   }
 
   .input:focus {
-    border-color: hsl(var(--input-focus-h), var(--input-focus-s), var(--input-focus-l));
-    box-shadow: 0 0 0 3px hsla(var(--input-focus-h), var(--input-focus-s), calc(var(--input-focus-l) +
-          40%), 0.8);
-    outline: 3px solid transparent; /* for Windows High Contrast mode */
+    border-color: #000;
+    box-shadow: 0 0 0 2px #000;
+    outline: 2px solid transparent; /* for Windows High Contrast mode */
   }
 
 /* Select / Dropdown */
@@ -369,32 +370,6 @@ a.button, button.button {
     fill: currentColor;
   }
 
-  /* Popup */
-
-.form__popup__wrapper {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    top: 470px;
-    background: #000;
-  }
-  
-  .form__popup {
-    font-size: 14px;
-    padding: 5px 30px;
-    margin: auto;
-    color: white;
-  }
-  
-  .form__popup-tag {
-    width: 20px;
-    height: 20px;
-    background: #000;
-    transform: rotate(45deg);
-    position: absolute;
-    margin-top: -10px;
-    z-index: -1;
-  }
 
 /* Progress bar */
 
@@ -435,8 +410,8 @@ progress::-moz-progress-bar {
     transition: .2s;
     height: 0px;
     padding: 1rem 0.5rem 1rem 0rem;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
 }
 
 .alert.enabled {

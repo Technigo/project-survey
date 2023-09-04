@@ -7,10 +7,10 @@ import { Footer } from 'components/Footer';
 
 export const App = () => {
   return (
-    <main className="wrapper">
+    <div className="container">
       <Header />
       <SurveyForm />
       <Footer />
-    </main>
+    </div>
   );
 }
