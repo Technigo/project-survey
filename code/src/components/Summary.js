@@ -1,13 +1,13 @@
 /* eslint-disable max-len */
 import React from 'react';
 
-const Summary = ({ firstName, ageGroup, platforms, genre, favoriteSong }) => {
+const Summary = ({ firstName, ageGroup, devices, genre, favoriteSong }) => {
   return (
     <article className="summary-wrapper">
       <ul>
         <li>Name: {firstName}</li>
         <li>Age: {ageGroup}</li>
-        <li>Platform(s) used: {platforms.join(', ')}.</li>
+        <li>Platform(s) used: {devices.join(', ')}.</li>
         <li>Likes: {genre} music.</li>
         <li>Good song: {favoriteSong}.</li>
       </ul>

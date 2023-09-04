@@ -8,7 +8,7 @@ import 'styles/footer.css'
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer role="contentinfo">
       <p>A website by Nino Aquilon, created @Technigo &apos;23.</p>
       <section className="contact">
         <a href="https://www.github.com" className="button icon-button">

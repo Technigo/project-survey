@@ -8,15 +8,15 @@ body,
   --input-focus-h: 245;
   --input-focus-s: 100%;
   --input-focus-l: 42%;
-  --form-control-color: rebeccapurple;
+  --form-control-color: var(--orange);
   --select-border: #777;
   --select-focus: blue;
   --select-arrow: var(--select-border);
-  --btn-color: 	#000;
-  --btn-color--hsl: hsl(227, 100%, 62%);
+  --btn-color: 	#1A1A1A;
   --btn-color--hover: #DB3A00;
   --btn-color--border: #DB3A00;
   --orange: #DB3A00;
+  --black: #1A1A1A;
 }
 *,
 *:before,

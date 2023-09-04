@@ -7,27 +7,28 @@ import ProgressBar from './ProgressBar';
 
 import 'styles/form.css'
 
-const QuestionCheckboxes = ({ step, setStep, section, setSection, platforms, setPlatforms }) => {
-  const platformsGroup = ['A streaming platform', 'A record player', 'CD:s', 'MP3-Player'];
-  const handlePlatformsChange = (platformValue) => {
-    if (platforms.includes(platformValue)) {
-      setPlatforms(platforms.filter((item) => item !== platformValue))
+const QuestionCheckboxes = ({ step, setStep, section, setSection, devices, setDevices }) => {
+  const devicesGroup = ['Mobile phone', 'Computer', 'Record player', 'CD player', 'MP3-Player', 'Casette player', 'Other'];
+  const handleDevicesChange = (deviceValue) => {
+    if (devices.includes(deviceValue)) {
+      setDevices(devices.filter((item) => item !== deviceValue))
     } else {
-      setPlatforms([...platforms, platformValue])
+      setDevices([...devices, deviceValue])
     }
   }
   return (
     <>
+      <h2>Music devices (Step 3 of 5)</h2>
       <fieldset>
-        <legend>What do you use to listen to music?</legend>
-        {platformsGroup.map((platform) => (
-          <label key={platform} htmlFor={platform} className="form-control">
+        <legend>What device(s) do you use to listen to music?<span>Required</span></legend>
+        {devicesGroup.map((device) => (
+          <label key={device} htmlFor={device} className="form-control">
             <input
               type="checkbox"
-              checked={platforms.includes(platform)}
-              onChange={() => handlePlatformsChange(platform)}
+              checked={devices.includes(device)}
+              onChange={() => handleDevicesChange(device)}
               name="platform"
-              id={platform} />{platform}
+              id={device} />{device}
           </label>
         ))}
       </fieldset>
@@ -41,9 +42,9 @@ const QuestionCheckboxes = ({ step, setStep, section, setSection, platforms, set
         whatQuestionNext="fourthQuestion"
         section={section}
         setSection={setSection}
-        currentState={platforms.length}
+        currentState={devices.length}
         defaultState={0}
-        message="Please select a platform"
+        message="Please select a device"
         step={step}
         setStep={setStep}
         whatStepNext="4" />

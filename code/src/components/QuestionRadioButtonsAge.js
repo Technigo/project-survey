@@ -9,17 +9,18 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
   const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Secret!'];
   const handleAgeChange = (e) => {
     setAgeGroup(e.target.value)
-  }
+  };
   return (
     <>
+      <h2>Age (Step 2 of 5)</h2>
       <fieldset>
         <legend>
-        How old are you?
+        How old are you?<span>Required</span>
         </legend>
         {ageGroups.map((group) => (
-          <label htmlFor={group} key={group} className="form-control">
+          <label htmlFor={`radioButtonGroup-${group}`} key={group} className="form-control">
             <input
-              id={group}
+              id={`radioButtonGroup-${group}`}
               type="radio"
               name="ageGroup"
               value={group}

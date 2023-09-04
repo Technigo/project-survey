@@ -17,7 +17,7 @@ export const SurveyForm = () => {
   const [section, setSection] = useState('firstQuestion');
   const [firstName, setFirstName] = useState(''); // Declare a state variable...
   const [ageGroup, setAgeGroup] = useState('');
-  const [platforms, setPlatforms] = useState('');
+  const [devices, setDevices] = useState('');
   const [song, setSong] = useState('');
   const [genre, setGenre] = useState('');
   const handleSubmit = (e) => {
@@ -31,8 +31,8 @@ export const SurveyForm = () => {
     console.log(formJson);
   }
   return (
-    <main>
-      <article className="form__container">
+    <main role="main">
+      <section className="form__container">
         <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
           {section === 'firstQuestion' && (
             <QuestionTextInputName
@@ -56,8 +56,8 @@ export const SurveyForm = () => {
             <QuestionCheckboxes
               step={step}
               setStep={setStep}
-              platforms={platforms}
-              setPlatforms={setPlatforms}
+              devices={devices}
+              setDevices={setDevices}
               section={section}
               setSection={setSection} />
           )}
@@ -83,14 +83,14 @@ export const SurveyForm = () => {
             <Summary
               firstName={firstName}
               ageGroup={ageGroup}
-              platforms={platforms}
+              devices={devices}
               song={song}
               genre={genre}
               section={section}
               setSection={setSection} />
           )}
         </form>
-      </article>
+      </section>
     </main>
   )
 }

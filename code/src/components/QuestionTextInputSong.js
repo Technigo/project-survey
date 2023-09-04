@@ -8,7 +8,8 @@ import ProgressBar from './ProgressBar';
 const QuestionTextInputSong = ({ step, setStep, song, setSong, section, setSection }) => {
   return (
     <>
-      <label htmlFor="songTitle" className="form__question">What&apos;s a song that you can&apos;t get enough of right now?
+      <h2>Song (Step 5 of 5)</h2>
+      <label id="textInputLabel" htmlFor="songTitle" className="form__question">What song can&apos;t you get enough of right now?<span>Required</span>
         <input
           placeholder="Type the title here please..."
           name="goodSong"

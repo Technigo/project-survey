@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
@@ -11,8 +12,9 @@ import 'styles/form.css';
 const QuestionDropdownGenre = ({ step, setStep, section, setSection, genre, setGenre }) => {
   return (
     <>
+      <h2>Genres (Step 4 out of 5)</h2>
       <label htmlFor="selectGenre" className="form__question">
-        What is a genre you like to listen to?
+        If you had to choose, what genre would you rather listen to for the rest of your life?<span>Required</span>
       </label>
       <div className="select">
         <select
@@ -20,6 +22,7 @@ const QuestionDropdownGenre = ({ step, setStep, section, setSection, genre, setG
           onChange={(e) => setGenre(e.target.value)}
           name="selectedGenre"
           id="selectGenre">
+          <option value="">Choose one...</option>
           <option value="Pop">Pop</option>
           <option value="Hiphop">Hiphop</option>
           <option value="Rock">Rock</option>

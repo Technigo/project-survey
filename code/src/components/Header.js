@@ -29,7 +29,8 @@ export const Header = () => {
     }
   }
   return (
-    <header>
+    <header role="banner">
+      <h1>Music survey</h1>
       <button type="submit" className="button" onClick={togglePlay}><FontAwesomeIcon icon={faMusic} className="button__icon" />Play some Jazz
       </button>
     </header>
