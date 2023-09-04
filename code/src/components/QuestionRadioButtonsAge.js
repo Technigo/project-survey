@@ -6,16 +6,16 @@ import ProgressBar from './ProgressBar';
 import 'styles/form.css'
 
 const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section, setSection }) => {
-  const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Prefer not to say'];
+  const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Secret!'];
   const handleAgeChange = (e) => {
     setAgeGroup(e.target.value)
   }
   return (
     <>
-      <p className="form__question">
+      <fieldset>
+        <legend>
         How old are you?
-      </p>
-      <section className="form__radio-buttons">
+        </legend>
         {ageGroups.map((group) => (
           <label htmlFor={group} key={group} className="form-control">
             <input
@@ -28,7 +28,7 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
             {group}
           </label>
         ))}
-      </section>
+      </fieldset>
       <div>
         <PreviousButton
           whatQuestionPrevious="firstQuestion"
