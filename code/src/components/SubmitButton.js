@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
-import Popup from './Popup';
+import Alert from './Alert';
 
 const SubmitButton = ({ currentState, defaultState, setSection, message }) => {
-  const [popup, setPopup] = useState(false);
+  const [alert, setAlert] = useState(false);
   const handleSubmitButton = () => {
     if (currentState !== defaultState) {
       setSection('summary');
     } else {
-      setPopup(true);
+      setAlert(true);
     }
   };
 
   return (
     <>
-      {popup && <Popup message={message} />}
+      {alert && <Alert message={message} />}
       <button
         type="submit"
         className="button"

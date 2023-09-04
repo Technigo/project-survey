@@ -1,28 +1,28 @@
 /* eslint-disable max-len */
 import React, { useState } from 'react';
-import Popup from './Popup';
+import Alert from './Alert';
 
 const NextButton = ({ setStep, whatStepNext, setSection, currentState, defaultState, whatQuestionNext, message }) => {
   const handleNextStep = () => {
     setStep(whatStepNext)
   };
-  const [popup, setPopup] = useState(false);
+  const [alert, setAlert] = useState(false);
   const handleNextButton = () => {
     if (currentState !== defaultState) {
       setSection(whatQuestionNext);
       handleNextStep();
     } else {
-      setPopup(true)
+      setAlert(true)
     }
   };
   return (
-    <div className="form__button__popup__wrapper">
+    <div>
+      {alert && <Alert message={message} />}
       <button
         type="button"
         className="button"
         onClick={handleNextButton}>Next question
       </button>
-      {popup && <Popup message={message} />}
     </div>
 
   )

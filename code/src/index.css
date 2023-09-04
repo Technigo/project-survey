@@ -16,6 +16,7 @@ body,
   --btn-color--hsl: hsl(227, 100%, 62%);
   --btn-color--hover: #DB3A00;
   --btn-color--border: #DB3A00;
+  --orange: #DB3A00;
 }
 *,
 *:before,

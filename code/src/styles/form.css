@@ -427,6 +427,28 @@ progress::-moz-progress-bar {
     background-color: var(--btn-color--hover);
 }
 
+/* Alert */
+
+.alert {
+    border: 2px solid #000;
+    border-radius: 2px;
+    transition: .2s;
+    height: 0px;
+    padding: 1rem 0.5rem 1rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.alert.enabled {
+    line-height: 1rem;
+    margin: 1rem 0;
+    height: auto;
+    max-height: 8rem;
+}
+
+#alert-icon {
+    margin: auto 1em auto 0.5em;
+}
 
 @media (min-width: 1024px) {
     .form__popup__wrapper {

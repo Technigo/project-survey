@@ -9,6 +9,7 @@ export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, 
     <>
       <label htmlFor="text-input" className="form__question">Hi! What&apos;s your name?</label>
       <input
+        aria-describedby="form-error"
         placeholder="Type your name here please..."
         name="firstName"
         className="input"
