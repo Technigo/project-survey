@@ -171,13 +171,11 @@ input[type="checkbox"]:focus {
     border: 2px solid var(--input-border);
     border-radius: 4px;
     transition: 180ms box-shadow ease-in-out;
-  }
-
-  .input:not(textarea) {
     line-height: 1;
     height: 2.25rem;
     display: block;
     margin: 2rem 0;
+    width: 70%;
   }
 
   .input:focus {
@@ -375,11 +373,10 @@ progress::-moz-progress-bar {
     margin: auto 1em auto 0.5em;
 }
 
-@media (min-width: 1024px) {
-    .form__popup__wrapper {
-        top: 400px;
+
+
+@media (min-width: 769px) {
+    .input {
+      width: 50%;
     }
-    .wrapper {
-        max-width: 700px;
-    }
-}
+  }
