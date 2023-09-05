@@ -8,21 +8,23 @@ export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, 
   return (
     <>
       <h2>Name (Step 1 of 5)</h2>
-      <label id="inputLabel" htmlFor="nameInput">What&apos;s your name?<span>Required</span></label>
-      <input
-        aria-labelledby="inputLabel"
-        aria-describedby="form-error"
-        aria-required="true"
-        placeholder="Type your name here please..."
-        name="firstName"
-        className="input"
-        inputMode="text"
-        type="text"
-        id="nameInput"
-        value={firstName}
-        onChange={(e) => setFirstName(e.target.value)}
-        autoComplete="given-name"
-        required />
+      <div className="form__field name">
+        <label id="inputLabel" htmlFor="nameInput">What&apos;s your name?<span>Required</span></label>
+        <input
+          aria-labelledby="inputLabel"
+          aria-describedby="form-error"
+          aria-required="true"
+          placeholder="Type your name here please..."
+          name="firstName"
+          className="input"
+          inputMode="text"
+          type="text"
+          id="nameInput"
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          autoComplete="given-name"
+          required />
+      </div>
       <NextButton
         whatQuestionNext="secondQuestion"
         section={section}

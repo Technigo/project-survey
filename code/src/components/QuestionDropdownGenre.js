@@ -49,7 +49,7 @@ const QuestionDropdownGenre = ({ step, setStep, section, setSection, genre, setG
         </select>
         <span className="focus" />
       </div>
-      <div>
+      <section className="form__navigation">
         <PreviousButton
           section={section}
           setSection={setSection}
@@ -66,7 +66,7 @@ const QuestionDropdownGenre = ({ step, setStep, section, setSection, genre, setG
           step={step}
           setStep={setStep}
           whatStepNext="5" />
-      </div>
+      </section>
       <ProgressBar
         step={step} />
     </>

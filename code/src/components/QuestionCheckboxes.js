@@ -33,22 +33,24 @@ const QuestionCheckboxes = ({ step, setStep, section, setSection, devices, setDe
           </label>
         ))}
       </fieldset>
-      <PreviousButton
-        whatQuestionPrevious="secondQuestion"
-        section={section}
-        setSection={setSection}
-        setStep={setStep}
-        whatStepBefore="2" />
-      <NextButton
-        whatQuestionNext="fourthQuestion"
-        section={section}
-        setSection={setSection}
-        currentState={devices.length}
-        defaultState={0}
-        message="Please select a device"
-        step={step}
-        setStep={setStep}
-        whatStepNext="4" />
+      <section className="form__navigation">
+        <PreviousButton
+          whatQuestionPrevious="secondQuestion"
+          section={section}
+          setSection={setSection}
+          setStep={setStep}
+          whatStepBefore="2" />
+        <NextButton
+          whatQuestionNext="fourthQuestion"
+          section={section}
+          setSection={setSection}
+          currentState={devices.length}
+          defaultState={0}
+          message="Please select a device"
+          step={step}
+          setStep={setStep}
+          whatStepNext="4" />
+      </section>
       <ProgressBar
         step={step} />
     </>

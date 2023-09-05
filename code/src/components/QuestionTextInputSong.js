@@ -21,7 +21,7 @@ const QuestionTextInputSong = ({ step, setStep, song, setSong, section, setSecti
           autoComplete="off"
           required />
       </label>
-      <div>
+      <section className="form__navigation">
         <PreviousButton
           whatQuestionPrevious="fourthQuestion"
           section={section}
@@ -35,7 +35,7 @@ const QuestionTextInputSong = ({ step, setStep, song, setSong, section, setSecti
           message="Just...something?"
           section={section}
           setSection={setSection} />
-      </div>
+      </section>
       <ProgressBar
         step={step} />
     </>

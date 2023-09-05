@@ -4,19 +4,27 @@ main {
 
 form {
     height: 70vh;
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
-
-.notification {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+
 }
 
-.user-navigation {
+.form__field {
     display: flex;
+    flex-direction: column;
+}
+
+.form__nextAndAlert {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form__navigation {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around
 }
 
 /* Labels */
@@ -282,10 +290,6 @@ a.button, button.button {
     margin-right: 0.5em;
     fill: currentColor;
   }
-
-.button + .button {
-    margin-left: 1em;
-}
 
 /* Progress bar */
 

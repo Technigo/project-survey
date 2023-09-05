@@ -16,14 +16,14 @@ const NextButton = ({ setStep, whatStepNext, setSection, currentState, defaultSt
     }
   };
   return (
-    <section className="notification">
+    <div className="form__nextAndAlert">
       {alert && <Alert message={message} />}
       <button
         type="button"
         className="button"
         onClick={handleNextButton}>Next question
       </button>
-    </section>
+    </div>
 
   )
 }

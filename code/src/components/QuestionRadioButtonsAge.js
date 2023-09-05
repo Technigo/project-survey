@@ -13,24 +13,26 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
   return (
     <>
       <h2>Age (Step 2 of 5)</h2>
-      <fieldset>
-        <legend>
+      <div className="form__field age">
+        <fieldset>
+          <legend>
         How old are you?<span>Required</span>
-        </legend>
-        {ageGroups.map((group) => (
-          <label htmlFor={`radioButtonGroup-${group}`} key={group} className="form-control">
-            <input
-              id={`radioButtonGroup-${group}`}
-              type="radio"
-              name="ageGroup"
-              value={group}
-              onChange={handleAgeChange}
-              checked={ageGroup === group} />
-            {group}
-          </label>
-        ))}
-      </fieldset>
-      <section className="user-navigation">
+          </legend>
+          {ageGroups.map((group) => (
+            <label htmlFor={`radioButtonGroup-${group}`} key={group} className="form-control">
+              <input
+                id={`radioButtonGroup-${group}`}
+                type="radio"
+                name="ageGroup"
+                value={group}
+                onChange={handleAgeChange}
+                checked={ageGroup === group} />
+              {group}
+            </label>
+          ))}
+        </fieldset>
+      </div>
+      <section className="form__navigation">
         <PreviousButton
           whatQuestionPrevious="firstQuestion"
           section={section}
