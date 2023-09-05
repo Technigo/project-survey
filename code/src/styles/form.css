@@ -1,11 +1,3 @@
-main {
-    border: 2px dotted black;
-}
-
-.form__container {
-    border: 2px solid black;
-}
-
 form {
     min-height: 70vh;
     display: flex;

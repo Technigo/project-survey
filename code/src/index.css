@@ -45,13 +45,11 @@ body {
     max-width: 600px;
     display: flex;
     flex-direction: column;
-    border: 2px solid black;
 }
 
 .outer-wrapper {
   width: 100%;
   margin: 0;
-  border: 2px solid black;
 
 }
 
