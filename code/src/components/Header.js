@@ -30,9 +30,12 @@ export const Header = () => {
   }
   return (
     <header role="banner">
-      <h1>Music Survey</h1>
-      <button type="submit" className="button" onClick={togglePlay}><FontAwesomeIcon icon={faMusic} className="button__icon" />Play some Jazz
-      </button>
+      <section className="header__top">
+        <h1>Music Survey</h1>
+        <button type="submit" className="button" onClick={togglePlay}><FontAwesomeIcon icon={faMusic} className="button__icon" />Play some Jazz
+        </button>
+      </section>
+      <hr className="divider" />
     </header>
   )
 }

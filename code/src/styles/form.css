@@ -68,6 +68,13 @@ ul {
     justify-content: space-evenly;
 }
 
+/* Dividers */
+
+.divider {
+    width: 100%;
+    display: block;
+  } 
+
 
 /* Radio buttons */
 

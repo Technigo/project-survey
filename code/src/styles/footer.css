@@ -13,3 +13,10 @@ footer {
     display: flex;
     gap: 1em;
 }
+
+.divider {
+  color: inherit;
+  height: 2px;
+  background-color: var(--color-black);
+  width: 100%;
+}

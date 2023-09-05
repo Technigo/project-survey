@@ -1,8 +1,6 @@
-header {
+.header__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: inherit;
     margin-top: 1rem;
   }
-
