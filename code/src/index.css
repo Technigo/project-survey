@@ -38,7 +38,7 @@ body {
   box-sizing: border-box;
 }
 
-.form__container {
+.inner-wrapper {
     height: 100%;
     width: 80%;
     margin: auto;
@@ -46,6 +46,13 @@ body {
     display: flex;
     flex-direction: column;
     border: 2px solid black;
+}
+
+.outer-wrapper {
+  width: 100%;
+  margin: 0;
+  border: 2px solid black;
+
 }
 
 h1 {

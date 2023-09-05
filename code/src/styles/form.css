@@ -1,13 +1,16 @@
 main {
+    border: 2px dotted black;
+}
+
+.form__container {
     border: 2px solid black;
 }
 
 form {
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-
+    justify-content: flex-start;
 }
 
 .form__field {
@@ -24,20 +27,20 @@ form {
 .form__navigation {
     display: flex;
     align-items: flex-end;
-    justify-content: space-around
+    justify-content: space-around;
+    margin: 1rem 0;
 }
 
-/*Progress bar */
-
-.form__progressBar {
-    display: flex;
-    justify-content: center;
+form__question {
+    margin: 1rem 0;
 }
+
 
 /* Labels */
 
 label {
     display: block;
+    margin: 1rem 0;
 }
 
 /* Required Label */
@@ -54,8 +57,24 @@ label span, legend span {
     top: -1px;
     color: #eee;
     border-radius: 0.125rem;
+    margin-left: 5px;
 }
 
+/* Summary */
+
+ul {
+    margin: 0;
+    border: 2px solid var(--black);
+    padding: 20px;
+}
+
+.summary-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    justify-content: space-evenly;
+}
 
 
 /* Radio buttons */
@@ -166,6 +185,7 @@ input[type="checkbox"]:focus {
     line-height: 1;
     height: 2.25rem;
     display: block;
+    margin: 2rem 0;
   }
 
   .input:focus {
@@ -216,6 +236,7 @@ select::-ms-expand {
     grid-template-areas: "select";
     align-items: center;
     position: relative;
+    margin: 2rem 0;
 }
 
 .select::after{
@@ -307,12 +328,13 @@ a.button, button.button {
 progress {
     display: block;
     appearance: none;
-    width: calc(70%);
+    width: calc(90%);
     height: 1rem;
     border: none;
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 0 1rem #fff, 0 1rem 0.75rem -0.25rem rgba(0,0,0,0.3);
+    margin: 2rem 0;
     &:focus {
         outline-style: solid;
         outline-color: transparent;
@@ -331,6 +353,11 @@ progress::-webkit-progress-value {
 
 progress::-moz-progress-bar {
     background-color: var(--btn-color--hover);
+}
+
+.form__progressBar {
+    display: flex;
+    justify-content: center;
 }
 
 /* Alert */

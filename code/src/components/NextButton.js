@@ -16,7 +16,7 @@ const NextButton = ({ setStep, whatStepNext, setSection, currentState, defaultSt
     }
   };
   return (
-    <div className="form__AlertAndButton">
+    <div className="form__alertAndButton">
       {alert && <Alert message={message} />}
       <button
         type="button"

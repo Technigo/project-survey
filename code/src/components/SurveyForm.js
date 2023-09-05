@@ -20,7 +20,6 @@ export const SurveyForm = () => {
   const [devices, setDevices] = useState('');
   const [song, setSong] = useState('');
   const [genre, setGenre] = useState('');
-  const [isDisabled, setIsDisabled] = useState(true);
   const handleSubmit = (e) => {
     // Prevent the browser from reloading the page
     e.preventDefault();
@@ -37,8 +36,6 @@ export const SurveyForm = () => {
         <form id="surveyForm" className="form" method="post" onSubmit={handleSubmit}>
           {section === 'firstQuestion' && (
             <QuestionTextInputName
-              isDisabled={isDisabled}
-              setIsDisabled={setIsDisabled}
               step={step}
               setStep={setStep}
               firstName={firstName}
