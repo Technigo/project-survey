@@ -25,16 +25,18 @@ export const QuestionTextInputName = ({ step, setStep, firstName, setFirstName, 
           autoComplete="given-name"
           required />
       </div>
-      <NextButton
-        whatQuestionNext="secondQuestion"
-        section={section}
-        setSection={setSection}
-        currentState={firstName}
-        defaultState=""
-        message="Please enter a name"
-        step={step}
-        setStep={setStep}
-        whatStepNext="2" />
+      <section className="form__navigation">
+        <NextButton
+          whatQuestionNext="secondQuestion"
+          section={section}
+          setSection={setSection}
+          currentState={firstName}
+          defaultState=""
+          message="Please enter a name"
+          step={step}
+          setStep={setStep}
+          whatStepNext="2" />
+      </section>
       <ProgressBar
         step={step} />
     </>

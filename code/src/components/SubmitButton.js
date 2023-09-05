@@ -12,14 +12,14 @@ const SubmitButton = ({ currentState, defaultState, setSection, message }) => {
   };
 
   return (
-    <>
+    <section className="form__alertAndButton">
       {alert && <Alert message={message} />}
       <button
         type="submit"
         className="button"
         onClick={handleSubmitButton}>Submit form
       </button>
-    </>
+    </section>
   )
 }
 

@@ -13,7 +13,7 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
   return (
     <>
       <h2>Age (Step 2 of 5)</h2>
-      <div className="form__field age">
+      <section className="form__field age">
         <fieldset>
           <legend>
         How old are you?<span>Required</span>
@@ -31,7 +31,7 @@ const QuestionRadioButtonsAge = ({ step, setStep, ageGroup, setAgeGroup, section
             </label>
           ))}
         </fieldset>
-      </div>
+      </section>
       <section className="form__navigation">
         <PreviousButton
           whatQuestionPrevious="firstQuestion"

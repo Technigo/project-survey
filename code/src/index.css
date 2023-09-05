@@ -38,7 +38,7 @@ body {
   box-sizing: border-box;
 }
 
-.container {
+.form__container {
     height: 100%;
     width: 80%;
     margin: auto;
