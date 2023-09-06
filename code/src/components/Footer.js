@@ -13,10 +13,10 @@ export const Footer = () => {
       <hr className="divider" />
       <p>A website created by Nino Aquilon @Technigo &apos;23.</p>
       <section className="contact">
-        <a href="https://www.github.com" className="button icon-button">
+        <a href="https://www.github.com" className="button icon-button" aria-label="Go to my Github">
           <FontAwesomeIcon icon={faGithub} />
         </a>
-        <a href="https://www.github.com" className="button icon-button">
+        <a href="https://www.github.com" className="button icon-button" aria-label="Go to my LinkedIn">
           <FontAwesomeIcon icon={faLinkedin} />
         </a>
       </section>
