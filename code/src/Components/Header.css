@@ -1,0 +1,39 @@
+h1 {
+    font-size: 50px;
+    color: rgb(0, 46, 0);
+    line-height: 40px;
+    font-family: "Archivo Black";
+}
+
+strong {
+    position: relative;
+}
+
+strong::before {
+    /* Highlight color and effect */
+    background-color: rgb(2, 127, 2);
+    content: "";
+    position: absolute;
+    width: calc(120% + 3px);
+    height: 100%;
+    left: -3px;
+    bottom: -1px;
+    z-index: -1;
+    transform: skew(-20deg);
+    border-radius: 1px 3px 0px 3px;
+}
+
+a.title-link {
+    text-decoration: none;
+    color: white;
+    font-style: italic;
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 30px;
+        color: rgb(0, 46, 0);
+        line-height: 30px;
+        font-family: "Archivo Black";
+    }
+}

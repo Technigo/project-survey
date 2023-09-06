@@ -1,13 +1,111 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Ubuntu Mono;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:rgb(224, 242, 224);
+  color:rgb(1, 40, 0);
+  font-size: 16px;
+  line-height: 20px;
+  accent-color: darkgreen;
+  overflow-x: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.survey-header {
+  margin: auto;
+  text-align: center;
+}
+
+.survey-wrapper {
+background-color: white;
+border-radius: 20px;
+width: 60%;
+height: 500px;
+padding: 20px 20px 20px 30px;
+margin: auto;
+justify-content: center;
+overflow-y: scroll;
+}
+
+/* CSS */
+button {
+  background-color: #fbeee0;
+  border: 1px solid rgb(0, 46, 0);
+  border-radius: 30px;
+  box-shadow: rgb(0, 46, 0) 4px 4px 0 0;
+  color: rgb(0, 46, 0);
+  cursor: pointer;
+  display: inline-block;
+  font-family: Ubuntu Mono;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 0 18px;
+  margin: 20px 0px 10px 0px;
+  line-height: 30px;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:hover {
+  background-color: #fff;
+}
+
+button:active {
+  box-shadow: rgb(0, 46, 0) 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+input[type=text] {
+  margin:10px 0;
+  width: 200px;
+  height: 25px;
+}
+
+input[type=radio] {
+margin: 10px;
+}
+
+select {
+  width: 350px;
+  height: 30px;
+}
+
+
+@media (max-width: 700px) {
+  body {
+    margin: 0;
+    font-family: Ubuntu Mono;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color:rgb(224, 242, 224);
+    color:rgb(1, 40, 0);
+    font-size: 12x;
+    line-height: 16px;
+    accent-color: darkgreen;
+    overflow-x: hidden;
+  }
+
+  .survey-wrapper {
+    background-color: white;
+    border-radius: 20px;
+    width: 80%;
+    height: 500px;
+    padding: 20px 20px 20px 20px;
+    margin: auto;
+    justify-content: center;
+    }
+
+    input[type=text] {
+      margin:10px 0;
+      width: 150px;
+      height: 25px;
+    }
+
+    select {
+      width: 250px;
+      height: 30px;
+    }
 }

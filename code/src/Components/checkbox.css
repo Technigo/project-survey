@@ -1,0 +1,26 @@
+.checkbox-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width:fit-content;
+    height:fit-content;
+}
+
+.checkbox-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .adjective-container{
+    display: flex;
+    width: 200px;
+    height: 30px;
+    justify-content: baseline;
+  }
+
+  @media (max-width: 700px) {
+    .adjective-container {
+      width: 140px;
+    }
+  }
