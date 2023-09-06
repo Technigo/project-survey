@@ -28,6 +28,13 @@ form__question {
 }
 
 
+/* Illustrations */
+
+.illustration {
+    width: 100%;
+    height: auto;
+}
+
 /* Labels */
 
 label {
@@ -35,7 +42,7 @@ label {
     margin: 1rem 0;
 }
 
-/* Required Label */
+/* Required label */
 
 label span, legend span {
     font-size: .75rem;
@@ -52,9 +59,19 @@ label span, legend span {
     margin-left: 5px;
 }
 
+/* Helper text */
+
+.helper {
+    margin: 0 0 1rem 0;
+    padding: 0rem;
+    color: #676767;
+    display: block;
+    border-radius: 2px;
+}
+
 /* Summary */
 
-ul {
+.summary-wrapper ul {
     margin: 0;
     border: 2px solid var(--black);
     padding: 20px;
@@ -381,9 +398,11 @@ progress::-moz-progress-bar {
 }
 
 
-
 @media (min-width: 769px) {
     .input {
       width: 50%;
+    }
+    .illustration {
+        max-width: 400px;
     }
   }

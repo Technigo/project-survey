@@ -10,18 +10,20 @@ const QuestionTextInputSong = ({ step, setStep, song, setSong, section, setSecti
     <>
       <h2>Song (Step 5 of 5)</h2>
       <section className="form__field song">
-        <label id="textInputLabel" htmlFor="songTitle" className="form__question">What&apos;s a song that you can&apos;t get enough of right now?<span>Required</span>
+        <label id="textInputLabel" htmlFor="songTitle" className="form__question">What&apos;s a song that you can&apos;t get enough of right now?
           <input
             placeholder="Type the title here please..."
             name="goodSong"
             className="input"
             type="text"
-            id="songTitle"
+            id="songTitleInput"
             value={song}
             onChange={(e) => setSong(e.target.value)}
-            autoComplete="off"
-            required />
+            autoComplete="off" />
         </label>
+        <div className="helper" id="songTitleInput-helper">
+  This question is optional
+        </div>
       </section>
       <section className="form__navigation">
         <PreviousButton
@@ -32,9 +34,9 @@ const QuestionTextInputSong = ({ step, setStep, song, setSong, section, setSecti
           whatStepBefore="4" />
         <SubmitButton
           whatQuestionNext="summary"
-          defaultState={0}
-          currentState={song.length}
-          message="Just...something?"
+          defaultState=""
+          currentState="Something"
+          message=""
           section={section}
           setSection={setSection} />
       </section>
