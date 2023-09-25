@@ -1,0 +1,14 @@
+.form-radio-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.radio-btn-control {
+  font-family: Titillium web, sans-serif;
+  font-weight: bold;
+  color: #bbdd90;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

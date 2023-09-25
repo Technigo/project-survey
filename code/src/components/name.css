@@ -1,0 +1,23 @@
+.name-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input-text {
+  background-color: #0f0f0f;
+  border: none;
+  /* because it looks like it have border-radius on Iphone */
+  border-radius: none;
+  border-bottom: 1px solid #c4c8cb;
+  width: 100%;
+  font-size: 20px;
+  color: #c4c8cb;
+  font-family: Titillium web, sans-serif;
+}
+
+@media (min-width: 668px) {
+  .input-text {
+    width: 50%;
+  }
+}
