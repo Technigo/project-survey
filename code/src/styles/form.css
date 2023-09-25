@@ -1,0 +1,408 @@
+form {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__alertAndButton {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form__navigation {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+form__question {
+    margin: 1rem 0;
+}
+
+
+/* Illustrations */
+
+.illustration {
+    width: 100%;
+    height: auto;
+}
+
+/* Labels */
+
+label {
+    display: block;
+    margin: 1rem 0;
+}
+
+/* Required label */
+
+label span, legend span {
+    font-size: .75rem;
+    display: inline-block;
+    height: 1rem;
+    line-height: 1rem;
+    font-family: inherit;
+    background: #222;
+    padding: 0 0.325rem;
+    position: relative;
+    top: -1px;
+    color: #eee;
+    border-radius: 0.125rem;
+    margin-left: 5px;
+}
+
+/* Helper text */
+
+.helper {
+    margin: 0 0 1rem 0;
+    padding: 0rem;
+    color: #676767;
+    display: block;
+    border-radius: 2px;
+}
+
+/* Summary */
+
+.summary-wrapper ul {
+    margin: 0;
+    border: 2px solid var(--black);
+    padding: 20px;
+}
+
+.summary-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70vh;
+    justify-content: space-evenly;
+}
+
+/* Dividers */
+
+.divider {
+    width: 100%;
+    display: block;
+  } 
+
+
+/* Radio buttons */
+
+.form-control {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 2em auto;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff; /* For iOS < 15 to remove gradient background */
+  margin: 0; /* Not removed via appearance */
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText; /* WHCM */
+  }
+
+input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+
+input[type="radio"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+
+.form-control + .form-control {
+    margin-top: 1em; /* adjacent sibling combinator */
+  }
+
+
+/* Checkboxes */
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 1.15em;
+  height: 1.15em;
+  border: 0.15em solid currentColor;
+  border-radius: 0.15em;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+    background-color: CanvasText; /* WHCM */
+    transform-origin: bottom left;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+  }
+
+input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+
+input[type="checkbox"]:focus {
+    outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em);
+  }
+
+/* Text input */
+
+  .input {
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    font-family: inherit;
+    padding: 0.25em 0.5em;
+    background-color: #fff;
+    border: 2px solid var(--input-border);
+    border-radius: 4px;
+    transition: 180ms box-shadow ease-in-out;
+    line-height: 1;
+    height: 2.25rem;
+    display: block;
+    margin: 2rem 0;
+    width: 70%;
+  }
+
+  .input:focus {
+    border-color: #000;
+    box-shadow: 0 0 0 2px #000;
+    outline: 2px solid transparent; /* for Windows High Contrast mode */
+  }
+
+  ::placeholder {
+    color: #767676;
+    opacity: 1;
+}
+
+/* Select / Dropdown */
+
+select {
+    appearance: none; /* removes default dropdown arrow */
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none; /* removal of arrow for lower IE versions */
+}
+
+.select {
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.select::after{
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+}
+
+select, .select:after {
+    grid-area: select;
+}
+
+select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+    border: 2px solid var(--black);
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #000;
+}
+
+/* Buttons */
+
+a.button {
+    text-decoration: none;
+  }
+
+button.button {
+    font-family: inherit;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-size: max(16px, 1em);
+    @media screen and (-ms-high-contrast: active) {
+        border: 1px solid currentColor
+    };
+}
+a.button, button.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--btn-color);
+    color: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    text-align: center;
+    line-height: 1.1;
+    transition: 220ms all ease-in-out;
+    &:hover, &:active {
+        background-color: var(--btn-color--hover);
+    };
+    &:focus {
+        outline-style: solid;
+        outline-color: transparent;
+        box-shadow: 0 0 0 4px var(--btn-color--border);
+    };
+    &:not(.icon-button) {
+        padding: 0.25em 0.75em;
+        min-width: 10ch;
+        min-height: 44px;
+        border-radius: 8px;
+    };
+    &:disabled {
+        background-color: var(--input-border);
+    }
+}
+
+.icon-button {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.35em;
+    border-radius: 50%;
+}
+
+  .button__icon {
+    width: 0.9em;
+    height: 0.9em;
+    margin-right: 0.5em;
+    fill: currentColor;
+  }
+
+/* Progress bar */
+
+progress {
+    display: block;
+    appearance: none;
+    width: calc(90%);
+    height: 1rem;
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 0 1rem #fff, 0 1rem 0.75rem -0.25rem rgba(0,0,0,0.3);
+    margin: 2rem 0;
+    &:focus {
+        outline-style: solid;
+        outline-color: transparent;
+        box-shadow: 0 0 0 4px #000;
+    }
+}
+
+progress::-webkit-progress-bar {
+    background: linear-gradient(90deg, #cfcfcf 49%, #cfcfcf 85%, #959595 100%);
+    background-color: transparent;
+}
+
+progress::-webkit-progress-value {
+    background-color: var(--btn-color--hover);
+}
+
+progress::-moz-progress-bar {
+    background-color: var(--btn-color--hover);
+}
+
+.form__progressBar {
+    display: flex;
+    justify-content: center;
+}
+
+/* Alert */
+
+.alert {
+    border: 2px solid #000;
+    border-radius: 2px;
+    transition: .2s;
+    height: 0px;
+    padding: 1rem 0.5rem 1rem 0rem;
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+}
+
+.alert.enabled {
+    line-height: 1rem;
+    margin: 1rem 0;
+    height: auto;
+    max-height: 8rem;
+}
+
+#alert-icon {
+    margin: auto 1em auto 0.5em;
+}
+
+
+@media (min-width: 769px) {
+    .input {
+      width: 50%;
+    }
+    .illustration {
+        max-width: 400px;
+    }
+  }

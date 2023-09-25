@@ -1,0 +1,22 @@
+footer {
+    display: flex;
+    text-align: center;
+    font-size: inherit;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: center;
+    min-height: 20vh;
+    justify-content: flex-end;
+  }
+
+.contact {
+    display: flex;
+    gap: 1em;
+}
+
+.divider {
+  color: inherit;
+  height: 2px;
+  background-color: var(--color-black);
+  width: 100%;
+}
