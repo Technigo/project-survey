@@ -1,13 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This weeks project was based around using React to a greater potential by introducing the use of State. The task was to create a Typeform-like survey to collect data from your users.int.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## ❗️ The problem
 
-## The problem
+Due to all of us (students) feeling a bit exhausted from our pace at week 6, I came up with the idea to use this project in a humorous way for a calming and stress reducing experience. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I wanted to practice different forms of inputs and how to style them differently and connecting them to the React hook useState. I included text input, a range slider, radio buttons and a drop down menu. As an ending I created a css built breathing exercise with a setting and different colors depening on the users answers.
+
+If I had more time I would've tried to make all the styling work for Safari-users(it is best viewed in Chrome as of now).
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://stress-less-survey.netlify.app

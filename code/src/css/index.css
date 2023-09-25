@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;1,410;1,500&display=swap');
+
+body {
+  margin: 0;
+  background-color:#0c2c31;
+  font-family: 'Josefin Sans', sans-serif, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #c5baaa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 500px;
+  line-height: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  margin: 0;
+  padding: 20px;
+  font-weight: 300;
+}
+
+.sumh4 {
+  padding-bottom: 0;
+  font-weight: 500;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.name-input {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  padding: 8px;
+  border: none;
+  border-radius: 3px;
+  color: #0c2c31;
+  background-color: #c5baaa;
+  margin: 20px;
+  min-width: 220px;
+}
+
+.colourForm select {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  color: #0c2c31;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #c5baaa;
+  margin: 20px;
+  width: 220px;
+}
+
+.submitBtn,
+.startBtn,
+.restartBtn {
+  background-color: #ee7828;
+  border: none;
+  border-radius: 50px;
+  color: #2c2c2c;
+  font-size: 13px;
+  letter-spacing: 2px;
+  margin: 20px;
+  padding: 10px 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.startBtn:hover, 
+.submitBtn:hover,
+.restartBtn:hover {
+  background-color: #806D61;
+  color: #c5baaa;
+}
+
+.button-container {
+  display: flex;
+}
+
+/* top logo */
+.hugImg {
+  max-width:100px;
+  padding-top:30px;
+  padding-bottom: 20px;
+  opacity: 60%;
+}
+
+/* the dot in the end */
+.blurryCircle {
+  filter: blur(3px);
+}
+
+@media (max-width: 668px) {
+  .submitBtn,
+  .startBtn,
+  .restartBtn {
+    margin: 10px;
+    padding: 10px 10px
+  }
+}
