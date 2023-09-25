@@ -1,13 +1,381 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(58, 58, 58);
+  color: white;
+  background-image: url("https://nypost.com/wp-content/uploads/sites/2/2021/11/astrology-sun-moon-rising-signs-1-copy.jpg?quality=75&strip=all");
+  background-size: 100%; /* cover */
+  font-family: emoji;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+  text-align: center;
+}
+
+/* PAGE 1 */
+.container {
+  display: flex;
+  position: relative;
+  height: 400px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 175px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  bottom: 94px;
+  color:#f2f2f2;
+  left: -15px;
+}
+.welcome h2 {
+  text-shadow: 10px;
+  font-size: 34px;
+  font-family: emoji;
+}
+.welcome p {
+  text-shadow: 10px;
+  font-size: 23px;
+  position: relative;
+  bottom: 21px;
+}
+/* button color */
+ button {
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  color: rgb(23, 23, 23);
+  width: 79px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  left: -13px;
+  bottom: -4px;
+}
+
+
+/* button container */
+button:hover {
+background-color: #ffe27b;
+}
+.button p {
+  color: transparent;
+}
+label {
+  padding: 5px;
+}
+
+
+
+/* PAGE 2 choose sign select dropdown */
+.choose-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-top: 175px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  /* text-shadow: -3px 2px #1a1919; */
+  background: #2121218a;
+}
+.choose-container h2 {
+  position: relative;
+  bottom: 167px;
+  font-size: 50px;
+}
+form.zodiacs {
+  position: relative;
+  left: -15px;
+  top: -170px;
+}
+
+.zodiac-container {
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 9px;
+  height: 400px;
+}
+.zodiac-container h2 {
+  text-align: center;
+}
+.zodiac-container p {
+  border: 1px solid green;
+  padding: 5px;
+}
+.signs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* PAGE 3 - how much */
+.howmuch-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    height: 400px;
+    box-shadow: black;
+    box-shadow: 10px;
+    box-shadow: 10px 5px 5px #26262659;
+    top: 140px;
+    text-shadow: -3px 2px #1a1919;
+    background: #2121218a;
+}
+.howmuch-container h4 {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 280px;
+    font-size: 30px;
+    right: 485px;
+}
+/* how much: normal, a lot, im extreme radio buttons */
+.radio-activity {
+  left: 568px;
+  position: absolute;
+  top: 235px;
+}
+/* answer how much */
+.HowMuch p {
+  background-blend-mode: overlay;
+  font-size: 20px;
+  background: #d26767;
+  width: 300px;
+  position: absolute;
+  top: 350px;
+  right: 506px;
+}
+form {
+  position: relative;
+  font-size: 20px;
+  background: #19273c;
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  left: 435px;
+}
+/* PAGE 4 - results */
+.Okey p {
+  background-color: #d26767;
+  font-size: 25px;
+  position: relative;
+  top: -125px;
+}
+.result {
+  position: relative;
+  padding-top: 92px;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+  font-size: 25px;
+  text-align: center;
+}
+.result p {
+  margin: 10px;
+  left: -10px;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles for mobile devices */
+@media only screen and (max-width: 767px) {
+  button {
+    text-align: center;
+    background-color: rgb(240, 240, 240);
+    color: rgb(23, 23, 23);
+    width: 79px;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+    top: 27px;
+}
+.welcome {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  bottom: 137px;
+  color: #f2f2f2;
+  left: -7px;
+}
+
+.Okey p {
+  background-color: #d26767;
+  font-size: 25px;
+  position: relative;
+  top: -149px;
+}
+.result {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  padding-top: 92px;
+  height: 400px;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+  font-size: 20px;
+}
+.result p {
+  display: flex;
+    flex-direction: column;
+    bottom: 43px;
+    text-shadow: -3px 2px #1a1919;
+    font-size: 22px;
+    margin: 7px;
+}
+.howmuch-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  height: 400px;
+  box-shadow: black;
+  box-shadow: 10px;
+  box-shadow: 10px 5px 5px #26262659;
+  top: 140px;
+  text-shadow: -3px 2px #1a1919;
+  background: #2121218a;
+  padding: -10px;
+  max-width: 370px;
+}
+.radio-activity {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  font-size: 19px;
+  left: 119px;
+  top: 246px;
+}
+.howmuch-container h4 {
+  display: flex;
+  flex-direction: column;
+  bottom: 280px;
+  font-size: 24px;
+  right: 39px;
+}
+.HowMuch p {
+  background-blend-mode: overlay;
+  font-size: 20px;
+  background: #000000bf;
+  width: 300px;
+  position: absolute;
+  right: 40px;
+  top: 348px;
+}
+form.zodiacs {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 190px;
+  left: 108px;
+}
+}
+/* styles for tablet devices */
+@media only screen and (min-width: 767px) and (max-width: 1024px) {
+  form.zodiacs {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 190px;
+    left: 293px;
+ }
+ .howmuch-container h4 {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 280px;
+  font-size: 30px;
+  right: 220px;
+}
+.Okey p {
+  background-color: #d26767;
+  font-size: 25px;
+  position: relative;
+  top: -68px;
+  left: -18px;
+}
+.radio-activity {
+  position: absolute;
+  top: 209px;
+  font-size: 19px;
+  left: 300px;
+}
+.HowMuch p {
+  background: #d26767;
+  width: 300px;
+  position: absolute;
+  font-size: 20px;
+  top: 352px;
+  right: 257px;
+}
+button {
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  color: rgb(23, 23, 23);
+  width: 79px;
+  border-radius: 30px;
+  position: relative;
+  cursor: pointer;
+  left: -13px;
+  bottom: -35px;
+}
 }
