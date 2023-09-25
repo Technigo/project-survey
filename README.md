@@ -1,13 +1,16 @@
 # Survey form with React
+### Week 6 Technigo Bootcamp
 
-Replace this readme with your own information about your project.
+This weeks project was to create a survey using React and Javascript.<br>
+The goals of this week were to learn about the ```usestate```hook in react and how to connect HTML form inputs to state. We also learned about form fields with React and how to use state to show different components based on where you are in the survey.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Using the Technigo repo provided first I began by creating the Form document and then moved onto the components. Then I created the buttons and created a flow thru the componenets to create a fun quiz that displays all of the choices selected in a paragraph at the end. 
+ 
+If I had more time I would work more with the styling and perhaps give the users options which would change the next selection offered. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://jennifers-personality-survey.netlify.app/
