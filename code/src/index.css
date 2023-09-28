@@ -1,13 +1,276 @@
 body {
+  display:flex; 
+  box-sizing: border-box;
   margin: 0;
+  padding: 0; 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image:url("./images/background-pic.png"); 
+  background-size: cover; 
+  color: black; 
+  height: 100%; 
+  justify-content: center; 
+  align-items: center;
+  overflow-x: hidden;
+}
+
+
+html {
+  height: 100%; 
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.survey-container {
+  display:flex; 
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center; 
+  width: 600px; 
+  height: 600px; 
+  background: white; 
+  border-radius: 50%;
+  box-shadow:
+  0 0 60px 30px #fff,  /* inner white */
+  0 0 100px 60px #f0f, /* middle magenta */
+  0 0 140px 90px #0ff; /* outer cyan */
+  }
+
+  .intro-title {
+  display: flex; 
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 40px; 
+  width: 65%;
+  padding: 0% 20%; 
+  text-align: center;
+  justify-content: center;
+  margin-top:50px; 
+  }
+
+  .intro-text {
+    display:flex; 
+    font-family: 'Roboto', sans-serif;
+  }
+	
+.instructionText {
+  display: flex; 
+  font-family: 'Sue Ellen Francisco', cursive;
+  font-size: 40px; 
+  width: 65%;
+  padding: 0% 20%; 
+  text-align: center;
+  justify-content: center;
+}
+
+.descriptiveText {
+  display: flex;
+
+
+}
+
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; 
+  font-size: 20px; 
+  border-radius: 5%; 
+  background-color: lightblue; 
+  border: none; 
+  padding: 20px; 
+  transform: scale(1);
+	animation: pulse 4s infinite;
+}
+
+.footer {
+  color:white; 
+  font-size: 16px; 
+  position:fixed; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  padding: 8x; 
+  text-align: center; 
+
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.97);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.1);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.97);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+ .input-field {
+  font-family: 'Courier New', Courier, monospace;
+  font-size:20px; 
+  font-weight: 600; 
+  text-align: center;
+  display: flex; 
+  background: white; 
+  border: 2px solid black; 
+  height:30px; 
+  width: 200px; 
+  margin: 0px 20px; 
+  
+ }
+
+ .dropdown-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  padding:0 20px; 
+
+ }
+
+ .drop-down {
+  display: flex; 
+  border: 2px solid pink;  
+  height: 30px; 
+  width: 200px;
+ 
+ }
+
+ .drop-down, .input-field {
+  font-size: 20px; 
+  text-align: center; 
+ }
+
+ .counterText {
+  font-family: 'Sue Ellen Francisco';
+  font-size: 24px; 
+  font-weight: 400;
+  color: rgb(255, 0, 136); 
+ }
+
+.radio-btn-container {
+  display: flex; 
+  flex-direction: column; 
+  max-width: 30%; 
+  margin: 0 250px; 
+  width: 100%; 
+}
+
+.radio-button {
+  display: flex; 
+  flex-direction: row; 
+  justify-content: flex-start; 
+}
+
+.story-container {
+  display: flex; 
+  flex-direction: column; 
+  height:800px; ;   
+  width: 500px;
+  padding: 20px;
+  background: rgb(248, 240, 240);
+  border-radius: 5%;
+  box-shadow:
+  0 0 60px 30px #fff,  /* inner white */
+  0 0 100px 60px #f0f, /* middle magenta */
+  0 0 140px 90px #0ff; /* outer cyan */
+  }
+
+
+.story-title {
+  margin: 20px; 
+  font-size: 24px; 
+}
+.story-text {
+  display: flex; 
+  flex-direction: column;
+  font-family:Arial, Helvetica, sans-serif; 
+  font-weight: 400; 
+  margin: 20px; 
+  line-height:30px;
+}
+
+.restart-button {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500; 
+  font-size: 20px; 
+  border-radius: 5%; 
+  background-color: pink; 
+  border: none; 
+  padding: 20px 40px; 
+  transform: scale(1);
+	animation: pulse 4s infinite;
+  margin: 0 300px; 
+  margin-top: 10px; 
+  align-self: center;
+}
+
+.button:hover button:focus {
+filter: brightness(80%); 
+}
+
+
+
+@media (min-width:600px) and (max-width:667px) {
+  .survey-container {
+    box-sizing: border-box;
+    width:100%; 
+}
+
+.instructionText{
+  font-size:x-large; 
+}
+}
+
+@media (max-width:420px) {
+.survey-container{
+display: flex; 
+box-sizing: border-box;
+width:100%; 
+}  
+
+.instructionText {
+  margin-top:40px; 
+  font-size: 28px;
+}
+
+.story-container {
+  display: flex;
+  width: 90%; 
+  height:100%; 
+  margin: 20px; 
+  overflow-y:scroll; 
+  position:absolute; 
+}
+
+.story-title {
+  margin-top: 30px; 
+}
+
+.story-text {
+display: flex;
+flex-direction: column; 
+flex-wrap: wrap; 
+}
+
+.restart-button {
+  align-self: center;
+  padding: 20px 40px; 
+  margin: 0; 
+}
+
+.story-title {
+  font-size: 24px;
+  width: 70%; 
+}
+
 }
