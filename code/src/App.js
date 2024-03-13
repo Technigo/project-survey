@@ -1,9 +1,14 @@
+/* eslint-disable max-len */
 import React from 'react';
+import Survey from 'components/Survey';
+import Background from 'components/Background';
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  );
+    <section className="main-container">
+      <Background />
+      <Survey />
+    </section>
+  )
 }
+export default App;
